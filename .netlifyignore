@@ -1,5 +1,5 @@
-# Ignore large files during Netlify deployment
-# We'll use a CDN or optimize images separately
-
-# Keep only essential files for build
-# The wallpapers will be served from the repository or CDN
+# Exclude large wallpaper images from function bundling
+# They will be served as static files from public/
+public/wallpapers/**/*.jpg
+public/wallpapers/**/*.jpeg
+public/wallpapers/**/*.png

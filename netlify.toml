@@ -9,7 +9,8 @@
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Increase function size limit for Next.js
+# Don't include large files in functions - they're served statically from public/
 [functions]
   node_bundler = "esbuild"
-  included_files = ["public/**"]
+  # Exclude large image files from functions
+  included_files = []
