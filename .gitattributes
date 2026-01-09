@@ -1,3 +1,4 @@
 public/wallpapers/**/*.jpg filter=lfs diff=lfs merge=lfs -text
 public/wallpapers/**/*.png filter=lfs diff=lfs merge=lfs -text
 public/wallpapers/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+public/wallpapers/**/* filter=lfs diff=lfs merge=lfs -text
