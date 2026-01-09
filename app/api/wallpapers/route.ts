@@ -7,11 +7,25 @@ const GITHUB_REPO = 'berbersoft02/wallpaper-hub';
 const GITHUB_BRANCH = 'main';
 const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/public/wallpapers`;
 
+// In production, we don't read from filesystem to avoid including images in build
+const isProduction = process.env.NODE_ENV === 'production' || process.env.NETLIFY === 'true';
+
 export async function GET() {
   try {
+    // In production, return empty array - images will be loaded from GitHub directly
+    // The client-side code can fetch the list from GitHub API if needed
+    if (isProduction) {
+      // Return a basic structure - you can enhance this by fetching from GitHub API
+      // For now, return empty and let the frontend handle it
+      return NextResponse.json({ 
+        characters: [],
+        message: 'Wallpapers are served from GitHub Raw URLs. Use GitHub API to fetch the list.'
+      });
+    }
+
+    // Development: read from local filesystem
     const wallpapersDir = path.join(process.cwd(), 'public', 'wallpapers');
     
-    // Check if wallpapers directory exists
     try {
       await fs.access(wallpapersDir);
     } catch {
@@ -27,22 +41,10 @@ export async function GET() {
         const characterPath = path.join(wallpapersDir, characterName);
         const files = await fs.readdir(characterPath);
         
-        // Filter only image files and use GitHub Raw URLs
+        // Filter only image files
         const imageFiles = files
           .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-          .map(file => {
-            // Use GitHub Raw URL for production, local path for development
-            const isProduction = process.env.NODE_ENV === 'production';
-            if (isProduction) {
-              // Encode the path for URL (handles special characters and spaces)
-              const encodedCharacter = encodeURIComponent(characterName);
-              const encodedFile = encodeURIComponent(file);
-              return `${GITHUB_RAW_BASE}/${encodedCharacter}/${encodedFile}`;
-            } else {
-              // Use local path in development
-              return `/wallpapers/${characterName}/${file}`;
-            }
-          })
+          .map(file => `/wallpapers/${characterName}/${file}`)
           .sort();
 
         if (imageFiles.length > 0) {
