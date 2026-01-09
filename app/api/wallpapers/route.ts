@@ -6,21 +6,69 @@ import path from 'path';
 const GITHUB_REPO = 'berbersoft02/wallpaper-hub';
 const GITHUB_BRANCH = 'main';
 const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/public/wallpapers`;
+const GITHUB_API_BASE = `https://api.github.com/repos/${GITHUB_REPO}/contents/public/wallpapers`;
 
-// In production, we don't read from filesystem to avoid including images in build
-const isProduction = process.env.NODE_ENV === 'production' || process.env.NETLIFY === 'true';
+// Check if we're in production (Netlify sets this)
+const isProduction = process.env.NETLIFY === 'true' || process.env.NODE_ENV === 'production';
 
 export async function GET() {
   try {
-    // In production, return empty array - images will be loaded from GitHub directly
-    // The client-side code can fetch the list from GitHub API if needed
+    // In production, fetch from GitHub API
     if (isProduction) {
-      // Return a basic structure - you can enhance this by fetching from GitHub API
-      // For now, return empty and let the frontend handle it
-      return NextResponse.json({ 
-        characters: [],
-        message: 'Wallpapers are served from GitHub Raw URLs. Use GitHub API to fetch the list.'
-      });
+      try {
+        const response = await fetch(GITHUB_API_BASE, {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'wallpaper-hub'
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch from GitHub API');
+        }
+        
+        const entries = await response.json();
+        const characters: { name: string; wallpapers: string[] }[] = [];
+        
+        // Process each character directory
+        for (const entry of entries) {
+          if (entry.type === 'dir') {
+            const characterName = entry.name;
+            const dirResponse = await fetch(entry.url, {
+              headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                'User-Agent': 'wallpaper-hub'
+              }
+            });
+            
+            if (dirResponse.ok) {
+              const files = await dirResponse.json();
+              const imageFiles = files
+                .filter((file: any) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name))
+                .map((file: any) => {
+                  const encodedCharacter = encodeURIComponent(characterName);
+                  const encodedFile = encodeURIComponent(file.name);
+                  return `${GITHUB_RAW_BASE}/${encodedCharacter}/${encodedFile}`;
+                })
+                .sort();
+              
+              if (imageFiles.length > 0) {
+                characters.push({
+                  name: characterName,
+                  wallpapers: imageFiles
+                });
+              }
+            }
+          }
+        }
+        
+        characters.sort((a, b) => a.name.localeCompare(b.name));
+        return NextResponse.json({ characters });
+      } catch (error) {
+        console.error('Error fetching from GitHub API:', error);
+        // Fallback to empty array
+        return NextResponse.json({ characters: [] });
+      }
     }
 
     // Development: read from local filesystem
