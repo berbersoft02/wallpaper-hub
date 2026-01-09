@@ -8,9 +8,3 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
-
-# Don't include large files in functions - they're served statically from public/
-[functions]
-  node_bundler = "esbuild"
-  # Exclude large image files from functions
-  included_files = []
