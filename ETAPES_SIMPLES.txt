@@ -1,0 +1,89 @@
+═══════════════════════════════════════════════════════════════
+  GUIDE SIMPLE : Comment Exécuter les Commandes Git
+═══════════════════════════════════════════════════════════════
+
+📌 ÉTAPE 1 : OUVRE LE TERMINAL
+───────────────────────────────────────────────────────────────
+
+Option A - Depuis l'Explorateur Windows :
+  1. Ouvre l'Explorateur de fichiers
+  2. Va dans : C:\Users\ASUS\Desktop\MONEY\wallpaper-hub
+  3. Clique DROIT dans le dossier vide
+  4. Clique sur "Ouvrir dans le terminal" ou "Ouvrir PowerShell ici"
+
+Option B - Depuis Windows :
+  1. Appuie sur la touche Windows
+  2. Tape : powershell
+  3. Appuie sur Entrée
+  4. Tape : cd C:\Users\ASUS\Desktop\MONEY\wallpaper-hub
+  5. Appuie sur Entrée
+
+
+📌 ÉTAPE 2 : CRÉE TON REPOSITORY GITHUB
+───────────────────────────────────────────────────────────────
+
+1. Va sur : https://github.com/new
+2. Nomme ton repository : wallpaper-hub
+3. NE COCHE PAS "Initialize with README"
+4. Clique sur "Create repository"
+5. Note ton username GitHub (ex: onlydias)
+
+
+📌 ÉTAPE 3 : EXÉCUTE CES COMMANDES DANS LE TERMINAL
+───────────────────────────────────────────────────────────────
+
+⚠️ IMPORTANT : Remplace "TON-USERNAME" par ton vrai username GitHub !
+
+Commande 1 - Vérifier que tu es au bon endroit :
+   git status
+
+Commande 2 - Connecter à GitHub (REMPLACE TON-USERNAME) :
+   git remote add origin https://github.com/TON-USERNAME/wallpaper-hub.git
+
+   Exemple si ton username est "onlydias" :
+   git remote add origin https://github.com/onlydias/wallpaper-hub.git
+
+Commande 3 - Changer la branche :
+   git branch -M main
+
+Commande 4 - Envoyer sur GitHub :
+   git push -u origin main
+
+
+📌 COMMENT EXÉCUTER UNE COMMANDE :
+───────────────────────────────────────────────────────────────
+
+1. Tape la commande dans le terminal
+2. Appuie sur ENTRÉE
+3. Attends que ça se termine
+4. Passe à la commande suivante
+
+
+📌 SI GITHUB DEMANDE DE SE CONNECTER :
+───────────────────────────────────────────────────────────────
+
+GitHub peut demander :
+  - Username : entre ton username GitHub
+  - Password : utilise un "Personal Access Token" (PAS ton mot de passe)
+
+Pour créer un token :
+  1. Va sur : https://github.com/settings/tokens
+  2. Clique sur "Generate new token (classic)"
+  3. Coche "repo" (toutes les permissions repo)
+  4. Clique sur "Generate token"
+  5. COPIE le token (tu ne le verras qu'une fois !)
+  6. Utilise ce token comme mot de passe
+
+
+📌 VÉRIFIER QUE ÇA A MARCHÉ :
+───────────────────────────────────────────────────────────────
+
+Après la dernière commande, tu devrais voir :
+   "Enumerating objects: 245, done."
+   "Counting objects: 100% (245/245), done."
+   "To https://github.com/TON-USERNAME/wallpaper-hub.git"
+
+Ensuite, va sur GitHub et vérifie que ton code est là !
+
+
+═══════════════════════════════════════════════════════════════

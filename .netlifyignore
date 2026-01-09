@@ -1,5 +1,7 @@
-# Exclude large wallpaper images from function bundling
-# They will be served as static files from public/
+# Exclude large wallpaper images from Netlify deployment
+# Images will be served from GitHub Raw URLs instead
 public/wallpapers/**/*.jpg
 public/wallpapers/**/*.jpeg
 public/wallpapers/**/*.png
+public/wallpapers/**/*.gif
+public/wallpapers/**/*.webp

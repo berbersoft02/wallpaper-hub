@@ -2,6 +2,11 @@ import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+// GitHub repository info
+const GITHUB_REPO = 'berbersoft02/wallpaper-hub';
+const GITHUB_BRANCH = 'main';
+const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/public/wallpapers`;
+
 export async function GET() {
   try {
     const wallpapersDir = path.join(process.cwd(), 'public', 'wallpapers');
@@ -22,10 +27,22 @@ export async function GET() {
         const characterPath = path.join(wallpapersDir, characterName);
         const files = await fs.readdir(characterPath);
         
-        // Filter only image files
+        // Filter only image files and use GitHub Raw URLs
         const imageFiles = files
           .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-          .map(file => `/wallpapers/${characterName}/${file}`)
+          .map(file => {
+            // Use GitHub Raw URL for production, local path for development
+            const isProduction = process.env.NODE_ENV === 'production';
+            if (isProduction) {
+              // Encode the path for URL (handles special characters and spaces)
+              const encodedCharacter = encodeURIComponent(characterName);
+              const encodedFile = encodeURIComponent(file);
+              return `${GITHUB_RAW_BASE}/${encodedCharacter}/${encodedFile}`;
+            } else {
+              // Use local path in development
+              return `/wallpapers/${characterName}/${file}`;
+            }
+          })
           .sort();
 
         if (imageFiles.length > 0) {

@@ -1,0 +1,90 @@
+═══════════════════════════════════════════════════════════════
+  DÉPLOIEMENT SUR NETLIFY - ÉTAPES SIMPLES
+═══════════════════════════════════════════════════════════════
+
+✅ ÉTAPE 1 : CRÉER UN COMPTE NETLIFY
+───────────────────────────────────────────────────────────────
+
+1. Va sur : https://netlify.com
+2. Clique sur "Sign up" (S'inscrire)
+3. Choisis "Continue with GitHub" (C'est le plus simple)
+4. Autorise Netlify à accéder à tes repositories GitHub
+
+
+✅ ÉTAPE 2 : IMPORTER TON PROJET
+───────────────────────────────────────────────────────────────
+
+1. Dans le dashboard Netlify, clique sur :
+   "Add new site" > "Import an existing project"
+
+2. Clique sur "GitHub"
+
+3. Si c'est la première fois, autorise Netlify à accéder à GitHub
+   (Clique sur "Authorize Netlify")
+
+4. Sélectionne ton repository : wallpaper-hub
+
+5. Netlify détectera automatiquement Next.js
+   Vérifie que les paramètres sont :
+   - Build command : npm run build
+   - Publish directory : .next
+
+6. Clique sur "Deploy site"
+
+
+✅ ÉTAPE 3 : ATTENDRE LE DÉPLOIEMENT
+───────────────────────────────────────────────────────────────
+
+- Netlify va builder ton site (2-5 minutes)
+- Tu verras les logs en temps réel
+- À la fin, tu auras une URL : ton-site-123.netlify.app
+- Clique sur cette URL pour voir ton site !
+
+
+✅ ÉTAPE 4 : CONFIGURER LES VARIABLES D'ENVIRONNEMENT
+───────────────────────────────────────────────────────────────
+
+1. Dans Netlify Dashboard, va dans :
+   Site settings > Environment variables
+
+2. Clique sur "Add a variable"
+
+3. Ajoute la première variable :
+   Key : RESEND_API_KEY
+   Value : re_NpHSS4x7_FYyPex9sjZrseuqxbVegjLzB
+   Clique sur "Save"
+
+4. Clique sur "Add a variable" à nouveau
+
+5. Ajoute la deuxième variable :
+   Key : RESEND_FROM_EMAIL
+   Value : onboarding@resend.dev
+   Clique sur "Save"
+
+6. Après avoir ajouté les variables, va dans "Deploys"
+   Clique sur "Trigger deploy" > "Clear cache and deploy site"
+
+
+✅ ÉTAPE 5 : CONNECTER TON DOMAINE NAMECHEAP
+───────────────────────────────────────────────────────────────
+
+1. Dans Netlify Dashboard, va dans :
+   Site settings > Domain management
+
+2. Clique sur "Add custom domain"
+
+3. Entre ton domaine (ex: ton-domaine.com)
+   Clique sur "Verify"
+
+4. Netlify te donnera des instructions DNS
+
+5. Va sur Namecheap :
+   - Domain List > Manage > Advanced DNS
+   - Suis les instructions de Netlify pour configurer les DNS
+
+6. Attends 24-48h pour la propagation DNS
+
+
+═══════════════════════════════════════════════════════════════
+  C'EST TOUT ! TON SITE SERA EN LIGNE ! 🎉
+═══════════════════════════════════════════════════════════════
