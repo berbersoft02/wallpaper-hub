@@ -45,6 +45,15 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center relative z-10">
             <a
+              href="https://ugccreatorportfoliobyyous.my.canva.site/algerian-sign-language"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-neon-cyan hover:bg-neon-cyan/80 text-white font-pixel text-xl px-10 py-4 rounded-full shadow-[0_0_32px_rgba(5,217,232,0.6)] hover:shadow-[0_0_48px_rgba(5,217,232,0.9)] transition-all hover:scale-110 border-2 border-neon-cyan/50"
+            >
+              My App: Algerian Sign Language
+            </a>
+            
+            <a
               href="https://www.paypal.com/ncp/payment/ZLNFBVUXYBFK2"
               target="_blank"
               rel="noopener noreferrer"
