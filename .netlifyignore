@@ -1,7 +1,4 @@
 # Exclude large wallpaper images from Netlify deployment
 # Images will be served from GitHub Raw URLs instead
-public/wallpapers/**/*.jpg
-public/wallpapers/**/*.jpeg
-public/wallpapers/**/*.png
-public/wallpapers/**/*.gif
-public/wallpapers/**/*.webp
+# The list is generated at build time in app/data/wallpapers.json
+public/wallpapers/**
