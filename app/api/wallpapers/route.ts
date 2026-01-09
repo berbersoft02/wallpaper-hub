@@ -2,28 +2,11 @@ import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-// In production, use the static JSON file generated at build time
-// In development, read from filesystem
-const isProduction = process.env.NETLIFY === 'true' || process.env.NODE_ENV === 'production';
-
 export async function GET() {
   try {
-    if (isProduction) {
-      // In production, read from the static JSON file
-      const wallpapersFile = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
-      try {
-        const fileContent = await fs.readFile(wallpapersFile, 'utf-8');
-        const data = JSON.parse(fileContent);
-        return NextResponse.json(data);
-      } catch (error) {
-        console.error('Error reading wallpapers.json:', error);
-        return NextResponse.json({ characters: [] });
-      }
-    }
-
-    // Development: read from local filesystem
     const wallpapersDir = path.join(process.cwd(), 'public', 'wallpapers');
     
+    // Check if wallpapers directory exists
     try {
       await fs.access(wallpapersDir);
     } catch {

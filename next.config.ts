@@ -2,17 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // Optimize images for Netlify
+  // Disable image optimization to reduce function size
+  // Images will be served statically from public/ folder
   images: {
-    unoptimized: true, // Netlify handles image optimization
-    // Allow images from GitHub Raw
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'raw.githubusercontent.com',
-        pathname: '/berbersoft02/wallpaper-hub/**',
-      },
-    ],
+    unoptimized: true, // Images served statically, not processed by Next.js
+  },
+  // Increase the maximum upload size for API routes
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '50mb',
+    },
   },
 };
 

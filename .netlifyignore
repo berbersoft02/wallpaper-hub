@@ -1,4 +1,23 @@
-# Exclude large wallpaper images from Netlify deployment
-# Images will be served from GitHub Raw URLs instead
-# The list is generated at build time in app/data/wallpapers.json
-public/wallpapers/**
+# Node modules (already ignored but just in case)
+node_modules/
+
+# Build artifacts (these are generated during build)
+.next/
+out/
+dist/
+
+# Environment files
+.env*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git files
+.git/
+.gitignore

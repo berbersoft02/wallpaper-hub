@@ -32,17 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-!.env.local.example
 
 # vercel
 .vercel
 
-# netlify
-.netlify
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Generated wallpapers list (will be regenerated at build time)
-# app/data/wallpapers.json
