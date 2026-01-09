@@ -220,13 +220,16 @@ export async function GET() {
               charactersMap.set(characterName, []);
             }
             
-            // Get the optimized URL
+            // Get the optimized URL - make sure to include the full path
+            // public_id might not include the extension, so we add it
             const imageUrl = cloudinary.url(resource.public_id, {
               secure: true,
-              format: 'auto',
+              format: resource.format || 'auto',
               quality: 'auto',
+              fetch_format: 'auto',
             });
             
+            console.log(`Generated URL for ${characterName}: ${imageUrl.substring(0, 80)}...`);
             charactersMap.get(characterName)!.push(imageUrl);
           } else {
             console.warn('Unexpected resource structure:', {
@@ -325,8 +328,20 @@ export async function GET() {
         });
       }
 
-      console.log(`Successfully loaded ${characters.length} characters from Cloudinary`);
-      return NextResponse.json({ characters, source: 'cloudinary' });
+      const totalWallpapers = characters.reduce((sum, char) => sum + char.wallpapers.length, 0);
+      console.log(`✅ Successfully loaded ${characters.length} characters from Cloudinary`);
+      console.log(`✅ Total wallpapers: ${totalWallpapers}`);
+      
+      // Log sample URLs for debugging
+      if (characters.length > 0 && characters[0].wallpapers.length > 0) {
+        console.log(`Sample URL: ${characters[0].wallpapers[0]}`);
+      }
+      
+      return NextResponse.json({ 
+        characters, 
+        source: 'cloudinary',
+        total: totalWallpapers 
+      });
     } catch (cloudinaryError: any) {
       console.error('Cloudinary error:', cloudinaryError);
       

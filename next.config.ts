@@ -2,10 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // Disable image optimization to reduce function size
-  // Images will be served statically from public/ folder
   images: {
-    unoptimized: true, // Images served statically, not processed by Next.js
+    // Allow images from Cloudinary
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
+    ],
+    // Keep unoptimized for now to avoid issues
+    unoptimized: true,
   },
   // Increase the maximum upload size for API routes
   experimental: {

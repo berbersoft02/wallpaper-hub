@@ -34,7 +34,25 @@ export default function Gallery() {
     const loadWallpapers = async () => {
       try {
         const response = await fetch('/api/wallpapers');
+        if (!response.ok) {
+          throw new Error(`API returned ${response.status}: ${response.statusText}`);
+        }
         const data = await response.json();
+        console.log('📥 API Response received:', {
+          hasCharacters: !!data.characters,
+          charactersCount: data.characters?.length || 0,
+          total: data.total,
+          source: data.source
+        });
+        
+        console.log('📥 API Response received:', {
+          hasError: !!data.error,
+          charactersCount: data.characters?.length || 0,
+          total: data.total,
+          source: data.source,
+          firstCharacter: data.characters?.[0]?.name,
+          firstCharacterWallpapers: data.characters?.[0]?.wallpapers?.length
+        });
         
         if (data.error) {
           // Show error message
@@ -60,6 +78,7 @@ export default function Gallery() {
 
             setWallpapers(allWallpapers);
             setCharacters(characterNames);
+            setError(null); // Clear error if we have data
           }
         } else if (data.characters && data.characters.length > 0) {
           const allWallpapers: Wallpaper[] = [];
@@ -82,10 +101,13 @@ export default function Gallery() {
           setError(null);
           
           // Log source for debugging
-          if (data.source) {
-            console.log(`Wallpapers loaded from: ${data.source}`);
+          console.log(`✅ Loaded ${allWallpapers.length} wallpapers from ${data.source || 'unknown source'}`);
+          console.log(`✅ Characters: ${characterNames.join(', ')}`);
+          if (allWallpapers.length > 0) {
+            console.log(`Sample wallpaper URL: ${allWallpapers[0].url}`);
           }
         } else {
+          console.warn('⚠️ No characters found in API response:', data);
           setError('No wallpapers found. Please check the configuration.');
         }
       } catch (error) {
