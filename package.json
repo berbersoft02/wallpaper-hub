@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "upload-images": "node scripts/upload-to-cloudinary.js",
+    "upload-shiina": "node scripts/upload-shiina.js",
+    "upload-images": "node scripts/upload-to-cloudinary.js"
   },
   "dependencies": {
+    "cloudinary": "^2.8.0",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "19.2.3",
@@ -20,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "postcss": "^8.4.47",
