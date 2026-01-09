@@ -200,12 +200,13 @@ export async function GET() {
         });
         
         result.resources.forEach((resource: any) => {
-          // Extract folder name (character name) from the path
-          // Path format: "wallpapers/character-name/image.jpg" or "wallpapers/character name/image.jpg"
-          const pathParts = resource.folder?.split('/') || [];
+          // Extract folder name from public_id (folder field might be undefined)
+          // public_id format: "wallpapers/character-name/image" or "wallpapers/character name/image"
+          const publicId = resource.public_id || '';
+          const pathParts = publicId.split('/');
           
-          if (pathParts.length >= 2) {
-            // Get the folder name from Cloudinary (might have spaces or special chars)
+          if (pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
+            // Get the folder name (character name) from public_id
             const folderName = pathParts[1];
             
             // Try to map the folder name to the original character name
@@ -228,9 +229,9 @@ export async function GET() {
             
             charactersMap.get(characterName)!.push(imageUrl);
           } else {
-            console.warn('Unexpected resource folder structure:', {
-              folder: resource.folder,
-              public_id: resource.public_id
+            console.warn('Unexpected resource structure:', {
+              public_id: resource.public_id,
+              folder: resource.folder
             });
           }
         });
@@ -257,8 +258,11 @@ export async function GET() {
           if (wallpapersResources.length > 0) {
             // Process these resources
             wallpapersResources.forEach((resource: any) => {
-              const pathParts = resource.folder?.split('/') || [];
-              if (pathParts.length >= 2) {
+              // Extract from public_id since folder might be undefined
+              const publicId = resource.public_id || '';
+              const pathParts = publicId.split('/');
+              
+              if (pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
                 const folderName = pathParts[1];
                 const normalizedFolderName = folderName.toLowerCase().replace(/\s+/g, '-');
                 const characterName = nameMapping[folderName] || 
