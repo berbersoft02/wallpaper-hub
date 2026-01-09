@@ -7,3 +7,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Increase function size limit for Next.js
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["public/**"]
