@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "upload-images": "node scripts/upload-to-cloudinary.js",
-    "upload-shiina": "node scripts/upload-shiina.js",
-    "upload-images": "node scripts/upload-to-cloudinary.js"
+    "upload-shiina": "node scripts/upload-shiina.js"
   },
   "dependencies": {
     "cloudinary": "^2.8.0",

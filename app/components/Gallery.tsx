@@ -27,6 +27,7 @@ export default function Gallery() {
   const [recommendationForm, setRecommendationForm] = useState({ name: '', email: '', message: '' });
   const [sending, setSending] = useState(false);
   const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Load wallpapers from API
   useEffect(() => {
@@ -35,7 +36,32 @@ export default function Gallery() {
         const response = await fetch('/api/wallpapers');
         const data = await response.json();
         
-        if (data.characters && data.characters.length > 0) {
+        if (data.error) {
+          // Show error message
+          setError(data.error);
+          console.error('API Error:', data.error, data.message || data.details);
+          
+          // If there are still characters, show them anyway
+          if (data.characters && data.characters.length > 0) {
+            const allWallpapers: Wallpaper[] = [];
+            const characterNames: string[] = [];
+
+            data.characters.forEach((char: CharacterData) => {
+              characterNames.push(char.name);
+              char.wallpapers.forEach((wallpaperUrl: string, imgIndex: number) => {
+                allWallpapers.push({
+                  id: `${char.name}-${imgIndex}`,
+                  url: wallpaperUrl,
+                  character: char.name,
+                  title: `${char.name} - ${imgIndex + 1}`
+                });
+              });
+            });
+
+            setWallpapers(allWallpapers);
+            setCharacters(characterNames);
+          }
+        } else if (data.characters && data.characters.length > 0) {
           const allWallpapers: Wallpaper[] = [];
           const characterNames: string[] = [];
 
@@ -53,9 +79,18 @@ export default function Gallery() {
 
           setWallpapers(allWallpapers);
           setCharacters(characterNames);
+          setError(null);
+          
+          // Log source for debugging
+          if (data.source) {
+            console.log(`Wallpapers loaded from: ${data.source}`);
+          }
+        } else {
+          setError('No wallpapers found. Please check the configuration.');
         }
       } catch (error) {
         console.error('Error loading wallpapers:', error);
+        setError('Failed to load wallpapers. Please check the configuration.');
       } finally {
         setLoading(false);
       }
@@ -187,6 +222,22 @@ export default function Gallery() {
           <div className="flex flex-col items-center justify-center py-20">
             <div className="font-pixel text-2xl text-neon-cyan animate-pulse">
               Loading wallpapers...
+            </div>
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center py-20">
+            <div className="bg-card-bg border-4 border-neon-pink p-12 max-w-md text-center rounded-lg shadow-[0_0_48px_rgba(255,42,109,0.6)]">
+              <h3 className="font-pixel text-3xl text-neon-cyan mb-4 drop-shadow-[0_0_16px_rgba(5,217,232,0.8)]">
+                Configuration Required
+              </h3>
+              <p className="font-body text-gray-300 text-sm mb-4">
+                {error.includes('Cloudinary') 
+                  ? 'Cloudinary is not configured. Please add environment variables on Netlify.'
+                  : error}
+              </p>
+              <p className="font-body text-gray-400 text-xs">
+                Check NETLIFY_CLOUDINARY_SETUP.md for instructions.
+              </p>
             </div>
           </div>
         ) : filteredWallpapers.length === 0 ? (
