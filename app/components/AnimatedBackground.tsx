@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function AnimatedBackground() {
-  const images = Array.from({ length: 31 }, (_, i) => i + 1);
+  const images = Array.from({ length: 38 }, (_, i) => i + 1);
   
   // Animation types to cycle through
   const animations = [
