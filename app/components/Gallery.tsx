@@ -1,8 +1,8 @@
 "use client";
 
-import { Download, Heart, Maximize2, X } from "lucide-react";
+import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface Wallpaper {
   id: string;
@@ -18,7 +18,7 @@ interface CharacterData {
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<{ url: string; title: string } | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
   const [characters, setCharacters] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -136,23 +136,51 @@ export default function Gallery() {
   // Check if there are more wallpapers to show (only for "All" filter)
   const hasMore = filter === "All" && displayCount < allWallpapersReversed.length;
 
-  // Close modal on Escape key
+  // Navigate to previous wallpaper
+  const goToPrevious = useCallback(() => {
+    if (selectedImageIndex !== null && selectedImageIndex > 0) {
+      setSelectedImageIndex(selectedImageIndex - 1);
+    } else if (selectedImageIndex === 0) {
+      // Loop to last image
+      setSelectedImageIndex(filteredWallpapers.length - 1);
+    }
+  }, [selectedImageIndex, filteredWallpapers.length]);
+
+  // Navigate to next wallpaper
+  const goToNext = useCallback(() => {
+    if (selectedImageIndex !== null && selectedImageIndex < filteredWallpapers.length - 1) {
+      setSelectedImageIndex(selectedImageIndex + 1);
+    } else if (selectedImageIndex === filteredWallpapers.length - 1) {
+      // Loop to first image
+      setSelectedImageIndex(0);
+    }
+  }, [selectedImageIndex, filteredWallpapers.length]);
+
+  // Handle keyboard navigation
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setSelectedImage(null);
+        setSelectedImageIndex(null);
         setShowRecommendationModal(false);
+      } else if (selectedImageIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goToPrevious();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goToNext();
+        }
       }
     };
-    if (selectedImage || showRecommendationModal) {
-      document.addEventListener('keydown', handleEscape);
+    if (selectedImageIndex !== null || showRecommendationModal) {
+      document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
     }
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [selectedImage, showRecommendationModal]);
+  }, [selectedImageIndex, showRecommendationModal, goToPrevious, goToNext]);
 
   // Handle hash change to open recommendation modal
   useEffect(() => {
@@ -276,8 +304,12 @@ export default function Gallery() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredWallpapers.map((wp) => (
-              <div key={wp.id} className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_32px_rgba(255,42,109,0.4)] hover:scale-105">
+            {filteredWallpapers.map((wp, index) => (
+              <div 
+                key={wp.id} 
+                className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_32px_rgba(255,42,109,0.4)] hover:scale-105 cursor-pointer"
+                onClick={() => setSelectedImageIndex(index)}
+              >
                 <div className="aspect-[9/16] relative overflow-hidden">
                    <Image 
                       src={wp.url} 
@@ -298,16 +330,12 @@ export default function Gallery() {
                      <Download size={24} />
                    </button>
                    
-                   {/* Maximize Button - Top Left Corner */}
-                   <button 
-                     onClick={(e) => {
-                       e.stopPropagation();
-                       setSelectedImage({ url: wp.url, title: wp.title });
-                     }}
-                     className="absolute top-4 left-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hover:bg-neon-pink/80 hover:shadow-[0_0_16px_rgba(255,42,109,0.8)] z-10"
-                   >
-                     <Maximize2 size={24} />
-                   </button>
+                   {/* Maximize Icon - Center (appears on hover) */}
+                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/20">
+                     <div className="p-4 bg-black/50 backdrop-blur-md rounded-full text-white">
+                       <Maximize2 size={32} />
+                     </div>
+                   </div>
                 </div>
                 
                 <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90 backdrop-blur-sm">
@@ -315,7 +343,10 @@ export default function Gallery() {
                     <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">{wp.title}</h3>
                     <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{wp.character.replace(/-/g, ' ')}</span>
                   </div>
-                  <button className="text-gray-500 hover:text-red-500 transition-all hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]">
+                  <button 
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-gray-500 hover:text-red-500 transition-all hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]"
+                  >
                     <Heart size={20} />
                   </button>
                 </div>
@@ -337,30 +368,74 @@ export default function Gallery() {
         )}
       </div>
 
-      {/* Full Screen Image Modal */}
-      {selectedImage && (
+      {/* Full Screen Image Modal with Navigation */}
+      {selectedImageIndex !== null && filteredWallpapers[selectedImageIndex] && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4"
+          onClick={() => setSelectedImageIndex(null)}
         >
+          {/* Close Button */}
           <button
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedImageIndex(null)}
             className="absolute top-4 right-4 p-3 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-pink hover:scale-110 transition-all z-20 shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)]"
           >
             <X size={28} />
           </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              goToPrevious();
+            }}
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-20 shadow-[0_0_24px_rgba(5,217,232,0.6)] hover:shadow-[0_0_32px_rgba(5,217,232,0.9)]"
+          >
+            <ChevronLeft size={32} />
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              goToNext();
+            }}
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-20 shadow-[0_0_24px_rgba(5,217,232,0.6)] hover:shadow-[0_0_32px_rgba(5,217,232,0.9)]"
+          >
+            <ChevronRight size={32} />
+          </button>
           
+          {/* Image Container */}
           <div 
-            className="relative max-w-full max-h-full"
+            className="relative max-w-full max-h-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img 
-              src={selectedImage.url} 
-              alt={selectedImage.title}
-              className="max-w-full max-h-[90vh] object-contain"
+              src={filteredWallpapers[selectedImageIndex].url} 
+              alt={filteredWallpapers[selectedImageIndex].title}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-center">
-              <h3 className="font-pixel text-2xl text-white mb-2">{selectedImage.title}</h3>
+            
+            {/* Info Bar */}
+            <div className="mt-4 bg-black/70 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-4">
+              <h3 className="font-pixel text-xl text-white">{filteredWallpapers[selectedImageIndex].title}</h3>
+              <span className="text-gray-400">|</span>
+              <span className="text-neon-cyan font-pixel text-sm">
+                {selectedImageIndex + 1} / {filteredWallpapers.length}
+              </span>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDownload(filteredWallpapers[selectedImageIndex].url, filteredWallpapers[selectedImageIndex].title);
+                }}
+                className="p-2 bg-neon-cyan/20 hover:bg-neon-cyan/40 rounded-full text-neon-cyan hover:scale-110 transition-all"
+              >
+                <Download size={20} />
+              </button>
+            </div>
+
+            {/* Navigation Hint */}
+            <div className="mt-2 text-gray-500 text-sm font-body">
+              Use ← → arrow keys to navigate
             </div>
           </div>
         </div>
