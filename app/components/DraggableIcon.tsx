@@ -76,6 +76,7 @@ export default function DraggableIcon({
 
   // Handle touch start
   const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault(); // Prevent page scroll
     e.stopPropagation();
     setIsDragging(true);
     setIsThrowing(false);
@@ -91,6 +92,10 @@ export default function DraggableIcon({
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
+    
+    // Prevent body scroll while dragging
+    document.body.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none';
   };
 
   // Throw animation with physics
@@ -159,6 +164,7 @@ export default function DraggableIcon({
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
+      e.preventDefault(); // Prevent page scroll while dragging
       setHasMoved(true);
       
       const touch = e.touches[0];
@@ -182,6 +188,9 @@ export default function DraggableIcon({
     const handleMouseUp = () => {
       if (isDragging) {
         setIsDragging(false);
+        // Restore body scroll
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
         // Start throw animation if there's enough velocity
         if (Math.abs(velocity.x) > 2 || Math.abs(velocity.y) > 2) {
           setIsThrowing(true);
@@ -214,6 +223,7 @@ export default function DraggableIcon({
     cursor: isDragging ? "grabbing" : "grab",
     zIndex: isDragging || isThrowing ? 100 : 5,
     animation: hasMoved ? "none" : animation,
+    touchAction: "none", // Prevent browser touch gestures
   };
 
   return (
