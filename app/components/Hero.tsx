@@ -357,16 +357,14 @@ export default function Hero() {
         </div>
         
         <h1 className="font-pixel text-5xl md:text-8xl leading-tight animate-glow-hero drop-shadow-[0_0_24px_var(--color-neon-pink)]">
+          LEVEL UP YOUR <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-orange-400 to-neon-cyan animate-sparkle">
-            ONLY_DIAS
-          </span> <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-pink to-orange-400 animate-sparkle">
-            OCEAN
+            SCREENS
           </span>
         </h1>
         
         <p className="font-body text-gray-300 text-lg md:text-2xl max-w-2xl mx-auto animate-fade-in-delay">
-          Want more cool wallpapers? Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_dias</span> on TikTok!
+          Welcome here! Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_dias</span> on TikTok!
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
