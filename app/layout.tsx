@@ -17,6 +17,14 @@ const bodyFont = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Only_dias Ocean",
   description: "Exclusive Anime and Pixel Art Wallpapers for your devices.",
+  other: {
+    "google-adsense-account": "ca-pub-7463641924793744",
+  },
+  verification: {
+    other: {
+      "google-adsense-account": ["ca-pub-7463641924793744"],
+    },
+  },
 };
 
 export default function RootLayout({
