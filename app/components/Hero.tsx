@@ -357,9 +357,11 @@ export default function Hero() {
         </div>
         
         <h1 className="font-pixel text-5xl md:text-8xl leading-tight animate-glow-hero drop-shadow-[0_0_24px_var(--color-neon-pink)]">
-          LEVEL UP YOUR <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-orange-400 to-neon-cyan animate-sparkle">
-            SCREENS
+            ONLY_DIAS
+          </span> <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-pink to-orange-400 animate-sparkle">
+            OCEAN
           </span>
         </h1>
         

@@ -177,6 +177,7 @@ export async function GET() {
         'maria-kujou': 'Maria kujou',
         'marin-kitagawa': 'Marin kitagawa',
         'nakano-nino': 'Nakano Nino',
+        'rin-shima': 'Rin Shima',
         'shikimori': 'shikimori',
         'yuzuki-nanase': 'Yuzuki Nanase',
         'zero-two': 'Zero Two',
@@ -188,6 +189,7 @@ export async function GET() {
         'maria kujou': 'Maria kujou',
         'marin kitagawa': 'Marin kitagawa',
         'nakano nino': 'Nakano Nino',
+        'rin shima': 'Rin Shima',
         'yuzuki nanase': 'Yuzuki Nanase',
         'zero two': 'Zero Two',
       };

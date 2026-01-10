@@ -14,7 +14,7 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Anime & Pixel Wallpaper Hub",
+  title: "Only_dias Ocean",
   description: "Exclusive Anime and Pixel Art Wallpapers for your devices.",
 };
 
