@@ -1,347 +1,61 @@
+"use client";
+
 import { ArrowDown, Gamepad2 } from "lucide-react";
-import Image from "next/image";
+import DraggableIcon from "./DraggableIcon";
+
+// Define all floating icons with their properties
+const floatingIcons = [
+  { src: "/3.png", top: "50%", left: "3%", size: "lg" as const, animation: "float-random-3 20s ease-in-out infinite, neon-pulse 3s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_24px_rgba(5,217,232,0.6)]" },
+  { src: "/4.png", top: "45%", right: "10%", size: "md" as const, animation: "float-random-4 16s ease-in-out infinite, electric 3s ease-in-out infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.6)]" },
+  { src: "/5.png", bottom: "20%", left: "6%", size: "sm" as const, animation: "float-random-5 19s ease-in-out infinite, breathe 4s ease-in-out infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/6.png", bottom: "25%", right: "4%", size: "lg" as const, animation: "float-random-6 17s ease-in-out infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_30px_rgba(211,0,197,0.6)]" },
+  { src: "/7.png", top: "30%", left: "25%", size: "sm" as const, animation: "float-random-7 21s ease-in-out infinite, glitch 5s ease-in-out infinite", ringColor: "ring-neon-cyan/30", shadowColor: "shadow-[0_0_25px_rgba(5,217,232,0.5)]" },
+  { src: "/8.png", bottom: "35%", right: "20%", size: "md" as const, animation: "float-random-8 14s ease-in-out infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/9.png", top: "5%", left: "50%", size: "sm" as const, animation: "float-random-1 15s ease-in-out 2s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
+  { src: "/10.png", top: "70%", left: "40%", size: "md" as const, animation: "float-random-2 18s ease-in-out 3s infinite, electric 5s ease-in-out infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_22px_rgba(211,0,197,0.5)]" },
+  { src: "/11.png", top: "25%", right: "35%", size: "sm" as const, animation: "float-random-3 20s ease-in-out 1.5s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/12.png", bottom: "10%", left: "30%", size: "md" as const, animation: "float-random-4 16s ease-in-out 2.5s infinite, hologram 7s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_25px_rgba(5,217,232,0.6)]" },
+  { src: "/13.png", top: "8%", left: "15%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 0.5s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/14.png", top: "60%", right: "15%", size: "md" as const, animation: "float-random-6 17s ease-in-out 1s infinite, electric 4s ease-in-out 0.5s infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/15.png", top: "40%", left: "20%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 1.2s infinite, neon-pulse 5s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.5)]" },
+  { src: "/16.png", bottom: "15%", right: "25%", size: "md" as const, animation: "float-random-8 14s ease-in-out 0.8s infinite, hologram 5s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.5)]" },
+  { src: "/17.png", top: "20%", right: "45%", size: "sm" as const, animation: "float-random-1 15s ease-in-out 2.2s infinite, glitch 6s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.6)]" },
+  { src: "/18.png", bottom: "40%", left: "15%", size: "md" as const, animation: "float-random-2 18s ease-in-out 1.8s infinite, cyber-flicker 5s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_22px_rgba(255,42,109,0.5)]" },
+  { src: "/19.png", top: "75%", right: "30%", size: "sm" as const, animation: "float-random-3 20s ease-in-out 0.3s infinite, breathe 4s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.5)]" },
+  { src: "/20.png", top: "12%", left: "60%", size: "md" as const, animation: "float-random-4 16s ease-in-out 1.4s infinite, neon-pulse 3s ease-in-out 1s infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_25px_rgba(5,217,232,0.6)]" },
+  { src: "/21.png", bottom: "30%", right: "12%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 2.8s infinite, rainbow-border 4s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/22.png", top: "55%", left: "45%", size: "md" as const, animation: "float-random-6 17s ease-in-out 0.7s infinite, electric 4s ease-in-out 2s infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/23.png", bottom: "50%", right: "40%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 1.6s infinite, hologram 6s ease-in-out 1s infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.6)]" },
+  { src: "/24.png", top: "35%", left: "35%", size: "md" as const, animation: "float-random-8 14s ease-in-out 2.3s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.5)]" },
+  { src: "/25.png", bottom: "18%", left: "22%", size: "sm" as const, animation: "float-random-1 15s ease-in-out 1.1s infinite, glitch 7s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/26.png", top: "65%", left: "28%", size: "md" as const, animation: "float-random-2 18s ease-in-out 0.4s infinite, electric 5s ease-in-out 1s infinite", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.5)]" },
+  { src: "/27.png", top: "18%", right: "22%", size: "sm" as const, animation: "float-random-3 20s ease-in-out 2.6s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
+  { src: "/28.png", bottom: "45%", left: "38%", size: "md" as const, animation: "float-random-4 16s ease-in-out 0.9s infinite, cyber-flicker 4s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_22px_rgba(255,42,109,0.5)]" },
+  { src: "/29.png", top: "45%", right: "18%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 1.7s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/30.png", bottom: "12%", right: "35%", size: "md" as const, animation: "float-random-6 17s ease-in-out 2.4s infinite, hologram 6s ease-in-out 2s infinite", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_20px_rgba(211,0,197,0.6)]" },
+  { src: "/31.png", top: "28%", left: "55%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 0.6s infinite, neon-pulse 3s ease-in-out 0.5s infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.5)]" },
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
-      {/* Background Decor Icons with Cool Effects */}
-        <div 
-          className="absolute top-[50%] left-[3%] w-16 h-16 md:w-20 md:h-20 hover:opacity-90 transition-all duration-500 z-5 animate-float-glow"
-          style={{
-            animation: 'float-random-3 20s ease-in-out infinite, neon-pulse 3s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/3.png" 
-            alt="Anime character" 
-            width={80} 
-            height={80}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_24px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/50 hover:ring-4 hover:ring-neon-pink transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Anime Image 4 - Electric Effect */}
-        <div 
-          className="absolute top-[45%] right-[10%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-4 16s ease-in-out infinite, electric 3s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/4.png" 
-            alt="Anime character" 
-            width={72} 
-            height={72}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] ring-2 ring-neon-pink/50 hover:scale-110 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Anime Image 5 - Rainbow Border Effect */}
-        <div 
-          className="absolute bottom-[20%] left-[6%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-rainbow-border rounded-full"
-          style={{
-            animation: 'float-random-5 19s ease-in-out infinite, breathe 4s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/5.png" 
-            alt="Anime character" 
-            width={64} 
-            height={64}
-            className="w-full h-full object-cover rounded-full hover:scale-110 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Anime Image 6 - Hologram Effect */}
-        <div 
-          className="absolute bottom-[25%] right-[4%] w-16 h-16 md:w-20 md:h-20 hover:opacity-90 transition-all duration-500 z-5 animate-hologram"
-          style={{
-            animation: 'float-random-6 17s ease-in-out infinite, hologram 6s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/6.png" 
-            alt="Anime character" 
-            width={80} 
-            height={80}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_30px_rgba(211,0,197,0.6)] ring-2 ring-neon-purple/50 hover:ring-4 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Anime Image 7 - Glitch Effect */}
-        <div 
-          className="absolute top-[30%] left-[25%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-7 21s ease-in-out infinite, glitch 5s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/7.png" 
-            alt="Anime character" 
-            width={64} 
-            height={64}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_25px_rgba(5,217,232,0.5)] ring-2 ring-neon-cyan/30 hover:scale-110 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Anime Image 8 - Cyber Flicker Effect */}
-        <div 
-          className="absolute bottom-[35%] right-[20%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5 animate-cyber-flicker"
-          style={{
-            animation: 'float-random-8 14s ease-in-out infinite, cyber-flicker 4s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/8.png" 
-            alt="Anime character" 
-            width={72} 
-            height={72}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/40 hover:ring-4 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* More random anime images scattered around - with effects */}
-        <div 
-          className="absolute top-[5%] left-[50%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-1 15s ease-in-out 2s infinite, neon-pulse 4s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/9.png" 
-            alt="Anime character" 
-            width={64} 
-            height={64}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/50 hover:scale-110 transition-all"
-            unoptimized
-          />
-        </div>
-
-        <div 
-          className="absolute top-[70%] left-[40%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-2 18s ease-in-out 3s infinite, electric 5s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/10.png" 
-            alt="Anime character" 
-            width={72} 
-            height={72}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_22px_rgba(211,0,197,0.5)] ring-2 ring-neon-purple/40 hover:ring-4 transition-all"
-            unoptimized
-          />
-        </div>
-
-        <div 
-          className="absolute top-[25%] right-[35%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-breathe"
-          style={{
-            animation: 'float-random-3 20s ease-in-out 1.5s infinite, breathe 5s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/11.png" 
-            alt="Anime character" 
-            width={64} 
-            height={64}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/50 hover:scale-110 transition-all"
-            unoptimized
-          />
-        </div>
-
-        <div 
-          className="absolute bottom-[10%] left-[30%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-4 16s ease-in-out 2.5s infinite, hologram 7s ease-in-out infinite'
-          }}
-        >
-          <Image 
-            src="/12.png" 
-            alt="Anime character" 
-            width={72} 
-            height={72}
-            className="w-full h-full object-cover rounded-full shadow-[0_0_25px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/40 hover:ring-4 transition-all"
-            unoptimized
-          />
-        </div>
-
-        {/* Additional anime images 13-31 with various effects */}
-        <div 
-          className="absolute top-[8%] left-[15%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-rainbow-border rounded-full"
-          style={{
-            animation: 'float-random-5 19s ease-in-out 0.5s infinite, rainbow-border 5s linear infinite'
-          }}
-        >
-          <Image src="/13.png" alt="Anime character" width={104} height={104} className="w-full h-full object-cover rounded-full" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[60%] right-[15%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-6 17s ease-in-out 1s infinite, electric 4s ease-in-out 0.5s infinite'
-          }}
-        >
-          <Image src="/14.png" alt="Anime character" width={120} height={120} className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/40 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[40%] left-[20%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-7 21s ease-in-out 1.2s infinite, neon-pulse 5s ease-in-out infinite'
-          }}
-        >
-          <Image src="/15.png" alt="Anime character" width={96} height={96} className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(5,217,232,0.5)] ring-2 ring-neon-cyan/40 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[15%] right-[25%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5 animate-hologram"
-          style={{
-            animation: 'float-random-8 14s ease-in-out 0.8s infinite, hologram 5s ease-in-out infinite'
-          }}
-        >
-          <Image src="/16.png" alt="Anime character" width={128} height={128} className="w-full h-full object-cover rounded-full shadow-[0_0_25px_rgba(211,0,197,0.5)] ring-2 ring-neon-purple/50 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[20%] right-[45%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-1 15s ease-in-out 2.2s infinite, glitch 6s ease-in-out infinite'
-          }}
-        >
-          <Image src="/17.png" alt="Anime character" width={112} height={112} className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/50 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[40%] left-[15%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-2 18s ease-in-out 1.8s infinite, cyber-flicker 5s ease-in-out infinite'
-          }}
-        >
-          <Image src="/18.png" alt="Anime character" width={120} height={120} className="w-full h-full object-cover rounded-full shadow-[0_0_22px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/40 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[75%] right-[30%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-breathe"
-          style={{
-            animation: 'float-random-3 20s ease-in-out 0.3s infinite, breathe 4s ease-in-out infinite'
-          }}
-        >
-          <Image src="/19.png" alt="Anime character" width={104} height={104} className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(211,0,197,0.5)] ring-2 ring-neon-purple/40 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[12%] left-[60%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-4 16s ease-in-out 1.4s infinite, neon-pulse 3s ease-in-out 1s infinite'
-          }}
-        >
-          <Image src="/20.png" alt="Anime character" width={128} height={128} className="w-full h-full object-cover rounded-full shadow-[0_0_25px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/50 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[30%] right-[12%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-rainbow-border rounded-full"
-          style={{
-            animation: 'float-random-5 19s ease-in-out 2.8s infinite, rainbow-border 4s linear infinite'
-          }}
-        >
-          <Image src="/21.png" alt="Anime character" width={112} height={112} className="w-full h-full object-cover rounded-full hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[55%] left-[45%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-6 17s ease-in-out 0.7s infinite, electric 4s ease-in-out 2s infinite'
-          }}
-        >
-          <Image src="/22.png" alt="Anime character" width={120} height={120} className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/50 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[50%] right-[40%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-7 21s ease-in-out 1.6s infinite, hologram 6s ease-in-out 1s infinite'
-          }}
-        >
-          <Image src="/23.png" alt="Anime character" width={96} height={96} className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(211,0,197,0.6)] ring-2 ring-neon-purple/40 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[35%] left-[35%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-8 14s ease-in-out 2.3s infinite, neon-pulse 4s ease-in-out infinite'
-          }}
-        >
-          <Image src="/24.png" alt="Anime character" width={128} height={128} className="w-full h-full object-cover rounded-full shadow-[0_0_22px_rgba(5,217,232,0.5)] ring-2 ring-neon-cyan/40 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[18%] left-[22%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-1 15s ease-in-out 1.1s infinite, glitch 7s ease-in-out infinite'
-          }}
-        >
-          <Image src="/25.png" alt="Anime character" width={112} height={112} className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/40 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[65%] left-[28%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-2 18s ease-in-out 0.4s infinite, electric 5s ease-in-out 1s infinite'
-          }}
-        >
-          <Image src="/26.png" alt="Anime character" width={120} height={120} className="w-full h-full object-cover rounded-full shadow-[0_0_25px_rgba(211,0,197,0.5)] ring-2 ring-neon-purple/50 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[18%] right-[22%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-breathe"
-          style={{
-            animation: 'float-random-3 20s ease-in-out 2.6s infinite, breathe 5s ease-in-out infinite'
-          }}
-        >
-          <Image src="/27.png" alt="Anime character" width={104} height={104} className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(5,217,232,0.6)] ring-2 ring-neon-cyan/50 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[45%] left-[38%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-4 16s ease-in-out 0.9s infinite, cyber-flicker 4s ease-in-out infinite'
-          }}
-        >
-          <Image src="/28.png" alt="Anime character" width={128} height={128} className="w-full h-full object-cover rounded-full shadow-[0_0_22px_rgba(255,42,109,0.5)] ring-2 ring-neon-pink/40 hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[45%] right-[18%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5 animate-rainbow-border rounded-full"
-          style={{
-            animation: 'float-random-5 19s ease-in-out 1.7s infinite, rainbow-border 5s linear infinite'
-          }}
-        >
-          <Image src="/29.png" alt="Anime character" width={112} height={112} className="w-full h-full object-cover rounded-full hover:scale-110 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute bottom-[12%] right-[35%] w-14 h-14 md:w-18 md:h-18 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-6 17s ease-in-out 2.4s infinite, hologram 6s ease-in-out 2s infinite'
-          }}
-        >
-          <Image src="/30.png" alt="Anime character" width={120} height={120} className="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(211,0,197,0.6)] ring-2 ring-neon-purple/50 hover:ring-4 transition-all" unoptimized />
-        </div>
-
-        <div 
-          className="absolute top-[28%] left-[55%] w-12 h-12 md:w-16 md:h-16 hover:opacity-90 transition-all duration-500 z-5"
-          style={{
-            animation: 'float-random-7 21s ease-in-out 0.6s infinite, neon-pulse 3s ease-in-out 0.5s infinite'
-          }}
-        >
-          <Image src="/31.png" alt="Anime character" width={96} height={96} className="w-full h-full object-cover rounded-full shadow-[0_0_18px_rgba(5,217,232,0.5)] ring-2 ring-neon-cyan/40 hover:scale-110 transition-all" unoptimized />
-        </div>
+    <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+      {/* Draggable Floating Icons */}
+      {floatingIcons.map((icon, index) => (
+        <DraggableIcon
+          key={index}
+          src={icon.src}
+          alt={`Anime character ${index + 3}`}
+          initialTop={icon.top || ""}
+          initialLeft={icon.left}
+          initialRight={icon.right}
+          initialBottom={icon.bottom}
+          size={icon.size}
+          animation={icon.animation}
+          effect={icon.effect}
+          ringColor={icon.ringColor}
+          shadowColor={icon.shadowColor}
+        />
+      ))}
 
       {/* Background Decor Icons with Glow */}
       <div className="absolute top-20 left-10 text-neon-pink/20 animate-bounce z-10 drop-shadow-[0_0_15px_rgba(255,42,109,0.8)]">
