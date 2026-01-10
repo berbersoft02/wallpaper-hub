@@ -1,4 +1,5 @@
-import { Github, Twitter, Youtube, Instagram } from "lucide-react";
+import { Github, Twitter, Instagram } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,6 +12,23 @@ export default function Footer() {
         <div className="text-center md:text-left">
            <span className="font-pixel text-2xl text-white drop-shadow-[0_0_12px_rgba(5,217,232,0.6)]">ONLY<span className="text-neon-cyan animate-pulse">_DIAS</span></span>
            <p className="font-mono text-gray-400 mt-2 text-sm">© 2026. All rights reserved. <a href="mailto:berbersoft@gmail.com" className="text-neon-cyan hover:text-neon-pink transition-colors hover:underline">berbersoft@gmail.com</a></p>
+           
+           {/* Legal Links */}
+           <div className="flex gap-4 mt-3 justify-center md:justify-start">
+             <Link 
+               href="/privacy" 
+               className="text-gray-500 hover:text-neon-cyan text-xs transition-colors"
+             >
+               Privacy Policy
+             </Link>
+             <span className="text-gray-600">|</span>
+             <Link 
+               href="/terms" 
+               className="text-gray-500 hover:text-neon-cyan text-xs transition-colors"
+             >
+               Terms of Service
+             </Link>
+           </div>
         </div>
 
         <div className="flex gap-6">
