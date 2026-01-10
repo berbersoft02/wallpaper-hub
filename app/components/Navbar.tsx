@@ -27,7 +27,16 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex gap-8 font-pixel text-xl tracking-wide">
-          <Link href="#gallery" className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all">WALLPAPERS</Link>
+          <a 
+            href="#gallery" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
+          >
+            WALLPAPERS
+          </a>
           <button 
             onClick={() => handleSoonClick("APPS")}
             className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
@@ -40,7 +49,16 @@ export default function Navbar() {
           >
             GAMES
           </button>
-          <Link href="#about" className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all">About me</Link>
+          <a 
+            href="#about" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
+          >
+            About me
+          </a>
         </div>
 
         <button 
@@ -64,13 +82,19 @@ export default function Navbar() {
       {showMobileMenu && (
         <div className="md:hidden fixed inset-0 z-[90] bg-black/90 backdrop-blur-lg">
           <div className="flex flex-col items-center justify-center h-full gap-8 px-4">
-            <Link 
+            <a 
               href="#gallery" 
-              onClick={() => setShowMobileMenu(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowMobileMenu(false);
+                setTimeout(() => {
+                  document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               WALLPAPERS
-            </Link>
+            </a>
             <button 
               onClick={() => handleSoonClick("APPS")}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
@@ -83,13 +107,19 @@ export default function Navbar() {
             >
               GAMES
             </button>
-            <Link 
+            <a 
               href="#about" 
-              onClick={() => setShowMobileMenu(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowMobileMenu(false);
+                setTimeout(() => {
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
               className="font-pixel text-2xl text-white hover:text-orange-400 transition-all hover:underline decoration-wavy underline-offset-4"
             >
               About me
-            </Link>
+            </a>
             <a 
               href="https://www.tiktok.com/@noxzx_kb" 
               target="_blank" 
