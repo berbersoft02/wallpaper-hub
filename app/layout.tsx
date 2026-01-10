@@ -40,13 +40,27 @@ export default function RootLayout({
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
       >
+        {/* Google Funding Choices (Consent Management) */}
+        <Script
+          id="google-funding-choices"
+          async
+          src="https://fundingchoicesmessages.google.com/i/pub-7463641924793744?ers=1"
+          strategy="beforeInteractive"
+        />
+        <Script
+          id="google-fc-present"
+          strategy="beforeInteractive"
+        >
+          {`(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();`}
+        </Script>
+        
         {/* Google AdSense Script */}
         <Script
           id="google-adsense"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7463641924793744"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         {children}
       </body>
