@@ -204,8 +204,9 @@ export async function GET() {
         });
         
         result.resources.forEach((resource: any) => {
-          // Extract folder name from folder field or public_id
-          const folderField = resource.folder || '';
+          // Extract folder name from folder field, asset_folder, or public_id
+          // Cloudinary has two folder concepts: legacy folders (part of public_id) and new asset folders
+          const folderField = resource.folder || resource.asset_folder || '';
           const publicId = resource.public_id || '';
           const pathParts = publicId.split('/');
           
@@ -214,8 +215,13 @@ export async function GET() {
           if (folderField) {
             // If folder field exists, use it (e.g. "wallpapers/Nishimiya Shouko")
             const parts = folderField.split('/');
+            // Check if it starts with wallpapers (handling both "wallpapers/Name" and just "Name" if searching inside wallpapers)
             if (parts[0] === 'wallpapers' && parts.length >= 2) {
               folderName = parts[1];
+            } else if (parts.length === 1 && folderField !== 'wallpapers') {
+                // If the search was restricted to wallpapers folder, maybe only the subfolder is returned?
+                // But usually it returns full path. Let's stick to checking for 'wallpapers' prefix first.
+                // In some cases asset_folder might just be "wallpapers/Nishimiya Shouko"
             }
           } 
           
