@@ -77,7 +77,7 @@ export default function Gallery() {
             });
 
             setWallpapers(allWallpapers);
-            setCharacters(characterNames);
+            setCharacters(characterNames.sort());
             setError(null); // Clear error if we have data
           }
         } else if (data.characters && data.characters.length > 0) {
@@ -97,7 +97,7 @@ export default function Gallery() {
           });
 
           setWallpapers(allWallpapers);
-          setCharacters(characterNames);
+          setCharacters(characterNames.sort());
           setError(null);
           
           // Log source for debugging

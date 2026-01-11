@@ -135,6 +135,7 @@ export async function GET() {
         // First try: search in wallpapers folder
         result = await cloudinary.search
           .expression('folder:wallpapers/*')
+          .sort_by('created_at', 'asc')
           .max_results(500)
           .execute();
         console.log(`Search 'folder:wallpapers/*' returned ${result.resources?.length || 0} resources`);
@@ -144,6 +145,7 @@ export async function GET() {
         try {
           result = await cloudinary.search
             .expression('resource_type:image AND folder:wallpapers')
+            .sort_by('created_at', 'asc')
             .max_results(500)
             .execute();
           console.log(`Alternative search returned ${result.resources?.length || 0} resources`);
@@ -334,8 +336,8 @@ export async function GET() {
         .map(([name, wallpapers]) => ({
           name,
           wallpapers: wallpapers.sort(),
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name));
+        }));
+        // .sort((a, b) => a.name.localeCompare(b.name)); // Removed to preserve creation order
 
       if (characters.length === 0) {
         console.warn('Cloudinary search returned no results');
