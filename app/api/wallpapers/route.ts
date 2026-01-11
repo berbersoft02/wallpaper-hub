@@ -182,8 +182,10 @@ export async function GET() {
         'yuzuki-nanase': 'Yuzuki Nanase',
         'zero-two': 'Zero Two',
         'hina-chono': '♡ Hina Chono',
+        'nishimiya-shouko': 'Nishimiya Shouko',
         // Also handle folder names with spaces (as they appear in Cloudinary)
         'hina chono': '♡ Hina Chono',
+        'nishimiya shouko': 'Nishimiya Shouko',
         'akane kurokawa': 'Akane Kurokawa',
         'alya kujou': 'Alya Kujou',
         'maria kujou': 'Maria kujou',
