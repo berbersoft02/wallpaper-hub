@@ -204,28 +204,37 @@ export async function GET() {
         });
         
         result.resources.forEach((resource: any) => {
-          // Extract folder name from public_id (folder field might be undefined)
-          // public_id format: "wallpapers/character-name/image" or "wallpapers/character name/image"
+          // Extract folder name from folder field or public_id
+          const folderField = resource.folder || '';
           const publicId = resource.public_id || '';
           const pathParts = publicId.split('/');
           
-          if (pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
-            // Get the folder name (character name) from public_id
-            const folderName = pathParts[1];
-            
+          let folderName = '';
+          
+          if (folderField) {
+            // If folder field exists, use it (e.g. "wallpapers/Nishimiya Shouko")
+            const parts = folderField.split('/');
+            if (parts[0] === 'wallpapers' && parts.length >= 2) {
+              folderName = parts[1];
+            }
+          } 
+          
+          // Fallback to public_id if folder name still empty
+          if (!folderName && pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
+            folderName = pathParts[1];
+          }
+          
+          if (folderName) {
             // Try to map the folder name to the original character name
-            // First try exact match, then try lowercase with spaces/dashes normalized
             const normalizedFolderName = folderName.toLowerCase().replace(/\s+/g, '-');
             const characterName = nameMapping[folderName] || 
                                   nameMapping[normalizedFolderName] ||
-                                  folderName; // Use folder name as-is if no mapping found
+                                  folderName;
             
             if (!charactersMap.has(characterName)) {
               charactersMap.set(characterName, []);
             }
             
-            // Get the optimized URL - make sure to include the full path
-            // public_id might not include the extension, so we add it
             const imageUrl = cloudinary.url(resource.public_id, {
               secure: true,
               format: resource.format || 'auto',
@@ -233,10 +242,9 @@ export async function GET() {
               fetch_format: 'auto',
             });
             
-            console.log(`Generated URL for ${characterName}: ${imageUrl.substring(0, 80)}...`);
             charactersMap.get(characterName)!.push(imageUrl);
           } else {
-            console.warn('Unexpected resource structure:', {
+            console.warn('Skipping resource outside wallpapers folder:', {
               public_id: resource.public_id,
               folder: resource.folder
             });

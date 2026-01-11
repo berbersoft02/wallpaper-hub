@@ -64,9 +64,13 @@ async function uploadImages() {
   let totalUploaded = 0;
   let totalFailed = 0;
 
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      const characterName = entry.name;
+  // Filter only Nishimiya Shouko to be fast
+  const charactersToUpload = entries.filter(entry => 
+    entry.isDirectory() && entry.name === 'Nishimiya Shouko'
+  );
+
+  for (const entry of charactersToUpload) {
+    const characterName = entry.name;
       const characterPath = path.join(wallpapersDir, characterName);
       const files = await fsPromises.readdir(characterPath);
       
