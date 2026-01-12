@@ -350,7 +350,7 @@ export default function Gallery() {
                 onClick={() => setSelectedImageIndex(index)}
               >
                 <div className="aspect-[9/16] relative overflow-hidden">
-                   {wp.url.match(/\.(mp4|webm)$/i) ? (
+                   {wp.url.match(/\.(mp4|webm)/i) ? (
                      <video
                        src={wp.url}
                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -459,7 +459,7 @@ export default function Gallery() {
             className="relative max-w-full max-h-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {filteredWallpapers[selectedImageIndex].url.match(/\.(mp4|webm)$/i) ? (
+            {filteredWallpapers[selectedImageIndex].url.match(/\.(mp4|webm)/i) ? (
               <video
                 src={filteredWallpapers[selectedImageIndex].url}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
