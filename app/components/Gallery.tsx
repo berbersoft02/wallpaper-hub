@@ -215,7 +215,17 @@ export default function Gallery() {
       const blobUrl = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = blobUrl;
-      link.download = `${title.replace(/\s+/g, '_')}.jpg`;
+      
+      // Determine extension from URL or blob type
+      let extension = 'jpg';
+      const match = url.match(/\.(jpg|jpeg|png|gif|webp|mp4|webm)$/i);
+      if (match) {
+        extension = match[1].toLowerCase();
+      } else if (blob.type) {
+        extension = blob.type.split('/')[1];
+      }
+      
+      link.download = `${title.replace(/\s+/g, '_')}.${extension}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
