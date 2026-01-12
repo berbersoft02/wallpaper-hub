@@ -41,6 +41,10 @@ const floatingIcons = [
   { src: "/36.png", bottom: "10%", right: "15%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 0.4s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
   { src: "/37.png", top: "50%", left: "12%", size: "md" as const, animation: "float-random-6 17s ease-in-out 1.9s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_22px_rgba(211,0,197,0.5)]" },
   { src: "/38.png", bottom: "55%", left: "25%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 2.7s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/39.png", top: "10%", right: "8%", size: "md" as const, animation: "float-random-8 15s ease-in-out 1.3s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.5)]" },
+  { src: "/40.png", bottom: "20%", left: "55%", size: "sm" as const, animation: "float-random-1 18s ease-in-out 0.5s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/41.png", top: "30%", left: "5%", size: "lg" as const, animation: "float-random-2 22s ease-in-out 2s infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.6)]" },
+  { src: "/42.png", bottom: "5%", right: "50%", size: "md" as const, animation: "float-random-3 16s ease-in-out 1.8s infinite, cyber-flicker 5s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.5)]" },
 ];
 
 export default function Hero() {
