@@ -130,7 +130,7 @@ export async function GET() {
       });
       
       // Try different search expressions
-      let result = { resources: [] };
+      let result: any = { resources: [] };
       try {
         // Search for images
         const imageResult = await cloudinary.search
