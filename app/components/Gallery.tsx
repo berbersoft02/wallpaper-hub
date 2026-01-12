@@ -16,6 +16,8 @@ interface CharacterData {
   wallpapers: string[];
 }
 
+const SPECIAL_COLLECTIONS = ["Live Wallpapers", "Mixed"];
+
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -97,9 +99,8 @@ export default function Gallery() {
             });
           });
 
-            const specialNames = ["Live Wallpapers", "Mixed"];
-            const foundSpecial = characterNames.filter(name => specialNames.includes(name));
-            const foundAnime = characterNames.filter(name => !specialNames.includes(name));
+            const foundSpecial = characterNames.filter(name => SPECIAL_COLLECTIONS.includes(name));
+            const foundAnime = characterNames.filter(name => !SPECIAL_COLLECTIONS.includes(name));
             
             setWallpapers(allWallpapers);
             setSpecialCollections(foundSpecial.sort());
@@ -134,14 +135,17 @@ export default function Gallery() {
   }, [filter]);
 
   // Sort all wallpapers to get the latest ones (reverse order)
-  // Then limit to displayCount when "All" is selected
   const allWallpapersReversed = [...wallpapers].reverse();
+  
+  // Filter out special collections for the "All" view
+  const animeWallpapers = allWallpapersReversed.filter(w => !SPECIAL_COLLECTIONS.includes(w.character));
+
   const filteredWallpapers = filter === "All" 
-    ? allWallpapersReversed.slice(0, displayCount)
+    ? animeWallpapers.slice(0, displayCount)
     : wallpapers.filter(w => w.character === filter);
 
   // Check if there are more wallpapers to show (only for "All" filter)
-  const hasMore = filter === "All" && displayCount < allWallpapersReversed.length;
+  const hasMore = filter === "All" && displayCount < animeWallpapers.length;
 
   // Navigate to previous wallpaper
   const goToPrevious = useCallback(() => {
