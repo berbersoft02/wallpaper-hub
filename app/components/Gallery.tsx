@@ -21,6 +21,7 @@ export default function Gallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
   const [characters, setCharacters] = useState<string[]>([]);
+  const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(10);
   const [showRecommendationModal, setShowRecommendationModal] = useState(false);
@@ -96,20 +97,25 @@ export default function Gallery() {
             });
           });
 
-          setWallpapers(allWallpapers);
-          setCharacters(characterNames.sort());
-          setError(null);
-          
-          // Log source for debugging
-          console.log(`✅ Loaded ${allWallpapers.length} wallpapers from ${data.source || 'unknown source'}`);
-          console.log(`✅ Characters: ${characterNames.join(', ')}`);
-          if (allWallpapers.length > 0) {
-            console.log(`Sample wallpaper URL: ${allWallpapers[0].url}`);
+            const specialNames = ["Live Wallpapers", "Mixed"];
+            const foundSpecial = characterNames.filter(name => specialNames.includes(name));
+            const foundAnime = characterNames.filter(name => !specialNames.includes(name));
+            
+            setSpecialCollections(foundSpecial.sort());
+            setCharacters(foundAnime.sort());
+            setError(null);
+            
+            // Log source for debugging
+            console.log(`✅ Loaded ${allWallpapers.length} wallpapers from ${data.source || 'unknown source'}`);
+            console.log(`✅ Characters: ${foundAnime.join(', ')}`);
+            console.log(`✅ Special: ${foundSpecial.join(', ')}`);
+            if (allWallpapers.length > 0) {
+              console.log(`Sample wallpaper URL: ${allWallpapers[0].url}`);
+            }
+          } else {
+            console.warn('⚠️ No characters found in API response:', data);
+            setError('No wallpapers found. Please check the configuration.');
           }
-        } else {
-          console.warn('⚠️ No characters found in API response:', data);
-          setError('No wallpapers found. Please check the configuration.');
-        }
       } catch (error) {
         console.error('Error loading wallpapers:', error);
         setError('Failed to load wallpapers. Please check the configuration.');
@@ -231,40 +237,62 @@ export default function Gallery() {
         </h2>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            onClick={() => {
-              setFilter("All");
-              setDisplayCount(10);
-            }}
-            className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg ${
-              filter === "All" 
-                ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
-                : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
-            }`}
-          >
-            All
-          </button>
-          {characters.map((char) => (
+        <div className="flex flex-col items-center gap-8 mb-12">
+          {/* Special Categories */}
+          {specialCollections.length > 0 && (
+             <div className="flex flex-wrap justify-center gap-4">
+                {specialCollections.map((char) => (
+                  <button
+                    key={char}
+                    onClick={() => setFilter(char)}
+                    className={`font-pixel px-8 py-4 border-2 transition-all rounded-lg uppercase tracking-wider ${
+                      filter === char 
+                        ? "bg-neon-cyan border-neon-cyan text-dark-bg shadow-[0_0_24px_rgba(5,217,232,0.6)] hover:shadow-[0_0_32px_rgba(5,217,232,0.9)] scale-110" 
+                        : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
+                    }`}
+                  >
+                    {char.replace(/-/g, ' ')}
+                  </button>
+                ))}
+             </div>
+          )}
+
+          {/* Character Filters */}
+          <div className="flex flex-wrap justify-center gap-4">
             <button
-              key={char}
-              onClick={() => setFilter(char)}
-              className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg capitalize ${
-                filter === char 
+              onClick={() => {
+                setFilter("All");
+                setDisplayCount(10);
+              }}
+              className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg ${
+                filter === "All" 
                   ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
                   : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
               }`}
             >
-              {char.replace(/-/g, ' ')}
+              All
             </button>
-          ))}
-          <button
-            data-recommendation-trigger
-            onClick={() => setShowRecommendationModal(true)}
-            className="font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)] hover:scale-105"
-          >
-            Send Recommendation
-          </button>
+            {characters.map((char) => (
+              <button
+                key={char}
+                onClick={() => setFilter(char)}
+                className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg capitalize ${
+                  filter === char 
+                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
+                    : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
+                }`}
+              >
+                {char.replace(/-/g, ' ')}
+              </button>
+            ))}
+            <button
+              data-recommendation-trigger
+              onClick={() => setShowRecommendationModal(true)}
+              className="font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)] hover:scale-105"
+            >
+              Send Recommendation
+            </button>
+          </div>
         </div>
 
         {/* Grid */}
@@ -311,6 +339,16 @@ export default function Gallery() {
                 onClick={() => setSelectedImageIndex(index)}
               >
                 <div className="aspect-[9/16] relative overflow-hidden">
+                   {wp.url.match(/\.(mp4|webm)$/i) ? (
+                     <video
+                       src={wp.url}
+                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                       muted
+                       loop
+                       autoPlay
+                       playsInline
+                     />
+                   ) : (
                    <Image 
                       src={wp.url} 
                       alt={wp.title} 
@@ -318,6 +356,7 @@ export default function Gallery() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                       unoptimized
                    />
+                   )}
                    
                    {/* Download Button - Top Right Corner */}
                    <button 
@@ -409,11 +448,21 @@ export default function Gallery() {
             className="relative max-w-full max-h-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
+            {filteredWallpapers[selectedImageIndex].url.match(/\.(mp4|webm)$/i) ? (
+              <video
+                src={filteredWallpapers[selectedImageIndex].url}
+                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                controls
+                autoPlay
+                loop
+              />
+            ) : (
             <img 
               src={filteredWallpapers[selectedImageIndex].url} 
               alt={filteredWallpapers[selectedImageIndex].title}
               className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
             />
+            )}
             
             {/* Info Bar */}
             <div className="mt-4 bg-black/70 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-4">

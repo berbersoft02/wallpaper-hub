@@ -127,3 +127,4 @@ J'ai créé :
 - `FIX_HTTPS_VERCEL.md` : Guide spécifique pour Vercel
 
 Une fois le domaine configuré sur Vercel et les DNS propagés, HTTPS sera activé automatiquement ! 🔒
+

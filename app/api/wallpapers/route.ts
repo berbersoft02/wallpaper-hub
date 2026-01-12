@@ -49,7 +49,7 @@ async function loadLocalFiles() {
           const files = await fs.readdir(characterPath);
           
           const imageFiles = files
-            .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+            .filter(file => /\.(jpg|jpeg|png|gif|webp|mp4|webm)$/i.test(file))
             .map(file => `/wallpapers/${encodeURIComponent(characterName)}/${encodeURIComponent(file)}`)
             .sort();
 
@@ -380,7 +380,7 @@ export async function GET() {
             const files = await fs.readdir(characterPath);
             
             const imageFiles = files
-              .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+              .filter(file => /\.(jpg|jpeg|png|gif|webp|mp4|webm)$/i.test(file))
               .map(file => `/wallpapers/${characterName}/${file}`)
               .sort();
 

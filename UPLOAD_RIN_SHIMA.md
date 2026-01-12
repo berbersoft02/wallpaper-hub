@@ -70,3 +70,4 @@ Le script utilise le nom de dossier sanitized `rin-shima` sur Cloudinary, mais l
 ## ✅ C'est tout !
 
 Une fois uploadé, Rin Shima apparaîtra dans ta galerie avec tous les autres personnages ! 🎉
+

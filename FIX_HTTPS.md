@@ -105,3 +105,4 @@ Si rien ne fonctionne :
 ## 🎯 Note
 
 J'ai créé un fichier `vercel.json` qui force les redirections HTTPS et ajoute des headers de sécurité. Après avoir configuré le domaine sur Vercel, commit et push ce fichier pour activer les redirections automatiques.
+
