@@ -3,6 +3,8 @@ import { v2 as cloudinary } from 'cloudinary';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+export const dynamic = 'force-dynamic';
+
 // Helper function to load wallpapers from local files
 async function loadLocalFiles() {
   try {
