@@ -246,12 +246,15 @@ export async function GET() {
               charactersMap.set(characterName, []);
             }
             
+            const isVideo = resource.resource_type === 'video';
             const imageUrl = cloudinary.url(resource.public_id, {
               secure: true,
               resource_type: resource.resource_type || 'image',
-              format: resource.format || 'auto',
+              format: isVideo ? 'mp4' : (resource.format || 'auto'),
               quality: 'auto',
-              fetch_format: 'auto',
+              // Only use fetch_format auto for images to allow optimization
+              // For videos, we want strictly mp4 for compatibility
+              fetch_format: isVideo ? undefined : 'auto',
             });
             
             charactersMap.get(characterName)!.push(imageUrl);
