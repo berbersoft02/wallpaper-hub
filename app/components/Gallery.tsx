@@ -101,6 +101,7 @@ export default function Gallery() {
             const foundSpecial = characterNames.filter(name => specialNames.includes(name));
             const foundAnime = characterNames.filter(name => !specialNames.includes(name));
             
+            setWallpapers(allWallpapers);
             setSpecialCollections(foundSpecial.sort());
             setCharacters(foundAnime.sort());
             setError(null);
