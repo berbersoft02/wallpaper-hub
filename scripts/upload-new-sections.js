@@ -78,13 +78,10 @@ async function uploadNewSections() {
       const isVideo = /\.(mp4|webm)$/i.test(file);
       
       try {
-        // Keep folder name exactly as is for these special sections
-        // Cloudinary folder: wallpapers/Mixed or wallpapers/Live Wallpapers
-        const cloudFolder = `wallpapers/${folderName}`;
-        
+        const isVideo = /\.(mp4|webm)$/i.test(file);
         const result = await cloudinary.uploader.upload(filePath, {
-          folder: cloudFolder,
           resource_type: isVideo ? 'video' : 'image',
+          folder: `wallpapers/${folderName}`,
           use_filename: true,
           unique_filename: false,
           overwrite: true 

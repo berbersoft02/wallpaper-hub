@@ -130,29 +130,32 @@ export async function GET() {
       });
       
       // Try different search expressions
-      let result;
+      let result = { resources: [] };
       try {
-        // First try: search in wallpapers folder
-        result = await cloudinary.search
-          .expression('folder:wallpapers/*')
+        // Search for images
+        const imageResult = await cloudinary.search
+          .expression('folder:wallpapers/* AND resource_type:image')
           .sort_by('created_at', 'asc')
           .max_results(500)
           .execute();
-        console.log(`Search 'folder:wallpapers/*' returned ${result.resources?.length || 0} resources`);
+          
+        // Search for videos
+        const videoResult = await cloudinary.search
+          .expression('folder:wallpapers/* AND resource_type:video')
+          .sort_by('created_at', 'asc')
+          .max_results(500)
+          .execute();
+
+        // Combine results
+        result.resources = [
+          ...(imageResult.resources || []),
+          ...(videoResult.resources || [])
+        ];
+        
+        console.log(`Search returned ${imageResult.resources?.length || 0} images and ${videoResult.resources?.length || 0} videos`);
       } catch (searchError: any) {
-        console.error('First search failed:', searchError);
-        // Try alternative: search all resources with wallpapers in path
-        try {
-          result = await cloudinary.search
-            .expression('resource_type:image AND folder:wallpapers')
-            .sort_by('created_at', 'asc')
-            .max_results(500)
-            .execute();
-          console.log(`Alternative search returned ${result.resources?.length || 0} resources`);
-        } catch (altError: any) {
-          console.error('Alternative search also failed:', altError);
-          throw searchError; // Throw original error
-        }
+        console.error('Search failed:', searchError);
+        // Fallback or retry logic can go here if needed
       }
       
       if (!result || !result.resources) {
@@ -245,6 +248,7 @@ export async function GET() {
             
             const imageUrl = cloudinary.url(resource.public_id, {
               secure: true,
+              resource_type: resource.resource_type || 'image',
               format: resource.format || 'auto',
               quality: 'auto',
               fetch_format: 'auto',
