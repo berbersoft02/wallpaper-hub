@@ -45,6 +45,14 @@ const floatingIcons = [
   { src: "/40.png", bottom: "20%", left: "55%", size: "sm" as const, animation: "float-random-1 18s ease-in-out 0.5s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
   { src: "/41.png", top: "30%", left: "5%", size: "lg" as const, animation: "float-random-2 22s ease-in-out 2s infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.6)]" },
   { src: "/42.png", bottom: "5%", right: "50%", size: "md" as const, animation: "float-random-3 16s ease-in-out 1.8s infinite, cyber-flicker 5s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.5)]" },
+  { src: "/43.png", top: "22%", right: "25%", size: "sm" as const, animation: "float-random-4 19s ease-in-out 0.2s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_18px_rgba(255,42,109,0.5)]" },
+  { src: "/44.png", bottom: "45%", left: "10%", size: "md" as const, animation: "float-random-5 17s ease-in-out 1.5s infinite, electric 5s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.6)]" },
+  { src: "/45.png", top: "50%", right: "5%", size: "sm" as const, animation: "float-random-6 20s ease-in-out 0.8s infinite, glitch 6s ease-in-out infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.5)]" },
+  { src: "/46.png", top: "5%", left: "20%", size: "lg" as const, animation: "float-random-7 18s ease-in-out 2.4s infinite, hologram 7s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_30px_rgba(5,217,232,0.7)]" },
+  { src: "/47.png", bottom: "35%", right: "25%", size: "md" as const, animation: "float-random-8 16s ease-in-out 1.1s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
+  { src: "/48.png", top: "70%", left: "15%", size: "sm" as const, animation: "float-random-1 19s ease-in-out 0.6s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.6)]" },
+  { src: "/49.png", top: "15%", left: "45%", size: "md" as const, animation: "float-random-2 21s ease-in-out 1.9s infinite, rainbow-border 6s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
+  { src: "/50.png", bottom: "10%", left: "40%", size: "sm" as const, animation: "float-random-3 17s ease-in-out 0.3s infinite, neon-pulse 3s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
 ];
 
 export default function Hero() {
