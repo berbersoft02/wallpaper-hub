@@ -550,7 +550,7 @@ export default function Gallery() {
               </a>
 
               <p className="font-body text-gray-300 text-sm mt-4">
-                and also dont forget recommendations{" "}
+                And also don't forget recommendations{" "}
                 <button 
                    onClick={() => {
                      setShowDownloadSuccessModal(false);
