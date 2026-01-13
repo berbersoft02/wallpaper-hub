@@ -27,6 +27,7 @@ export default function Gallery() {
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(10);
   const [showRecommendationModal, setShowRecommendationModal] = useState(false);
+  const [showDownloadSuccessModal, setShowDownloadSuccessModal] = useState(false);
   const [recommendationForm, setRecommendationForm] = useState({ name: '', email: '', message: '' });
   const [sending, setSending] = useState(false);
   const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
@@ -173,6 +174,7 @@ export default function Gallery() {
       if (e.key === 'Escape') {
         setSelectedImageIndex(null);
         setShowRecommendationModal(false);
+        setShowDownloadSuccessModal(false);
       } else if (selectedImageIndex !== null) {
         if (e.key === 'ArrowLeft') {
           e.preventDefault();
@@ -183,7 +185,7 @@ export default function Gallery() {
         }
       }
     };
-    if (selectedImageIndex !== null || showRecommendationModal) {
+    if (selectedImageIndex !== null || showRecommendationModal || showDownloadSuccessModal) {
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
     }
@@ -191,7 +193,7 @@ export default function Gallery() {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [selectedImageIndex, showRecommendationModal, goToPrevious, goToNext]);
+  }, [selectedImageIndex, showRecommendationModal, showDownloadSuccessModal, goToPrevious, goToNext]);
 
   // Handle hash change to open recommendation modal
   useEffect(() => {
@@ -234,6 +236,9 @@ export default function Gallery() {
       link.click();
       document.body.removeChild(link);
       window.URL.revokeObjectURL(blobUrl);
+      
+      // Show success modal
+      setShowDownloadSuccessModal(true);
     } catch (error) {
       console.error('Error downloading image:', error);
       // Fallback: open in new tab if download fails
@@ -500,6 +505,63 @@ export default function Gallery() {
             {/* Navigation Hint */}
             <div className="mt-2 text-gray-500 text-sm font-body">
               Use ← → arrow keys to navigate
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Download Success Modal */}
+      {showDownloadSuccessModal && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 animate-fade-in"
+          onClick={() => setShowDownloadSuccessModal(false)}
+        >
+          <div 
+            className="relative bg-card-bg border-4 border-neon-pink p-8 max-w-md w-full mx-4 rounded-lg shadow-[0_0_64px_rgba(255,42,109,0.5)] transform scale-100 animate-slide-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowDownloadSuccessModal(false)}
+              className="absolute top-4 right-4 text-white hover:text-neon-pink transition-colors hover:scale-110"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="flex flex-col items-center text-center space-y-6">
+              <div className="w-20 h-20 bg-neon-pink/20 rounded-full flex items-center justify-center shadow-[0_0_32px_rgba(255,42,109,0.6)]">
+                 <Download size={40} className="text-neon-pink animate-bounce" />
+              </div>
+              
+              <h3 className="font-pixel text-2xl md:text-3xl text-neon-cyan drop-shadow-[0_0_16px_rgba(5,217,232,0.8)]">
+                Wallpaper Downloaded!
+              </h3>
+              
+              <p className="font-body text-gray-200 text-lg">
+                Please follow my tiktok for more
+              </p>
+              
+              <a 
+                href="https://www.tiktok.com/@noxzx_kb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-pixel text-xl bg-neon-cyan text-dark-bg px-8 py-3 hover:bg-white hover:scale-105 transition-all pixel-border-pink rounded-md w-full"
+              >
+                VISIT TIKTOK
+              </a>
+
+              <p className="font-body text-gray-300 text-sm mt-4">
+                and also dont forget recommendations{" "}
+                <button 
+                   onClick={() => {
+                     setShowDownloadSuccessModal(false);
+                     setTimeout(() => setShowRecommendationModal(true), 300);
+                   }}
+                   className="text-neon-purple hover:text-white underline decoration-wavy underline-offset-4 hover:scale-110 transition-all font-bold"
+                >
+                  here
+                </button>
+                .
+              </p>
             </div>
           </div>
         </div>
