@@ -50,10 +50,10 @@ export default function Navbar() {
             APPS
           </button>
           <button 
-            onClick={() => handleSoonClick("GAMES")}
+            onClick={() => handleSoonClick("ICONS PFPS")}
             className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
           >
-            GAMES
+            ICONS PFPS
           </button>
           <a 
             href="#about" 
@@ -115,10 +115,10 @@ export default function Navbar() {
               APPS
             </button>
             <button 
-              onClick={() => handleSoonClick("GAMES")}
+              onClick={() => handleSoonClick("ICONS PFPS")}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
-              GAMES
+              ICONS PFPS
             </button>
             <a 
               href="#about" 
