@@ -4,16 +4,29 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [showSoonModal, setShowSoonModal] = useState(false);
   const [soonTitle, setSoonTitle] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleSoonClick = (title: string) => {
     setSoonTitle(title);
     setShowSoonModal(true);
     setShowMobileMenu(false); // Close mobile menu when opening modal
+  };
+
+  const handleWallpapersClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === '/') {
+      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push('/#gallery');
+    }
+    setShowMobileMenu(false);
   };
 
   return (
@@ -28,11 +41,8 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8 font-pixel text-xl tracking-wide">
           <a 
-            href="#gallery" 
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            href="/#gallery" 
+            onClick={handleWallpapersClick}
             className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
           >
             WALLPAPERS
@@ -85,14 +95,8 @@ export default function Navbar() {
         <div className="md:hidden fixed inset-0 z-[90] bg-black/90 backdrop-blur-lg">
           <div className="flex flex-col items-center justify-center h-full gap-8 px-4">
             <a 
-              href="#gallery" 
-              onClick={(e) => {
-                e.preventDefault();
-                setShowMobileMenu(false);
-                setTimeout(() => {
-                  document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-              }}
+              href="/#gallery" 
+              onClick={handleWallpapersClick}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               WALLPAPERS
