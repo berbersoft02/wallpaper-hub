@@ -49,22 +49,18 @@ export default function Navbar() {
           >
             APPS
           </button>
-          <button 
-            onClick={() => handleSoonClick("ICONS PFPS")}
+          <Link
+            href="/icons"
             className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
           >
             ICONS PFPS
-          </button>
-          <a 
-            href="#about" 
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
+          </Link>
+          <Link 
+            href="/contact" 
+            className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all"
           >
-            About me
-          </a>
+            CONTACT
+          </Link>
         </div>
 
         <button 
@@ -114,25 +110,20 @@ export default function Navbar() {
             >
               APPS
             </button>
-            <button 
-              onClick={() => handleSoonClick("ICONS PFPS")}
+            <Link
+              href="/icons"
+              onClick={() => setShowMobileMenu(false)}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               ICONS PFPS
-            </button>
-            <a 
-              href="#about" 
-              onClick={(e) => {
-                e.preventDefault();
-                setShowMobileMenu(false);
-                setTimeout(() => {
-                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-              }}
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setShowMobileMenu(false)}
               className="font-pixel text-2xl text-white hover:text-orange-400 transition-all hover:underline decoration-wavy underline-offset-4"
             >
-              About me
-            </a>
+              CONTACT
+            </Link>
             <a 
               href="https://www.tiktok.com/@noxzx_kb" 
               target="_blank" 

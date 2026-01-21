@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VT323, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import CookieBanner from "./components/CookieBanner";
 
 const pixelFont = VT323({
   weight: "400",
@@ -77,6 +78,7 @@ export default function RootLayout({
           `}
         </Script>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
