@@ -1,7 +1,18 @@
 {
   "icons": [
-    "https://raw.githubusercontent.com/berbersoft02/wallpaper-hub/main/public/1.png",
-    "https://raw.githubusercontent.com/berbersoft02/wallpaper-hub/main/public/2.png",
-    "https://raw.githubusercontent.com/berbersoft02/wallpaper-hub/main/public/3.png"
+    "/icons/1.png", "/icons/2.png", "/icons/3.png", "/icons/4.png", "/icons/5.png",
+    "/icons/6.png", "/icons/7.png", "/icons/8.png", "/icons/9.png", "/icons/10.png",
+    "/icons/11.png", "/icons/12.png", "/icons/13.png", "/icons/14.png", "/icons/15.png",
+    "/icons/16.png", "/icons/17.png", "/icons/18.png", "/icons/19.png", "/icons/20.png",
+    "/icons/21.png", "/icons/22.png", "/icons/23.png", "/icons/24.png", "/icons/25.png",
+    "/icons/26.png", "/icons/27.png", "/icons/28.png", "/icons/29.png", "/icons/30.png",
+    "/icons/31.png", "/icons/32.png", "/icons/33.png", "/icons/34.png", "/icons/35.png",
+    "/icons/36.png", "/icons/37.png", "/icons/38.png", "/icons/39.png", "/icons/40.png",
+    "/icons/41.png", "/icons/42.png", "/icons/43.png", "/icons/44.png", "/icons/45.png",
+    "/icons/46.png", "/icons/47.png", "/icons/48.png", "/icons/49.png", "/icons/50.png",
+    "/icons/51.png", "/icons/52.png", "/icons/53.png", "/icons/54.png", "/icons/55.png",
+    "/icons/56.png", "/icons/57.png", "/icons/58.png", "/icons/59.png", "/icons/59 (2).png",
+    "/icons/60.png", "/icons/61.png", "/icons/62.png", "/icons/63.png", "/icons/64.png",
+    "/icons/65.png", "/icons/66.png", "/icons/67.png", "/icons/68.png", "/icons/69.png"
   ]
 }
