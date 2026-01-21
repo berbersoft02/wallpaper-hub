@@ -1,20 +1,440 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
+import { v2 as cloudinary } from 'cloudinary';
+import { promises as fs } from 'fs';
 import path from 'path';
+
+export const dynamic = 'force-dynamic';
+
+// Helper function to load wallpapers from local files
+async function loadLocalFiles() {
+  try {
+    // In Next.js, public folder is served from project root
+    // Try multiple possible paths
+    const possiblePaths = [
+      path.join(process.cwd(), 'public', 'wallpapers'),
+      path.join(process.cwd(), 'wallpaper-hub', 'public', 'wallpapers'),
+      path.resolve('./public/wallpapers'),
+    ];
+    
+    let wallpapersDir = '';
+    for (const testPath of possiblePaths) {
+      try {
+        await fs.access(testPath);
+        wallpapersDir = testPath;
+        console.log('Found wallpapers directory at:', wallpapersDir);
+        break;
+      } catch {
+        // Try next path
+      }
+    }
+    
+    if (!wallpapersDir) {
+      console.error('Wallpapers directory not found in any of:', possiblePaths);
+      return NextResponse.json({ 
+        characters: [], 
+        error: 'Wallpapers directory not found',
+        details: `Tried: ${possiblePaths.join(', ')}`
+      });
+    }
+    
+    const characters: { name: string; wallpapers: string[] }[] = [];
+    const entries = await fs.readdir(wallpapersDir, { withFileTypes: true });
+
+    console.log(`Found ${entries.length} entries in wallpapers directory`);
+
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        const characterName = entry.name;
+        const characterPath = path.join(wallpapersDir, characterName);
+        
+        try {
+          const files = await fs.readdir(characterPath);
+          
+          const imageFiles = files
+            .filter(file => /\.(jpg|jpeg|png|gif|webp|mp4|webm)$/i.test(file))
+            .map(file => `/wallpapers/${encodeURIComponent(characterName)}/${encodeURIComponent(file)}`)
+            .sort();
+
+          if (imageFiles.length > 0) {
+            characters.push({
+              name: characterName,
+              wallpapers: imageFiles
+            });
+            console.log(`Added ${characterName}: ${imageFiles.length} images`);
+          }
+        } catch (dirError) {
+          console.error(`Error reading directory ${characterName}:`, dirError);
+        }
+      }
+    }
+
+    characters.sort((a, b) => a.name.localeCompare(b.name));
+    console.log(`Total characters loaded: ${characters.length}`);
+    return NextResponse.json({ characters, source: 'local' });
+  } catch (error) {
+    console.error('Error loading local files:', error);
+    return NextResponse.json({ 
+      characters: [], 
+      error: 'Failed to load local files',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+}
+
+// Configure Cloudinary - Next.js automatically loads .env.local
+// Make sure .env.local is in the project root (not in public/)
+const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+const apiKey = process.env.CLOUDINARY_API_KEY;
+const apiSecret = process.env.CLOUDINARY_API_SECRET;
+
+if (cloudName && apiKey && apiSecret) {
+  cloudinary.config({
+    cloud_name: cloudName,
+    api_key: apiKey,
+    api_secret: apiSecret,
+  });
+}
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
-    const fileContent = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContent);
+    // Debug: Log environment variables (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Cloudinary Config Check:', {
+        hasCloudName: !!process.env.CLOUDINARY_CLOUD_NAME,
+        hasApiKey: !!process.env.CLOUDINARY_API_KEY,
+        hasApiSecret: !!process.env.CLOUDINARY_API_SECRET,
+      });
+    }
     
-    return NextResponse.json({
-      characters: data.characters,
-      source: 'json',
-      total: data.characters.reduce((acc: number, char: any) => acc + char.wallpapers.length, 0)
-    });
+    // Check if Cloudinary is configured
+    if (!process.env.CLOUDINARY_CLOUD_NAME) {
+      // Fallback to local files if Cloudinary is not configured (for local dev)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Using local files (Cloudinary not configured - local dev)');
+        return loadLocalFiles();
+      } else {
+        // On production (Netlify), return error if Cloudinary is not configured
+        return NextResponse.json({ 
+          characters: [], 
+          error: 'Cloudinary not configured',
+          message: 'Please configure Cloudinary environment variables on Netlify. See CONFIGURER_NETLIFY_MAINTENANT.md'
+        });
+      }
+    }
+
+    try {
+      // List all resources in the 'wallpapers' folder
+      console.log('Searching Cloudinary for wallpapers...');
+      console.log('Cloudinary config:', {
+        cloud_name: cloudName,
+        has_api_key: !!apiKey,
+        has_api_secret: !!apiSecret
+      });
+      
+      // Try different search expressions
+      let result: any = { resources: [] };
+      try {
+        // Search for images
+        const imageResult = await cloudinary.search
+          .expression('folder:wallpapers/* AND resource_type:image')
+          .sort_by('created_at', 'asc')
+          .max_results(500)
+          .execute();
+          
+        // Search for videos
+        const videoResult = await cloudinary.search
+          .expression('folder:wallpapers/* AND resource_type:video')
+          .sort_by('created_at', 'asc')
+          .max_results(500)
+          .execute();
+
+        // Combine results
+        result.resources = [
+          ...(imageResult.resources || []),
+          ...(videoResult.resources || [])
+        ];
+        
+        console.log(`Search returned ${imageResult.resources?.length || 0} images and ${videoResult.resources?.length || 0} videos`);
+      } catch (searchError: any) {
+        console.error('Search failed:', searchError);
+        // Fallback or retry logic can go here if needed
+      }
+      
+      if (!result || !result.resources) {
+        console.error('Cloudinary search returned invalid result:', result);
+        throw new Error('Invalid search result from Cloudinary');
+      }
+      
+      console.log(`Cloudinary search returned ${result.resources.length} resources`);
+
+      // Organize by character (folder name)
+      const charactersMap = new Map<string, string[]>();
+      
+      // Map sanitized folder names to original character names
+      // Note: Cloudinary folder names might have spaces or special characters
+      const nameMapping: Record<string, string> = {
+        'shiina-mahiru': '𝑆ℎ𝑖𝑖𝑛𝑎 𝑀𝑎ℎ𝑖𝑟𝑢',
+        'akane-kurokawa': 'Akane Kurokawa',
+        'alya-kujou': 'Alya Kujou',
+        'chinatsu': 'Chinatsu',
+        'elaina': 'Elaina',
+        'hushino': 'Hushino',
+        'kaoruko-waguri': 'Kaoruko waguri',
+        'mai': 'Mai',
+        'maria-kujou': 'Maria kujou',
+        'marin-kitagawa': 'Marin kitagawa',
+        'nakano-nino': 'Nakano Nino',
+        'rin-shima': 'Rin Shima',
+        'miku-nakano': 'Miku Nakano',
+        'shikimori': 'shikimori',
+        'yuzuki-nanase': 'Yuzuki Nanase',
+        'zero-two': 'Zero Two',
+        'yuuko-hiragi': 'Yuuko Hiragi',
+        'hina-chono': '♡ Hina Chono',
+        'nishimiya-shouko': 'Nishimiya Shouko',
+        'rias-gremory': 'Rias Gremory',
+        'rin-nanakura': 'Rin Nanakura',
+        'chisato-nishikigi': 'Chisato Nishikigi',
+        'phoebe': 'Phoebe',
+        'live-wallpapers': 'Live Wallpapers',
+        'mixed': 'Mixed',
+        // Also handle folder names with spaces (as they appear in Cloudinary)
+        'hina chono': '♡ Hina Chono',
+        'nishimiya shouko': 'Nishimiya Shouko',
+        'rias gremory': 'Rias Gremory',
+        'rin nanakura': 'Rin Nanakura',
+        'chisato nishikigi': 'Chisato Nishikigi',
+        'akane kurokawa': 'Akane Kurokawa',
+        'live wallpapers': 'Live Wallpapers',
+        'alya kujou': 'Alya Kujou',
+        'maria kujou': 'Maria kujou',
+        'marin kitagawa': 'Marin kitagawa',
+        'nakano nino': 'Nakano Nino',
+        'rin shima': 'Rin Shima',
+        'yuzuki nanase': 'Yuzuki Nanase',
+        'zero two': 'Zero Two',
+      };
+
+      if (result.resources && result.resources.length > 0) {
+        console.log('Sample resource:', {
+          public_id: result.resources[0]?.public_id,
+          folder: result.resources[0]?.folder,
+          resource_type: result.resources[0]?.resource_type
+        });
+        
+        result.resources.forEach((resource: any) => {
+          // Extract folder name from folder field, asset_folder, or public_id
+          // Cloudinary has two folder concepts: legacy folders (part of public_id) and new asset folders
+          const folderField = resource.folder || resource.asset_folder || '';
+          const publicId = resource.public_id || '';
+          const pathParts = publicId.split('/');
+          
+          let folderName = '';
+          
+          if (folderField) {
+            // If folder field exists, use it (e.g. "wallpapers/Nishimiya Shouko")
+            const parts = folderField.split('/');
+            // Check if it starts with wallpapers (handling both "wallpapers/Name" and just "Name" if searching inside wallpapers)
+            if (parts[0] === 'wallpapers' && parts.length >= 2) {
+              folderName = parts[1];
+            } else if (parts.length === 1 && folderField !== 'wallpapers') {
+                // If the search was restricted to wallpapers folder, maybe only the subfolder is returned?
+                // But usually it returns full path. Let's stick to checking for 'wallpapers' prefix first.
+                // In some cases asset_folder might just be "wallpapers/Nishimiya Shouko"
+            }
+          } 
+          
+          // Fallback to public_id if folder name still empty
+          if (!folderName && pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
+            folderName = pathParts[1];
+          }
+          
+          if (folderName) {
+            // Try to map the folder name to the original character name
+            const normalizedFolderName = folderName.toLowerCase().replace(/\s+/g, '-');
+            const characterName = nameMapping[folderName] || 
+                                  nameMapping[normalizedFolderName] ||
+                                  folderName;
+            
+            if (!charactersMap.has(characterName)) {
+              charactersMap.set(characterName, []);
+            }
+            
+            const isVideo = resource.resource_type === 'video';
+            const imageUrl = cloudinary.url(resource.public_id, {
+              secure: true,
+              resource_type: resource.resource_type || 'image',
+              format: isVideo ? 'mp4' : (resource.format || 'auto'),
+              quality: 'auto',
+              // Only use fetch_format auto for images to allow optimization
+              // For videos, we want strictly mp4 for compatibility
+              fetch_format: isVideo ? undefined : 'auto',
+            });
+            
+            charactersMap.get(characterName)!.push(imageUrl);
+          } else {
+            console.warn('Skipping resource outside wallpapers folder:', {
+              public_id: resource.public_id,
+              folder: resource.folder
+            });
+          }
+        });
+        
+        console.log(`Processed ${result.resources.length} resources into ${charactersMap.size} characters`);
+        console.log('Character names found:', Array.from(charactersMap.keys()));
+      } else {
+        console.warn('Cloudinary search returned no resources');
+        console.log('Trying alternative methods...');
+        
+        // Try method 1: List all resources and filter
+        try {
+          const allResources = await cloudinary.search
+            .expression('resource_type:image')
+            .max_results(1000)
+            .execute();
+          
+          const wallpapersResources = allResources.resources?.filter((r: any) => 
+            r.folder?.startsWith('wallpapers/')
+          ) || [];
+          
+          console.log(`Found ${wallpapersResources.length} resources in wallpapers folder via alternative method`);
+          
+          if (wallpapersResources.length > 0) {
+            // Process these resources
+            wallpapersResources.forEach((resource: any) => {
+              // Extract from public_id since folder might be undefined
+              const publicId = resource.public_id || '';
+              const pathParts = publicId.split('/');
+              
+              if (pathParts.length >= 2 && pathParts[0] === 'wallpapers') {
+                const folderName = pathParts[1];
+                const normalizedFolderName = folderName.toLowerCase().replace(/\s+/g, '-');
+                const characterName = nameMapping[folderName] || 
+                                      nameMapping[normalizedFolderName] ||
+                                      folderName;
+                
+                if (!charactersMap.has(characterName)) {
+                  charactersMap.set(characterName, []);
+                }
+                
+                const imageUrl = cloudinary.url(resource.public_id, {
+                  secure: true,
+                  format: 'auto',
+                  quality: 'auto',
+                });
+                
+                charactersMap.get(characterName)!.push(imageUrl);
+              }
+            });
+            
+            const characters = Array.from(charactersMap.entries())
+              .map(([name, wallpapers]) => ({
+                name,
+                wallpapers: wallpapers.sort(),
+              }))
+              .sort((a, b) => a.name.localeCompare(b.name));
+            
+            if (characters.length > 0) {
+              console.log(`Successfully loaded ${characters.length} characters via alternative method`);
+              return NextResponse.json({ characters, source: 'cloudinary' });
+            }
+          }
+        } catch (altError: any) {
+          console.error('Alternative method also failed:', altError);
+        }
+        
+        // Try method 2: List sub-folders
+        try {
+          const foldersResult = await cloudinary.api.sub_folders('wallpapers');
+          console.log('Sub-folders in wallpapers:', foldersResult);
+        } catch (folderError) {
+          console.error('Failed to list sub-folders:', folderError);
+        }
+      }
+
+      // Convert map to array format
+      const characters = Array.from(charactersMap.entries())
+        .map(([name, wallpapers]) => ({
+          name,
+          wallpapers: wallpapers.sort(),
+        }));
+        // .sort((a, b) => a.name.localeCompare(b.name)); // Removed to preserve creation order
+
+      if (characters.length === 0) {
+        console.warn('Cloudinary search returned no results');
+        return NextResponse.json({ 
+          characters: [], 
+          error: 'No wallpapers found in Cloudinary',
+          message: 'Please verify that images are uploaded to Cloudinary in the wallpapers/ folder'
+        });
+      }
+
+      const totalWallpapers = characters.reduce((sum, char) => sum + char.wallpapers.length, 0);
+      console.log(`✅ Successfully loaded ${characters.length} characters from Cloudinary`);
+      console.log(`✅ Total wallpapers: ${totalWallpapers}`);
+      
+      // Log sample URLs for debugging
+      if (characters.length > 0 && characters[0].wallpapers.length > 0) {
+        console.log(`Sample URL: ${characters[0].wallpapers[0]}`);
+      }
+      
+      return NextResponse.json({ 
+        characters, 
+        source: 'cloudinary',
+        total: totalWallpapers 
+      });
+    } catch (cloudinaryError: any) {
+      console.error('Cloudinary error:', cloudinaryError);
+      
+      // Fallback to local files if Cloudinary fails
+      try {
+        const wallpapersDir = path.join(process.cwd(), 'public', 'wallpapers');
+        await fs.access(wallpapersDir);
+        
+        const characters: { name: string; wallpapers: string[] }[] = [];
+        const entries = await fs.readdir(wallpapersDir, { withFileTypes: true });
+
+        for (const entry of entries) {
+          if (entry.isDirectory()) {
+            const characterName = entry.name;
+            const characterPath = path.join(wallpapersDir, characterName);
+            const files = await fs.readdir(characterPath);
+            
+            const imageFiles = files
+              .filter(file => /\.(jpg|jpeg|png|gif|webp|mp4|webm)$/i.test(file))
+              .map(file => `/wallpapers/${characterName}/${file}`)
+              .sort();
+
+            if (imageFiles.length > 0) {
+              characters.push({
+                name: characterName,
+                wallpapers: imageFiles
+              });
+            }
+          }
+        }
+
+        characters.sort((a, b) => a.name.localeCompare(b.name));
+        
+        console.log('Using local files as fallback');
+        return NextResponse.json({ 
+          characters,
+          source: 'local',
+          cloudinaryError: cloudinaryError.message 
+        });
+      } catch (localError) {
+        console.error('Local files also failed:', localError);
+        return NextResponse.json({ 
+          characters: [], 
+          error: 'Failed to load from Cloudinary and local files',
+          details: cloudinaryError.message 
+        });
+      }
+    }
   } catch (error) {
-    console.error('Error reading wallpapers data:', error);
-    return NextResponse.json({ characters: [], error: 'Failed to load data' }, { status: 500 });
+    console.error('Error loading wallpapers:', error);
+    return NextResponse.json({ 
+      error: 'Failed to load wallpapers' 
+    }, { status: 500 });
   }
 }
