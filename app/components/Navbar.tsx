@@ -37,6 +37,12 @@ export default function Navbar() {
           >
             WALLPAPERS
           </a>
+          <Link
+            href="/blog"
+            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
+          >
+            BLOG
+          </Link>
           <button 
             onClick={() => handleSoonClick("APPS")}
             className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
@@ -95,6 +101,13 @@ export default function Navbar() {
             >
               WALLPAPERS
             </a>
+            <Link
+              href="/blog"
+              onClick={() => setShowMobileMenu(false)}
+              className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
+            >
+              BLOG
+            </Link>
             <button 
               onClick={() => handleSoonClick("APPS")}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
