@@ -38,10 +38,10 @@ export default function Navbar() {
             WALLPAPERS
           </a>
           <Link
-            href="/blog"
-            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
+            href="/icons"
+            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
           >
-            BLOG
+            ICONS PFPS
           </Link>
           <button 
             onClick={() => handleSoonClick("APPS")}
@@ -50,10 +50,10 @@ export default function Navbar() {
             APPS
           </button>
           <Link
-            href="/icons"
-            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
+            href="/blog"
+            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
           >
-            ICONS PFPS
+            BLOG
           </Link>
           <Link 
             href="/contact" 
@@ -98,11 +98,11 @@ export default function Navbar() {
               WALLPAPERS
             </a>
             <Link
-              href="/blog"
+              href="/icons"
               onClick={() => setShowMobileMenu(false)}
-              className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
+              className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
-              BLOG
+              ICONS PFPS
             </Link>
             <button 
               onClick={() => handleSoonClick("APPS")}
@@ -111,11 +111,11 @@ export default function Navbar() {
               APPS
             </button>
             <Link
-              href="/icons"
+              href="/blog"
               onClick={() => setShowMobileMenu(false)}
-              className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
+              className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
-              ICONS PFPS
+              BLOG
             </Link>
             <Link
               href="/contact"
