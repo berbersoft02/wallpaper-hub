@@ -1,4 +1,3 @@
-
 export interface BlogPost {
   slug: string;
   title: string;
@@ -12,75 +11,72 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'how-to-use-live-wallpapers',
-    title: 'How to Use Live Wallpapers on Windows 10 & 11',
-    excerpt: 'A complete guide to setting up animated backgrounds on your desktop using free tools like Lively Wallpaper.',
-    date: '2026-01-15',
+    slug: 'how-i-make-viral-anime-edits',
+    title: 'How I Make My Viral Anime Edits for TikTok',
+    excerpt: 'A behind-the-scenes look at my editing workflow using Adobe Photoshop and Canva to create the content you see on @noxzx_kb.',
+    date: '2026-01-22',
     author: 'Only_dias',
-    tags: ['Guide', 'Tutorial', 'Windows', 'Customization'],
+    tags: ['Tutorial', 'TikTok', 'Editing', 'Photoshop'],
     content: `
-      <h2>Introduction</h2>
-      <p>Static wallpapers are great, but live wallpapers can bring your desktop to life. In this guide, we'll show you how to set up animated backgrounds on Windows 10 and 11 completely for free.</p>
+      <h2>My Editing Secret Sauce</h2>
+      <p>Ever wondered how I create the smooth anime edits and static artwork you see on my TikTok channel? It's not just about slapping a filter on an image. It's about composition, color grading, and finding the perfect scene.</p>
 
-      <h2>Step 1: Choose Your Software</h2>
-      <p>While Wallpaper Engine is a popular paid option on Steam, there are excellent free alternatives. We recommend <strong>Lively Wallpaper</strong>, an open-source project available on the Microsoft Store.</p>
-
-      <h2>Step 2: Download Lively Wallpaper</h2>
-      <p>Head to the Microsoft Store or the official GitHub repository to download and install Lively Wallpaper. It's lightweight and supports various media formats including MP4, WebM, and even webpages.</p>
-
-      <h2>Step 3: Importing Wallpapers</h2>
-      <p>Once installed, open Lively Wallpaper. You can simply drag and drop any video file from our "Live Wallpapers" collection directly into the application window. It will automatically convert and apply it as your desktop background.</p>
-
-      <h2>Tips for Performance</h2>
+      <h2>The Tools I Use</h2>
+      <p>My workflow relies heavily on two main tools:</p>
       <ul>
-        <li><strong>Pause on Fullscreen:</strong> Go to Settings > Performance and ensure "Pause wallpapers when applications are fullscreen" is checked. This saves GPU resources while gaming.</li>
-        <li><strong>Quality Settings:</strong> If you have a lower-end PC, you can adjust the video quality settings within Lively to ensure smooth system performance.</li>
+        <li><strong>Adobe Photoshop:</strong> This is where the magic happens for high-quality upscaling, background removal, and complex color adjustments. I use it to clean up raw anime screenshots and turn them into 4K masterpieces.</li>
+        <li><strong>Canva:</strong> Believe it or not, Canva is amazing for quick layouts and adding typography. When I'm making PFP sets or promotional thumbnails for the site, Canva speeds up my workflow significantly.</li>
       </ul>
 
-      <h2>Conclusion</h2>
-      <p>Customizing your desktop is a fun way to express your personality. Check out our gallery for the latest anime live wallpapers to get started!</p>
+      <h2>From Screenshot to Wallpaper</h2>
+      <p>I start by hunting for high-quality RAW anime episodes. Once I find a frame I like, I take a screenshot and bring it into Photoshop. I use AI upscaling to get it to 4K resolution, then I manually fix any artifacts. Finally, I add my signature neon glow effects that you all know and love.</p>
+
+      <h2>Want to Learn More?</h2>
+      <p>Follow me on TikTok <a href="https://www.tiktok.com/@noxzx_kb" target="_blank">@noxzx_kb</a> for quick tutorials and speed edits!</p>
     `
   },
   {
-    slug: 'top-10-zero-two-wallpapers-2025',
-    title: 'Top 10 Zero Two Wallpapers for 2026',
-    excerpt: 'Our curated selection of the best Darling in the Franxx wallpapers featuring everyone\'s favorite dino girl.',
+    slug: 'best-matching-pfps-made-with-canva',
+    title: 'Creating the Best Matching Anime PFPs',
+    excerpt: 'How I design unique matching profile pictures for couples and besties using Canva and Photoshop.',
     date: '2026-01-20',
     author: 'Only_dias',
-    tags: ['Anime', 'List', 'Zero Two'],
+    tags: ['PFPs', 'Icons', 'Design', 'Canva'],
     content: `
-      <h2>The Icon of Darling in the Franxx</h2>
-      <p>Zero Two remains one of the most popular anime characters for desktop customization. Her distinctive pink hair and red horns make for striking visuals. Here are our top picks for this year.</p>
+      <h2>Why Matching PFPs?</h2>
+      <p>Matching profile pictures (PFPs) are the ultimate way to show your bond with your duo, whether it's your gaming partner or your significant other. On my channel, the "Matching Icons" videos are some of the most requested content.</p>
 
-      <h2>1. The Classic Smile</h2>
-      <p>Nothing beats the classic confident smile. Look for high-contrast versions that make the pink pop against dark backgrounds—perfect for OLED screens.</p>
+      <h2>The Design Process</h2>
+      <p>Creating a good matching set isn't just about cutting an image in half. I look for scenes where characters are interacting—looking at each other, holding hands, or fighting back-to-back.</p>
+      
+      <h3>Step-by-Step:</h3>
+      <ol>
+        <li><strong>Selection:</strong> I find a wide shot containing two characters.</li>
+        <li><strong>Crop & Center:</strong> using Photoshop, I crop the image into two perfect squares (1:1 ratio).</li>
+        <li><strong>Color Matching:</strong> I use Canva to ensure the color grading matches perfectly between both icons so they look cohesive on your discord or TikTok profiles.</li>
+        <li><strong>Enhancement:</strong> I sharpen the eyes and boost the saturation to make them pop on small mobile screens.</li>
+      </ol>
 
-      <h2>2. Neon City Esthetic</h2>
-      <p>Cyberpunk-themed Zero Two wallpapers are trending. The combination of mecha vibes and neon lights fits perfectly with modern gaming setups.</p>
-
-      <h2>3. Minimalist Silhouettes</h2>
-      <p>For those who prefer a cleaner desktop, minimalist vector art of Zero Two is a great choice. It keeps your icons visible while still showing off your fandom.</p>
-
-      <h2>Where to Find Them?</h2>
-      <p>You can find all these styles in our <strong>Zero Two</strong> collection page. We update it weekly with high-resolution images submitted by the community.</p>
+      <h2>Download My Collection</h2>
+      <p>You don't need to make them yourself! I've uploaded my best creations to the <a href="/icons">Icons & PFPs</a> section of this site. Go check them out!</p>
     `
   },
   {
-    slug: 'anime-art-trends-2026',
-    title: 'Anime Art Trends to Watch in 2026',
-    excerpt: 'From AI-assisted workflows to the resurgence of 90s cel-shading, here is what is defining the anime art scene this year.',
+    slug: 'exclusive-4k-wallpapers-drop',
+    title: 'Exclusive 4K Wallpapers: Behind the Scenes',
+    excerpt: 'The story behind the latest "Only_dias" wallpaper drop and how I choose the characters for my next project.',
     date: '2026-01-18',
     author: 'Only_dias',
-    tags: ['Art', 'Trends', 'Anime'],
+    tags: ['Wallpapers', '4K', 'Update', 'Anime'],
     content: `
-      <h2>The Return of Retro</h2>
-      <p>We are seeing a massive resurgence of the 90s aesthetic. Grainy filters, chromatic aberration, and cel-shaded styles reminiscent of Neon Genesis Evangelion and Cowboy Bebop are dominating wallpaper trends.</p>
+      <h2>Quality Over Quantity</h2>
+      <p>My goal with <strong>Only_dias Ocean</strong> is to provide the highest quality anime wallpapers on the internet. I'm tired of seeing blurry, pixelated JPEGs. That's why every single image on this site is manually curated and upscaled.</p>
 
-      <h2>AI and Human Collaboration</h2>
-      <p>While controversial, AI tools are settling into a workflow where they assist artists with backgrounds and lighting, allowing for more intricate and detailed environments in wallpapers.</p>
+      <h2>Requesting Characters</h2>
+      <p>I read all your comments on TikTok! The latest addition of <em>Rias Gremory</em> and <em>Zero Two</em> came directly from your suggestions. I look for characters that have a strong aesthetic and fit the "Neon/Dark" vibe of the website.</p>
 
-      <h2>High-DPI and Ultrawide</h2>
-      <p>With 4K and ultrawide monitors becoming standard, the demand for high-resolution assets is higher than ever. Upscaling technology is improving, but native 4K art is still king.</p>
+      <h2>What's Next?</h2>
+      <p>I'm currently working on a new "Live Wallpapers" collection featuring animated loops made in After Effects. Stay tuned to the channel for the release announcement!</p>
     `
   }
 ];
