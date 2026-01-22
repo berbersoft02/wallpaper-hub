@@ -37,7 +37,7 @@ export default function Gallery() {
   useEffect(() => {
     const loadWallpapers = async () => {
       try {
-        const response = await fetch('/api/wallpapers');
+        const response = await fetch(`/api/wallpapers?t=${Date.now()}`);
         if (!response.ok) {
           throw new Error(`API returned ${response.status}: ${response.statusText}`);
         }
