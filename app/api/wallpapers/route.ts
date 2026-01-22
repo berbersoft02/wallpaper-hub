@@ -45,17 +45,44 @@ async function loadFromJSON() {
   }
 }
 
-export async function GET() {
-  // 1. Try Cloudinary API
+// Function to fetch all resources with pagination
+async function fetchAllResources(resourceType: 'image' | 'video') {
+  let allResources: any[] = [];
+  let nextCursor = null;
+  
   try {
-    if (cloudName && apiKey && apiSecret) {
+    do {
       const result = await cloudinary.search
-        .expression('folder:wallpapers/*')
+        .expression(`folder:wallpapers/* AND resource_type:${resourceType}`)
         .sort_by('public_id', 'desc')
         .max_results(500)
+        .next_cursor(nextCursor)
         .execute();
+        
+      if (result.resources) {
+        allResources = [...allResources, ...result.resources];
+      }
+      nextCursor = result.next_cursor;
+    } while (nextCursor); // Keep fetching until no more results
+    
+    return allResources;
+  } catch (error) {
+    console.error(`Error fetching ${resourceType}s:`, error);
+    return [];
+  }
+}
 
-      const resources = result.resources || [];
+export async function GET() {
+  // 1. Try Cloudinary API (Auto-update mode)
+  try {
+    if (cloudName && apiKey && apiSecret) {
+      // Fetch images AND videos in parallel
+      const [images, videos] = await Promise.all([
+        fetchAllResources('image'),
+        fetchAllResources('video')
+      ]);
+      
+      const resources = [...images, ...videos];
       const charactersMap = new Map();
 
       for (const resource of resources) {
@@ -63,9 +90,10 @@ export async function GET() {
         if (!folderPath) continue;
         
         const parts = folderPath.split('/');
-        if (parts.length < 2) continue;
+        // Handle "wallpapers/Category" structure
+        if (parts.length < 2) continue; 
         
-        const charName = parts[1];
+        const charName = parts[1]; // e.g. "Cars"
         
         if (!charactersMap.has(charName)) {
           charactersMap.set(charName, {
@@ -77,13 +105,17 @@ export async function GET() {
         charactersMap.get(charName).wallpapers.push(resource.secure_url);
       }
 
-      const characters = Array.from(charactersMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+      const characters = Array.from(charactersMap.values())
+        .map(char => ({
+          ...char,
+          wallpapers: char.wallpapers.sort()
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
       
-      // If Cloudinary returns empty (e.g. search issue), try JSON
       if (characters.length > 0) {
         return NextResponse.json({
           characters,
-          source: 'cloudinary-dynamic',
+          source: 'cloudinary-live', // Indicates live data
           total: resources.length
         });
       }
@@ -92,13 +124,12 @@ export async function GET() {
     console.error('Cloudinary API failed, attempting fallback:', error);
   }
 
-  // 2. Fallback to JSON
+  // 2. Fallback to JSON (Manual update mode)
   const jsonData = await loadFromJSON();
   if (jsonData) {
     return NextResponse.json(jsonData);
   }
 
-  // 3. Absolute failure
   return NextResponse.json({ 
     characters: [], 
     error: 'Failed to load wallpapers from any source' 
