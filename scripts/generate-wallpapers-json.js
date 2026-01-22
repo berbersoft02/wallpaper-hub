@@ -3,6 +3,7 @@ const path = require('path');
 
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'wallpapers');
 const OUTPUT_FILE = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
+// Use the raw GitHub URL structure
 const BASE_URL = 'https://raw.githubusercontent.com/berbersoft02/wallpaper-hub/main/public/wallpapers';
 
 const SPECIAL_CATEGORIES = [
@@ -54,20 +55,21 @@ function generate() {
     });
 
     const wallpapers = files.map(file => {
-      // Encode folder and file names for URL
-      const encodedFolder = encodeURIComponent(folder).replace(/%20/g, '%20'); // Ensure spaces are %20
-      const encodedFile = encodeURIComponent(file).replace(/%20/g, '%20');
+      // Correctly encode folder and file names for URL
+      // encodeURIComponent handles spaces, special chars, etc.
+      const encodedFolder = encodeURIComponent(folder);
+      const encodedFile = encodeURIComponent(file);
       return `${BASE_URL}/${encodedFolder}/${encodedFile}`;
     });
 
     return {
-      name: folder,
+      name: folder, // Display name (can contain spaces)
       category: SPECIAL_CATEGORIES.includes(folder) ? 'Special' : 'Anime',
       wallpapers: wallpapers
     };
   });
 
-  // Sort characters alphabetically by name
+  // Sort characters alphabetically
   characters.sort((a, b) => a.name.localeCompare(b.name));
 
   const data = { characters };
