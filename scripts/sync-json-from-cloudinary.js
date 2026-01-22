@@ -18,7 +18,6 @@ const SPECIAL_CATEGORIES = [
   'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel'
 ];
 
-// Map clean names
 const NAME_MAPPING = {
   'rin-nanakura': 'Rin Nanakura',
   'rin-shima': 'Rin Shima',
@@ -44,22 +43,20 @@ const NAME_MAPPING = {
   'yuuko-hiragi': 'Yuuko Hiragi',
   'yuzuki-nanase': 'Yuzuki Nanase',
   'zero-two': 'Zero Two',
-  // Handle double spaces if present
   'Rin  Nanakura': 'Rin Nanakura',
   'Rias  Gremory': 'Rias Gremory',
   'phoebe': 'Phoebe'
 };
 
-async function sync() {
-  console.log('🔄 Fetching ALL resources (pagination + merging)...');
-  
+async function fetchResources(resourceType) {
   let allResources = [];
   let nextCursor = null;
+  console.log(`🔄 Fetching ${resourceType}s from Cloudinary...`);
 
   try {
     do {
       const result = await cloudinary.search
-        .expression('folder:wallpapers/*')
+        .expression(`folder:wallpapers/* AND resource_type:${resourceType}`)
         .max_results(500)
         .next_cursor(nextCursor)
         .execute();
@@ -67,75 +64,80 @@ async function sync() {
       allResources = [...allResources, ...(result.resources || [])];
       nextCursor = result.next_cursor;
     } while (nextCursor);
-
-    const charactersMap = new Map();
-
-    allResources.forEach(resource => {
-      let rawName = '';
-      const folder = resource.folder || resource.asset_folder;
-      const publicId = resource.public_id; 
-
-      if (folder) {
-        const parts = folder.split('/');
-        const wpIndex = parts.indexOf('wallpapers');
-        if (wpIndex !== -1 && parts.length > wpIndex + 1) {
-          rawName = parts[wpIndex + 1];
-        } else if (wpIndex === -1 && parts.length > 0) {
-           rawName = parts[0];
-        }
-      } 
-      
-      if (!rawName && publicId) {
-        const parts = publicId.split('/');
-        const wpIndex = parts.indexOf('wallpapers');
-        if (wpIndex !== -1 && parts.length > wpIndex + 1) {
-          rawName = parts[wpIndex + 1];
-        }
-      }
-
-      if (!rawName || rawName === 'wallpapers') return;
-
-      // Normalize name
-      let cleanName = rawName.trim();
-      
-      // Check mapping first (case-insensitive key check could be better, but explicit map is fine)
-      if (NAME_MAPPING[cleanName]) {
-        cleanName = NAME_MAPPING[cleanName];
-      } else if (NAME_MAPPING[cleanName.toLowerCase()]) {
-        cleanName = NAME_MAPPING[cleanName.toLowerCase()];
-      } else {
-        // Fallback cleanup: capitalize words
-        cleanName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
-      }
-
-      if (!charactersMap.has(cleanName)) {
-        charactersMap.set(cleanName, {
-          name: cleanName,
-          category: SPECIAL_CATEGORIES.includes(cleanName) ? 'Special' : 'Anime',
-          wallpapers: []
-        });
-      }
-
-      // Avoid duplicates if same URL is somehow added
-      const list = charactersMap.get(cleanName).wallpapers;
-      if (!list.includes(resource.secure_url)) {
-        list.push(resource.secure_url);
-      }
-    });
-
-    const characters = Array.from(charactersMap.values())
-      .map(char => ({
-        ...char,
-        wallpapers: char.wallpapers.sort()
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name));
-
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify({ characters }, null, 2));
-    console.log(`✨ Successfully wrote ${characters.length} cleaned categories.`);
     
+    console.log(`✅ Found ${allResources.length} ${resourceType}s.`);
+    return allResources;
   } catch (error) {
-    console.error('❌ Error:', error);
+    console.error(`❌ Error fetching ${resourceType}s:`, error);
+    return [];
   }
+}
+
+async function sync() {
+  // Fetch both images and videos
+  const images = await fetchResources('image');
+  const videos = await fetchResources('video');
+  const allResources = [...images, ...videos];
+
+  const charactersMap = new Map();
+
+  allResources.forEach(resource => {
+    let rawName = '';
+    const folder = resource.folder || resource.asset_folder;
+    const publicId = resource.public_id; 
+
+    if (folder) {
+      const parts = folder.split('/');
+      const wpIndex = parts.indexOf('wallpapers');
+      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
+        rawName = parts[wpIndex + 1];
+      } else if (wpIndex === -1 && parts.length > 0) {
+         rawName = parts[0];
+      }
+    } 
+    
+    if (!rawName && publicId) {
+      const parts = publicId.split('/');
+      const wpIndex = parts.indexOf('wallpapers');
+      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
+        rawName = parts[wpIndex + 1];
+      }
+    }
+
+    if (!rawName || rawName === 'wallpapers') return;
+
+    let cleanName = rawName.trim();
+    if (NAME_MAPPING[cleanName]) {
+      cleanName = NAME_MAPPING[cleanName];
+    } else if (NAME_MAPPING[cleanName.toLowerCase()]) {
+      cleanName = NAME_MAPPING[cleanName.toLowerCase()];
+    } else {
+      cleanName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+    }
+
+    if (!charactersMap.has(cleanName)) {
+      charactersMap.set(cleanName, {
+        name: cleanName,
+        category: SPECIAL_CATEGORIES.includes(cleanName) ? 'Special' : 'Anime',
+        wallpapers: []
+      });
+    }
+
+    const list = charactersMap.get(cleanName).wallpapers;
+    if (!list.includes(resource.secure_url)) {
+      list.push(resource.secure_url);
+    }
+  });
+
+  const characters = Array.from(charactersMap.values())
+    .map(char => ({
+      ...char,
+      wallpapers: char.wallpapers.sort()
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify({ characters }, null, 2));
+  console.log(`✨ Successfully wrote ${characters.length} categories with ${allResources.length} total files.`);
 }
 
 sync();
