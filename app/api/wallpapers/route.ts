@@ -52,8 +52,13 @@ async function fetchAllResources(resourceType: 'image' | 'video') {
   
   try {
     do {
+      // Broaden search: Just get everything, we filter by folder later
+      // Using 'folder:wallpapers/*' might miss items in root-level Asset Folders mapped to wallpapers
+      // Let's rely on the fact that my audit found them with 'folder:wallpapers/Cars'
+      // Maybe the issue was the folder string splitting?
+      
       const result = await cloudinary.search
-        .expression(`folder:wallpapers/* AND resource_type:${resourceType}`)
+        .expression(`resource_type:${resourceType} AND folder:wallpapers/*`) 
         .sort_by('public_id', 'desc')
         .max_results(500)
         .next_cursor(nextCursor)
@@ -63,7 +68,7 @@ async function fetchAllResources(resourceType: 'image' | 'video') {
         allResources = [...allResources, ...result.resources];
       }
       nextCursor = result.next_cursor;
-    } while (nextCursor); // Keep fetching until no more results
+    } while (nextCursor); 
     
     return allResources;
   } catch (error) {
@@ -76,7 +81,6 @@ export async function GET() {
   // 1. Try Cloudinary API (Auto-update mode)
   try {
     if (cloudName && apiKey && apiSecret) {
-      // Fetch images AND videos in parallel
       const [images, videos] = await Promise.all([
         fetchAllResources('image'),
         fetchAllResources('video')
@@ -86,24 +90,40 @@ export async function GET() {
       const charactersMap = new Map();
 
       for (const resource of resources) {
-        const folderPath = resource.folder; // e.g. "wallpapers/Cars" OR just "Cars"
-        if (!folderPath) continue;
+        // Check ALL possible folder properties
+        const folderPath = resource.folder || resource.asset_folder;
         
-        const parts = folderPath.split('/');
         let charName = '';
 
-        // Robust folder name extraction
-        if (parts[0] === 'wallpapers' && parts.length >= 2) {
-          charName = parts[1]; // Standard case: wallpapers/Name
-        } else if (parts.length >= 1) {
-          // Fallback: Use the last part of the folder path if 'wallpapers' isn't the root
-          // e.g. if folder is just "Cars" (but matched query folder:wallpapers/* ?)
-          // Actually, if query matched wallpapers/*, the folder path usually includes it.
-          // But just in case:
-          charName = parts[parts.length - 1];
-        }
+        if (folderPath) {
+          const parts = folderPath.split('/');
+          
+          // Logic:
+          // 1. If path is "wallpapers/Cars", take "Cars"
+          // 2. If path is "Cars" (and we found it via search), take "Cars"
+          // 3. If path is "wallpapers/Cars/BMW", take "Cars" (or BMW? usually top level char)
+          
+          // Check for 'wallpapers' prefix
+          const wpIndex = parts.indexOf('wallpapers');
+          if (wpIndex !== -1 && parts.length > wpIndex + 1) {
+            charName = parts[wpIndex + 1];
+          } else {
+            // No 'wallpapers' prefix? Maybe it IS the category name (e.g. "Cars")
+            // Take the last part? Or first?
+            // If it's "Cars", take "Cars".
+            charName = parts[parts.length - 1];
+          }
+        } 
         
-        // Final sanity check: Ignore if name is "wallpapers" itself
+        // Fallback: Check public_id if folder was missing/empty
+        if (!charName && resource.public_id) {
+           const parts = resource.public_id.split('/');
+           if (parts.length > 1 && parts[0] === 'wallpapers') {
+             charName = parts[1];
+           }
+        }
+
+        // Final valid check
         if (!charName || charName === 'wallpapers') continue;
         
         if (!charactersMap.has(charName)) {
@@ -126,7 +146,7 @@ export async function GET() {
       if (characters.length > 0) {
         return NextResponse.json({
           characters,
-          source: 'cloudinary-live', // Indicates live data
+          source: 'cloudinary-live', 
           total: resources.length
         });
       }
@@ -135,7 +155,7 @@ export async function GET() {
     console.error('Cloudinary API failed, attempting fallback:', error);
   }
 
-  // 2. Fallback to JSON (Manual update mode)
+  // 2. Fallback to JSON
   const jsonData = await loadFromJSON();
   if (jsonData) {
     return NextResponse.json(jsonData);
@@ -143,6 +163,6 @@ export async function GET() {
 
   return NextResponse.json({ 
     characters: [], 
-    error: 'Failed to load wallpapers from any source' 
+    error: 'Failed to load wallpapers' 
   }, { status: 500 });
 }
