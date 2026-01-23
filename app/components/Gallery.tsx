@@ -61,7 +61,7 @@ export default function Gallery() {
                 url: wallpaperUrl,
                 character: char.name,
                 title: `${char.name} - ${imgIndex + 1}`,
-                category: char.category
+                category: char.category || 'Anime'
               });
             });
           });
@@ -97,6 +97,8 @@ export default function Gallery() {
 
   const finalDisplay = filteredWallpapers;
   const hasMore = filter === "All" && displayCount < animeOnly.length;
+
+  const getCount = (charName: string) => wallpapers.filter(w => w.character === charName).length;
 
   const goToPrevious = useCallback(() => {
     if (selectedImageIndex !== null && selectedImageIndex > 0) {
@@ -141,11 +143,9 @@ export default function Gallery() {
   }, [selectedImageIndex, showRecommendationModal, showDownloadSuccessModal, goToPrevious, goToNext]);
 
   const handleDownload = (url: string, title: string) => {
-    // Detect extension
     const isVideo = url.toLowerCase().match(/\.(mp4|webm)$/);
     const ext = isVideo ? (url.split('.').pop() || 'mp4') : 'jpg';
     const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
-    
     const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
     
     const link = document.createElement('a');
@@ -167,7 +167,6 @@ export default function Gallery() {
           <span className="text-white">LATEST</span> DROPS
         </h2>
 
-        {/* Filters */}
         <div className="flex flex-col items-center gap-8 mb-12">
           {specialCollections.length > 0 && (
              <div className="flex flex-wrap justify-center gap-4">
@@ -181,7 +180,7 @@ export default function Gallery() {
                         : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg hover:shadow-[0_0_16px_rgba(5,217,232,0.4)]"
                     }`}
                   >
-                    {char.replace(/-/g, ' ')}
+                    <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {char.replace(/-/g, ' ')}
                   </button>
                 ))}
              </div>
@@ -195,11 +194,11 @@ export default function Gallery() {
               }}
               className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg ${
                 filter === "All" 
-                  ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)]" 
-                  : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan"
+                  ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
+                  : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
               }`}
             >
-              All
+              <span className="text-xs mr-2 opacity-80">({animeOnly.length})</span> All
             </button>
             {characters.map((char) => (
               <button
@@ -207,23 +206,22 @@ export default function Gallery() {
                 onClick={() => setFilter(char)}
                 className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg capitalize ${
                   filter === char 
-                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)]" 
-                    : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan"
+                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
+                    : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
                 }`}
               >
-                {char.replace(/-/g, ' ')}
+                <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {char.replace(/-/g, ' ')}
               </button>
             ))}
             <button
               onClick={() => setShowRecommendationModal(true)}
-              className="font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)] hover:scale-105"
+              className="font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
             >
               Send Recommendation
             </button>
           </div>
         </div>
 
-        {/* Grid */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
             <div className="font-pixel text-2xl text-neon-cyan animate-pulse">
@@ -280,7 +278,7 @@ export default function Gallery() {
                     <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate max-w-[200px]">{wp.title}</h3>
                     <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{wp.character.replace(/-/g, ' ')}</span>
                   </div>
-                  <button className="text-gray-500 hover:text-red-500 transition-all">
+                  <button className="text-gray-500 hover:text-red-500 transition-all hover:scale-125">
                     <Heart size={20} />
                   </button>
                 </div>
@@ -289,7 +287,6 @@ export default function Gallery() {
           </div>
         )}
 
-        {/* More Button */}
         {!loading && filter === "All" && hasMore && (
           <div className="flex justify-center mt-12">
             <button
@@ -302,7 +299,6 @@ export default function Gallery() {
         )}
       </div>
 
-      {/* Full Screen Modal */}
       {selectedImageIndex !== null && finalDisplay[selectedImageIndex] && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4"
@@ -310,7 +306,7 @@ export default function Gallery() {
         >
           <button
             onClick={() => setSelectedImageIndex(null)}
-            className="absolute top-4 right-4 p-3 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-pink transition-all z-20"
+            className="absolute top-4 right-4 p-3 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-pink hover:scale-110 transition-all z-20"
           >
             <X size={28} />
           </button>
@@ -320,7 +316,7 @@ export default function Gallery() {
               e.stopPropagation();
               goToPrevious();
             }}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan transition-all z-20"
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-20"
           >
             <ChevronLeft size={32} />
           </button>
@@ -330,7 +326,7 @@ export default function Gallery() {
               e.stopPropagation();
               goToNext();
             }}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan transition-all z-20"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-20"
           >
             <ChevronRight size={32} />
           </button>
@@ -373,7 +369,7 @@ export default function Gallery() {
 
       {showDownloadSuccessModal && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 animate-fade-in"
           onClick={() => setShowDownloadSuccessModal(false)}
         >
           <div 
@@ -410,59 +406,9 @@ export default function Gallery() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4" onClick={() => setShowRecommendationModal(false)}>
            <div className="bg-card-bg p-8 max-w-lg w-full rounded-lg" onClick={e => e.stopPropagation()}>
               <h3 className="text-white font-pixel text-2xl mb-4">Send Recommendation</h3>
-              <form 
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setSending(true);
-                  try {
-                    const response = await fetch('/api/recommendations', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify(recommendationForm),
-                    });
-                    if (response.ok) {
-                      setSendStatus({ success: true, message: 'Thank you! Sent.' });
-                      setRecommendationForm({ name: '', email: '', message: '' });
-                    } else {
-                      setSendStatus({ success: false, message: 'Failed to send.' });
-                    }
-                  } catch (error) {
-                    setSendStatus({ success: false, message: 'Error occurred.' });
-                  } finally {
-                    setSending(false);
-                  }
-                }}
-                className="space-y-4"
-              >
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full bg-dark-bg border border-gray-700 p-2 rounded"
-                  value={recommendationForm.name}
-                  onChange={e => setRecommendationForm({...recommendationForm, name: e.target.value})}
-                  required
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full bg-dark-bg border border-gray-700 p-2 rounded"
-                  value={recommendationForm.email}
-                  onChange={e => setRecommendationForm({...recommendationForm, email: e.target.value})}
-                  required
-                />
-                <textarea 
-                  placeholder="Message" 
-                  className="w-full bg-dark-bg border border-gray-700 p-2 rounded h-32"
-                  value={recommendationForm.message}
-                  onChange={e => setRecommendationForm({...recommendationForm, message: e.target.value})}
-                  required
-                />
-                <button type="submit" disabled={sending} className="w-full bg-neon-purple p-2 rounded font-pixel">
-                  {sending ? 'Sending...' : 'Send'}
-                </button>
-                {sendStatus && <p className="text-center">{sendStatus.message}</p>}
-              </form>
-              <button onClick={() => setShowRecommendationModal(false)} className="mt-4 text-gray-500 w-full text-center">Close</button>
+              <p className="text-gray-300 mb-6">Want to see a specific character? Let me know!</p>
+              <a href="mailto:berbersoft@gmail.com" className="bg-neon-pink text-white px-6 py-2 rounded font-pixel">Email Me</a>
+              <button onClick={() => setShowRecommendationModal(false)} className="ml-4 text-gray-400">Close</button>
            </div>
         </div>
       )}
