@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0; // Explicitly disable cache
 
 // Configure Cloudinary
 const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
@@ -27,6 +28,45 @@ const SPECIAL_CATEGORIES = [
   'Pixel'
 ];
 
+// Helper to Title Case names (e.g. "akane kurokawa" -> "Akane Kurokawa")
+function toTitleCase(str: string) {
+  return str.replace(
+    /\w\S*/g,
+    (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  );
+}
+
+// Known mappings to fix specific messy folder names
+const NAME_MAPPING: Record<string, string> = {
+  'rin-nanakura': 'Rin Nanakura',
+  'rin-shima': 'Rin Shima',
+  'shikimori': 'Shikimori', // often lowercase
+  'akane-kurokawa': 'Akane Kurokawa',
+  'alya-kujou': 'Alya Kujou',
+  'chinatsu': 'Chinatsu',
+  'chisato-nishikigi': 'Chisato Nishikigi',
+  'elaina': 'Elaina',
+  'hina-chono': 'Hina Chono',
+  'hushino': 'Hushino',
+  'kaoruko-waguri': 'Kaoruko Waguri',
+  'live-wallpapers': 'Live Wallpapers',
+  'mai': 'Mai',
+  'maria-kujou': 'Maria Kujou',
+  'marin-kitagawa': 'Marin Kitagawa',
+  'miku-nakano': 'Miku Nakano',
+  'nakano-nino': 'Nakano Nino',
+  'nishimiya-shouko': 'Nishimiya Shouko',
+  'phoebe': 'Phoebe',
+  'rias-gremory': 'Rias Gremory',
+  'shiina-mahiru': 'Shiina Mahiru',
+  'yuuko-hiragi': 'Yuuko Hiragi',
+  'yuzuki-nanase': 'Yuzuki Nanase',
+  'zero-two': 'Zero Two',
+  'Rin  Nanakura': 'Rin Nanakura', // Fix double spaces
+  'Rias  Gremory': 'Rias Gremory',
+  'Give some recommendations in the comments . & Follow me for more !': 'Hina Chono' // Fix that weird subfolder
+};
+
 async function loadFromJSON() {
   try {
     const filePath = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
@@ -45,20 +85,15 @@ async function loadFromJSON() {
   }
 }
 
-// Function to fetch all resources with pagination
 async function fetchAllResources(resourceType: 'image' | 'video') {
   let allResources: any[] = [];
   let nextCursor = null;
   
   try {
     do {
-      // Broaden search: Just get everything, we filter by folder later
-      // Using 'folder:wallpapers/*' might miss items in root-level Asset Folders mapped to wallpapers
-      // Let's rely on the fact that my audit found them with 'folder:wallpapers/Cars'
-      // Maybe the issue was the folder string splitting?
-      
+      // Search broadly for anything in a wallpapers folder OR just loosely matches
       const result = await cloudinary.search
-        .expression(`resource_type:${resourceType} AND folder:wallpapers/*`) 
+        .expression(`resource_type:${resourceType} AND folder:wallpapers/*`)
         .sort_by('public_id', 'desc')
         .max_results(500)
         .next_cursor(nextCursor)
@@ -68,7 +103,7 @@ async function fetchAllResources(resourceType: 'image' | 'video') {
         allResources = [...allResources, ...result.resources];
       }
       nextCursor = result.next_cursor;
-    } while (nextCursor); 
+    } while (nextCursor);
     
     return allResources;
   } catch (error) {
@@ -78,7 +113,6 @@ async function fetchAllResources(resourceType: 'image' | 'video') {
 }
 
 export async function GET() {
-  // 1. Try Cloudinary API (Auto-update mode)
   try {
     if (cloudName && apiKey && apiSecret) {
       const [images, videos] = await Promise.all([
@@ -90,50 +124,67 @@ export async function GET() {
       const charactersMap = new Map();
 
       for (const resource of resources) {
-        // Check ALL possible folder properties
         const folderPath = resource.folder || resource.asset_folder;
-        
         let charName = '';
 
         if (folderPath) {
           const parts = folderPath.split('/');
           
-          // Logic:
-          // 1. If path is "wallpapers/Cars", take "Cars"
-          // 2. If path is "Cars" (and we found it via search), take "Cars"
-          // 3. If path is "wallpapers/Cars/BMW", take "Cars" (or BMW? usually top level char)
+          // Logic: Extract the most relevant folder name
+          // 1. If "wallpapers/Name", use Name
+          // 2. If "Name", use Name
+          // 3. Ignore "wallpapers" root
           
-          // Check for 'wallpapers' prefix
           const wpIndex = parts.indexOf('wallpapers');
           if (wpIndex !== -1 && parts.length > wpIndex + 1) {
             charName = parts[wpIndex + 1];
-          } else {
-            // No 'wallpapers' prefix? Maybe it IS the category name (e.g. "Cars")
-            // Take the last part? Or first?
-            // If it's "Cars", take "Cars".
+          } else if (wpIndex === -1 && parts.length > 0) {
             charName = parts[parts.length - 1];
           }
         } 
         
-        // Fallback: Check public_id if folder was missing/empty
-        if (!charName && resource.public_id) {
+        // Fallback to public_id parsing
+        if ((!charName || charName === 'wallpapers') && resource.public_id) {
            const parts = resource.public_id.split('/');
            if (parts.length > 1 && parts[0] === 'wallpapers') {
              charName = parts[1];
            }
         }
 
-        // Final valid check
         if (!charName || charName === 'wallpapers') continue;
+
+        // Clean up the name
+        let cleanName = charName.trim();
         
-        if (!charactersMap.has(charName)) {
-          charactersMap.set(charName, {
-            name: charName,
-            category: SPECIAL_CATEGORIES.includes(charName) ? 'Special' : 'Anime',
+        // Fix weird subfolders like the "Give some recommendations..." one for Hina Chono
+        if (cleanName.includes('Give some recommendations')) {
+            cleanName = 'Hina Chono';
+        }
+
+        // Apply mapping
+        if (NAME_MAPPING[cleanName]) {
+          cleanName = NAME_MAPPING[cleanName];
+        } else {
+          // Normalize case: "cars" -> "Cars"
+          // Don't mess with names that are already Title Cased correctly
+          if (cleanName === cleanName.toLowerCase()) {
+             cleanName = toTitleCase(cleanName);
+          }
+        }
+        
+        if (!charactersMap.has(cleanName)) {
+          charactersMap.set(cleanName, {
+            name: cleanName,
+            category: SPECIAL_CATEGORIES.includes(cleanName) ? 'Special' : 'Anime',
             wallpapers: []
           });
         }
-        charactersMap.get(charName).wallpapers.push(resource.secure_url);
+        
+        // Avoid duplicates
+        const list = charactersMap.get(cleanName).wallpapers;
+        if (!list.includes(resource.secure_url)) {
+          list.push(resource.secure_url);
+        }
       }
 
       const characters = Array.from(charactersMap.values())
@@ -146,7 +197,7 @@ export async function GET() {
       if (characters.length > 0) {
         return NextResponse.json({
           characters,
-          source: 'cloudinary-live', 
+          source: 'cloudinary-live',
           total: resources.length
         });
       }
@@ -155,7 +206,6 @@ export async function GET() {
     console.error('Cloudinary API failed, attempting fallback:', error);
   }
 
-  // 2. Fallback to JSON
   const jsonData = await loadFromJSON();
   if (jsonData) {
     return NextResponse.json(jsonData);
@@ -163,6 +213,6 @@ export async function GET() {
 
   return NextResponse.json({ 
     characters: [], 
-    error: 'Failed to load wallpapers' 
+    error: 'Failed to load wallpapers from any source' 
   }, { status: 500 });
 }
