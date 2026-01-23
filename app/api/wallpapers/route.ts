@@ -86,14 +86,25 @@ export async function GET() {
       const charactersMap = new Map();
 
       for (const resource of resources) {
-        const folderPath = resource.folder;
+        const folderPath = resource.folder; // e.g. "wallpapers/Cars" OR just "Cars"
         if (!folderPath) continue;
         
         const parts = folderPath.split('/');
-        // Handle "wallpapers/Category" structure
-        if (parts.length < 2) continue; 
+        let charName = '';
+
+        // Robust folder name extraction
+        if (parts[0] === 'wallpapers' && parts.length >= 2) {
+          charName = parts[1]; // Standard case: wallpapers/Name
+        } else if (parts.length >= 1) {
+          // Fallback: Use the last part of the folder path if 'wallpapers' isn't the root
+          // e.g. if folder is just "Cars" (but matched query folder:wallpapers/* ?)
+          // Actually, if query matched wallpapers/*, the folder path usually includes it.
+          // But just in case:
+          charName = parts[parts.length - 1];
+        }
         
-        const charName = parts[1]; // e.g. "Cars"
+        // Final sanity check: Ignore if name is "wallpapers" itself
+        if (!charName || charName === 'wallpapers') continue;
         
         if (!charactersMap.has(charName)) {
           charactersMap.set(charName, {
