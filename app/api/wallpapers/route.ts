@@ -63,19 +63,27 @@ function normalizeName(name: string) {
 
 async function fetchAll(resourceType: 'image' | 'video') {
   let list: any[] = [];
-  let nextCursor = null;
+  let nextCursor: string | undefined = undefined;
   
   try {
     do {
-      const result = await cloudinary.search
-        .expression(`resource_type:${resourceType} AND folder:wallpapers/*`)
+      const expression = `resource_type:${resourceType} AND folder:wallpapers/*`;
+      const search = cloudinary.search
+        .expression(expression)
         .sort_by('public_id', 'desc')
-        .max_results(500) // Max allowed by free plan usually
-        .next_cursor(nextCursor)
-        .execute();
+        .max_results(500);
+
+      if (nextCursor) {
+        search.next_cursor(nextCursor);
+      }
+
+      const result = await search.execute();
       
       if (result.resources) list.push(...result.resources);
-      nextCursor = result.next_cursor;
+      
+      // Explicitly handle null/undefined from API response
+      nextCursor = (result.next_cursor as string | null) || undefined;
+      
     } while (nextCursor);
   } catch (e) {
     console.error(`Error fetching ${resourceType}:`, e);
@@ -97,10 +105,7 @@ export async function GET() {
   const charMap = new Map();
 
   for (const item of all) {
-    // Extract folder name
     const folder = item.folder || item.asset_folder || '';
-    // folder usually looks like "wallpapers/Cars" or just "Cars"
-    
     const parts = folder.split('/');
     let rawName = '';
     
@@ -109,7 +114,6 @@ export async function GET() {
     } else if (parts.length === 1 && parts[0] !== 'wallpapers') {
       rawName = parts[0];
     } else if (item.public_id) {
-       // Fallback to public_id: "wallpapers/Cars/1"
        const pParts = item.public_id.split('/');
        if (pParts.length > 2 && pParts[0] === 'wallpapers') {
          rawName = pParts[1];
@@ -128,7 +132,6 @@ export async function GET() {
       });
     }
     
-    // Check for duplicates
     const currentList = charMap.get(name).wallpapers;
     if (!currentList.includes(item.secure_url)) {
       currentList.push(item.secure_url);
