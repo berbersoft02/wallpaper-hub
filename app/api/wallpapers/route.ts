@@ -1,12 +1,9 @@
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
-import fs from 'fs';
-import path from 'path';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 0; // Explicitly disable cache
+export const revalidate = 0;
 
-// Configure Cloudinary
 const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
 const apiKey = process.env.CLOUDINARY_API_KEY;
 const apiSecret = process.env.CLOUDINARY_API_SECRET;
@@ -20,199 +17,129 @@ if (cloudName && apiKey && apiSecret) {
 }
 
 const SPECIAL_CATEGORIES = [
-  'Animals',
-  'Awesome',
-  'Cars',
-  'Live Wallpapers',
-  'Mixed',
-  'Pixel'
+  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel'
 ];
 
-// Helper to Title Case names (e.g. "akane kurokawa" -> "Akane Kurokawa")
-function toTitleCase(str: string) {
-  return str.replace(
-    /\w\S*/g,
-    (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-  );
+function normalizeName(name: string) {
+  const map: Record<string, string> = {
+    'rin-nanakura': 'Rin Nanakura',
+    'rin-shima': 'Rin Shima',
+    'shikimori': 'Shikimori',
+    'akane-kurokawa': 'Akane Kurokawa',
+    'alya-kujou': 'Alya Kujou',
+    'chinatsu': 'Chinatsu',
+    'chisato-nishikigi': 'Chisato Nishikigi',
+    'elaina': 'Elaina',
+    'hina-chono': 'Hina Chono',
+    'hushino': 'Hushino',
+    'kaoruko-waguri': 'Kaoruko Waguri',
+    'live-wallpapers': 'Live Wallpapers',
+    'mai': 'Mai',
+    'maria-kujou': 'Maria Kujou',
+    'marin-kitagawa': 'Marin Kitagawa',
+    'miku-nakano': 'Miku Nakano',
+    'nakano-nino': 'Nakano Nino',
+    'nishimiya-shouko': 'Nishimiya Shouko',
+    'phoebe': 'Phoebe',
+    'rias-gremory': 'Rias Gremory',
+    'shiina-mahiru': 'Shiina Mahiru',
+    'yuuko-hiragi': 'Yuuko Hiragi',
+    'yuzuki-nanase': 'Yuzuki Nanase',
+    'zero-two': 'Zero Two',
+    'Rin  Nanakura': 'Rin Nanakura',
+    'Rias  Gremory': 'Rias Gremory',
+  };
+  
+  let clean = name.trim();
+  if (clean.includes('Give some recommendations')) return 'Hina Chono';
+  
+  // Apply map
+  if (map[clean]) return map[clean];
+  if (map[clean.toLowerCase()]) return map[clean.toLowerCase()];
+  
+  // Title Case
+  return clean.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 }
 
-// Known mappings to fix specific messy folder names
-const NAME_MAPPING: Record<string, string> = {
-  'rin-nanakura': 'Rin Nanakura',
-  'rin-shima': 'Rin Shima',
-  'shikimori': 'Shikimori', // often lowercase
-  'akane-kurokawa': 'Akane Kurokawa',
-  'alya-kujou': 'Alya Kujou',
-  'chinatsu': 'Chinatsu',
-  'chisato-nishikigi': 'Chisato Nishikigi',
-  'elaina': 'Elaina',
-  'hina-chono': 'Hina Chono',
-  'hushino': 'Hushino',
-  'kaoruko-waguri': 'Kaoruko Waguri',
-  'live-wallpapers': 'Live Wallpapers',
-  'mai': 'Mai',
-  'maria-kujou': 'Maria Kujou',
-  'marin-kitagawa': 'Marin Kitagawa',
-  'miku-nakano': 'Miku Nakano',
-  'nakano-nino': 'Nakano Nino',
-  'nishimiya-shouko': 'Nishimiya Shouko',
-  'phoebe': 'Phoebe',
-  'rias-gremory': 'Rias Gremory',
-  'shiina-mahiru': 'Shiina Mahiru',
-  'yuuko-hiragi': 'Yuuko Hiragi',
-  'yuzuki-nanase': 'Yuzuki Nanase',
-  'zero-two': 'Zero Two',
-  'Rin  Nanakura': 'Rin Nanakura', // Fix double spaces
-  'Rias  Gremory': 'Rias Gremory',
-  'Give some recommendations in the comments . & Follow me for more !': 'Hina Chono' // Fix that weird subfolder
-};
-
-async function loadFromJSON() {
-  try {
-    const filePath = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
-    if (!fs.existsSync(filePath)) return null;
-    
-    const fileContent = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContent);
-    return {
-      characters: data.characters,
-      source: 'json-fallback',
-      total: data.characters.reduce((acc: number, char: any) => acc + char.wallpapers.length, 0)
-    };
-  } catch (e) {
-    console.error('JSON fallback failed:', e);
-    return null;
-  }
-}
-
-async function fetchAllResources(resourceType: 'image' | 'video') {
-  let allResources: any[] = [];
+async function fetchAll(resourceType: 'image' | 'video') {
+  let list: any[] = [];
   let nextCursor = null;
   
   try {
     do {
-      // Search broadly for anything in a wallpapers folder OR just loosely matches
       const result = await cloudinary.search
         .expression(`resource_type:${resourceType} AND folder:wallpapers/*`)
         .sort_by('public_id', 'desc')
-        .max_results(500)
+        .max_results(500) // Max allowed by free plan usually
         .next_cursor(nextCursor)
         .execute();
-        
-      if (result.resources) {
-        allResources = [...allResources, ...result.resources];
-      }
+      
+      if (result.resources) list.push(...result.resources);
       nextCursor = result.next_cursor;
     } while (nextCursor);
-    
-    return allResources;
-  } catch (error) {
-    console.error(`Error fetching ${resourceType}s:`, error);
-    return [];
+  } catch (e) {
+    console.error(`Error fetching ${resourceType}:`, e);
   }
+  return list;
 }
 
 export async function GET() {
-  try {
-    if (cloudName && apiKey && apiSecret) {
-      const [images, videos] = await Promise.all([
-        fetchAllResources('image'),
-        fetchAllResources('video')
-      ]);
-      
-      const resources = [...images, ...videos];
-      const charactersMap = new Map();
+  if (!cloudName || !apiKey || !apiSecret) {
+    return NextResponse.json({ error: 'Cloudinary config missing' }, { status: 500 });
+  }
 
-      for (const resource of resources) {
-        const folderPath = resource.folder || resource.asset_folder;
-        let charName = '';
+  const [images, videos] = await Promise.all([
+    fetchAll('image'),
+    fetchAll('video')
+  ]);
 
-        if (folderPath) {
-          const parts = folderPath.split('/');
-          
-          // Logic: Extract the most relevant folder name
-          // 1. If "wallpapers/Name", use Name
-          // 2. If "Name", use Name
-          // 3. Ignore "wallpapers" root
-          
-          const wpIndex = parts.indexOf('wallpapers');
-          if (wpIndex !== -1 && parts.length > wpIndex + 1) {
-            charName = parts[wpIndex + 1];
-          } else if (wpIndex === -1 && parts.length > 0) {
-            charName = parts[parts.length - 1];
-          }
-        } 
-        
-        // Fallback to public_id parsing
-        if ((!charName || charName === 'wallpapers') && resource.public_id) {
-           const parts = resource.public_id.split('/');
-           if (parts.length > 1 && parts[0] === 'wallpapers') {
-             charName = parts[1];
-           }
-        }
+  const all = [...images, ...videos];
+  const charMap = new Map();
 
-        if (!charName || charName === 'wallpapers') continue;
-
-        // Clean up the name
-        let cleanName = charName.trim();
-        
-        // Fix weird subfolders like the "Give some recommendations..." one for Hina Chono
-        if (cleanName.includes('Give some recommendations')) {
-            cleanName = 'Hina Chono';
-        }
-
-        // Apply mapping
-        if (NAME_MAPPING[cleanName]) {
-          cleanName = NAME_MAPPING[cleanName];
-        } else {
-          // Normalize case: "cars" -> "Cars"
-          // Don't mess with names that are already Title Cased correctly
-          if (cleanName === cleanName.toLowerCase()) {
-             cleanName = toTitleCase(cleanName);
-          }
-        }
-        
-        if (!charactersMap.has(cleanName)) {
-          charactersMap.set(cleanName, {
-            name: cleanName,
-            category: SPECIAL_CATEGORIES.includes(cleanName) ? 'Special' : 'Anime',
-            wallpapers: []
-          });
-        }
-        
-        // Avoid duplicates
-        const list = charactersMap.get(cleanName).wallpapers;
-        if (!list.includes(resource.secure_url)) {
-          list.push(resource.secure_url);
-        }
-      }
-
-      const characters = Array.from(charactersMap.values())
-        .map(char => ({
-          ...char,
-          wallpapers: char.wallpapers.sort()
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name));
-      
-      if (characters.length > 0) {
-        return NextResponse.json({
-          characters,
-          source: 'cloudinary-live',
-          total: resources.length
-        });
-      }
+  for (const item of all) {
+    // Extract folder name
+    const folder = item.folder || item.asset_folder || '';
+    // folder usually looks like "wallpapers/Cars" or just "Cars"
+    
+    const parts = folder.split('/');
+    let rawName = '';
+    
+    if (parts.length > 1 && parts[0] === 'wallpapers') {
+      rawName = parts[1];
+    } else if (parts.length === 1 && parts[0] !== 'wallpapers') {
+      rawName = parts[0];
+    } else if (item.public_id) {
+       // Fallback to public_id: "wallpapers/Cars/1"
+       const pParts = item.public_id.split('/');
+       if (pParts.length > 2 && pParts[0] === 'wallpapers') {
+         rawName = pParts[1];
+       }
     }
-  } catch (error) {
-    console.error('Cloudinary API failed, attempting fallback:', error);
+
+    if (!rawName) continue;
+
+    const name = normalizeName(rawName);
+    
+    if (!charMap.has(name)) {
+      charMap.set(name, {
+        name,
+        category: SPECIAL_CATEGORIES.includes(name) ? 'Special' : 'Anime',
+        wallpapers: []
+      });
+    }
+    
+    // Check for duplicates
+    const currentList = charMap.get(name).wallpapers;
+    if (!currentList.includes(item.secure_url)) {
+      currentList.push(item.secure_url);
+    }
   }
 
-  const jsonData = await loadFromJSON();
-  if (jsonData) {
-    return NextResponse.json(jsonData);
-  }
+  const characters = Array.from(charMap.values()).sort((a, b) => a.name.localeCompare(b.name));
 
-  return NextResponse.json({ 
-    characters: [], 
-    error: 'Failed to load wallpapers from any source' 
-  }, { status: 500 });
+  return NextResponse.json({
+    characters,
+    source: 'cloudinary-live-full',
+    total: all.length
+  });
 }
