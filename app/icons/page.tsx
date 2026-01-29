@@ -5,7 +5,9 @@ import Link from "next/link";
 
 export default function IconsPage() {
   // Using some images from the public folder as "Profile Pictures"
-  const iconIndices = Array.from({ length: 69 }, (_, i) => i + 1);
+  // Filtering out 32-42 (text-only images)
+  const iconIndices = Array.from({ length: 69 }, (_, i) => i + 1)
+    .filter(i => i < 32 || i > 42);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white">
