@@ -88,6 +88,36 @@ export default function Gallery() {
     setDisplayCount(10);
   }, [filter]);
 
+  const renderCharacterName = (charName: string) => {
+    const formattedName = charName.replace(/-/g, ' ');
+    
+    const stickers: Record<string, string> = {
+      "Alya Kujou": "alya.png",
+      "Miku Nakano": "mikunakano.png",
+      "Akane Kurokawa": "akane.png",
+      "Chinatsu": "chinatsu.png",
+      "Chisato Nishikigi": "Chisato.png",
+      "♡ Hina Chono": "hina.png",
+      "Bachira Meguru": "bachira.png"
+    };
+
+    if (stickers[charName]) {
+      return (
+        <span className="inline-flex items-center gap-2">
+          {formattedName}
+          {/* Sticker */}
+          <img 
+             src={`/stickers/${stickers[charName]}`}
+             alt="sticker" 
+             className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]"
+             onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
+        </span>
+      );
+    }
+    return formattedName;
+  };
+
   const allWallpapersReversed = [...wallpapers].reverse();
   const animeOnly = allWallpapersReversed.filter(w => w.category === 'Anime');
 
@@ -180,7 +210,7 @@ export default function Gallery() {
                         : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg hover:shadow-[0_0_16px_rgba(5,217,232,0.4)]"
                     }`}
                   >
-                    <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {char.replace(/-/g, ' ')}
+                    <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {renderCharacterName(char)}
                   </button>
                 ))}
              </div>
@@ -210,7 +240,7 @@ export default function Gallery() {
                     : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
                 }`}
               >
-                <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {char.replace(/-/g, ' ')}
+                <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {renderCharacterName(char)}
               </button>
             ))}
             <button
@@ -276,7 +306,7 @@ export default function Gallery() {
                 <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90 backdrop-blur-sm">
                   <div>
                     <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate max-w-[200px]">{wp.title}</h3>
-                    <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{wp.character.replace(/-/g, ' ')}</span>
+                    <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{renderCharacterName(wp.character)}</span>
                   </div>
                   <button className="text-gray-500 hover:text-red-500 transition-all hover:scale-125">
                     <Heart size={20} />

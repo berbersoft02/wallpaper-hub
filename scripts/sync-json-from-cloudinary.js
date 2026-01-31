@@ -12,7 +12,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const OUTPUT_FILE = path.join(process.cwd(), 'app', 'data', 'wallpapers.json');
+const OUTPUT_FILE = path.join(__dirname, '..', 'app', 'data', 'wallpapers.json');
 
 const SPECIAL_CATEGORIES = [
   'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel'
@@ -43,6 +43,7 @@ const NAME_MAPPING = {
   'yuuko-hiragi': 'Yuuko Hiragi',
   'yuzuki-nanase': 'Yuzuki Nanase',
   'zero-two': 'Zero Two',
+  'bachira-meguru': 'Bachira Meguru',
   'Rin  Nanakura': 'Rin Nanakura',
   'Rias  Gremory': 'Rias Gremory',
   'phoebe': 'Phoebe'
