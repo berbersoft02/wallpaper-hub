@@ -91,32 +91,28 @@ export default function Gallery() {
   const renderCharacterName = (charName: string) => {
     const formattedName = charName.replace(/-/g, ' ');
     
-    const stickers: Record<string, string> = {
-      "Alya Kujou ♡": "alya.png",
-      "Miku Nakano": "miku.png",
-      "Akane Kurokawa": "akane.png",
-      "Kano Chinatsu": "chinatsu.png",
-      "Chisato Nishikigi": "Chisato.png",
-      "Hina Chono": "hina.png",
-      "Bachira Meguru": "bachira.png",
-      "Baki Hanma": "baki.png"
-    };
+    // Create a slug for the sticker filename: "Alya Kujou ♡" -> "alya-kujou"
+    // 1. Lowercase
+    // 2. Remove emojis/special chars (keep letters, numbers, spaces)
+    // 3. Trim
+    // 4. Replace spaces with hyphens
+    const stickerSlug = charName
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '') 
+      .trim()
+      .replace(/\s+/g, '-');
 
-    if (stickers[charName]) {
-      return (
-        <span className="inline-flex items-center gap-2">
-          {formattedName}
-          {/* Sticker */}
-          <img 
-             src={`/stickers/${stickers[charName]}`}
-             alt="sticker" 
-             className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]"
-             onError={(e) => { e.currentTarget.style.display = 'none'; }}
-          />
-        </span>
-      );
-    }
-    return formattedName;
+    return (
+      <span className="inline-flex items-center gap-2">
+        {formattedName}
+        <img 
+           src={`/stickers/${stickerSlug}.png`}
+           alt="sticker" 
+           className="w-6 h-6 object-contain drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]"
+           onError={(e) => { e.currentTarget.style.display = 'none'; }}
+        />
+      </span>
+    );
   };
 
   const allWallpapersReversed = [...wallpapers].reverse();
