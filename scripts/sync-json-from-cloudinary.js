@@ -57,7 +57,7 @@ async function fetchResources(resourceType) {
   try {
     do {
       const result = await cloudinary.search
-        .expression(`folder:wallpapers/* AND resource_type:${resourceType}`)
+        .expression(`resource_type:${resourceType}`)
         .max_results(500)
         .next_cursor(nextCursor)
         .execute();
@@ -92,6 +92,9 @@ async function sync() {
       const wpIndex = parts.indexOf('wallpapers');
       if (wpIndex !== -1 && parts.length > wpIndex + 1) {
         rawName = parts[wpIndex + 1];
+      } else if (wpIndex !== -1 && parts.length === wpIndex + 1) {
+        // Files directly in 'wallpapers' folder
+        rawName = 'Mixed';
       } else if (wpIndex === -1 && parts.length > 0) {
          rawName = parts[0];
       }
@@ -106,7 +109,7 @@ async function sync() {
     }
 
     if (!rawName || rawName === 'wallpapers') return;
-
+    
     let cleanName = rawName.trim();
     if (NAME_MAPPING[cleanName]) {
       cleanName = NAME_MAPPING[cleanName];
