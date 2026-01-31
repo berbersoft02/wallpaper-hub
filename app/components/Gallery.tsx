@@ -92,12 +92,12 @@ export default function Gallery() {
     const formattedName = charName.replace(/-/g, ' ');
     
     const stickers: Record<string, string> = {
-      "Alya Kujou": "alya.png",
+      "Alya Kujou ♡": "alya.png",
       "Miku Nakano": "mikunakano.png",
       "Akane Kurokawa": "akane.png",
-      "Chinatsu": "chinatsu.png",
+      "Kano Chinatsu": "chinatsu.png",
       "Chisato Nishikigi": "Chisato.png",
-      "♡ Hina Chono": "hina.png",
+      "Hina Chono": "hina.png",
       "Bachira Meguru": "bachira.png"
     };
 
