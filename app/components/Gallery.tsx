@@ -93,12 +93,13 @@ export default function Gallery() {
     
     const stickers: Record<string, string> = {
       "Alya Kujou ♡": "alya.png",
-      "Miku Nakano": "mikunakano.png",
+      "Miku Nakano": "miku.png",
       "Akane Kurokawa": "akane.png",
       "Kano Chinatsu": "chinatsu.png",
       "Chisato Nishikigi": "Chisato.png",
       "Hina Chono": "hina.png",
-      "Bachira Meguru": "bachira.png"
+      "Bachira Meguru": "bachira.png",
+      "Baki Hanma": "baki.png"
     };
 
     if (stickers[charName]) {
