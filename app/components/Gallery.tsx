@@ -194,59 +194,89 @@ export default function Gallery() {
           <span className="text-white">LATEST</span> DROPS
         </h2>
 
-        <div className="flex flex-col items-center gap-8 mb-12">
+        <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
+          
+          {/* --- Special Collections (Premium Cards) --- */}
           {specialCollections.length > 0 && (
-             <div className="flex flex-wrap justify-center gap-4">
-                {specialCollections.map((char) => (
-                  <button
-                    key={char}
-                    onClick={() => setFilter(char)}
-                    className={`font-pixel px-8 py-4 border-2 transition-all rounded-lg uppercase tracking-wider ${
-                      filter === char 
-                        ? "bg-neon-cyan border-neon-cyan text-dark-bg shadow-[0_0_24px_rgba(5,217,232,0.6)] scale-110" 
-                        : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg hover:shadow-[0_0_16px_rgba(5,217,232,0.4)]"
-                    }`}
-                  >
-                    <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {renderCharacterName(char)}
-                  </button>
-                ))}
+             <div className="w-full max-w-6xl">
+               <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(5,217,232,0.5)]">
+                 // FEATURED COLLECTIONS
+               </h3>
+               <div className="flex flex-wrap justify-center gap-4">
+                  {specialCollections.map((char) => (
+                    <button
+                      key={char}
+                      onClick={() => setFilter(char)}
+                      className={`relative group overflow-hidden px-8 py-4 rounded-xl transition-all duration-300 border backdrop-blur-md ${
+                        filter === char 
+                          ? "bg-neon-cyan/20 border-neon-cyan text-white shadow-[0_0_20px_rgba(5,217,232,0.4)] scale-105" 
+                          : "bg-white/5 border-white/10 text-gray-300 hover:border-neon-cyan/50 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(5,217,232,0.2)]"
+                      }`}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                      <div className="flex items-center gap-3 relative z-10">
+                        <span className="font-pixel uppercase tracking-wider text-sm md:text-base">
+                          {renderCharacterName(char)}
+                        </span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full ${filter === char ? "bg-neon-cyan text-dark-bg" : "bg-white/10 text-gray-400"}`}>
+                          {getCount(char)}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+               </div>
              </div>
           )}
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => {
-                setFilter("All");
-                setDisplayCount(10);
-              }}
-              className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg ${
-                filter === "All" 
-                  ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
-                  : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
-              }`}
-            >
-              <span className="text-xs mr-2 opacity-80">({animeOnly.length})</span> All
-            </button>
-            {characters.map((char) => (
+          {/* --- Divider --- */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent max-w-2xl" />
+
+          {/* --- Character Library (Sleek Tags) --- */}
+          <div className="w-full max-w-6xl">
+            <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
+              // CHARACTER ARCHIVE
+            </h3>
+            
+            <div className="flex flex-wrap justify-center gap-3">
+              {/* 'All' Button */}
               <button
-                key={char}
-                onClick={() => setFilter(char)}
-                className={`font-pixel px-6 py-3 border-2 transition-all rounded-lg capitalize ${
-                  filter === char 
-                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_24px_rgba(255,42,109,0.6)] hover:shadow-[0_0_32px_rgba(255,42,109,0.9)] hover:scale-105" 
-                    : "border-gray-700 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_16px_rgba(5,217,232,0.4)] hover:scale-105"
+                onClick={() => {
+                  setFilter("All");
+                  setDisplayCount(10);
+                }}
+                className={`px-6 py-2 rounded-full font-pixel text-sm transition-all duration-300 border ${
+                  filter === "All" 
+                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_15px_rgba(255,42,109,0.5)] scale-105" 
+                    : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-pink/50 hover:text-white hover:bg-neon-pink/10"
                 }`}
               >
-                <span className="text-xs mr-2 opacity-80">({getCount(char)})</span> {renderCharacterName(char)}
+                ALL <span className="ml-2 opacity-60 text-xs">{animeOnly.length}</span>
               </button>
-            ))}
-            <button
-              onClick={() => setShowRecommendationModal(true)}
-              className="font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
-            >
-              Send Recommendation
-            </button>
+
+              {/* Character Buttons */}
+              {characters.map((char) => (
+                <button
+                  key={char}
+                  onClick={() => setFilter(char)}
+                  className={`px-5 py-2 rounded-full transition-all duration-300 border flex items-center gap-2 ${
+                    filter === char 
+                      ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" 
+                      : "bg-dark-bg/30 border-gray-800 text-gray-400 hover:border-neon-cyan/50 hover:text-neon-cyan hover:bg-neon-cyan/5"
+                  }`}
+                >
+                  <span className="font-mono text-sm capitalize">{renderCharacterName(char)}</span>
+                  <span className="text-[10px] opacity-50 bg-black/30 px-1.5 py-0.5 rounded-md">{getCount(char)}</span>
+                </button>
+              ))}
+            </div>
           </div>
+
+          <button
+            onClick={() => setShowRecommendationModal(true)}
+            className="mt-4 font-pixel text-sm px-6 py-3 border border-dashed border-gray-600 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan transition-all rounded-lg hover:bg-neon-cyan/5"
+          >
+            + REQUEST CHARACTER
+          </button>
         </div>
 
         {loading ? (
