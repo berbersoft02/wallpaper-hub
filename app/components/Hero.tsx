@@ -108,23 +108,12 @@ export default function Hero() {
           <span className="font-pixel text-neon-pink text-sm md:text-base drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]">✨ WELCOME TO MY WORLD</span>
         </div>
         
-        <div className="relative group">
-          <h1 className="font-pixel text-5xl md:text-8xl leading-tight animate-glow-hero drop-shadow-[0_0_24px_var(--color-neon-pink)] relative z-10">
-            LEVEL UP YOUR <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-orange-400 to-neon-cyan animate-sparkle">
-              SCREENS
-            </span>
-          </h1>
-          {/* Glitch Layers */}
-          <h1 className="absolute top-0 left-0 font-pixel text-5xl md:text-8xl leading-tight text-neon-cyan opacity-70 animate-glitch-text-1 -z-10" aria-hidden="true">
-            LEVEL UP YOUR <br />
+        <h1 className="font-pixel text-5xl md:text-8xl leading-tight animate-glow-hero drop-shadow-[0_0_24px_var(--color-neon-pink)]">
+          LEVEL UP YOUR <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-orange-400 to-neon-cyan animate-sparkle">
             SCREENS
-          </h1>
-          <h1 className="absolute top-0 left-0 font-pixel text-5xl md:text-8xl leading-tight text-neon-pink opacity-70 animate-glitch-text-2 -z-10" aria-hidden="true">
-            LEVEL UP YOUR <br />
-            SCREENS
-          </h1>
-        </div>
+          </span>
+        </h1>
         
         <p className="font-body text-gray-300 text-lg md:text-2xl max-w-2xl mx-auto animate-fade-in-delay">
           Welcome here! Dive into my ocean of exclusive wallpapers. Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_dias</span> on TikTok!
