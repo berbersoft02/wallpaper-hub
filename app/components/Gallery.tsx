@@ -200,7 +200,7 @@ export default function Gallery() {
           {specialCollections.length > 0 && (
              <div className="w-full max-w-6xl">
                <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(5,217,232,0.5)]">
-                 // FEATURED COLLECTIONS
+                 FEATURED COLLECTIONS
                </h3>
                <div className="flex flex-wrap justify-center gap-4">
                   {specialCollections.map((char) => (
@@ -228,13 +228,10 @@ export default function Gallery() {
              </div>
           )}
 
-          {/* --- Divider --- */}
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent max-w-2xl" />
-
           {/* --- Character Library (Sleek Tags) --- */}
           <div className="w-full max-w-6xl">
             <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
-              // CHARACTER ARCHIVE
+              Anime CHARACTER Archive
             </h3>
             
             <div className="flex flex-wrap justify-center gap-3">
