@@ -76,7 +76,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-CRV860CNKL');
           `}
-        />
+        </Script>
         {children}
         <CookieBanner />
       </body>
