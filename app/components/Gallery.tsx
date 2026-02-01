@@ -266,9 +266,10 @@ export default function Gallery() {
             {finalDisplay.map((wp, index) => (
               <div 
                 key={wp.id} 
-                className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_32px_rgba(255,42,109,0.4)] hover:scale-105 cursor-pointer"
+                className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(255,42,109,0.5)] hover:-translate-y-2 hover:rotate-1 cursor-pointer"
                 onClick={() => setSelectedImageIndex(index)}
               >
+                <div className="absolute inset-0 bg-gradient-to-tr from-neon-pink/20 via-transparent to-neon-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                 <div className="aspect-[9/16] relative overflow-hidden">
                    {wp.url.match(/\.(mp4|webm)/i) ? (
                      <video
