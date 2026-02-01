@@ -15,7 +15,7 @@ cloudinary.config({
 const OUTPUT_FILE = path.join(__dirname, '..', 'app', 'data', 'wallpapers.json');
 
 const SPECIAL_CATEGORIES = [
-  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel'
+  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel', 'Nature', 'Spider-Man'
 ];
 
 const NAME_MAPPING = {
