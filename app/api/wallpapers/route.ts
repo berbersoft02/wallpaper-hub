@@ -17,7 +17,7 @@ if (cloudName && apiKey && apiSecret) {
 }
 
 const SPECIAL_CATEGORIES = [
-  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel'
+  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel', 'Nature', 'Spider-Man'
 ];
 
 function normalizeName(name: string) {
@@ -46,6 +46,8 @@ function normalizeName(name: string) {
     'yuuko-hiragi': 'Yuuko Hiragi',
     'yuzuki-nanase': 'Yuzuki Nanase',
     'zero-two': 'Zero Two',
+    'bachira-meguru': 'Bachira Meguru',
+    'spider-man': 'Spider-Man',
     'Rin  Nanakura': 'Rin Nanakura',
     'Rias  Gremory': 'Rias Gremory',
   };
@@ -67,7 +69,7 @@ async function fetchAll(resourceType: 'image' | 'video') {
   
   try {
     do {
-      const expression = `resource_type:${resourceType} AND folder:wallpapers/*`;
+      const expression = `resource_type:${resourceType}`;
       const search = cloudinary.search
         .expression(expression)
         .sort_by('public_id', 'desc')
@@ -106,21 +108,30 @@ export async function GET() {
 
   for (const item of all) {
     const folder = item.folder || item.asset_folder || '';
-    const parts = folder.split('/');
+    const publicId = item.public_id || '';
     let rawName = '';
     
-    if (parts.length > 1 && parts[0] === 'wallpapers') {
-      rawName = parts[1];
-    } else if (parts.length === 1 && parts[0] !== 'wallpapers') {
-      rawName = parts[0];
-    } else if (item.public_id) {
-       const pParts = item.public_id.split('/');
-       if (pParts.length > 2 && pParts[0] === 'wallpapers') {
-         rawName = pParts[1];
-       }
+    if (folder) {
+      const parts = folder.split('/');
+      const wpIndex = parts.indexOf('wallpapers');
+      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
+        rawName = parts[wpIndex + 1];
+      } else if (wpIndex !== -1 && parts.length === wpIndex + 1) {
+        rawName = 'Mixed';
+      } else if (wpIndex === -1 && parts.length > 0) {
+        rawName = parts[0];
+      }
     }
 
-    if (!rawName) continue;
+    if (!rawName && publicId) {
+      const parts = publicId.split('/');
+      const wpIndex = parts.indexOf('wallpapers');
+      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
+        rawName = parts[wpIndex + 1];
+      }
+    }
+
+    if (!rawName || rawName === 'wallpapers' || publicId.startsWith('samples/')) continue;
 
     const name = normalizeName(rawName);
     

@@ -44,6 +44,7 @@ const NAME_MAPPING = {
   'yuzuki-nanase': 'Yuzuki Nanase',
   'zero-two': 'Zero Two',
   'bachira-meguru': 'Bachira Meguru',
+  'spider-man': 'Spider-Man',
   'Rin  Nanakura': 'Rin Nanakura',
   'Rias  Gremory': 'Rias Gremory',
   'phoebe': 'Phoebe'
