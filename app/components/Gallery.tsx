@@ -462,11 +462,106 @@ export default function Gallery() {
 
       {showRecommendationModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4" onClick={() => setShowRecommendationModal(false)}>
-           <div className="bg-card-bg p-8 max-w-lg w-full rounded-lg" onClick={e => e.stopPropagation()}>
-              <h3 className="text-white font-pixel text-2xl mb-4">Send Recommendation</h3>
-              <p className="text-gray-300 mb-6">Want to see a specific character? Let me know!</p>
-              <a href="mailto:berbersoft@gmail.com" className="bg-neon-pink text-white px-6 py-2 rounded font-pixel">Email Me</a>
-              <button onClick={() => setShowRecommendationModal(false)} className="ml-4 text-gray-400">Close</button>
+           <div className="bg-card-bg p-8 max-w-lg w-full rounded-lg border-2 border-neon-cyan shadow-[0_0_30px_rgba(5,217,232,0.3)]" onClick={e => e.stopPropagation()}>
+              <h3 className="text-white font-pixel text-2xl mb-2">Send Recommendation</h3>
+              <p className="text-gray-300 mb-6 text-sm">Have a character request or feedback? Send it directly to me!</p>
+              
+              {sendStatus?.success ? (
+                <div className="text-center py-8 space-y-4">
+                  <div className="text-neon-cyan text-5xl flex justify-center">✓</div>
+                  <h4 className="text-white text-xl font-bold">Message Sent!</h4>
+                  <p className="text-gray-400">{sendStatus.message}</p>
+                  <button 
+                    onClick={() => {
+                      setShowRecommendationModal(false);
+                      setSendStatus(null);
+                      setRecommendationForm({ name: '', email: '', message: '' });
+                    }}
+                    className="mt-4 px-6 py-2 bg-neon-cyan text-dark-bg font-bold rounded hover:bg-white transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              ) : (
+                <form 
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    setSending(true);
+                    try {
+                      const res = await fetch('/api/recommendations', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(recommendationForm)
+                      });
+                      const data = await res.json();
+                      if (res.ok) {
+                        setSendStatus({ success: true, message: data.message });
+                      } else {
+                        setSendStatus({ success: false, message: data.error || 'Failed to send.' });
+                      }
+                    } catch (err) {
+                      setSendStatus({ success: false, message: 'Something went wrong.' });
+                    } finally {
+                      setSending(false);
+                    }
+                  }}
+                  className="space-y-4"
+                >
+                  <div>
+                    <label className="block text-gray-400 text-xs uppercase mb-1">Your Name</label>
+                    <input 
+                      type="text" 
+                      required
+                      value={recommendationForm.name}
+                      onChange={(e) => setRecommendationForm(prev => ({ ...prev, name: e.target.value }))}
+                      className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-cyan focus:outline-none transition-colors"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 text-xs uppercase mb-1">Your Email</label>
+                    <input 
+                      type="email" 
+                      required
+                      value={recommendationForm.email}
+                      onChange={(e) => setRecommendationForm(prev => ({ ...prev, email: e.target.value }))}
+                      className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-cyan focus:outline-none transition-colors"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 text-xs uppercase mb-1">Message</label>
+                    <textarea 
+                      required
+                      value={recommendationForm.message}
+                      onChange={(e) => setRecommendationForm(prev => ({ ...prev, message: e.target.value }))}
+                      className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-cyan focus:outline-none transition-colors min-h-[100px]"
+                      placeholder="Which character would you like to see next?"
+                    />
+                  </div>
+                  
+                  {sendStatus?.success === false && (
+                    <div className="text-red-500 text-sm">{sendStatus.message}</div>
+                  )}
+
+                  <div className="flex justify-end gap-3 pt-2">
+                    <button 
+                      type="button"
+                      onClick={() => setShowRecommendationModal(false)}
+                      className="px-4 py-2 text-gray-400 hover:text-white transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button 
+                      type="submit"
+                      disabled={sending}
+                      className="px-6 py-2 bg-neon-pink hover:bg-neon-pink/80 text-white font-bold rounded transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    >
+                      {sending ? 'Sending...' : 'Send Message'}
+                    </button>
+                  </div>
+                </form>
+              )}
            </div>
         </div>
       )}
