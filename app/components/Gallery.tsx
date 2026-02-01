@@ -273,9 +273,9 @@ export default function Gallery() {
 
           <button
             onClick={() => setShowRecommendationModal(true)}
-            className="mt-4 font-pixel text-sm px-6 py-3 border border-dashed border-gray-600 text-gray-400 hover:border-neon-cyan hover:text-neon-cyan transition-all rounded-lg hover:bg-neon-cyan/5"
+            className="mt-4 font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
           >
-            + REQUEST CHARACTER
+            Send Recommendation
           </button>
         </div>
 
