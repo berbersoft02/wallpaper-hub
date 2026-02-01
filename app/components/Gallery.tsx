@@ -1,6 +1,7 @@
 "use client";
 
 import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 import SpotlightCard from "./SpotlightCard";
 
 interface Wallpaper {
