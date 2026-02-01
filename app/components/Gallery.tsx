@@ -61,7 +61,7 @@ export default function Gallery() {
                 url: wallpaperUrl,
                 character: char.name,
                 title: `${char.name} - ${imgIndex + 1}`,
-                category: char.category || 'Anime'
+                category: char.category || 'Anime' // Fallback to 'Anime' if undefined
               });
             });
           });
