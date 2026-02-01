@@ -130,10 +130,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <ArrowDown className="text-neon-cyan w-8 h-8" />
-      </div>
     </section>
   );
 }
