@@ -105,6 +105,196 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
+    slug: 'akane-kurokawa-acting-genius',
+    title: 'Akane Kurokawa: The Method Actor\'s Gaze',
+    excerpt: 'Analyzing the intense and captivating visual design of Akane from Oshi no Ko.',
+    date: '2026-01-27',
+    author: 'Only_dias',
+    tags: ['Oshi no Ko', 'Akane', 'Blue', 'Acting'],
+    content: `
+      <h2>The Eyes of a Star</h2>
+      <p>Akane Kurokawa is a master of immersion. Her ability to perfectly replicate Ai Hoshino was a turning point in the series, but her own visual identity is just as striking.</p>
+      
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957585/wallpapers/Akane%20Kurokawa/6.jpg" alt="Akane Kurokawa Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Color Theory: Deep Blue</h2>
+      <p>While Ruby is red and Ai is purple/pink, Akane represents a deep, intellectual blue. I often use "Cool" temperature filters when editing her to emphasize her calm and analytical nature.</p>
+    `
+  },
+  {
+    slug: 'chisato-nishikigi-lycoris-recoil',
+    title: 'Chisato Nishikigi: Lethal Elegance',
+    excerpt: 'Why Chisato\'s red uniform and energetic personality make for the perfect mobile wallpaper.',
+    date: '2026-01-26',
+    author: 'Only_dias',
+    tags: ['Lycoris Recoil', 'Chisato', 'Action', 'Red'],
+    content: `
+      <h2>The Strongest Lycoris</h2>
+      <p>Chisato is a paradox: a bubbly, kind-hearted girl who is also the most skilled gunman in Japan. This duality makes her character design incredible to work with.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040229/wallpapers/Chisato%20Nishikigi/1.jpg" alt="Chisato Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Dynamic Poses</h2>
+      <p>The animation in <em>Lycoris Recoil</em> is fluid and precise. I try to select frames where Chisato is in motion—dodging bullets or reloading—to capture that kinetic energy on your lock screen.</p>
+    `
+  },
+  {
+    slug: 'chainsaw-man-denji-chaos',
+    title: 'Chainsaw Man: The Beauty of Chaos',
+    excerpt: 'Embracing the grit and gore of Chainsaw Man in high-resolution edits.',
+    date: '2026-01-25',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Denji', 'Dark', 'Action'],
+    content: `
+      <h2>Raw Power</h2>
+      <p>Chainsaw Man is gritty, dirty, and loud. My wallpapers for this series reflect that. I use heavy grain filters and high contrast to mimic the cinematic feel of the anime.</p>
+
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Chainsaw Man Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>The Orange Glow</h2>
+      <p>Pochita's orange is the signature color here. By isolating the orange hues and desaturating the background, I create a focal point that screams "Danger".</p>
+    `
+  },
+  {
+    slug: 'alya-kujou-russian-beauty',
+    title: 'Alya Kujou: The Silver-Haired Princess',
+    excerpt: 'Roshidere\'s Alya is the new standard for silver-haired waifus. Here is why.',
+    date: '2026-01-24',
+    author: 'Only_dias',
+    tags: ['Roshidere', 'Alya', 'Romance', 'School'],
+    content: `
+      <h2>Elegance Personified</h2>
+      <p>Alya sometimes hides her feelings in Russian, but her beauty needs no translation. Her character design is clean, pristine, and sophisticated.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957600/wallpapers/Alya%20Kujou/10.jpg" alt="Alya Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Editing for Softness</h2>
+      <p>Unlike action anime, editing Alya requires a delicate touch. I use soft glows and "bloom" effects to enhance her hair and eyes without making the image look harsh.</p>
+    `
+  },
+  {
+    slug: 'spider-man-across-the-spider-verse',
+    title: 'Spider-Man: Across the Digital Art Style',
+    excerpt: 'How the revolutionary art style of Spider-Verse translates into static wallpapers.',
+    date: '2026-01-23',
+    author: 'Only_dias',
+    tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
+    content: `
+      <h2>A Living Comic Book</h2>
+      <p>The Spider-Verse movies changed animation forever. The mix of 2D and 3D, the Ben-Day dots, and the glitch effects make every frame a painting.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-600/50 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp" alt="Spider-Man Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Preserving the Texture</h2>
+      <p>When upscaling these images, it's crucial not to smooth out the comic book textures. I ensure the halftone patterns and ink lines remain sharp and distinct.</p>
+    `
+  },
+  {
+    slug: 'demon-slayer-breathing-styles',
+    title: 'Demon Slayer: The Art of Breathing Styles',
+    excerpt: 'Capturing the elemental beauty of Water, Fire, and Sun breathing techniques.',
+    date: '2026-01-22',
+    author: 'Only_dias',
+    tags: ['Demon Slayer', 'Tanjiro', 'Effects', 'Animation'],
+    content: `
+      <h2>Ufotable's Mastery</h2>
+      <p>Demon Slayer is famous for its "Ukiyoe" style effects. The water dragons and fire trails are visually distinct from the rest of the world.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_20px_rgba(96,165,250,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542652/1_qtxlyv.jpg" alt="Demon Slayer Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Enhancing the Elements</h2>
+      <p>I use "Screen" and "Color Dodge" layers to make the elemental effects glow intensely. Whether it's Zenitsu's lightning or Tanjiro's water, the goal is to make it look like it's illuminating your screen.</p>
+    `
+  },
+  {
+    slug: 'blue-lock-egoist-aesthetic',
+    title: 'Blue Lock: The Egoist Aesthetic',
+    excerpt: 'Why the intense, aura-based visuals of Blue Lock are perfect for motivational wallpapers.',
+    date: '2026-01-21',
+    author: 'Only_dias',
+    tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
+    content: `
+      <h2>Visualizing Aura</h2>
+      <p>Blue Lock visualizes "ego" as literal flames and monsters. It's hype, it's intense, and it looks amazing.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-green-400/50 shadow-[0_0_20px_rgba(74,222,128,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg" alt="Isagi Yoichi Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Green and Blue</h2>
+      <p>The signature "Blue Lock" color is a specific shade of electric blue. I make sure to calibrate this color perfectly in my edits so it hits that recognizable note instantly.</p>
+    `
+  },
+  {
+    slug: 'dragon-ball-legends',
+    title: 'Dragon Ball: Timeless Legends',
+    excerpt: 'Celebrating the legacy of Goku and Vegeta with high-fidelity wallpapers.',
+    date: '2026-01-20',
+    author: 'Only_dias',
+    tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
+    content: `
+      <h2>The OG Shonen</h2>
+      <p>Dragon Ball's art style has evolved from round and soft to sharp and muscular. My collection focuses on the modern, high-definition look of <em>Super</em> and the movies.</p>
+
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-400/50 shadow-[0_0_20px_rgba(251,146,60,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068820/wallpapers/Dragon%20Ball/1.jpg" alt="Dragon Ball Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Aura Power</h2>
+      <p>Super Saiyan auras are tricky to edit because they are transparent and glowing. I meticulously separate the character from the aura to allow for different background placements.</p>
+    `
+  },
+  {
+    slug: 'miku-nakano-quintessential-quintpulets',
+    title: 'Miku Nakano: The Fan Favorite',
+    excerpt: 'Why Miku consistently tops the popularity polls and makes for the cutest wallpapers.',
+    date: '2026-01-19',
+    author: 'Only_dias',
+    tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
+    content: `
+      <h2>Headphones On, World Off</h2>
+      <p>Miku's blue headphones are iconic. They add a techy accessory element to her otherwise traditional school uniform look.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-300/50 shadow-[0_0_20px_rgba(147,197,253,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043967/wallpapers/Miku%20Nakano/1_1.jpg" alt="Miku Nakano Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>The Shy Aesthetic</h2>
+      <p>Miku's wallpapers often feature her looking away, blushing, or lost in thought. These "quiet" images are great for people who want anime art on their phone without it being too loud or distracting.</p>
+    `
+  },
+  {
+    slug: 'nature-anime-scenery',
+    title: 'The Peace of Anime Nature Scenery',
+    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of anime.',
+    date: '2026-01-18',
+    author: 'Only_dias',
+    tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
+    content: `
+      <h2>Background Artistry</h2>
+      <p>Studios like CoMix Wave Films and Kyoto Animation put incredible detail into their skies, clouds, and forests. These make for the most relaxing, neutral wallpapers.</p>
+
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp" alt="Nature Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Upscaling Details</h2>
+      <p>When upscaling nature shots, maintaining the texture of the grass and the fluffiness of the clouds is key. Standard AI upscalers can make them look like oil paintings, so I use a specific model trained on scenery.</p>
+    `
+  },
+  {
     slug: 'how-i-make-viral-anime-edits',
     title: 'How I Make My Viral Anime Edits for TikTok',
     excerpt: 'A behind-the-scenes look at my editing workflow using Adobe Photoshop and Canva to create the content you see on @noxzx_kb.',
