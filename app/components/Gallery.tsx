@@ -363,9 +363,9 @@ export default function Gallery() {
         >
           <button
             onClick={() => setSelectedImageIndex(null)}
-            className="absolute top-4 right-4 p-3 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-pink hover:scale-110 transition-all z-20"
+            className="absolute top-4 right-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white/70 hover:text-white hover:bg-neon-pink transition-all z-20 group"
           >
-            <X size={28} />
+            <X size={28} className="group-hover:rotate-90 transition-transform" />
           </button>
 
           <button
@@ -435,7 +435,7 @@ export default function Gallery() {
           >
             <button
               onClick={() => setShowDownloadSuccessModal(false)}
-              className="absolute top-4 right-4 text-white hover:text-neon-pink transition-colors"
+              className="absolute top-4 right-4 text-gray-400 hover:text-neon-pink transition-colors p-2 hover:bg-white/10 rounded-full"
             >
               <X size={24} />
             </button>
