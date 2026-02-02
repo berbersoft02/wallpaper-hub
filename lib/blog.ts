@@ -1,3 +1,4 @@
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -36,8 +37,6 @@ export const blogPosts: BlogPost[] = [
       <p>One of the most requested scenes was Frieren in the field of Blue Moon Weed flowers. This scene is a masterclass in lighting. The flowers give off a cold, ethereal blue light that reflects off Frieren's hair and clothes. To make this work as a wallpaper, I spent nearly two hours on <strong>Color Grading</strong>.</p>
       
       <p>I used "Selective Color" adjustment layers to target the Cyans and Blues. By removing the yellow from the blues, I was able to make the glow feel "colder" and more magical. I also added a "Radial Gradient" map in the center of the flowers set to "Color Dodge" at 10% opacity to simulate the actual light emission. This level of detail is what makes a wallpaper feel like a premium piece of art rather than a simple screenshot.</p>
-
-      <p>Check out the new <strong>Frieren</strong> category in the gallery now and let me know on TikTok which scene I should upscale next!</p>
     `
   },
   {
@@ -59,9 +58,6 @@ export const blogPosts: BlogPost[] = [
       <p>The Final Season is heavy on atmospheric effects. There is smoke, ash, and fire in almost every frame. To capture this in a 4K wallpaper, I avoid making the image "clean." Instead, I lean into the texture. I add a subtle <strong>Grain Layer</strong> in Photoshop to match MAPPA's digital film look. It prevents the flat colors from looking banding on low-quality screens and adds a "weight" to the image.</p>
       
       <p>For Eren's "Freedom" scene, I focused heavily on the sky. I used a <strong>Gradient Map</strong> to shift the bright highlights from pure white to a sickly, pale yellow, which emphasizes the apocalyptic nature of the scene. I also masked out Eren's silhouette and applied a slight <strong>Outer Glow</strong> with a dark red hue to simulate the heat of the Titans below him. This level of environmental storytelling is what I aim for in every drop.</p>
-
-      <h2>The Scouting Legion's New Gear</h2>
-      <p>Mikasa and the Scouts got a major design overhaul with their black anti-personnel gear. Black is notoriously hard to edit because it can easily lose all detail and become a "black hole" on your screen. I use <strong>Levels adjustments</strong> to specifically lift the midtones of the suits, bringing out the metallic sheen of the ODM gear and the leather straps. This ensures that even on a dark wallpaper, you can see every piece of equipment they are carrying.</p>
     `
   },
   {
@@ -83,8 +79,6 @@ export const blogPosts: BlogPost[] = [
       <p>Since the source material is manga, my initial "RAW" is usually black and white. For this collection, I wanted to create something that felt like a <strong>Limited Edition Cover</strong>. I started by using the <strong>Pen Tool</strong> to meticulously isolate Rintaro from the background. This is the most time-consuming part, but it allows for complete control over the colors.</p>
       
       <p>I lean into a <strong>Pastel Purple and Soft Gold</strong> color palette for Rintaro. These colors represent the two schools in the story and the contrast between Rintaro's "tough" exterior and his soft heart. I use a <strong>Gradient Map</strong> set to deep navy for shadows and warm cream for highlights. This "Tea-Stained" look makes the digital wallpaper feel like a physical, high-quality manga page. I also add a subtle "Canvas" texture overlay to give it a physical weight. It’s a very different vibe from my usual neon-heavy edits, but it fits the gentle soul of the series perfectly.</p>
-
-      <p>Rintaro's wallpapers are perfect for when you want a "cool" look that still feels warm and inviting. Check out the full collection in the gallery!</p>
     `
   },
   {
@@ -123,14 +117,6 @@ export const blogPosts: BlogPost[] = [
         <li>Gently tap the areas you want to glow.</li>
       </ol>
       <p>This adds a realistic "Bloom" that makes it look like the light is actually coming from inside your screen.</p>
-
-      <h2>Phase 4: Finalizing in Canva</h2>
-      <p>Wait, Canva? Yes! While Photoshop is for the heavy lifting, I use Canva for the finishing touches, especially when I'm making <strong>Matching PFPs</strong> or social media thumbnails. Canva's typography engine is much faster for quickly testing out different font styles. It allows me to create consistent branding for my TikTok channel while maintaining the 4K quality I developed in Photoshop.</p>
-
-      <h2>Conclusion: Practice makes Perfect</h2>
-      <p>My first edits were terrible. They were oversaturated, blurry, and messy. But by understanding the relationship between source quality and post-processing, I was able to build a channel and a community. This website is my way of giving back to you guys. Every download helps me continue making these tutorials and collections.</p>
-
-      <p>Want to see a specific tutorial? Head over to my <a href="/contact">Contact Page</a> or send me a message on TikTok!</p>
     `
   },
   {
@@ -151,8 +137,6 @@ export const blogPosts: BlogPost[] = [
       <h2>My "Vaporwave" Editing Workflow</h2>
       <p>When I open a Zero Two file in Photoshop, I immediately reach for the "Vaporwave" aesthetic. Her pink hair naturally lends itself to cyan and purple accents.</p>
       <p>For the wallpaper featured above, I actually cut her out of the original scene completely. I placed her against a custom-made glitch texture. To marry the two images together, I used a "Gradient Map" adjustment layer set to Pink/Blue at 20% opacity. This tints the shadows blue and the highlights pink, making her feel like she belongs in that digital space.</p>
-      
-      <p>I also add a tiny bit of <strong>Chromatic Aberration</strong> (shifting the Red and Blue channels by 2 pixels) to the edges of her silhouette. It gives the image a retro, CRT monitor feel that fits the "Darling" vibe perfectly.</p>
     `
   },
   {
@@ -173,7 +157,6 @@ export const blogPosts: BlogPost[] = [
       <h2>The "Golden Hour" Color Grade</h2>
       <p>Most of my edits are dark and moody, but for Marin, that feels wrong. She radiates positivity. My color grading strategy for her revolves around <strong>Warmth</strong>.</p>
       <p>I start by boosting the Vibrance slider to +30. Then, I go into the "Selective Color" tool and tweak the Yellows. I push the Magenta slider in the Yellows to make her blonde hair look rich and golden rather than washed-out lemon yellow.</p>
-      <p>Finally, I add a subtle lens flare overlay in the top corner set to "Screen" mode. It mimics the look of a camera lens catching the sun, emphasizing her role as a cosplayer always in front of the camera.</p>
     `
   },
   {
@@ -193,7 +176,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>The "Infinite" Edit Technique</h2>
       <p>For Gojo wallpapers, I focus purely on <strong>Contrast</strong>. His Limitless technique is essentially a void, so I crush the blacks in the background until they are true #000000. This looks incredible on AMOLED phones.</p>
-      <p>To make his technique "glow," I use a brush set to 0% hardness with a bright electric blue color. I paint over his finger or eyes on a new layer and set the blending mode to <strong>Linear Dodge (Add)</strong>. This creates that intense, over-exposed light effect that makes it look like real energy is coming off the screen.</p>
+      <p>To make his technique "glow," I use a brush set to 0% hardness with a bright electric blue color. I paint over his finger or eyes on a new layer and set the blending mode to <strong>Linear Dodge (Add)</strong>. This creates that intense, over-exposed light effect.</p>
     `
   },
   {
@@ -213,7 +196,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Color Theory: The Intellectual Blue</h2>
       <p>While Ruby is red and Ai is purple, Akane represents a deep, intellectual blue. When editing her, I use "Cool" temperature filters (moving the slider towards Blue/Cyan) to emphasize her calm and analytical nature.</p>
-      <p>For the "Star Eyes" effect specifically, I use a trick: I duplicate the eye layer, set it to "Overlay", and apply a Gaussian Blur. This creates a soft halo around the star pattern in her iris without losing the sharp edges of the star itself. It's a small detail, but it makes the eyes piercing.</p>
     `
   },
   {
@@ -226,14 +208,6 @@ export const blogPosts: BlogPost[] = [
     content: `
       <h2>The Strongest Lycoris</h2>
       <p>Chisato is such a fun character because she's a paradox: a bubbly, kind-hearted girl who is also the most skilled gunman in Japan. Visually, this is represented by her bright red uniform contrasting with the grey, tactical environments she fights in.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040229/wallpapers/Chisato%20Nishikigi/1.jpg" alt="Chisato Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Capturing Kinetic Energy</h2>
-      <p>The animation in <em>Lycoris Recoil</em> (courtesy of A-1 Pictures) is incredibly fluid, especially how Chisato dodges bullets. A static wallpaper can't move, so how do you convey speed?</p>
-      <p>I use <strong>Motion Blur</strong>. I duplicate the character, apply a directional blur in the direction she's moving, and lower the opacity to about 15%. This creates a "ghosting" effect that makes it look like she just snapped into that pose. Combined with her signature red ribbon flowing in the wind, it makes for a very dynamic lock screen.</p>
     `
   },
   {
@@ -246,14 +220,6 @@ export const blogPosts: BlogPost[] = [
     content: `
       <h2>Raw, Dirty, and Beautiful</h2>
       <p>Chainsaw Man is unlike any other Shonen. It's gritty, dirty, and loud. MAPPA approached the adaptation with a distinct "cinema" style—framing shots like movies and adding a subtle film grain over everything.</p>
-
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Chainsaw Man Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>The Orange Glow Technique</h2>
-      <p>The color of this show is undoubtedly <strong>Orange</strong>—from Pochita to the blood. My editing process for CSM involves a technique called "Split Toning."</p>
-      <p>I push the Highlights towards Orange/Teal and the Shadows towards a dark, muddy Green. This replicates the color grading used in many gritty thriller movies. I also <em>add</em> noise. Yes, usually I remove noise, but for Chainsaw Man, adding a monochromatic noise layer at 3% opacity ties the whole image together and stops it from looking "too clean" or plastic.</p>
     `
   },
   {
@@ -266,14 +232,6 @@ export const blogPosts: BlogPost[] = [
     content: `
       <h2>Elegance Personified</h2>
       <p>Alya sometimes hides her feelings in Russian, but her beauty needs no translation. Doga Kobo did an amazing job adapting the light novel art style, giving her hair a shimmering, almost translucent quality.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957600/wallpapers/Alya%20Kujou/10.jpg" alt="Alya Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Editing for Softness</h2>
-      <p>Unlike the gritty action edits, editing Alya requires a delicate touch. If you sharpen her too much, you lose that "angelic" vibe. My focus here is on <strong>lighting</strong>.</p>
-      <p>I use a "Soft Light" brush with a pale cyan color to paint highlights on her hair and eyes. This mimics the "Bloom" effect seen in modern video games. I also brighten the whites of her uniform to make them pop against the background, ensuring she always looks like the brightest thing on the screen.</p>
     `
   },
   {
@@ -285,15 +243,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
     content: `
       <h2>A Living Comic Book</h2>
-      <p>The Spider-Verse movies are a visual overload in the best way possible. The mix of 2D and 3D, the Ben-Day dots, the chromatic aberration, and the frame-rate shifts (animating on twos) make every single frame a potential wallpaper.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-600/50 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp" alt="Spider-Man Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>The Upscaling Nightmare</h2>
-      <p>Here's the problem: AI upscalers hate Ben-Day dots. They try to smooth them out, which ruins the Spider-Verse look. To fix this, I use a very specific workflow.</p>
-      <p>I upscale the image, but I also keep the original low-res version. I put the original on top and set it to "Luminosity" blending mode. This brings back the original dot texture and ink lines while keeping the sharp edges of the upscaled version underneath. It’s a tedious process, but it’s the only way to get a 4K Spider-Man wallpaper that actually looks like the movie.</p>
+      <p>The Spider-Verse movies are a visual overload in the best way possible. The mix of 2D and 3D, the Ben-Day dots, the chromatic aberration, and the frame-rate shifts make every frame a potential wallpaper.</p>
     `
   },
   {
@@ -305,15 +255,55 @@ export const blogPosts: BlogPost[] = [
     tags: ['Demon Slayer', 'Tanjiro', 'Effects', 'Animation'],
     content: `
       <h2>Ufotable's Mastery</h2>
-      <p>Demon Slayer is famous for its "Ukiyoe" style effects. The water dragons and fire trails are visually distinct from the 3D environments, creating a unique composite look. When Tanjiro swings his sword, it's not just a blur; it's a painting.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_20px_rgba(96,165,250,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542652/1_qtxlyv.jpg" alt="Demon Slayer Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Enhancing the Elements</h2>
-      <p>My goal with Demon Slayer wallpapers is to make the breathing styles look <strong>hot</strong> or <strong>wet</strong>. For Sun Breathing, I boost the saturation of the oranges and add a subtle "Outer Glow" layer style to the flames.</p>
-      <p>For Water Breathing (like the wallpaper above), I actually increase the contrast significantly. This makes the white foam of the waves stand out sharply against the dark blue water, making the Ukiyoe art style pop even more. It looks incredibly crisp on high-PPI mobile displays.</p>
+      <p>Demon Slayer is famous for its "Ukiyoe" style effects. The water dragons and fire trails are visually distinct from the 3D environments, creating a unique composite look.</p>
+    `
+  },
+  {
+    slug: 'blue-lock-egoist-aesthetic',
+    title: 'Blue Lock: Visualizing the Ego',
+    excerpt: 'Blue Lock turns aura into a visual weapon. Here is how I capture the intensity of Isagi\'s puzzle pieces.',
+    date: '2026-01-21',
+    author: 'Only_dias',
+    tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
+    content: `
+      <h2>The Monster Inside</h2>
+      <p>Blue Lock isn't a normal sports anime. It's a battle anime. The way the show visualizes "ego"—as green flames, chains, or monsters—is pure hype.</p>
+    `
+  },
+  {
+    slug: 'dragon-ball-legends',
+    title: 'Dragon Ball: Timeless Legends in 4K',
+    excerpt: 'From the Shintani style of Broly to the CGI of Super Hero. Celebrating the visual evolution of Goku.',
+    date: '2026-01-20',
+    author: 'Only_dias',
+    tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
+    content: `
+      <h2>The OG Shonen Evolution</h2>
+      <p>Dragon Ball has been around forever, but its art style keeps changing. Naohiro Shintani's style brought back the soft edges of the 90s with modern fluidity.</p>
+    `
+  },
+  {
+    slug: 'miku-nakano-quintessential-quintpulets',
+    title: 'Miku Nakano: The Cult of the Headphones',
+    excerpt: 'Why Miku consistently tops the popularity polls and why her character design is a goldmine for editors.',
+    date: '2026-01-19',
+    author: 'Only_dias',
+    tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
+    content: `
+      <h2>Headphones On, World Off</h2>
+      <p>Miku's blue headphones aren't just an accessory; they're a barrier. This resonates with fans and creates a perfect Lo-Fi aesthetic for wallpapers.</p>
+    `
+  },
+  {
+    slug: 'nature-anime-scenery',
+    title: 'The Peace of Anime Nature Scenery',
+    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of Makoto Shinkai.',
+    date: '2026-01-18',
+    author: 'Only_dias',
+    tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
+    content: `
+      <h2>Background Artistry</h2>
+      <p>Studies like CoMix Wave Films render clouds and light shafts with photorealistic yet stylized beauty. Perfect for a minimal desktop.</p>
     `
   },
   {
@@ -324,56 +314,212 @@ export const blogPosts: BlogPost[] = [
     author: 'Only_dias',
     tags: ['Chainsaw Man', 'Makima', 'Horror', 'Eyes'],
     content: `
-      <h2>The Look That Pierces Through You</h2>
-      <p>Makima is one of the most effectively designed antagonists in recent memory. It’s all in the eyes—those golden rings that seem to look right through the screen. When I edit Makima, my entire goal is to make the viewer feel... observed.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-800/50 shadow-[0_0_20px_rgba(153,27,27,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Makima Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Desaturation and Red</h2>
-      <p>My color palette for Makima is extremely strict: Black, White, and Deep Red. I usually desaturate the entire background to grayscale, leaving only Makima’s hair and tie in color. This "Selective Color" technique is a classic, but it works so well here because it isolates her as the only "living" thing in the frame.</p>
-      <p>I also add a subtle "film scratch" overlay. Unlike the grainy noise I use for Denji, Makima gets clean, sharp scratches, representing the calculated, precise nature of her control.</p>
+      <h2>The Look That Pierces</h2>
+      <p>It’s all in the eyes—those golden rings that see through the screen. I use desaturation and selective red to isolate her presence.</p>
+    `
+  },
+  {
+    slug: 'yor-forger-spy-x-family-assassin',
+    title: 'Yor Forger: The Thorn Princess Aesthetic',
+    excerpt: 'Balancing the gentle mother and the ruthless assassin. A look at my Spy x Family edits.',
+    date: '2026-01-16',
+    author: 'Only_dias',
+    tags: ['Spy x Family', 'Yor Forger', 'Assassin', 'Black'],
+    content: `
+      <h2>Two Sides</h2>
+      <p>Yor is the perfect "gap moe". Her assassin outfit is sleek and dangerous. I use rim lighting to separate her black dress from the background.</p>
+    `
+  },
+  {
+    slug: 'power-chainsaw-man-chaos',
+    title: 'Power: The Blood Fiend Energy',
+    excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too.',
+    date: '2026-01-15',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Power', 'Blood', 'Energy'],
+    content: `
+      <h2>Chaos</h2>
+      <p>Power's wallpapers are full of splatters and heavy grain. I use custom blood brushes and a red gradient map for her chaotic vibe.</p>
+    `
+  },
+  {
+    slug: 'naruto-transformations',
+    title: 'Naruto: The Evolution of transformations',
+    excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
+    date: '2026-01-14',
+    author: 'Only_dias',
+    tags: ['Naruto', 'Shippuden', 'Kurama', 'Orange'],
+    content: `
+      <h2>The Ninja Way</h2>
+      <p>Naruto's transformations are pure chakra light. I use "Screen" mode glow layers to simulate the intense energy without losing detail.</p>
     `
   },
   {
     slug: 'luffy-gear-5-joyboy',
     title: 'Luffy Gear 5: The Drums of Liberation',
-    excerpt: 'Editing the most cartoony transformation in anime history. How to handle the pure white aesthetic.',
+    excerpt: 'Editing the most cartoony transformation in anime history.',
     date: '2026-01-13',
     author: 'Only_dias',
     tags: ['One Piece', 'Luffy', 'Gear 5', 'White'],
     content: `
-      <h2>Animation Freedom</h2>
-      <p>Gear 5 broke the internet. It also broke the rules of anime art styles. The looney-tunes squashing and stretching, the pure white color palette, and the purple aura are totally unique.</p>
-
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187204/oboi.4k_threadsmate.com_1769187172_d71lwl.webp" alt="Luffy Gear 5 Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>The White Balance Challenge</h2>
-      <p>When a character is all white, they can easily look flat. I use "Gradient Overlays" to add subtle color variation to his white form. I map the shadows to a very light purple and the highlights to a pale yellow.</p>
-      <p>This adds dimension to his clouds and hair without changing the iconic white look. For the background, I usually go dark and stormy to create maximum contrast with his bright form.</p>
+      <h2>Joyboy Returns</h2>
+      <p>Gear 5 is all about freedom. The white color palette is tricky; I use purple and yellow shadow tints to add dimension to the clouds.</p>
     `
   },
   {
     slug: 'mikasa-ackerman-titan-slayer',
     title: 'Mikasa Ackerman: Strength and Loyalty',
-    excerpt: 'The scarf, the blades, the stare. Capturing the intensity of Attack on Titan\'s best soldier.',
+    excerpt: 'The scarf, the blades, the stare.',
     date: '2026-01-12',
     author: 'Only_dias',
     tags: ['Attack on Titan', 'Mikasa', 'Scarf', 'Dark'],
     content: `
-      <h2>The Last Stand</h2>
-      <p>Mikasa is iconic. Her red scarf is the only splash of color in the drab, brown/grey military uniform of the Scouts. That scarf is the centerpiece of almost every Mikasa edit I make.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-700/50 shadow-[0_0_20px_rgba(185,28,28,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769173649/oboi.4k_threadsmate.com_1769173489_po3jnj.webp" alt="Mikasa Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Grime and Texture</h2>
-      <p>Attack on Titan is a dirty world. Characters are covered in dust, blood, and steam. I don't airbrush Mikasa's face to be perfect porcelain. I enhance the grime.</p>
-      <p>I use a "Sharpen" filter on her ODM gear to make the metal look cold and hard, and I add a smoke texture overlay to simulate the steam from the titan kills. It makes the wallpaper feel like a freeze-frame from a battle.</p>
+      <h2>Last Stand</h2>
+      <p>Mikasa's red scarf is the emotional center. I add grime and smoke textures to make the edit feel like a battle freeze-frame.</p>
+    `
+  },
+  {
+    slug: 'cyberpunk-edgerunners-lucy',
+    title: 'Lucy from Edgerunners: Neon Melancholy',
+    excerpt: 'The show that broke our hearts. Editing the Moon scene.',
+    date: '2026-01-11',
+    author: 'Only_dias',
+    tags: ['Cyberpunk', 'Lucy', 'Moon', 'Neon'],
+    content: `
+      <h2>Moonlight</h2>
+      <p>Lucy's iridescent hair is painted with holographic highlights on "Color Dodge" layers. The moon bloom is turned up to max.</p>
+    `
+  },
+  {
+    slug: 'vagabond-art-style',
+    title: 'Vagabond: The Pinnacle of Manga Art',
+    excerpt: 'Inoue\'s art is legendary. Adapting ink to 4K.',
+    date: '2026-01-10',
+    author: 'Only_dias',
+    tags: ['Manga', 'Vagabond', 'Musashi', 'Black and White'],
+    content: `
+      <h2>Ink Strokes</h2>
+      <p>I avoid vectorizing Vagabond panels. Instead, I use paper textures and ink contrast to maintain the raw emotional brushwork.</p>
+    `
+  },
+  {
+    slug: 'bleach-gear-aesthetic',
+    title: 'Bleach: The King of Drip',
+    excerpt: 'Kubo Tite is a fashion designer first.',
+    date: '2026-01-09',
+    author: 'Only_dias',
+    tags: ['Bleach', 'Ichigo', 'Fashion', 'Style'],
+    content: `
+      <h2>Streetwear</h2>
+      <p>Bleach is all about drip. I use urban backgrounds, graffiti fonts, and a cool grey palette with orange pops for Ichigo's hair.</p>
+    `
+  },
+  {
+    slug: 'evangelion-retro-future',
+    title: 'Evangelion: The Retro Future Aesthetic',
+    excerpt: 'Capturing that 90s vintage cel-shaded look.',
+    date: '2026-01-08',
+    author: 'Only_dias',
+    tags: ['Evangelion', 'Retro', '90s', 'Mecha'],
+    content: `
+      <h2>90s Nostalgia</h2>
+      <p>I use VHS effects, RGB splitting, and scanlines at 10% opacity to recreate the nostalgic feeling of a 1995 CRT monitor.</p>
+    `
+  },
+  {
+    slug: 'matching-pfps-guide',
+    title: 'Matching PFPs: The Ultimate Duo Guide',
+    excerpt: 'How to choose and edit icons for you and your duo.',
+    date: '2026-01-07',
+    author: 'Only_dias',
+    tags: ['PFPs', 'Icons', 'Social', 'Discord'],
+    content: `
+      <h2>Better Together</h2>
+      <p>Matching icons are a community staple. I look for interaction shots and use consistent color grading so the two profiles feel unified.</p>
+    `
+  },
+  {
+    slug: 'exclusive-drops-explained',
+    title: 'Exclusive Drops: Quality Control',
+    excerpt: 'How I decide which characters make it onto the site.',
+    date: '2026-01-06',
+    author: 'Only_dias',
+    tags: ['Update', 'Behind the Scenes', 'Community'],
+    content: `
+      <h2>Standards</h2>
+      <p>I prioritize characters with strong aesthetics and high-res sources. Every drop is a result of TikTok requests and quality checks.</p>
+    `
+  },
+  {
+    slug: 'where-to-find-raws',
+    title: 'Where to find RAW Anime clips for Editing',
+    excerpt: 'The secret to crisp 4K results.',
+    date: '2026-01-05',
+    author: 'Only_dias',
+    tags: ['Resources', 'Editing', 'Quality'],
+    content: `
+      <h2>No Subtitles</h2>
+      <p>Always use Blu-ray sources without hardsubs. Subtitles ruin the composition and limit your cropping options in Photoshop.</p>
+    `
+  },
+  {
+    slug: 'photoshop-vs-canva-debate',
+    title: 'Photoshop vs Canva: The Hybrid Workflow',
+    excerpt: 'Why I use both for my anime content.',
+    date: '2026-01-04',
+    author: 'Only_dias',
+    tags: ['Tools', 'Workflow', 'Design'],
+    content: `
+      <h2>Hybrid</h2>
+      <p>Photoshop is for heavy upscaling and lighting. Canva is for fast typography and social media templates. Use the best of both.</p>
+    `
+  },
+  {
+    slug: 'top-5-canva-fonts-anime',
+    title: 'Top 5 Canva Fonts for Anime Content',
+    excerpt: 'Upgrade your typography game.',
+    date: '2026-01-03',
+    author: 'Only_dias',
+    tags: ['Fonts', 'Canva', 'Typography'],
+    content: `
+      <h2>Typography</h2>
+      <p>Fonts like Manga Temple and Cyberpunk are essential for capturing the right mood. Avoid generic system fonts at all costs.</p>
+    `
+  },
+  {
+    slug: 'color-grading-101',
+    title: 'Color Grading 101: The Neon Aesthetic',
+    excerpt: 'How to get that signature Only_dias glow.',
+    date: '2026-01-02',
+    author: 'Only_dias',
+    tags: ['Tutorial', 'Color', 'Photoshop'],
+    content: `
+      <h2>S-Curves</h2>
+      <p>I use Curves to crush shadows and Selective Color to push Cyans and Magentas into the neon territory. It's about contrast.</p>
+    `
+  },
+  {
+    slug: 'why-cyberpunk-is-the-future',
+    title: 'Why Cyberpunk is the Ultimate Desktop Aesthetic',
+    excerpt: 'Neon, rain, and tech.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Aesthetic', 'Cyberpunk', 'Gaming'],
+    content: `
+      <h2>Immersion</h2>
+      <p>Cyberpunk wallpapers bridge the gap between your RGB hardware and your screen. Rain and neon create a moody, focused environment.</p>
+    `
+  },
+  {
+    slug: 'growing-on-tiktok-2026',
+    title: 'Growing as an Editor on TikTok in 2026',
+    excerpt: 'It\'s about storytelling, not just transitions.',
+    date: '2025-12-31',
+    author: 'Only_dias',
+    tags: ['Social Media', 'Growth', 'TikTok'],
+    content: `
+      <h2>Storytelling</h2>
+      <p>The algorithm prefers edits that evoke emotion. Syncing your clips to the right sound and engaging with comments is key to growth.</p>
     `
   }
 ];
