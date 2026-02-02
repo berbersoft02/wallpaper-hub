@@ -11,7 +11,6 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-export const blogPosts: BlogPost[] = [
   {
     slug: 'frieren-beyond-journeys-end-wallpaper-collection',
     title: 'The Magic of Frieren: New 4K Wallpaper Collection',
