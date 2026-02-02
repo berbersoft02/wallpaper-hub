@@ -302,7 +302,180 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'how-i-make-viral-anime-edits',
+    slug: 'makima-chainsaw-man-control',
+    title: 'Makima: The Art of Control',
+    excerpt: 'Makima is terrifying and mesmerizing. Here is how I edit the Control Devil to capture her unsettling presence.',
+    date: '2026-01-17',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Makima', 'Horror', 'Eyes'],
+    content: `
+      <h2>The Look That Pierces Through You</h2>
+      <p>Makima is one of the most effectively designed antagonists in recent memory. It’s all in the eyes—those golden rings that seem to look right through the screen. When I edit Makima, my entire goal is to make the viewer feel... observed.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-800/50 shadow-[0_0_20px_rgba(153,27,27,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Makima Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Desaturation and Red</h2>
+      <p>My color palette for Makima is extremely strict: Black, White, and Deep Red. I usually desaturate the entire background to grayscale, leaving only Makima’s hair and tie in color. This "Selective Color" technique is a classic, but it works so well here because it isolates her as the only "living" thing in the frame.</p>
+      <p>I also add a subtle "film scratch" overlay. Unlike the grainy noise I use for Denji, Makima gets clean, sharp scratches, representing the calculated, precise nature of her control.</p>
+    `
+  },
+  {
+    slug: 'yor-forger-spy-x-family-assassin',
+    title: 'Yor Forger: The Thorn Princess Aesthetic',
+    excerpt: 'Balancing the gentle mother and the ruthless assassin. A look at my Spy x Family edits.',
+    date: '2026-01-16',
+    author: 'Only_dias',
+    tags: ['Spy x Family', 'Yor Forger', 'Assassin', 'Black'],
+    content: `
+      <h2>Two Sides of the Same Coin</h2>
+      <p>Yor Forger is the perfect example of "gap moe"—a sweet, airheaded mom who can kick a car across the street. Visually, her "Thorn Princess" assassin outfit is sleek, dangerous, and incredibly stylish.</p>
+
+      <h2>Editing the Black Dress</h2>
+      <p>Black clothing in anime can often look flat and undefined. To fix this in a wallpaper, I use the "Levels" adjustment in Photoshop. I lift the black point slightly so it's a dark charcoal grey, which reveals the line art and folds in her dress.</p>
+      <p>Then, I paint in rim lighting. Since her dress is black, I can use almost any color for the backlight. I usually go with a deep crimson red to match her eyes and weapon handles. This separation from the background prevents her from looking like a floating head.</p>
+    `
+  },
+  {
+    slug: 'power-chainsaw-man-chaos',
+    title: 'Power: The Blood Fiend Energy',
+    excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too.',
+    date: '2026-01-15',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Power', 'Blood', 'Energy'],
+    content: `
+      <h2>The Best Worst Girl</h2>
+      <p>Power is a fan favorite for a reason. She brings a chaotic energy that is incredibly fun to edit. Unlike the composed Makima edits, Power's wallpapers are full of splatters, heavy grain, and jagged text.</p>
+
+      <h2>The "Blood" Texture</h2>
+      <p>To really sell the "Blood Fiend" vibe, I use custom blood splatter brushes. I paint them on a layer behind her and set the blending mode to "Multiply" so they darken the background. I also use a "Gradient Map" set to Dark Red/Bright Red to tint the shadows of the entire image, giving it a cohesive, bloody atmosphere.</p>
+      <p>For her horns, I add a subtle inner glow to make them pop against her blonde hair.</p>
+    `
+  },
+  {
+    slug: 'naruto-transformations',
+    title: 'Naruto: The Evolution of transformations',
+    excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
+    date: '2026-01-14',
+    author: 'Only_dias',
+    tags: ['Naruto', 'Shippuden', 'Kurama', 'Orange'],
+    content: `
+      <h2>Growing Up with Naruto</h2>
+      <p>Like many of you, I grew up watching Naruto. Seeing his visual evolution is nostalgic. The transition from the rough, hand-drawn style of Part 1 to the crisp, digital effects of Boruto offers a lot of variety for editors.</p>
+
+      <h2>Handling Chakra Glow</h2>
+      <p>Naruto's chakra modes are pure light. The challenge is making them look bright without blowing out the details of his face. My trick is to duplicate the character layer, apply a heavy Gaussian Blur to the bottom layer, and set it to "Screen" mode.</p>
+      <p>This creates a soft, diffuse glow that radiates outward, simulating how light actually behaves. I then use a sharp brush to reinforce the black outlines of his whiskers and eyes so his expression isn't lost in the light.</p>
+    `
+  },
+  {
+    slug: 'luffy-gear-5-joyboy',
+    title: 'Luffy Gear 5: The Drums of Liberation',
+    excerpt: 'Editing the most cartoony transformation in anime history. How to handle the pure white aesthetic.',
+    date: '2026-01-13',
+    author: 'Only_dias',
+    tags: ['One Piece', 'Luffy', 'Gear 5', 'White'],
+    content: `
+      <h2>Animation Freedom</h2>
+      <p>Gear 5 broke the internet. It also broke the rules of anime art styles. The looney-tunes squashing and stretching, the pure white color palette, and the purple aura are totally unique.</p>
+
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187204/oboi.4k_threadsmate.com_1769187172_d71lwl.webp" alt="Luffy Gear 5 Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>The White Balance Challenge</h2>
+      <p>When a character is all white, they can easily look flat. I use "Gradient Overlays" to add subtle color variation to his white form. I map the shadows to a very light purple and the highlights to a pale yellow.</p>
+      <p>This adds dimension to his clouds and hair without changing the iconic white look. For the background, I usually go dark and stormy to create maximum contrast with his bright form.</p>
+    `
+  },
+  {
+    slug: 'mikasa-ackerman-titan-slayer',
+    title: 'Mikasa Ackerman: Strength and Loyalty',
+    excerpt: 'The scarf, the blades, the stare. Capturing the intensity of Attack on Titan\'s best soldier.',
+    date: '2026-01-12',
+    author: 'Only_dias',
+    tags: ['Attack on Titan', 'Mikasa', 'Scarf', 'Dark'],
+    content: `
+      <h2>The Last Stand</h2>
+      <p>Mikasa is iconic. Her red scarf is the only splash of color in the drab, brown/grey military uniform of the Scouts. That scarf is the centerpiece of almost every Mikasa edit I make.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-700/50 shadow-[0_0_20px_rgba(185,28,28,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769173649/oboi.4k_threadsmate.com_1769173489_po3jnj.webp" alt="Mikasa Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Grime and Texture</h2>
+      <p>Attack on Titan is a dirty world. Characters are covered in dust, blood, and steam. I don't airbrush Mikasa's face to be perfect porcelain. I enhance the grime.</p>
+      <p>I use a "Sharpen" filter on her ODM gear to make the metal look cold and hard, and I add a smoke texture overlay to simulate the steam from the titan kills. It makes the wallpaper feel like a freeze-frame from a battle.</p>
+    `
+  },
+  {
+    slug: 'cyberpunk-edgerunners-lucy',
+    title: 'Lucy from Edgerunners: Neon Melancholy',
+    excerpt: 'The show that broke our hearts also gave us the best visuals. Editing the Moon scene.',
+    date: '2026-01-11',
+    author: 'Only_dias',
+    tags: ['Cyberpunk', 'Lucy', 'Moon', 'Neon'],
+    content: `
+      <h2>I Really Want to Stay at Your House</h2>
+      <p>I can't hear that song without tearing up. Lucy's character design—the iridescent hair, the monowire—is pure cyberpunk perfection. But her best wallpapers are the quiet moments on the moon.</p>
+
+      <h2>Iridescent Hair</h2>
+      <p>Lucy's hair changes color depending on the light. To replicate this, I paint highlights with a multi-colored brush (Cyan, Magenta, Yellow) on a "Color Dodge" layer. It gives her hair that shimmering, holographic look that defines the show's aesthetic.</p>
+      <p>I also always pump up the "bloom" on the moon in the background. It represents her dream, so it should shine the brightest.</p>
+    `
+  },
+  {
+    slug: 'vagabond-art-style',
+    title: 'Vagabond: The Pinnacle of Manga Art',
+    excerpt: 'Inoue\'s art is legendary. Here is how I adapt black and white manga panels into high-res wallpapers.',
+    date: '2026-01-10',
+    author: 'Only_dias',
+    tags: ['Manga', 'Vagabond', 'Musashi', 'Black and White'],
+    content: `
+      <h2>Brushstrokes of a Master</h2>
+      <p>Takehiko Inoue paints with ink. His brushstrokes are visible, raw, and full of emotion. When turning <em>Vagabond</em> panels into wallpapers, the worst thing you can do is vectorizing or smoothing them.</p>
+
+      <h2>Paper Texture</h2>
+      <p>A pure white #FFFFFF background hurts the eyes on a desktop. Instead, I overlay a "Rice Paper" or "Canvas" texture on the background. It turns the white into a soft, textured cream color.</p>
+      <p>This not only reduces eye strain but makes the digital wallpaper feel like a physical scroll. I then increase the contrast of the ink lines to make Musashi's expression pop off the "paper".</p>
+    `
+  },
+  {
+    slug: 'bleach-gear-aesthetic',
+    title: 'Bleach: The King of Drip',
+    excerpt: 'Kubo Tite is a fashion designer first, mangaka second. Celebrating the style of Bleach.',
+    date: '2026-01-09',
+    author: 'Only_dias',
+    tags: ['Bleach', 'Ichigo', 'Fashion', 'Style'],
+    content: `
+      <h2>The Drip God</h2>
+      <p>No anime character dresses better than the cast of Bleach in the opening credits. Kubo's sense of streetwear is unmatched. My Bleach wallpapers often focus on these "street" looks rather than the Shinigami robes.</p>
+
+      <h2>Urban Vibes</h2>
+      <p>For these edits, I use backgrounds that feature graffiti, concrete, and streetlights. I lean into a "Cool Grey" color palette with splashes of neon orange (for Ichigo's hair) or ice blue (for Rukia).</p>
+      <p>Typography plays a huge role here. I often add the character's name in a bold, graffiti-style font behind them to complete the album cover aesthetic.</p>
+    `
+  },
+  {
+    slug: 'evangelion-retro-future',
+    title: 'Evangelion: The Retro Future Aesthetic',
+    excerpt: 'The 90s aesthetic is back. How I edit Asuka and Rei to capture that vintage cel-shaded look.',
+    date: '2026-01-08',
+    author: 'Only_dias',
+    tags: ['Evangelion', 'Retro', '90s', 'Mecha'],
+    content: `
+      <h2>Cruel Angel's Thesis</h2>
+      <p><em>Neon Genesis Evangelion</em> has a very specific "cel animation" look that digital anime today doesn't have. The colors are flatter, the shadows are harsh, and there's a natural grain to the film.</p>
+
+      <h2>Fake VHS Effect</h2>
+      <p>To recreate this for a modern wallpaper, I apply a "VHS" effect. I separate the Red, Green, and Blue channels and nudge them slightly apart to create color fringing at the edges. I also add scanlines overlay at 10% opacity.</p>
+      <p>This makes the crisp 4K image look like a high-definition memory from 1995. It hits that nostalgia button perfectly.</p>
+    `
+  }
+];
+
+export function getAllPosts(): BlogPost[] {
     title: 'How I Make My Viral Anime Edits for TikTok',
     excerpt: 'A behind-the-scenes look at my editing workflow using Adobe Photoshop and Canva to create the content you see on @noxzx_kb.',
     date: '2026-01-22',
