@@ -1,18 +1,87 @@
+import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import RecommendationButton from "./components/RecommendationButton";
+import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
+  const recentPosts = getAllPosts().slice(0, 3);
+
   return (
     <div className="min-h-screen relative">
       <AnimatedBackground />
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        
+        {/* --- Content Description Section (For SEO & AdSense) --- */}
+        <section className="py-16 px-4 max-w-7xl mx-auto text-center">
+          <h2 className="font-pixel text-3xl md:text-4xl text-white mb-8">
+            The Ultimate <span className="text-neon-cyan">Anime Wallpaper</span> Collection
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+            <div className="space-y-4">
+              <h3 className="font-pixel text-2xl text-neon-pink">Our Mission</h3>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Only_dias Ocean isn't just another wallpaper site. It's a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
+                We specialize in <strong>4K upscaled backgrounds</strong>, color-graded edits, and exclusive static artwork from the most popular series like <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Chainsaw Man</em>.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="font-pixel text-2xl text-neon-pink">Why Choose Us?</h3>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Unlike automated scraper sites, every image here is verified for quality. No blurry JPEGs, no watermarks. 
+                Whether you're looking for a moody cyberpunk city or a vibrant character portrait, our <strong>"Special Collections"</strong> filter helps you find the perfect aesthetic instantly. 
+                Join our community on TikTok to request new drops!
+              </p>
+            </div>
+          </div>
+        </section>
+
         <Gallery />
+
+        {/* --- Blog Preview Section (Increases Content Value) --- */}
+        <section className="py-20 px-4 bg-dark-bg/50 border-y border-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex justify-between items-end mb-12">
+              <h2 className="font-pixel text-3xl md:text-5xl text-white">
+                Latest from the <span className="text-neon-cyan">Blog</span>
+              </h2>
+              <Link href="/blog" className="hidden md:inline-block text-neon-pink hover:text-white font-pixel text-xl transition-colors">
+                View All Posts →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {recentPosts.map((post) => (
+                <article key={post.slug} className="bg-card-bg p-6 rounded-lg border border-gray-700 hover:border-neon-cyan transition-all group">
+                  <span className="text-xs font-mono text-neon-pink mb-2 block">{post.date}</span>
+                  <h3 className="font-pixel text-xl text-white mb-3 group-hover:text-neon-cyan transition-colors">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-gray-400 text-sm line-clamp-3 mb-4">
+                    {post.excerpt}
+                  </p>
+                  <Link href={`/blog/${post.slug}`} className="text-sm text-gray-300 hover:text-white underline decoration-neon-cyan/50">
+                    Read Article
+                  </Link>
+                </article>
+              ))}
+            </div>
+            
+            <div className="mt-8 text-center md:hidden">
+              <Link href="/blog" className="inline-block px-6 py-3 border border-neon-pink text-neon-pink font-pixel hover:bg-neon-pink hover:text-white transition-colors">
+                View All Posts
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* --- About Me section --- */}
         <section id="about" className="bg-dark-bg/90 py-20 px-4 flex flex-col items-center text-center relative overflow-hidden">
           {/* Gradient background effect */}
