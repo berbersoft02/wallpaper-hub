@@ -810,6 +810,13 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958415/wallpapers/Zero%20Two/9.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769041100/wallpapers/Zero%20Two/-.jpg"
       ]
+    },
+    {
+      "name": "Frieren",
+      "category": "Anime",
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1/wallpapers/Frieren/placeholder.jpg"
+      ]
     }
   ]
 }
