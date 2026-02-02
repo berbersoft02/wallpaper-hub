@@ -13,7 +13,7 @@ export default function BlogPage() {
       <main className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="font-pixel text-4xl md:text-6xl text-neon-cyan mb-4 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)]">
-            Only_dias <span className="text-neon-pink">Blog</span>
+            Only_dias <span className="text-neon-pink">Blog ({posts.length})</span>
           </h1>
           <p className="font-body text-gray-400 text-xl max-w-2xl mx-auto">
             Tutorials, trends, and updates from the world of anime art and customization.
