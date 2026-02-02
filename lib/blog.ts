@@ -11,6 +11,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     slug: 'frieren-beyond-journeys-end-wallpaper-collection',
     title: 'The Magic of Frieren: New 4K Wallpaper Collection',
@@ -20,278 +21,285 @@ export const blogPosts: BlogPost[] = [
     tags: ['Frieren', 'Anime', '4K', 'Fantasy'],
     content: `
       <h2>The Elf Who Lived a Thousand Years</h2>
-      <p><em>Frieren: Beyond Journey's End</em> (Sousou no Frieren) has visually redefined what a fantasy anime can look like. The soft lighting, the watercolor-style backgrounds, and the intricate character designs are a masterpiece.</p>
+      <p>I still remember the first time I watched episode 1 of <em>Frieren: Beyond Journey's End</em>. I expected a typical fantasy adventure, but what I got was a masterclass in melancholy and visual storytelling. The way Madhouse animates the passage of time—the rustling of leaves, the slow drifting of clouds—is something I knew I had to capture in wallpaper form.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp" alt="Frieren Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Capturing the Atmosphere</h2>
-      <p>For this drop, I wanted to focus on the <strong>atmosphere</strong> of the show. It's not just about action scenes; it's about the quiet moments. Frieren reading a grimoire by a campfire, Fern pouting, Stark engaging a dragon.</p>
+      <h2>The Technical Challenge: Softness vs. Clarity</h2>
+      <p>The biggest challenge with editing Frieren frames is the show's inherent softness. It uses a diffusion filter that gives everything a dreamlike glow. If you just slap a standard sharpening filter on it, the image breaks apart and looks grainy. My workflow involved using a "High Pass" filter in Photoshop set to a very low radius (1.2px) on "Overlay" mode to bring out the details in Frieren's hair and staff, while masking out the background to keep that watercolor softness intact.</p>
 
-      <h3>Collection Highlights:</h3>
+      <h3>Key Scenes in This Collection:</h3>
       <ul>
-        <li><strong>Frieren in the Flower Field:</strong> A serene, upscaled 4K shot of Frieren surrounded by the blue moon weed flowers. Perfect for a calming desktop setup.</li>
-        <li><strong>Fern's Magic:</strong> Capturing the sheer particle density of Fern's Zoltraak spell. The contrast between the dark forest and the bright blue magic makes this one pop on OLED screens.</li>
-        <li><strong>The Party:</strong> Group shots of the new party walking towards the northern lands.</li>
+        <li><strong>The Blue Moon Weed:</strong> This scene is iconic. I spent hours color grading the blues to make them pop on OLED screens without looking oversaturated. The contrast between the night sky and the glowing flowers is my favorite part of this edit.</li>
+        <li><strong>Fern's Zoltraak:</strong> The sheer density of the magic particles in the anime is insane. I used Topaz Gigapixel AI to upscale the particles, but then went back in and manually painted over the brightest spots to ensure they retained their "magical" bloom effect.</li>
       </ul>
 
-      <h2>How I Edited These</h2>
-      <p>The anime uses a very soft, almost hazy filter. To make these suitable for wallpapers, I had to carefully sharpen the line art without destroying that painterly look. I utilized a custom "Smart Sharpen" filter in Photoshop and slightly boosted the vibrance of the greens and blues to match the "Only_dias" aesthetic.</p>
-
-      <p>Check out the new <strong>Frieren</strong> category in the gallery now!</p>
+      <p>This collection is for those who want their desktop to feel like a window into a quieter, more magical world. I hope you enjoy these as much as I enjoyed making them.</p>
     `
   },
   {
     slug: 'zero-two-aesthetic-icons',
     title: 'Why Zero Two is Still the Queen of Aesthetics',
-    excerpt: 'Analyzing the enduring popularity of Zero Two from Darling in the Franxx and sharing my favorite edits of her.',
+    excerpt: 'Years later, Zero Two remains the undefeated champion of anime wallpapers. Here is a deep dive into my editing process for the pink-haired icon.',
     date: '2026-01-30',
     author: 'Only_dias',
     tags: ['Zero Two', 'Darling in the Franxx', 'Waifu', 'Pink'],
     content: `
-      <h2>The Pink Haired Icon</h2>
-      <p>It's been years since <em>Darling in the Franxx</em> aired, but <strong>Zero Two</strong> remains unmatched in the wallpaper community. Her character design—the pink hair, the red horns, the uniform—was practically built for aesthetic edits.</p>
+      <h2>The Character Design That Defined a Generation</h2>
+      <p>It’s honestly wild to think that <em>Darling in the Franxx</em> aired years ago, yet Zero Two is still the most requested character on my TikTok. Why? Because her design is aesthetically perfect. The pastel pink hair, the sharp red horns, and the white military uniform create a color palette that just works.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-neon-pink/50 shadow-[0_0_20px_rgba(255,42,109,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958378/wallpapers/Zero%20Two/3%20%282%29.jpg" alt="Zero Two Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>My Editing Approach</h2>
-      <p>When I edit Zero Two, I lean heavily into the <strong>Neon Pink</strong> and <strong>Cyan</strong> color scheme. This "vaporwave" palette complements her design perfectly.</p>
-      <p>For this specific wallpaper shown above, I isolated her from the original background and placed her against a custom glitch-art texture. I added a slight chromatic aberration effect (shifting the red and blue channels) to give it that "cyberpunk anime" feel.</p>
+      <h2>My "Vaporwave" Editing Workflow</h2>
+      <p>When I open a Zero Two file in Photoshop, I immediately reach for the "Vaporwave" aesthetic. Her pink hair naturally lends itself to cyan and purple accents.</p>
+      <p>For the wallpaper featured above, I actually cut her out of the original scene completely. I placed her against a custom-made glitch texture. To marry the two images together, I used a "Gradient Map" adjustment layer set to Pink/Blue at 20% opacity. This tints the shadows blue and the highlights pink, making her feel like she belongs in that digital space.</p>
       
-      <p>You can find 10+ variations of Zero Two in the <a href="/#gallery">gallery below</a>!</p>
+      <p>I also add a tiny bit of <strong>Chromatic Aberration</strong> (shifting the Red and Blue channels by 2 pixels) to the edges of her silhouette. It gives the image a retro, CRT monitor feel that fits the "Darling" vibe perfectly.</p>
     `
   },
   {
     slug: 'marin-kitagawa-cosplay-queen',
-    title: 'Marin Kitagawa: The Ultimate Gyaru Aesthetic',
-    excerpt: 'Marin brings a unique vibrant energy to any screen. Here is how I captured her personality in 4K.',
+    title: 'Marin Kitagawa: Capturing the Ultimate Gyaru Energy',
+    excerpt: 'Marin brings a unique vibrant energy to any screen. Here is how I color grade her wallpapers to match her sunny personality.',
     date: '2026-01-29',
     author: 'Only_dias',
     tags: ['Marin Kitagawa', 'My Dress-Up Darling', 'Gyaru', 'Vibrant'],
     content: `
-      <h2>More Than Just a Cosplayer</h2>
-      <p>Marin Kitagawa from <em>My Dress-Up Darling</em> took the world by storm. Her expressions are so dynamic and detailed that finding good frames to screenshot is actually easy—the hard part is choosing just one!</p>
+      <h2>More Than Just a Pretty Face</h2>
+      <p>Marin Kitagawa hit the anime community like a truck. It wasn't just the fan service; it was her genuine passion and expressive animation. CloverWorks went absolutely unmatched with the detail in her eyes and hair.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958120/wallpapers/Marin%20kitagawa/5.jpg" alt="Marin Kitagawa Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Color Grading for Marin</h2>
-      <p>Unlike the moody, dark edits I do for other characters, Marin requires <strong>brightness</strong>. I use a "warm" color grading curve, boosting the oranges and yellows to highlight her blonde hair and gradient eyes.</p>
-      <p>I also apply a "Soft Light" blending mode layer with a warm orange fill at 20% opacity to give the whole image a golden hour glow.</p>
+      <h2>The "Golden Hour" Color Grade</h2>
+      <p>Most of my edits are dark and moody, but for Marin, that feels wrong. She radiates positivity. My color grading strategy for her revolves around <strong>Warmth</strong>.</p>
+      <p>I start by boosting the Vibrance slider to +30. Then, I go into the "Selective Color" tool and tweak the Yellows. I push the Magenta slider in the Yellows to make her blonde hair look rich and golden rather than washed-out lemon yellow.</p>
+      <p>Finally, I add a subtle lens flare overlay in the top corner set to "Screen" mode. It mimics the look of a camera lens catching the sun, emphasizing her role as a cosplayer always in front of the camera.</p>
     `
   },
   {
     slug: 'jujutsu-kaisen-gojo-satoru',
-    title: 'The Honored One: Gojo Satoru 4K Collection',
-    excerpt: 'He is the strongest, and his eyes make for the best wallpapers. A deep dive into my JJK collection.',
+    title: 'The Honored One: A Deep Dive into Editing Gojo Satoru',
+    excerpt: 'He is the strongest, and his eyes are the hardest to animate—and to edit. Breaking down my JJK collection.',
     date: '2026-01-28',
     author: 'Only_dias',
     tags: ['JJK', 'Gojo Satoru', 'Eyes', 'Blue'],
     content: `
       <h2>Those Six Eyes</h2>
-      <p>Let's be honest: Gojo Satoru's eyes are the most beautiful thing in modern anime animation. MAPPA went all out, and so did I for these wallpapers.</p>
+      <p>Let's be honest: Gojo Satoru's eyes are probably the most expensive thing MAPPA has ever animated. The detail in the iris—the crystalline structure, the glowing blue—is iconic. As an editor, my number one job is: <strong>Don't ruin the eyes.</strong></p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/9_ysxuup.jpg" alt="Gojo Satoru Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>The "Infinite" Edit</h2>
-      <p>For Gojo, I focus on <strong>contrast</strong>. His domain expansion is void and dark, but his energy is bright blue. I use a "Linear Dodge (Add)" layer style in Photoshop to make his technique glow intensely against the black background.</p>
-      <p>This collection features him both with the blindfold (mysterious vibes) and without it (god-mode vibes).</p>
+      <h2>The "Infinite" Edit Technique</h2>
+      <p>For Gojo wallpapers, I focus purely on <strong>Contrast</strong>. His Limitless technique is essentially a void, so I crush the blacks in the background until they are true #000000. This looks incredible on AMOLED phones.</p>
+      <p>To make his technique "glow," I use a brush set to 0% hardness with a bright electric blue color. I paint over his finger or eyes on a new layer and set the blending mode to <strong>Linear Dodge (Add)</strong>. This creates that intense, over-exposed light effect that makes it look like real energy is coming off the screen.</p>
     `
   },
   {
     slug: 'akane-kurokawa-acting-genius',
     title: 'Akane Kurokawa: The Method Actor\'s Gaze',
-    excerpt: 'Analyzing the intense and captivating visual design of Akane from Oshi no Ko.',
+    excerpt: 'Akane is a character defined by her intensity. Here is how I edit her to reflect her "Star Eyes" moments.',
     date: '2026-01-27',
     author: 'Only_dias',
     tags: ['Oshi no Ko', 'Akane', 'Blue', 'Acting'],
     content: `
-      <h2>The Eyes of a Star</h2>
-      <p>Akane Kurokawa is a master of immersion. Her ability to perfectly replicate Ai Hoshino was a turning point in the series, but her own visual identity is just as striking.</p>
+      <h2>The Shift in Demeanor</h2>
+      <p>One of the most chilling scenes in <em>Oshi no Ko</em> is when Akane perfectly mimics Ai. The animation shifts, the sound drops out, and her eyes change. That specific moment is what I tried to capture in this collection.</p>
       
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957585/wallpapers/Akane%20Kurokawa/6.jpg" alt="Akane Kurokawa Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Color Theory: Deep Blue</h2>
-      <p>While Ruby is red and Ai is purple/pink, Akane represents a deep, intellectual blue. I often use "Cool" temperature filters when editing her to emphasize her calm and analytical nature.</p>
+      <h2>Color Theory: The Intellectual Blue</h2>
+      <p>While Ruby is red and Ai is purple, Akane represents a deep, intellectual blue. When editing her, I use "Cool" temperature filters (moving the slider towards Blue/Cyan) to emphasize her calm and analytical nature.</p>
+      <p>For the "Star Eyes" effect specifically, I use a trick: I duplicate the eye layer, set it to "Overlay", and apply a Gaussian Blur. This creates a soft halo around the star pattern in her iris without losing the sharp edges of the star itself. It's a small detail, but it makes the eyes piercing.</p>
     `
   },
   {
     slug: 'chisato-nishikigi-lycoris-recoil',
-    title: 'Chisato Nishikigi: Lethal Elegance',
-    excerpt: 'Why Chisato\'s red uniform and energetic personality make for the perfect mobile wallpaper.',
+    title: 'Chisato Nishikigi: The Art of Lethal Elegance',
+    excerpt: 'Chisato\'s red uniform against urban backgrounds creates a stunning visual contrast. Breaking down my Lycoris Recoil edits.',
     date: '2026-01-26',
     author: 'Only_dias',
     tags: ['Lycoris Recoil', 'Chisato', 'Action', 'Red'],
     content: `
       <h2>The Strongest Lycoris</h2>
-      <p>Chisato is a paradox: a bubbly, kind-hearted girl who is also the most skilled gunman in Japan. This duality makes her character design incredible to work with.</p>
+      <p>Chisato is such a fun character because she's a paradox: a bubbly, kind-hearted girl who is also the most skilled gunman in Japan. Visually, this is represented by her bright red uniform contrasting with the grey, tactical environments she fights in.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040229/wallpapers/Chisato%20Nishikigi/1.jpg" alt="Chisato Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Dynamic Poses</h2>
-      <p>The animation in <em>Lycoris Recoil</em> is fluid and precise. I try to select frames where Chisato is in motion—dodging bullets or reloading—to capture that kinetic energy on your lock screen.</p>
+      <h2>Capturing Kinetic Energy</h2>
+      <p>The animation in <em>Lycoris Recoil</em> (courtesy of A-1 Pictures) is incredibly fluid, especially how Chisato dodges bullets. A static wallpaper can't move, so how do you convey speed?</p>
+      <p>I use <strong>Motion Blur</strong>. I duplicate the character, apply a directional blur in the direction she's moving, and lower the opacity to about 15%. This creates a "ghosting" effect that makes it look like she just snapped into that pose. Combined with her signature red ribbon flowing in the wind, it makes for a very dynamic lock screen.</p>
     `
   },
   {
     slug: 'chainsaw-man-denji-chaos',
-    title: 'Chainsaw Man: The Beauty of Chaos',
-    excerpt: 'Embracing the grit and gore of Chainsaw Man in high-resolution edits.',
+    title: 'Chainsaw Man: Embracing the Gritty Film Look',
+    excerpt: 'MAPPA gave Chainsaw Man a cinematic feel. Here is how I enhance that grit and gore for high-resolution displays.',
     date: '2026-01-25',
     author: 'Only_dias',
     tags: ['Chainsaw Man', 'Denji', 'Dark', 'Action'],
     content: `
-      <h2>Raw Power</h2>
-      <p>Chainsaw Man is gritty, dirty, and loud. My wallpapers for this series reflect that. I use heavy grain filters and high contrast to mimic the cinematic feel of the anime.</p>
+      <h2>Raw, Dirty, and Beautiful</h2>
+      <p>Chainsaw Man is unlike any other Shonen. It's gritty, dirty, and loud. MAPPA approached the adaptation with a distinct "cinema" style—framing shots like movies and adding a subtle film grain over everything.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Chainsaw Man Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>The Orange Glow</h2>
-      <p>Pochita's orange is the signature color here. By isolating the orange hues and desaturating the background, I create a focal point that screams "Danger".</p>
+      <h2>The Orange Glow Technique</h2>
+      <p>The color of this show is undoubtedly <strong>Orange</strong>—from Pochita to the blood. My editing process for CSM involves a technique called "Split Toning."</p>
+      <p>I push the Highlights towards Orange/Teal and the Shadows towards a dark, muddy Green. This replicates the color grading used in many gritty thriller movies. I also <em>add</em> noise. Yes, usually I remove noise, but for Chainsaw Man, adding a monochromatic noise layer at 3% opacity ties the whole image together and stops it from looking "too clean" or plastic.</p>
     `
   },
   {
     slug: 'alya-kujou-russian-beauty',
-    title: 'Alya Kujou: The Silver-Haired Princess',
-    excerpt: 'Roshidere\'s Alya is the new standard for silver-haired waifus. Here is why.',
+    title: 'Alya Kujou: The Silver-Haired Standard',
+    excerpt: 'Roshidere\'s Alya is arguably the most beautiful character design of the year. Here is how I edit her to look even more pristine.',
     date: '2026-01-24',
     author: 'Only_dias',
     tags: ['Roshidere', 'Alya', 'Romance', 'School'],
     content: `
       <h2>Elegance Personified</h2>
-      <p>Alya sometimes hides her feelings in Russian, but her beauty needs no translation. Her character design is clean, pristine, and sophisticated.</p>
+      <p>Alya sometimes hides her feelings in Russian, but her beauty needs no translation. Doga Kobo did an amazing job adapting the light novel art style, giving her hair a shimmering, almost translucent quality.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957600/wallpapers/Alya%20Kujou/10.jpg" alt="Alya Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing for Softness</h2>
-      <p>Unlike action anime, editing Alya requires a delicate touch. I use soft glows and "bloom" effects to enhance her hair and eyes without making the image look harsh.</p>
+      <p>Unlike the gritty action edits, editing Alya requires a delicate touch. If you sharpen her too much, you lose that "angelic" vibe. My focus here is on <strong>lighting</strong>.</p>
+      <p>I use a "Soft Light" brush with a pale cyan color to paint highlights on her hair and eyes. This mimics the "Bloom" effect seen in modern video games. I also brighten the whites of her uniform to make them pop against the background, ensuring she always looks like the brightest thing on the screen.</p>
     `
   },
   {
     slug: 'spider-man-across-the-spider-verse',
     title: 'Spider-Man: Across the Digital Art Style',
-    excerpt: 'How the revolutionary art style of Spider-Verse translates into static wallpapers.',
+    excerpt: 'The Spider-Verse movies changed animation forever. Here is how I upscale these images without destroying the comic book texture.',
     date: '2026-01-23',
     author: 'Only_dias',
     tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
     content: `
       <h2>A Living Comic Book</h2>
-      <p>The Spider-Verse movies changed animation forever. The mix of 2D and 3D, the Ben-Day dots, and the glitch effects make every frame a painting.</p>
+      <p>The Spider-Verse movies are a visual overload in the best way possible. The mix of 2D and 3D, the Ben-Day dots, the chromatic aberration, and the frame-rate shifts (animating on twos) make every single frame a potential wallpaper.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-600/50 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp" alt="Spider-Man Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Preserving the Texture</h2>
-      <p>When upscaling these images, it's crucial not to smooth out the comic book textures. I ensure the halftone patterns and ink lines remain sharp and distinct.</p>
+      <h2>The Upscaling Nightmare</h2>
+      <p>Here's the problem: AI upscalers hate Ben-Day dots. They try to smooth them out, which ruins the Spider-Verse look. To fix this, I use a very specific workflow.</p>
+      <p>I upscale the image, but I also keep the original low-res version. I put the original on top and set it to "Luminosity" blending mode. This brings back the original dot texture and ink lines while keeping the sharp edges of the upscaled version underneath. It’s a tedious process, but it’s the only way to get a 4K Spider-Man wallpaper that actually looks like the movie.</p>
     `
   },
   {
     slug: 'demon-slayer-breathing-styles',
     title: 'Demon Slayer: The Art of Breathing Styles',
-    excerpt: 'Capturing the elemental beauty of Water, Fire, and Sun breathing techniques.',
+    excerpt: 'Ufotable\'s particle effects are legendary. Breaking down how I enhance the Water and Sun breathing effects.',
     date: '2026-01-22',
     author: 'Only_dias',
     tags: ['Demon Slayer', 'Tanjiro', 'Effects', 'Animation'],
     content: `
       <h2>Ufotable's Mastery</h2>
-      <p>Demon Slayer is famous for its "Ukiyoe" style effects. The water dragons and fire trails are visually distinct from the rest of the world.</p>
+      <p>Demon Slayer is famous for its "Ukiyoe" style effects. The water dragons and fire trails are visually distinct from the 3D environments, creating a unique composite look. When Tanjiro swings his sword, it's not just a blur; it's a painting.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_20px_rgba(96,165,250,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542652/1_qtxlyv.jpg" alt="Demon Slayer Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>Enhancing the Elements</h2>
-      <p>I use "Screen" and "Color Dodge" layers to make the elemental effects glow intensely. Whether it's Zenitsu's lightning or Tanjiro's water, the goal is to make it look like it's illuminating your screen.</p>
+      <p>My goal with Demon Slayer wallpapers is to make the breathing styles look <strong>hot</strong> or <strong>wet</strong>. For Sun Breathing, I boost the saturation of the oranges and add a subtle "Outer Glow" layer style to the flames.</p>
+      <p>For Water Breathing (like the wallpaper above), I actually increase the contrast significantly. This makes the white foam of the waves stand out sharply against the dark blue water, making the Ukiyoe art style pop even more. It looks incredibly crisp on high-PPI mobile displays.</p>
     `
   },
   {
     slug: 'blue-lock-egoist-aesthetic',
-    title: 'Blue Lock: The Egoist Aesthetic',
-    excerpt: 'Why the intense, aura-based visuals of Blue Lock are perfect for motivational wallpapers.',
+    title: 'Blue Lock: Visualizing the Ego',
+    excerpt: 'Blue Lock turns aura into a visual weapon. Here is how I capture the intensity of Isagi\'s puzzle pieces.',
     date: '2026-01-21',
     author: 'Only_dias',
     tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
     content: `
-      <h2>Visualizing Aura</h2>
-      <p>Blue Lock visualizes "ego" as literal flames and monsters. It's hype, it's intense, and it looks amazing.</p>
+      <h2>The Monster Inside</h2>
+      <p>Blue Lock isn't a normal sports anime. It's a battle anime. The way the show visualizes "ego"—as green flames, chains, or monsters—is pure hype. Isagi's signature effect, the "Puzzle Pieces," is one of the coolest visual metaphors I've seen.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-green-400/50 shadow-[0_0_20px_rgba(74,222,128,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg" alt="Isagi Yoichi Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Green and Blue</h2>
-      <p>The signature "Blue Lock" color is a specific shade of electric blue. I make sure to calibrate this color perfectly in my edits so it hits that recognizable note instantly.</p>
+      <h2>Calibrating the "Blue Lock" Green</h2>
+      <p>The show uses a very specific shade of neon green/blue for Isagi's aura. It's not quite teal, not quite lime. Getting this color right in Photoshop is tricky.</p>
+      <p>I use the "Camera Raw Filter" to shift the Hue of the Greens toward Cyan and the Blues toward Green until they meet in the middle. Then I crank the Luminance up. This makes the aura look like it's glowing radioactively, which perfectly fits the intense, "toxic" vibe of the Blue Lock facility.</p>
     `
   },
   {
     slug: 'dragon-ball-legends',
-    title: 'Dragon Ball: Timeless Legends',
-    excerpt: 'Celebrating the legacy of Goku and Vegeta with high-fidelity wallpapers.',
+    title: 'Dragon Ball: Timeless Legends in 4K',
+    excerpt: 'From the Shintani style of Broly to the CGI of Super Hero. Celebrating the visual evolution of Goku.',
     date: '2026-01-20',
     author: 'Only_dias',
     tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
     content: `
-      <h2>The OG Shonen</h2>
-      <p>Dragon Ball's art style has evolved from round and soft to sharp and muscular. My collection focuses on the modern, high-definition look of <em>Super</em> and the movies.</p>
+      <h2>The OG Shonen Evolution</h2>
+      <p>Dragon Ball has been around forever, but its art style keeps changing. Personally, I am obsessed with the Naohiro Shintani style from the <em>Broly</em> movie. It brought back the soft, rounder edges of the 90s but with modern animation fluidity.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-400/50 shadow-[0_0_20px_rgba(251,146,60,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068820/wallpapers/Dragon%20Ball/1.jpg" alt="Dragon Ball Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Aura Power</h2>
-      <p>Super Saiyan auras are tricky to edit because they are transparent and glowing. I meticulously separate the character from the aura to allow for different background placements.</p>
+      <h2>Aura Power & Transparency</h2>
+      <p>Editing Dragon Ball wallpapers is all about the Aura. Super Saiyan auras are semi-transparent and glowing. If you just screenshot them, they often look messy against the background.</p>
+      <p>I spend a lot of time "cleaning" the aura. I use a soft eraser to smooth out the edges of the glow, making it fade naturally into the black background. I also add a "Hard Light" layer with the aura's color (Gold for SSJ, Blue for SSB) to paint light onto Goku's clothes, making it feel like the aura is actually illuminating him.</p>
     `
   },
   {
     slug: 'miku-nakano-quintessential-quintpulets',
-    title: 'Miku Nakano: The Fan Favorite',
-    excerpt: 'Why Miku consistently tops the popularity polls and makes for the cutest wallpapers.',
+    title: 'Miku Nakano: The Cult of the Headphones',
+    excerpt: 'Why Miku consistently tops the popularity polls and why her character design is a goldmine for editors.',
     date: '2026-01-19',
     author: 'Only_dias',
     tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
     content: `
       <h2>Headphones On, World Off</h2>
-      <p>Miku's blue headphones are iconic. They add a techy accessory element to her otherwise traditional school uniform look.</p>
+      <p>In a show with five identical faces, character design comes down to accessories and expression. Miku's blue Audio-Technica-style headphones aren't just an accessory; they're a barrier she puts up against the world. That resonates with a lot of people (including me).</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-300/50 shadow-[0_0_20px_rgba(147,197,253,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043967/wallpapers/Miku%20Nakano/1_1.jpg" alt="Miku Nakano Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>The Shy Aesthetic</h2>
-      <p>Miku's wallpapers often feature her looking away, blushing, or lost in thought. These "quiet" images are great for people who want anime art on their phone without it being too loud or distracting.</p>
+      <p>Miku's color palette is soft blues and warm browns. Unlike the high-contrast neon edits I do for action anime, Miku wallpapers get the "Lo-Fi" treatment.</p>
+      <p>I add a slight noise texture and lower the contrast to make the image feel softer and more comfortable. I also often vignette the edges heavily to draw focus to her expression—usually a pout or a shy glance. It creates a feeling of intimacy that works perfectly for a phone wallpaper you look at 50 times a day.</p>
     `
   },
   {
     slug: 'nature-anime-scenery',
     title: 'The Peace of Anime Nature Scenery',
-    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of anime.',
+    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of Makoto Shinkai and others.',
     date: '2026-01-18',
     author: 'Only_dias',
     tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
     content: `
       <h2>Background Artistry</h2>
-      <p>Studios like CoMix Wave Films and Kyoto Animation put incredible detail into their skies, clouds, and forests. These make for the most relaxing, neutral wallpapers.</p>
+      <p>We often focus on the characters, but the background artists at studios like CoMix Wave Films (creators of <em>Your Name</em>) and Kyoto Animation are on another level. The way they render clouds, water reflections, and light shafts is photorealistic yet stylized.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp" alt="Nature Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Upscaling Details</h2>
-      <p>When upscaling nature shots, maintaining the texture of the grass and the fluffiness of the clouds is key. Standard AI upscalers can make them look like oil paintings, so I use a specific model trained on scenery.</p>
+      <h2>The Challenge of Upscaling Nature</h2>
+      <p>Upscaling nature shots is actually harder than characters. AI models are trained on faces. When you feed them a picture of a forest, they sometimes turn the leaves into weird, mushy blobs.</p>
+      <p>To fix this, I use a model specifically trained on "Digital Art" rather than "Photography." I also go in and manually sharpen key details like the edges of clouds or the ripples in water using the "Unsharp Mask" filter in Photoshop. The goal is to keep that crisp, refreshing feeling of a summer day that anime captures so well.</p>
     `
   },
   {
