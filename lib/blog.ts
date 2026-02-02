@@ -1,4 +1,3 @@
-
 export interface BlogPost {
   slug: string;
   title: string;
@@ -13,29 +12,125 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'frieren-beyond-journeys-end-wallpaper-collection',
-    title: 'The Magic of Frieren: New 4K Wallpaper Collection',
-    excerpt: 'Journey through our latest collection featuring Frieren, Fern, and Stark. Capturing the melancholic beauty of the series in stunning high definition.',
+    title: 'The Magic of Frieren: New 4K Wallpaper Collection and Visual Analysis',
+    excerpt: 'A deep dive into the visual language of Sousou no Frieren and a behind-the-scenes look at how we upscaled this breathtaking collection to 4K.',
     date: '2026-01-31',
     author: 'Only_dias',
     tags: ['Frieren', 'Anime', '4K', 'Fantasy'],
     content: `
       <h2>The Elf Who Lived a Thousand Years</h2>
-      <p>I still remember the first time I watched episode 1 of <em>Frieren: Beyond Journey's End</em>. I expected a typical fantasy adventure, but what I got was a masterclass in melancholy and visual storytelling. The way Madhouse animates the passage of time—the rustling of leaves, the slow drifting of clouds—is something I knew I had to capture in wallpaper form.</p>
+      <p>I still remember the first time I watched episode 1 of <em>Frieren: Beyond Journey's End</em>. I expected a typical fantasy adventure about defeating a demon king, but what I got was a masterclass in melancholy and visual storytelling. The way Madhouse animates the passage of time—the rustling of leaves, the slow drifting of clouds, and the changing seasons—is something I knew I had to capture in wallpaper form.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp" alt="Frieren Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>The Technical Challenge: Softness vs. Clarity</h2>
-      <p>The biggest challenge with editing Frieren frames is the show's inherent softness. It uses a diffusion filter that gives everything a dreamlike glow. If you just slap a standard sharpening filter on it, the image breaks apart and looks grainy. My workflow involved using a "High Pass" filter in Photoshop set to a very low radius (1.2px) on "Overlay" mode to bring out the details in Frieren's hair and staff, while masking out the background to keep that watercolor softness intact.</p>
+      <p>The biggest challenge with editing Frieren frames is the show's inherent softness. Unlike <em>Jujutsu Kaisen</em> or <em>Demon Slayer</em>, which use sharp, high-contrast outlines, Frieren uses a diffusion filter that gives everything a dreamlike, painterly glow. This is beautiful on TV, but when you upscale it to a 4K desktop monitor, it can look "muddy" or out of focus.</p>
+      
+      <p>To solve this, my workflow involved a multi-step process. First, I use a specialized AI model called <strong>Real-ESRGAN</strong> to handle the initial 4x upscale. This model is great because it preserves the "painterly" textures of the background while sharpening the lines of the characters. However, even AI isn't perfect. I then bring the 4K image into Adobe Photoshop for manual retouching.</p>
 
-      <h3>Key Scenes in This Collection:</h3>
-      <ul>
-        <li><strong>The Blue Moon Weed:</strong> This scene is iconic. I spent hours color grading the blues to make them pop on OLED screens without looking oversaturated. The contrast between the night sky and the glowing flowers is my favorite part of this edit.</li>
-        <li><strong>Fern's Zoltraak:</strong> The sheer density of the magic particles in the anime is insane. I used Topaz Gigapixel AI to upscale the particles, but then went back in and manually painted over the brightest spots to ensure they retained their "magical" bloom effect.</li>
-      </ul>
+      <p>In Photoshop, I use a <strong>"High Pass" filter</strong> technique. I duplicate the base layer, apply High Pass with a radius of exactly 1.2 pixels, and set the blending mode to "Overlay." This specifically brings out the micro-details in Frieren's white hair and the texture of her staff. To prevent the background from becoming too sharp and losing its watercolor feel, I use a layer mask to paint out the High Pass effect everywhere except on the characters themselves.</p>
 
-      <p>This collection is for those who want their desktop to feel like a window into a quieter, more magical world. I hope you enjoy these as much as I enjoyed making them.</p>
+      <h2>The Art of the Blue Moon Weed</h2>
+      <p>One of the most requested scenes was Frieren in the field of Blue Moon Weed flowers. This scene is a masterclass in lighting. The flowers give off a cold, ethereal blue light that reflects off Frieren's hair and clothes. To make this work as a wallpaper, I spent nearly two hours on <strong>Color Grading</strong>.</p>
+      
+      <p>I used "Selective Color" adjustment layers to target the Cyans and Blues. By removing the yellow from the blues, I was able to make the glow feel "colder" and more magical. I also added a "Radial Gradient" map in the center of the flowers set to "Color Dodge" at 10% opacity to simulate the actual light emission. This level of detail is what makes a wallpaper feel like a premium piece of art rather than a simple screenshot.</p>
+
+      <p>Check out the new <strong>Frieren</strong> category in the gallery now and let me know on TikTok which scene I should upscale next!</p>
+    `
+  },
+  {
+    slug: 'attack-on-titan-final-season-visuals',
+    title: 'Attack on Titan: The Final Season\'s Cinematic Brutality',
+    excerpt: 'MAPPA took over the reigns for the final season and brought a darker, more cinematic look to the series. Here is how I edit Eren and Mikasa to match.',
+    date: '2026-01-31',
+    author: 'Only_dias',
+    tags: ['Attack on Titan', 'Eren Yeager', 'MAPPA', 'Cinematic'],
+    content: `
+      <h2>A Gritty New Era</h2>
+      <p>When WIT Studio handed the keys to MAPPA for the final season of <em>Attack on Titan</em>, the visual language of the show changed overnight. We went from the vibrant, high-saturation colors of the early seasons to a desaturated, gritty, and almost rotoscoped feel. As a wallpaper creator, this was a massive opportunity to experiment with <strong>Cinematic Grime</strong>.</p>
+      
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-900/50 shadow-[0_0_20px_rgba(69,10,10,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769173647/oboi.4k_threadsmate.com_1769173491_yyx0po.webp" alt="Attack on Titan Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Lighting the Rumbling</h2>
+      <p>The Final Season is heavy on atmospheric effects. There is smoke, ash, and fire in almost every frame. To capture this in a 4K wallpaper, I avoid making the image "clean." Instead, I lean into the texture. I add a subtle <strong>Grain Layer</strong> in Photoshop to match MAPPA's digital film look. It prevents the flat colors from looking banding on low-quality screens and adds a "weight" to the image.</p>
+      
+      <p>For Eren's "Freedom" scene, I focused heavily on the sky. I used a <strong>Gradient Map</strong> to shift the bright highlights from pure white to a sickly, pale yellow, which emphasizes the apocalyptic nature of the scene. I also masked out Eren's silhouette and applied a slight <strong>Outer Glow</strong> with a dark red hue to simulate the heat of the Titans below him. This level of environmental storytelling is what I aim for in every drop.</p>
+
+      <h2>The Scouting Legion's New Gear</h2>
+      <p>Mikasa and the Scouts got a major design overhaul with their black anti-personnel gear. Black is notoriously hard to edit because it can easily lose all detail and become a "black hole" on your screen. I use <strong>Levels adjustments</strong> to specifically lift the midtones of the suits, bringing out the metallic sheen of the ODM gear and the leather straps. This ensures that even on a dark wallpaper, you can see every piece of equipment they are carrying.</p>
+    `
+  },
+  {
+    slug: 'rintaro-tsumugi-kaoru-hana',
+    title: 'Rintaro Tsumugi: The Gentle Giant Aesthetic',
+    excerpt: 'Kaoru Hana wa Rin to Saku has some of the most wholesome and beautiful art in modern manga. Here is how I edit Rintaro.',
+    date: '2026-01-30',
+    author: 'Only_dias',
+    tags: ['Kaoru Hana', 'Rintaro', 'Romance', 'Wholesome'],
+    content: `
+      <h2>The Fragrance of a Flower</h2>
+      <p>If you haven't read <em>Kaoru Hana wa Rin to Saku</em> (The Fragrant Flower Blooms with Dignity), you are missing out on some of the most expressive and beautiful character art in the manga world. Rintaro Tsumugi, with his dyed hair and "scary" face, is actually the most wholesome protagonist I've ever edited. The mangaka, Mikami Saka, has a way of drawing eyes that convey a world of emotion with just a few ink lines.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-purple-400/50 shadow-[0_0_20px_rgba(192,132,252,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769184762/1_giyu6z.jpg" alt="Rintaro Tsumugi Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Turning Manga into Digital Art</h2>
+      <p>Since the source material is manga, my initial "RAW" is usually black and white. For this collection, I wanted to create something that felt like a <strong>Limited Edition Cover</strong>. I started by using the <strong>Pen Tool</strong> to meticulously isolate Rintaro from the background. This is the most time-consuming part, but it allows for complete control over the colors.</p>
+      
+      <p>I lean into a <strong>Pastel Purple and Soft Gold</strong> color palette for Rintaro. These colors represent the two schools in the story and the contrast between Rintaro's "tough" exterior and his soft heart. I use a <strong>Gradient Map</strong> set to deep navy for shadows and warm cream for highlights. This "Tea-Stained" look makes the digital wallpaper feel like a physical, high-quality manga page. I also add a subtle "Canvas" texture overlay to give it a physical weight. It’s a very different vibe from my usual neon-heavy edits, but it fits the gentle soul of the series perfectly.</p>
+
+      <p>Rintaro's wallpapers are perfect for when you want a "cool" look that still feels warm and inviting. Check out the full collection in the gallery!</p>
+    `
+  },
+  {
+    slug: 'how-i-make-viral-anime-edits',
+    title: 'How I Make My Viral Anime Edits: The Complete 2026 Guide',
+    excerpt: 'An exhaustive look at my editing workflow using Adobe Photoshop, After Effects, and Canva to create the content you see on @noxzx_kb.',
+    date: '2026-01-22',
+    author: 'Only_dias',
+    tags: ['Tutorial', 'TikTok', 'Editing', 'Photoshop'],
+    content: `
+      <h2>The Secret Sauce of a Viral Edit</h2>
+      <p>Ever wondered how I create those smooth anime edits and high-fidelity static artwork you see on my TikTok channel? It's a question I get hundreds of times every week. People think it's just about slapping a filter on an image, but the reality is much more technical. It's about a combination of <strong>composition</strong>, <strong>AI-assisted upscaling</strong>, and <strong>manual color grading</strong>.</p>
+
+      <h2>Phase 1: Sourcing the "Raw" Material</h2>
+      <p>The biggest mistake new editors make is starting with a low-quality source. If you download a clip from YouTube or another TikTok, it's already been compressed multiple times. When you try to add effects, the image will break into "pixels" or "blocks."</p>
+      
+      <p>I always start by hunting for <strong>Blu-ray RAWs</strong>. These are original, uncompressed files directly from the Japanese releases. They don't have subtitles, and the bitrate is high enough that we can push the colors to the extreme without losing quality. I use a tool called <em>VLC Media Player</em> to take high-quality frame captures at the exact millisecond I want.</p>
+
+      <h2>Phase 2: The AI Upscaling Revolution</h2>
+      <p>Screens are getting bigger and sharper. A standard 1080p frame from an anime will look slightly blurry on a 4K monitor. That's why every wallpaper on "Only_dias Ocean" goes through an <strong>AI Upscaling pipeline</strong>.</p>
+      
+      <p>I use a tool called <strong>Topaz Photo AI</strong>. I set it to the "Anime" model, which is specifically trained to recognize line art and flat colors. This tool removes the "noise" (those little static-looking dots) and fills in the gaps to create a crisp 3840x2160 image. This is the difference between a "good" wallpaper and a "pro" wallpaper.</p>
+
+      <h2>Phase 3: Deep Color Grading in Photoshop</h2>
+      <p>Once the image is 4K, it's time for the artistic part. I bring the file into Adobe Photoshop. My goal isn't just to make the anime look "better," it's to give it the <strong>Only_dias signature look</strong>: Deep blacks, vibrant cyans, and neon glows.</p>
+
+      <h3>The "Curve" Strategy</h3>
+      <p>I always start with a <strong>Curves Adjustment Layer</strong>. I create an "S-Curve" by slightly dropping the shadows and raising the highlights. This adds "depth" to the image. For characters like Gojo or Sukuna, I "crush" the blacks (moving the bottom left point to the right) to make the image feel more intense and moody.</p>
+
+      <h3>Glow and Lighting</h3>
+      <p>To make eyes or magic effects glow, I use this specific technique:</p>
+      <ol>
+        <li>Create a new empty layer.</li>
+        <li>Set the blending mode to <strong>"Linear Dodge (Add)"</strong>.</li>
+        <li>Use a soft brush (0% hardness) with a very low opacity (10-20%).</li>
+        <li>Gently tap the areas you want to glow.</li>
+      </ol>
+      <p>This adds a realistic "Bloom" that makes it look like the light is actually coming from inside your screen.</p>
+
+      <h2>Phase 4: Finalizing in Canva</h2>
+      <p>Wait, Canva? Yes! While Photoshop is for the heavy lifting, I use Canva for the finishing touches, especially when I'm making <strong>Matching PFPs</strong> or social media thumbnails. Canva's typography engine is much faster for quickly testing out different font styles. It allows me to create consistent branding for my TikTok channel while maintaining the 4K quality I developed in Photoshop.</p>
+
+      <h2>Conclusion: Practice makes Perfect</h2>
+      <p>My first edits were terrible. They were oversaturated, blurry, and messy. But by understanding the relationship between source quality and post-processing, I was able to build a channel and a community. This website is my way of giving back to you guys. Every download helps me continue making these tutorials and collections.</p>
+
+      <p>Want to see a specific tutorial? Head over to my <a href="/contact">Contact Page</a> or send me a message on TikTok!</p>
     `
   },
   {
@@ -222,86 +317,6 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'blue-lock-egoist-aesthetic',
-    title: 'Blue Lock: Visualizing the Ego',
-    excerpt: 'Blue Lock turns aura into a visual weapon. Here is how I capture the intensity of Isagi\'s puzzle pieces.',
-    date: '2026-01-21',
-    author: 'Only_dias',
-    tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
-    content: `
-      <h2>The Monster Inside</h2>
-      <p>Blue Lock isn't a normal sports anime. It's a battle anime. The way the show visualizes "ego"—as green flames, chains, or monsters—is pure hype. Isagi's signature effect, the "Puzzle Pieces," is one of the coolest visual metaphors I've seen.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-green-400/50 shadow-[0_0_20px_rgba(74,222,128,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg" alt="Isagi Yoichi Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Calibrating the "Blue Lock" Green</h2>
-      <p>The show uses a very specific shade of neon green/blue for Isagi's aura. It's not quite teal, not quite lime. Getting this color right in Photoshop is tricky.</p>
-      <p>I use the "Camera Raw Filter" to shift the Hue of the Greens toward Cyan and the Blues toward Green until they meet in the middle. Then I crank the Luminance up. This makes the aura look like it's glowing radioactively, which perfectly fits the intense, "toxic" vibe of the Blue Lock facility.</p>
-    `
-  },
-  {
-    slug: 'dragon-ball-legends',
-    title: 'Dragon Ball: Timeless Legends in 4K',
-    excerpt: 'From the Shintani style of Broly to the CGI of Super Hero. Celebrating the visual evolution of Goku.',
-    date: '2026-01-20',
-    author: 'Only_dias',
-    tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
-    content: `
-      <h2>The OG Shonen Evolution</h2>
-      <p>Dragon Ball has been around forever, but its art style keeps changing. Personally, I am obsessed with the Naohiro Shintani style from the <em>Broly</em> movie. It brought back the soft, rounder edges of the 90s but with modern animation fluidity.</p>
-
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-400/50 shadow-[0_0_20px_rgba(251,146,60,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068820/wallpapers/Dragon%20Ball/1.jpg" alt="Dragon Ball Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Aura Power & Transparency</h2>
-      <p>Editing Dragon Ball wallpapers is all about the Aura. Super Saiyan auras are semi-transparent and glowing. If you just screenshot them, they often look messy against the background.</p>
-      <p>I spend a lot of time "cleaning" the aura. I use a soft eraser to smooth out the edges of the glow, making it fade naturally into the black background. I also add a "Hard Light" layer with the aura's color (Gold for SSJ, Blue for SSB) to paint light onto Goku's clothes, making it feel like the aura is actually illuminating him.</p>
-    `
-  },
-  {
-    slug: 'miku-nakano-quintessential-quintpulets',
-    title: 'Miku Nakano: The Cult of the Headphones',
-    excerpt: 'Why Miku consistently tops the popularity polls and why her character design is a goldmine for editors.',
-    date: '2026-01-19',
-    author: 'Only_dias',
-    tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
-    content: `
-      <h2>Headphones On, World Off</h2>
-      <p>In a show with five identical faces, character design comes down to accessories and expression. Miku's blue Audio-Technica-style headphones aren't just an accessory; they're a barrier she puts up against the world. That resonates with a lot of people (including me).</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-300/50 shadow-[0_0_20px_rgba(147,197,253,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043967/wallpapers/Miku%20Nakano/1_1.jpg" alt="Miku Nakano Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>The Shy Aesthetic</h2>
-      <p>Miku's color palette is soft blues and warm browns. Unlike the high-contrast neon edits I do for action anime, Miku wallpapers get the "Lo-Fi" treatment.</p>
-      <p>I add a slight noise texture and lower the contrast to make the image feel softer and more comfortable. I also often vignette the edges heavily to draw focus to her expression—usually a pout or a shy glance. It creates a feeling of intimacy that works perfectly for a phone wallpaper you look at 50 times a day.</p>
-    `
-  },
-  {
-    slug: 'nature-anime-scenery',
-    title: 'The Peace of Anime Nature Scenery',
-    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of Makoto Shinkai and others.',
-    date: '2026-01-18',
-    author: 'Only_dias',
-    tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
-    content: `
-      <h2>Background Artistry</h2>
-      <p>We often focus on the characters, but the background artists at studios like CoMix Wave Films (creators of <em>Your Name</em>) and Kyoto Animation are on another level. The way they render clouds, water reflections, and light shafts is photorealistic yet stylized.</p>
-
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp" alt="Nature Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>The Challenge of Upscaling Nature</h2>
-      <p>Upscaling nature shots is actually harder than characters. AI models are trained on faces. When you feed them a picture of a forest, they sometimes turn the leaves into weird, mushy blobs.</p>
-      <p>To fix this, I use a model specifically trained on "Digital Art" rather than "Photography." I also go in and manually sharpen key details like the edges of clouds or the ripples in water using the "Unsharp Mask" filter in Photoshop. The goal is to keep that crisp, refreshing feeling of a summer day that anime captures so well.</p>
-    `
-  },
-  {
     slug: 'makima-chainsaw-man-control',
     title: 'Makima: The Art of Control',
     excerpt: 'Makima is terrifying and mesmerizing. Here is how I edit the Control Devil to capture her unsettling presence.',
@@ -319,54 +334,6 @@ export const blogPosts: BlogPost[] = [
       <h2>Desaturation and Red</h2>
       <p>My color palette for Makima is extremely strict: Black, White, and Deep Red. I usually desaturate the entire background to grayscale, leaving only Makima’s hair and tie in color. This "Selective Color" technique is a classic, but it works so well here because it isolates her as the only "living" thing in the frame.</p>
       <p>I also add a subtle "film scratch" overlay. Unlike the grainy noise I use for Denji, Makima gets clean, sharp scratches, representing the calculated, precise nature of her control.</p>
-    `
-  },
-  {
-    slug: 'yor-forger-spy-x-family-assassin',
-    title: 'Yor Forger: The Thorn Princess Aesthetic',
-    excerpt: 'Balancing the gentle mother and the ruthless assassin. A look at my Spy x Family edits.',
-    date: '2026-01-16',
-    author: 'Only_dias',
-    tags: ['Spy x Family', 'Yor Forger', 'Assassin', 'Black'],
-    content: `
-      <h2>Two Sides of the Same Coin</h2>
-      <p>Yor Forger is the perfect example of "gap moe"—a sweet, airheaded mom who can kick a car across the street. Visually, her "Thorn Princess" assassin outfit is sleek, dangerous, and incredibly stylish.</p>
-
-      <h2>Editing the Black Dress</h2>
-      <p>Black clothing in anime can often look flat and undefined. To fix this in a wallpaper, I use the "Levels" adjustment in Photoshop. I lift the black point slightly so it's a dark charcoal grey, which reveals the line art and folds in her dress.</p>
-      <p>Then, I paint in rim lighting. Since her dress is black, I can use almost any color for the backlight. I usually go with a deep crimson red to match her eyes and weapon handles. This separation from the background prevents her from looking like a floating head.</p>
-    `
-  },
-  {
-    slug: 'power-chainsaw-man-chaos',
-    title: 'Power: The Blood Fiend Energy',
-    excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too.',
-    date: '2026-01-15',
-    author: 'Only_dias',
-    tags: ['Chainsaw Man', 'Power', 'Blood', 'Energy'],
-    content: `
-      <h2>The Best Worst Girl</h2>
-      <p>Power is a fan favorite for a reason. She brings a chaotic energy that is incredibly fun to edit. Unlike the composed Makima edits, Power's wallpapers are full of splatters, heavy grain, and jagged text.</p>
-
-      <h2>The "Blood" Texture</h2>
-      <p>To really sell the "Blood Fiend" vibe, I use custom blood splatter brushes. I paint them on a layer behind her and set the blending mode to "Multiply" so they darken the background. I also use a "Gradient Map" set to Dark Red/Bright Red to tint the shadows of the entire image, giving it a cohesive, bloody atmosphere.</p>
-      <p>For her horns, I add a subtle inner glow to make them pop against her blonde hair.</p>
-    `
-  },
-  {
-    slug: 'naruto-transformations',
-    title: 'Naruto: The Evolution of transformations',
-    excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
-    date: '2026-01-14',
-    author: 'Only_dias',
-    tags: ['Naruto', 'Shippuden', 'Kurama', 'Orange'],
-    content: `
-      <h2>Growing Up with Naruto</h2>
-      <p>Like many of you, I grew up watching Naruto. Seeing his visual evolution is nostalgic. The transition from the rough, hand-drawn style of Part 1 to the crisp, digital effects of Boruto offers a lot of variety for editors.</p>
-
-      <h2>Handling Chakra Glow</h2>
-      <p>Naruto's chakra modes are pure light. The challenge is making them look bright without blowing out the details of his face. My trick is to duplicate the character layer, apply a heavy Gaussian Blur to the bottom layer, and set it to "Screen" mode.</p>
-      <p>This creates a soft, diffuse glow that radiates outward, simulating how light actually behaves. I then use a sharp brush to reinforce the black outlines of his whiskers and eyes so his expression isn't lost in the light.</p>
     `
   },
   {
@@ -407,268 +374,6 @@ export const blogPosts: BlogPost[] = [
       <h2>Grime and Texture</h2>
       <p>Attack on Titan is a dirty world. Characters are covered in dust, blood, and steam. I don't airbrush Mikasa's face to be perfect porcelain. I enhance the grime.</p>
       <p>I use a "Sharpen" filter on her ODM gear to make the metal look cold and hard, and I add a smoke texture overlay to simulate the steam from the titan kills. It makes the wallpaper feel like a freeze-frame from a battle.</p>
-    `
-  },
-  {
-    slug: 'cyberpunk-edgerunners-lucy',
-    title: 'Lucy from Edgerunners: Neon Melancholy',
-    excerpt: 'The show that broke our hearts also gave us the best visuals. Editing the Moon scene.',
-    date: '2026-01-11',
-    author: 'Only_dias',
-    tags: ['Cyberpunk', 'Lucy', 'Moon', 'Neon'],
-    content: `
-      <h2>I Really Want to Stay at Your House</h2>
-      <p>I can't hear that song without tearing up. Lucy's character design—the iridescent hair, the monowire—is pure cyberpunk perfection. But her best wallpapers are the quiet moments on the moon.</p>
-
-      <h2>Iridescent Hair</h2>
-      <p>Lucy's hair changes color depending on the light. To replicate this, I paint highlights with a multi-colored brush (Cyan, Magenta, Yellow) on a "Color Dodge" layer. It gives her hair that shimmering, holographic look that defines the show's aesthetic.</p>
-      <p>I also always pump up the "bloom" on the moon in the background. It represents her dream, so it should shine the brightest.</p>
-    `
-  },
-  {
-    slug: 'vagabond-art-style',
-    title: 'Vagabond: The Pinnacle of Manga Art',
-    excerpt: 'Inoue\'s art is legendary. Here is how I adapt black and white manga panels into high-res wallpapers.',
-    date: '2026-01-10',
-    author: 'Only_dias',
-    tags: ['Manga', 'Vagabond', 'Musashi', 'Black and White'],
-    content: `
-      <h2>Brushstrokes of a Master</h2>
-      <p>Takehiko Inoue paints with ink. His brushstrokes are visible, raw, and full of emotion. When turning <em>Vagabond</em> panels into wallpapers, the worst thing you can do is vectorizing or smoothing them.</p>
-
-      <h2>Paper Texture</h2>
-      <p>A pure white #FFFFFF background hurts the eyes on a desktop. Instead, I overlay a "Rice Paper" or "Canvas" texture on the background. It turns the white into a soft, textured cream color.</p>
-      <p>This not only reduces eye strain but makes the digital wallpaper feel like a physical scroll. I then increase the contrast of the ink lines to make Musashi's expression pop off the "paper".</p>
-    `
-  },
-  {
-    slug: 'bleach-gear-aesthetic',
-    title: 'Bleach: The King of Drip',
-    excerpt: 'Kubo Tite is a fashion designer first, mangaka second. Celebrating the style of Bleach.',
-    date: '2026-01-09',
-    author: 'Only_dias',
-    tags: ['Bleach', 'Ichigo', 'Fashion', 'Style'],
-    content: `
-      <h2>The Drip God</h2>
-      <p>No anime character dresses better than the cast of Bleach in the opening credits. Kubo's sense of streetwear is unmatched. My Bleach wallpapers often focus on these "street" looks rather than the Shinigami robes.</p>
-
-      <h2>Urban Vibes</h2>
-      <p>For these edits, I use backgrounds that feature graffiti, concrete, and streetlights. I lean into a "Cool Grey" color palette with splashes of neon orange (for Ichigo's hair) or ice blue (for Rukia).</p>
-      <p>Typography plays a huge role here. I often add the character's name in a bold, graffiti-style font behind them to complete the album cover aesthetic.</p>
-    `
-  },
-  {
-    slug: 'evangelion-retro-future',
-    title: 'Evangelion: The Retro Future Aesthetic',
-    excerpt: 'The 90s aesthetic is back. How I edit Asuka and Rei to capture that vintage cel-shaded look.',
-    date: '2026-01-08',
-    author: 'Only_dias',
-    tags: ['Evangelion', 'Retro', '90s', 'Mecha'],
-    content: `
-      <h2>Cruel Angel's Thesis</h2>
-      <p><em>Neon Genesis Evangelion</em> has a very specific "cel animation" look that digital anime today doesn't have. The colors are flatter, the shadows are harsh, and there's a natural grain to the film.</p>
-
-      <h2>Fake VHS Effect</h2>
-      <p>To recreate this for a modern wallpaper, I apply a "VHS" effect. I separate the Red, Green, and Blue channels and nudge them slightly apart to create color fringing at the edges. I also add scanlines overlay at 10% opacity.</p>
-      <p>This makes the crisp 4K image look like a high-definition memory from 1995. It hits that nostalgia button perfectly.</p>
-    `
-  }
-];
-
-export function getAllPosts(): BlogPost[] {
-    title: 'How I Make My Viral Anime Edits for TikTok',
-    excerpt: 'A behind-the-scenes look at my editing workflow using Adobe Photoshop and Canva to create the content you see on @noxzx_kb.',
-    date: '2026-01-22',
-    author: 'Only_dias',
-    tags: ['Tutorial', 'TikTok', 'Editing', 'Photoshop'],
-    content: `
-      <h2>My Editing Secret Sauce</h2>
-      <p>Ever wondered how I create the smooth anime edits and static artwork you see on my TikTok channel? It's not just about slapping a filter on an image. It's about composition, color grading, and finding the perfect scene.</p>
-
-      <h2>The Tools I Use</h2>
-      <p>My workflow relies heavily on two main tools:</p>
-      <ul>
-        <li><strong>Adobe Photoshop:</strong> This is where the magic happens for high-quality upscaling, background removal, and complex color adjustments. I use it to clean up raw anime screenshots and turn them into 4K masterpieces.</li>
-        <li><strong>Canva:</strong> Believe it or not, Canva is amazing for quick layouts and adding typography. When I'm making PFP sets or promotional thumbnails for the site, Canva speeds up my workflow significantly.</li>
-      </ul>
-
-      <h2>From Screenshot to Wallpaper</h2>
-      <p>I start by hunting for high-quality RAW anime episodes. Once I find a frame I like, I take a screenshot and bring it into Photoshop. I use AI upscaling to get it to 4K resolution, then I manually fix any artifacts. Finally, I add my signature neon glow effects that you all know and love.</p>
-
-      <h2>Want to Learn More?</h2>
-      <p>Follow me on TikTok <a href="https://www.tiktok.com/@noxzx_kb" target="_blank">@noxzx_kb</a> for quick tutorials and speed edits!</p>
-    `
-  },
-  {
-    slug: 'best-matching-pfps-made-with-canva',
-    title: 'Creating the Best Matching Anime PFPs',
-    excerpt: 'How I design unique matching profile pictures for couples and besties using Canva and Photoshop.',
-    date: '2026-01-20',
-    author: 'Only_dias',
-    tags: ['PFPs', 'Icons', 'Design', 'Canva'],
-    content: `
-      <h2>Why Matching PFPs?</h2>
-      <p>Matching profile pictures (PFPs) are the ultimate way to show your bond with your duo, whether it's your gaming partner or your significant other. On my channel, the "Matching Icons" videos are some of the most requested content.</p>
-
-      <h2>The Design Process</h2>
-      <p>Creating a good matching set isn't just about cutting an image in half. I look for scenes where characters are interacting—looking at each other, holding hands, or fighting back-to-back.</p>
-      
-      <h3>Step-by-Step:</h3>
-      <ol>
-        <li><strong>Selection:</strong> I find a wide shot containing two characters.</li>
-        <li><strong>Crop & Center:</strong> using Photoshop, I crop the image into two perfect squares (1:1 ratio).</li>
-        <li><strong>Color Matching:</strong> I use Canva to ensure the color grading matches perfectly between both icons so they look cohesive on your discord or TikTok profiles.</li>
-        <li><strong>Enhancement:</strong> I sharpen the eyes and boost the saturation to make them pop on small mobile screens.</li>
-      </ol>
-
-      <h2>Download My Collection</h2>
-      <p>You don't need to make them yourself! I've uploaded my best creations to the <a href="/icons">Icons & PFPs</a> section of this site. Go check them out!</p>
-    `
-  },
-  {
-    slug: 'exclusive-4k-wallpapers-drop',
-    title: 'Exclusive 4K Wallpapers: Behind the Scenes',
-    excerpt: 'The story behind the latest "Only_dias" wallpaper drop and how I choose the characters for my next project.',
-    date: '2026-01-18',
-    author: 'Only_dias',
-    tags: ['Wallpapers', '4K', 'Update', 'Anime'],
-    content: `
-      <h2>Quality Over Quantity</h2>
-      <p>My goal with <strong>Only_dias Ocean</strong> is to provide the highest quality anime wallpapers on the internet. I'm tired of seeing blurry, pixelated JPEGs. That's why every single image on this site is manually curated and upscaled.</p>
-
-      <h2>Requesting Characters</h2>
-      <p>I read all your comments on TikTok! The latest addition of <em>Rias Gremory</em> and <em>Zero Two</em> came directly from your suggestions. I look for characters that have a strong aesthetic and fit the "Neon/Dark" vibe of the website.</p>
-
-      <h2>What's Next?</h2>
-      <p>I'm currently working on a new "Live Wallpapers" collection featuring animated loops made in After Effects. Stay tuned to the channel for the release announcement!</p>
-    `
-  },
-  {
-    slug: 'where-i-get-raw-anime-clips',
-    title: 'Finding the Best RAW Anime Scenes for Editing',
-    excerpt: 'The secret to a crisp edit is the source material. Here is how I find 1080p RAW anime episodes without subtitles.',
-    date: '2026-01-23',
-    author: 'Only_dias',
-    tags: ['Editing', 'Resources', 'Anime', 'Quality'],
-    content: `
-      <h2>No Subs, No Problems</h2>
-      <p>One of the most common questions I get in my TikTok comments is: <em>"Where do you find anime clips without subtitles?"</em> The truth is, editing with hard-subbed footage is a nightmare. It ruins the immersion and limits where you can crop.</p>
-      
-      <h2>My Sourcing Strategy</h2>
-      <p>I stick to "RAW" torrents or specific archive sites that host the Blu-ray versions of episodes. Blu-ray releases are far superior to TV broadcasts because they often fix animation errors and have a higher bitrate.</p>
-      
-      <h3>Why Bitrate Matters</h3>
-      <p>When you edit in Photoshop or After Effects, you're going to be applying effects, color correction, and re-rendering. If your source file is already compressed (low bitrate), your final result will look blocky. Always start with the highest quality file possible!</p>
-    `
-  },
-  {
-    slug: 'photoshop-vs-canva-workflow',
-    title: 'Photoshop vs Canva: When to Use Which?',
-    excerpt: 'Breaking down my hybrid workflow. Why I use Photoshop for the heavy lifting and Canva for the finishing touches.',
-    date: '2026-01-24',
-    author: 'Only_dias',
-    tags: ['Workflow', 'Tools', 'Comparison', 'Design'],
-    content: `
-      <h2>The Best of Both Worlds</h2>
-      <p>There's a weird debate online about Photoshop vs. Canva. As a creator, I say: <strong>use both</strong>. They serve completely different purposes in my content creation pipeline.</p>
-
-      <h2>Photoshop: The Heavy Lifter</h2>
-      <p>I use Adobe Photoshop for:</p>
-      <ul>
-        <li><strong>Isolating Subjects:</strong> The pen tool and Magic Wand are still unbeaten for cutting characters out of backgrounds.</li>
-        <li><strong>Lighting Effects:</strong> Adding that "glow" or neon rim light to a character requires the precise brush and blending mode controls Photoshop offers.</li>
-        <li><strong>Upscaling:</strong> Dealing with 4K resolutions.</li>
-      </ul>
-
-      <h2>Canva: The Speed Demon</h2>
-      <p>Once the heavy editing is done, I move to Canva for:</p>
-      <ul>
-        <li><strong>Thumbnails:</strong> Dragging and dropping my edited PNGs into templates.</li>
-        <li><strong>Typography:</strong> Canva has an amazing library of fonts that look great on mobile screens.</li>
-        <li><strong>Batching:</strong> Making 10 variations of a PFP set takes minutes in Canva, but much longer in Photoshop.</li>
-      </ul>
-    `
-  },
-  {
-    slug: 'my-top-5-canva-fonts',
-    title: 'Top 5 Canva Fonts for Anime Aesthetics',
-    excerpt: 'Stop using Arial. Here are the 5 fonts available in Canva that perfectly match the anime/manga vibe.',
-    date: '2026-01-25',
-    author: 'Only_dias',
-    tags: ['Fonts', 'Canva', 'Typography', 'Aesthetic'],
-    content: `
-      <h2>Typography Makes or Breaks the Edit</h2>
-      <p>You can have a perfect 4K wallpaper, but if you slap boring text on it, the vibe is ruined. Over the years, I've curated a list of go-to fonts in Canva that scream "Anime Aesthetic".</p>
-
-      <h2>The List</h2>
-      <ol>
-        <li><strong>Manga Temple:</strong> Perfect for that comic book / manga dialogue look. It feels authentic and hand-lettered.</li>
-        <li><strong>Tan Meringue:</strong> A retro, bubbly font that fits perfectly with 90s anime edits (think Sailor Moon vibes).</li>
-        <li><strong>Cyberpunk:</strong> Sharp, jagged edges. Essential for any dark/neon edits or tech-heavy characters.</li>
-        <li><strong>Pangram:</strong> A super clean sans-serif that looks modern and professional. Great for subtitles or minimalist info.</li>
-        <li><strong>Gagalin:</strong> Loud and punchy. I use this for my YouTube thumbnails or when I need text to grab attention on TikTok fyp.</li>
-      </ol>
-      
-      <p>Try mixing these up in your next edit and see the difference!</p>
-    `
-  },
-  {
-    slug: 'color-grading-secrets',
-    title: 'My Color Grading Secrets for "Neon" Edits',
-    excerpt: 'How I achieve that signature purple/cyan glow in my wallpapers using simple adjustment layers.',
-    date: '2026-01-26',
-    author: 'Only_dias',
-    tags: ['Color Grading', 'Tutorial', 'Style', 'Photoshop'],
-    content: `
-      <h2>The "Only_dias" Look</h2>
-      <p>If you scroll through my website, you'll notice a theme: deep blacks, vibrant cyans, and hot pinks. This isn't an accident; it's a specific color palette I've tuned over time.</p>
-
-      <h2>The Curve is Key</h2>
-      <p>In Photoshop, I almost always start with an <strong>S-Curve</strong> on the Curves adjustment layer. I crush the shadows (bring the bottom left point slightly to the right) to make the darks look "inky" rather than gray. This makes the bright colors pop way more.</p>
-
-      <h2>Selective Color</h2>
-      <p>This is the secret weapon. I go into the "Selective Color" adjustment layer:</p>
-      <ul>
-        <li><strong>Blues:</strong> I push the cyan slider up and remove yellow. This gives that icy, electric blue look.</li>
-        <li><strong>Magentas:</strong> I boost the saturation to turn dull reds into neon pinks.</li>
-      </ul>
-      <p>Don't be afraid to push the sliders to the extreme, then dial back the opacity of the layer until it looks right!</p>
-    `
-  },
-  {
-    slug: 'why-i-love-cyberpunk-aesthetic',
-    title: 'Why the Cyberpunk Aesthetic Fits Anime Perfectly',
-    excerpt: 'Exploring the connection between anime culture and the neon-soaked, high-tech visuals of cyberpunk.',
-    date: '2026-01-27',
-    author: 'Only_dias',
-    tags: ['Opinion', 'Aesthetic', 'Cyberpunk', 'Culture'],
-    content: `
-      <h2>High Tech, Low Life</h2>
-      <p>Cyberpunk isn't just a game; it's a visual language that anime has spoken for decades. From <em>Akira</em> to <em>Ghost in the Shell</em>, and now <em>Edgerunners</em>, the genre defines cool.</p>
-
-      <h2>Why It Works for Wallpapers</h2>
-      <p>For desktop customization, Cyberpunk is king. Why? <strong>Lighting.</strong></p>
-      <p>Most gaming setups are RGB-heavy. When you have a keyboard glowing red and a mouse glowing blue, a wallpaper that features rainy city streets, neon signs, and dark shadows bridges the gap between your physical room and your digital screen. It feels immersive.</p>
-
-      <p>That's why I prioritize uploading wallpapers with strong contrast and neon elements—they just look better on your setup!</p>
-    `
-  },
-  {
-    slug: 'growing-on-tiktok-as-editor',
-    title: 'Growing on TikTok as an Anime Editor in 2026',
-    excerpt: 'It is not just about the edit. It is about consistency, sound selection, and community.',
-    date: '2026-01-28',
-    author: 'Only_dias',
-    tags: ['TikTok', 'Growth', 'Advice', 'Social Media'],
-    content: `
-      <h2>The Algorithm has Changed</h2>
-      <p>Back in 2020, you could post a 5-second loop and get 100k likes. Today, TikTok wants stories. Even as an editor, you need to tell a story with your clips.</p>
-
-      <h2>Sound Selection</h2>
-      <p>50% of the edit is the audio. I spend hours scrolling through my FYP just saving sounds. I look for audios with clear "beat drops" where I can sync a scene transition. If the audio is trending, you're already halfway to a viral video.</p>
-
-      <h2>Engage with Your Comments</h2>
-      <p>I built <strong>Only_dias Ocean</strong> because you guys asked for the wallpapers in the comments. Listening to your audience isn't just nice, it's a content strategy. If 5 people ask for a <em>One Piece</em> wallpaper, I make it. That's how we grow together.</p>
     `
   }
 ];

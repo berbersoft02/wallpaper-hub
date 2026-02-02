@@ -65,6 +65,18 @@ export default function Navbar() {
           >
             BLOG
           </Link>
+          <Link
+            href="/about"
+            className="hover:text-white hover:underline decoration-wavy underline-offset-4 transition-all"
+          >
+            ABOUT
+          </Link>
+          <Link
+            href="/guide"
+            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
+          >
+            GUIDE
+          </Link>
           <Link 
             href="/contact" 
             className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all"
@@ -120,6 +132,20 @@ export default function Navbar() {
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
               BLOG
+            </Link>
+            <Link
+              href="/about"
+              onClick={() => setShowMobileMenu(false)}
+              className="font-pixel text-2xl text-white hover:text-white transition-all hover:underline decoration-wavy underline-offset-4"
+            >
+              ABOUT
+            </Link>
+            <Link
+              href="/guide"
+              onClick={() => setShowMobileMenu(false)}
+              className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
+            >
+              GUIDE
             </Link>
             <Link
               href="/contact"

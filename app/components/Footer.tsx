@@ -13,6 +13,14 @@ export default function Footer() {
            <span className="font-pixel text-2xl text-white drop-shadow-[0_0_12px_rgba(5,217,232,0.6)]">ONLY<span className="text-neon-cyan animate-pulse">_DIAS</span></span>
            <p className="font-mono text-gray-400 mt-2 text-sm">© 2026. All rights reserved. <a href="mailto:berbersoft@gmail.com" className="text-neon-cyan hover:text-neon-pink transition-colors hover:underline">berbersoft@gmail.com</a></p>
            
+           {/* Navigation Links */}
+           <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
+             <Link href="/about" className="text-gray-400 hover:text-neon-pink text-sm transition-colors">About Us</Link>
+             <Link href="/contact" className="text-gray-400 hover:text-neon-cyan text-sm transition-colors">Contact</Link>
+             <Link href="/guide" className="text-gray-400 hover:text-neon-purple text-sm transition-colors">Install Guide</Link>
+             <Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors">Blog</Link>
+           </div>
+
            {/* Legal Links */}
            <div className="flex gap-4 mt-3 justify-center md:justify-start">
              <Link 
