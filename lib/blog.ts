@@ -21,6 +21,10 @@ export const blogPosts: BlogPost[] = [
     content: `
       <h2>The Elf Who Lived a Thousand Years</h2>
       <p><em>Frieren: Beyond Journey's End</em> (Sousou no Frieren) has visually redefined what a fantasy anime can look like. The soft lighting, the watercolor-style backgrounds, and the intricate character designs are a masterpiece.</p>
+      
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp" alt="Frieren Wallpaper" class="object-cover w-full h-full" />
+      </div>
 
       <h2>Capturing the Atmosphere</h2>
       <p>For this drop, I wanted to focus on the <strong>atmosphere</strong> of the show. It's not just about action scenes; it's about the quiet moments. Frieren reading a grimoire by a campfire, Fern pouting, Stark engaging a dragon.</p>
@@ -36,6 +40,68 @@ export const blogPosts: BlogPost[] = [
       <p>The anime uses a very soft, almost hazy filter. To make these suitable for wallpapers, I had to carefully sharpen the line art without destroying that painterly look. I utilized a custom "Smart Sharpen" filter in Photoshop and slightly boosted the vibrance of the greens and blues to match the "Only_dias" aesthetic.</p>
 
       <p>Check out the new <strong>Frieren</strong> category in the gallery now!</p>
+    `
+  },
+  {
+    slug: 'zero-two-aesthetic-icons',
+    title: 'Why Zero Two is Still the Queen of Aesthetics',
+    excerpt: 'Analyzing the enduring popularity of Zero Two from Darling in the Franxx and sharing my favorite edits of her.',
+    date: '2026-01-30',
+    author: 'Only_dias',
+    tags: ['Zero Two', 'Darling in the Franxx', 'Waifu', 'Pink'],
+    content: `
+      <h2>The Pink Haired Icon</h2>
+      <p>It's been years since <em>Darling in the Franxx</em> aired, but <strong>Zero Two</strong> remains unmatched in the wallpaper community. Her character design—the pink hair, the red horns, the uniform—was practically built for aesthetic edits.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-neon-pink/50 shadow-[0_0_20px_rgba(255,42,109,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958378/wallpapers/Zero%20Two/3%20%282%29.jpg" alt="Zero Two Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>My Editing Approach</h2>
+      <p>When I edit Zero Two, I lean heavily into the <strong>Neon Pink</strong> and <strong>Cyan</strong> color scheme. This "vaporwave" palette complements her design perfectly.</p>
+      <p>For this specific wallpaper shown above, I isolated her from the original background and placed her against a custom glitch-art texture. I added a slight chromatic aberration effect (shifting the red and blue channels) to give it that "cyberpunk anime" feel.</p>
+      
+      <p>You can find 10+ variations of Zero Two in the <a href="/#gallery">gallery below</a>!</p>
+    `
+  },
+  {
+    slug: 'marin-kitagawa-cosplay-queen',
+    title: 'Marin Kitagawa: The Ultimate Gyaru Aesthetic',
+    excerpt: 'Marin brings a unique vibrant energy to any screen. Here is how I captured her personality in 4K.',
+    date: '2026-01-29',
+    author: 'Only_dias',
+    tags: ['Marin Kitagawa', 'My Dress-Up Darling', 'Gyaru', 'Vibrant'],
+    content: `
+      <h2>More Than Just a Cosplayer</h2>
+      <p>Marin Kitagawa from <em>My Dress-Up Darling</em> took the world by storm. Her expressions are so dynamic and detailed that finding good frames to screenshot is actually easy—the hard part is choosing just one!</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958120/wallpapers/Marin%20kitagawa/5.jpg" alt="Marin Kitagawa Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Color Grading for Marin</h2>
+      <p>Unlike the moody, dark edits I do for other characters, Marin requires <strong>brightness</strong>. I use a "warm" color grading curve, boosting the oranges and yellows to highlight her blonde hair and gradient eyes.</p>
+      <p>I also apply a "Soft Light" blending mode layer with a warm orange fill at 20% opacity to give the whole image a golden hour glow.</p>
+    `
+  },
+  {
+    slug: 'jujutsu-kaisen-gojo-satoru',
+    title: 'The Honored One: Gojo Satoru 4K Collection',
+    excerpt: 'He is the strongest, and his eyes make for the best wallpapers. A deep dive into my JJK collection.',
+    date: '2026-01-28',
+    author: 'Only_dias',
+    tags: ['JJK', 'Gojo Satoru', 'Eyes', 'Blue'],
+    content: `
+      <h2>Those Six Eyes</h2>
+      <p>Let's be honest: Gojo Satoru's eyes are the most beautiful thing in modern anime animation. MAPPA went all out, and so did I for these wallpapers.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/9_ysxuup.jpg" alt="Gojo Satoru Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>The "Infinite" Edit</h2>
+      <p>For Gojo, I focus on <strong>contrast</strong>. His domain expansion is void and dark, but his energy is bright blue. I use a "Linear Dodge (Add)" layer style in Photoshop to make his technique glow intensely against the black background.</p>
+      <p>This collection features him both with the blindfold (mysterious vibes) and without it (god-mode vibes).</p>
     `
   },
   {
