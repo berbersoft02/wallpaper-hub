@@ -522,20 +522,6 @@
       "name": "Nature",
       "category": "Special",
       "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/4_rwa0qe.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/5_z4fd2v.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/1_dk0oxr.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/2_tscru5.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/3_cbgmdo.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/8_y6ymzf.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/9_ugkrxd.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/10_w7sb8t.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/12_il8bk7.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/13_jcqovu.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/14_ocfeks.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/11_l6fjkf.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/6_hglq2g.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/2_vcenvc.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685653/3_fmxqwe.webp",
@@ -815,7 +801,20 @@
       "name": "Frieren",
       "category": "Anime",
       "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1/wallpapers/Frieren/placeholder.jpg"
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/4_rwa0qe.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/5_z4fd2v.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/1_dk0oxr.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/2_tscru5.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/3_cbgmdo.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/8_y6ymzf.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/9_ugkrxd.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/10_w7sb8t.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/12_il8bk7.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/13_jcqovu.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/14_ocfeks.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/11_l6fjkf.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/6_hglq2g.webp"
       ]
     }
   ]

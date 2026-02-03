@@ -25,6 +25,18 @@ export const blogPosts: BlogPost[] = [
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp" alt="Frieren Wallpaper" class="object-cover w-full h-full" />
       </div>
 
+      <h2>A Collection of Timeless Moments</h2>
+      <p>I didn't stop at just one scene. To truly capture the range of Frieren's travels, I upscaled over a dozen frames. Each one represents a different leg of their journey—from the snowy mountains of the North to the vibrant, sun-drenched fields of the coastal regions.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/4_rwa0qe.webp" alt="Frieren 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/5_z4fd2v.webp" alt="Frieren 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
       <h2>The Technical Challenge: Softness vs. Clarity in 4K Resolution</h2>
       <p>The biggest challenge with editing Frieren frames is the show's inherent softness. Unlike <em>Jujutsu Kaisen</em> or <em>Demon Slayer</em>, which use sharp, high-contrast outlines, Frieren uses a diffusion filter that gives everything a dreamlike, painterly glow. This is beautiful on TV, but when you upscale it to a 4K desktop monitor, it can look "muddy" or out of focus if not handled correctly. The painterly backgrounds are rendered with such delicacy that standard upscaling often destroys the texture.</p>
       
@@ -36,6 +48,15 @@ export const blogPosts: BlogPost[] = [
       <p>One of the most requested scenes was Frieren in the field of Blue Moon Weed flowers. This scene is a masterclass in lighting and atmosphere. The flowers give off a cold, ethereal blue light that reflects off Frieren's hair and clothes. To make this work as a wallpaper, I spent nearly two hours on <strong>Advanced Color Grading</strong> to ensure the colors look deep and vibrant on modern OLED screens. I wanted the blues to feel "electric" yet natural, capturing the magical essence of the scene.</p>
       
       <p>I used "Selective Color" adjustment layers to target the Cyans and Blues specifically. By removing the yellow from the blues and slightly increasing the black in the cyan channel, I was able to make the glow feel "colder" and more magical. I also added a "Radial Gradient" map in the center of the flowers set to "Color Dodge" at 10% opacity to simulate the actual light emission. This level of detail is what makes a wallpaper feel like a premium piece of art rather than a simple screenshot. I want the user to feel like they are standing in that field with Frieren, feeling the magic in the air. It's about immersion.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/1_dk0oxr.webp" alt="Frieren Nature 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/3_cbgmdo.webp" alt="Frieren Scene 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h3>Collection Highlights & Usage Tips:</h3>
       <ul>
