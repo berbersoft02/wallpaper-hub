@@ -12,42 +12,83 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'frieren-beyond-journeys-end-wallpaper-collection-expanded',
-    title: 'The Magic of Frieren: New 4K Wallpaper Collection and Visual Analysis of Melancholy',
-    excerpt: 'A deep dive into the visual language of Sousou no Frieren and a behind-the-scenes look at how we upscaled this breathtaking collection to 4K.',
+    title: 'The Magic of Frieren: My 4K Wallpaper Collection + Editing Breakdown',
+    excerpt: 'Découvrez ma collection exclusive de wallpapers Frieren en 4K. Processus d’édition détaillé, conseils pour ton setup, et pourquoi cette série change tout en anime backgrounds.',
     date: '2026-01-31',
     author: 'Only_dias',
-    tags: ['Frieren', 'Anime', '4K', 'Fantasy'],
+    tags: ['Frieren', 'Anime', '4K', 'Fantasy', 'Editing'],
     content: `
-      <h2>The Elf Who Lived a Thousand Years: A Visual Journey Through Time</h2>
-      <p>I still remember the first time I watched episode 1 of <em>Frieren: Beyond Journey's End</em>. I expected a typical fantasy adventure about defeating a demon king, but what I got was a masterclass in melancholy and visual storytelling. The way Madhouse animates the passage of time—the rustling of leaves, the slow drifting of clouds, and the changing seasons—is something I knew I had to capture in wallpaper form. Frieren's journey isn't about the destination; it's about the small, quiet moments that define a lifetime. This realization heavily influenced how I curated this collection. I wanted every image to feel like a memory frozen in time, capturing that elusive feeling of "Mono no aware."</p>
-      
+      <h2>Introduction: Why Frieren is Perfect for Wallpapers</h2>
+      <p><em>Frieren: Beyond Journey’s End</em> n’est pas juste une série d’anime—c’est une masterclass en <strong>beauté mélancolique</strong>. Les couleurs froides, les paysages vastes, les expressions calmes des personnages… tout ça fait de Frieren un rêve pour les wallpapers. Quand j’ai commencé à éditer des fonds d’écran pour Only_dias Ocean, Frieren était forcément dans les premières collections.</p>
+
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769982784/1_ktrrzf.jpg" alt="Frieren 4K Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769982784/1_ktrrzf.jpg" alt="Frieren 4K Masterpiece" class="object-cover w-full h-full" />
       </div>
 
-      <h2>The Technical Challenge: Softness vs. Clarity in 4K Resolution</h2>
-      <p>The biggest challenge with editing Frieren frames is the show's inherent softness. Unlike <em>Jujutsu Kaisen</em> or <em>Demon Slayer</em>, which use sharp, high-contrast outlines and intense color palettes, Frieren uses a diffusion filter that gives everything a dreamlike, painterly glow. This is beautiful on TV, but when you upscale it to a 4K desktop monitor, it can look "muddy" or out of focus if not handled correctly. The painterly backgrounds are rendered with such delicacy that standard upscaling often destroys the texture.</p>
-      
-      <p>To solve this, my workflow involved a multi-step process. First, I use a specialized AI model called <strong>Real-ESRGAN</strong> to handle the initial 4x upscale. This model is great because it preserves the "painterly" textures of the background while sharpening the lines of the characters. However, even AI isn't perfect; it often introduces artifacts. I then bring the 4K image into Adobe Photoshop for manual retouching and color restoration. I want the final product to look like it was drawn in 4K from the start.</p>
-
-      <p>In Photoshop, I use a <strong>"High Pass" filter</strong> technique to restore lost detail without introducing noise. I duplicate the base layer, apply High Pass with a radius of exactly 1.2 pixels, and set the blending mode to "Overlay." This specifically brings out the micro-details in Frieren's white hair and the texture of her staff. To prevent the background from becoming too sharp and losing its watercolor feel, I use a layer mask to paint out the High Pass effect everywhere except on the characters themselves. This creates a beautiful separation between the subjects and the environment, making the characters "pop" without looking artificial.</p>
-
-      <h2>The Art of the Blue Moon Weed: Color Grading for High-End Screens</h2>
-      <p>One of the most requested scenes was Frieren in the field of Blue Moon Weed flowers. This scene is a masterclass in lighting and atmosphere. The flowers give off a cold, ethereal blue light that reflects off Frieren's hair and clothes. To make this work as a wallpaper, I spent nearly two hours on <strong>Advanced Color Grading</strong> to ensure the colors look deep and vibrant on modern OLED screens. I wanted the blues to feel "electric" yet natural, capturing the magical essence of the scene.</p>
-      
-      <p>I used "Selective Color" adjustment layers to target the Cyans and Blues specifically. By removing the yellow from the blues and slightly increasing the black in the cyan channel, I was able to make the glow feel "colder" and more magical. I also added a "Radial Gradient" map in the center of the flowers set to "Color Dodge" at 10% opacity to simulate the actual light emission. This level of detail is what makes a wallpaper feel like a premium piece of art rather than a simple screenshot. I want the user to feel like they are standing in that field with Frieren, feeling the magic in the air. It's about immersion.</p>
-
-      <h3>Collection Highlights & Usage Tips:</h3>
+      <p>Dans cet article, je te montre :</p>
       <ul>
-        <li><strong>Frieren in the Flower Field:</strong> A serene, upscaled 4K shot of Frieren surrounded by the blue moon weed flowers. This is my top recommendation for a calming desktop setup that isn't too distracting during work. It pairs perfectly with a dark taskbar and minimalist icons.</li>
-        <li><strong>Fern's Magic Mastery:</strong> This wallpaper captures the sheer particle density of Fern's Zoltraak spell. The contrast between the dark forest and the bright blue magic makes this one pop on high-end screens. I manually added "bloom" effects to the magic circles to give them more impact and depth. It's a visually intense piece for fans of magical combat.</li>
-        <li><strong>The New Party:</strong> Group shots of the new party—Frieren, Fern, and Stark—walking towards the northern lands. I chose frames that use the "Rule of Thirds" to ensure your desktop icons won't cover the main subjects. This composition is essential for a functional and beautiful wallpaper. It tells the story of their journey every time you check your screen.</li>
+        <li>Comment j’ai sélectionné et édité ces images.</li>
+        <li>Pourquoi elles marchent si bien sur desktop et mobile.</li>
+        <li>Mes astuces pour les utiliser dans ton setup.</li>
+        <li>La galerie complète des wallpapers prêts à télécharger.</li>
+      </ul>
+      <p>Si tu aimes les vibes calmes et contemplatives, tu vas adorer cette collection.</p>
+
+      <h2>1. Choosing the Right Frames from Frieren</h2>
+      <p>Frieren a des centaines d’heures d’anime, mais toutes les scènes ne font pas de bons wallpapers. Pour cette collection, j’ai regardé la saison 1 et les épisodes clés pour trouver des frames qui cochent ces cases :</p>
+      <ul>
+        <li><strong>Composition ouverte</strong> : beaucoup d’espace vide pour les icônes desktop (Frieren au bord d’un lac, Fern dans un champ, Stark sous les étoiles).</li>
+        <li><strong>Palette froide</strong> : bleus, gris, verts doux—parfait pour les setups sombres ou minimalistes.</li>
+        <li><strong>Émotions subtiles</strong> : pas d’action explosive, mais des regards pensifs qui te calment.</li>
+      </ul>
+      <p>Exemple concret : la scène où Frieren regarde le ciel étoilé (épisode 1). La lune, les étoiles, son profil… c’est simple, mais ça capture l’essence de la série. J’ai évité les frames trop chargées (combats, dialogues) parce qu’elles saturent l’écran.</p>
+      <p>J’ai sélectionné 12 frames au total pour cette collection, toutes en 4K native après upscaling.</p>
+
+      <h2>2. My Editing Process for Frieren Wallpapers</h2>
+      <p>Voici exactement comment je transforme une frame brute en wallpaper 4K propre. Ça prend 20–60 minutes par image.</p>
+      
+      <h3>Étape 1: Nettoyage et Upscaling</h3>
+      <p>Je commence par supprimer les sous‑titres, logos, artefacts de compression. J'utilise un upscale avec un outil spécialisé anime (pas de Topaz pour garder le style 2D authentique). Un denoise léger est appliqué pour les ombres sans tuer les lignes fines des cheveux ou des vêtements. Résultat : une image nette, prête pour 3840x2160.</p>
+
+      <h3>Étape 2: Color Grading pour l’Âme de Frieren</h3>
+      <p>Frieren, c’est du mélancolique et intemporel. Je vise :</p>
+      <ul>
+        <li><strong>Bleus froids dominants</strong> (ciel, eau, ombres) pour le calme.</li>
+        <li><strong>Highlights doux</strong> sur les cheveux blancs et la lune pour de la lumière sans agressivité.</li>
+        <li><strong>Contraste modéré</strong> : pas de noirs écrasés, tout reste lisible.</li>
+      </ul>
+      <p>Pour la frame du ciel étoilé, j’ai ajouté un léger gradient bleu nuit vers violet en haut, pour étendre l’espace et donner une vibe infinie. Saturation basse pour éviter la fatigue visuelle.</p>
+
+      <h3>Étape 3: Framing et Versions Multiples</h3>
+      <ul>
+        <li>Version <strong>desktop 16:9</strong> : Frieren décalée à droite, espace icônes à gauche.</li>
+        <li>Version <strong>ultrawide 21:9</strong> : paysage étiré pour plus d’immersion.</li>
+        <li>Version <strong>mobile 9:16</strong> : zoom sur le visage, fond étendu en bas.</li>
       </ul>
 
-      <h2>Why Frieren Matters in the Modern Era: A Conclusion</h2>
-      <p>Frieren is a story about appreciating the small moments and the people we encounter along the way. In a world where we are constantly rushing and overwhelmed by information, having a wallpaper that reminds you to "stop and smell the flowers" (literally, in Frieren's case) can actually improve your productivity and mental space. It acts as a visual anchor, grounding you in the present moment. This collection is for those who want their desktop to feel like a window into a quieter, more magical world. It's not just a wallpaper; it's a philosophy of living beautifully.</p>
+      <h2>3. Why Frieren Wallpapers Work So Well on Your Setup</h2>
+      <p>Les fonds d’écran Frieren ont un super “taux de conservation” : tu les gardes des semaines sans t’en lasser. Voici pourquoi :</p>
+      <ul>
+        <li><strong>Minimalisme naturel</strong> : pas besoin de recadrer, l’anime est déjà épuré.</li>
+        <li><strong>Vibes apaisantes</strong> : idéal pour coder, lire, ou travailler tard le soir.</li>
+        <li><strong>Polyvalence</strong> : marche en mode sombre (noir ambiant), clair, ou avec LED RGB bleues.</li>
+      </ul>
+      <p><strong>Conseils d’utilisation</strong> : Associe avec un thème Windows/iOS bleu nuit ou gris pour la cohérence. Utilise Wallpaper Engine pour un léger effet parallax si tu veux du mouvement subtil. Évite les setups trop colorés (RGB roses/rouges)—Frieren préfère le calme.</p>
 
-      <p>Check out the new <strong>Frieren</strong> category in the gallery now! I'll be adding more shots from the "First Class Mage Exam" arc soon, so keep an eye on the updates. Let me know on TikTok which scene I should upscale next—I'm always looking for new challenges to push the limits of my editing skills and bring your favorite moments to life in 4K!</p>
+      <h2>4. The Complete Frieren 4K Wallpaper Gallery</h2>
+      <p>Voici la collection complète. Toutes en PNG haute qualité, optimisées pour 4K/5K.</p>
+      <ul>
+        <li><strong>Wallpaper 1: Frieren under the stars</strong> – Version desktop.</li>
+        <li><strong>Wallpaper 2: Fern in the field</strong> – Mobile + ultrawide.</li>
+        <li><strong>Wallpaper 3: Stark at camp</strong> – Minimalist setup.</li>
+      </ul>
+      <p><em>Check out the full Frieren category in our gallery to download the entire 12-image pack!</em></p>
+
+      <h2>5. Respecting the Creators Behind Frieren</h2>
+      <p>Frieren est une œuvre de Madhouse et du studio Kansai Animation, avec des backgrounds magnifiques. Mes edits sont des hommages pour usage personnel — pas de revente, pas de NSFW. Si tu utilises ces wallpapers, soutiens la série via Crunchyroll, le manga, ou le merch officiel.</p>
+
+      <h2>6. What’s Next for Frieren Collection?</h2>
+      <p>Si tu veux plus : Dis‑moi en commentaire ou TikTok (@Only_dias) quelles scènes de S2 tu aimerais voir. Demande des versions custom (mood spécifique, ratio). Merci d’avoir lu ! Retourne à la home pour d’autres collections comme Zero Two ou Marin.</p>
     `
   },
   {
