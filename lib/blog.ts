@@ -21,38 +21,16 @@ export const blogPosts: BlogPost[] = [
       <h2>The Elf Who Lived a Thousand Years: A Visual Journey Through Time</h2>
       <p>I still remember the first time I watched episode 1 of <em>Frieren: Beyond Journey's End</em>. I expected a typical fantasy adventure about defeating a demon king, but what I got was a masterclass in melancholy and visual storytelling. The way Madhouse animates the passage of time—the rustling of leaves, the slow drifting of clouds, and the changing seasons—is something I knew I had to capture in wallpaper form. Frieren's journey isn't about the destination; it's about the small, quiet moments that define a lifetime. This realization heavily influenced how I curated this collection. I wanted every image to feel like a memory frozen in time, capturing that elusive feeling of "Mono no aware."</p>
       
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp" alt="Frieren Wallpaper" class="object-cover w-full h-full" />
-      </div>
-
       <h2>The Technical Challenge: Softness vs. Clarity in 4K Resolution</h2>
       <p>The biggest challenge with editing Frieren frames is the show's inherent softness. Unlike <em>Jujutsu Kaisen</em> or <em>Demon Slayer</em>, which use sharp, high-contrast outlines and intense color palettes, Frieren uses a diffusion filter that gives everything a dreamlike, painterly glow. This is beautiful on TV, but when you upscale it to a 4K desktop monitor, it can look "muddy" or out of focus if not handled correctly. The painterly backgrounds are rendered with such delicacy that standard upscaling often destroys the texture.</p>
       
       <p>To solve this, my workflow involved a multi-step process. First, I use a specialized AI model called <strong>Real-ESRGAN</strong> to handle the initial 4x upscale. This model is great because it preserves the "painterly" textures of the background while sharpening the lines of the characters. However, even AI isn't perfect; it often introduces artifacts. I then bring the 4K image into Adobe Photoshop for manual retouching and color restoration. I want the final product to look like it was drawn in 4K from the start.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/8_y6ymzf.webp" alt="Frieren Character 4K" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/9_ugkrxd.webp" alt="Frieren Portrait 4K" class="object-cover w-full h-full" />
-        </div>
-      </div>
 
       <p>In Photoshop, I use a <strong>"High Pass" filter</strong> technique to restore lost detail without introducing noise. I duplicate the base layer, apply High Pass with a radius of exactly 1.2 pixels, and set the blending mode to "Overlay." This specifically brings out the micro-details in Frieren's white hair and the texture of her staff. To prevent the background from becoming too sharp and losing its watercolor feel, I use a layer mask to paint out the High Pass effect everywhere except on the characters themselves. This creates a beautiful separation between the subjects and the environment, making the characters "pop" without looking artificial.</p>
 
       <h2>The Art of the Blue Moon Weed: Color Grading for High-End Screens</h2>
       <p>One of the most requested scenes was Frieren in the field of Blue Moon Weed flowers. This scene is a masterclass in lighting and atmosphere. The flowers give off a cold, ethereal blue light that reflects off Frieren's hair and clothes. To make this work as a wallpaper, I spent nearly two hours on <strong>Advanced Color Grading</strong> to ensure the colors look deep and vibrant on modern OLED screens. I wanted the blues to feel "electric" yet natural, capturing the magical essence of the scene.</p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/10_w7sb8t.webp" alt="Frieren Glow 4K" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/12_il8bk7.webp" alt="Frieren Magic 4K" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
       <p>I used "Selective Color" adjustment layers to target the Cyans and Blues specifically. By removing the yellow from the blues and slightly increasing the black in the cyan channel, I was able to make the glow feel "colder" and more magical. I also added a "Radial Gradient" map in the center of the flowers set to "Color Dodge" at 10% opacity to simulate the actual light emission. This level of detail is what makes a wallpaper feel like a premium piece of art rather than a simple screenshot. I want the user to feel like they are standing in that field with Frieren, feeling the magic in the air. It's about immersion.</p>
 
       <h3>Collection Highlights & Usage Tips:</h3>
@@ -67,7 +45,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Check out the new <strong>Frieren</strong> category in the gallery now! I'll be adding more shots from the "First Class Mage Exam" arc soon, so keep an eye on the updates. Let me know on TikTok which scene I should upscale next—I'm always looking for new challenges to push the limits of my editing skills and bring your favorite moments to life in 4K!</p>
     `
-  },
+  },,
   {
     slug: 'attack-on-titan-cinematic-brutality-long',
     title: 'Attack on Titan: The Final Season\'s Cinematic Brutality and Editing Mastery in 4K',
