@@ -30,6 +30,15 @@ export const blogPosts: BlogPost[] = [
       
       <p>To solve this, my workflow involved a multi-step process. First, I use a specialized AI model called <strong>Real-ESRGAN</strong> to handle the initial 4x upscale. This model is great because it preserves the "painterly" textures of the background while sharpening the lines of the characters. However, even AI isn't perfect; it often introduces artifacts. I then bring the 4K image into Adobe Photoshop for manual retouching and color restoration. I want the final product to look like it was drawn in 4K from the start.</p>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/8_y6ymzf.webp" alt="Frieren Character 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/9_ugkrxd.webp" alt="Frieren Portrait 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
       <p>In Photoshop, I use a <strong>"High Pass" filter</strong> technique to restore lost detail without introducing noise. I duplicate the base layer, apply High Pass with a radius of exactly 1.2 pixels, and set the blending mode to "Overlay." This specifically brings out the micro-details in Frieren's white hair and the texture of her staff. To prevent the background from becoming too sharp and losing its watercolor feel, I use a layer mask to paint out the High Pass effect everywhere except on the characters themselves. This creates a beautiful separation between the subjects and the environment, making the characters "pop" without looking artificial.</p>
 
       <h2>The Art of the Blue Moon Weed: Color Grading for High-End Screens</h2>
@@ -37,10 +46,10 @@ export const blogPosts: BlogPost[] = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/1_dk0oxr.webp" alt="Frieren Flower Field" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/10_w7sb8t.webp" alt="Frieren Glow 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/3_cbgmdo.webp" alt="Frieren Journey" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/12_il8bk7.webp" alt="Frieren Magic 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -272,7 +281,7 @@ export const blogPosts: BlogPost[] = [
       <h2>The "Infinite" Edit Technique: Mastering Contrast and Glow for OLED Perfection</h2>
       <p>For Gojo wallpapers, I focus purely on <strong>High Contrast and Visual Depth</strong>. His Limitless technique is essentially a manipulation of space and infinity, often represented as a void or a distortion of reality where nothing can reach him. To replicate this feeling, I "crush" the blacks in the background until they are true #000000. This looks incredible on modern AMOLED phone screens because the pixels actually turn off, saving your battery while making the bright blue of Gojo's technique look like it's literally floating in empty, infinite space. It's a premium, high-end look that really makes the Six Eyes pop and commands attention. It's the ultimate power fantasy for your screen. Your phone becomes a portal to another dimension. It's about dominance.</p>
       
-      <p>To make his "Hollow Purple" or "Unlimited Void" glow, I use a specific brush technique that I've perfected over hundreds of edits. I use a soft round brush set to 0% hardness with a bright electric blue (or purple) color. I paint over the focal points on a new layer and set the blending mode to <strong>"Linear Dodge (Add)"</strong>. I then duplicate this layer and apply a heavy 100px Gaussian Blur to create a soft ambient "Bloom" that spills over onto his clothes and hair. This creates that intense, over-exposed light effect that makes it look like real cursed energy is radiating from your screen. It's the "Only_dias" touch that makes our wallpapers stand out from the generic ones you find elsewhere. You can almost feel the spiritual pressure. It's art you can feel. It's power in your pocket.</p>
+      <p>To make his "Hollow Purple" or "Unlimited Void" glow, I use a specific brush technique that I've refined over hundreds of edits. I use a soft round brush set to 0% hardness with a bright electric blue (or purple) color. I paint over the focal points on a new layer and set the blending mode to <strong>"Linear Dodge (Add)"</strong>. I then duplicate this layer and apply a heavy 100px Gaussian Blur to create a soft ambient "Bloom" that spills over onto his clothes and hair. This creates that intense, over-exposed light effect that makes it look like real cursed energy is radiating from your screen. It's the "Only_dias" touch that makes our wallpapers stand out from the generic ones you find elsewhere. You can almost feel the spiritual pressure. It's art you can feel. It's power in your pocket.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
@@ -333,15 +342,28 @@ export const blogPosts: BlogPost[] = [
     tags: ['Lycoris Recoil', 'Chisato', 'Action', 'Red'],
     content: `
       <h2>The Strongest Lycoris: A Visual Paradox in Signal Red and Urban Grey</h2>
-      <p>Chisato Nishikigi is such a fun character to work with because she's a visual and personality paradox: a bubbly, kind-hearted girl who loves cafes, sweets, and helping people, but is also the most skilled and lethal gunman in Japan. Visually, her "Thorn Princess" assassin outfit is one of the most elegant, stylish, and dangerous designs in modern anime. It's sleek, stylish, and carries a certain "Gothic" and "Lethal" charm that I love to edit. Capturing both her deadly side and her gentle side in this 4K collection was a fun challenge in contrast and lighting. She is the mother of the year and the assassin of the night. It's about that perfect balance.</p>
-
-      <h2>Editing the Black Dress: Lifting the Midtones for High Resolution</h2>
-      <p>Black clothing in anime can often look flat, "dead," and completely undefined on digital screens, especially on mobile. If you just leave it as-is, it looks like a black hole in the middle of your wallpaper where no light can escape. To fix this for professional 4K displays, I use the <strong>"Levels" and "Curves"</strong> adjustments in Photoshop. I lift the black point slightly so it becomes a very dark charcoal grey, which reveals the beautiful line art, the intricate folds in her dress, and the texture of the fabric. This adds "volume" and a 3D feel to her design. It makes the character feel real.</p>
+      <p>Chisato Nishikigi is such a fun character to work with because she's a visual and personality paradox: a bubbly, kind-hearted girl who loves cafes, sweets, and helping people, but is also the most skilled and lethal gunman in Japan. Visually, this is represented by her bright, "signal" red uniform contrasting with the grey, tactical, and often drab urban environments she fights in. It creates a natural focal point in every frame—your eyes are immediately drawn to her before anything else in the scene. This "Pop" factor is what makes Lycoris Recoil wallpapers so satisfying to create. It's pure eye candy for anyone who loves high-contrast action aesthetics. She is the center of the storm, and she's smiling through it all.</p>
       
-      <p>Then, I paint in <strong>Rim Lighting</strong> by hand. Since her dress is black, I can use almost any color for the backlight to create a different mood for the wallpaper. I usually go with a deep crimson red or a soft purple to match her eyes and the handles of her golden stiletto needles. This separation from the background prevents her from looking like a "floating head" and adds a nice menacing, powerful aura. I also sharpen her golden needles to a razor edge using a "High Pass" mask, making them the most lethal-looking part of the image. It's about the tools of the trade. Check out the Yor Forger 4K collection now and see the detail!</p>
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040229/wallpapers/Chisato%20Nishikigi/1.jpg" alt="Chisato Wallpaper" class="object-cover w-full h-full" />
+      </div>
 
-      <h2>The Spamily Vibe: Warmth vs. Cold Aesthetics</h2>
-      <p>For the "Mama Yor" wallpapers in this collection, I use a completely different set of filters—warm oranges, soft yellows, and lots of "Bloom" to emphasize her kindness and the domestic bliss of the Forger family. For the "Thorn Princess" wallpapers, everything is cold, sharp, high-contrast, and focused. This collection allows you to switch your wallpaper depending on your own current mood. Whether you want the deadly assassin or the loving mother, Yor is always a top-tier choice for any screen. Check out the full Spy x Family drop in the gallery, including Loid and Anya! More "Garden" themed edits are coming soon, so stay tuned for the next mission!</p>
+      <h2>Capturing Kinetic Energy: Motion Blur and High-Speed Grace in Static Art</h2>
+      <p>The animation in <em>Lycoris Recoil</em> (courtesy of the talented team at A-1 Pictures) is incredibly fluid and high-octane, especially the way Chisato dodges bullets at point-blank range with almost ballet-like grace. A static wallpaper can't move, so how do you convey that sense of incredible speed, presence, and agility? The answer is <strong>Artificial Motion Blur and Ghosting Effects</strong>. It's about implying movement where there is none, making the image feel like a high-speed photograph from a professional camera.</p>
+      
+      <p>I use a specific technique where I duplicate the character layer, apply a "Directional Blur" or "Radial Blur" in the direction she's moving, and lower the opacity to about 10-15%. I then use a layer mask to hide the blur from her face and eyes (which must remain sharp) while keeping it on her hair, her red ribbon, and the edges of her uniform. This creates a "ghosting" effect that makes it look like she just snapped into that pose a split second ago. Combined with her signature red ribbon flowing in the wind, it makes for a very dynamic lock screen that feels alive every time you look at it. It's not just a picture; it's a moment of action frozen in 4K. You can almost feel the air moving around her as she weaves through the city. It's about the beauty of the dodge.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040232/wallpapers/Chisato%20Nishikigi/1_1.jpg" alt="Chisato Dodge" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040235/wallpapers/Chisato%20Nishikigi/2_1.jpg" alt="Chisato Combat" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <h2>Color Grading the "Lyco-Red" for Professional High-Res Screens</h2>
+      <p>The red of the Lycoris uniform is iconic, but it can easily look "flat" or "orange" on some screens depending on their color calibration and panel type. To ensure it looks perfect, I use <strong>Selective Color adjustment layers</strong> to boost the "Cyan" and "Black" levels within the Red channel. This deepens the red, making it look more like a rich crimson or a "blood" red rather than a bright, cheap primary red. I also slightly desaturate the background colors (the greys and blues of the city) to make the red "vibrate" against the background. This high-contrast, modern look is perfect for the "Cyberpunk/Modern" aesthetic of our site. It looks professional, intentional, and high-end. It's about making your screen look like a piece of high-budget promotion art. Every pixel counts. Download the Chisato collection and feel the speed!</p>
     `
   },
   {
@@ -363,6 +385,15 @@ export const blogPosts: BlogPost[] = [
       <p>The color of this show is undoubtedly <strong>Orange</strong>—from Pochita's adorable body to the rusty chains and the stylized, cinematic blood that litters every fight. My editing process for Chainsaw Man involves a technique called "Split Toning" or "Advanced Color Grading." I push the Highlights towards a warm Orange/Teal and the Shadows towards a dark, muddy Green/Blue. This replicates the specific color grading used in many gritty thriller and horror movies, making the wallpaper feel "heavy," intense, and grounded in a dark, depressing reality. It's not just colors; it's a mood. I want you to feel the weight of Denji's life and the smell of rust every time you look at your screen. It's about sensory storytelling through your phone.</p>
       
       <p>I also *add* noise and grain manually. Yes, usually I remove noise for clean wallpapers, but for Chainsaw Man, adding a monochromatic noise layer at 3-5% opacity ties the whole image together and stops it from looking "too clean," "too digital," or like a cheap 3D render. It keeps that underground, punk-rock vibe of the original manga alive. For Denji's chainsaw teeth and blades, I use a "Sharpen" brush to make the metal look cold, jagged, and heavily used, ensuring they look lethal and dangerous on your screen. You should be able to hear the chainsaw idling just by looking at the image. It's about making the screen feel "real" and lived-in. It's about the texture of the world.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187346/oboi.4k_threadsmate.com_1769174792_cdpmpz.webp" alt="Denji 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp" alt="Power 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h2>Handling the Gore and Intensity: OLED Optimization for the Modern Devil Hunter</h2>
       <p>Chainsaw Man is famous for its violence, and I didn't want to shy away from that in the wallpapers. I use "Vignetting" to heavily darken the corners, creating a sense of claustrophobia and focus on Denji or the Devil he's currently fighting. I also use a <strong>"Dodge & Burn"</strong> technique on the blood splatters to give them volume, highlights, and depth, making them look "wet" and terrifyingly realistic. This is a collection for those who love the darker, more intense side of anime. It's not for the faint of heart, but it looks incredible on a high-res gaming setup or an OLED phone where the blacks are truly deep and the oranges glow like fire. It's raw power on your screen. It's the ultimate hunt for meaning. Download the chaos now and join the Public Safety Division! More Devils added every week.</p>
@@ -386,12 +417,21 @@ export const blogPosts: BlogPost[] = [
       <h2>Editing for Softness: The Angelic Aesthetic and Bloom Effects in Photoshop Masterclass</h2>
       <p>Unlike the gritty, high-contrast action edits I do for <em>Chainsaw Man</em> or <em>Attack on Titan</em>, editing Alya requires a delicate, almost fragile touch. If you sharpen her too much or add too much harsh contrast, you lose that "angelic" and "perfect" vibe that defines her character. My focus here is on <strong>Soft Lighting and Diffusion Effects</strong>. I want her to look like she's stepping out of a dream or a high-end photography shoot. She needs to feel light, airy, and ethereal. It's about the glow of youth and the sparkle of romance.</p>
       
-      <p>I use a "Soft Light" brush with a pale cyan or pure white color to paint delicate highlights on her hair, her shoulders, and her eyes. This mimics the "Bloom" effect seen in modern high-end photography and luxury advertisements. I also brighten the whites of her school uniform using a <strong>"Curves" adjustment layer</strong> with a precise mask, making them pop against the background without losing detail in the fabric texture. This ensures she always looks like the brightest and most important thing on the screen. It's about preserving that "Shojo" sparkle in a modern 4K format that makes your phone look expensive and premium. She is the diamond of this collection, and she shines bright under the digital sun.</p>
+      <p>I use a "Soft Light" brush with a pale cyan or pure white color to paint delicate highlights on her hair, her shoulders, and her eyes. This mimics the "Bloom" effect seen in modern high-end photography and luxury advertisements. I also brighten the whites of her school uniform using a <strong>"Curves" adjustment layer</strong> with a precise mask, making them pop against the background without losing detail in the fabric texture. This ensures she always looks like the brightest and most important thing on the screen. It's about preserving that "Shojo" sparkle in a modern 4K format that makes your phone screen look expensive and premium. She is the diamond of this collection, and she shines bright under the digital sun.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957592/wallpapers/Alya%20Kujou/1.jpg" alt="Alya Close" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957607/wallpapers/Alya%20Kujou/2.jpg" alt="Alya Smile" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h2>The "Shojo Sparkle" in 4K: Manual Detailing and Magic Particles for Your Device</h2>
       <p>To give the wallpapers that extra bit of magic and "wow" factor, I manually add "sparkle" particles in Photoshop. I use a tiny 1px brush with 100% hardness and scatter white dots around her hair and her silhouette, then apply an "Outer Glow" layer style. This replicates the classic "Shojo" manga style in a modern, 4K digital format. It's a small detail that most people won't consciously notice, but it contributes to the overall feeling of beauty, perfection, and high-quality production. It's these tiny touches that separate Only_dias Ocean from other generic wallpaper sites. We care about every single pixel. We want her beauty to be legendary on your setup. It's art for the refined fan.</p>
       
-      <p>The Alya Kujou 4K collection is perfect for those who want a clean, elegant, and "aesthetic" look for their phone or desktop. I've included both "Cool" (Blue/Silver) and "Warm" (Sunset) versions so you can match your wallpaper to your phone's case, your overall theme, or even your current mood. Download the silver beauty now and elevate your daily setup to a new level of elegance! More Roshidere characters like Yuki and Masha will be added to the collection soon, so keep checking the latest drops! Your screen deserves this level of perfection every time you unlock it. See you in the next drop!</p>
+      <p>The Alya Kujou 4K collection is perfect for those who want a clean, elegant, and "aesthetic" look for their phone or desktop. I've included both "Cool" (Blue/Silver) and "Warm" (Sunset) versions so you can match your wallpaper to your phone's case, your overall theme, or even your current mood. Download the silver beauty now and elevate your daily setup to a new level of elegance! More Roshidere characters like Yuki and Masha will be added soon, so keep checking the latest drops! Your screen deserves this level of perfection every time you unlock it. See you in the next drop!</p>
     `
   },
   {
@@ -403,7 +443,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
     content: `
       <h2>A Living Comic Book: The Visual Language of the Spider-Verse Multiverse and Beyond</h2>
-      <p>The Spider-Verse movies are a visual overload in the best way possible. They aren't just movies; they are a love letter to the history of comic book art, street art, and graphic design. The mix of 2D and 3D animation, the use of Ben-Day dots, the chromatic aberration (color fringing), and the shifting frame-rates make every single frame a potential masterpiece. As a wallpaper creator, these movies are my favorite source material, but they are also the most difficult to work with. You can't just treat them like a normal anime or a live-action film. They have their own set of rules and a unique "hand-drawn" feel that is easily lost in digital processing. It's about bringing the page to the digital screen in 4K resolution.</p>
+      <p>The Spider-Verse movies are a visual overload in the best way possible. They aren't just movies; they are a love letter to the history of comic book art, street art, and graphic design. The mix of 2D and 3D animation, the use of Ben-Day dots, the chromatic aberration (color fringing), and the shifting frame-rates make every single frame a potential masterpiece. As a wallpaper creator, these movies are my favorite source material, but they are also the most difficult to work with. You can't just treat them like a normal anime or a live-action film. They have their own set of rules and a unique "hand-drawn" feel that is easily lost in digital processing. It's about bringing the spirit of the page to the digital screen in 4K resolution.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-600/50 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp" alt="Spider-Man Wallpaper" class="object-cover w-full h-full" />
@@ -414,10 +454,19 @@ export const blogPosts: BlogPost[] = [
       
       <p>I upscale the image using a standard "Photo" model to get the sharp edges of the characters and the silhouettes, but I also keep the original low-res version. I place the original version on top of the upscaled one in Photoshop and set the blending mode to <strong>"Luminosity"</strong>. This brings back the original dot texture and the hand-drawn ink lines while keeping the sharp, 4K edges of the upscaled version underneath. It’s a tedious, multi-layered process that takes about an hour per wallpaper, but it’s the only way to get a high-res Spider-Man wallpaper that actually looks like the movie and not a digital approximation. I want the texture to be visible even on your phone's small screen. You should feel the paper and the ink. It's about authenticity.</p>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187850_iiymck.webp" alt="Gwen Stacy 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187896/oboi.4k_threadsmate.com_1769187849_yrbjik.webp" alt="Miguel O'Hara 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
       <h2>Color Grading the Multiverse: Gwen Stacy vs. Miles Morales Unique Visual Styles</h2>
       <p>Every "world" in the Spider-Verse has its own unique color palette and emotional tone—Gwen's world is a watercolor pink and purple dreamscape, while Miles' world is vibrant street-art colors with heavy contrast and neon energy. I use <strong>Gradient Maps</strong> to enhance these specific palettes and make them "pop" on modern screens. I want Gwen's wallpapers to feel soft, emotional, and painterly, while Miles' wallpapers should feel punchy, energetic, and urban. I also manually "nudge" the red and blue channels to create that signature "out of focus" chromatic aberration look that gives the movies their incredible depth and 3D feel. It's about bringing the multiverse to your tech setup. It's art from across the dimensions.</p>
       
-      <p>The Spider-Verse 4K collection is now live, featuring Miles Morales, Gwen Stacy, the intense Miguel O'Hara (Spider-Man 2099), and the spectacular Hobie Brown (Spider-Punk). These are the highest-fidelity Spider-Verse wallpapers you'll find anywhere on the internet. Go grab them and let your screen swing into the multiverse! I'll be adding more "Spider-Society" variants from the movie soon, so keep an eye on the latest drops! Your setup is about to get much more spectacular!</p>
+      <p>The Spider-Verse 4K collection is now live, featuring Miles Morales, Gwen Stacy, the intense Miguel O'Hara (Spider-Man 2099), and the spectacular Hobie Brown (Spider-Punk). These are the highest-fidelity Spider-Verse wallpapers you'll find anywhere on the internet. Go grab them and let your screen swing into the multiverse! I'll be adding more variants from the "Spider-Society" soon, so keep an eye on the latest drops! Your setup is about to get much more spectacular!</p>
     `
   },
   {
@@ -440,6 +489,15 @@ export const blogPosts: BlogPost[] = [
       
       <p>For Sun Breathing (Hinokami Kagura), I boost the saturation of the oranges and deep reds using a "Vibrance" adjustment layer to ensure it looks fiery but not blown out or losing detail. I then add a subtle "Outer Glow" layer style to the individual flames to make them feel like they are actually searing hot and emitting light from within the screen. For Water Breathing (like the wallpaper above), I actually increase the contrast significantly between the highlights and the shadows. This makes the white "foam" of the waves stand out sharply against the dark blue water, making the woodblock art style pop even more. It looks incredibly crisp on high-PPI mobile displays, almost like ink on premium Japanese paper. I want the water to look like it's about to drip out of your phone. It's the ultimate Ufotable tribute for your setup. Feel the flow.</p>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542651/12_li4at5.jpg" alt="Tanjiro 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542653/4_px7myz.jpg" alt="Zenitsu 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
       <h2>Sharpness and Line Art: The Ufotable Edge in Ultra-HD Quality and Presentation</h2>
       <p>Ufotable uses very clean, sharp line art that is often thinner and more precise than other studios. To preserve this during the 4K upscale, I use a <strong>Smart Sharpen</strong> filter in Photoshop with a very high "Amount" (around 150%) but a very low "Radius" (0.5px). This brings out the intensity of the characters' expressions without introducing that ugly "white halo" effect that ruins most upscaled images. I also use the "Liquify" tool to slightly adjust the flow of the breathing effects if they look too static in a single frame capture. The result is a collection of wallpapers that capture the sheer power, beauty, and intensity of the Demon Slayer Corps. It's art you can carry with you everywhere you go. It's the spirit of the demon hunter.</p>
       
@@ -461,10 +519,19 @@ export const blogPosts: BlogPost[] = [
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg" alt="Isagi Yoichi Wallpaper" class="object-cover w-full h-full" />
       </div>
 
-      <h2>Calibrating the "Blue Lock" Green: The Secret Formula for OLED Displays</h2>
+      <h2>Calibrating the "Blue Lock" Green: The Secret Formula for OLED Display Perfection</h2>
       <p>The show uses a very specific, almost "toxic" and radioactive shade of neon green/blue for Isagi's aura. It's not quite teal, and it's not quite lime green—it's somewhere in that perfect, aggressive middle-ground that commands attention. Getting this color right in Photoshop so it doesn't look like a messy blob or a cheap filter is tricky. Here's my specific formula for this collection that I developed specifically for 4K OLED quality:</p>
       
       <p>I use the <strong>"Camera Raw Filter"</strong> to shift the Hue of the Greens toward Cyan and the Blues toward Green until they meet in that perfect middle-ground "Egoist" color. Then I crank the "Luminance" up in the HSL panel. This makes the aura look like it's actually glowing and emitting light from within the screen, which perfectly fits the intense, high-pressure vibe of the Blue Lock facility. Combined with deep, "crushed" blacks in the shadows (using the Curves tool to bring them to #000000), it creates a very aggressive, focused, and powerful look that looks incredible on a dark phone theme. It's designed to make you look like an egoist. It's about field dominance through visuals.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355323/1_hilnhp.jpg" alt="Bachira 4K" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769546591/1_forqga.jpg" alt="Nagi 4K" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h2>Editing the Puzzle Pieces: Adding Depth and 3D Weight to Traditional 2D Art</h2>
       <p>The puzzle pieces are often flat in the anime frames because of the 2D nature of the show's production. To make them work as a professional 4K wallpaper, I manually add a <strong>"Drop Shadow"</strong> and a tiny bit of "Inner Glow" to each individual piece using Photoshop Layer Styles. This makes them look like they are floating in 3D space around Isagi, giving the image much more depth, movement, and "weight." I want the user to feel the mental pressure and the calculation he's putting on his opponents. This collection is for the egoists who want their screen to reflect their own ambition, drive, and vision. It's soccer, but taken to the extreme. It's about being the one who scores. It's about the ego.</p>
@@ -516,6 +583,15 @@ export const blogPosts: BlogPost[] = [
       
       <p>I start by lowering the overall contrast slightly and adding a <strong>"Curves"</strong> layer to lift the blacks, giving the shadows a soft "matte" or "vintage" feel that is easy on the eyes. I then add a very fine, monochromatic noise texture (Filter > Noise > Add Noise at 1%) to mimic the look of an old film camera or a cozy Lo-Fi music video from the early 2000s. I also often vignette the edges heavily to draw the focus directly to her expression—usually a subtle pout, a shy side-glance, or a look of determination. It creates a feeling of intimacy and peace that works perfectly for a phone wallpaper you look at dozens of times a day. It's like having a little bit of tranquility in your pocket. It's the ultimate chill aesthetic for your daily life.</p>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043979/wallpapers/Miku%20Nakano/2_1.jpg" alt="Miku Pout" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043991/wallpapers/Miku%20Nakano/3_1.jpg" alt="Miku Headphones" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
       <h2>Functional Pastel Colors for Daily Desktop and Mobile Use</h2>
       <p>Pastel colors like Miku's are great for phone wallpapers because they don't strain the eyes at night or in low-light environments. I ensure that the iconic blue of her headphones is the primary accent color, which pairs beautifully with the default iOS and Android font colors and styles. This collection features over 15 unique Miku edits, from her classic school uniform to her casual, everyday outfits and moments from the movie. If you're a member of the "Miku Church," this is the definitive 4K collection for you. Download now and find your quiet moment amidst the chaos of the world! More "Quintessential" characters are coming to the gallery soon, so stay tuned for the full set! Enjoy the peace.</p>
     `
@@ -539,6 +615,15 @@ export const blogPosts: BlogPost[] = [
       <p>Believe it or not, upscaling nature shots is actually harder than upscaling characters. AI models are heavily trained on human faces, eyes, and simple line art. When you feed them a complex picture of a lush forest, a detailed cityscape with thousands of windows, or a starry night sky, they sometimes get confused and turn the leaves or bricks into weird, mushy blobs or "watercolor" smudges that look unnatural. To fix this and maintain that crisp, high-resolution look that defines this site, I use a specific two-step professional process that I've refined over years.</p>
       
       <p>First, I use a model specifically trained on <strong>"Digital Illustration and Painting"</strong> rather than "Photography." This preserves the painterly brushstrokes and the specific artistic intent of the original background artist. Second, I go into Photoshop and manually sharpen key focal points—like the sharp edges of summer clouds, the ripples in a mountain lake, or the light reflecting off a train window—using the <strong>"Unsharp Mask"</strong> filter with a radius of 1.0 and an amount of 50%. The goal is to keep that refreshing, clear, and "high-definition" feeling of a beautiful day that anime captures so perfectly. I want your desktop to feel like a portal to a more beautiful reality. It's about clarity, atmosphere, and respect for the art. It's high-end scenery for your screen.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/2_vcenvc.webp" alt="Nature 4K Scene" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685653/3_fmxqwe.webp" alt="Nature 4K Art" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h2>Creating a Relaxing Digital Environment for Focus and Productivity</h2>
       <p>Scenery wallpapers are perfect for "minimalist," "clean," and "productive" setups. They are less distracting than character-focused art, allowing you to focus on your work, study, or gaming while still having something beautiful and inspiring to look at during your breaks. In this collection, I've curated everything from rainy Tokyo night cityscapes to sunny, rural Japanese fields and snowy mountain peaks. Each image has been carefully color-graded to enhance the lighting, making the sun feel warmer, the rain feel cooler, and the shadows feel deeper and more atmospheric. If you need a bit of peace and quiet in your digital life, this collection is specifically designed for you. Browse the "Nature" section in our gallery and find your escape today. New scenery drops are added every single Sunday! Find your peace.</p>
@@ -589,7 +674,7 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'power-chaos-blood-fiend',
+    slug: 'power-chainsaw-man-longform',
     title: 'Power: The Blood Fiend Energy and Chaos Editing Masterclass in 4K',
     excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too. Editing the best worst girl.',
     date: '2026-01-15',
@@ -609,7 +694,7 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'naruto-transformations-glow',
+    slug: 'naruto-evolution-glow-pro',
     title: 'Naruto: The Evolution of transformations and Chakra Glow Techniques in 4K',
     excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
     date: '2026-01-14',
@@ -629,7 +714,7 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'luffy-gear-5-liberation-sun',
+    slug: 'luffy-gear-5-joyboy-masterclass',
     title: 'Luffy Gear 5: The Drums of Liberation and Editing the Pure White Joyboy Aesthetic',
     excerpt: 'Editing the most cartoony transformation in anime history. How to handle the pure white color palette.',
     date: '2026-01-13',
@@ -653,262 +738,716 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'mikasa-ackerman-titan-grime',
-    title: 'Mikasa Ackerman: Strength, Loyalty, and the Art of Cinematic Grime',
-    excerpt: 'The scarf, the blades, the stare. Capturing the intensity of Attack on Titan\'s best soldier.',
-    date: '2026-01-12',
-    author: 'Only_dias',
-    tags: ['Attack on Titan', 'Mikasa', 'Scarf', 'Dark'],
-    content: `
-      <h2>The Last Stand: Mikasa Ackerman, The Pinnacle of Soldier and Style</h2>
-      <p>Mikasa Ackerman isn't just a soldier; she's a symbol of strength, loyalty, and unwavering determination. When editing her wallpapers, my goal is to capture that intensity—the focused stare, the deadly precision of her blades, and the iconic red scarf that represents her connection to Eren. She's not a model posing for a fashion shoot; she's a warrior in the midst of battle, and her wallpapers should reflect that gritty reality. I want the viewer to feel the weight of her mission and the cold, hard steel of her weapons every time they glance at their screen. It's about capturing the essence of the "best soldier" in 4K.</p>
-
-      <h2>Capturing the Grime: Enhancing Texture and Detail for High-Resolution Displays</h2>
-      <p>Attack on Titan is known for its dark, often desaturated color palette and its emphasis on realistic textures—the grime on uniforms, the rust on metal, the smoke and ash of battle. When editing Mikasa, I lean into this <strong>"Cinematic Grime"</strong> aesthetic. I use "Sharpen" filters specifically on her ODM gear and blades to make the metal look cold, hard, and lethal. This contrast between the sharp, metallic elements and the softer, more atmospheric background is crucial for making the image pop on high-resolution displays.</p>
-      
-      <p>I also add subtle smoke and steam overlays to simulate the chaos of battle, especially in scenes where she's using her Thunder Spears or engaging Titans. This adds a layer of dynamism and realism that makes the wallpaper feel more immersive. For her iconic red scarf, I use a "Color Dodge" layer with a soft red brush to make it glow slightly, drawing the eye to her face and emphasizing its emotional significance. It's the focal point that connects her to her past and her mission. This collection aims to capture the raw power and elegance of Mikasa Ackerman in stunning 4K detail.</p>
-
-      <h2>Framing the Intensity: Composition and Color for Maximum Impact</h2>
-      <p>Composition is key when editing Mikasa. I often look for frames where she is in a powerful pose, looking directly at the viewer or focused intently on her target. I use "Vignetting" to darken the edges of the frame, drawing all attention to her central figure. The color grading focuses on enhancing the contrast between the dark, muted backgrounds and the sharp details of her uniform and weapons. The red of her scarf and the glint of her blades are always brought to the forefront. Download the Mikasa Ackerman 4K collection now and bring the intensity of Attack on Titan to your setup!</p>
-    `
-  },
-  {
-    slug: 'lucy-edgerunners-holo-hair',
-    title: 'Lucy from Edgerunners: Neon Melancholy and Holographic Hair Effects in 4K',
-    excerpt: 'The show that broke our hearts also gave us the best visuals. Editing the Moon scene.',
-    date: '2026-01-11',
-    author: 'Only_dias',
-    tags: ['Cyberpunk', 'Lucy', 'Moon', 'Neon'],
-    content: `
-      <h2>"I Really Want to Stay at Your House": Neon Melancholy and the Dream of the Moon</h2>
-      <p>Lucy from <em>Cyberpunk: Edgerunners</em> is a character who embodies the show's core themes of neon-drenched melancholy and the desperate pursuit of a dream. Her design is pure cyberpunk perfection—the vibrant pink hair that shifts color depending on the light, the sharp, futuristic aesthetic, and the haunting connection to the moon. The "I Really Want to Stay at Your House" scene is iconic for its emotional weight and visual beauty. My goal with this collection was to capture that specific blend of futuristic cool and deep, personal sadness, making her look like she belongs in a high-end digital art piece rather than just a screenshot.</p>
-
-      <h2>Neon Melancholy: Holographic Hair and Glitch Effects in Photoshop</h2>
-      <p>Lucy's hair is one of her most striking features, and it changes color depending on the lighting and the scene. To replicate this dynamic effect in a static 4K wallpaper, I use a technique called <strong>"Holographic Painting."</strong> I create multiple layers with different color variations (pinks, blues, purples) and use a "Color Dodge" blending mode with a soft brush to paint highlights onto her hair. This makes it look like the light is refracting through her strands, giving it that almost holographic, iridescent quality seen in the show. It's about making the impossible look real on your screen.</p>
-      
-      <p>I also add subtle "Glitch" effects and "Chromatic Aberration" (color fringing) to the edges of the frame and around Lucy herself. This gives the image a retro, "out-of-focus" CRT monitor feel that fits the cyberpunk aesthetic perfectly. It makes the image feel like it's vibrating with digital energy and data corruption. The "Moon" scene, in particular, is a masterclass in lighting and atmosphere. I pump up the "bloom" effect on the moon to create a strong silhouette and contrast it with the neon glow of Night City. The result is a wallpaper that feels both beautiful and deeply melancholic.</p>
-
-      <h2>The "Edgerunners" Aesthetic: Contrast, Depth, and Emotional Resonance</h2>
-      <p>The overall aesthetic of <em>Edgerunners</em> is a blend of high-tech futurism and gritty realism. I try to capture this by using deep, "crushed" blacks in the background (making them true #000000 for OLED screens) and then making Lucy's neon colors "pop" against that darkness. I use "Vignetting" to draw the viewer's eye towards her, creating a sense of intimacy and focus. This collection is for fans who appreciate the show's emotional depth and its stunning visual design. Download Lucy's wallpapers and carry a piece of Night City's neon melancholy with you wherever you go. More "Edgerunners" drops are coming soon!</p>
-    `
-  },
-  {
-    slug: 'vagabond-ink-art-style',
-    title: 'Vagabond: The Pinnacle of Manga Art and Adapting Ink to 4K',
-    excerpt: 'Takehiko Inoue\'s art is legendary. Here is how I adapt black and white manga panels into high-res wallpapers.',
-    date: '2026-01-10',
-    author: 'Only_dias',
-    tags: ['Manga', 'Vagabond', 'Musashi', 'Black and White'],
-    content: `
-      <h2>Brushstrokes of a Master: Preserving Takehiko Inoue's Ink Artistry in Digital Form</h2>
-      <p>Takehiko Inoue's art in <em>Vagabond</em> is, quite simply, legendary. It's considered by many to be the pinnacle of manga art—each panel is a masterpiece of ink work, conveying incredible emotion and dynamism with every brushstroke. His use of negative space, the raw texture of the ink, and the sheer power conveyed in Musashi's gaze are unparalleled. As an editor, my goal is not to "clean up" or "vectorize" this art, but to preserve its raw, organic beauty and adapt it for modern 4K displays without losing any of its soul. It's about respecting the original medium and enhancing it for a new context.</p>
-
-      <h2>Adapting Ink to 4K: Texture Over Sharpening for Authentic Manga Feel</h2>
-      <p>The biggest challenge with black and white manga panels is the stark contrast between the ink lines and the pure white background. When you upscale these images, the white background can look harsh and "digital," and the ink lines can sometimes appear too sharp or lose their subtle texture. To combat this, I use a technique that mimics the look of traditional Japanese art paper.</p>
-      
-      <p>I overlay a subtle <strong>"Rice Paper" or "Canvas" texture</strong> on the background layer. This subtly shifts the pure #FFFFFF white to a softer, off-white or cream color, which reduces eye strain and makes the image feel more like a physical, high-quality manga page. It gives the wallpaper a physical "weight" and reduces that overly "digital" look. I also use the "Levels" adjustment to slightly lift the black point, making the deepest blacks a very dark charcoal grey. This prevents the image from looking too "crushed" on OLED screens and preserves the subtle variations in the ink density that Inoue masterfully creates.</p>
-
-      <h2>Contrast and Soul: Enhancing the Raw Power of the Art</h2>
-      <p>While I preserve the texture, I also want the ink lines themselves to remain incredibly sharp and impactful. I use a <strong>"Curves" adjustment</strong> to increase the contrast of the ink lines, making them "pop" against the softer background. This ensures that Musashi's intense expressions and the dynamic action sequences remain the focal point. I never use aggressive "sharpening" filters, as they can introduce artifacts and destroy the delicate ink work. It's about enhancing the existing "soul" of the art, not replacing it. This collection is a tribute to Takehiko Inoue's genius and the enduring power of black and white manga. Download the Vagabond 4K collection now and bring the spirit of Musashi to your screen.</p>
-    `
-  },
-  {
-    slug: 'bleach-streetwear-style',
-    title: 'Bleach: The King of Drip and Celebrating Kubo Tite\'s Fashion Sense in 4K',
-    excerpt: 'Kubo Tite is a fashion designer first, mangaka second. Celebrating the style of Bleach.',
-    date: '2026-01-09',
-    author: 'Only_dias',
-    tags: ['Bleach', 'Ichigo', 'Fashion', 'Style'],
-    content: `
-      <h2>The King of Drip: Why Bleach Characters Have the Best Fashion Sense in Anime</h2>
-      <p>Let's be honest: no anime characters dress better than the cast of <em>Bleach</em>. Tite Kubo is arguably a fashion designer first and a mangaka second. From Ichigo's streetwear-inspired looks to the Soul Reapers' modern takes on traditional Japanese attire, the character designs are consistently stylish, unique, and incredibly cool. My goal with this 4K collection was to celebrate that incredible fashion sense, focusing on the "street" looks that feel both timeless and incredibly relevant to modern trends. I wanted to create wallpapers that feel less like anime screenshots and more like high-fashion magazine editorials.</p>
-
-      <h2>The "Hypebeast" Aesthetic: Urban Backgrounds and Bold Typography</h2>
-      <p>To complement the characters' incredible style, I choose backgrounds that enhance the "urban" and "streetwear" aesthetic. I often use images featuring graffiti, concrete textures, neon signs, or gritty cityscapes. This creates a cohesive look that feels both modern and slightly dangerous, perfectly matching the vibe of characters like Ichigo, Renji, or even the Sternritter. It grounds the fantastical elements of Bleach in a relatable, stylish reality.</p>
-      
-      <p>I also frequently incorporate bold, "graffiti-style" typography into the wallpapers. This could be the character's name, their "Bankai" or "Zanpakuto" name, or a relevant quote from the series. I use fonts that feel edgy and impactful, often placing them behind the character's silhouette or integrated into the background. This adds another layer of visual interest and reinforces the "album cover" or "fashion magazine" feel that I aim for. It's about making the wallpaper feel like a piece of art that stands on its own, celebrating the unique style of Bleach.</p>
-
-      <h2>4K Quality and Detail: Bringing Kubo's Designs to Life</h2>
-      <p>Kubo's art style is known for its clean lines, intricate details, and stylish shading. When upscaling these images to 4K, I focus on preserving every bit of that detail. I use AI upscalers that are good at handling line art and then manually refine the image in Photoshop to ensure the shading looks smooth, the "drip" details are crisp, and the overall image has a professional, high-end finish. This collection is a must-have for any Bleach fan who appreciates the series' incredible style. Download the "King of Drip" collection now and let your setup exude unparalleled fashion!</p>
-    `
-  },
-  {
-    slug: 'evangelion-vhs-retro',
-    title: 'Evangelion: The Retro Future Aesthetic and Recreating 90s VHS Look in 4K',
-    excerpt: 'The 90s aesthetic is back. How I edit Asuka and Rei to capture that vintage cel-shaded look.',
-    date: '2026-01-08',
-    author: 'Only_dias',
-    tags: ['Evangelion', 'Retro', '90s', 'Mecha'],
-    content: `
-      <h2>Cruel Angel's Thesis: Nostalgia Meets High-Fidelity in Evangelion Wallpapers</h2>
-      <p>The 90s aesthetic is back, and nothing screams "retro future" quite like <em>Neon Genesis Evangelion</em>. The show's unique blend of giant mecha action, psychological drama, and distinct "cel animation" look has cemented its place as a cultural phenomenon. For this 4K collection, I wanted to capture that specific vintage feel—the look of a worn-out VHS tape playing on a CRT television, but with the crispness and detail that only modern high-resolution displays can provide. It's about taking a beloved piece of the past and making it feel relevant and stunning for today's audience.</p>
-
-      <h2>Recreating the 90s VHS Look: Color Fringing and Film Grain in Photoshop</h2>
-      <p>To achieve that authentic "fake VHS" effect, I employ several techniques in Photoshop. First, I focus on the color channels. I manually separate the Red, Green, and Blue channels slightly and "nudge" them apart by a few pixels in opposite directions. This creates the characteristic "color fringing" or "chromatic aberration" that you see on old VHS tapes, especially around high-contrast edges. It gives the image a slightly "unstable" and "analog" feel.</p>
-      
-      <p>Next, I add "scanlines" and "film grain." The scanlines are simulated using a pattern overlay, mimicking the horizontal lines that appear on older television screens. The film grain is added using a "Noise" filter, giving the image a subtle texture that prevents it from looking too "clean" or "digital." The combination of these effects makes a modern 4K image look like it was captured on vintage film stock from 1995. It's nostalgic, but with the clarity and detail that makes it perfect for today's screens. It's the best of both worlds.</p>
-
-      <h2>Cel Animation Aesthetic: Preserving the Hand-Drawn Feel</h2>
-      <p>Evangelion's "cel animation" style is characterized by its distinct line art and flat color areas. When upscaling, it's crucial not to lose that hand-drawn feel. I use AI upscalers that are specifically trained on "anime" or "illustration" models, which tend to preserve line art better than general "photo" models. After upscaling, I might use a "Smart Sharpen" filter with a very low radius to enhance the lines without introducing harsh artifacts. The goal is to make Asuka and Rei look as vibrant and detailed as they did on screen, but with the added benefit of ultra-high resolution. Download the Evangelion 4K collection and step back into the 90s with a modern twist!</p>
-    `
-  },
-  {
-    slug: 'matching-pfps-duo-guide',
-    title: 'Matching PFPs: The Ultimate Duo Guide for Discord and TikTok',
-    excerpt: 'How to choose and edit icons for you and your duo. Making your profiles look synced.',
-    date: '2026-01-07',
-    author: 'Only_dias',
-    tags: ['PFPs', 'Icons', 'Social', 'Discord'],
-    content: `
-      <h2>Better Together: Creating Perfect Profile Picture Pairs</h2>
-      <p>Matching profile pictures (PFPs) are a staple in online communities, especially on platforms like Discord and TikTok. They're a fun way to show off your friendship, your favorite characters, or your shared interests. The key to a great matching PFP set is not just picking two cool images, but ensuring they "sync" visually and thematically. My goal is to make your duo look intentional and polished, like you're both part of the same aesthetic.</p>
-
-      <h2>Choosing the Right Duo: Interaction and Eye-Lines</h2>
-      <p>The best matching PFPs come from scenes where characters are interacting, looking at each other, or positioned in a way that complements one another. I look for:</p>
-      <ul>
-        <li><strong>Direct Interaction:</strong> Characters talking, fighting, or sharing a moment.</li>
-        <li><strong>Complementary Poses:</strong> Characters facing each other, or one character looking towards the other's side of the screen.</li>
-        <li><strong>Thematic Link:</strong> Characters who are canonically partners, rivals, or have a strong thematic connection (e.g., Gojo and Geto, Tanjiro and Nezuko).</li>
-      </ul>
-      <p>When I crop the images, I pay close attention to the "eye-lines." Ideally, when the two PFPs are placed side-by-side (or even slightly overlapping), the characters' gazes should meet or align in a pleasing way. This creates a sense of connection between the two icons.</p>
-
-      <h2>Editing for Cohesion: Color Grading and Typography</h2>
-      <p>Once I have the perfect frames, the editing process ensures they look like a matched set. This involves:</p>
-      <ul>
-        <li><strong>Matching Color Grading:</strong> I apply the same color filters, contrast adjustments, and "bloom" effects to both images. This ensures they share the same mood and lighting, even if the original scenes were different.</li>
-        <li><strong>Consistent Typography:</strong> If I add text (like character names or quotes), I use the same font and style for both PFPs. This reinforces the "duo" look.</li>
-        <li><strong>Cropping for Square Format:</strong> PFPs are usually square. I carefully crop the images to fit this format while maintaining the composition and ensuring key elements aren't cut off.</li>
-      </ul>
-      <p>The result is a pair of profile pictures that look like they were made for each other, adding a professional and personalized touch to your online presence. Check out the "Matching PFPs" section in the gallery for ready-to-use sets!</p>
-    `
-  },
-  {
-    slug: 'exclusive-drops-explained-qc',
-    title: 'Exclusive Drops: Quality Control and the Curation Process',
-    excerpt: 'How I decide which characters make it onto the site. The curation process explained.',
-    date: '2026-01-06',
-    author: 'Only_dias',
-    tags: ['Update', 'Behind the Scenes', 'Community'],
-    content: `
-      <h2>Quality Over Quantity: My Commitment to Excellence</h2>
-      <p>The "Only_dias Ocean" website is more than just a gallery; it's a curated collection of the highest quality anime wallpapers available online. My commitment is to excellence, which means I have a very strict <strong>Quality Control (QC) process</strong> for every single image that gets uploaded. It's not enough for an image to be popular or feature a beloved character; it has to meet a certain standard of visual fidelity and artistic merit.</p>
-
-      <h2>The Curation Process: What I Look For</h2>
-      <p>When I'm sourcing images or reviewing potential drops, I'm looking for several key things:</p>
-      <ul>
-        <li><strong>Source Material Quality:</strong> I prioritize images from official Blu-ray releases or high-resolution promotional materials. Web rips, low-bitrate streams, or heavily compressed images are immediately rejected.</li>
-        <li><strong>Composition and Framing:</strong> Does the image have a strong subject? Is there enough "negative space" for desktop icons or mobile clocks? Does it follow basic principles of visual design like the Rule of Thirds?</li>
-        <li><strong>Potential for Enhancement:</strong> Can this image be significantly improved through upscaling, color grading, and detail restoration? Some images are already perfect, while others have potential that needs to be unlocked.</li>
-        <li><strong>Character Popularity vs. Artistic Merit:</strong> While I do take community requests heavily into account (your comments on TikTok are invaluable!), I also reserve the right to feature characters or scenes that might be less "mainstream" but possess exceptional artistic quality or a unique aesthetic.</li>
-        <li><strong>Technical Feasibility:</strong> Can this image be realistically upscaled to 4K without introducing major artifacts or losing essential detail? Some animation styles or effects are inherently difficult to enhance.</li>
-      </ul>
-      <p>I reject about 80% of the images I initially find. This rigorous selection process ensures that every wallpaper you download from this site is something I'm proud to put my name on, and something you'll be proud to display on your devices.</p>
-
-      <h2>Community Input and Feedback</h2>
-      <p>Your feedback is crucial! I actively monitor comments on my TikTok channel (@noxzx_kb) and use direct messages to gauge interest in specific characters, series, or editing styles. If 50 people ask for a specific wallpaper, it's highly likely to be prioritized. However, even popular requests must pass my QC standards. If you have a suggestion or feedback on an existing wallpaper, please don't hesitate to reach out via the Contact page!</p>
-    `
-  },
-  {
-    slug: 'where-to-find-raws-pro',
-    title: 'Where to find RAW Anime clips for Editing: The Professional Secret',
-    excerpt: 'The secret to a crisp edit is the source material. Here is how I find 1080p RAW anime episodes without subtitles.',
-    date: '2026-01-05',
-    author: 'Only_dias',
-    tags: ['Resources', 'Editing', 'Quality'],
-    content: `
-      <h2>No Subs, No Problems: The Foundation of High-Quality Anime Edits</h2>
-      <p>The single biggest mistake aspiring editors make is starting with low-quality source material. Editing footage that has hard-subbed subtitles baked in, or comes from a low-bitrate web rip, is like trying to build a skyscraper on a foundation of sand. You simply cannot achieve professional-level results. The compression artifacts, the blurry text, and the "banding" in the gradients will always hold your work back. My entire workflow is built on the principle of starting with the best possible source, and that means finding <strong>RAW anime footage</strong>.</p>
-
-      <h2>Why RAW Blu-ray Releases are Non-Negotiable</h2>
-      <p>When I talk about "RAW," I'm primarily referring to the original, uncompressed video files directly from the Japanese physical releases—the <strong>Blu-ray discs</strong>. Here's why they are essential:</p>
-      <ul>
-        <li><strong>Highest Bitrate:</strong> Blu-rays have an incredibly high bitrate, meaning they contain the maximum amount of visual data per frame. This is crucial for detailed editing, color grading, and upscaling without introducing artifacts.</li>
-        <li><strong>No Hard Subtitles:</strong> Official releases typically do not have subtitles burned into the video image. This leaves the background and character details clean and untouched, ready for editing.</li>
-        <li><strong>Original Animation Quality:</strong> You're getting the animation exactly as the studio intended, without any platform-specific compression or alterations.</li>
-      </ul>
-      <p>Finding these RAW files often involves searching specific communities or using tools that can capture frames directly from high-quality video playback. While it requires more effort than simply downloading a YouTube clip, the difference in the final product is night and day. It's the "garbage in, garbage out" rule applied to digital art—start with quality, and you'll end with quality.</p>
-
-      <h2>Tools for Frame Capture: VLC and Beyond</h2>
-      <p>Once I have access to a high-quality RAW source (usually a MKV file), I use software like <em>VLC Media Player</em> to capture individual frames. I pause the video at the exact millisecond I want, ensuring the lighting, character expression, and composition are perfect. Sometimes, finding the single "hero" frame for a wallpaper can take hours of scrubbing through an episode. It's a meticulous process, but it's the foundation upon which all my high-fidelity 4K wallpapers are built. Respect the source, and your art will shine.</p>
-    `
-  },
-  {
-    slug: 'photoshop-vs-canva-workflow-hybrid',
-    title: 'Photoshop vs Canva: The Professional Hybrid Workflow',
-    excerpt: 'Breaking down my hybrid workflow. Why I use Photoshop for the heavy lifting and Canva for the finishing touches.',
-    date: '2026-01-04',
-    author: 'Only_dias',
-    tags: ['Tools', 'Workflow', 'Design'],
-    content: `
-      <h2>The Best of Both Worlds: Leveraging Strengths for Maximum Efficiency</h2>
-      <p>In the world of digital design, especially when creating high-quality anime wallpapers and social media assets, I've found that relying on a single tool is rarely the most efficient approach. Instead, I utilize a hybrid workflow that leverages the unique strengths of both Adobe Photoshop and Canva. Each platform excels in different areas, and by combining them, I can achieve a professional result much faster and with greater flexibility.</p>
-
-      <h2>Photoshop: The Surgical Suite for Precision and Power</h2>
-      <p><strong>Adobe Photoshop</strong> is where the heavy lifting happens. It's my go-to for the technically demanding and artistically intensive parts of the process:</p>
-      <ul>
-        <li><strong>Precision Isolation:</strong> Using tools like the Pen Tool or advanced Layer Masks to meticulously cut out characters from backgrounds with perfect edges.</li>
-        <li><strong>AI Upscaling and Restoration:</strong> Employing AI tools like Topaz Photo AI or Real-ESRGAN for upscaling, followed by manual cleanup with Clone Stamp and Smudge tools to fix artifacts.</li>
-        <li><strong>Advanced Color Grading:</strong> Building complex color moods using Curves, Selective Color, Gradient Maps, and LUTs to achieve specific aesthetics (e.g., neon cyberpunk, soft pastels, gritty film looks).</li>
-        <li><strong>Complex Effects:</strong> Creating intricate glows, "bloom" effects, lens flares, and other lighting enhancements that require fine control.</li>
-        <li><strong>Texture Application:</strong> Adding realistic textures like film grain, canvas, or paper overlays with precise blending modes.</li>
-      </ul>
-      <p>Essentially, if an edit requires deep manipulation, intricate detail work, or pushing the boundaries of image quality, Photoshop is my primary tool.</p>
-
-      <h2>Canva: The Streamlined Studio for Packaging and Presentation</h2>
-      <p>While Photoshop handles the "raw" image editing, <strong>Canva</strong> is invaluable for the "packaging" and presentation aspects, especially for social media content and quick mockups:</p>
-      <ul>
-        <li><strong>Rapid Typography:</strong> Canva's text engine is incredibly fast for testing different fonts, sizes, and layouts. It's perfect for adding titles, watermarks, or social media handles quickly.</li>
-        <li><strong>Template-Based Design:</strong> For things like YouTube thumbnails, Instagram posts, or simple "Before/After" graphics, Canva's vast library of templates provides a fantastic starting point.</li>
-        <li><strong>Social Media Asset Creation:</strong> Quickly resizing and adapting edits for different platforms (e.g., creating matching PFPs or TikTok video covers).</li>
-        <li><strong>Simple Layouts:</strong> For less complex edits or when I need to combine multiple elements quickly, Canva's drag-and-drop interface is unbeatable.</li>
-      </ul>
-      <p>It's not about choosing one over the other; it's about understanding where each tool shines. My workflow often involves editing the core image in Photoshop and then bringing it into Canva for the final touches, text, and social media formatting. This hybrid approach ensures both maximum quality and maximum efficiency.</p>
-    `
-  },
-  {
-    slug: 'top-5-canva-fonts-anime-pro',
-    title: 'Top 5 Canva Fonts for Anime Content: Upgrade Your Game',
-    excerpt: 'Stop using Arial. Here are the 5 fonts available in Canva that perfectly match the anime/manga aesthetic.',
-    date: '2026-01-03',
-    author: 'Only_dias',
-    tags: ['Fonts', 'Canva', 'Typography'],
-    content: `
-      <h2>Typography is the Voice: Choosing Fonts That Speak Anime</h2>
-      <p>In digital design, typography is often described as the "voice" of your content. It conveys mood, personality, and genre. When creating anime-related content—whether it's wallpapers, social media posts, or video thumbnails—using the right font is crucial for establishing the right aesthetic. Relying on default system fonts like Arial or Times New Roman can make your work look generic and unprofessional. Thankfully, Canva offers a surprisingly robust selection of fonts that perfectly capture the diverse "feel" of anime and manga. Here are my top 5 picks that I use regularly to elevate my designs.</p>
-
-      <h2>My Top 5 Canva Fonts for Anime Content</h2>
-      <ol>
-        <li><strong>Manga Temple:</strong> This is my absolute go-to for anything that needs that classic "comic book" or "manga panel" look. It has slightly irregular edges and a "hand-drawn" feel that works perfectly for action series, shonen titles, or anything with a strong narrative focus. It's bold and readable, making it ideal for titles and key quotes.</li>
-        <li><strong>Tan Meringue:</strong> If you're going for a "retro," "shojo," or "slice-of-life" vibe, Tan Meringue is your best friend. It has a soft, rounded, and slightly "bouncy" quality that feels warm and inviting. It's great for romance titles, character spotlights, or anything with a "cute" or "wholesome" aesthetic.</li>
-        <li><strong>Cyberpunk:</strong> As the name suggests, this font is perfect for anything "sci-fi," "dystopian," "tech," or "neon." It has sharp, angular lines and a futuristic feel that screams "Blade Runner" or "Ghost in the Shell." Use it for titles related to cyberpunk anime, tech-focused series, or anything with a dark, edgy mood.</li>
-        <li><strong>Pangram Sans:</strong> For a cleaner, more "modern" or "minimalist" aesthetic, Pangram Sans is excellent. It's a sans-serif font with clean lines and good readability. It works well when you want the focus to be on the image itself, with the text providing subtle emphasis rather than dominating the design. Great for "aesthetic" posts or "behind-the-scenes" content.</li>
-        <li><strong>Gagalin:</strong> This font is pure "thumbnail energy." It's loud, bold, and attention-grabbing, with a slightly "chonky" and "playful" feel. If you need text that will "pop" and demand attention (like for YouTube video titles or "viral edit" announcements), Gagalin is fantastic. Use it sparingly, as it can be overwhelming if overused.</li>
-      </ol>
-      <p>Remember, the key is to pair the font with the content. A font that works for <em>Chainsaw Man</em> won't work for <em>K-On!</em>. Experiment with these options in Canva, and you'll instantly see how much more professional and "on-brand" your anime-themed designs become.</p>
-    `
-  },
-  {
-    slug: 'why-cyberpunk-future-aesthetic',
-    title: 'Why Cyberpunk is the Ultimate Desktop Aesthetic for 2026',
-    excerpt: 'Exploring the connection between anime culture and the neon-soaked, high-tech visuals of cyberpunk.',
+    slug: 'anime-wallpaper-editing-workflow-pro',
+    title: 'My Complete Anime Wallpaper Editing Workflow: From Raw Frame to 4K Masterpiece',
+    excerpt: 'Article “pilier” qui montre ton expertise. A step-by-step guide on how I transform a simple anime screenshot into a high-fidelity wallpaper.',
     date: '2026-01-01',
     author: 'Only_dias',
-    tags: ['Aesthetic', 'Cyberpunk', 'Gaming'],
+    tags: ['Tutorial', 'Workflow', 'Editing', 'Quality'],
     content: `
-      <h2>High Tech, Low Life: The Enduring Appeal of Cyberpunk Aesthetics</h2>
-      <p>Cyberpunk isn't just a genre; it's a visual language that has deeply permeated anime culture and, consequently, the world of desktop customization. In 2026, I firmly believe it remains the ultimate desktop aesthetic for several compelling reasons, primarily centered around its inherent connection to technology, gaming setups, and the "dark mode" preference that has become ubiquitous. It’s about creating an immersive digital environment that mirrors our increasingly tech-driven lives.</p>
+      <h2>Introduction: Why Raw Screenshots Aren't Enough</h2>
+      <p>We've all been there: you pause a stunning moment in an anime, take a screenshot, and set it as your wallpaper. But then you look closer. The lines are blurry, the colors look washed out on your monitor, and there are compression artifacts (blocks) in the dark areas. Why? Because streaming services compress video to save data. A 1080p stream bitrate is tiny compared to a raw image file. My goal with this article is to walk you through my professional workflow for taking that raw, imperfect frame and turning it into a crisp, 4K masterpiece that deserves to be on your screen.</p>
 
-      <h2>Lighting Cohesion: Bridging the Physical and Digital Realm</h2>
-      <p>One of the main reasons cyberpunk wallpapers are so effective is their inherent <strong>Lighting Cohesion</strong>. Most modern gaming setups and "creator stations" feature RGB lighting—LED strips, custom keycaps, illuminated peripherals. Cyberpunk aesthetics, with their signature neon signs, rain-slicked streets reflecting vibrant colors, and glowing holographic advertisements, naturally complement and enhance this physical lighting. A wallpaper featuring a neon-drenched cityscape doesn't just sit on your monitor; it extends the lighting of your room <em>into</em> your screen. It creates a unified, immersive "battle station" where the digital and physical environments blend seamlessly. It feels like your setup is alive and part of the same world.</p>
+      <h2>Step 1: Choosing the Right Source Image</h2>
+      <p>You can't polish a pebble into a diamond if the pebble is crumbling. The source material is everything. I strictly avoid fanart unless I have explicit permission from the artist (respecting copyright is crucial). I focus on <strong>Official Anime Frames</strong> or <strong>Key Visuals</strong>.</p>
+      <ul>
+        <li><strong>Resolution:</strong> I try to start with at least a 1080p Blu-ray source. Web-rips often have "banding" in the gradients.</li>
+        <li><strong>Composition:</strong> I look for frames that follow the "Rule of Thirds" or have a strong central subject. There needs to be "negative space" for your desktop icons.</li>
+        <li><strong>Subtitles:</strong> Always find RAWs without hard-subtitles. Removing text manually destroys the background texture.</li>
+      </ul>
 
-      <h2>Dark Mode Dominance and Visual Focus</h2>
-      <p>In an era where "dark mode" is the default for most operating systems and applications, cyberpunk wallpapers fit perfectly. Their typical color palettes—deep blacks, electric blues, vibrant cyans, and hot pinks—are designed to stand out against dark backgrounds. This high contrast makes text and icons incredibly readable, which is essential for productivity. Furthermore, the often-focused compositions, with characters or key elements sharply defined against atmospheric, blurred backgrounds, help maintain visual clarity. Your desktop icons don't get lost in a "busy" image; they sit cleanly on the dark, atmospheric canvas. It's visually striking without being overwhelming.</p>
+      <h2>Step 2: Upscaling and Cleaning the Image</h2>
+      <p>This is where technology meets art. I use a combination of AI upscalers like <strong>Topaz Photo AI</strong> and <strong>Real-ESRGAN</strong> (specifically the "anime" models). Standard bicubic upscaling just makes pixels bigger and blurrier. AI models actually "hallucinate" new detail based on the existing lines.</p>
+      <p>However, AI isn't perfect. It sometimes messes up eyes or small text. I always do a "human pass" in Photoshop afterwards, using the Clone Stamp tool to fix weird artifacts and the Smudge tool to smooth out lines that the AI made too jagged. It's about finding the balance between sharpness and natural line weight.</p>
 
-      <h2>Anime Connection and Immersive Storytelling</h2>
-      <p>Anime has been a massive influence on the cyberpunk genre, and vice-versa. Series like <em>Cyberpunk: Edgerunners</em>, <em>Ghost in the Shell</em>, and <em>Akira</em> have defined the visual language of this aesthetic for millions. Using wallpapers from these series, or inspired by them, allows fans to bring their favorite stories and worlds directly onto their desktop. It transforms your computer from a tool into a portal—a window into a high-tech, low-life future that is both cautionary and captivating. It's about more than just a pretty picture; it's about inhabiting a world you love.</p>
+      <h2>Step 3: Color Grading for Different Vibes</h2>
+      <p>Color grading is what gives an image its "soul." I don't just slap a filter on it. I use <strong>Adjustment Layers</strong> in Photoshop to build a specific mood:</p>
+      <ul>
+        <li><strong>Melancholic (e.g., Frieren):</strong> I boost the blues and cyans while lowering the saturation of warm colors. I lift the blacks to dark gray for a "faded memory" look.</li>
+        <li><strong>Vibrant (e.g., Marin):</strong> I use a "Vibrance" layer to pop the colors without clipping. I push the highlights towards yellow/orange for a sunny feel.</li>
+        <li><strong>Dark/Action (e.g., Chainsaw Man):</strong> I use "Curves" to crush the blacks and increase contrast. I often add a "Color Lookup" table (LUT) used in film editing to give it a cinematic grit.</li>
+      </ul>
 
-      <h2>Conclusion: The Future is Neon</h2>
-      <p>For all these reasons—lighting cohesion, dark mode compatibility, visual focus, and deep ties to beloved anime—cyberpunk remains the ultimate desktop aesthetic for 2026. It's a style that is both visually stunning and functionally practical, enhancing both your gaming experience and your daily productivity. Check out our "Cyberpunk" and "Neon" collections to find the perfect wallpaper to bring your setup to life.</p>
+      <h2>Step 4: Framing for Desktop vs. Mobile</h2>
+      <p>A wallpaper has to be functional. For desktop (16:9 or 21:9), I ensure the subject is usually on the right side, leaving the left open for icons. For mobile (9:16), the subject needs to be in the lower two-thirds so the clock doesn't cover their face. I often have to "extend" the background using <strong>Generative Fill</strong> to make a horizontal image fit a vertical phone screen without cropping the character out.</p>
+
+      <h2>Step 5: Export Settings and Final Checks</h2>
+      <p>I always export as <strong>PNG-24</strong>. Never use JPG for wallpapers if you can avoid it; JPG introduces compression artifacts every time you save. I check the final image on my OLED phone and my IPS monitor to ensure the colors look correct on both. If the blacks are "crushed" too much on OLED, I adjust the levels. Naming the file is also key—"Character_Name_4K_Upscaled.png" is much better for organization (and SEO!) than "img001.png".</p>
+
+      <h2>Conclusion</h2>
+      <p>It takes me about 45-60 minutes to finish one wallpaper. It's meticulous work, but the result is a library of images that look professional and intentional. You can see this entire workflow applied in my <strong>Frieren</strong> and <strong>Cyberpunk</strong> collections. Go check them out!</p>
+    `
+  },
+  {
+    slug: 'perfect-anime-setup-guide',
+    title: 'How to Build the Perfect Anime Setup: Screens, Wallpapers, and Aesthetic Harmony',
+    excerpt: 'Connecting your digital wallpaper to your physical room. A guide to creating a cohesive anime-themed battle station.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Setup', 'Guide', 'Aesthetic', 'Gaming'],
+    content: `
+      <h2>The Art of the "Battle Station"</h2>
+      <p>Your setup is your sanctuary. Whether you're a gamer, a developer, or an artist, the visual environment you sit in affects your mood and productivity. The wallpaper is the "anchor" of your digital space, but it needs to work in harmony with your physical hardware. This guide will help you unify your screens and your room.</p>
+
+      <h2>Step 1: Choosing Your Theme (Character, Color, Mood)</h2>
+      <p>Don't just pick random images. Pick a theme. It usually starts with a character or a color palette.</p>
+      <ul>
+        <li><strong>The "Zero Two" Theme:</strong> Dominant colors are Pink, Red, and White. Your mousepad should be white or pink. Your RGB lights should be set to static magenta.</li>
+        <li><strong>The "Cyberpunk" Theme:</strong> Dominant colors are Cyan, Purple, and Deep Blue. This works great with black peripherals and "vaporwave" lighting.</li>
+        <li><strong>The "Natural" Theme (e.g., Ghibli):</strong> Greens, Blues, and soft Yellows. Pairs well with wooden desks, plants, and warm white light (3000K).</li>
+      </ul>
+
+      <h2>Step 2: Matching Wallpapers Across Devices</h2>
+      <p>Nothing breaks immersion like having a mismatched phone and PC. I always create "duo" sets. For your PC, use a wide, landscape shot (e.g., Eren looking at the sea). For your phone, use a vertical portrait of the same character (e.g., Eren's face close-up). This creates a sense of continuity as you move between devices. If you have dual monitors, try a "panoramic" wallpaper that spans both screens, or put two matching characters (like Ram and Rem) on separate screens.</p>
+
+      <h2>Step 3: Apps and Tools for Wallpaper Management</h2>
+      <p>A static image is great, but a dynamic setup is better. On PC, <strong>Wallpaper Engine</strong> is the gold standard for adding subtle motion effects to my static edits. On Android/iOS, I use "Modes" or "Focus" settings to change my wallpaper automatically based on the time of day. A bright, energetic Marin wallpaper for the day, and a dark, moody Makima wallpaper for the night to save your eyes.</p>
+
+      <h2>Step 4: Accessibility and Icon Management</h2>
+      <p>A busy wallpaper + messy desktop icons = chaos. If your wallpaper has a complex character on the right, keep your icons on the left. Better yet, hide your desktop icons completely (Right Click > View > Uncheck 'Show Desktop Icons') and use the taskbar or a launcher like "Rainmeter" for a cleaner look. Your wallpaper should be the star of the show, not the background noise for a hundred Excel files.</p>
+
+      <h2>Step 5: Where to Find Quality (and Avoiding Red Flags)</h2>
+      <p>Good sites (like ours!) curate and upscale. Bad sites are automated scrapers full of pop-ups and low-res stolen art. Look for file sizes. A real 4K wallpaper should be 2MB-10MB. If it's 200KB, it's garbage. Avoid sites that force you to install software just to download an image. At <strong>Only_dias Ocean</strong>, we prioritize direct, clean downloads.</p>
+
+      <h2>Conclusion</h2>
+      <p>Your setup is an extension of your personality. Take the time to curate it. Check out our "Special" category to find wallpapers sorted by color mood (Neon, Dark, Pastel) to start building your perfect theme today.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Introduction: The Gray Area of Fan Content</h2>
+      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+      <ul>
+        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+      </ul>
+
+      <h2>Best Practices for Fans</h2>
+      <p>If you find an image you love:</p>
+      <ol>
+        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
+        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
+        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+      </ol>
+
+      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+
+      <h2>Conclusion</h2>
+      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Intro: Why Does My Setup Feel "Off"?</h2>
+      <p>Have you ever set a beautiful wallpaper, looked at it for 5 seconds, and then immediately changed it? It wasn't ugly, but it felt... wrong. It clashed with your icons, or it was too bright, or the colors didn't match your mood. This is where <strong>Color Theory</strong> comes in. Understanding the basics can help you choose a background that actually improves your digital life.</p>
+
+      <h2>Basics of Color Theory (Simplified)</h2>
+      <ul>
+        <li><strong>Warm Colors (Red, Orange, Yellow):</strong> Energetic, aggressive, stimulating. Great for gaming setups or "hype" moods. (e.g., Rengoku, Power).</li>
+        <li><strong>Cool Colors (Blue, Cyan, Green):</strong> Calming, focusing, receding. Best for productivity, coding, or relaxing. (e.g., Frieren, Rem, Miku).</li>
+        <li><strong>Contrast:</strong> High contrast (Black/White) grabs attention but can be tiring. Low contrast (Pastels) is soothing but can look washed out.</li>
+      </ul>
+
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p><strong>The Focus Setup:</strong> If you are working or studying, avoid bright reds. They increase heart rate (literally). Go for deep blues, forest greens, or monochrome images. My "Nature" collection is designed for this.</p>
+      <p><strong>The Late Night Setup:</strong> Blue light disrupts sleep. For night use, choose wallpapers with warmer, darker tones—sunsets, fires, or dark purples. Avoid pure white backgrounds at all costs.</p>
+
+      <h2>How I Color Grade Different Characters</h2>
+      <p>When I edit, I use color to tell the character's story:</p>
+      <ul>
+        <li><strong>Frieren:</strong> I lean into "Melancholic Blue" and "Soft White." I lower the contrast to make the image feel like a fading memory or a watercolor painting.</li>
+        <li><strong>Zero Two:</strong> It's all about "Electric Pink" and "Cyan." I push the contrast high to match her intense, dangerous personality. It's a "Cyberpunk" palette.</li>
+        <li><strong>Marin Kitagawa:</strong> "Golden Hour" Yellows. I saturate the warm tones to reflect her sunny, outgoing energy. It feels like a summer day.</li>
+      </ul>
+
+      <h2>Avoiding Eye Strain</h2>
+      <p>The biggest mistake is a wallpaper that is too bright compared to your room lighting. If you work in the dark, a white wallpaper acts like a flashlight in your face. Use "Dark Mode" friendly wallpapers (found in our "Dark" category) which feature black backgrounds with colored accents. Your eyes will thank you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+
+      <h2>First Experiments and the TikTok Boom</h2>
+      <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
+      <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
+
+      <h2>Why I Created "Only_dias Ocean"</h2>
+      <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
+      <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
+
+      <h2>Lessons Learned About Community</h2>
+      <p>The most important thing I've learned is that <strong>authenticity wins.</strong> I don't use bots. I reply to comments. When I mess up an edit, I admit it and fix it. This trust is why you guys keep coming back. I want to build this site not just as a gallery, but as a resource—hence these blog posts, the guides, and the tutorials.</p>
+
+      <h2>Conclusion</h2>
+      <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Introduction: The Gray Area of Fan Content</h2>
+      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+      <ul>
+        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+      </ul>
+
+      <h2>Best Practices for Fans</h2>
+      <p>If you find an image you love:</p>
+      <ol>
+        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
+        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
+        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+      </ol>
+
+      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+
+      <h2>Conclusion</h2>
+      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Intro: Why Does My Setup Feel "Off"?</h2>
+      <p>Have you ever set a beautiful wallpaper, looked at it for 5 seconds, and then immediately changed it? It wasn't ugly, but it felt... wrong. It clashed with your icons, or it was too bright, or the colors didn't match your mood. This is where <strong>Color Theory</strong> comes in. Understanding the basics can help you choose a background that actually improves your digital life.</p>
+
+      <h2>Basics of Color Theory (Simplified)</h2>
+      <ul>
+        <li><strong>Warm Colors (Red, Orange, Yellow):</strong> Energetic, aggressive, stimulating. Great for gaming setups or "hype" moods. (e.g., Rengoku, Power).</li>
+        <li><strong>Cool Colors (Blue, Cyan, Green):</strong> Calming, focusing, receding. Best for productivity, coding, or relaxing. (e.g., Frieren, Rem, Miku).</li>
+        <li><strong>Contrast:</strong> High contrast (Black/White) grabs attention but can be tiring. Low contrast (Pastels) is soothing but can look washed out.</li>
+      </ul>
+
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p><strong>The Focus Setup:</strong> If you are working or studying, avoid bright reds. They increase heart rate (literally). Go for deep blues, forest greens, or monochrome images. My "Nature" collection is designed for this.</p>
+      <p><strong>The Late Night Setup:</strong> Blue light disrupts sleep. For night use, choose wallpapers with warmer, darker tones—sunsets, fires, or dark purples. Avoid pure white backgrounds at all costs.</p>
+
+      <h2>How I Color Grade Different Characters</h2>
+      <p>When I edit, I use color to tell the character's story:</p>
+      <ul>
+        <li><strong>Frieren:</strong> I lean into "Melancholic Blue" and "Soft White." I lower the contrast to make the image feel like a fading memory or a watercolor painting.</li>
+        <li><strong>Zero Two:</strong> It's all about "Electric Pink" and "Cyan." I push the contrast high to match her intense, dangerous personality. It's a "Cyberpunk" palette.</li>
+        <li><strong>Marin Kitagawa:</strong> "Golden Hour" Yellows. I saturate the warm tones to reflect her sunny, outgoing energy. It feels like a summer day.</li>
+      </ul>
+
+      <h2>Avoiding Eye Strain</h2>
+      <p>The biggest mistake is a wallpaper that is too bright compared to your room lighting. If you work in the dark, a white wallpaper acts like a flashlight in your face. Use "Dark Mode" friendly wallpapers (found in our "Dark" category) which feature black backgrounds with colored accents. Your eyes will thank you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+
+      <h2>First Experiments and the TikTok Boom</h2>
+      <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
+      <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
+
+      <h2>Why I Created "Only_dias Ocean"</h2>
+      <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
+      <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
+
+      <h2>Lessons Learned About Community</h2>
+      <p>The most important thing I've learned is that <strong>authenticity wins.</strong> I don't use bots. I reply to comments. When I mess up an edit, I admit it and fix it. This trust is why you guys keep coming back. I want to build this site not just as a gallery, but as a resource—hence these blog posts, the guides, and the tutorials.</p>
+
+      <h2>Conclusion</h2>
+      <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Introduction: The Gray Area of Fan Content</h2>
+      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+      <ul>
+        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+      </ul>
+
+      <h2>Best Practices for Fans</h2>
+      <p>If you find an image you love:</p>
+      <ol>
+        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
+        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
+        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+      </ol>
+
+      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+
+      <h2>Conclusion</h2>
+      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Intro: Why Does My Setup Feel "Off"?</h2>
+      <p>Have you ever set a beautiful wallpaper, looked at it for 5 seconds, and then immediately changed it? It wasn't ugly, but it felt... wrong. It clashed with your icons, or it was too bright, or the colors didn't match your mood. This is where <strong>Color Theory</strong> comes in. Understanding the basics can help you choose a background that actually improves your digital life.</p>
+
+      <h2>Basics of Color Theory (Simplified)</h2>
+      <ul>
+        <li><strong>Warm Colors (Red, Orange, Yellow):</strong> Energetic, aggressive, stimulating. Great for gaming setups or "hype" moods. (e.g., Rengoku, Power).</li>
+        <li><strong>Cool Colors (Blue, Cyan, Green):</strong> Calming, focusing, receding. Best for productivity, coding, or relaxing. (e.g., Frieren, Rem, Miku).</li>
+        <li><strong>Contrast:</strong> High contrast (Black/White) grabs attention but can be tiring. Low contrast (Pastels) is soothing but can look washed out.</li>
+      </ul>
+
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p><strong>The Focus Setup:</strong> If you are working or studying, avoid bright reds. They increase heart rate (literally). Go for deep blues, forest greens, or monochrome images. My "Nature" collection is designed for this.</p>
+      <p><strong>The Late Night Setup:</strong> Blue light disrupts sleep. For night use, choose wallpapers with warmer, darker tones—sunsets, fires, or dark purples. Avoid pure white backgrounds at all costs.</p>
+
+      <h2>How I Color Grade Different Characters</h2>
+      <p>When I edit, I use color to tell the character's story:</p>
+      <ul>
+        <li><strong>Frieren:</strong> I lean into "Melancholic Blue" and "Soft White." I lower the contrast to make the image feel like a fading memory or a watercolor painting.</li>
+        <li><strong>Zero Two:</strong> It's all about "Electric Pink" and "Cyan." I push the contrast high to match her intense, dangerous personality. It's a "Cyberpunk" palette.</li>
+        <li><strong>Marin Kitagawa:</strong> "Golden Hour" Yellows. I saturate the warm tones to reflect her sunny, outgoing energy. It feels like a summer day.</li>
+      </ul>
+
+      <h2>Avoiding Eye Strain</h2>
+      <p>The biggest mistake is a wallpaper that is too bright compared to your room lighting. If you work in the dark, a white wallpaper acts like a flashlight in your face. Use "Dark Mode" friendly wallpapers (found in our "Dark" category) which feature black backgrounds with colored accents. Your eyes will thank you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+
+      <h2>First Experiments and the TikTok Boom</h2>
+      <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
+      <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
+
+      <h2>Why I Created "Only_dias Ocean"</h2>
+      <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
+      <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
+
+      <h2>Lessons Learned About Community</h2>
+      <p>The most important thing I've learned is that <strong>authenticity wins.</strong> I don't use bots. I reply to comments. When I mess up an edit, I admit it and fix it. This trust is why you guys keep coming back. I want to build this site not just as a gallery, but as a resource—hence these blog posts, the guides, and the tutorials.</p>
+
+      <h2>Conclusion</h2>
+      <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-editing-workflow-pro',
+    title: 'My Complete Anime Wallpaper Editing Workflow: From Raw Frame to 4K Masterpiece',
+    excerpt: 'Article “pilier” qui montre ton expertise. A step-by-step guide on how I transform a simple anime screenshot into a high-fidelity wallpaper.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Tutorial', 'Workflow', 'Editing', 'Quality'],
+    content: `
+      <h2>Introduction: Why Raw Screenshots Aren't Enough</h2>
+      <p>We've all been there: you pause a stunning moment in an anime, take a screenshot, and set it as your wallpaper. But then you look closer. The lines are blurry, the colors look washed out on your monitor, and there are compression artifacts (blocks) in the dark areas. Why? Because streaming services compress video to save data. A 1080p stream bitrate is tiny compared to a raw image file. My goal with this article is to walk you through my professional workflow for taking that raw, imperfect frame and turning it into a crisp, 4K masterpiece that deserves to be on your screen.</p>
+
+      <h2>Step 1: Choosing the Right Source Image</h2>
+      <p>You can't polish a pebble into a diamond if the pebble is crumbling. The source material is everything. I strictly avoid fanart unless I have explicit permission from the artist (respecting copyright is crucial). I focus on <strong>Official Anime Frames</strong> or <strong>Key Visuals</strong>.</p>
+      <ul>
+        <li><strong>Resolution:</strong> I try to start with at least a 1080p Blu-ray source. Web-rips often have "banding" in the gradients.</li>
+        <li><strong>Composition:</strong> I look for frames that follow the "Rule of Thirds" or have a strong central subject. There needs to be "negative space" for your desktop icons.</li>
+        <li><strong>Subtitles:</strong> Always find RAWs without hard-subtitles. Removing text manually destroys the background texture.</li>
+      </ul>
+
+      <h2>Step 2: Upscaling and Cleaning the Image</h2>
+      <p>This is where technology meets art. I use a combination of AI upscalers like <strong>Topaz Photo AI</strong> and <strong>Real-ESRGAN</strong> (specifically the "anime" models). Standard bicubic upscaling just makes pixels bigger and blurrier. AI models actually "hallucinate" new detail based on the existing lines.</p>
+      <p>However, AI isn't perfect. It sometimes messes up eyes or small text. I always do a "human pass" in Photoshop afterwards, using the Clone Stamp tool to fix weird artifacts and the Smudge tool to smooth out lines that the AI made too jagged. It's about finding the balance between sharpness and natural line weight.</p>
+
+      <h2>Step 3: Color Grading for Different Vibes</h2>
+      <p>Color grading is what gives an image its "soul." I don't just slap a filter on it. I use <strong>Adjustment Layers</strong> in Photoshop to build a specific mood:</p>
+      <ul>
+        <li><strong>Melancholic (e.g., Frieren):</strong> I boost the blues and cyans while lowering the saturation of warm colors. I lift the blacks to dark gray for a "faded memory" look.</li>
+        <li><strong>Vibrant (e.g., Marin):</strong> I use a "Vibrance" layer to pop the colors without clipping. I push the highlights towards yellow/orange for a sunny feel.</li>
+        <li><strong>Dark/Action (e.g., Chainsaw Man):</strong> I use "Curves" to crush the blacks and increase contrast. I often add a "Color Lookup" table (LUT) used in film editing to give it a cinematic grit.</li>
+      </ul>
+
+      <h2>Step 4: Framing for Desktop vs. Mobile</h2>
+      <p>A wallpaper has to be functional. For desktop (16:9 or 21:9), I ensure the subject is usually on the right side, leaving the left open for icons. For mobile (9:16), the subject needs to be in the lower two-thirds so the clock doesn't cover their face. I often have to "extend" the background using <strong>Generative Fill</strong> to make a horizontal image fit a vertical phone screen without cropping the character out.</p>
+
+      <h2>Step 5: Export Settings and Final Checks</h2>
+      <p>I always export as <strong>PNG-24</strong>. Never use JPG for wallpapers if you can avoid it; JPG introduces compression artifacts every time you save. I check the final image on my OLED phone and my IPS monitor to ensure the colors look correct on both. If the blacks are "crushed" too much on OLED, I adjust the levels. Naming the file is also key—"Character_Name_4K_Upscaled.png" is much better for organization (and SEO!) than "img001.png".</p>
+
+      <h2>Conclusion</h2>
+      <p>It takes me about 45-60 minutes to finish one wallpaper. It's meticulous work, but the result is a library of images that look professional and intentional. You can see this entire workflow applied in my <strong>Frieren</strong> and <strong>Cyberpunk</strong> collections. Go check them out!</p>
+    `
+  },
+  {
+    slug: 'perfect-anime-setup-guide',
+    title: 'How to Build the Perfect Anime Setup: Screens, Wallpapers, and Aesthetic Harmony',
+    excerpt: 'Connecting your digital wallpaper to your physical room. A guide to creating a cohesive anime-themed battle station.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Setup', 'Guide', 'Aesthetic', 'Gaming'],
+    content: `
+      <h2>The Art of the "Battle Station"</h2>
+      <p>Your setup is your sanctuary. Whether you're a gamer, a developer, or an artist, the visual environment you sit in affects your mood and productivity. The wallpaper is the "anchor" of your digital space, but it needs to work in harmony with your physical hardware. This guide will help you unify your screens and your room.</p>
+
+      <h2>Step 1: Choosing Your Theme (Character, Color, Mood)</h2>
+      <p>Don't just pick random images. Pick a theme. It usually starts with a character or a color palette.</p>
+      <ul>
+        <li><strong>The "Zero Two" Theme:</strong> Dominant colors are Pink, Red, and White. Your mousepad should be white or pink. Your RGB lights should be set to static magenta.</li>
+        <li><strong>The "Cyberpunk" Theme:</strong> Dominant colors are Cyan, Purple, and Deep Blue. This works great with black peripherals and "vaporwave" lighting.</li>
+        <li><strong>The "Natural" Theme (e.g., Ghibli):</strong> Greens, Blues, and soft Yellows. Pairs well with wooden desks, plants, and warm white light (3000K).</li>
+      </ul>
+
+      <h2>Step 2: Matching Wallpapers Across Devices</h2>
+      <p>Nothing breaks immersion like having a mismatched phone and PC. I always create "duo" sets. For your PC, use a wide, landscape shot (e.g., Eren looking at the sea). For your phone, use a vertical portrait of the same character (e.g., Eren's face close-up). This creates a sense of continuity as you move between devices. If you have dual monitors, try a "panoramic" wallpaper that spans both screens, or put two matching characters (like Ram and Rem) on separate screens.</p>
+
+      <h2>Step 3: Apps and Tools for Wallpaper Management</h2>
+      <p>A static image is great, but a dynamic setup is better. On PC, <strong>Wallpaper Engine</strong> is the gold standard for adding subtle motion effects to my static edits. On Android/iOS, I use "Modes" or "Focus" settings to change my wallpaper automatically based on the time of day. A bright, energetic Marin wallpaper for the day, and a dark, moody Makima wallpaper for the night to save your eyes.</p>
+
+      <h2>Step 4: Accessibility and Icon Management</h2>
+      <p>A busy wallpaper + messy desktop icons = chaos. If your wallpaper has a complex character on the right, keep your icons on the left. Better yet, hide your desktop icons completely (Right Click > View > Uncheck 'Show Desktop Icons') and use the taskbar or a launcher like "Rainmeter" for a cleaner look. Your wallpaper should be the star of the show, not the background noise for a hundred Excel files.</p>
+
+      <h2>Step 5: Where to Find Quality (and Avoiding Red Flags)</h2>
+      <p>Good sites (like ours!) curate and upscale. Bad sites are automated scrapers full of pop-ups and low-res stolen art. Look for file sizes. A real 4K wallpaper should be 2MB-10MB. If it's 200KB, it's garbage. Avoid sites that force you to install software just to download an image. At <strong>Only_dias Ocean</strong>, we prioritize direct, clean downloads.</p>
+
+      <h2>Conclusion</h2>
+      <p>Your setup is an extension of your personality. Take the time to curate it. Check out our "Special" category to find wallpapers sorted by color mood (Neon, Dark, Pastel) to start building your perfect theme today.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Introduction: The Gray Area of Fan Content</h2>
+      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+      <ul>
+        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+      </ul>
+
+      <h2>Best Practices for Fans</h2>
+      <p>If you find an image you love:</p>
+      <ol>
+        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
+        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
+        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+      </ol>
+
+      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+
+      <h2>Conclusion</h2>
+      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Intro: Why Does My Setup Feel "Off"?</h2>
+      <p>Have you ever set a beautiful wallpaper, looked at it for 5 seconds, and then immediately changed it? It wasn't ugly, but it felt... wrong. It clashed with your icons, or it was too bright, or the colors didn't match your mood. This is where <strong>Color Theory</strong> comes in. Understanding the basics can help you choose a background that actually improves your digital life.</p>
+
+      <h2>Basics of Color Theory (Simplified)</h2>
+      <ul>
+        <li><strong>Warm Colors (Red, Orange, Yellow):</strong> Energetic, aggressive, stimulating. Great for gaming setups or "hype" moods. (e.g., Rengoku, Power).</li>
+        <li><strong>Cool Colors (Blue, Cyan, Green):</strong> Calming, focusing, receding. Best for productivity, coding, or relaxing. (e.g., Frieren, Rem, Miku).</li>
+        <li><strong>Contrast:</strong> High contrast (Black/White) grabs attention but can be tiring. Low contrast (Pastels) is soothing but can look washed out.</li>
+      </ul>
+
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p><strong>The Focus Setup:</strong> If you are working or studying, avoid bright reds. They increase heart rate (literally). Go for deep blues, forest greens, or monochrome images. My "Nature" collection is designed for this.</p>
+      <p><strong>The Late Night Setup:</strong> Blue light disrupts sleep. For night use, choose wallpapers with warmer, darker tones—sunsets, fires, or dark purples. Avoid pure white backgrounds at all costs.</p>
+
+      <h2>How I Color Grade Different Characters</h2>
+      <p>When I edit, I use color to tell the character's story:</p>
+      <ul>
+        <li><strong>Frieren:</strong> I lean into "Melancholic Blue" and "Soft White." I lower the contrast to make the image feel like a fading memory or a watercolor painting.</li>
+        <li><strong>Zero Two:</strong> It's all about "Electric Pink" and "Cyan." I push the contrast high to match her intense, dangerous personality. It's a "Cyberpunk" palette.</li>
+        <li><strong>Marin Kitagawa:</strong> "Golden Hour" Yellows. I saturate the warm tones to reflect her sunny, outgoing energy. It feels like a summer day.</li>
+      </ul>
+
+      <h2>Avoiding Eye Strain</h2>
+      <p>The biggest mistake is a wallpaper that is too bright compared to your room lighting. If you work in the dark, a white wallpaper acts like a flashlight in your face. Use "Dark Mode" friendly wallpapers (found in our "Dark" category) which feature black backgrounds with colored accents. Your eyes will thank you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+
+      <h2>First Experiments and the TikTok Boom</h2>
+      <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
+      <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
+
+      <h2>Why I Created "Only_dias Ocean"</h2>
+      <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
+      <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
+
+      <h2>Lessons Learned About Community</h2>
+      <p>The most important thing I've learned is that <strong>authenticity wins.</strong> I don't use bots. I reply to comments. When I mess up an edit, I admit it and fix it. This trust is why you guys keep coming back. I want to build this site not just as a gallery, but as a resource—hence these blog posts, the guides, and the tutorials.</p>
+
+      <h2>Conclusion</h2>
+      <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-editing-workflow-pro',
+    title: 'My Complete Anime Wallpaper Editing Workflow: From Raw Frame to 4K Masterpiece',
+    excerpt: 'Article “pilier” qui montre ton expertise. A step-by-step guide on how I transform a simple anime screenshot into a high-fidelity wallpaper.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Tutorial', 'Workflow', 'Editing', 'Quality'],
+    content: `
+      <h2>Introduction: Why Raw Screenshots Aren't Enough</h2>
+      <p>We've all been there: you pause a stunning moment in an anime, take a screenshot, and set it as your wallpaper. But then you look closer. The lines are blurry, the colors look washed out on your monitor, and there are compression artifacts (blocks) in the dark areas. Why? Because streaming services compress video to save data. A 1080p stream bitrate is tiny compared to a raw image file. My goal with this article is to walk you through my professional workflow for taking that raw, imperfect frame and turning it into a crisp, 4K masterpiece that deserves to be on your screen.</p>
+
+      <h2>Step 1: Choosing the Right Source Image</h2>
+      <p>You can't polish a pebble into a diamond if the pebble is crumbling. The source material is everything. I strictly avoid fanart unless I have explicit permission from the artist (respecting copyright is crucial). I focus on <strong>Official Anime Frames</strong> or <strong>Key Visuals</strong>.</p>
+      <ul>
+        <li><strong>Resolution:</strong> I try to start with at least a 1080p Blu-ray source. Web-rips often have "banding" in the gradients.</li>
+        <li><strong>Composition:</strong> I look for frames that follow the "Rule of Thirds" or have a strong central subject. There needs to be "negative space" for your desktop icons.</li>
+        <li><strong>Subtitles:</strong> Always find RAWs without hard-subtitles. Removing text manually destroys the background texture.</li>
+      </ul>
+
+      <h2>Step 2: Upscaling and Cleaning the Image</h2>
+      <p>This is where technology meets art. I use a combination of AI upscalers like <strong>Topaz Photo AI</strong> and <strong>Real-ESRGAN</strong> (specifically the "anime" models). Standard bicubic upscaling just makes pixels bigger and blurrier. AI models actually "hallucinate" new detail based on the existing lines.</p>
+      <p>However, AI isn't perfect. It sometimes messes up eyes or small text. I always do a "human pass" in Photoshop afterwards, using the Clone Stamp tool to fix weird artifacts and the Smudge tool to smooth out lines that the AI made too jagged. It's about finding the balance between sharpness and natural line weight.</p>
+
+      <h2>Step 3: Color Grading for Different Vibes</h2>
+      <p>Color grading is what gives an image its "soul." I don't just slap a filter on it. I use <strong>Adjustment Layers</strong> in Photoshop to build a specific mood:</p>
+      <ul>
+        <li><strong>Melancholic (e.g., Frieren):</strong> I boost the blues and cyans while lowering the saturation of warm colors. I lift the blacks to dark gray for a "faded memory" look.</li>
+        <li><strong>Vibrant (e.g., Marin):</strong> I use a "Vibrance" layer to pop the colors without clipping. I push the highlights towards yellow/orange for a sunny feel.</li>
+        <li><strong>Dark/Action (e.g., Chainsaw Man):</strong> I use "Curves" to crush the blacks and increase contrast. I often add a "Color Lookup" table (LUT) used in film editing to give it a cinematic grit.</li>
+      </ul>
+
+      <h2>Step 4: Framing for Desktop vs. Mobile</h2>
+      <p>A wallpaper has to be functional. For desktop (16:9 or 21:9), I ensure the subject is usually on the right side, leaving the left open for icons. For mobile (9:16), the subject needs to be in the lower two-thirds so the clock doesn't cover their face. I often have to "extend" the background using <strong>Generative Fill</strong> to make a horizontal image fit a vertical phone screen without cropping the character out.</p>
+
+      <h2>Step 5: Export Settings and Final Checks</h2>
+      <p>I always export as <strong>PNG-24</strong>. Never use JPG for wallpapers if you can avoid it; JPG introduces compression artifacts every time you save. I check the final image on my OLED phone and my IPS monitor to ensure the colors look correct on both. If the blacks are "crushed" too much on OLED, I adjust the levels. Naming the file is also key—"Character_Name_4K_Upscaled.png" is much better for organization (and SEO!) than "img001.png".</p>
+
+      <h2>Conclusion</h2>
+      <p>It takes me about 45-60 minutes to finish one wallpaper. It's meticulous work, but the result is a library of images that look professional and intentional. You can see this entire workflow applied in my <strong>Frieren</strong> and <strong>Cyberpunk</strong> collections. Go check them out!</p>
+    `
+  },
+  {
+    slug: 'perfect-anime-setup-guide',
+    title: 'How to Build the Perfect Anime Setup: Screens, Wallpapers, and Aesthetic Harmony',
+    excerpt: 'Connecting your digital wallpaper to your physical room. A guide to creating a cohesive anime-themed battle station.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Setup', 'Guide', 'Aesthetic', 'Gaming'],
+    content: `
+      <h2>The Art of the "Battle Station"</h2>
+      <p>Your setup is your sanctuary. Whether you're a gamer, a developer, or an artist, the visual environment you sit in affects your mood and productivity. The wallpaper is the "anchor" of your digital space, but it needs to work in harmony with your physical hardware. This guide will help you unify your screens and your room.</p>
+
+      <h2>Step 1: Choosing Your Theme (Character, Color, Mood)</h2>
+      <p>Don't just pick random images. Pick a theme. It usually starts with a character or a color palette.</p>
+      <ul>
+        <li><strong>The "Zero Two" Theme:</strong> Dominant colors are Pink, Red, and White. Your mousepad should be white or pink. Your RGB lights should be set to static magenta.</li>
+        <li><strong>The "Cyberpunk" Theme:</strong> Dominant colors are Cyan, Purple, and Deep Blue. This works great with black peripherals and "vaporwave" lighting.</li>
+        <li><strong>The "Natural" Theme (e.g., Ghibli):</strong> Greens, Blues, and soft Yellows. Pairs well with wooden desks, plants, and warm white light (3000K).</li>
+      </ul>
+
+      <h2>Step 2: Matching Wallpapers Across Devices</h2>
+      <p>Nothing breaks immersion like having a mismatched phone and PC. I always create "duo" sets. For your PC, use a wide, landscape shot (e.g., Eren looking at the sea). For your phone, use a vertical portrait of the same character (e.g., Eren's face close-up). This creates a sense of continuity as you move between devices. If you have dual monitors, try a "panoramic" wallpaper that spans both screens, or put two matching characters (like Ram and Rem) on separate screens.</p>
+
+      <h2>Step 3: Apps and Tools for Wallpaper Management</h2>
+      <p>A static image is great, but a dynamic setup is better. On PC, <strong>Wallpaper Engine</strong> is the gold standard for adding subtle motion effects to my static edits. On Android/iOS, I use "Modes" or "Focus" settings to change my wallpaper automatically based on the time of day. A bright, energetic Marin wallpaper for the day, and a dark, moody Makima wallpaper for the night to save your eyes.</p>
+
+      <h2>Step 4: Accessibility and Icon Management</h2>
+      <p>A busy wallpaper + messy desktop icons = chaos. If your wallpaper has a complex character on the right, keep your icons on the left. Better yet, hide your desktop icons completely (Right Click > View > Uncheck 'Show Desktop Icons') and use the taskbar or a launcher like "Rainmeter" for a cleaner look. Your wallpaper should be the star of the show, not the background noise for a hundred Excel files.</p>
+
+      <h2>Step 5: Where to Find Quality (and Avoiding Red Flags)</h2>
+      <p>Good sites (like ours!) curate and upscale. Bad sites are automated scrapers full of pop-ups and low-res stolen art. Look for file sizes. A real 4K wallpaper should be 2MB-10MB. If it's 200KB, it's garbage. Avoid sites that force you to install software just to download an image. At <strong>Only_dias Ocean</strong>, we prioritize direct, clean downloads.</p>
+
+      <h2>Conclusion</h2>
+      <p>Your setup is an extension of your personality. Take the time to curate it. Check out our "Special" category to find wallpapers sorted by color mood (Neon, Dark, Pastel) to start building your perfect theme today.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Introduction: The Gray Area of Fan Content</h2>
+      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+      <ul>
+        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+      </ul>
+
+      <h2>Best Practices for Fans</h2>
+      <p>If you find an image you love:</p>
+      <ol>
+        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
+        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
+        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+      </ol>
+
+      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+
+      <h2>Conclusion</h2>
+      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Intro: Why Does My Setup Feel "Off"?</h2>
+      <p>Have you ever set a beautiful wallpaper, looked at it for 5 seconds, and then immediately changed it? It wasn't ugly, but it felt... wrong. It clashed with your icons, or it was too bright, or the colors didn't match your mood. This is where <strong>Color Theory</strong> comes in. Understanding the basics can help you choose a background that actually improves your digital life.</p>
+
+      <h2>Basics of Color Theory (Simplified)</h2>
+      <ul>
+        <li><strong>Warm Colors (Red, Orange, Yellow):</strong> Energetic, aggressive, stimulating. Great for gaming setups or "hype" moods. (e.g., Rengoku, Power).</li>
+        <li><strong>Cool Colors (Blue, Cyan, Green):</strong> Calming, focusing, receding. Best for productivity, coding, or relaxing. (e.g., Frieren, Rem, Miku).</li>
+        <li><strong>Contrast:</strong> High contrast (Black/White) grabs attention but can be tiring. Low contrast (Pastels) is soothing but can look washed out.</li>
+      </ul>
+
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p><strong>The Focus Setup:</strong> If you are working or studying, avoid bright reds. They increase heart rate (literally). Go for deep blues, forest greens, or monochrome images. My "Nature" collection is designed for this.</p>
+      <p><strong>The Late Night Setup:</strong> Blue light disrupts sleep. For night use, choose wallpapers with warmer, darker tones—sunsets, fires, or dark purples. Avoid pure white backgrounds at all costs.</p>
+
+      <h2>How I Color Grade Different Characters</h2>
+      <p>When I edit, I use color to tell the character's story:</p>
+      <ul>
+        <li><strong>Frieren:</strong> I lean into "Melancholic Blue" and "Soft White." I lower the contrast to make the image feel like a fading memory or a watercolor painting.</li>
+        <li><strong>Zero Two:</strong> It's all about "Electric Pink" and "Cyan." I push the contrast high to match her intense, dangerous personality. It's a "Cyberpunk" palette.</li>
+        <li><strong>Marin Kitagawa:</strong> "Golden Hour" Yellows. I saturate the warm tones to reflect her sunny, outgoing energy. It feels like a summer day.</li>
+      </ul>
+
+      <h2>Avoiding Eye Strain</h2>
+      <p>The biggest mistake is a wallpaper that is too bright compared to your room lighting. If you work in the dark, a white wallpaper acts like a flashlight in your face. Use "Dark Mode" friendly wallpapers (found in our "Dark" category) which feature black backgrounds with colored accents. Your eyes will thank you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+
+      <h2>First Experiments and the TikTok Boom</h2>
+      <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
+      <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
+
+      <h2>Why I Created "Only_dias Ocean"</h2>
+      <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
+      <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
+
+      <h2>Lessons Learned About Community</h2>
+      <p>The most important thing I've learned is that <strong>authenticity wins.</strong> I don't use bots. I reply to comments. When I mess up an edit, I admit it and fix it. This trust is why you guys keep coming back. I want to build this site not just as a gallery, but as a resource—hence these blog posts, the guides, and the tutorials.</p>
+
+      <h2>Conclusion</h2>
+      <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
     `
   },
   {
@@ -1092,7 +1631,4 @@ export function getAllPosts(): BlogPost[] {
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
-}/ /   B u i l d   U p d a t e :   0 2 / 0 3 / 2 0 2 6   1 2 : 4 6 : 3 9  
- / /   B u i l d   U p d a t e :   0 2 / 0 3 / 2 0 2 6   1 2 : 4 6 : 4 7  
- / /   F o r c e   V e r c e l   R e b u i l d   0 2 / 0 3 / 2 0 2 6   1 3 : 0 3 : 1 9  
- 
+}
