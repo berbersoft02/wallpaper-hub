@@ -82,6 +82,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- FAQ Section (High Value Text Content) --- */}
+        <section className="py-20 px-4 bg-dark-bg border-t border-gray-800">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-pixel text-3xl md:text-4xl text-neon-cyan mb-12 text-center">
+              Frequently Asked <span className="text-white">Questions</span>
+            </h2>
+            
+            <div className="space-y-8 font-body text-gray-300">
+              <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
+                <h3 className="font-pixel text-xl text-neon-pink mb-2">Are these wallpapers free to use?</h3>
+                <p>Yes, all wallpapers on Only_dias Ocean are free for personal use. You can use them on your phone, desktop, or tablet. However, you cannot sell them or use them for commercial projects without permission from the original rights holders.</p>
+              </div>
+
+              <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
+                <h3 className="font-pixel text-xl text-neon-cyan mb-2">How do you achieve 4K quality?</h3>
+                <p>We use a multi-step process involving AI upscaling (Real-ESRGAN) and manual retouching in Adobe Photoshop. This allows us to take standard 1080p anime frames and enhance them to 3840x2160 resolution without losing the original art style.</p>
+              </div>
+
+              <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
+                <h3 className="font-pixel text-xl text-neon-purple mb-2">Can I request a specific character?</h3>
+                <p>Absolutely! Most of our "Exclusive Drops" come from community requests on TikTok. You can use the "Contact" page or drop a comment on our latest video to suggest the next collection.</p>
+              </div>
+
+              <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
+                <h3 className="font-pixel text-xl text-white mb-2">Why do some images look different from the anime?</h3>
+                <p>We often apply color grading and lighting effects to match our "Neon Ocean" aesthetic. This might include enhancing the glow of a magic spell, shifting the color palette to be cooler or warmer, or adding atmospheric depth.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* --- About Me section --- */}
         <section id="about" className="bg-dark-bg/90 py-20 px-4 flex flex-col items-center text-center relative overflow-hidden">
           {/* Gradient background effect */}
