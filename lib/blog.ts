@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Check out the new <strong>Frieren</strong> category in the gallery now! I'll be adding more shots from the "First Class Mage Exam" arc soon, so keep an eye on the updates. Let me know on TikTok which scene I should upscale next—I'm always looking for new challenges to push the limits of my editing skills and bring your favorite moments to life in 4K!</p>
     `
-  },,
+  },
   {
     slug: 'attack-on-titan-cinematic-brutality-long',
     title: 'Attack on Titan: The Final Season\'s Cinematic Brutality and Editing Mastery in 4K',
