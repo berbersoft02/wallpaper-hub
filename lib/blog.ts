@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
       <p>Let's be honest: Gojo Satoru's eyes are probably the most expensive thing MAPPA has ever animated in the history of the studio. The detail in the iris—the crystalline structure, the glowing electric blue, the multiple layers of transparency, and the way they reflect the chaotic world around him—is iconic and immediately recognizable to any anime fan. It's the first thing everyone notices when he takes off his blindfold or lifts his sunglasses. As an editor, my number one job when working on a Gojo piece is: <strong>Don't ruin the eyes.</strong> If the eyes lose their spark or become blurry during the upscale, the entire wallpaper fails to capture the character's essence. They must be the sharpest, most vibrant part of the image. They are the window into his soul and his god-like power. They are the focus of every 4K edit I make for this site.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/9_ysxuup.jpg" alt="Gojo Satoru Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542271/26_iy3ffa.jpg" alt="Gojo Satoru Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>The "Infinite" Edit Technique: Mastering Contrast and Glow for OLED Perfection</h2>
