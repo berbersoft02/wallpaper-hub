@@ -82,6 +82,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- Featured Guides Section (New for AdSense) --- */}
+        <section className="py-20 px-4 bg-dark-bg border-b border-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
+              Essential <span className="text-neon-purple">Guides</span> for Your Setup
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {getAllPosts()
+                .filter(p => p.slug === 'anime-wallpaper-setup-guide' || p.slug === 'anime-wallpaper-editing-workflow-pro')
+                .map((post) => (
+                  <article key={post.slug} className="flex flex-col md:flex-row bg-card-bg rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple transition-all group">
+                    <div className="p-8 flex flex-col justify-center">
+                      <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Guide</span>
+                      <h3 className="font-pixel text-2xl text-white mb-4 group-hover:text-neon-purple transition-colors">
+                        <Link href={`/blog/${post.slug}`}>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <p className="text-gray-400 mb-6 leading-relaxed">
+                        {post.excerpt}
+                      </p>
+                      <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-white font-bold hover:text-neon-purple transition-colors">
+                        Read Guide <span className="ml-2">→</span>
+                      </Link>
+                    </div>
+                  </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* --- FAQ Section (High Value Text Content) --- */}
         <section className="py-20 px-4 bg-dark-bg border-t border-gray-800">
           <div className="max-w-4xl mx-auto">
