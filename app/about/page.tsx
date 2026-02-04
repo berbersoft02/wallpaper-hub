@@ -33,14 +33,22 @@ export default function AboutPage() {
           <section className="bg-card-bg p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-neon-pink/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="relative z-10 space-y-6">
-              <h2 className="font-pixel text-3xl text-neon-cyan text-center">Meet the Editor</h2>
+              <h2 className="font-pixel text-3xl text-neon-cyan text-center">About Me</h2>
               <div className="max-w-3xl mx-auto text-center space-y-4">
-                <p className="text-gray-300 text-lg">
-                  I'm a 23-year-old engineer with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+                <p className="text-gray-300 text-xl font-medium">
+                  23 yo engineer, interested in programming and design.
                 </p>
-                <p className="text-gray-300 text-lg">
-                  I've always been fascinated by how color and light can change the mood of a scene. This fascination led me to start my TikTok channel, <strong>@noxzx_kb</strong>, where I share my editing process and speed-edits with over thousands of followers. Only_dias Ocean is the natural extension of that community—a place where you can finally download the art you see in my videos.
+                <p className="text-gray-400 text-lg">
+                  Always passionate about creating digital experiences and learning new things.
                 </p>
+                <div className="pt-4">
+                  <a 
+                    href="mailto:berbersoft@gmail.com" 
+                    className="font-body text-neon-pink text-lg md:text-xl hover:text-neon-cyan transition-all underline decoration-neon-pink/50 hover:decoration-neon-cyan"
+                  >
+                    berbersoft@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </section>
