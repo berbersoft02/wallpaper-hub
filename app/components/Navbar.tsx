@@ -54,10 +54,10 @@ export default function Navbar() {
             ICONS PFPS
           </Link>
           <button 
-            onClick={() => handleSoonClick("APPS")}
-            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
+            onClick={() => handleSoonClick("Desktop Wallpapers")}
+            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left"
           >
-            APPS
+            Desktop Wallpapers
           </button>
           <Link
             href="/blog"
@@ -121,10 +121,10 @@ export default function Navbar() {
               ICONS PFPS
             </Link>
             <button 
-              onClick={() => handleSoonClick("APPS")}
+              onClick={() => handleSoonClick("Desktop Wallpapers")}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
-              APPS
+              Desktop Wallpapers
             </button>
             <Link
               href="/blog"
