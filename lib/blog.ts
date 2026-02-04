@@ -1112,11 +1112,8 @@ export const blogPosts: BlogPost[] = [
     author: 'Only_dias',
     tags: ['Story', 'Community', 'TikTok', 'Growth'],
     content: `
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23 yo engineer, interested in programming and design. 
-        Always passionate about creating digital experiences and learning new things.
-      </p>
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
 
       <h2>First Experiments and the TikTok Boom</h2>
       <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
@@ -1288,11 +1285,8 @@ export const blogPosts: BlogPost[] = [
     author: 'Only_dias',
     tags: ['Story', 'Community', 'TikTok', 'Growth'],
     content: `
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23 yo engineer, interested in programming and design. 
-        Always passionate about creating digital experiences and learning new things.
-      </p>
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
 
       <h2>First Experiments and the TikTok Boom</h2>
       <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
@@ -1464,11 +1458,8 @@ export const blogPosts: BlogPost[] = [
     author: 'Only_dias',
     tags: ['Story', 'Community', 'TikTok', 'Growth'],
     content: `
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23 yo engineer, interested in programming and design. 
-        Always passionate about creating digital experiences and learning new things.
-      </p>
+      <h2>The Beginning: A Passion for Design</h2>
+      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
 
       <h2>First Experiments and the TikTok Boom</h2>
       <p>I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.</p>
