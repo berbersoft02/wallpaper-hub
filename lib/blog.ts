@@ -11,6 +11,39 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'alya-kujou-tsundere-editing-guide',
+    title: 'Alya Kujou: My 4K Wallpapers Collection + Tsundere Editing Guide',
+    excerpt: 'Discover my exclusive collection of Alya Kujou wallpapers in 4K. Detailed editing process, tsundere color grading, setup tips, and full gallery.',
+    date: '2026-02-04',
+    author: 'Only_dias',
+    tags: ['Alya Kujou', 'Roshidere', 'Tsundere', 'Editing'],
+    content: `
+      <h2>Introduction: Why Alya Kujou is Wallpaper Gold</h2>
+      <p><em>Alya Sometimes Hides Her Feelings in Russian</em> (Roshidere) is the perfect anime for fans of <strong>tsunderes with style</strong>. Alya, with her silver hair, cold gazes, and hidden smiles, has that mix of Russian coldness and Japanese sweetness that explodes on a 4K screen.</p>
+      <p>This collection was born from my love for complex characters like her. In this article, I show you:</p>
+      <ul>
+        <li>How I chose and edited her best frames.</li>
+        <li>The specific workflow to capture her "tsundere vibe".</li>
+        <li>My tips for your desktop/mobile.</li>
+        <li>The full gallery with your fanart as a bonus.</li>
+      </ul>
+      <p>If you love elegant and mysterious setups, Alya will transform your screen!</p>
+
+      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957600/wallpapers/Alya%20Kujou/10.jpg" alt="Alya Kujou 4K Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>1. Choosing Alya’s Best Frames for Wallpapers</h2>
+      <p>Alya isn't an "action" character—she shines in quiet moments, side glances, hair in the wind. For this collection, I analyzed season 1 to find frames that capture her essence:</p>
+      <ul>
+        <li><strong>Tsundere expressions</strong>: cold gaze + subtle smile (e.g., library scene, "hiding feelings" moment).</li>
+        <li><strong>Dynamic composition</strong>: moving hair, light on face, blurred school background.</li>
+        <li><strong>Elegant palette</strong>: silver grey, night blue, touches of pink for the hidden sweetness.</li>
+      </ul>
+      <p>Star example: the scene where she turns her head with a corner smile. Perfect for desktop (icon space on left) or mobile (centered face). I selected 10 frames + 2 inspired fanarts for this exclusive set.</p>
+    `
+  },
+  {
     slug: 'frieren-4k-wallpapers-guide',
     title: 'The Magic of Frieren: My 4K Wallpaper Collection + Editing Breakdown',
     excerpt: 'Explore my exclusive collection of Frieren 4K wallpapers. Detailed editing process, setup tips, and why this series is a game-changer for anime backgrounds.',
