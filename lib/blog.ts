@@ -11,6 +11,119 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'yuki-suou-4k-wallpapers-guide',
+    title: 'Yuki Suou: My 4K Wallpapers Collection + Genki Girl Editing Guide',
+    excerpt: 'Exclusive Yuki Suou 4K wallpapers collection. Detailed editing workflow, genki color grading, PC/mobile setup tips, and gallery with 2 styles (kawaii + cool).',
+    date: '2026-02-04',
+    author: 'Only_dias',
+    tags: ['Yuki Suou', 'Roshidere', 'Genki', 'Editing'],
+    content: `
+      <h2>Introduction: Yuki Suou, the Ultimate Genki Energy Wallpaper</h2>
+      <p>Yuki Suou from <em>Alya Sometimes Hides Her Feelings in Russian</em> (Roshidere) is the perfect <strong>genki girl</strong> archetype: infectious smile, overflowing energy, perfect black hair for light effects. Her joyful expressions and dynamic poses make her ideal for brightening any screen.</p>
+      <p>This collection captures her 2 main styles you created: <strong>kawaii pastel</strong> and <strong>cool determined</strong>. In this article:</p>
+      <ul>
+        <li>How I selected and edited her best frames for 4K.</li>
+        <li>Specific workflow to capture her genki energy.</li>
+        <li>Setup tips for your desktop/mobile.</li>
+        <li>Complete gallery featuring your examples.</li>
+      </ul>
+      <p>Yuki will boost your mood the moment you turn on your PC!</p>
+      
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770123307/3_gtiwdc.jpg" alt="Yuki Suou Kawaii Wallpaper" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>1. Yuki's Two Styles: Kawaii vs Cool Frames</h2>
+      <p>Yuki switches between <strong>genki kawaii</strong> (ultra-wide smile, hearts, stars) and <strong>cool confident</strong> (direct gaze, assured pose). For this collection, I analyzed Season 1 to find frames highlighting these facets:</p>
+      <p><strong>Kawaii Style</strong> (like your <code>3.jpg</code>):</p>
+      <ul>
+        <li>Maximum smile, pink cheeks, cute gestures (V-fingers, teddy bear).</li>
+        <li>Pastel palette: light yellow, soft pink, mint green.</li>
+      </ul>
+      <p><strong>Cool Style</strong> (like your <code>1.jpg</code>):</p>
+      <ul>
+        <li>Intense gaze, flowing hair, confident posture.</li>
+        <li>Vibrant palette: deep purple, gold, strong contrasts.</li>
+      </ul>
+      <p>Example: the scene where she does the V with her yellow t-shirt (kawaii max), vs the "I'm serious" moment with loose hair (cool power). 12 wallpapers total, 6 per style.</p>
+
+      <h2>2. Editing Workflow for Yuki's Genki Vibes</h2>
+      <p>Here's my exact process to turn Yuki into perfect 4K wallpapers. She needs lots of life and color!</p>
+
+      <h3>Step 1: Cleaning and Upscaling</h3>
+      <ul>
+        <li>Remove artifacts, subtitles, especially on long hair.</li>
+        <li>Real-ESRGAN upscale to 4K + manual fixes to keep hair "movement."</li>
+        <li>Slight eye boost to make them sparkle without looking fake.</li>
+      </ul>
+
+      <h3>Step 2: Genki Color Grading</h3>
+      <p>Yuki = <strong>pure energy</strong>. My approach:</p>
+      <ul>
+        <li><strong>Kawaii Style</strong>: +20% saturation, pink/yellow glow on cheeks, soft vignette, boosted stars/hearts.</li>
+        <li><strong>Cool Style</strong>: +30% contrast, deep purples, gold highlights on hair, blurred school background for face focus.</li>
+        <li>Always check on bright/dark screens to avoid eye strain.</li>
+      </ul>
+      <p>For your <code>3.jpg</code>, I amplified pastels and added subtle sparkle around the smile. For <code>1.jpg</code>, focused on purple gaze with dramatic vignette.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770123307/3_gtiwdc.jpg" alt="Yuki Kawaii" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770123302/1_uiauqs.jpg" alt="Yuki Cool" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <h3>Step 3: Multi-Device Framing</h3>
+      <ul>
+        <li><strong>Desktop</strong>: Yuki offset left/right based on pose, icon space free.</li>
+        <li><strong>Mobile</strong>: Smile centered, hair cascading down for notifications.</li>
+        <li><strong>Ultrawide</strong>: Stretched background with extended light effects.</li>
+      </ul>
+
+      <h2>3. Perfect Setups for Yuki Suou Wallpapers</h2>
+      <p>Yuki shines in <strong>energetic and fun setups</strong>. Here's why + how to use her:</p>
+      <ul>
+        <li><strong>Genki boost</strong>: Perfect for mornings or gaming—her smile motivates instantly.</li>
+        <li><strong>Versatility</strong>: Kawaii for chill, cool for focus/study.</li>
+        <li><strong>Matching</strong>: Yellow/green theme for kawaii, purple/black for cool.</li>
+      </ul>
+      <p><strong>Tips</strong>:</p>
+      <ul>
+        <li>Kawaii Yuki + Wallpaper Engine with star particles.</li>
+        <li>Cool Yuki + synced yellow/purple RGB lights.</li>
+        <li>Auto-rotation: Kawaii mornings, cool evenings.</li>
+      </ul>
+
+      <h2>4. Complete Yuki Suou 4K Gallery (2 Styles)</h2>
+      <p>Your 2 examples featured + full collection! Optimized 4K PNGs.</p>
+      <p><strong>Kawaii Style</strong>:</p>
+      <ul>
+        <li><strong>Yuki V-pose smile</strong> – Your <code>3.jpg</code> upscaled 4K.</li>
+        <li><strong>Teddy bear moment</strong> – Maximum yellow pastel.</li>
+        <li>… <em>(6 wallpapers)</em></li>
+      </ul>
+      <p><strong>Cool Style</strong>:</p>
+      <ul>
+        <li><strong>Serious glance</strong> – Your <code>1.jpg</code> color-graded purple/gold.</li>
+        <li><strong>Hair flip power</strong> – Intense contrast.</li>
+        <li>… <em>(6 wallpapers)</em></li>
+      </ul>
+
+      <h2>5. Fanart Spotlight & Creator Respect</h2>
+      <p>Your Yuki drawings are perfect: kawaii with flowers/hearts (<code>3.jpg</code>), cool with confident smile (<code>1.jpg</code>). Upscaled + graded, they fit perfectly in the collection!</p>
+      <p>Reminder: Roshidere © Kadokawa. Fanarts/edits for personal use only. Support via legal streaming, merch!</p>
+
+      <h2>6. More Yuki Coming?</h2>
+      <ul>
+        <li>Request S2 Yuki or "Yuki + Alya duo" on TikTok <strong>@Only_dias</strong>.</li>
+        <li>Custom version? Tell me your ratio/mood.</li>
+      </ul>
+      <p>Thanks for reading! Check <a href="/blog/frieren-4k-wallpapers-guide" class="text-neon-pink">Frieren</a>, <a href="/blog/alya-kujou-tsundere-editing-guide" class="text-neon-pink">Alya</a>, and more on <a href="/" class="text-neon-pink">home</a>.</p>
+    `
+  },
+  {
     slug: 'alya-kujou-tsundere-editing-guide',
     title: 'Alya Kujou: My 4K Wallpapers Collection + Tsundere Editing Guide',
     excerpt: 'Discover my exclusive collection of Alya Kujou wallpapers in 4K. Detailed editing process, tsundere color grading, setup tips, and full gallery.',
