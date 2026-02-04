@@ -149,11 +149,15 @@ export default function Home() {
           {/* Gradient background effect */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan/5 to-transparent"></div>
           
-          <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">About Me</h2>
-          <p className="font-body text-gray-200 text-lg md:text-2xl max-w-xl mx-auto mb-8 relative z-10">
-            23 yo engineer, interested in programming and design.<br/>
-            Always passionate about creating digital experiences and learning new things.
-          </p>
+          <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
+          <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
+            <p>
+              I'm a 23-year-old engineer with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+            </p>
+            <p>
+              I've always been fascinated by how color and light can change the mood of a scene. This fascination led me to start my TikTok channel, <strong>@noxzx_kb</strong>, where I share my editing process and speed-edits with over thousands of followers. Only_dias Ocean is the natural extension of that community—a place where you can finally download the art you see in my videos.
+            </p>
+          </div>
           
           <a 
             href="mailto:berbersoft@gmail.com" 
