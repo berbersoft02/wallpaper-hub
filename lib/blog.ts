@@ -83,7 +83,6 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Fanart Special: Your Tsundere Alya drawing</strong> – Edited in 4K with pro color grading.</li>
       </ul>
       <p><em>(Total of 10 wallpapers available in the gallery)</em></p>
-      <p><strong><a href="/gallery/alya-kujou" class="text-neon-pink hover:underline">Download the ZIP Pack (120MB, all resolutions)</a></strong></p>
 
       <h2>5. Fanart & Respecting Roshidere Creators</h2>
       <p>Your Alya fanart is amazing—perfect tsundere vibes with hearts, stars, and "my girl"! I upscaled and colorized it for the collection (silver grey + subtle pink).</p>
