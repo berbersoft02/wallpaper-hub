@@ -41,6 +41,58 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Elegant palette</strong>: silver grey, night blue, touches of pink for the hidden sweetness.</li>
       </ul>
       <p>Star example: the scene where she turns her head with a corner smile. Perfect for desktop (icon space on left) or mobile (centered face). I selected 10 frames + 2 inspired fanarts for this exclusive set.</p>
+
+      <h2>2. My Editing Workflow for Alya Wallpapers</h2>
+      <p>Here is the exact step-by-step process. Alya demands a precise treatment to keep her elegance without falling into the "too flashy" trap.</p>
+      
+      <h3>Step 1: Cleaning and Upscaling</h3>
+      <p>I start by removing subtitles, logos, and compression artifacts (especially on her fine hair). I use <strong>Real-ESRGAN</strong> for the upscale to 4K, focusing heavily on the details of her eyes and hair strands. A minimal denoise is applied to preserve the texture of her school uniform.</p>
+
+      <h3>Step 2: Tsundere Style Color Grading</h3>
+      <p>Alya is coldness + hidden warmth. My approach:</p>
+      <ul>
+        <li><strong>Cold Base:</strong> Dominant blues and greys for that impassive Russian side.</li>
+        <li><strong>Warm Accents:</strong> Subtle pink on the cheeks and lips for the hidden tsundere sweetness.</li>
+        <li><strong>Contrast:</strong> High contrast on the face, soft on the background to make her "pop".</li>
+      </ul>
+      <p>For the "corner smile" frame, I added a light glow to her silver hair and a discreet vignette to focus on her gaze. Saturation is controlled to avoid eye fatigue.</p>
+
+      <h3>Step 3: Multi-Device Framing</h3>
+      <ul>
+        <li><strong>Desktop 16:9:</strong> Alya shifted to the right, leaving icon space on the left.</li>
+        <li><strong>Ultrawide 21:9:</strong> School background stretched for immersion.</li>
+        <li><strong>Mobile 9:16:</strong> Zoomed on the face, with hair cascading down.</li>
+      </ul>
+      <p>Final test on my setup (Gaming PC + Android) to verify readability and battery impact.</p>
+
+      <h2>3. Why Alya Wallpapers Elevate Your Setup</h2>
+      <p>Alya wallpapers have a great "Class + Personality" balance. Here is why they work so well:</p>
+      <ul>
+        <li><strong>Tsundere Elegance:</strong> Cold from afar, warm up close—perfect for minimalist setups.</li>
+        <li><strong>Versatility:</strong> The Blue/Grey palette works with dark themes, office work, or gaming.</li>
+        <li><strong>Emotional Impact:</strong> Her gaze motivates you or calms you depending on your mood.</li>
+      </ul>
+      <p><strong>Setup Tips:</strong> Pair with a "Dark Mode" Windows theme or "Graphite" iOS theme. Set your RGB LEDs to Cool Blue + White to match her hair. Use Wallpaper Engine to auto-rotate between her tsundere expressions.</p>
+
+      <h2>4. Complete Alya Kujou 4K Wallpaper Gallery</h2>
+      <p>Here is the full collection. All in PNG optimized for 4K.</p>
+      <ul>
+        <li><strong>Wallpaper 1: Alya smile in library</strong> – Desktop classic.</li>
+        <li><strong>Wallpaper 2: Tsundere glance</strong> – Mobile portrait.</li>
+        <li><strong>Wallpaper 3: Hair flip moment</strong> – Ultrawide.</li>
+        <li><strong>Fanart Special: Your Tsundere Alya drawing</strong> – Edited in 4K with pro color grading.</li>
+      </ul>
+      <p><em>(Total of 10 wallpapers available in the gallery)</em></p>
+      <p><strong><a href="/gallery/alya-kujou" class="text-neon-pink hover:underline">Download the ZIP Pack (120MB, all resolutions)</a></strong></p>
+
+      <h2>5. Fanart & Respecting Roshidere Creators</h2>
+      <p>Your Alya fanart is amazing—perfect tsundere vibes with hearts, stars, and "my girl"! I upscaled and colorized it for the collection (silver grey + subtle pink).</p>
+      <p><strong>Important Reminder:</strong> <em>Roshidere</em> belongs to Kadokawa and studio Doga Kobo. My edits and fanarts are for personal use. Please support the official release via Crunchyroll, the manga, or official merchandise!</p>
+
+      <h2>6. Request Your Alya Scene</h2>
+      <p>Want more Alya? Comment or DM <strong>@Only_dias</strong> on TikTok.</p>
+      <p>Tell me "S2 Alya" or "Alya + Masachika duo".</p>
+      <p>Thanks for reading! Head back to the home page for Frieren, Zero Two, and more.</p>
     `
   },
   {
