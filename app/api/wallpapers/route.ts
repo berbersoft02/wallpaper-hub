@@ -174,12 +174,16 @@ export async function GET() {
 
   const characters = Array.from(charMap.values()).sort((a, b) => a.name.localeCompare(b.name));
 
-  // Move "Frieren" to the end of the array so it shows up first when the gallery reverses the list
-  const frierenIndex = characters.findIndex(c => c.name === "Frieren");
-  if (frierenIndex !== -1) {
-    const [frieren] = characters.splice(frierenIndex, 1);
-    characters.push(frieren);
-  }
+  // Move specific characters to the end of the array so they show up first when the gallery reverses the list
+  const priorityChars = ["Frieren", "Violet Evergarden", "Shiina Mahiru"];
+  
+  priorityChars.forEach(name => {
+    const index = characters.findIndex(c => c.name === name);
+    if (index !== -1) {
+      const [char] = characters.splice(index, 1);
+      characters.push(char);
+    }
+  });
 
   return NextResponse.json({
     characters,
