@@ -42,7 +42,8 @@ function normalizeName(name: string) {
     'chisato-nishikigi': 'Chisato Nishikigi',
     'elaina': 'Elaina',
     'hina-chono': 'Hina Chono',
-    'hushino': 'Hushino',
+    'hushino': 'Subaru Hoshina',
+    'Subaru Hoshino': 'Subaru Hoshina',
     'kaoruko-waguri': 'Kaoruko Waguri',
     'live-wallpapers': 'Live Wallpapers',
     'mai': 'Mai',
@@ -61,6 +62,11 @@ function normalizeName(name: string) {
     'spider-man': 'Spider-Man',
     'Rin  Nanakura': 'Rin Nanakura',
     'Rias  Gremory': 'Rias Gremory',
+    'boku-no-hero-academia': 'Boku No Hero Academia',
+    'Boku no Hero Academia': 'Boku No Hero Academia',
+    'violet-evergarden': 'Violet Evergarden',
+    'isagi-yoichi': 'Isagi Yoichi',
+    'ISAGI YOICHI': 'Isagi Yoichi',
   };
   
   let clean = name.trim();
@@ -77,9 +83,11 @@ function normalizeName(name: string) {
 async function fetchAll(resourceType: 'image' | 'video') {
   let list: any[] = [];
   let nextCursor: string | undefined = undefined;
+  let pages = 0;
   
   try {
     do {
+      pages++;
       const expression = `resource_type:${resourceType}`;
       const search = cloudinary.search
         .expression(expression)
@@ -101,7 +109,7 @@ async function fetchAll(resourceType: 'image' | 'video') {
   } catch (e) {
     console.error(`Error fetching ${resourceType}:`, e);
   }
-  return list;
+  return { list, pages };
 }
 
 export async function GET() {
@@ -109,10 +117,13 @@ export async function GET() {
     return NextResponse.json({ error: 'Cloudinary config missing' }, { status: 500 });
   }
 
-  const [images, videos] = await Promise.all([
+  const [imagesData, videosData] = await Promise.all([
     fetchAll('image'),
     fetchAll('video')
   ]);
+
+  const images = imagesData.list;
+  const videos = videosData.list;
 
   const all = [...images, ...videos];
   const charMap = new Map();
@@ -173,6 +184,12 @@ export async function GET() {
   return NextResponse.json({
     characters,
     source: 'cloudinary-live-full',
-    total: all.length
+    total: all.length,
+    debug: {
+      imagesFound: images.length,
+      videosFound: videos.length,
+      imagePages: imagesData.pages,
+      videoPages: videosData.pages
+    }
   });
 }
