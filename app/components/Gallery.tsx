@@ -120,14 +120,14 @@ export default function Gallery() {
   };
 
   const allWallpapersReversed = [...wallpapers].reverse();
-  const animeOnly = allWallpapersReversed.filter(w => w.category === 'Anime');
+  const everything = allWallpapersReversed;
 
   const filteredWallpapers = filter === "All" 
-    ? animeOnly.slice(0, displayCount)
+    ? everything.slice(0, displayCount)
     : wallpapers.filter(w => w.character === filter).reverse();
 
   const finalDisplay = filteredWallpapers;
-  const hasMore = filter === "All" && displayCount < animeOnly.length;
+  const hasMore = filter === "All" && displayCount < everything.length;
 
   const getCount = (charName: string) => wallpapers.filter(w => w.character === charName).length;
 
@@ -251,7 +251,7 @@ export default function Gallery() {
                     : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-pink/50 hover:text-white hover:bg-neon-pink/10"
                 }`}
               >
-                ALL <span className="ml-2 opacity-60 text-xs">{animeOnly.length}</span>
+                ALL <span className="ml-2 opacity-60 text-xs">{everything.length}</span>
               </button>
 
               {/* Character Buttons */}
