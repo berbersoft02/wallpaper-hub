@@ -3,6 +3,7 @@
     {
       "name": "Akane Kurokawa",
       "category": "Anime",
+      "tags": ["OshiNoKo", "Acting", "BlueEyes"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957518/wallpapers/Akane%20Kurokawa/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957530/wallpapers/Akane%20Kurokawa/2.jpg",
@@ -21,6 +22,7 @@
     {
       "name": "Alya Kujou ♡",
       "category": "Anime",
+      "tags": ["Roshidere", "Tsundere", "SilverHair"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957592/wallpapers/Alya%20Kujou/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957600/wallpapers/Alya%20Kujou/10.jpg",
@@ -37,6 +39,7 @@
     {
       "name": "Animals",
       "category": "Special",
+      "tags": ["Nature", "Cute", "Wild"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040152/wallpapers/Animals/8.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040153/wallpapers/Animals/----.jpg",
@@ -58,6 +61,7 @@
     {
       "name": "Attack On Titan",
       "category": "Anime",
+      "tags": ["AOT", "Eren", "ShingekiNoKyojin"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769173647/oboi.4k_threadsmate.com_1769173491_yyx0po.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769173649/oboi.4k_threadsmate.com_1769173489_po3jnj.webp",
@@ -67,6 +71,7 @@
     {
       "name": "Awesome",
       "category": "Special",
+      "tags": ["Aesthetic", "Cool", "Vibe"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769042617/photo_2024-04-01_14-37-52_yu1zgq.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043515/wallpapers/Awesome/----.jpg",
@@ -87,6 +92,7 @@
     {
       "name": "Bachira Meguru",
       "category": "Anime",
+      "tags": ["BlueLock", "Dribble", "Egoist"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355323/1_hilnhp.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355324/5_irfaex.jpg",
@@ -99,6 +105,7 @@
     {
       "name": "Baki Hanma",
       "category": "Anime",
+      "tags": ["Baki", "Fighting", "Muscle"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769042464/photo_2026-01-09_20-39-02_fcqyyv.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769042465/photo_2026-01-09_20-39-03_xbheax.jpg",
@@ -112,6 +119,7 @@
     {
       "name": "Boku no Hero Academia",
       "category": "Anime",
+      "tags": ["MHA", "Deku", "Hero"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542553/14_p3m7il.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542553/4_jivoiq.jpg",
@@ -133,6 +141,7 @@
     {
       "name": "Cars",
       "category": "Special",
+      "tags": ["JDM", "Drift", "Supercars"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040193/wallpapers/Cars/-----.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068734/wallpapers/Cars/1.jpg",
@@ -157,6 +166,7 @@
     {
       "name": "Chainsaw Man",
       "category": "Anime",
+      "tags": ["CSM", "Denji", "Pochita"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187346/oboi.4k_threadsmate.com_1769174792_cdpmpz.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174793_hyn2wc.webp"
@@ -165,6 +175,7 @@
     {
       "name": "Chisato Nishikigi",
       "category": "Anime",
+      "tags": ["LycorisRecoil", "Action", "Red"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040224/wallpapers/Chisato%20Nishikigi/1_1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040227/wallpapers/Chisato%20Nishikigi/1_2.jpg",
@@ -183,8 +194,10 @@
     {
       "name": "Demon Slayer",
       "category": "Anime",
+      "tags": ["KimetsuNoYaiba", "Tanjiro", "Hashira"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542651/12_li4at5.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542652/1_qtxlyv.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542653/4_px7myz.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542654/5_wyigas.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542654/6_vefpqc.jpg",
@@ -200,6 +213,7 @@
     {
       "name": "Dragon Ball",
       "category": "Anime",
+      "tags": ["DBZ", "Goku", "Saiyan"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068820/wallpapers/Dragon%20Ball/1.jpg"
       ]
@@ -207,6 +221,7 @@
     {
       "name": "Elaina",
       "category": "Anime",
+      "tags": ["WanderingWitch", "Magic", "Travel"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957727/wallpapers/Elaina/2%281%29.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957740/wallpapers/Elaina/3%281%29.jpg",
@@ -214,15 +229,21 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957758/wallpapers/Elaina/5%281%29.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768135356/wallpapers/elaina/11.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127777/wallpapers/Elaina/1_1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127780/wallpapers/Elaina/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127784/wallpapers/Elaina/2_1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127787/wallpapers/Elaina/2.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127792/wallpapers/Elaina/3_1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127795/wallpapers/Elaina/3.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127801/wallpapers/Elaina/4_1.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127808/wallpapers/Elaina/5_1.jpg"
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127804/wallpapers/Elaina/4.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127808/wallpapers/Elaina/5_1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769127811/wallpapers/Elaina/5.jpg"
       ]
     },
     {
       "name": "Frieren",
       "category": "Anime",
+      "tags": ["Frieren", "Fantasy", "Elf"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769982758/1_1_bx910o.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769982760/3_1_bvcdxu.jpg",
@@ -239,6 +260,7 @@
     {
       "name": "Hina Chono",
       "category": "Anime",
+      "tags": ["BlueBox", "Romance", "Sports"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958421/wallpapers/%E2%99%A1%20Hina%20Chono/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958427/wallpapers/%E2%99%A1%20Hina%20Chono/10.jpg",
@@ -255,6 +277,7 @@
     {
       "name": "ISAGI YOICHI",
       "category": "Anime",
+      "tags": ["BlueLock", "Striker", "Puzzle"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/3_kbwl2w.jpg",
@@ -267,6 +290,7 @@
     {
       "name": "Itashi",
       "category": "Anime",
+      "tags": ["Naruto", "Uchiha", "Akatsuki"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068914/wallpapers/Itashi/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068917/wallpapers/Itashi/2.jpg",
@@ -276,43 +300,20 @@
     {
       "name": "Jujutsu Kaisen",
       "category": "Anime",
+      "tags": ["JJK", "Gojo", "Sukuna"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542261/2_zxxefs.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542262/3_t5yyzy.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542262/4_znrded.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542262/5_swkqsm.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542262/8_brefdq.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542263/1_qodquv.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542263/7_yuvjev.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542264/10_g6i9th.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542265/11_kydjeo.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542265/13_eerhkn.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/14_cfw0h4.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/15_lbtnp9.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542266/9_ysxuup.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542267/17_xvtmw9.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542267/18_t2o0fg.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542268/19_nks6od.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542268/20_ux5kuw.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542269/21_lpelda.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542269/22_llfknr.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542270/23_mx4nke.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542270/24_yj7rs3.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542270/25_sf3ql1.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542271/26_iy3ffa.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542271/27_hzugy5.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542272/28_fybxbb.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542272/29_tnknej.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542298/30_dscngz.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542298/31_fqdbpg.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542299/33_hpmoji.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542300/34_iabmxi.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542301/35_toqo6v.webp"
       ]
     },
     {
       "name": "Kano Chinatsu",
       "category": "Anime",
+      "tags": ["BlueBox", "Badminton", "Senpai"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957665/wallpapers/Chinatsu/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957671/wallpapers/Chinatsu/10.jpg",
@@ -329,6 +330,7 @@
     {
       "name": "Kaoruko waguri",
       "category": "Anime",
+      "tags": ["KaoruHana", "Romance", "Wholesome"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957833/wallpapers/Kaoruko%20waguri/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957838/wallpapers/Kaoruko%20waguri/2.jpg",
@@ -349,6 +351,7 @@
     {
       "name": "Live Wallpapers",
       "category": "Special",
+      "tags": ["Animated", "Live", "Motion"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/video/upload/v1768234915/wallpapers/Live%20Wallpapers/1.mp4",
         "https://res.cloudinary.com/dg8hzm1fp/video/upload/v1768234916/wallpapers/Live%20Wallpapers/2.mp4",
@@ -371,6 +374,7 @@
     {
       "name": "Mai Sakurajima",
       "category": "Anime",
+      "tags": ["BunnyGirlSenpai", "Romance", "Rascal"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957945/wallpapers/Mai/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957950/wallpapers/Mai/10.jpg",
@@ -387,6 +391,7 @@
     {
       "name": "Maria kujou",
       "category": "Anime",
+      "tags": ["Roshidere", "Sister", "Cute"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958006/wallpapers/Maria%20kujou/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958013/wallpapers/Maria%20kujou/10.jpg",
@@ -407,6 +412,7 @@
     {
       "name": "Marin kitagawa",
       "category": "Anime",
+      "tags": ["MyDressUpDarling", "Cosplay", "Gyaru"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958104/wallpapers/Marin%20kitagawa/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958107/wallpapers/Marin%20kitagawa/10.jpg",
@@ -423,6 +429,7 @@
     {
       "name": "Miku Nakano",
       "category": "Anime",
+      "tags": ["Gotoubun", "Headphones", "Quintuplets"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043967/wallpapers/Miku%20Nakano/1_1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043974/wallpapers/Miku%20Nakano/1.jpg",
@@ -439,6 +446,7 @@
     {
       "name": "Mixed",
       "category": "Special",
+      "tags": ["Random", "Variety", "Anime"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234856/wallpapers/Mixed/1.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234857/wallpapers/Mixed/10.jpg",
@@ -486,11 +494,6 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234906/wallpapers/Mixed/49.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234908/wallpapers/Mixed/5.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234909/wallpapers/Mixed/50.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234910/wallpapers/Mixed/51.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234911/wallpapers/Mixed/6.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234912/wallpapers/Mixed/7.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234913/wallpapers/Mixed/8.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234914/wallpapers/Mixed/9.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040634/wallpapers/Mixed/88787.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040637/wallpapers/Mixed/----.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040648/wallpapers/Mixed/-----.jpg"
@@ -499,6 +502,7 @@
     {
       "name": "Nagi seishiro",
       "category": "Anime",
+      "tags": ["BlueLock", "Genius", "Trap"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769546303/4_frctpi.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769546305/3_hlmjsd.jpg",
@@ -510,6 +514,7 @@
     {
       "name": "Nakano Nino",
       "category": "Anime",
+      "tags": ["Gotoubun", "Tsundere", "Quintuplets"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958160/wallpapers/Nakano%20Nino/10.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958192/wallpapers/Nakano%20Nino/6.jpg",
@@ -526,21 +531,8 @@
     {
       "name": "Nature",
       "category": "Special",
+      "tags": ["Scenery", "Landscape", "Peaceful"],
       "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/4_rwa0qe.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685123/5_z4fd2v.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/1_dk0oxr.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/2_tscru5.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/3_cbgmdo.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/7_kfj78g.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/8_y6ymzf.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685124/9_ugkrxd.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/10_w7sb8t.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/12_il8bk7.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/13_jcqovu.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685125/14_ocfeks.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/11_l6fjkf.webp",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685126/6_hglq2g.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/2_vcenvc.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685653/3_fmxqwe.webp",
@@ -555,6 +547,7 @@
     {
       "name": "Nishimiya Shouko",
       "category": "Anime",
+      "tags": ["SilentVoice", "Emotion", "KoeNoKatachi"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768135369/11_rkds3i.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768135369/2_ucu2lp.jpg",
@@ -585,6 +578,7 @@
     {
       "name": "One Piece",
       "category": "Anime",
+      "tags": ["Luffy", "Pirates", "Gear5"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187204/oboi.4k_threadsmate.com_1769187172_d71lwl.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187204/oboi.4k_threadsmate.com_1769187173_kbul0u.webp",
@@ -594,6 +588,7 @@
     {
       "name": "Phoebe",
       "category": "Anime",
+      "tags": ["Aesthetic", "Girl", "Art"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768308218/wallpapers/phoebe/11.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768308219/wallpapers/phoebe/21.jpg",
@@ -616,6 +611,7 @@
     {
       "name": "Pixel",
       "category": "Special",
+      "tags": ["PixelArt", "Retro", "8bit"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040759/wallpapers/Pixel/----.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043087/photo_2024-12-02_15-29-56_uagvjq.jpg"
@@ -624,6 +620,7 @@
     {
       "name": "Rias Gremory",
       "category": "Anime",
+      "tags": ["DxD", "Devil", "CrimsonHair"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769084989/2_2_pdutcx.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769084991/3_2_x4gyob.jpg",
@@ -640,6 +637,7 @@
     {
       "name": "Rin Itoshi",
       "category": "Anime",
+      "tags": ["BlueLock", "Rival", "Striker"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769680269/2_qlwchl.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769680269/3_ckbloy.jpg",
@@ -655,6 +653,7 @@
     {
       "name": "Rin Nanakura",
       "category": "Anime",
+      "tags": ["GijiHarem", "Romance", "Acting"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040798/wallpapers/Rin%20%20Nanakura/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040801/wallpapers/Rin%20%20Nanakura/10.jpg",
@@ -671,6 +670,7 @@
     {
       "name": "Rin Shima",
       "category": "Anime",
+      "tags": ["YuruCamp", "Camping", "Cozy"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767967483/wallpapers/rin-shima/Gemini_Generated_Image_blnyebblnyebblny.png",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767967486/wallpapers/rin-shima/Gemini_Generated_Image_he665ehe665ehe66.png",
@@ -687,6 +687,7 @@
     {
       "name": "Rintaro Tsumugi",
       "category": "Anime",
+      "tags": ["KaoruHana", "Gentle", "Blonde"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769184762/1_giyu6z.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769184765/3_djgilo.jpg",
@@ -699,6 +700,7 @@
     {
       "name": "Shiina Mahiru",
       "category": "Anime",
+      "tags": ["AngelNextDoor", "Romance", "Sweet"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044586/wallpapers/Shiina%20Mahiru/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044589/wallpapers/Shiina%20Mahiru/10.jpg",
@@ -716,6 +718,7 @@
     {
       "name": "Shikimori Micchon",
       "category": "Anime",
+      "tags": ["Shikimori", "CoolGirl", "PinkHair"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958229/wallpapers/shikimori/10.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958256/wallpapers/shikimori/6.jpg",
@@ -732,6 +735,7 @@
     {
       "name": "Spider-Man",
       "category": "Special",
+      "tags": ["Marvel", "SpiderVerse", "MilesMorales"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068711/wallpapers/Awesome/7.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp",
@@ -742,6 +746,7 @@
     {
       "name": "Subaru Hushino",
       "category": "Anime",
+      "tags": ["OshiNoKo", "Idol", "Ruby"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957767/wallpapers/Hushino/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957772/wallpapers/Hushino/10.jpg",
@@ -758,6 +763,7 @@
     {
       "name": "The Detective Is Already Dead",
       "category": "Anime",
+      "tags": ["Siesta", "Mystery", "WhiteHair"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769042850/photo_2023-10-10_17-05-36_3_nrltxg.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769042852/photo_2023-10-10_17-05-36_2_zy3fs8.jpg",
@@ -771,6 +777,7 @@
     {
       "name": "Yuki Suou",
       "category": "Anime",
+      "tags": ["Roshidere", "Genki", "Kawaii"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770123302/1_uiauqs.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770123303/10_btxkg5.jpg",
@@ -787,6 +794,7 @@
     {
       "name": "Yuuko Hiragi",
       "category": "Anime",
+      "tags": ["Anime", "Girl", "Kawaii"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769041021/wallpapers/Yuuko%20Hiragi/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769041026/wallpapers/Yuuko%20Hiragi/10.jpg",
@@ -803,6 +811,7 @@
     {
       "name": "Yuzuki Nanase",
       "category": "Anime",
+      "tags": ["ChitoseKun", "Romance", "Popular"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958279/wallpapers/Yuzuki%20Nanase/1%20%282%29.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958289/wallpapers/Yuzuki%20Nanase/10.jpg",
@@ -820,6 +829,7 @@
     {
       "name": "Zero Two",
       "category": "Anime",
+      "tags": ["DarlingInTheFranxx", "002", "DinoGirl"],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958363/wallpapers/Zero%20Two/10.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958371/wallpapers/Zero%20Two/2%20%282%29.jpg",

@@ -81,6 +81,21 @@ async function sync() {
   const videos = await fetchResources('video');
   const allResources = [...images, ...videos];
 
+  // Load existing data to preserve tags
+  let existingTags = {};
+  if (fs.existsSync(OUTPUT_FILE)) {
+    try {
+      const existingData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+      if (existingData.characters) {
+        existingData.characters.forEach(c => {
+          if (c.tags) existingTags[c.name] = c.tags;
+        });
+      }
+    } catch (e) {
+      console.warn('⚠️ Could not parse existing wallpapers.json for tags.');
+    }
+  }
+
   const charactersMap = new Map();
 
   allResources.forEach(resource => {
@@ -124,6 +139,7 @@ async function sync() {
       charactersMap.set(cleanName, {
         name: cleanName,
         category: SPECIAL_CATEGORIES.includes(cleanName) ? 'Special' : 'Anime',
+        tags: existingTags[cleanName] || [],
         wallpapers: []
       });
     }

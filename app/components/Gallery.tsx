@@ -11,12 +11,14 @@ interface Wallpaper {
   character: string;
   title: string;
   category: string;
+  tags?: string[];
 }
 
 interface CharacterData {
   name: string;
   category: string;
   wallpapers: string[];
+  tags?: string[];
 }
 
 export default function Gallery() {
@@ -62,7 +64,8 @@ export default function Gallery() {
                 url: wallpaperUrl,
                 character: char.name,
                 title: `${char.name} - ${imgIndex + 1}`,
-                category: char.category || 'Anime' // Fallback to 'Anime' if undefined
+                category: char.category || 'Anime',
+                tags: char.tags || []
               });
             });
           });
@@ -331,11 +334,22 @@ export default function Gallery() {
                 </div>
                 
                 <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90 backdrop-blur-sm">
-                  <div>
-                    <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate max-w-[200px]">{wp.title}</h3>
-                    <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{renderCharacterName(wp.character)}</span>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate">{wp.title}</h3>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{renderCharacterName(wp.character)}</span>
+                      {wp.tags && wp.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mt-1">
+                          {wp.tags.map(tag => (
+                            <span key={tag} className="text-[10px] text-neon-cyan font-mono hover:text-neon-pink transition-colors">
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <button className="text-gray-500 hover:text-red-500 transition-all hover:scale-125">
+                  <button className="text-gray-500 hover:text-red-500 transition-all hover:scale-125 ml-2 shrink-0">
                     <Heart size={20} />
                   </button>
                 </div>
