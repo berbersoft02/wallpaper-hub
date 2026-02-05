@@ -18,16 +18,6 @@ export default function ContactPage() {
           </p>
 
           <div className="space-y-8">
-            <div className="flex flex-col items-center p-6 bg-dark-bg/50 rounded-lg border border-gray-700 hover:border-neon-cyan transition-all">
-              <h3 className="font-pixel text-2xl text-neon-pink mb-2">Email Us</h3>
-              <a 
-                href="mailto:berbersoft@gmail.com" 
-                className="font-body text-xl text-white hover:text-neon-cyan transition-colors"
-              >
-                berbersoft@gmail.com
-              </a>
-            </div>
-
             <div className="flex flex-col items-center p-6 bg-dark-bg/50 rounded-lg border border-gray-700 hover:border-neon-pink transition-all">
               <h3 className="font-pixel text-2xl text-neon-cyan mb-2">Social Media</h3>
               <div className="flex gap-6 mt-2">

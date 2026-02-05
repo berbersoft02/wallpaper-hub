@@ -130,13 +130,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">12. Contact Us</h2>
             <p>
-              If you have any questions about these Terms of Service, please contact us at:{" "}
-              <a 
-                href="mailto:berbersoft@gmail.com" 
-                className="text-neon-cyan hover:text-neon-pink underline"
-              >
-                berbersoft@gmail.com
-              </a>
+              If you have any questions about these Terms of Service, please contact us through our social media channels or the recommendation form.
             </p>
           </section>
         </div>

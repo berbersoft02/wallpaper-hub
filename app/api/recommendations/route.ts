@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       try {
         await resend.emails.send({
           from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-          to: 'berbersoft@gmail.com',
+          to: process.env.ADMIN_EMAIL || 'admin@example.com',
           replyTo: email,
           subject: `New Recommendation from ${name}`,
           html: `
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
           from: email,
           name,
           message,
-          to: 'berbersoft@gmail.com'
+          to: process.env.ADMIN_EMAIL || 'admin@example.com',
         });
         
         return NextResponse.json({ 
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
         from: email,
         name,
         message,
-        to: 'berbersoft@gmail.com'
+        to: process.env.ADMIN_EMAIL || 'admin@example.com',
       });
 
       return NextResponse.json({ 

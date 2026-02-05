@@ -158,13 +158,6 @@ export default function Home() {
               I've always been fascinated by how color and light can change the mood of a scene. This fascination led me to start my TikTok channel, <strong>@noxzx_kb</strong>, where I share my editing process and speed-edits with over thousands of followers. Only_dias Ocean is the natural extension of that community—a place where you can finally download the art you see in my videos.
             </p>
           </div>
-          
-          <a 
-            href="mailto:berbersoft@gmail.com" 
-            className="font-body text-gray-300 text-lg md:text-xl mb-8 relative z-10 hover:text-neon-cyan transition-all hover:drop-shadow-[0_0_12px_rgba(5,217,232,0.8)] underline decoration-neon-cyan/50 hover:decoration-neon-cyan"
-          >
-            berbersoft@gmail.com
-          </a>
 
           <div className="flex justify-center gap-6 my-8 relative z-10">
             <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" title="Twitter">

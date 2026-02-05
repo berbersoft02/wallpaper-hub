@@ -11,7 +11,7 @@ export default function Footer() {
         
         <div className="text-center md:text-left">
            <span className="font-pixel text-2xl text-white drop-shadow-[0_0_12px_rgba(5,217,232,0.6)]">ONLY<span className="text-neon-cyan animate-pulse">_DIAS</span></span>
-           <p className="font-mono text-gray-400 mt-2 text-sm">© 2026. All rights reserved. <a href="mailto:berbersoft@gmail.com" className="text-neon-cyan hover:text-neon-pink transition-colors hover:underline">berbersoft@gmail.com</a></p>
+           <p className="font-mono text-gray-400 mt-2 text-sm">© 2026. All rights reserved.</p>
            
            {/* Navigation Links */}
            <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">

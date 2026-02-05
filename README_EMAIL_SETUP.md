@@ -33,8 +33,8 @@ RESEND_FROM_EMAIL=onboarding@resend.dev
 ### 5. Tester
 - Allez sur votre site
 - Cliquez sur "Send Recommendation"
-- Remplissez le formulaire et envoyez
-- Vous devriez recevoir l'email à `berbersoft@gmail.com`
+- Testez le formulaire de recommandation.
+- Vous devriez recevoir l'email à l'adresse configurée dans `ADMIN_EMAIL`.
 
 ## Alternative : Sans Resend (pour développement)
 
