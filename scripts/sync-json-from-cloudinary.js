@@ -32,6 +32,8 @@ const NAME_MAPPING = {
   'Subaru Hoshino': 'Subaru Hoshina',
   'violet-evergarden': 'Violet Evergarden',
   'kaoruko-waguri': 'Kaoruko Waguri',
+  'isagi-yoichi': 'Isagi Yoichi',
+  'ISAGI YOICHI': 'Isagi Yoichi',
   'live-wallpapers': 'Live Wallpapers',
   'mai': 'Mai',
   'maria-kujou': 'Maria Kujou',
