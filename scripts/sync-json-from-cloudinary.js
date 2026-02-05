@@ -30,6 +30,8 @@ const NAME_MAPPING = {
   'hina-chono': '♡ Hina Chono',
   'hushino': 'Subaru Hoshina',
   'Subaru Hoshino': 'Subaru Hoshina',
+  'boku-no-hero-academia': 'Boku No Hero Academia',
+  'Boku no Hero Academia': 'Boku No Hero Academia',
   'violet-evergarden': 'Violet Evergarden',
   'kaoruko-waguri': 'Kaoruko Waguri',
   'isagi-yoichi': 'Isagi Yoichi',
