@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
+import wallpapersData from '@/app/data/wallpapers.json';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -7,6 +8,16 @@ export const revalidate = 0;
 const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
 const apiKey = process.env.CLOUDINARY_API_KEY;
 const apiSecret = process.env.CLOUDINARY_API_SECRET;
+
+// Create a map of tags from the JSON file
+const tagMap: Record<string, string[]> = {};
+if (wallpapersData.characters) {
+  wallpapersData.characters.forEach((char: any) => {
+    if (char.tags) {
+      tagMap[char.name] = char.tags;
+    }
+  });
+}
 
 if (cloudName && apiKey && apiSecret) {
   cloudinary.config({
@@ -139,6 +150,7 @@ export async function GET() {
       charMap.set(name, {
         name,
         category: SPECIAL_CATEGORIES.includes(name) ? 'Special' : 'Anime',
+        tags: tagMap[name] || [],
         wallpapers: []
       });
     }
