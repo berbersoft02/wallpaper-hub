@@ -642,41 +642,57 @@ export const blogPosts: BlogPost[] = [
       <p>Your setup is an extension of your personality. Take the time to curate it. Check out our "Special" category to find wallpapers sorted by color mood (Neon, Dark, Pastel) to start building your perfect theme today.</p>
     `
   },
-  {
-    slug: 'respecting-artists-copyright-guide',
-    title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
-    excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
-    date: '2026-01-01',
-    author: 'Only_dias',
-    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
-    content: `
-      <h2>Introduction: The Gray Area of Fan Content</h2>
-      <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
-
-      <h2>Official Anime Screens vs. Fanart</h2>
-      <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
-      <ul>
-        <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
-        <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
-      </ul>
-
-      <h2>Best Practices for Fans</h2>
-      <p>If you find an image you love:</p>
-      <ol>
-        <li><strong>Reverse Image Search:</strong> Use Google Lens or SauceNAO to find the original source.</li>
-        <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it. Don't use it.</li>
-        <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
-        <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
-      </ol>
-
-      <h2>How We Handle Content at Only_dias Ocean</h2>
-      <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
-
-      <h2>Conclusion</h2>
-      <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
-    `
-  },
-  {
+    {
+      slug: 'respecting-artists-copyright-guide',
+      title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
+      excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
+      date: '2026-01-01',
+      author: 'Only_dias',
+      tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+      content: `
+        <h2>Introduction: The Gray Area of Fan Content</h2>
+        <p>The internet is flooded with anime images, and it's easy to forget that behind every drawing is a human artist. Many fans simply right-click and save without thinking. While I am not a lawyer, I believe it is vital for our community to understand the basics of respect and copyright. We want to celebrate these characters, not exploit the people who create them.</p>
+  
+        <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040648/wallpapers/Mixed/-----.jpg" alt="Official Anime Art Example" class="object-cover w-full h-full" />
+        </div>
+  
+        <h2>Official Anime Screens vs. Fanart</h2>
+        <p>There is a big difference between editing a frame from an anime episode (produced by a studio like MAPPA or Kyoto Animation) and re-uploading a piece of Fanart drawn by an independent artist on Twitter/Pixiv.</p>
+        <ul>
+          <li><strong>Screenshots:</strong> Generally accepted in the "Fair Use" / Fan community realm for non-commercial wallpapers, provided you aren't selling them. Studios rarely target fansites sharing love for the show.</li>
+          <li><strong>Fanart:</strong> This is personal property. <strong>NEVER</strong> take an artist's drawing from Pixiv/Twitter and upload it to a wallpaper site without their direct, written permission. They rely on their own platforms for views and income.</li>
+        </ul>
+  
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+            <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234900/wallpapers/Mixed/44.jpg" alt="Official Media 1" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+            <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234890/wallpapers/Mixed/37.jpg" alt="Official Media 2" class="object-cover w-full h-full" />
+          </div>
+        </div>
+  
+        <h2>Best Practices for Fans</h2>
+        <p>If you find an image you love, take a moment to verify its source before sharing or using it:</p>
+        <ol>
+          <li><strong>Reverse Image Search:</strong> Use tools like Google Lens or SauceNAO. If the source is a Twitter or Pixiv account, it's likely fanart. If it's from an official website or streaming service, it's likely official media.</li>
+          <li><strong>Check the Bio:</strong> Does the artist say "Do not repost"? If yes, respect it immediately. Do not use it for anything public.</li>
+          <li><strong>Keep the Watermark:</strong> Never crop out a signature. It is the only way people can find the creator.</li>
+          <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
+        </ol>
+  
+        <h2>How We Handle Content at Only_dias Ocean</h2>
+        <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
+  
+        <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234874/wallpapers/Mixed/24.jpg" alt="Community Respect" class="object-cover w-full h-full" />
+        </div>
+  
+        <h2>Conclusion</h2>
+        <p>Let's keep the anime community healthy. Credit where credit is due, support the official releases, and enjoy the art responsibly. By distinguishing between official promotional material and independent art, we ensure that creators at all levels are respected. If you are an artist and see your work here by mistake, please use the <strong>Contact</strong> page, and we will resolve it instantly.</p>
+      `
+    },  {
     slug: 'anime-wallpaper-color-theory',
     title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
     excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
