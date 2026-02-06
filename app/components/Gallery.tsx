@@ -57,7 +57,8 @@ export default function Gallery() {
             "Violet Evergarden", 
             "Shiina Mahiru",
             "Alya Kujou ♡",
-            "Shikimori Micchon"
+            "Shikimori Micchon",
+            "Mixed"
           ];
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
@@ -83,29 +84,42 @@ export default function Gallery() {
           });
 
           // 2. Process priority characters (Interleaved)
-          // Map priority chars to their data objects to preserve order from priorityNames
+          // Map priority chars to their data objects
           const priorityDataList = priorityNames
             .map(name => priorityChars.find((c: CharacterData) => c.name === name))
-            .filter((c): c is CharacterData => !!c); // Type guard to remove undefined
+            .filter((c): c is CharacterData => !!c);
 
           // Add names to filter list
-          priorityDataList.forEach(c => animeNames.push(c.name));
+          priorityDataList.forEach(c => {
+            if (c.category === 'Special') specialNames.push(c.name);
+            else animeNames.push(c.name);
+          });
 
           // Find the max length to iterate
           const maxLength = Math.max(...priorityDataList.map(c => c.wallpapers.length), 0);
 
           // Iterate backwards (from oldest to newest) to build the stack for the reversed view
           for (let i = maxLength - 1; i >= 0; i--) {
-             // Iterate through priority list in reverse order so the first one in priorityNames 
-             // ends up last in the array (and thus first in the reversed view)
-             // e.g. Priority: [Frieren, Violet]. 
-             // Push Violet[i], then Frieren[i]. 
-             // Result array end: ... Violet[i], Frieren[i]
-             // Reversed View: Frieren[i], Violet[i] ...
              for (let j = priorityDataList.length - 1; j >= 0; j--) {
                 const char = priorityDataList[j];
                 const wps = char.wallpapers;
                 
+                // Specific Logic for "Mixed": Only prioritize 54, 44, 37, 24
+                if (char.name === "Mixed") {
+                   const priorityIndices = [53, 43, 36, 23]; // 0-based for 54, 44, 37, 24
+                   if (priorityIndices.includes(i)) {
+                      allWallpapers.push({
+                        id: `${char.name}-${i}`,
+                        url: wps[i],
+                        character: char.name,
+                        title: `${char.name} - ${i + 1}`,
+                        category: char.category,
+                        tags: char.tags || []
+                      });
+                   }
+                   continue;
+                }
+
                 if (wps[i]) {
                   allWallpapers.push({
                     id: `${char.name}-${i}`,
@@ -117,6 +131,25 @@ export default function Gallery() {
                   });
                 }
              }
+          }
+
+          // 3. Add the rest of the Mixed wallpapers that weren't prioritized
+          const mixedChar = priorityDataList.find(c => c.name === "Mixed");
+          if (mixedChar) {
+            const priorityIndices = [53, 43, 36, 23];
+            mixedChar.wallpapers.forEach((url, i) => {
+              if (!priorityIndices.includes(i)) {
+                // Add to the START of allWallpapers so they appear AFTER priority ones in reverse
+                allWallpapers.unshift({
+                  id: `Mixed-${i}`,
+                  url: url,
+                  character: "Mixed",
+                  title: `Mixed - ${i + 1}`,
+                  category: "Special",
+                  tags: mixedChar.tags || []
+                });
+              }
+            });
           }
 
           setWallpapers(allWallpapers);
