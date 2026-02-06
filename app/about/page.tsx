@@ -29,17 +29,31 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Section 2: The Creator */}
+          {/* Section 2: The Journey (From TikTok to Desktop) */}
           <section className="bg-card-bg p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-neon-pink/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <div className="relative z-10 space-y-6">
-              <h2 className="font-pixel text-3xl text-neon-cyan text-center">Meet the Editor</h2>
-              <div className="max-w-3xl mx-auto text-center space-y-4">
-                <p className="text-gray-300 text-lg">
-                  I'm a 23-year-old engineer with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+            <div className="relative z-10 space-y-8">
+              <h2 className="font-pixel text-3xl text-neon-cyan text-center">From TikTok to Desktop</h2>
+              
+              <div className="max-w-3xl mx-auto text-gray-300 text-lg space-y-6 leading-relaxed">
+                <p>
+                  Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.
                 </p>
-                <p className="text-gray-300 text-lg">
-                  I've always been fascinated by how color and light can change the mood of a scene. This fascination led me to start my TikTok channel, <strong>@noxzx_kb</strong>, where I share my editing process and speed-edits with over thousands of followers. Only_dias Ocean is the natural extension of that community—a place where you can finally download the art you see in my videos.
+                
+                <h3 className="font-pixel text-xl text-neon-pink">The TikTok Boom</h3>
+                <p>
+                  I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.
+                </p>
+                <p>
+                  I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.
+                </p>
+
+                <h3 className="font-pixel text-xl text-neon-cyan">Building the Ocean</h3>
+                <p>
+                  TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.
+                </p>
+                <p>
+                  I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.
                 </p>
               </div>
             </div>

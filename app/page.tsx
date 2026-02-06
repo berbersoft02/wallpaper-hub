@@ -82,29 +82,35 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Featured Guides Section (New for AdSense) --- */}
+        {/* --- Featured Guides Section (High Value Content) --- */}
         <section className="py-20 px-4 bg-dark-bg border-b border-gray-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
-              Essential <span className="text-neon-purple">Guides</span> for Your Setup
+              Essential <span className="text-neon-purple">Guides</span> & Stories
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {getAllPosts()
-                .filter(p => p.slug === 'anime-wallpaper-setup-guide' || p.slug === 'anime-wallpaper-editing-workflow-pro')
+                .filter(p => [
+                  'tenka-izumo-4k-wallpapers-guide',
+                  'violet-evergarden-story', 
+                  'complete-workflow-guide',
+                  'perfect-anime-setup-guide'
+                ].includes(p.slug))
+                .slice(0, 4)
                 .map((post) => (
                   <article key={post.slug} className="flex flex-col md:flex-row bg-card-bg rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple transition-all group">
-                    <div className="p-8 flex flex-col justify-center">
-                      <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Guide</span>
+                    <div className="p-8 flex flex-col justify-center w-full">
+                      <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Featured</span>
                       <h3 className="font-pixel text-2xl text-white mb-4 group-hover:text-neon-purple transition-colors">
                         <Link href={`/blog/${post.slug}`}>
                           {post.title}
                         </Link>
                       </h3>
-                      <p className="text-gray-400 mb-6 leading-relaxed">
+                      <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
                       <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-white font-bold hover:text-neon-purple transition-colors">
-                        Read Guide <span className="ml-2">→</span>
+                        Read Article <span className="ml-2">→</span>
                       </Link>
                     </div>
                   </article>
@@ -155,8 +161,11 @@ export default function Home() {
               I'm a 23-year-old engineer with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
             </p>
             <p>
-              I've always been fascinated by how color and light can change the mood of a scene. This fascination led me to start my TikTok channel, <strong>@noxzx_kb</strong>, where I share my editing process and speed-edits with over thousands of followers. Only_dias Ocean is the natural extension of that community—a place where you can finally download the art you see in my videos.
+              This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.
             </p>
+            <Link href="/about" className="inline-block text-neon-pink hover:text-white underline decoration-neon-pink/50 hover:decoration-white transition-all">
+              Read my full story here →
+            </Link>
           </div>
 
           <div className="flex justify-center gap-6 my-8 relative z-10">
