@@ -1258,6 +1258,20 @@ export const blogPosts: BlogPost[] = [
 
       <h2>The Orange Legacy: Color Grading the Nine-Tails Spirit in 4K</h2>
       <p>The color orange is synonymous with Naruto and the spirit of the Fox. I use <strong>Selective Color adjustment</strong> to push the yellows into a deep, "fox-fire" orange that looks incredible on modern screens. I also add a subtle "heat haze" effect using the "Liquify" tool on the background to make the air look like it's vibrating from the sheer intensity of the chakra. This collection features all of Naruto's major forms in stunning 4K resolution. Whether you're a fan of the classic Shippuden look or the god-tier, sacrificial power of Baryon Mode, you'll find the perfect tribute to the Seventh Hokage here. Download the legacy now and let the Will of Fire burn on your device! More Hidden Leaf characters are coming to the gallery soon!</p>
+
+      <h2>The Shadow of the Uchiha: Itachi's Crow Aesthetic</h2>
+      <p>No Naruto collection is complete without the tragic hero, Itachi Uchiha. His visual language is the complete opposite of Naruto's—dark, silent, and filled with crows. For Itachi's wallpapers, I lean into deep blacks and blood reds to represent the Tsukuyomi.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-red-900 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068914/wallpapers/Itashi/1.jpg" alt="Itachi Crow" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-red-900 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068917/wallpapers/Itashi/2.jpg" alt="Itachi Moon" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <p>I use a "feathering" brush to blend the crows into his cloak, making them look like they are emerging from his very being. The red moon in the background is enhanced with an "Outer Glow" to make it the ominous focal point of the night. It's a hauntingly beautiful tribute to the man who saved the village from the shadows.</p>
     `
   },
   {
