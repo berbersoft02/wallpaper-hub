@@ -91,9 +91,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {getAllPosts()
                 .filter(p => [
-                  'tenka-izumo-4k-wallpapers-guide',
+                  'tenka-izumo-guide',
                   'violet-evergarden-story', 
-                  'complete-workflow-guide',
+                  'workflow-guide',
                   'perfect-anime-setup-guide'
                 ].includes(p.slug))
                 .slice(0, 4)

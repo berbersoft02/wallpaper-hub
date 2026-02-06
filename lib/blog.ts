@@ -11,7 +11,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'tenka-izumo-4k-wallpapers-guide',
+    slug: 'tenka-izumo-guide',
     title: 'Tenka Izumo 4K Wallpapers – From Monochrome Soldier to Colorful Idol',
     excerpt: 'Monochrome pencil shading vs. bright pastel colors. A showcase of Tenka Izumo\'s dual personality in 4K.',
     date: '2026-02-06',
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    slug: 'complete-workflow-guide',
+    slug: 'workflow-guide',
     title: 'Complete 4K Anime Wallpaper Creation Workflow: From Frame to Screen',
     excerpt: 'My exact 5-step process behind every Only_dias Ocean wallpaper—featuring Violet Evergarden, Alya Kujou, Yuki Suou, and Frieren collections with technical breakdowns.',
     date: '2026-02-05',
