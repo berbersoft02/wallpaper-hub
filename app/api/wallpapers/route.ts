@@ -175,7 +175,13 @@ export async function GET() {
   const characters = Array.from(charMap.values()).sort((a, b) => a.name.localeCompare(b.name));
 
   // Move specific characters to the end of the array so they show up first when the gallery reverses the list
-  const priorityChars = ["Frieren", "Violet Evergarden", "Shiina Mahiru"];
+  const priorityChars = [
+    "Frieren", 
+    "Violet Evergarden", 
+    "Shiina Mahiru",
+    "Alya Kujou ♡",
+    "Shikimori Micchon"
+  ];
   
   priorityChars.forEach(name => {
     const index = characters.findIndex(c => c.name === name);

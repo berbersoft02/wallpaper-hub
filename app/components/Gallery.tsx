@@ -52,7 +52,13 @@ export default function Gallery() {
           const specialNames: string[] = [];
 
           // Separate characters
-          const priorityNames = ["Frieren", "Violet Evergarden", "Shiina Mahiru"];
+          const priorityNames = [
+            "Frieren", 
+            "Violet Evergarden", 
+            "Shiina Mahiru",
+            "Alya Kujou ♡",
+            "Shikimori Micchon"
+          ];
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
@@ -77,63 +83,39 @@ export default function Gallery() {
           });
 
           // 2. Process priority characters (Interleaved)
-          // We want the reversed list to show: F1, V1, S1, F2, V2, S2... (where 1 is newest)
-          // Since we reverse the final list, we need to push to the END of allWallpapers in this order:
-          // ... S2, V2, F2, S1, V1, F1
-          
-          // First, collect all wallpapers for priority chars
-          const frierenChar = priorityChars.find((c: CharacterData) => c.name === "Frieren");
-          const violetChar = priorityChars.find((c: CharacterData) => c.name === "Violet Evergarden");
-          const shiinaChar = priorityChars.find((c: CharacterData) => c.name === "Shiina Mahiru");
+          // Map priority chars to their data objects to preserve order from priorityNames
+          const priorityDataList = priorityNames
+            .map(name => priorityChars.find((c: CharacterData) => c.name === name))
+            .filter((c): c is CharacterData => !!c); // Type guard to remove undefined
 
           // Add names to filter list
-          if (frierenChar) animeNames.push("Frieren");
-          if (violetChar) animeNames.push("Violet Evergarden");
-          if (shiinaChar) animeNames.push("Shiina Mahiru");
-
-          const fWps = frierenChar?.wallpapers || [];
-          const vWps = violetChar?.wallpapers || [];
-          const sWps = shiinaChar?.wallpapers || [];
+          priorityDataList.forEach(c => animeNames.push(c.name));
 
           // Find the max length to iterate
-          const maxLength = Math.max(fWps.length, vWps.length, sWps.length);
+          const maxLength = Math.max(...priorityDataList.map(c => c.wallpapers.length), 0);
 
-          // Iterate backwards (from oldest to newest) to build the stack
-          // If char.wallpapers is [Newest, ..., Oldest]
-          // We want Newest at the end of allWallpapers.
+          // Iterate backwards (from oldest to newest) to build the stack for the reversed view
           for (let i = maxLength - 1; i >= 0; i--) {
-             // Push Shiina first
-             if (sWps[i]) {
-                allWallpapers.push({
-                  id: `Shiina Mahiru-${i}`,
-                  url: sWps[i],
-                  character: "Shiina Mahiru",
-                  title: `Shiina Mahiru - ${i + 1}`,
-                  category: shiinaChar?.category || 'Anime',
-                  tags: shiinaChar?.tags || []
-                });
-             }
-             // Push Violet second
-             if (vWps[i]) {
-                allWallpapers.push({
-                  id: `Violet Evergarden-${i}`,
-                  url: vWps[i],
-                  character: "Violet Evergarden",
-                  title: `Violet Evergarden - ${i + 1}`,
-                  category: violetChar?.category || 'Anime',
-                  tags: violetChar?.tags || []
-                });
-             }
-             // Push Frieren last (so it's at the very top when reversed)
-             if (fWps[i]) {
-                allWallpapers.push({
-                  id: `Frieren-${i}`,
-                  url: fWps[i],
-                  character: "Frieren",
-                  title: `Frieren - ${i + 1}`,
-                  category: frierenChar?.category || 'Anime',
-                  tags: frierenChar?.tags || []
-                });
+             // Iterate through priority list in reverse order so the first one in priorityNames 
+             // ends up last in the array (and thus first in the reversed view)
+             // e.g. Priority: [Frieren, Violet]. 
+             // Push Violet[i], then Frieren[i]. 
+             // Result array end: ... Violet[i], Frieren[i]
+             // Reversed View: Frieren[i], Violet[i] ...
+             for (let j = priorityDataList.length - 1; j >= 0; j--) {
+                const char = priorityDataList[j];
+                const wps = char.wallpapers;
+                
+                if (wps[i]) {
+                  allWallpapers.push({
+                    id: `${char.name}-${i}`,
+                    url: wps[i],
+                    character: char.name,
+                    title: `${char.name} - ${i + 1}`,
+                    category: char.category || 'Anime',
+                    tags: char.tags || []
+                  });
+                }
              }
           }
 
