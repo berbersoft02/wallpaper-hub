@@ -397,6 +397,234 @@ export const blogPosts: BlogPost[] = [
       <h2>The Psychological Gaze</h2>
       <p>I use cool temperatures and desaturated backgrounds to isolate Akane's analytical blue eyes during her performance.</p>
     `
+  },
+  {
+    slug: 'chisato-nishikigi-action-long',
+    title: 'Chisato Nishikigi: Lethal Elegance',
+    excerpt: 'Chisato\'s red uniform against urban backgrounds creates a stunning visual contrast. Breaking down my Lycoris Recoil edits.',
+    date: '2026-01-26',
+    author: 'Only_dias',
+    tags: ['Lycoris Recoil', 'Chisato', 'Action', 'Red'],
+    content: `
+      <h2>The Strongest Lycoris</h2>
+      <p>Visually, Chisato is represented by her bright, "signal" red uniform contrasting with grey urban environments. It creates a natural focal point in every frame.</p>
+    `
+  },
+  {
+    slug: 'chainsaw-man-denji-chaos-full',
+    title: 'Chainsaw Man: Cinematic Grit and Gore',
+    excerpt: 'MAPPA gave Chainsaw Man a cinematic feel. Here is how I enhance that grit and gore for high-resolution displays.',
+    date: '2026-01-25',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Denji', 'Dark', 'Action'],
+    content: `
+      <h2>Raw and Dirty</h2>
+      <p>I use "Split Toning" to push the Highlights towards a warm Orange/Teal and the Shadows towards a dark, muddy Green/Blue.</p>
+    `
+  },
+  {
+    slug: 'alya-kujou-russian-beauty-comprehensive',
+    title: 'Alya Kujou: The Silver-Haired Standard',
+    excerpt: 'Roshidere\'s Alya is arguably the most beautiful character design of the year. Here is how I edit her to look even more pristine.',
+    date: '2026-01-24',
+    author: 'Only_dias',
+    tags: ['Roshidere', 'Alya', 'Romance', 'School'],
+    content: `
+      <h2>Elegance Personified</h2>
+      <p>I use a "Soft Light" brush with a pale cyan or pure white color to paint delicate highlights on her hair, her shoulders, and her eyes.</p>
+    `
+  },
+  {
+    slug: 'spider-man-across-multiverse-4k-editing',
+    title: 'Spider-Man: Across the Digital Art Style',
+    excerpt: 'The Spider-Verse movies changed animation forever. Here is how I upscale these images without destroying the comic book texture.',
+    date: '2026-01-23',
+    author: 'Only_dias',
+    tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
+    content: `
+      <h2>The Upscaling Nightmare</h2>
+      <p>I upscale the image using a standard "Photo" model but keep the original low-res version layered on top with "Luminosity" blending to preserve the Ben-Day dots.</p>
+    `
+  },
+  {
+    slug: 'demon-slayer-breathing-effects-long',
+    title: 'Demon Slayer: Breathing Styles in 4K',
+    excerpt: 'Ufotable\'s particle effects are legendary. Breaking down how I enhance the Water and Sun breathing effects.',
+    date: '2026-01-22',
+    author: 'Only_dias',
+    tags: ['Demon Slayer', 'Tanjiro', 'Effects', 'Animation'],
+    content: `
+      <h2>Enhancing the Elements</h2>
+      <p>I increase the contrast significantly between the highlights and the shadows. This makes the white "foam" of the waves stand out sharply against the dark blue water.</p>
+    `
+  },
+  {
+    slug: 'blue-lock-egoist-aura-long',
+    title: 'Blue Lock: Visualizing the Ego',
+    excerpt: 'Blue Lock turns aura into a visual weapon. Here is how I capture the intensity of Isagi\'s puzzle pieces.',
+    date: '2026-01-21',
+    author: 'Only_dias',
+    tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
+    content: `
+      <h2>Calibrating the "Egoist" Green</h2>
+      <p>I shift the Hue of the Greens toward Cyan and the Blues toward Green until they meet in that perfect middle-ground "Egoist" color.</p>
+    `
+  },
+  {
+    slug: 'dragon-ball-visual-evolution-pro',
+    title: 'Dragon Ball: Timeless Legends in 4K',
+    excerpt: 'From the Shintani style of Broly to the CGI of Super Hero. Celebrating the visual evolution of Goku.',
+    date: '2026-01-20',
+    author: 'Only_dias',
+    tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
+    content: `
+      <h2>Aura Power</h2>
+      <p>I add a "Hard Light" layer with the aura's specific color (Gold for SSJ, Blue for SSB) to paint reflective light onto Goku's clothes and skin.</p>
+    `
+  },
+  {
+    slug: 'miku-nakano-headphones-aesthetic-long',
+    title: 'Miku Nakano: The Cult of the Headphones',
+    excerpt: 'Why Miku consistently tops the popularity polls and why her character design is a goldmine for editors.',
+    date: '2026-01-19',
+    author: 'Only_dias',
+    tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
+    content: `
+      <h2>The Shy Aesthetic</h2>
+      <p>I lower the overall contrast slightly and add a "Curves" layer to lift the blacks, giving the shadows a soft "matte" or "vintage" feel.</p>
+    `
+  },
+  {
+    slug: 'anime-nature-scenery-tribute',
+    title: 'The Peace of Anime Nature Scenery',
+    excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of Makoto Shinkai and others.',
+    date: '2026-01-18',
+    author: 'Only_dias',
+    tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
+    content: `
+      <h2>Background Artistry</h2>
+      <p>I use a model specifically trained on "Digital Illustration and Painting" to preserve the painterly brushstrokes of the original background artist.</p>
+    `
+  },
+  {
+    slug: 'makima-control-devil-psychology-long',
+    title: 'Makima: The Art of Control',
+    excerpt: 'Makima is terrifying and mesmerizing. Here is how I edit the Control Devil to capture her unsettling presence.',
+    date: '2026-01-17',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Makima', 'Horror', 'Eyes'],
+    content: `
+      <h2>The Look That Pierces</h2>
+      <p>I usually desaturate the entire background to near grayscale or a very muted, cold tone, leaving only Makima’s hair, her tie, and her golden eyes in full color.</p>
+    `
+  },
+  {
+    slug: 'yor-forger-assassin-long',
+    title: 'Yor Forger: The Thorn Princess Aesthetic',
+    excerpt: 'Balancing the gentle mother and the ruthless assassin. A look at my Spy x Family edits.',
+    date: '2026-01-16',
+    author: 'Only_dias',
+    tags: ['Spy x Family', 'Yor Forger', 'Assassin', 'Black'],
+    content: `
+      <h2>Editing the Black Dress</h2>
+      <p>I lift the black point slightly so it becomes a very dark charcoal grey, which reveals the beautiful line art and the intricate folds in her dress.</p>
+    `
+  },
+  {
+    slug: 'power-chainsaw-man-longform',
+    title: 'Power: The Blood Fiend Energy',
+    excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too. Editing the best worst girl.',
+    date: '2026-01-15',
+    author: 'Only_dias',
+    tags: ['Chainsaw Man', 'Power', 'Blood', 'Energy'],
+    content: `
+      <h2>The "Blood" Texture</h2>
+      <p>I don't just use standard color filters. I use Custom Blood Splatter Brushes painted on a layer behind Power set to "Multiply".</p>
+    `
+  },
+  {
+    slug: 'naruto-evolution-glow-pro',
+    title: 'Naruto: Chakra Glow Techniques',
+    excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
+    date: '2026-01-14',
+    author: 'Only_dias',
+    tags: ['Naruto', 'Shippuden', 'Kurama', 'Orange'],
+    content: `
+      <h2>Handling Chakra Glow</h2>
+      <p>I apply a heavy Gaussian Blur (around 40px) to a duplicate layer and set it to "Screen" or "Linear Dodge (Add)" mode.</p>
+    `
+  },
+  {
+    slug: 'luffy-gear-5-joyboy-masterclass',
+    title: 'Luffy Gear 5: The Drums of Liberation',
+    excerpt: 'Editing the most cartoony transformation in anime history. How to handle the pure white color palette.',
+    date: '2026-01-13',
+    author: 'Only_dias',
+    tags: ['One Piece', 'Luffy', 'Gear 5', 'White'],
+    content: `
+      <h2>The White Balance Challenge</h2>
+      <p>I use "Gradient Overlays" and "Inner Glows" to add subtle but essential color variation to his white form, mapping shadows to a light ethereal purple.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-editing-workflow-pro',
+    title: 'My Complete Anime Wallpaper Editing Workflow',
+    excerpt: 'Step-by-step guide on how I transform a simple anime screenshot into a high-fidelity wallpaper.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Tutorial', 'Workflow', 'Editing', 'Quality'],
+    content: `
+      <h2>Step 1: Choosing the Right Source Image</h2>
+      <p>You can't polish a pebble into a diamond. I focus on Official Anime Frames or Key Visuals with at least 1080p resolution.</p>
+    `
+  },
+  {
+    slug: 'perfect-anime-setup-guide',
+    title: 'How to Build the Perfect Anime Setup',
+    excerpt: 'Connecting your digital wallpaper to your physical room. A guide to creating a cohesive anime-themed battle station.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Setup', 'Guide', 'Aesthetic', 'Gaming'],
+    content: `
+      <h2>Step 1: Choosing Your Theme</h2>
+      <p>Don't just pick random images. Pick a theme. It usually starts with a character or a color palette.</p>
+    `
+  },
+  {
+    slug: 'respecting-artists-copyright-guide',
+    title: 'Respecting Artists and Copyright',
+    excerpt: 'A guide on navigating the ethics of digital anime art and supporting creators.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
+    content: `
+      <h2>Official Anime Screens vs. Fanart</h2>
+      <p>There is a big difference between editing an official frame and re-uploading fanart. NEVER take an artist's drawing without permission.</p>
+    `
+  },
+  {
+    slug: 'anime-wallpaper-color-theory',
+    title: 'Anime Wallpaper Color Theory',
+    excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Color', 'Theory', 'Design', 'Psychology'],
+    content: `
+      <h2>Matching Wallpaper Colors to Your Mood</h2>
+      <p>If you are working or studying, avoid bright reds. Go for deep blues or monochrome images.</p>
+    `
+  },
+  {
+    slug: 'tiktok-to-desktop-community-journey',
+    title: 'From TikTok to Desktop: How I Built My Community',
+    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    date: '2026-01-01',
+    author: 'Only_dias',
+    tags: ['Story', 'Community', 'TikTok', 'Growth'],
+    content: `
+      <h2>The Beginning</h2>
+      <p>It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—so I made my own.</p>
+    `
   }
 ];
 
