@@ -11,6 +11,81 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'tenka-izumo-4k-wallpapers-guide',
+    title: 'Tenka Izumo 4K Wallpapers – From Monochrome Soldier to Colorful Idol',
+    excerpt: 'Monochrome pencil shading vs. bright pastel colors. A showcase of Tenka Izumo\'s dual personality in 4K.',
+    date: '2026-02-06',
+    author: 'Only_dias',
+    tags: ['Tenka Izumo', 'Mato Seihei no Slave', 'Monochrome', 'Editing'],
+    content: `
+      <h2>Monochrome Tenka: Pencil Shading with Military Elegance</h2>
+      <p>The first two wallpapers are built around <strong>clean black-and-white line art</strong> with strong pencil shading. They are perfect if you like minimalist setups or use dark-mode almost everywhere.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-500/50 shadow-[0_0_20px_rgba(107,114,128,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312907/3_ehl3s3.jpg" alt="Tenka Profile Monochrome" class="object-cover w-full h-full" />
+      </div>
+
+      <h3>Wallpaper 1 – Profile Pose with Ribbons and Icons</h3>
+      <p>In the first drawing, Tenka is shown in <strong>profile</strong>, looking over her shoulder. The pose gives her a calm, mature aura, while the background is full of small doodles—flowers, hearts, snacks, and floating ribbons—that soften the strict military uniform.</p>
+      <ul>
+        <li><strong>Sharp face and eyes:</strong> I used heavier line weight around the eyes and lashes, then softer shading on the cheeks to keep her expression confident but gentle.</li>
+        <li><strong>Uniform texture:</strong> The dark parts of the coat are built with cross-hatching and layered pencil strokes, which gives real depth and looks great when upscaled to 4K.</li>
+        <li><strong>Playful background:</strong> The hand-drawn icons create contrast: serious outfit vs. cute atmosphere. It keeps the wallpaper lively without stealing focus from Tenka.</li>
+      </ul>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-500/50 shadow-[0_0_20px_rgba(107,114,128,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312911/1_bq5end.jpg" alt="Tenka Wink Monochrome" class="object-cover w-full h-full" />
+      </div>
+
+      <h3>Wallpaper 2 – Winking Tenka with Full-Body Focus</h3>
+      <p>The second monochrome wallpaper shows Tenka <strong>front-facing, winking, and pointing upward</strong>. This is the full “charisma mode” version of her.</p>
+      <ul>
+        <li><strong>Dynamic gesture:</strong> The pointing hand and wink make the image feel like she’s addressing the viewer directly. That energy works especially well for phone lock screens.</li>
+        <li><strong>Uniform details:</strong> Epaulettes, collar, and chest decorations are shaded with precise pencil strokes, so the design remains readable even on high-resolution monitors.</li>
+        <li><strong>Balanced background:</strong> Flowers, hearts, and stars circle around her, but I left enough white space so the wallpaper doesn’t look crowded.</li>
+      </ul>
+
+      <hr class="border-gray-800 my-8" />
+
+      <h2>Color Tenka: Bright Blond Hair and Pastel Backgrounds</h2>
+      <p>The third wallpaper takes the same character and uniform but pushes everything into <strong>full color</strong>. This version is designed for people who want their screen to feel bright and cheerful.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312908/2_exfux3.jpg" alt="Tenka Color Pastel" class="object-cover w-full h-full" />
+      </div>
+
+      <h3>Wallpaper 3 – Full-Color Tenka with Pastel Icons</h3>
+      <p>Here, Tenka’s short hair becomes a vivid <strong>blond with soft gradients</strong>, and her eyes stand out with bright blue/green tones. The uniform keeps its dark navy base, which creates a strong contrast with the pastel background.</p>
+      <ul>
+        <li><strong>Hair rendering:</strong> I used multiple shades of yellow, from pale highlights to deeper golden shadows, to keep the hair from looking flat. This looks amazing on 4K displays and modern phones.</li>
+        <li><strong>Skin and blush:</strong> A gentle blush on her cheeks and nose brings life to her expression without overdoing it.</li>
+        <li><strong>Pastel doodles:</strong> The icons around her are now colored in soft pinks, blues, and yellows. They keep the “cute” feeling but don’t overpower the character.</li>
+      </ul>
+
+      <hr class="border-gray-800 my-8" />
+
+      <h2>Tenka Izumo in Her Anime</h2>
+      <p>Tenka Izumo is the kind of character that easily becomes a fan favorite. She has a <strong>commanding presence</strong> thanks to her uniform and confident poses, but at the same time, her design allows for plenty of cute, fun expressions—winks, smiles, and teasing gestures. That duality (cool officer + playful idol) is exactly what these wallpapers try to capture.</p>
+      <p>In anime terms, Tenka fits the “cool senpai / reliable leader” archetype with enough softness to appear in more relaxed, slice‑of‑life moments. That makes her incredibly flexible for wallpapers—you can use her in serious, gaming, or cute aesthetic setups depending on which version you choose.</p>
+
+      <h2>How These Tenka Wallpapers Fit Different Setups</h2>
+      <ul>
+        <li><strong>Desktop, dark mode:</strong> Use the pencil-shaded profile or wink portrait. They are clean, high-contrast, and easy on the eyes for long sessions.</li>
+        <li><strong>Ultrawide or dual-monitor:</strong> The monochrome versions with lots of white space scale beautifully and leave room for productivity apps.</li>
+        <li><strong>Phone lock screen:</strong> The winking Tenka or full-color version work great, with her face framed away from the clock and notification bar.</li>
+        <li><strong>RGB / colorful setups:</strong> The colored Tenka fits perfectly with pastel or rainbow lighting, especially if you match the yellows and blues in her hair and uniform.</li>
+      </ul>
+
+      <h2>Final Thoughts</h2>
+      <p>These Tenka Izumo wallpapers show how much personality a single character can have when you play with <strong>line style, shading, and color</strong>:</p>
+      <ul>
+        <li>Monochrome = disciplined officer, elegant and detailed</li>
+        <li>Color = lively, charming, attention‑grabbing</li>
+      </ul>
+      <p>Whether you’re a fan of Tenka herself or just love sharp uniform designs with cute backgrounds, this mini‑collection is built to give you options for every mood and device. If you enjoy this style, check out my other hand‑drawn sets for <strong>Violet Evergarden</strong> and <strong>Alya Kujou</strong>!</p>
+    `
+  },
+  {
     slug: 'violet-evergarden-story',
     title: 'Violet Evergarden: The Story That Redefined Emotional Anime',
     excerpt: 'Exploring the journey of a war orphan turned "Auto Memories Doll" – complete story overview, key themes, and why it remains a visual masterpiece 8 years later.',
