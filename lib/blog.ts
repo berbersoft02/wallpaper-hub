@@ -674,4 +674,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'akane-kurokawa-method-acting-long',
     title: 'Akane Kurokawa: The Method Actor\'s Gaze and Star Eye Effects in High-Fidelity 4K Resolution',
-    excerpt: 'Akane is a character defined by her intensity. Here is how I edit her to reflect her
+    excerpt: 'Akane is a character defined by her intensity. Here is how I edit her to reflect her "Star Eyes" moments.',
+    date: '2026-01-27',
+    author: 'Only_dias',
+    tags: ['Oshi no Ko', 'Akane', 'Blue', 'Acting'],
