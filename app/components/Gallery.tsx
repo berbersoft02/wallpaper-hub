@@ -51,7 +51,13 @@ export default function Gallery() {
           const animeNames: string[] = [];
           const specialNames: string[] = [];
 
-          data.characters.forEach((char: CharacterData) => {
+          // Separate characters
+          const priorityNames = ["Frieren", "Violet Evergarden", "Shiina Mahiru"];
+          const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
+          const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
+
+          // 1. Process standard characters normally
+          otherChars.forEach((char: CharacterData) => {
             if (char.category === 'Special') {
               specialNames.push(char.name);
             } else {
@@ -69,6 +75,67 @@ export default function Gallery() {
               });
             });
           });
+
+          // 2. Process priority characters (Interleaved)
+          // We want the reversed list to show: F1, V1, S1, F2, V2, S2... (where 1 is newest)
+          // Since we reverse the final list, we need to push to the END of allWallpapers in this order:
+          // ... S2, V2, F2, S1, V1, F1
+          
+          // First, collect all wallpapers for priority chars
+          const frierenChar = priorityChars.find((c: CharacterData) => c.name === "Frieren");
+          const violetChar = priorityChars.find((c: CharacterData) => c.name === "Violet Evergarden");
+          const shiinaChar = priorityChars.find((c: CharacterData) => c.name === "Shiina Mahiru");
+
+          // Add names to filter list
+          if (frierenChar) animeNames.push("Frieren");
+          if (violetChar) animeNames.push("Violet Evergarden");
+          if (shiinaChar) animeNames.push("Shiina Mahiru");
+
+          const fWps = frierenChar?.wallpapers || [];
+          const vWps = violetChar?.wallpapers || [];
+          const sWps = shiinaChar?.wallpapers || [];
+
+          // Find the max length to iterate
+          const maxLength = Math.max(fWps.length, vWps.length, sWps.length);
+
+          // Iterate backwards (from oldest to newest) to build the stack
+          // If char.wallpapers is [Newest, ..., Oldest]
+          // We want Newest at the end of allWallpapers.
+          for (let i = maxLength - 1; i >= 0; i--) {
+             // Push Shiina first
+             if (sWps[i]) {
+                allWallpapers.push({
+                  id: `Shiina Mahiru-${i}`,
+                  url: sWps[i],
+                  character: "Shiina Mahiru",
+                  title: `Shiina Mahiru - ${i + 1}`,
+                  category: shiinaChar?.category || 'Anime',
+                  tags: shiinaChar?.tags || []
+                });
+             }
+             // Push Violet second
+             if (vWps[i]) {
+                allWallpapers.push({
+                  id: `Violet Evergarden-${i}`,
+                  url: vWps[i],
+                  character: "Violet Evergarden",
+                  title: `Violet Evergarden - ${i + 1}`,
+                  category: violetChar?.category || 'Anime',
+                  tags: violetChar?.tags || []
+                });
+             }
+             // Push Frieren last (so it's at the very top when reversed)
+             if (fWps[i]) {
+                allWallpapers.push({
+                  id: `Frieren-${i}`,
+                  url: fWps[i],
+                  character: "Frieren",
+                  title: `Frieren - ${i + 1}`,
+                  category: frierenChar?.category || 'Anime',
+                  tags: frierenChar?.tags || []
+                });
+             }
+          }
 
           setWallpapers(allWallpapers);
           setSpecialCollections(Array.from(new Set(specialNames)).sort());
