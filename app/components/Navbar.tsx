@@ -19,6 +19,16 @@ export default function Navbar() {
     setShowMobileMenu(false); // Close mobile menu when opening modal
   };
 
+  const handleWallpapersClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === '/') {
+      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push('/#gallery');
+    }
+    setShowMobileMenu(false);
+  };
+
   const handleIconsClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (pathname === '/') {
