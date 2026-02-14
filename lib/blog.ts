@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
       <p>In this collection, I focused on her "cool" side. The sharp eyes, the flowing pink hair, and the confident poses that define her character. Every frame chosen for this 4K set was hand-picked to highlight her strength and style.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-pink-400/50 shadow-[0_0_20px_rgba(244,114,182,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185447/1_j7i7vx.jpg" alt="Shikimori Cool 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040988/wallpapers/shikimori/1_1.jpg" alt="Shikimori Cool 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing the "Shikimori Pink": Color Grading and Depth</h2>
@@ -36,10 +36,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185450/4_u8m0be.jpg" alt="Shikimori Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040994/wallpapers/shikimori/2_1.jpg" alt="Shikimori Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185448/2_f6yqpe.jpg" alt="Shikimori Intense" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040997/wallpapers/shikimori/3_1.jpg" alt="Shikimori Intense" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -62,8 +62,8 @@ export const blogPosts: BlogPost[] = [
       <h2>The "Angel" of the Neighborhood: Shiina Mahiru's Appeal</h2>
       <p><em>The Angel Next Door Spoils Me Rotten</em> became a sleeper hit because of its pure, wholesome, and incredibly cozy atmosphere. At the center of it is Shiina Mahiru—the "Angel" who is perfect in every way but shows her true, domestic side only to the person she cares about. This transition from "Perfect Idol" to "Cozy Neighbor" is the soul of these wallpapers.</p>
       
-      <div class="my-8 relative w-full aspect-[9/16] max-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-200/50 shadow-[0_0_20px_rgba(254,240,138,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185799/1_of7zsh.jpg" alt="Shiina Mahiru Angel 4K" class="object-cover w-full h-full" />
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-200/50 shadow-[0_0_20px_rgba(254,240,138,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044586/wallpapers/Shiina%20Mahiru/1.jpg" alt="Shiina Mahiru Angel 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Creating the "Soft Glow" Aesthetic</h2>
@@ -76,10 +76,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185802/3_e5l3sk.jpg" alt="Shiina Mahiru Cozy" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044592/wallpapers/Shiina%20Mahiru/2.jpg" alt="Shiina Mahiru Cozy" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185805/5_q3s3sk.jpg" alt="Shiina Mahiru Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044595/wallpapers/Shiina%20Mahiru/3.jpg" alt="Shiina Mahiru Smile" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
       <p>In 2026, static wallpapers are just the beginning. With the power of modern GPUs and high-refresh-rate displays, <strong>Live Wallpapers</strong> have become the standard for high-end "Battle Stations." There is something incredibly immersive about seeing the wind blow through Frieren's hair or the neon lights of Night City flicker on your desktop.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <video src="https://res.cloudinary.com/dg8hzm1fp/video/upload/v1770068133/3_oig7v6.mp4" class="w-full h-full object-cover" autoPlay muted loop playsInline />
+        <video src="https://res.cloudinary.com/dg8hzm1fp/video/upload/v1769685263/1_i4w03c.mp4" class="w-full h-full object-cover" autoPlay muted loop playsInline />
       </div>
 
       <h2>How to Use Live Wallpapers (PC & Mobile)</h2>
@@ -140,7 +140,7 @@ export const blogPosts: BlogPost[] = [
       <p>Anime and car culture have been linked since the days of <em>Initial D</em>. There is something about the aesthetic of a tuned JDM legend—like the AE86, Supra, or RX-7—drifting through a mountain pass or parked under neon city lights that perfectly captures the "Vaporwave" and "City Pop" vibes we love.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/3_m6w9sq.webp" alt="Anime Car 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068734/wallpapers/Cars/1.jpg" alt="Anime Car 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Why Car Wallpapers Work So Well</h2>
@@ -156,10 +156,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/2_koxskv.webp" alt="JDM Anime Art" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068739/wallpapers/Cars/2.jpg" alt="JDM Anime Art" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/1_wygvcs.webp" alt="Initial D Style" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769068740/wallpapers/Cars/3.jpg" alt="Initial D Style" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
       <p>In a world of ultra-realistic 4K graphics, there is a growing movement towards the <strong>Pixel Art Aesthetic</strong>. It’s not about lack of quality; it’s about a specific, nostalgic style that reminds us of classic RPGs and the golden era of 16-bit gaming. For an anime setup, pixel art provides a unique, "Lo-Fi" vibe that is incredibly easy on the eyes.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-purple/50 shadow-[0_0_20px_rgba(211,0,197,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686364/1_a4u6sh.webp" alt="Anime Pixel Art 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043087/photo_2024-12-02_15-29-56_uagvjq.jpg" alt="Anime Pixel Art 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Why Pixel Art Wallpapers are "High Value"</h2>
@@ -194,10 +194,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686364/2_b5lskv.webp" alt="Pixel Art Scenery" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043087/photo_2024-12-02_15-29-56_uagvjq.jpg" alt="Pixel Art Scenery" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686365/3_m6s3sk.webp" alt="Retro Anime Style" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769043087/photo_2024-12-02_15-29-56_uagvjq.jpg" alt="Retro Anime Style" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
       <p>Sometimes, the best setup is one that doesn't stick to a single theme. Our <strong>Mixed Collection</strong> is where I put the "hidden gems"—those incredible single frames from series that might not have a full collection yet, but deserve to be seen in 4K.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040648/wallpapers/Mixed/-----.jpg" alt="Mixed Collection Highlights" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234856/wallpapers/Mixed/1.webp" alt="Mixed Collection Highlights" class="object-cover w-full h-full" />
       </div>
 
       <h2>What's Inside the Mixed Bag?</h2>
@@ -296,7 +296,7 @@ export const blogPosts: BlogPost[] = [
       <p>In our library, <strong>"Awesome"</strong> isn't just a category; it's a standard. These are the wallpapers that make you stop and stare. High contrast, incredible lighting, and epic scale. These aren't just backgrounds; they are statements.</p>
       
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-pink/50 shadow-[0_0_20px_rgba(255,42,109,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958378/wallpapers/Zero%20Two/3%20%282%29.jpg" alt="Awesome Collection 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542271/26_iy3ffa.jpg" alt="Awesome Collection 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing for Impact</h2>
@@ -306,6 +306,15 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Particle Enhancement:</strong> I manually add or enhance magical particles, dust, and light streaks to create a sense of energy.</li>
         <li><strong>Ultra-Sharp Lines:</strong> These images are upscaled with maximum precision to ensure every detail is visible on even the largest 4K monitors.</li>
       </ul>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542263/1_qodquv.jpg" alt="Awesome Art 1" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542264/10_g6i9th.jpg" alt="Awesome Art 2" class="object-cover w-full h-full" />
+        </div>
+      </div>
 
       <h2>Best For...</h2>
       <p>These wallpapers are designed for <strong>Gaming Rigs</strong>. If you have a powerful PC and a high-end monitor, these images will truly show what your hardware can do. They pair best with aggressive RGB themes and high-performance peripherals.</p>
@@ -1233,7 +1242,7 @@ export const blogPosts: BlogPost[] = [
       <p>Chainsaw Man is unlike any other Shonen in the current market. It's gritty, dirty, loud, and unapologetically raw. MAPPA approached the adaptation with a distinct "cinema" style—framing shots like real movies, using realistic lighting instead of standard "anime" cel-shading, and adding a subtle film grain over everything. They prioritized atmosphere, "feeling," and dread over the typical clean, bright, and colorful anime look we see in other hits. As an editor, my goal was to take that cinematic grit and enhance it for 4K displays without losing the show's unique, messy, and visceral soul. It's about celebrating the imperfections and the darkness of Tatsuki Fujimoto's world. This isn't a show about traditional heroes; it's about desperate people trying to survive a nightmare. The wallpapers need to feel that heavy and grounded.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187347/oboi.4k_threadsmate.com_1769174792_cdpmpz.webp" alt="Chainsaw Man Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187346/oboi.4k_threadsmate.com_1769174792_cdpmpz.webp" alt="Chainsaw Man Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>The Orange Glow Technique: Blood, Pochita, and Rusty Chains in 4K Quality</h2>
@@ -1481,7 +1490,7 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>Creating a Relaxing Digital Environment for Focus and Productivity</h2>
-      <p>Scenery wallpapers are perfect for "minimalist," "clean," and "productive" setups. They are less distracting than character-focused art, allowing you to focus on your work, study, or gaming while still having something beautiful and inspiring to look at during your breaks. In this collection, I've curated everything from rainy Tokyo night cityscapes to sunny, rural Japanese fields and snowy mountain peaks. Each image has been carefully color-graded to enhance the lighting, making the sun feel warmer, the rain feel cooler, and the shadows feel deeper and more atmospheric. If you need a bit of peace and quiet in your digital life, this collection is specifically designed for you. Browse the "Nature" section in our gallery and find your escape today. New scenery drops are added every single Sunday! Find your peace.</p>
+      <p>Scenery wallpapers are perfect for "minimalist," "clean," and "productive" setups. They are less "otaku" but still 100% aesthetic. Pair a rainy Tokyo night cityscapes to sunny, rural Japanese fields and snowy mountain peaks. Each image has been carefully color-graded to enhance the lighting, making the sun feel warmer, the rain feel cooler, and the shadows feel deeper and more atmospheric. If you need a bit of peace and quiet in your digital life, this collection is specifically designed for you. Browse the "Nature" section in our gallery and find your escape today. New scenery drops are added every single Sunday! Find your peace.</p>
     `
   },
   {
@@ -1725,7 +1734,7 @@ export const blogPosts: BlogPost[] = [
       <h2>How We Handle Content at Only_dias Ocean</h2>
       <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
 
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
+      <div class="my-8 relative w-full aspect-[9/16] max-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234874/wallpapers/Mixed/24.jpg" alt="Community Respect" class="object-cover w-full h-full" />
       </div>
 
@@ -1768,310 +1777,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Conclusion</h2>
       <p>Next time you choose a wallpaper, think about how you want to <em>feel</em> when you look at it. Check out our collections sorted by color palette to find your perfect match.</p>
-    `
-  },
-  {
-    slug: 'shikimori-4k-wallpapers-guide',
-    title: 'Shikimori Micchon: The "Cool" 4K Wallpaper Collection + Editing Guide',
-    excerpt: 'Shikimori is not just a cutie—she is a cool, protective icon. Here is how I edit her signature pink hair and sharp gaze for 4K.',
-    date: '2026-02-14',
-    author: 'Only_dias',
-    tags: ['Shikimori', 'Not Just a Cutie', 'Cool', 'Pink', 'Editing'],
-    content: `
-      <h2>Beyond the "Cutie": Shikimori's Cool Aesthetic</h2>
-      <p>When <em>Shikimori's Not Just a Cutie</em> aired, it flipped the traditional rom-com dynamic on its head. Shikimori isn't just a sweet girlfriend; she is a "cool" protector with a gaze that can stop anyone in their tracks. This duality—switching from a soft, blushing smile to an intense, heroic stare—is what makes her one of the best subjects for high-quality anime wallpapers.</p>
-      <p>In this collection, I focused on her "cool" side. The sharp eyes, the flowing pink hair, and the confident poses that define her character. Every frame chosen for this 4K set was hand-picked to highlight her strength and style.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-pink-400/50 shadow-[0_0_20px_rgba(244,114,182,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185447/1_j7i7vx.jpg" alt="Shikimori Cool 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Editing the "Shikimori Pink": Color Grading and Depth</h2>
-      <p>Shikimori's design is built around her unique hair color—a soft, pastel pink that can easily look "washed out" if not edited correctly. Here is my exact process for this collection:</p>
-      <ul>
-        <li><strong>Selective Color:</strong> I use Photoshop's Selective Color tool to isolate the Pinks and Magentas. I add a bit of Cyan to the shadows of her hair to give it a "crystalline" depth, making it pop against the background.</li>
-        <li><strong>Eye Enhancement:</strong> Her eyes are her most powerful feature. I manually brighten the pupils and add a slight "Outer Glow" to the highlights, giving her that "heart-stopping" gaze.</li>
-        <li><strong>Depth of Field:</strong> By blurring the school or urban backgrounds, I ensure that Shikimori remains the absolute focal point of the wallpaper.</li>
-      </ul>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185450/4_u8m0be.jpg" alt="Shikimori Smile" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185448/2_f6yqpe.jpg" alt="Shikimori Intense" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>Setup Tips for Shikimori Wallpapers</h2>
-      <p>Because of her dominant pink and purple palette, Shikimori wallpapers look best on setups with <strong>Warm or Pastel RGB lighting</strong>. If you use a dark theme on Windows or macOS, her pink hair will create a stunning contrast that doesn't strain the eyes.</p>
-      <p>For mobile users, I recommend using the "Intense" version for your lock screen—that gaze is a great way to start your day with focus and confidence!</p>
-
-      <h2>Final Thoughts</h2>
-      <p>Shikimori Micchon reminds us that you can be both kind and strong. This collection is a tribute to her "cool" side. If you're a fan of strong female leads with incredible character designs, this set is for you. Check out my other collections for <a href="/blog/alya-kujou-tsundere-editing-guide" class="text-neon-pink hover:underline">Alya Kujou</a> and <a href="/blog/yuki-suou-4k-wallpapers-guide" class="text-neon-pink hover:underline">Yuki Suou</a> for more high-quality rom-com edits!</p>
-    `
-  },
-  {
-    slug: 'shiina-mahiru-4k-wallpapers-guide',
-    title: 'Shiina Mahiru: The Angel Next Door 4K Wallpapers & Aesthetic Guide',
-    excerpt: 'Exploring the "Angel" aesthetic of Shiina Mahiru. Soft lighting, domestic vibes, and why she is the queen of cozy anime wallpapers.',
-    date: '2026-02-13',
-    author: 'Only_dias',
-    tags: ['Shiina Mahiru', 'Angel Next Door', 'Kawaii', 'Aesthetic', 'Cozy'],
-    content: `
-      <h2>The "Angel" of the Neighborhood: Shiina Mahiru's Appeal</h2>
-      <p><em>The Angel Next Door Spoils Me Rotten</em> became a sleeper hit because of its pure, wholesome, and incredibly cozy atmosphere. At the center of it is Shiina Mahiru—the "Angel" who is perfect in every way but shows her true, domestic side only to the person she cares about. This transition from "Perfect Idol" to "Cozy Neighbor" is the soul of these wallpapers.</p>
-      
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-200/50 shadow-[0_0_20px_rgba(254,240,138,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185799/1_of7zsh.jpg" alt="Shiina Mahiru Angel 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Creating the "Soft Glow" Aesthetic</h2>
-      <p>Mahiru's wallpapers shouldn't be aggressive. They need to feel like a warm hug. My editing workflow focuses on <strong>Softness and High-Key lighting</strong>:</p>
-      <ul>
-        <li><strong>Gaussian Blur Bloom:</strong> I use a very subtle blur layer set to "Soft Light" at 10% opacity. This creates a gentle "glow" around her silhouette, mimicking the look of morning sunlight in a warm apartment.</li>
-        <li><strong>Warm Color Grading:</strong> I push the temperature slightly towards the yellows and oranges. This emphasizes her flaxen hair and the "cozy home" vibe of the series.</li>
-        <li><strong>Texture Cleanup:</strong> Her design is very clean. I use AI upscaling to ensure her skin and hair look smooth and pristine, even on 4K monitors.</li>
-      </ul>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185802/3_e5l3sk.jpg" alt="Shiina Mahiru Cozy" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769185805/5_q3s3sk.jpg" alt="Shiina Mahiru Smile" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>The Best Setup for "Angel" Wallpapers</h2>
-      <p>If you have a <strong>White or Minimalist desk setup</strong>, Mahiru is your best friend. Her warm, light-colored wallpapers blend perfectly with wooden textures and plants. It's the ultimate "Lo-Fi Study" aesthetic. For mobile, her smiling portraits make for a very calming and positive home screen.</p>
-
-      <h2>Conclusion</h2>
-      <p>Shiina Mahiru represents the beauty of everyday life and simple kindness. These 4K wallpapers are designed to bring a bit of that peace to your digital space. Download the collection and let the Angel spoil your screen! Check out my <a href="/blog/miku-nakano-headphones-aesthetic-long" class="text-neon-cyan hover:underline">Miku Nakano</a> collection for more cozy vibes.</p>
-    `
-  },
-  {
-    slug: 'live-wallpapers-4k-guide',
-    title: 'Moving Masterpieces: The Ultimate Guide to Anime Live Wallpapers',
-    excerpt: 'Static is good, but movement is better. Everything you need to know about setting up and creating high-quality anime live wallpapers.',
-    date: '2026-02-12',
-    author: 'Only_dias',
-    tags: ['Live Wallpapers', 'Wallpaper Engine', 'Guide', '4K', 'Tutorial'],
-    content: `
-      <h2>The Rise of the Live Wallpaper</h2>
-      <p>In 2026, static wallpapers are just the beginning. With the power of modern GPUs and high-refresh-rate displays, <strong>Live Wallpapers</strong> have become the standard for high-end "Battle Stations." There is something incredibly immersive about seeing the wind blow through Frieren's hair or the neon lights of Night City flicker on your desktop.</p>
-      
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <video src="https://res.cloudinary.com/dg8hzm1fp/video/upload/v1770068133/3_oig7v6.mp4" class="w-full h-full object-cover" autoPlay muted loop playsInline />
-      </div>
-
-      <h2>How to Use Live Wallpapers (PC & Mobile)</h2>
-      <p>If you're new to this, here are the tools I recommend for the best experience:</p>
-      <ul>
-        <li><strong>PC (Windows):</strong> <em>Wallpaper Engine</em> (Steam) is the undisputed king. It's cheap, efficient, and supports almost every format. You can use the "Video" files from our site directly.</li>
-        <li><strong>Android:</strong> Most modern Android phones support "Video Wallpapers" natively in the gallery. Just download our MP4s and set as wallpaper.</li>
-        <li><strong>iOS (iPhone):</strong> Apple is more restrictive, but you can use "Live Photo" apps to convert our short loops into live backgrounds for your lock screen.</li>
-      </ul>
-
-      <h2>My Live Wallpaper Creation Workflow</h2>
-      <p>Creating a good live wallpaper isn't just about recording a clip. It's about <strong>The Loop</strong>. A bad loop with a "jump" at the end ruins the immersion. Here is how I make mine:</p>
-      <ol>
-        <li><strong>Sourcing:</strong> I look for scenes with subtle, repetitive motion—snow falling, hair moving, or light flickering.</li>
-        <li><strong>After Effects:</strong> I use the "Puppet Pin" tool to manually add movement to static elements. If it's a video clip, I use "Time Remapping" to create a seamless "Ping-Pong" loop or a cross-dissolve loop.</li>
-        <li><strong>Optimization:</strong> Live wallpapers can be heavy on the CPU. I encode them in <strong>H.265 (HEVC)</strong> at 60fps to ensure they are buttery smooth but don't slow down your gaming.</li>
-      </ol>
-
-      <h2>The "Performance vs. Beauty" Balance</h2>
-      <p>Tip: If you're gaming on a mid-range PC, set Wallpaper Engine to "Pause" when other applications are focused. This gives you 100% of your FPS while you play, and the beautiful live art when you're just chilling at your desktop.</p>
-
-      <h2>Conclusion</h2>
-      <p>Live wallpapers bring a soul to your setup that static art simply can't match. We are adding new 4K live loops every week, so keep checking the <strong>"Live Wallpapers"</strong> category in our gallery!</p>
-    `
-  },
-  {
-    slug: 'anime-car-wallpapers-guide',
-    title: '4K Anime Car Wallpapers: Merging Automotive Culture with Aesthetic Art',
-    excerpt: 'JDM culture and Anime are a match made in heaven. A deep dive into the world of Initial D, Wangan Midnight, and aesthetic car edits.',
-    date: '2026-02-11',
-    author: 'Only_dias',
-    tags: ['Cars', 'JDM', 'Aesthetic', '4K', 'Initial D'],
-    content: `
-      <h2>The Intersection of Speed and Style</h2>
-      <p>Anime and car culture have been linked since the days of <em>Initial D</em>. There is something about the aesthetic of a tuned JDM legend—like the AE86, Supra, or RX-7—drifting through a mountain pass or parked under neon city lights that perfectly captures the "Vaporwave" and "City Pop" vibes we love.</p>
-      
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/3_m6w9sq.webp" alt="Anime Car 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Why Car Wallpapers Work So Well</h2>
-      <p>Unlike character portraits, car wallpapers offer a sense of <strong>Scale and Atmosphere</strong>. They often feature vast cityscapes, long highways, or beautiful sunsets, which makes them perfect for dual-monitor setups or ultrawide screens. The geometric lines of the cars provide a clean, modern look that matches "Tech" and "Gaming" setups perfectly.</p>
-
-      <h2>Editing the Automotive Aesthetic</h2>
-      <p>When I edit car wallpapers, I focus on <strong>Light and Reflection</strong>:</p>
-      <ul>
-        <li><strong>Neon Glow:</strong> I enhance the reflections of neon signs on the car's body. A polished Supra looks incredible when it's reflecting the purple and blue lights of a rainy Tokyo street.</li>
-        <li><strong>Motion Blur:</strong> For "action" shots, I add radial blur to the wheels and directional blur to the background to simulate the feeling of high speed.</li>
-        <li><strong>Bitrate & Noise:</strong> Dark highway scenes often suffer from "banding." I add a subtle grain texture to smooth out these gradients, giving the wallpaper a high-quality "film" look.</li>
-      </ul>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/2_koxskv.webp" alt="JDM Anime Art" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686001/1_wygvcs.webp" alt="Initial D Style" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>Setup Recommendation</h2>
-      <p>Car wallpapers are the "Classy" choice for an anime setup. They are less "otaku" but still 100% aesthetic. Pair a Nissan Skyline wallpaper with cool white or deep blue RGB for a sophisticated, high-speed look.</p>
-
-      <h2>Conclusion</h2>
-      <p>Whether you're a petrolhead or just love the aesthetic, our <strong>"Cars"</strong> collection is built for speed. Check it out and find your next ride for your desktop!</p>
-    `
-  },
-  {
-    slug: 'pixel-art-anime-guide',
-    title: 'Why Pixel Art is the Secret to a Clean, Minimalist Anime Setup',
-    excerpt: 'Pixel art isn\'t just for retro games. It\'s a powerful aesthetic choice for modern 4K setups. Discover the beauty of the "Lo-Fi" pixel look.',
-    date: '2026-02-10',
-    author: 'Only_dias',
-    tags: ['Pixel Art', 'Minimalist', 'Retro', 'Setup', 'Lo-Fi'],
-    content: `
-      <h2>The Nostalgia of the Pixel</h2>
-      <p>In a world of ultra-realistic 4K graphics, there is a growing movement towards the <strong>Pixel Art Aesthetic</strong>. It’s not about lack of quality; it’s about a specific, nostalgic style that reminds us of classic RPGs and the golden era of 16-bit gaming. For an anime setup, pixel art provides a unique, "Lo-Fi" vibe that is incredibly easy on the eyes.</p>
-      
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-purple/50 shadow-[0_0_20px_rgba(211,0,197,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686364/1_a4u6sh.webp" alt="Anime Pixel Art 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Why Pixel Art Wallpapers are "High Value"</h2>
-      <p>You might think "Why put pixel art on a 4K screen?" The answer is <strong>Perfect Scalability</strong>. Unlike photos, pixel art is built on blocks. When upscaled correctly (using Nearest Neighbor interpolation), it remains perfectly sharp. No blur, no artifacts. It looks incredibly "crisp" on high-density displays.</p>
-      <p>Furthermore, pixel art often uses a limited, curated color palette. This makes it very easy to match with your physical setup (keyboard, lights, mousepad). It’s the ultimate "Designer" choice.</p>
-
-      <h2>The Lo-Fi Focus</h2>
-      <p>Pixel art scenery—like a rainy street, a cozy bedroom, or a quiet train—is the best choice for productivity. It doesn't have the "visual noise" of complex illustrations, allowing you to focus on your work while still having a beautiful, atmospheric environment.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686364/2_b5lskv.webp" alt="Pixel Art Scenery" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769686365/3_m6s3sk.webp" alt="Retro Anime Style" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>Creating the Retro Setup</h2>
-      <p>To match your pixel wallpaper, try using a mechanical keyboard with "Retro" keycaps and set your lighting to static, warm colors. It creates a space that feels both high-tech and nostalgic.</p>
-
-      <h2>Conclusion</h2>
-      <p>Pixel art is more than just retro—it's a lifestyle. Explore our <strong>"Pixel"</strong> collection to find the perfect low-res masterpiece for your high-res life.</p>
-    `
-  },
-  {
-    slug: 'frieren-story-analysis',
-    title: 'Frieren: Beyond Journey\'s End – Why This Story Matters in 2026',
-    excerpt: 'Deep dive into the themes of Frieren. Time, human connection, and why it is the most important anime of the decade.',
-    date: '2026-02-09',
-    author: 'Only_dias',
-    tags: ['Frieren', 'Story', 'Analysis', 'Anime', 'Themes'],
-    content: `
-      <h2>The Aftermath of a Legend</h2>
-      <p>Most fantasy stories end with the hero defeating the Demon King. <em>Frieren: Beyond Journey's End</em> begins there. It is a story about the "After." Frieren, an elf who lives for thousands of years, sees human lives as fleeting moments. Only after the death of her comrade Himmel does she realize how much she missed by not "getting to know" humans.</p>
-      <p>In 2026, this story feels more relevant than ever. In a world of fast-paced content and constant change, Frieren teaches us the value of <strong>Slowing Down</strong> and <strong>Remembering</strong>.</p>
-
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769982784/1_ktrrzf.jpg" alt="Frieren Story Analysis" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Themes of Time and Regret</h2>
-      <p>Frieren's struggle is something we all face: the realization that time is our most precious resource. Her journey to "Aureole" (the land where souls rest) is a quest for closure. She wants to tell Himmel the things she didn't say when he was alive.</p>
-      <p>The anime uses its visuals to emphasize this. The changing seasons, the ruins of old statues, and the growth of Fern and Stark all serve as markers of passing time. This "Melancholic Beauty" is exactly what I try to capture in my <strong>Frieren Wallpaper Collection</strong>.</p>
-
-      <h2>The Power of Small Moments</h2>
-      <p>One of the most beautiful aspects of the show is how it prioritizes small, "useless" moments over big battles. Frieren searching for a specific flower, or teaching Fern a silly spell, or eating a giant hamburger. These are the moments that define our lives. The show argues that <em>"even if it's just for a moment, it mattered."</em></p>
-
-      <h2>Visual Storytelling by Madhouse</h2>
-      <p>Studio Madhouse delivered a visual masterpiece. The use of lighting to show the passage of time—from the warm glow of a campfire to the cold blue of a winter morning—is unparalleled. It rewards the viewer for paying attention to the details.</p>
-
-      <div class="mt-8 p-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl text-center">
-        <h3 class="text-xl font-pixel text-white mb-4">Experience the Magic</h3>
-        <p class="text-gray-300 text-sm mb-6">Want to carry the peace of Frieren's world with you?</p>
-        <Link href="/blog/frieren-4k-wallpapers-guide" class="inline-block px-8 py-3 bg-neon-cyan text-dark-bg font-pixel hover:bg-white transition-colors rounded-lg">
-          VIEW THE 4K COLLECTION
-        </Link>
-      </div>
-
-      <p class="mt-8">Frieren is more than just a fantasy anime; it's a meditation on what it means to be human. Whether you're here for the story or the visuals, it's a journey you won't forget. Check out our <strong>Story Articles</strong> section for more deep dives into your favorite series!</p>
-    `
-  },
-  {
-    slug: 'mixed-anime-wallpapers-highlights',
-    title: 'The "Mixed" Collection: Hand-Picked Highlights from the Entire Anime Universe',
-    excerpt: 'Can\'t decide on one character? Our Mixed collection features the absolute best frames from dozens of different series.',
-    date: '2026-02-08',
-    author: 'Only_dias',
-    tags: ['Mixed', 'Collection', 'Variety', '4K'],
-    content: `
-      <h2>The Beauty of Variety</h2>
-      <p>Sometimes, the best setup is one that doesn't stick to a single theme. Our <strong>Mixed Collection</strong> is where I put the "hidden gems"—those incredible single frames from series that might not have a full collection yet, but deserve to be seen in 4K.</p>
-      
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769040648/wallpapers/Mixed/-----.jpg" alt="Mixed Collection Highlights" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>What's Inside the Mixed Bag?</h2>
-      <p>This collection is a journey through different art styles and genres:</p>
-      <ul>
-        <li><strong>Cyberpunk Cityscapes:</strong> Gritty, neon-soaked streets from various sci-fi anime.</li>
-        <li><strong>Slice-of-Life Moments:</strong> Quiet, beautiful backgrounds of trains, classrooms, and sunsets.</li>
-        <li><strong>Action Peaks:</strong> High-octane frames from shonen series that will make your screen feel powerful.</li>
-      </ul>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234890/wallpapers/Mixed/37.jpg" alt="Mixed Portrait 1" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1768234874/wallpapers/Mixed/24.jpg" alt="Mixed Portrait 2" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>Why It's a Fan Favorite</h2>
-      <p>The Mixed collection is our most-downloaded category because it offers something for everyone. It's the perfect place to explore new series or find a wallpaper that matches your setup's color scheme rather than a specific character.</p>
-
-      <h2>Conclusion</h2>
-      <p>If you love discovering new art, the <strong>Mixed</strong> gallery is for you. We update it weekly with new upscaled drops from across the anime world!</p>
-    `
-  },
-  {
-    slug: 'awesome-anime-backgrounds-collection',
-    title: 'The "Awesome" Collection: High-Intensity Visuals for Your Ultimate Setup',
-    excerpt: 'Looking for something that truly stands out? The Awesome collection is a curated set of the most visually striking and "epic" anime art.',
-    date: '2026-02-07',
-    author: 'Only_dias',
-    tags: ['Awesome', 'Epic', 'Visuals', '4K', 'High Intensity'],
-    content: `
-      <h2>Define "Awesome"</h2>
-      <p>In our library, <strong>"Awesome"</strong> isn't just a category; it's a standard. These are the wallpapers that make you stop and stare. High contrast, incredible lighting, and epic scale. These aren't just backgrounds; they are statements.</p>
-      
-      <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-pink/50 shadow-[0_0_20px_rgba(255,42,109,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958378/wallpapers/Zero%20Two/3%20%282%29.jpg" alt="Awesome Collection 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Editing for Impact</h2>
-      <p>To make an image "Awesome," I push the technical limits of my workflow:</p>
-      <ul>
-        <li><strong>HDR-Style Grading:</strong> I expand the dynamic range, making the lights brighter and the shadows deeper.</li>
-        <li><strong>Particle Enhancement:</strong> I manually add or enhance magical particles, dust, and light streaks to create a sense of energy.</li>
-        <li><strong>Ultra-Sharp Lines:</strong> These images are upscaled with maximum precision to ensure every detail is visible on even the largest 4K monitors.</li>
-      </ul>
-
-      <h2>Best For...</h2>
-      <p>These wallpapers are designed for <strong>Gaming Rigs</strong>. If you have a powerful PC and a high-end monitor, these images will truly show what your hardware can do. They pair best with aggressive RGB themes and high-performance peripherals.</p>
-
-      <h2>Conclusion</h2>
-      <p>Ready to level up your screen? Explore the <strong>Awesome</strong> collection and find your new power-up. Don't forget to check out our <strong>Workflow Guide</strong> to see how these are made!</p>
     `
   },
   {
