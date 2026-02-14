@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
+import IconsPFPs from "./components/IconsPFPs";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import RecommendationButton from "./components/RecommendationButton";
@@ -17,33 +18,11 @@ export default function Home() {
         <Navbar />
         <Hero />
         
-        {/* --- Content Description Section (For SEO & AdSense) --- */}
-        <section className="py-16 px-4 max-w-7xl mx-auto text-center">
-          <h2 className="font-pixel text-3xl md:text-4xl text-white mb-8">
-            The Ultimate <span className="text-neon-cyan">Anime Wallpaper</span> Collection
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-            <div className="space-y-4">
-              <h3 className="font-pixel text-2xl text-neon-pink">Our Mission</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
-                Only_dias Ocean isn't just another wallpaper site. It's a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
-                We specialize in <strong>4K upscaled backgrounds</strong>, color-graded edits, and exclusive static artwork from the most popular series like <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Chainsaw Man</em>.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-pixel text-2xl text-neon-pink">Why Choose Us?</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
-                Unlike automated scraper sites, every image here is verified for quality. No blurry JPEGs, no watermarks. 
-                Whether you're looking for a moody cyberpunk city or a vibrant character portrait, our <strong>"Special Collections"</strong> filter helps you find the perfect aesthetic instantly. 
-                Join our community on TikTok to request new drops!
-              </p>
-            </div>
-          </div>
-        </section>
-
+        {/* --- 1. WALLPAPERS SECTION --- */}
         <Gallery />
 
-        {/* --- Blog Preview Section (Increases Content Value) --- */}
+        {/* --- 2. BLOG SECTIONS --- */}
+        {/* Blog Preview Section (Increases Content Value) */}
         <section className="py-20 px-4 bg-dark-bg/50 border-y border-gray-800">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-end mb-12">
@@ -82,7 +61,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Featured Guides Section (High Value Content) --- */}
+        {/* Featured Guides Section (High Value Content) */}
         <section className="py-20 px-4 bg-dark-bg border-b border-gray-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
@@ -116,7 +95,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Character Stories Section --- */}
+        {/* Character Stories Section */}
         <section className="py-20 px-4 bg-dark-bg/30 border-b border-gray-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
@@ -152,6 +131,33 @@ export default function Home() {
               <Link href="/blog" className="inline-block px-10 py-4 bg-neon-pink/10 border-2 border-neon-pink text-neon-pink font-pixel text-xl hover:bg-neon-pink hover:text-white transition-all rounded-lg">
                 EXPLORE ALL ARTICLES
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* --- 3. ICONS & PFPS SECTION --- */}
+        <IconsPFPs />
+
+        {/* --- Content Description Section (For SEO & AdSense) --- */}
+        <section className="py-16 px-4 max-w-7xl mx-auto text-center border-t border-gray-800">
+          <h2 className="font-pixel text-3xl md:text-4xl text-white mb-8">
+            The Ultimate <span className="text-neon-cyan">Anime Wallpaper</span> Collection
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+            <div className="space-y-4">
+              <h3 className="font-pixel text-2xl text-neon-pink">Our Mission</h3>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Only_dias Ocean isn't just another wallpaper site. It's a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
+                We specialize in <strong>4K upscaled backgrounds</strong>, color-graded edits, and exclusive static artwork from the most popular series like <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Chainsaw Man</em>.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="font-pixel text-2xl text-neon-pink">Why Choose Us?</h3>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Unlike automated scraper sites, every image here is verified for quality. No blurry JPEGs, no watermarks. 
+                Whether you're looking for a moody cyberpunk city or a vibrant character portrait, our <strong>"Special Collections"</strong> filter helps you find the perfect aesthetic instantly. 
+                Join our community on TikTok to request new drops!
+              </p>
             </div>
           </div>
         </section>

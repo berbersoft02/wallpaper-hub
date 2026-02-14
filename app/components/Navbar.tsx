@@ -19,12 +19,12 @@ export default function Navbar() {
     setShowMobileMenu(false); // Close mobile menu when opening modal
   };
 
-  const handleWallpapersClick = (e: React.MouseEvent) => {
+  const handleIconsClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (pathname === '/') {
-      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('icons')?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      router.push('/#gallery');
+      router.push('/#icons');
     }
     setShowMobileMenu(false);
   };
@@ -47,12 +47,13 @@ export default function Navbar() {
           >
             WALLPAPERS
           </a>
-          <Link
-            href="/icons"
-            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
+          <a
+            href="/#icons"
+            onClick={handleIconsClick}
+            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
           >
             ICONS PFPS
-          </Link>
+          </a>
           <button 
             onClick={() => handleSoonClick("Desktop Wallpapers")}
             className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left"
@@ -113,13 +114,13 @@ export default function Navbar() {
             >
               WALLPAPERS
             </a>
-            <Link
-              href="/icons"
-              onClick={() => setShowMobileMenu(false)}
+            <a
+              href="/#icons"
+              onClick={handleIconsClick}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               ICONS PFPS
-            </Link>
+            </a>
             <button 
               onClick={() => handleSoonClick("Desktop Wallpapers")}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
