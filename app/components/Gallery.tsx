@@ -242,7 +242,32 @@ export default function Gallery() {
     "Cars": "anime-car-wallpapers-guide",
     "Live Wallpapers": "live-wallpapers-4k-guide",
     "Nature": "anime-nature-scenery-tribute",
-    "Pixel": "pixel-art-anime-guide"
+    "Pixel": "pixel-art-anime-guide",
+    "Nishimiya Shouko": "shouko-nishimiya-silent-voice-4k-guide",
+    "Elaina": "elaina-wandering-witch-4k-guide",
+    "Mai Sakurajima": "mai-sakurajima-bunny-girl-senpai-4k-guide",
+    "Nakano Nino": "nino-nakano-tsundere-energy-4k-guide",
+    "Rias Gremory": "rias-gremory-high-school-dxd-4k-guide",
+    "Rin Shima": "rin-shima-laid-back-camp-cozy-4k-guide",
+    "The Detective Is Already Dead": "siesta-detective-is-already-dead-4k-guide",
+    "Kano Chinatsu": "blue-box-chinatsu-hina-4k-guide",
+    "Hina Chono": "blue-box-chinatsu-hina-4k-guide",
+    "Boku No Hero Academia": "my-hero-academia-4k-wallpapers-epic-guide",
+    "Baki Hanma": "baki-hanma-muscle-intensity-4k-guide",
+    "Kaoruko waguri": "kaoruko-waguri-kaoru-hana-4k-guide",
+    "Maria kujou": "maria-kujou-roshidere-sister-4k-guide",
+    "Yuzuki Nanase": "yuzuki-nanase-chitose-kun-4k-guide",
+    "Rin Nanakura": "rin-nanakura-giji-harem-4k-guide",
+    "Yuuko Hiragi": "yuuko-hiragi-anime-girl-4k-guide",
+    "Subaru Hushino": "subaru-hushino-anime-4k-guide",
+    "Phoebe": "phoebe-aesthetic-art-4k-guide",
+    "Attack On Titan": "attack-on-titan-cinematic-brutality-long",
+    "Jujutsu Kaisen": "jujutsu-kaisen-gojo-satoru-deep-dive",
+    "Demon Slayer": "demon-slayer-breathing-effects-long",
+    "Chainsaw Man": "chainsaw-man-denji-chaos-full",
+    "One Piece": "luffy-gear-5-joyboy-masterclass",
+    "Dragon Ball": "dragon-ball-visual-evolution-pro",
+    "Blue Lock": "blue-lock-egoist-aura-long"
   };
 
   const goToPrevious = useCallback(() => {
