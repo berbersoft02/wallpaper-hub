@@ -2,8 +2,9 @@
 
 import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
 import SpotlightCard from "./SpotlightCard";
+import { useSearchParams } from "next/navigation";
 
 interface Wallpaper {
   id: string;
@@ -21,7 +22,8 @@ interface CharacterData {
   tags?: string[];
 }
 
-export default function Gallery() {
+function GalleryContent() {
+  const searchParams = useSearchParams();
   const [filter, setFilter] = useState("All");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
@@ -35,6 +37,14 @@ export default function Gallery() {
   const [sending, setSending] = useState(false);
   const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // Read filter from URL
+  useEffect(() => {
+    const filterParam = searchParams.get('filter');
+    if (filterParam) {
+      setFilter(filterParam);
+    }
+  }, [searchParams]);
 
   // Load wallpapers from API
   useEffect(() => {
@@ -733,5 +743,13 @@ export default function Gallery() {
         </div>
       )}
     </section>
+  );
+}
+
+export default function Gallery() {
+  return (
+    <Suspense fallback={<div className="py-20 text-center font-pixel text-neon-cyan">Loading Gallery...</div>}>
+      <GalleryContent />
+    </Suspense>
   );
 }
