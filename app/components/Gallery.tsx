@@ -213,6 +213,38 @@ export default function Gallery() {
 
   const getCount = (charName: string) => wallpapers.filter(w => w.character === charName).length;
 
+  const CHARACTER_GUIDE_MAP: Record<string, string> = {
+    "Frieren": "frieren-4k-wallpapers-guide",
+    "Violet Evergarden": "violet-evergarden-story",
+    "Alya Kujou ♡": "alya-kujou-tsundere-editing-guide",
+    "Tenka Izumo": "tenka-izumo-guide",
+    "Yuki Suou": "yuki-suou-4k-wallpapers-guide",
+    "Marin Kitagawa": "marin-kitagawa-cosplay-queen-comprehensive",
+    "Zero Two": "zero-two-editing-process",
+    "Gojo Satoru": "jujutsu-kaisen-gojo-satoru-deep-dive",
+    "Akane Kurokawa": "akane-kurokawa-method-acting-long",
+    "Chisato Nishikigi": "chisato-nishikigi-action-long",
+    "Denji": "chainsaw-man-denji-chaos-full",
+    "Spider-Man": "spider-man-across-multiverse-4k-editing",
+    "Tanjiro": "demon-slayer-breathing-effects-long",
+    "Isagi Yoichi": "blue-lock-egoist-aura-long",
+    "Goku": "dragon-ball-visual-evolution-pro",
+    "Miku Nakano": "miku-nakano-headphones-aesthetic-long",
+    "Makima": "makima-control-devil-psychology-long",
+    "Yor Forger": "yor-forger-assassin-long",
+    "Power": "power-chainsaw-man-longform",
+    "Naruto": "naruto-evolution-glow-pro",
+    "Luffy": "luffy-gear-5-joyboy-masterclass",
+    "Shiina Mahiru": "shiina-mahiru-4k-wallpapers-guide",
+    "Shikimori Micchon": "shikimori-4k-wallpapers-guide",
+    "Mixed": "mixed-anime-wallpapers-highlights",
+    "Awesome": "awesome-anime-backgrounds-collection",
+    "Cars": "anime-car-wallpapers-guide",
+    "Live Wallpapers": "live-wallpapers-4k-guide",
+    "Nature": "anime-nature-scenery-tribute",
+    "Pixel": "pixel-art-anime-guide"
+  };
+
   const goToPrevious = useCallback(() => {
     if (selectedImageIndex !== null && selectedImageIndex > 0) {
       setSelectedImageIndex(selectedImageIndex - 1);
@@ -282,6 +314,21 @@ export default function Gallery() {
 
         <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
           
+          {filter !== "All" && CHARACTER_GUIDE_MAP[filter] && (
+            <div className="w-full max-w-4xl bg-card-bg/80 border-2 border-neon-cyan/50 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_32px_rgba(5,217,232,0.2)] animate-slide-up">
+              <div className="text-center md:text-left">
+                <h4 className="font-pixel text-xl text-white mb-2">Deepen Your Experience</h4>
+                <p className="text-gray-400 text-sm font-body">Read our expert editing guide and story analysis for <span className="text-neon-cyan font-bold">{filter}</span>.</p>
+              </div>
+              <a 
+                href={`/blog/${CHARACTER_GUIDE_MAP[filter]}`}
+                className="px-8 py-3 bg-neon-cyan text-dark-bg font-pixel rounded-lg hover:bg-white transition-all hover:scale-105 shadow-[0_0_16px_rgba(5,217,232,0.4)]"
+              >
+                READ THE GUIDE
+              </a>
+            </div>
+          )}
+
           {/* --- Special Collections (Premium Cards) --- */}
           {specialCollections.length > 0 && (
              <div className="w-full max-w-6xl">

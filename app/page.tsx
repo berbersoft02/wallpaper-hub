@@ -86,35 +86,72 @@ export default function Home() {
         <section className="py-20 px-4 bg-dark-bg border-b border-gray-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
-              Essential <span className="text-neon-purple">Guides</span> & Stories
+              Essential <span className="text-neon-purple">Guides</span> & Workflow
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {getAllPosts()
                 .filter(p => [
-                  'tenka-izumo-guide',
-                  'violet-evergarden-story', 
                   'workflow-guide',
-                  'perfect-anime-setup-guide'
+                  'live-wallpapers-4k-guide',
+                  'anime-car-wallpapers-guide',
+                  'pixel-art-anime-guide'
                 ].includes(p.slug))
-                .slice(0, 4)
                 .map((post) => (
-                  <article key={post.slug} className="flex flex-col md:flex-row bg-card-bg rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple transition-all group">
-                    <div className="p-8 flex flex-col justify-center w-full">
-                      <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Featured</span>
-                      <h3 className="font-pixel text-2xl text-white mb-4 group-hover:text-neon-purple transition-colors">
-                        <Link href={`/blog/${post.slug}`}>
-                          {post.title}
-                        </Link>
-                      </h3>
-                      <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-white font-bold hover:text-neon-purple transition-colors">
-                        Read Article <span className="ml-2">→</span>
+                  <article key={post.slug} className="flex flex-col bg-card-bg rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple transition-all group p-6">
+                    <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Expert Guide</span>
+                    <h3 className="font-pixel text-xl text-white mb-4 group-hover:text-neon-purple transition-colors line-clamp-2">
+                      <Link href={`/blog/${post.slug}`}>
+                        {post.title}
                       </Link>
-                    </div>
+                    </h3>
+                    <p className="text-gray-400 mb-6 text-sm leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <Link href={`/blog/${post.slug}`} className="mt-auto inline-flex items-center text-white text-sm font-bold hover:text-neon-purple transition-colors">
+                      Learn More <span className="ml-2">→</span>
+                    </Link>
                   </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* --- Character Stories Section --- */}
+        <section className="py-20 px-4 bg-dark-bg/30 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-pixel text-3xl md:text-4xl text-white mb-12 text-center">
+              Character <span className="text-neon-pink">Stories</span> & Collections
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {getAllPosts()
+                .filter(p => [
+                  'frieren-story-analysis',
+                  'violet-evergarden-story',
+                  'shikimori-4k-wallpapers-guide',
+                  'shiina-mahiru-4k-wallpapers-guide',
+                  'alya-kujou-tsundere-editing-guide',
+                  'tenka-izumo-guide'
+                ].includes(p.slug))
+                .map((post) => (
+                  <article key={post.slug} className="bg-card-bg p-8 rounded-xl border border-gray-700 hover:border-neon-pink transition-all group">
+                    <h3 className="font-pixel text-2xl text-white mb-4 group-hover:text-neon-pink transition-colors">
+                      <Link href={`/blog/${post.slug}`}>
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-white font-bold hover:text-neon-pink transition-colors">
+                      Read Story <span className="ml-2">→</span>
+                    </Link>
+                  </article>
+              ))}
+            </div>
+            <div className="mt-12 text-center">
+              <Link href="/blog" className="inline-block px-10 py-4 bg-neon-pink/10 border-2 border-neon-pink text-neon-pink font-pixel text-xl hover:bg-neon-pink hover:text-white transition-all rounded-lg">
+                EXPLORE ALL ARTICLES
+              </Link>
             </div>
           </div>
         </section>

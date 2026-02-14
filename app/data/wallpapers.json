@@ -245,7 +245,6 @@
       ],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542651/12_li4at5.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542652/1_qtxlyv.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542653/4_px7myz.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542654/5_wyigas.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542654/6_vefpqc.jpg",
@@ -334,13 +333,9 @@
       ]
     },
     {
-      "name": "Isagi Yoichi",
+      "name": "ISAGI YOICHI",
       "category": "Anime",
-      "tags": [
-        "BlueLock",
-        "Striker",
-        "Egoist"
-      ],
+      "tags": [],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/1_vw5jfm.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769355100/3_kbwl2w.jpg",
@@ -401,6 +396,8 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542272/29_tnknej.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542298/30_dscngz.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542298/31_fqdbpg.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542299/33_hpmoji.webp",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542300/34_iabmxi.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542301/35_toqo6v.webp"
       ]
     },
@@ -426,13 +423,9 @@
       ]
     },
     {
-      "name": "Kaoruko Waguri",
+      "name": "Kaoruko waguri",
       "category": "Anime",
-      "tags": [
-        "KaoruHana",
-        "Waguri",
-        "Romance"
-      ],
+      "tags": [],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957833/wallpapers/Kaoruko%20waguri/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957838/wallpapers/Kaoruko%20waguri/2.jpg",
@@ -891,27 +884,6 @@
       ]
     },
     {
-      "name": "Subaru Hoshina",
-      "category": "Anime",
-      "tags": [
-        "BlueBox",
-        "Sports",
-        "Subaru"
-      ],
-      "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957767/wallpapers/Hushino/1.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957772/wallpapers/Hushino/10.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957780/wallpapers/Hushino/2.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957787/wallpapers/Hushino/3.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957796/wallpapers/Hushino/4.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957805/wallpapers/Hushino/5.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957814/wallpapers/Hushino/6.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957820/wallpapers/Hushino/7.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957824/wallpapers/Hushino/8.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957829/wallpapers/Hushino/9.jpg"
-      ]
-    },
-    {
       "name": "Shiina Mahiru",
       "category": "Anime",
       "tags": [
@@ -967,6 +939,43 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187847_lntqv1.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187889/oboi.4k_threadsmate.com_1769187850_iiymck.webp",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769187896/oboi.4k_threadsmate.com_1769187849_yrbjik.webp"
+      ]
+    },
+    {
+      "name": "Subaru Hushino",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957767/wallpapers/Hushino/1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957772/wallpapers/Hushino/10.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957780/wallpapers/Hushino/2.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957787/wallpapers/Hushino/3.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957796/wallpapers/Hushino/4.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957805/wallpapers/Hushino/5.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957814/wallpapers/Hushino/6.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957820/wallpapers/Hushino/7.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957824/wallpapers/Hushino/8.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957829/wallpapers/Hushino/9.jpg"
+      ]
+    },
+    {
+      "name": "Tenka Izumo",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312907/10_uxusdz.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312907/12_oiwq9s.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312907/13_b3bzlt.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312907/3_ehl3s3.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312908/2_exfux3.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312911/1_bq5end.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312911/4_vch2hd.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312912/7_ywjnoz.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312913/11_lcensl.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312913/6_yeicye.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312915/5_okbvex.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312918/9_ynrtoc.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1770312920/8_x048t5.jpg"
       ]
     },
     {
