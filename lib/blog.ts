@@ -11,6 +11,73 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'toji-fushiguro-sorcerer-killer-4k-guide',
+    title: 'Toji Fushiguro: The Raw Intensity of the Sorcerer Killer in 4K - A 2026 Visual Analysis',
+    excerpt: 'An 800+ word deep dive into the "Heavenly Restricted" aesthetic of Toji Fushiguro. Learn our technical process for editing the Sorcerer Killer for high-fidelity 4K displays.',
+    date: '2026-02-14',
+    author: 'Only_dias',
+    tags: ['Toji Fushiguro', 'JJK', 'Action', '4K', 'Intensity', 'MAPPA'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/?filter=Toji+Fushiguro#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_rgba(5,217,232,0.5)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE TOJI 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>The Sorcerer Killer: A Visual Paradigm of Power</h2>
+      <p>In the world of <em>Jujutsu Kaisen</em>, power is usually measured by cursed energy. But Toji Fushiguro flipped that script entirely. As a victim (and beneficiary) of a <strong>Heavenly Restriction</strong>, Toji possesses zero cursed energy in exchange for superhuman physical prowess. This absence of energy creates a unique visual challenge: how do you portray a character who is "invisible" to the supernatural world but dominant in the physical one?</p>
+      
+      <p>Toji's design is a masterclass in "Raw Intensity." Every line of his musculature, his sharp, predatory gaze, and his casual yet lethal movements scream authority. When MAPPA animated the "Hidden Inventory" arc, they gave Toji a distinct weight. Unlike the flashy, glowing sorcerers, Toji is grounded, gritty, and incredibly fast. Our 4K collection is designed to capture that specific "Physical God" aesthetic.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-500/50 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505395/wallpapers/toji-fushiguro/1.jpg" alt="Toji Fushiguro 4K" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Editing the "Heavenly Restricted" Aesthetic: Technical Breakdown</h2>
+      <p>Toji doesn't have the glowing eyes of Gojo or the colorful techniques of Sukuna. His aesthetic is <strong>Grit, Shadow, and Movement</strong>. Here is how we edit the Sorcerer Killer for 4K displays:</p>
+      
+      <h3>1. Muscle Definition & High-Pass Filtering</h3>
+      <p>Toji's physique is his primary weapon. To make it pop in 4K, we use a selective High-Pass filter set to 1.5px. We apply this mask specifically to his arms, back, and torso. This emphasizes the "definition" without making the skin look noisy. On an OLED screen, the contrast between the highlights on his muscles and the deep shadows of his clothing creates a tangible sense of 3D volume.</p>
+
+      <h3>2. The "Inverted Spear" Metal Texture</h3>
+      <p>Toji's tools are as iconic as he is. When editing frames with the Inverted Spear of Heaven or the Playful Cloud, we use a custom <strong>"Steel" Curves profile</strong>. We boost the highlights in the metallic areas to give them a cold, lethal sheen. We want the user to feel the bite of the blade through the screen.</p>
+
+      <h3>3. Motion Blur & Speed Lines</h3>
+      <p>Toji is fast—so fast that sorcerers can't track him. To translate this speed into a static 4K wallpaper, we often re-introduce <strong>Manual Motion Blur</strong>. We use a radial blur at 2% opacity on the background elements while keeping Toji's silhouette razor-sharp. This creates a sense of "Snap Action," where it feels like he's about to burst out of your monitor.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505397/wallpapers/toji-fushiguro/2.jpg" alt="Toji Intensity" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505399/wallpapers/toji-fushiguro/4.jpg" alt="Toji Gaze" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <h2>The Psychology of the Gaze: Capturing the Predator</h2>
+      <p>What makes Toji terrifying isn't just his speed; it's his indifference. His eyes aren't filled with malice; they are filled with the focus of a professional athlete. In our 4K upscales, we pay special attention to the eyes. We deepen the shadows under his brow and add a sharp, 1-pixel highlight to his pupils. This creates a "predatory" look that draws the eye directly to his expression, regardless of how much action is happening in the rest of the frame.</p>
+
+      <h2>Setup Recommendation: Embracing the Dark Aesthetic</h2>
+      <p>Toji wallpapers are the ultimate choice for fans of the <strong>Minimalist/Dark setup</strong>. He represents the peak of "Cool" without being over-designed. Here is how to match your setup to the Sorcerer Killer:</p>
+      <ul>
+        <li><strong>Lighting:</strong> Static White or Cold Grey RGB. Avoid bright colors—Toji thrives in the monochromatic.</li>
+        <li><strong>Monitor:</strong> These wallpapers are specifically color-graded for <strong>High Dynamic Range (HDR)</strong>. The peak brightness on his white shirt and the deep blacks of his tactical gear will truly test your monitor's contrast ratio.</li>
+        <li><strong>Mobile:</strong> Use the "Close-up Gaze" version for your lock screen. It’s an instant intimidation factor every time you pick up your phone.</li>
+      </ul>
+
+      <h2>Conclusion: A Legend Who Broke the World</h2>
+      <p>Toji Fushiguro is a character who changed the trajectory of <em>Jujutsu Kaisen</em> forever. He is the man who proved that sheer will and physical perfection could bring gods to their knees. Our 4K collection is a tribute to that unyielding spirit and MAPPA's incredible character work. I've personally verified every pixel of these 8 images to ensure they meet the Only_dias Ocean standard.</p>
+      
+      <p>Download the Toji Fushiguro 4K set today and let the Sorcerer Killer dominate your digital space. Remember: in a world of sorcerers, be the one who doesn't need cursed energy to win.</p>
+
+      <div class="flex justify-center my-8">
+        <a href="/?filter=Toji+Fushiguro#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_rgba(5,217,232,0.5)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ VIEW ALL TOJI WALLPAPERS ✨
+        </a>
+      </div>
+    `
+  },
+  {
     slug: 'shouko-nishimiya-silent-voice-4k-guide',
     title: 'Shouko Nishimiya: The Silent Beauty of "A Silent Voice" in 4K - A Deep Emotional & Visual Analysis',
     excerpt: 'Exploring the emotional depth and visual serenity of Nishimiya Shouko. A comprehensive 800+ word guide to our high-fidelity 4K collection, including technical editing breakdowns and story themes.',

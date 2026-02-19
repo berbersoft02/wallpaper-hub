@@ -277,7 +277,8 @@ function GalleryContent() {
     "Chainsaw Man": "chainsaw-man-denji-chaos-full",
     "One Piece": "luffy-gear-5-joyboy-masterclass",
     "Dragon Ball": "dragon-ball-visual-evolution-pro",
-    "Blue Lock": "blue-lock-egoist-aura-long"
+    "Blue Lock": "blue-lock-egoist-aura-long",
+    "Toji Fushiguro": "toji-fushiguro-sorcerer-killer-4k-guide"
   };
 
   const goToPrevious = useCallback(() => {
