@@ -201,7 +201,7 @@ export default function Home() {
           <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
           <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
             <p>
-              I'm a 23-year-old engineer with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+              HI I'm DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
             </p>
             <p>
               This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.

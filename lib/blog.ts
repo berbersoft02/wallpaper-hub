@@ -3446,7 +3446,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Story', 'Community', 'TikTok', 'Growth'],
     content: 
       `<h2>The Beginning: A Passion for Design</h2>
-      <p>Hi, I'm the creator behind <strong>Only_dias</strong>. I'm a 23-year-old engineer by day, but my real passion has always been digital design and anime. It started simply: I wanted a good wallpaper for my own phone. I couldn't find one that was high quality—they were all blurry screenshots or cropped weirdly. So, I opened Photoshop and made my own.</p>
+      <p>Hi, I'm <strong>DIAS</strong>, the creator behind <strong>Only_dias</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.</p>
       <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
 
       <h2>Why I Created "Only_dias Ocean"</h2>
