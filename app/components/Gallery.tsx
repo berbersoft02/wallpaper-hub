@@ -511,7 +511,13 @@ function GalleryContent() {
                   <div className="flex-1 min-w-0">
                     <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate">{wp.title}</h3>
                     <div className="flex flex-col gap-1">
-                      <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">{renderCharacterName(wp.character)}</span>
+                      <Link 
+                        href={`/wallpapers/${slugify(wp.character)}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-xs text-gray-400 font-mono uppercase tracking-wider hover:text-neon-cyan transition-colors"
+                      >
+                        {renderCharacterName(wp.character)}
+                      </Link>
                       {wp.tags && wp.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mt-1">
                           {wp.tags.map(tag => (

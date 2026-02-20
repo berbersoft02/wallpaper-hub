@@ -61,6 +61,12 @@ export default async function CharacterWallpapersPage({ params }: Props) {
     }))
   };
 
+  const allCharacters = getAllCharacters();
+  const otherCharacters = allCharacters
+    .filter(c => slugify(c.name) !== slug)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 6);
+
   return (
     <div className="min-h-screen bg-dark-bg text-white">
       <script
@@ -131,6 +137,33 @@ export default async function CharacterWallpapersPage({ params }: Props) {
             </div>
           ))}
         </div>
+
+        {/* --- Related Characters Section --- */}
+        <section className="mt-32">
+          <h2 className="font-pixel text-3xl text-white mb-12 text-center">
+            Explore More <span className="text-neon-cyan">Characters</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {otherCharacters.map((char) => (
+              <Link 
+                key={char.name}
+                href={`/wallpapers/${slugify(char.name)}`}
+                className="group relative aspect-[9/16] rounded-xl overflow-hidden border border-gray-800 hover:border-neon-cyan transition-all"
+              >
+                <Image 
+                  src={char.wallpapers[0]}
+                  alt={char.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                  <span className="font-pixel text-[10px] text-white truncate">{char.name}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <section className="mt-20 p-8 bg-card-bg rounded-2xl border border-gray-800 text-center">
           <h2 className="font-pixel text-2xl text-neon-pink mb-4">Want to learn how we edit these?</h2>
