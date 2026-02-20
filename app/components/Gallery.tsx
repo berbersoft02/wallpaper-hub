@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback, Suspense } from "react";
 import SpotlightCard from "./SpotlightCard";
 import { useSearchParams } from "next/navigation";
 import { slugify } from "@/lib/utils";
+import Link from "next/link";
 
 interface Wallpaper {
   id: string;
