@@ -16,8 +16,26 @@ const bodyFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Only_dias Ocean",
-  description: "Exclusive Anime and Pixel Art Wallpapers for your devices.",
+  metadataBase: new URL('https://saidahriken.site'),
+  title: {
+    default: "Only_dias Ocean | Premium 4K Anime Wallpapers",
+    template: "%s | Only_dias Ocean"
+  },
+  description: "Download high-quality 4K upscaled anime wallpapers, matching icons, and PFPs. Hand-picked collections for mobile and desktop.",
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   other: {
     "google-adsense-account": "ca-pub-7463641924793744",
   },

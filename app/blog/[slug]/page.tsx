@@ -19,6 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | Only_dias Ocean`,
     description: post.excerpt,
     keywords: post.tags.join(', '),
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,

@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Best ${name} 4K Wallpapers - Download High Quality Anime Backgrounds`,
     description: `Download premium 4K upscaled wallpapers of ${name} from ${character.category}. High resolution, color-graded, and optimized for mobile and desktop screens.`,
     keywords: `${name}, ${character.tags?.join(', ')}, Anime Wallpaper, 4K, HD, Download`,
+    alternates: {
+      canonical: `/wallpapers/${slug}`,
+    },
     openGraph: {
       title: `${name} 4K Wallpapers | Only_dias Ocean`,
       description: `Exclusive collection of ${name} wallpapers in 4K resolution.`,
