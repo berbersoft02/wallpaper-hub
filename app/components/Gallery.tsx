@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useCallback, Suspense } from "react";
 import SpotlightCard from "./SpotlightCard";
 import { useSearchParams } from "next/navigation";
+import { slugify } from "@/lib/utils";
 
 interface Wallpaper {
   id: string;
@@ -356,12 +357,20 @@ function GalleryContent() {
                 <h4 className="font-pixel text-xl text-white mb-2">Deepen Your Experience</h4>
                 <p className="text-gray-400 text-sm font-body">Read our expert editing guide and story analysis for <span className="text-neon-cyan font-bold">{filter}</span>.</p>
               </div>
-              <a 
-                href={`/blog/${CHARACTER_GUIDE_MAP[filter]}`}
-                className="px-8 py-3 bg-neon-cyan text-dark-bg font-pixel rounded-lg hover:bg-white transition-all hover:scale-105 shadow-[0_0_16px_rgba(5,217,232,0.4)]"
-              >
-                READ THE GUIDE
-              </a>
+              <div className="flex gap-4">
+                <a 
+                  href={`/wallpapers/${slugify(filter)}`}
+                  className="px-6 py-3 bg-neon-pink text-white font-pixel rounded-lg hover:bg-white hover:text-neon-pink transition-all hover:scale-105 shadow-[0_0_16px_rgba(255,42,109,0.4)]"
+                >
+                  FULL COLLECTION
+                </a>
+                <a 
+                  href={`/blog/${CHARACTER_GUIDE_MAP[filter]}`}
+                  className="px-6 py-3 bg-neon-cyan text-dark-bg font-pixel rounded-lg hover:bg-white transition-all hover:scale-105 shadow-[0_0_16px_rgba(5,217,232,0.4)]"
+                >
+                  READ GUIDE
+                </a>
+              </div>
             </div>
           )}
 

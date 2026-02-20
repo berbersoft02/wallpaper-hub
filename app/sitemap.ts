@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/blog';
+import { getAllCharacters, slugify } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://saidahriken.site'; // Updated domain name
@@ -11,6 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+  }));
+
+  // Get all character wallpaper pages
+  const characters = getAllCharacters();
+  const wallpaperUrls = characters.map((char) => ({
+    url: `${baseUrl}/wallpapers/${slugify(char.name)}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
   }));
 
   // Static pages
@@ -29,5 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }));
 
-  return [...staticPages, ...blogUrls];
+  return [...staticPages, ...blogUrls, ...wallpaperUrls];
 }
