@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://wallpaper-hub-only-dias.vercel.app'; // Remplace par ton vrai domaine si différent
+  const baseUrl = 'https://saidahriken.site'; // Updated domain name
 
   // Get all blog posts
   const posts = getAllPosts();
