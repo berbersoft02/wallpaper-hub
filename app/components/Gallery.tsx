@@ -268,6 +268,7 @@ function GalleryContent() {
     "Baki Hanma": "baki-hanma-muscle-intensity-4k-guide",
     "Kaoruko Waguri": "kaoruko-waguri-kaoru-hana-4k-guide",
     "Maria Kujou": "maria-kujou-roshidere-sister-4k-guide",
+    "Kana Arima": "kana-arima-4k-wallpapers-guide",
     "Yuzuki Nanase": "yuzuki-nanase-chitose-kun-4k-guide",
     "Rin Nanakura": "rin-nanakura-giji-harem-4k-guide",
     "Yuuko Hiragi": "yuuko-hiragi-anime-girl-4k-guide",

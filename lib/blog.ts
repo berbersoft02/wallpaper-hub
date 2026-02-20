@@ -3408,6 +3408,67 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusion</h2>
       <p>This is just the beginning. I have plans for live wallpapers, mobile apps, and more. Thank you for following me from a 15-second video to this website. If you haven't yet, follow me on TikTok <strong>@noxzx_kb</strong> and let's keep building this aesthetic together.</p>
     `
+  },
+  {
+    slug: 'kana-arima-4k-wallpapers-guide',
+    title: 'Kana Arima 4K Wallpapers: From Genius Child Actress to Idol Moodboard - A 2026 Visual Analysis',
+    excerpt: 'A comprehensive 850-word deep dive into the "B-Komachi" aesthetic of Kana Arima. Learn our technical process for editing the Genius Child Actress for high-fidelity 4K displays.',
+    date: '2026-02-14',
+    author: 'Only_dias',
+    tags: ['Kana Arima', 'Oshi No Ko', 'Idol', '4K', 'Genius', 'B-Komachi'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/?filter=Kana+Arima#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE KANA 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>Who Is Kana Arima in Oshi no Ko?</h2>
+      <p>Kana Arima is one of the most important characters in <em>Oshi no Ko</em>. She starts as a <strong>genius child actress</strong> who could cry on command and out‑act adults, but by the time the main story begins, her career has almost collapsed. As a kid, she was everywhere—TV dramas, variety shows, commercials. Directors loved her talent, but the industry also used her up: strict parents, brutal schedules, and unrealistic expectations. When she got older and “less cute,” work dried up and people quietly labeled her “difficult.” Underneath her sharp tongue and tsundere attitude, she’s terrified of being forgotten.</p>
+      
+      <p>In high school, she meets Aqua Hoshino again and joins the revived idol group <strong>B‑Komachi</strong>, rediscovering her love for performing—both on stage and in front of the camera. Kana is funny, insecure, hardworking, and emotionally honest in ways most characters aren’t. All of that makes her a perfect subject for expressive wallpapers. Her journey from the "Genius Child Actress who can cry in 10 seconds" to the center of an idol group is a story of resilience and self-discovery that resonates with millions of fans worldwide.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957518/wallpapers/Akane%20Kurokawa/1.jpg" alt="Kana Arima 4K" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Why Kana Arima Is Perfect for 4K Wallpapers</h2>
+      <p>Kana has a design that works incredibly well on modern 4K displays. The color science behind her character design is specifically tailored to grab attention and hold it. Here are the key elements that make her pop:</p>
+      <ul>
+        <li><strong>Hair & Eyes:</strong> Deep, saturated reds with hints of pink and purple. On an OLED screen, these tones provide incredible depth and contrast. They pop on both dark and light themes, providing a focal point that is both warm and intense.</li>
+        <li><strong>Iconic Outfits:</strong> From her signature blue beret and school uniform to her vibrant B-Komachi idol costumes, Kana has a versatile wardrobe that allows for a variety of wallpaper "vibes."</li>
+        <li><strong>Emotional Range:</strong> Unlike characters with static "moe" designs, Kana's expressions are dynamic. She can go from smug and overconfident to flustered or heartbroken in a single frame, allowing for high-impact emotional wallpapers.</li>
+      </ul>
+
+      <h2>Wallpaper Breakdown – “Kana Arima: Idol & Actress Collage”</h2>
+      <p>Our flagship piece in this collection is a full career collage, designed like a high-end digital moodboard. This wallpaper is a tribute to her dual life as a performer. We used a "Layered Symbolism" approach here. Kana’s head and beret fill the lower half, while the upper area is packed with custom-shaded icons: microphones, film reels, and stage lights.</p>
+      <p>The background is intentionally kept clean to avoid cluttering the desktop or phone UI. We applied a <strong>Red Aura Glow</strong> around her hair to separate her from the sketch-style icons. This ensures that while the wallpaper is busy with detail, the "Genius" herself remains the undisputed focal point. When viewed in 4K, the pencil-thin lines of the background icons create a beautiful contrast with the solid, vibrant colors of Kana's main portrait.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957530/wallpapers/Akane%20Kurokawa/2.jpg" alt="Kana Idol" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957541/wallpapers/Akane%20Kurokawa/3.jpg" alt="Kana Emotion" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <h2>Technical Deep Dive: Editing the "Kana" Red</h2>
+      <p>Editing Kana for 4K requires a delicate balance of color theory. Because her primary color is red, it can easily "clip" or lose detail if not handled correctly. Here is our Only_dias Ocean workflow for this collection:</p>
+      <h3>1. Selective Desaturation & Masking</h3>
+      <p>To prevent the reds from becoming a "flat" blob, we use selective saturation. We boost the magentas in her eyes while keeping the hair's red tones grounded in a realistic spectrum. This creates a "multi-tonal" look where her hair looks like it has individual strands even at a distance.</p>
+      <h3>2. Texture Preservation</h3>
+      <p>Whether it's a hand-drawn pencil piece or a digital frame, we use a <strong>Grain-Reduction Pass</strong> followed by a <strong>Smart Sharpen</strong> at 0.8px. This removes artifacts from the original source without making the lines look "crunchy" or fake. We want the wallpaper to feel like a high-end illustration, not a compressed screenshot.</p>
+
+      <h2>Kana as a Symbol of Resilience</h2>
+      <p>Beyond the aesthetics, these wallpapers represent a character who refuses to stay in the background. Kana Arima is the perfect symbol for what we do here at Only_dias Ocean. We take frames that might be overlooked, re-frame them with care, and present them in a way that makes you fall in love with them all over again. Her story of trying again after a fall is something we find deeply inspiring, and we hope these wallpapers bring that same energy to your daily setup.</p>
+
+      <div class="flex justify-center my-8">
+        <a href="/?filter=Kana+Arima#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ EXPLORE THE KANA 4K COLLECTION ✨
+        </a>
+      </div>
+    `
   }
 ];
 
