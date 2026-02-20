@@ -1254,58 +1254,7 @@ export const blogPosts: BlogPost[] = [
       </div>
     `
   },
-  {
-    slug: 'maria-kujou-roshidere-sister-4k-guide',
-    title: 'Maria Kujou: The Softness and Charm of the Kujou Sister in 4K',
-    excerpt: 'Exploring the gentle and supportive aesthetic of Maria Kujou from "Roshidere". A guide to our exclusive 4K wallpaper collection.',
-    date: '2026-02-14',
-    author: 'Only_dias',
-    tags: ['Maria Kujou', 'Roshidere', 'Sister', 'Cute', '4K'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE MARIA 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>The Supportive Heart: Maria Kujou</h2>
-      <p>While Alya often takes the spotlight in <em>Roshidere</em> (Alya Sometimes Hides Her Feelings in Russian), her older sister Maria Kujou is an equally captivating character. Known for her gentle nature, her playful teasing, and her deep love for her sister, Masha (as she's affectionately called) brings a different kind of warmth to the series. Her long brown hair and soft, kind eyes make her a perfect subject for high-resolution 4K wallpapers.</p>
-      <p>In this collection, I focused on her "Gentle" aesthetic. I wanted to capture the cozy, supportive, and slightly playful vibe that she brings to every scene she's in.</p>
-
-      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-pink-200/50 shadow-[0_0_20px_rgba(251,207,232,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958006/wallpapers/Maria%20kujou/1.jpg" alt="Maria Kujou 4K" class="object-cover w-full h-full" />
-      </div>
-
-      <h2>Editing the "Masha" Glow: Warmth and Softness</h2>
-      <p>Masha's design relies on soft tones and a welcoming presence. Here is how I brought that charm to life in 4K:</p>
-      <ul>
-        <li><strong>Soft Diffusion:</strong> I used a very subtle diffusion filter to soften her features and the lighting, giving her a "kind older sister" glow that feels natural and warm.</li>
-        <li><strong>Warm Color Grading:</strong> I pushed the yellows and soft pinks to emphasize her approachable personality and the domestic comfort of the Kujou family scenes.</li>
-        <li><strong>Detail Preservation:</strong> While the overall look is soft, I manually sharpened her eyes and the details of her school uniform to ensure she looks pristine in 4K.</li>
-      </ul>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958040/wallpapers/Maria%20kujou/2.jpg" alt="Maria Smile" class="object-cover w-full h-full" />
-        </div>
-        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958048/wallpapers/Maria%20kujou/3.jpg" alt="Maria Teasing" class="object-cover w-full h-full" />
-        </div>
-      </div>
-
-      <h2>Perfect Setups for Maria Kujou</h2>
-      <p>Maria wallpapers are perfect for <strong>Cozy or Relaxed setups</strong>. Pair her with warm, amber RGB lighting or a desk filled with plants and books to match her supportive and intellectual vibe. For mobile, her vertical portraits are incredibly soothing and positive—a great way to keep your day stress-free!</p>
-
-      <h2>Conclusion</h2>
-      <p>Maria Kujou reminds us of the power of a kind word and a supportive heart. This 4K collection is our tribute to her charm. Download the set and let Masha brighten your device! Check out my <a href="/?filter=Alya+Kujou+%E2%99%A1#gallery" class="text-neon-cyan">Alya Kujou</a> collection for the full family experience.</p>
-
-      <div class="flex justify-center my-8">
-        <a href="/#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ EXPLORE THE MARIA 4K COLLECTION ✨
-        </a>
-      </div>
-    `
-  },
+  
   {
     slug: 'yuzuki-nanase-chitose-kun-4k-guide',
     title: 'Yuzuki Nanase: The Popularity and Style of "Chitose-kun" in 4K',
