@@ -1,6 +1,18 @@
 {
   "characters": [
     {
+      "name": "AHYEON",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076969/2_wfgfdl.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076970/1_fg1c8u.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076970/5_ivpgta.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076972/3_s6gm4a.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076976/Design_sans_titre_2_c7jmfp.jpg"
+      ]
+    },
+    {
       "name": "Akane Kurokawa",
       "category": "Anime",
       "tags": [
@@ -213,6 +225,20 @@
       ]
     },
     {
+      "name": "Charles Chevalier",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076972/1_y3rqqc.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076975/7_skelp1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076983/2_cj8uhx.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076996/3_jjnm4q.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077005/4_muyhxm.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077007/5_y07tj5.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077007/6_d7a2y4.jpg"
+      ]
+    },
+    {
       "name": "Chisato Nishikigi",
       "category": "Anime",
       "tags": [
@@ -255,6 +281,31 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542659/9_dukcki.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542660/10_xrjpng.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769542661/11_rmib01.jpg"
+      ]
+    },
+    {
+      "name": "Don Lorenzo",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076975/1_r7em7u.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076976/13_ouu20j.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076977/16_kvq6xx.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076980/3_yu6xgi.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076981/15_lrl6oj.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076981/18_b6lj5e.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076982/2_vyeyyv.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076983/5_ky74am.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076985/10_p3acnt.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076985/4_eijtn8.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076986/14_kv1taa.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076987/9_tsbit2.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076988/6_ejaf4b.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077006/11_qzskur.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077009/12_lv9tgd.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077010/7_likooc.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077011/17_svx4eo.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077011/8_mgbwmg.jpg"
       ]
     },
     {
@@ -402,6 +453,27 @@
       ]
     },
     {
+      "name": "Kana Arima",
+      "category": "Anime",
+      "tags": [
+        "OshiNoKo",
+        "Idol",
+        "B-Komachi",
+        "Actress"
+      ],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076998/2_khgszg.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076998/3_ihsz9c.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076999/4_p7k8z0.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077001/5_dlme23.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077001/8_bz9hgg.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077002/1_qcdc7f.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077002/9_exwxcl.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077003/7_ijjlok.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077030/6_ipqubg.jpg"
+      ]
+    },
+    {
       "name": "Kano Chinatsu",
       "category": "Anime",
       "tags": [
@@ -423,7 +495,7 @@
       ]
     },
     {
-      "name": "Kaoruko Waguri",
+      "name": "Kaoruko waguri",
       "category": "Anime",
       "tags": [],
       "wallpapers": [
@@ -492,13 +564,22 @@
       ]
     },
     {
-      "name": "Maria Kujou",
+      "name": "Maomao",
       "category": "Anime",
-      "tags": [
-        "Roshidere",
-        "Sister",
-        "Cute"
-      ],
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077017/3_rnqobt.png",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077022/1_zq8yig.png",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077023/4_suhr4q.png",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077023/6_tkjief.png",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077024/5_jqadyc.png",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077030/2_r4icia.png"
+      ]
+    },
+    {
+      "name": "Maria kujou",
+      "category": "Anime",
+      "tags": [],
       "wallpapers": [
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958006/wallpapers/Maria%20kujou/1.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958013/wallpapers/Maria%20kujou/10.jpg",
@@ -884,6 +965,37 @@
       ]
     },
     {
+      "name": "Ryomen Sukuna",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325057/3_snb5fl.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325057/5_jyshts.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325061/1_q58b4w.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325062/6_vhzyhs.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325065/2_ylgjg3.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325065/4_umb9rd.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325065/9_pzqzcw.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325068/7_jvxkrx.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325068/8_mowqip.jpg"
+      ]
+    },
+    {
+      "name": "Sae itoshi",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076987/2_cpizyq.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076990/6_z6mzeh.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076991/7_k5edha.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076992/8_paeqgc.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076993/4_hzdth1.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076994/3_xpmwzz.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077013/5_bszcmw.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077017/1_zqpvye.jpg"
+      ]
+    },
+    {
       "name": "Shiina Mahiru",
       "category": "Anime",
       "tags": [
@@ -896,7 +1008,6 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044589/wallpapers/Shiina%20Mahiru/10.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044592/wallpapers/Shiina%20Mahiru/2.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044595/wallpapers/Shiina%20Mahiru/3.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044598/wallpapers/Shiina%20Mahiru/-.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044601/wallpapers/Shiina%20Mahiru/4.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044605/wallpapers/Shiina%20Mahiru/5.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769044609/wallpapers/Shiina%20Mahiru/6.jpg",
@@ -959,6 +1070,20 @@
       ]
     },
     {
+      "name": "Sung Jin-Woo",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076994/a_zgzgsf.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076997/c_emie9c.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077023/d_lcxday.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077024/b_we7nnk.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077027/g_bu28kx.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077028/f_pcvclu.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077029/e_hpvr6h.jpg"
+      ]
+    },
+    {
       "name": "Tenka Izumo",
       "category": "Anime",
       "tags": [],
@@ -994,6 +1119,21 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769069722/wallpapers/The%20Detective%20Is%20Already%20Dead/3.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769069724/wallpapers/The%20Detective%20Is%20Already%20Dead/5.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769069724/wallpapers/The%20Detective%20Is%20Already%20Dead/6.jpg"
+      ]
+    },
+    {
+      "name": "Toji fushiguro",
+      "category": "Anime",
+      "tags": [],
+      "wallpapers": [
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325057/1_wquspo.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325057/3_ewascp.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325057/4_o9ce1k.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325058/2_drra8x.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325060/8_hefdei.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325061/6_a5kb6s.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325061/7_fut0vf.jpg",
+        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771325066/5_zch2ko.jpg"
       ]
     },
     {
@@ -1079,40 +1219,6 @@
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958342/wallpapers/Yuzuki%20Nanase/8.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767958349/wallpapers/Yuzuki%20Nanase/9.jpg",
         "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769041070/wallpapers/Yuzuki%20Nanase/-.jpg"
-      ]
-    },
-    {
-      "name": "Toji Fushiguro",
-      "category": "Anime",
-      "tags": [
-        "JJK",
-        "SorcererKiller",
-        "Intensity"
-      ],
-      "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505395/wallpapers/toji-fushiguro/1.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505397/wallpapers/toji-fushiguro/2.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505398/wallpapers/toji-fushiguro/3.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505399/wallpapers/toji-fushiguro/4.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505401/wallpapers/toji-fushiguro/5.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505402/wallpapers/toji-fushiguro/6.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505404/wallpapers/toji-fushiguro/7.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771505405/wallpapers/toji-fushiguro/8.jpg"
-      ]
-    },
-    {
-      "name": "Kana Arima",
-      "category": "Anime",
-      "tags": [
-        "OshiNoKo",
-        "Idol",
-        "B-Komachi",
-        "Actress"
-      ],
-      "wallpapers": [
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957518/wallpapers/Akane%20Kurokawa/1.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957530/wallpapers/Akane%20Kurokawa/2.jpg",
-        "https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957541/wallpapers/Akane%20Kurokawa/3.jpg"
       ]
     },
     {

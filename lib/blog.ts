@@ -3429,7 +3429,7 @@ export const blogPosts: BlogPost[] = [
       <p>In high school, she meets Aqua Hoshino again and joins the revived idol group <strong>B‑Komachi</strong>, rediscovering her love for performing—both on stage and in front of the camera. Kana is funny, insecure, hardworking, and emotionally honest in ways most characters aren’t. All of that makes her a perfect subject for expressive wallpapers. Her journey from the "Genius Child Actress who can cry in 10 seconds" to the center of an idol group is a story of resilience and self-discovery that resonates with millions of fans worldwide.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-red-500/50 shadow-[0_0_20px_rgba(239,68,68,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957518/wallpapers/Akane%20Kurokawa/1.jpg" alt="Kana Arima 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771077002/1_qcdc7f.jpg" alt="Kana Arima 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>Why Kana Arima Is Perfect for 4K Wallpapers</h2>
@@ -3446,10 +3446,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957530/wallpapers/Akane%20Kurokawa/2.jpg" alt="Kana Idol" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076998/2_khgszg.jpg" alt="Kana Idol" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1767957541/wallpapers/Akane%20Kurokawa/3.jpg" alt="Kana Emotion" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771076998/3_ihsz9c.jpg" alt="Kana Emotion" class="object-cover w-full h-full" />
         </div>
       </div>
 
