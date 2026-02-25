@@ -108,6 +108,7 @@ export default async function BlogPost({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {getAllPosts()
               .filter(p => p.slug !== post.slug)
+              .sort(() => Math.random() - 0.5)
               .slice(0, 2)
               .map(p => (
                 <Link 
