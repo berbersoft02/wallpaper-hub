@@ -151,8 +151,10 @@ async function sync() {
     }
 
     const list = charactersMap.get(cleanName).wallpapers;
-    if (!list.includes(resource.secure_url)) {
-      list.push(resource.secure_url);
+    // Remove the version number from the URL (e.g., /v1234567890/)
+    const versionlessUrl = resource.secure_url.replace(/\/v\d+\//, '/');
+    if (!list.includes(versionlessUrl)) {
+      list.push(versionlessUrl);
     }
   });
 

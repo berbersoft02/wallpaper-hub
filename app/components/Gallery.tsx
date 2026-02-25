@@ -242,7 +242,7 @@ function GalleryContent() {
     "Isagi Yoichi": "blue-lock-egoist-aura-long",
     "Goku": "dragon-ball-visual-evolution-pro",
     "Miku Nakano": "miku-nakano-headphones-aesthetic-long",
-    "Makima": "makima-control-devil-psychology-long",
+    "Makima": "colored-pencil-sketchbook-anime-wallpapers-guide",
     "Yor Forger": "yor-forger-assassin-long",
     "Power": "power-chainsaw-man-longform",
     "Naruto": "naruto-evolution-glow-pro",
