@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
           <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Toji%20fushiguro/2.jpg" alt="Toji Intensity" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Toji%20fushiguro/4.jpg" alt="Toji Gaze" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Toji%20fushiguro/3.jpg" alt="Toji Gaze" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
           <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/2.jpg" alt="Shouko Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/10.jpg" alt="Shouko Serene" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/3.jpg" alt="Shouko Serene" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -340,10 +340,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/1.jpg" alt="Rias Authority" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/2.jpg" alt="Rias Authority" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/1.jpg" alt="Rias Gaze" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/3.jpg" alt="Rias Gaze" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -392,10 +392,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/1.png" alt="Rin Cozy" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/2.png" alt="Rin Cozy" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/1.png" alt="Rin Stars" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/3.png" alt="Rin Stars" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -444,10 +444,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/1.jpg" alt="Siesta Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/2.jpg" alt="Siesta Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/2.jpg" alt="Siesta Action" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/3.jpg" alt="Siesta Action" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -484,10 +484,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-orange-200/50 shadow-[0_0_20px_rgba(254,215,170,0.3)]">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/1.jpg" alt="Chinatsu Kano 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano Chinatsu/1.jpg" alt="Chinatsu Kano 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-pink-200/50 shadow-[0_0_20px_rgba(251,207,232,0.3)]">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/1.jpg" alt="Hina Chono 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Hina Chono/1.jpg" alt="Hina Chono 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -501,10 +501,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/2.jpg" alt="Chinatsu Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano Chinatsu/2.jpg" alt="Chinatsu Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/2.jpg" alt="Hina Gymnastics" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Hina Chono/2.jpg" alt="Hina Gymnastics" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -540,7 +540,7 @@ export const blogPosts: BlogPost[] = [
       <p>In this collection, I focused on the "Peak Power" moments. I wanted to capture the intensity, the sacrifice, and the raw energy of One For All and the other incredible Quirks in the series.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="MHA 4K Hero" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/1.jpg" alt="MHA 4K Hero" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing the Quirk Energy: Lightning, Fire, and Impact</h2>
@@ -553,10 +553,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="Deku 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/2.jpg" alt="Deku 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="Bakugo 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/3.jpg" alt="Bakugo 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -605,10 +605,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/1.jpg" alt="Baki Focus" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/2.jpg" alt="Baki Focus" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/1.jpg" alt="Baki Muscle" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/3.jpg" alt="Baki Muscle" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -761,10 +761,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/1.jpg" alt="Yuzuki Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/2.jpg" alt="Yuzuki Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/1.jpg" alt="Yuzuki Pose" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/3.jpg" alt="Yuzuki Pose" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1021,10 +1021,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/1.jpg" alt="Siesta Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/2.jpg" alt="Siesta Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/2.jpg" alt="Siesta Action" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/3.jpg" alt="Siesta Action" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1061,10 +1061,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-orange-200/50 shadow-[0_0_20px_rgba(254,215,170,0.3)]">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/1.jpg" alt="Chinatsu Kano 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano Chinatsu/1.jpg" alt="Chinatsu Kano 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-pink-200/50 shadow-[0_0_20px_rgba(251,207,232,0.3)]">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/1.jpg" alt="Hina Chono 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Hina Chono/1.jpg" alt="Hina Chono 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1078,10 +1078,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/2.jpg" alt="Chinatsu Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano Chinatsu/2.jpg" alt="Chinatsu Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kano%20Chinatsu/2.jpg" alt="Hina Gymnastics" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Hina Chono/2.jpg" alt="Hina Gymnastics" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1117,7 +1117,7 @@ export const blogPosts: BlogPost[] = [
       <p>In this collection, I focused on the "Peak Power" moments. I wanted to capture the intensity, the sacrifice, and the raw energy of One For All and the other incredible Quirks in the series.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="MHA 4K Hero" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/1.jpg" alt="MHA 4K Hero" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing the Quirk Energy: Lightning, Fire, and Impact</h2>
@@ -1130,10 +1130,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="Deku 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/2.jpg" alt="Deku 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku%20no%20Hero%20Academia/1.jpg" alt="Bakugo 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Boku no Hero Academia/3.jpg" alt="Bakugo 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1182,10 +1182,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/1.jpg" alt="Baki Focus" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/2.jpg" alt="Baki Focus" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/1.jpg" alt="Baki Muscle" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Baki%20Hanma/3.jpg" alt="Baki Muscle" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1287,10 +1287,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/1.jpg" alt="Yuzuki Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/2.jpg" alt="Yuzuki Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/1.jpg" alt="Yuzuki Pose" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuzuki%20Nanase/3.jpg" alt="Yuzuki Pose" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1342,7 +1342,7 @@ export const blogPosts: BlogPost[] = [
           <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/2.jpg" alt="Shouko Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/10.jpg" alt="Shouko Serene" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nishimiya%20Shouko/3.jpg" alt="Shouko Serene" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1547,10 +1547,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/1.jpg" alt="Rias Authority" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/2.jpg" alt="Rias Authority" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/1.jpg" alt="Rias Gaze" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rias%20%20Gremory/3.jpg" alt="Rias Gaze" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1599,10 +1599,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/1.png" alt="Rin Cozy" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/2.png" alt="Rin Cozy" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/1.png" alt="Rin Stars" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/3.png" alt="Rin Stars" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1803,10 +1803,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Pixel/1.jpg" alt="Pixel Art Scenery" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Pixel/2.jpg" alt="Pixel Art Scenery" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Pixel/1.jpg" alt="Retro Anime Style" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Pixel/3.jpg" alt="Retro Anime Style" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1908,10 +1908,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/37.jpg" alt="Mixed Portrait 1" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/2.jpg" alt="Mixed Portrait 1" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/24.jpg" alt="Mixed Portrait 2" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/3.jpg" alt="Mixed Portrait 2" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1947,10 +1947,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Awesome/1.jpg" alt="Awesome Art 1" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Awesome/2.jpg" alt="Awesome Art 1" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Awesome/1.jpg" alt="Awesome Art 2" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Awesome/3.jpg" alt="Awesome Art 2" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -1985,7 +1985,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-500/50 shadow-[0_0_20px_rgba(107,114,128,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/1.jpg" alt="Tenka Wink Monochrome" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/2.jpg" alt="Tenka Wink Monochrome" class="object-cover w-full h-full" />
       </div>
 
       <h3>Wallpaper 2 – Winking Tenka with Full-Body Focus</h3>
@@ -2002,7 +2002,7 @@ export const blogPosts: BlogPost[] = [
       <p>The third wallpaper takes the same character and uniform but pushes everything into <strong>full color</strong>. This version is designed for people who want their screen to feel bright and cheerful.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/1.jpg" alt="Tenka Color Pastel" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/3.jpg" alt="Tenka Color Pastel" class="object-cover w-full h-full" />
       </div>
 
       <h3>Wallpaper 3 – Full-Color Tenka with Pastel Icons</h3>
@@ -2254,10 +2254,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuki%20Suou/1.jpg" alt="Yuki Kawaii" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuki%20Suou/2.jpg" alt="Yuki Kawaii" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuki%20Suou/1.jpg" alt="Yuki Cool" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Yuki%20Suou/3.jpg" alt="Yuki Cool" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2330,7 +2330,7 @@ export const blogPosts: BlogPost[] = [
       <p>If you love elegant and mysterious setups, Alya will transform your screen!</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/10.jpg" alt="Alya Kujou 4K Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/1.jpg" alt="Alya Kujou 4K Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>1. Choosing Alya’s Best Frames for Wallpapers</h2>
@@ -2492,7 +2492,7 @@ export const blogPosts: BlogPost[] = [
       <p>When WIT Studio handed the keys to MAPPA for the final season of <em>Attack on Titan</em>, the visual language of the show changed overnight. We went from the vibrant, high-saturation colors and thick outlines of the early seasons to a desaturated, gritty, and almost rotoscoped feel. While some fans were initially divided, as a wallpaper creator, this was a massive opportunity to experiment with <strong>Cinematic Grime and Realism</strong>. The Final Season feels less like an anime and more like a high-budget war film, and that's the feeling I wanted to preserve in this collection. The stakes have never been higher, and the visuals reflect that weight. It's a dark, oppressive, yet beautiful aesthetic that demands respect.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-orange-900/50 shadow-[0_0_20px_rgba(69,10,10,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/2.webp" alt="Attack on Titan Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/1.webp" alt="Attack on Titan Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>Lighting the Rumbling: Capturing the Apocalypse in High Resolution</h2>
@@ -2500,7 +2500,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/1.webp" alt="Mikasa 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/2.webp" alt="Mikasa 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
           <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/3.webp" alt="Eren 4K" class="object-cover w-full h-full" />
@@ -2537,10 +2537,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rintaro%20Tsumugi/1.jpg" alt="Rintaro Soft" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rintaro%20Tsumugi/2.jpg" alt="Rintaro Soft" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rintaro%20Tsumugi/1.jpg" alt="Rintaro Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rintaro%20Tsumugi/3.jpg" alt="Rintaro Smile" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2623,10 +2623,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Zero%20Two/1.jpg" alt="Zero Two 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Zero%20Two/2.jpg" alt="Zero Two 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Zero%20Two/7.jpg" alt="Zero Two Edit" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Zero%20Two/3.jpg" alt="Zero Two Edit" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2658,7 +2658,7 @@ export const blogPosts: BlogPost[] = [
       <p>This level of detail makes my job as an editor both easier and harder. It's easier because the source material is high-quality, but harder because I have to be extremely careful not to hide the details during the upscale and color grading process. Marin is a character who deserves the highest resolution possible to appreciate the work that went into her design. She is a modern animation masterpiece that defines the "Rom-Com" aesthetic of the 2020s.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/5.jpg" alt="Marin Kitagawa Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/1.jpg" alt="Marin Kitagawa Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>The "Golden Hour" Color Grade: Capturing the Gyaru Spirit</h2>
@@ -2671,10 +2671,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/8.jpg" alt="Marin Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/2.jpg" alt="Marin Smile" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/9.jpg" alt="Marin Peace" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Marin%20kitagawa/3.jpg" alt="Marin Peace" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2734,10 +2734,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Jujutsu%20Kaisen/1.jpg" alt="Gojo Satoru Art" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Jujutsu%20Kaisen/2.jpg" alt="Gojo Satoru Art" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Jujutsu%20Kaisen/1.jpg" alt="Gojo Satoru 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Jujutsu%20Kaisen/3.jpg" alt="Gojo Satoru 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2781,7 +2781,7 @@ export const blogPosts: BlogPost[] = [
       <p>One of the most chilling and memorable scenes in <em>Oshi no Ko</em> is when Akane Kurokawa perfectly mimics the late idol Ai Hoshino. The animation shifts, the sound drops out, and her eyes change into those iconic, haunting "Star Eyes." That specific moment of transformation is what I tried to capture in this collection. It's the moment a quiet, hardworking girl becomes a superstar through sheer force of will, analytical research, and acting genius. As an editor, capturing that "aura" and making it feel as intense as the show is the ultimate challenge. Akane is a character of incredible depth, and her wallpapers should reflect that complexity. She isn't just acting; she's becoming someone else entirely. It's about the thin line between reality and fiction. It's about the cost of talent.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Akane%20Kurokawa/6.jpg" alt="Akane Kurokawa Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Akane%20Kurokawa/1.jpg" alt="Akane Kurokawa Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>Color Theory: The Intellectual Blue vs. The Idol Gaze in Digital Art</h2>
@@ -2792,7 +2792,7 @@ export const blogPosts: BlogPost[] = [
           <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Akane%20Kurokawa/2.jpg" alt="Akane Star Eyes" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Akane%20Kurokawa/4.jpg" alt="Akane Blue 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Akane%20Kurokawa/3.jpg" alt="Akane Blue 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2826,10 +2826,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chisato%20Nishikigi/1.jpg" alt="Chisato Dodge" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chisato%20Nishikigi/2.jpg" alt="Chisato Dodge" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chisato%20Nishikigi/2.jpg" alt="Chisato Combat" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chisato%20Nishikigi/3.jpg" alt="Chisato Combat" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2859,10 +2859,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chainsaw%20Man/1.webp" alt="Denji 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chainsaw%20Man/2.webp" alt="Denji 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chainsaw%20Man/1.webp" alt="Power 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Chainsaw%20Man/3.webp" alt="Power 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2882,7 +2882,7 @@ export const blogPosts: BlogPost[] = [
       <p>Alya sometimes hides her true feelings in Russian, but her beauty needs no translation in any language. Doga Kobo did an absolutely amazing job adapting the light novel art style for the anime, giving her silver hair a shimmering, almost translucent and crystalline quality that is rare in modern TV anime. She has become the new gold standard for "Waifu" character designs, and editing her frames is like working with a piece of fine jewelry. Every detail is refined, from her perfectly tied ribbons to her expressive blue eyes that reflect the world around her. She is the definition of "pristine," and my job is to make sure she stays that way in 4K. She represents the peak of high-end romance animation. She is the silver star of the season and a joy to edit.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/10.jpg" alt="Alya Wallpaper" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/1.jpg" alt="Alya Wallpaper" class="object-cover w-full h-full" />
       </div>
 
       <h2>Editing for Softness: The Angelic Aesthetic and Bloom Effects in Photoshop Masterclass</h2>
@@ -2892,10 +2892,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/1.jpg" alt="Alya Close" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/2.jpg" alt="Alya Close" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/2.jpg" alt="Alya Smile" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/3.jpg" alt="Alya Smile" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2927,10 +2927,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Spider-Man/1.webp" alt="Gwen Stacy 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Spider-Man/2.webp" alt="Gwen Stacy 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Spider-Man/1.webp" alt="Miguel O'Hara 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Spider-Man/3.webp" alt="Miguel O'Hara 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2958,14 +2958,14 @@ export const blogPosts: BlogPost[] = [
       <p>Demon Slayer is world-famous for its incredible "Ukiyoe" (traditional Japanese woodblock print) style effects. The water dragons, the swirling fire trails, and the thunderous lightning are visually distinct from the 3D environments, creating a unique composite look that has become the show's trademark. When Tanjiro swings his sword, it's not just a blur; it's a painting in motion. Our 4K collection captures this intensity in every frame.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_20px_rgba(96,165,250,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/1.jpg" alt="Tanjiro Water Breathing 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/1.jpg" alt="Tanjiro Water Breathing 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>1. The Fluidity of Water Breathing</h2>
       <p>Water breathing frames are all about the contrast between the deep blue water and the crisp white foam. In our 4K upscales, we pay special attention to the texture of the "foam" lines. By using a selective sharpening mask, we make the ink-like outlines of the waves pop against the background, giving the wallpaper a tangible, printed feel that looks incredible on high-resolution smartphone screens.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/2.jpg" alt="Giyu Tomioka 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/2.jpg" alt="Giyu Tomioka 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>2. The Intensity of Sun Breathing (Hinokami Kagura)</h2>
@@ -2973,10 +2973,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/3.jpg" alt="Tanjiro Sun Breathing" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/3.jpg" alt="Tanjiro Sun Breathing" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/4.jpg" alt="Nezuko Kamado 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/4.jpg" alt="Nezuko Kamado 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -2984,7 +2984,7 @@ export const blogPosts: BlogPost[] = [
       <p>Zenitsu's Thunder Breathing is defined by sharp, jagged lines and electric yellow highlights. For these edits, we use <strong>Chromatic Aberration</strong>—slightly shifting the color channels—to simulate the vibrating air and the extreme speed of the "God Speed" attack. This adds a sense of kinetic energy to a static 4K image.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-yellow-400/50 shadow-[0_0_20px_rgba(250,204,21,0.3)]">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/5.jpg" alt="Zenitsu Thunder Breathing 4K" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/5.jpg" alt="Zenitsu Thunder Breathing 4K" class="object-cover w-full h-full" />
       </div>
 
       <h2>4. The Hashira: Legends in High Fidelity</h2>
@@ -2992,10 +2992,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/6.jpg" alt="Rengoku Kyojuro 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/6.jpg" alt="Rengoku Kyojuro 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon%20Slayer/7.jpg" alt="Shinobu Kocho 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Demon Slayer/7.jpg" alt="Shinobu Kocho 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -3038,10 +3038,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Blue%20Lock/1.jpg" alt="Bachira 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Blue%20Lock/2.jpg" alt="Bachira 4K" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Blue%20Lock/1.jpg" alt="Nagi 4K" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Blue%20Lock/3.jpg" alt="Nagi 4K" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -3130,10 +3130,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nature/1.webp" alt="Nature 4K Scene" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nature/2.webp" alt="Nature 4K Scene" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nature/1.webp" alt="Nature 4K Art" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Nature/3.webp" alt="Nature 4K Art" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -3185,10 +3185,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-200 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/1.jpg" alt="Sketchbook Monochrome" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/2.jpg" alt="Sketchbook Monochrome" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-200 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/1.jpg" alt="Sketchbook Wink" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Tenka%20Izumo/3.jpg" alt="Sketchbook Wink" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -3412,10 +3412,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/44.jpg" alt="Official Media 1" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/2.jpg" alt="Official Media 1" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/37.jpg" alt="Official Media 2" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/3.jpg" alt="Official Media 2" class="object-cover w-full h-full" />
         </div>
       </div>
 
@@ -3432,7 +3432,7 @@ export const blogPosts: BlogPost[] = [
       <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
-        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/24.jpg" alt="Community Respect" class="object-cover w-full h-full" />
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/4.jpg" alt="Community Respect" class="object-cover w-full h-full" />
       </div>
 
       <h2>Conclusion</h2>
@@ -3536,10 +3536,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kana%20Arima/1.jpg" alt="Kana Idol" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kana%20Arima/2.jpg" alt="Kana Idol" class="object-cover w-full h-full" />
         </div>
         <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
-          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kana%20Arima/1.jpg" alt="Kana Emotion" class="object-cover w-full h-full" />
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Kana%20Arima/3.jpg" alt="Kana Emotion" class="object-cover w-full h-full" />
         </div>
       </div>
 
