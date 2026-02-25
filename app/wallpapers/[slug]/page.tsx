@@ -111,13 +111,24 @@ export default async function CharacterWallpapersPage({ params }: Props) {
               className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(255,42,109,0.3)]"
             >
               <div className="aspect-[9/16] relative overflow-hidden">
-                <Image 
-                  src={url}
-                  alt={`${name} 4K Wallpaper - ${index + 1} | Only_dias Ocean`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  unoptimized
-                />
+                {url.match(/\.(mp4|webm|mov)/i) ? (
+                  <video
+                    src={url}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                  />
+                ) : (
+                  <Image 
+                    src={url}
+                    alt={`${name} 4K Wallpaper - ${index + 1} | Only_dias Ocean`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
+                  />
+                )}
                 
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a 
