@@ -64,12 +64,12 @@ export default function Navbar() {
           >
             ICONS PFPS
           </a>
-          <button 
-            onClick={() => handleSoonClick("Desktop Wallpapers")}
+          <Link
+            href="/wallpapers/desktop-wallpapers"
             className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left"
           >
             Desktop Wallpapers
-          </button>
+          </Link>
           <Link
             href="/blog"
             className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
@@ -131,12 +131,13 @@ export default function Navbar() {
             >
               ICONS PFPS
             </a>
-            <button 
-              onClick={() => handleSoonClick("Desktop Wallpapers")}
+            <Link
+              href="/wallpapers/desktop-wallpapers"
+              onClick={() => setShowMobileMenu(false)}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
               Desktop Wallpapers
-            </button>
+            </Link>
             <Link
               href="/blog"
               onClick={() => setShowMobileMenu(false)}
