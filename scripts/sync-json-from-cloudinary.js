@@ -15,7 +15,7 @@ cloudinary.config({
 const OUTPUT_FILE = path.join(__dirname, '..', 'app', 'data', 'wallpapers.json');
 
 const SPECIAL_CATEGORIES = [
-  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel', 'Nature', 'Spider-Man'
+  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel', 'Nature', 'Spider-Man', 'Desktop Wallpapers'
 ];
 
 const NAME_MAPPING = {
@@ -53,7 +53,8 @@ const NAME_MAPPING = {
   'spider-man': 'Spider-Man',
   'Rin  Nanakura': 'Rin Nanakura',
   'Rias  Gremory': 'Rias Gremory',
-  'phoebe': 'Phoebe'
+  'phoebe': 'Phoebe',
+  'Desktop': 'Desktop Wallpapers'
 };
 
 async function fetchResources(resourceType) {

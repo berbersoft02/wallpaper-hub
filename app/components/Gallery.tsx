@@ -31,6 +31,7 @@ function GalleryContent() {
   const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
   const [characters, setCharacters] = useState<string[]>([]);
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
+  const [desktopCollections, setDesktopCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(10);
   const [showRecommendationModal, setShowRecommendationModal] = useState(false);
@@ -62,6 +63,7 @@ function GalleryContent() {
           const allWallpapers: Wallpaper[] = [];
           const animeNames: string[] = [];
           const specialNames: string[] = [];
+          const desktopNames: string[] = [];
 
           // Separate characters
           const priorityNames = [
@@ -77,7 +79,9 @@ function GalleryContent() {
 
           // 1. Process standard characters normally
           otherChars.forEach((char: CharacterData) => {
-            if (char.category === 'Special') {
+            if (char.name === 'Desktop Wallpapers') {
+              desktopNames.push(char.name);
+            } else if (char.category === 'Special') {
               specialNames.push(char.name);
             } else {
               animeNames.push(char.name);
@@ -165,6 +169,7 @@ function GalleryContent() {
           }
 
           setWallpapers(allWallpapers);
+          setDesktopCollections(desktopNames);
           setSpecialCollections(Array.from(new Set(specialNames)).sort());
           setCharacters(Array.from(new Set(animeNames)).sort());
           setError(null);
@@ -353,6 +358,38 @@ function GalleryContent() {
 
         <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
           
+          {/* --- Desktop Wallpapers Section (Dedicated) --- */}
+          {desktopCollections.length > 0 && (
+             <div className="w-full max-w-6xl">
+               <h3 className="text-white font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                 🖥️ DESKTOP COLLECTIONS
+               </h3>
+               <div className="flex justify-center">
+                  {desktopCollections.map((char) => (
+                    <button
+                      key={char}
+                      onClick={() => setFilter(char)}
+                      className={`relative group overflow-hidden px-10 py-5 rounded-2xl transition-all duration-300 border-2 backdrop-blur-xl ${
+                        filter === char 
+                          ? "bg-white text-dark-bg border-white shadow-[0_0_30px_rgba(255,255,255,0.6)] scale-110" 
+                          : "bg-white/5 border-white/20 text-white hover:border-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                      }`}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                      <div className="flex items-center gap-4 relative z-10">
+                        <span className="font-pixel uppercase tracking-widest text-lg">
+                          {char}
+                        </span>
+                        <span className={`text-sm px-3 py-1 rounded-lg ${filter === char ? "bg-dark-bg text-white" : "bg-white/10 text-gray-300"}`}>
+                          {getCount(char)}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+               </div>
+             </div>
+          )}
+
           {filter !== "All" && CHARACTER_GUIDE_MAP[filter] && (
             <div className="w-full max-w-4xl bg-card-bg/80 border-2 border-neon-cyan/50 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_32px_rgba(5,217,232,0.2)] animate-slide-up">
               <div className="text-center md:text-left">
