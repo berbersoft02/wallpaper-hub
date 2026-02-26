@@ -2,6 +2,15 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Anime Art Blog | Editing Tutorials & Story Analysis",
+  description: "Explore in-depth articles about character design, 4K editing tutorials, and visual analysis of your favorite anime series.",
+  alternates: {
+    canonical: '/blog',
+  },
+};
 
 export default function BlogPage() {
   const posts = getAllPosts();

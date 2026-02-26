@@ -1,6 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Only_dias Ocean",
+  description: "Get in touch with Only_dias Ocean for wallpaper requests, business inquiries, or feedback.",
+  alternates: {
+    canonical: '/contact',
+  },
+};
 
 export default function ContactPage() {
   return (

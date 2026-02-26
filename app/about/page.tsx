@@ -1,6 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Only_dias Ocean | Our Journey & Vision",
+  description: "Learn about the vision behind Only_dias Ocean. From TikTok edits to a curated gallery of high-resolution 4K anime wallpapers.",
+  alternates: {
+    canonical: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (
