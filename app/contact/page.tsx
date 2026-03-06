@@ -31,7 +31,6 @@ export default function ContactPage() {
               <h3 className="font-pixel text-2xl text-neon-cyan mb-2">Social Media</h3>
               <div className="flex gap-6 mt-2">
                 <a href="https://x.com/SaidAhrikenchi2" target="_blank" className="hover:text-neon-pink transition-all scale-110">Twitter</a>
-                <a href="https://www.instagram.com/said_ahriken/" target="_blank" className="hover:text-neon-cyan transition-all scale-110">Instagram</a>
                 <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" className="hover:text-white transition-all scale-110">TikTok</a>
               </div>
             </div>

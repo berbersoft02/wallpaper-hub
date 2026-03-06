@@ -1,4 +1,4 @@
-import { Github, Twitter, Instagram } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -47,14 +47,6 @@ export default function Footer() {
              className="text-gray-400 hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]"
            >
              <Twitter size={28} />
-           </a>
-           <a 
-             href="https://www.instagram.com/said_ahriken/" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="text-gray-400 hover:text-neon-cyan transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(5,217,232,0.8)]"
-           >
-             <Instagram size={28} />
            </a>
            <a href="#" className="text-gray-400 hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]"><Github size={28} /></a>
         </div>

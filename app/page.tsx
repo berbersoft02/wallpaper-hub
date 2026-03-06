@@ -215,9 +215,6 @@ export default function Home() {
             <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" title="Twitter">
                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.818 1.61-2 2c0 0-.6-1-1.5-1.5s-2.167-.764-3.5 0-2.053 2.857-2 4 .698 4.292 5 5c2.441.5 5-2 5-2s-1.64 2.357-5 2.5C7 18.5 2 14 2 14S7.5 18 13.5 17c3.505-.652 4.854-4.059 5-7 .033-.705-.019-1.405-.146-2.083C21.076 9.336 22 4 22 4Z"></path></svg>
             </a>
-            <a href="https://www.instagram.com/said_ahriken/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-cyan transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(5,217,232,0.8)]" title="Instagram">
-               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M16.24 7.76a6 6 0 1 1-8.48 8.48 6 6 0 0 1 8.48-8.48z" /><circle cx="17.5" cy="6.5" r=".5"/></svg>
-            </a>
             <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" title="TikTok">
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.8 10.47a5.13 5.13 0 0 1-2.89-.89V15a5 5 0 1 1-5-5 .76.76 0 0 1 .76.76V13a2.25 2.25 0 1 0 2.25 2.25V3.36A8.61 8.61 0 0 0 19 4.62c0 2.79 1.93 5.15 4.59 5.37V10.3a.18.18 0 0 1-.18.17Z"></path></svg>
             </a>
