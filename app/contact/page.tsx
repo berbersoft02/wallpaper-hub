@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { Metadata } from "next";
+import { X, Tiktok } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us | Only_dias Ocean",
@@ -29,9 +30,15 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="flex flex-col items-center p-6 bg-dark-bg/50 rounded-lg border border-gray-700 hover:border-neon-pink transition-all">
               <h3 className="font-pixel text-2xl text-neon-cyan mb-2">Social Media</h3>
-              <div className="flex gap-6 mt-2">
-                <a href="https://x.com/SaidAhrikenchi2" target="_blank" className="hover:text-neon-pink transition-all scale-110">Twitter</a>
-                <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" className="hover:text-white transition-all scale-110">TikTok</a>
+              <div className="flex gap-8 mt-2">
+                <a href="https://x.com/SaidAhrikenchi2" target="_blank" className="flex items-center gap-2 hover:text-neon-pink transition-all scale-110" title="X (Twitter)">
+                  <X size={20} />
+                  <span>Twitter</span>
+                </a>
+                <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" className="flex items-center gap-2 hover:text-white transition-all scale-110" title="TikTok">
+                  <Tiktok size={20} />
+                  <span>TikTok</span>
+                </a>
               </div>
             </div>
           </div>

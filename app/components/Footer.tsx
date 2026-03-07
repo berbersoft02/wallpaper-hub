@@ -1,4 +1,4 @@
-import { Github, Twitter } from "lucide-react";
+import { Github, X, Tiktok } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -45,10 +45,20 @@ export default function Footer() {
              target="_blank" 
              rel="noopener noreferrer"
              className="text-gray-400 hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]"
+             title="X (Twitter)"
            >
-             <Twitter size={28} />
+             <X size={28} />
            </a>
-           <a href="#" className="text-gray-400 hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]"><Github size={28} /></a>
+           <a 
+             href="https://www.tiktok.com/@noxzx_kb" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="text-gray-400 hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]"
+             title="TikTok"
+           >
+             <Tiktok size={28} />
+           </a>
+           <a href="#" className="text-gray-400 hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" title="GitHub"><Github size={28} /></a>
         </div>
 
       </div>
