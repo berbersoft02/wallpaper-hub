@@ -24,6 +24,43 @@ interface CharacterData {
   tags?: string[];
 }
 
+function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...props }: any) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const isVideo = src.match(/\.(mp4|webm)/i);
+
+  if (isVideo) {
+    return (
+      <video
+        src={src}
+        className={`${className} ${isLoaded ? 'pixel-loaded' : 'pixel-loading'}`}
+        muted
+        loop
+        autoPlay
+        playsInline
+        onLoadedData={() => setIsLoaded(true)}
+        {...props}
+      />
+    );
+  }
+
+  return (
+    <div className="relative w-full h-full bg-gray-900 overflow-hidden">
+      {!isLoaded && <div className="absolute inset-0 pixel-placeholder z-0" />}
+      <Image
+        src={src}
+        alt={alt}
+        fill={fill}
+        width={width}
+        height={height}
+        unoptimized={unoptimized}
+        className={`${className} ${isLoaded ? 'pixel-loaded' : 'pixel-loading'}`}
+        onLoad={() => setIsLoaded(true)}
+        {...props}
+      />
+    </div>
+  );
+}
+
 function GalleryContent() {
   const searchParams = useSearchParams();
   const [filter, setFilter] = useState("All");
@@ -102,29 +139,24 @@ function GalleryContent() {
           });
 
           // 2. Process priority characters (Interleaved)
-          // Map priority chars to their data objects
           const priorityDataList = priorityNames
             .map(name => priorityChars.find((c: CharacterData) => c.name === name))
             .filter((c): c is CharacterData => !!c);
 
-          // Add names to filter list
           priorityDataList.forEach(c => {
             if (c.category === 'Special') specialNames.push(c.name);
             else animeNames.push(c.name);
           });
 
-          // Find the max length to iterate
           const maxLength = Math.max(...priorityDataList.map(c => c.wallpapers.length), 0);
 
-          // Iterate backwards (from oldest to newest) to build the stack for the reversed view
           for (let i = maxLength - 1; i >= 0; i--) {
              for (let j = priorityDataList.length - 1; j >= 0; j--) {
                 const char = priorityDataList[j];
                 const wps = char.wallpapers;
                 
-                // Specific Logic for "Mixed": Only prioritize 54, 44, 37, 24
                 if (char.name === "Mixed") {
-                   const priorityIndices = [53, 43, 36, 23]; // 0-based for 54, 44, 37, 24
+                   const priorityIndices = [53, 43, 36, 23];
                    if (priorityIndices.includes(i)) {
                       allWallpapers.push({
                         id: `${char.name}-${i}`,
@@ -151,13 +183,11 @@ function GalleryContent() {
              }
           }
 
-          // 3. Add the rest of the Mixed wallpapers that weren't prioritized
           const mixedChar = priorityDataList.find(c => c.name === "Mixed");
           if (mixedChar) {
             const priorityIndices = [53, 43, 36, 23];
             mixedChar.wallpapers.forEach((url, i) => {
               if (!priorityIndices.includes(i)) {
-                // Add to the START of allWallpapers so they appear AFTER priority ones in reverse
                 allWallpapers.unshift({
                   id: `Mixed-${i}`,
                   url: url,
@@ -195,12 +225,6 @@ function GalleryContent() {
 
   const renderCharacterName = (charName: string) => {
     const formattedName = charName.replace(/-/g, ' ');
-    
-    // Create a slug for the sticker filename: "Alya Kujou ♡" -> "alya-kujou"
-    // 1. Lowercase
-    // 2. Remove emojis/special chars (keep letters, numbers, spaces)
-    // 3. Trim
-    // 4. Replace spaces with hyphens
     const stickerSlug = charName
       .toLowerCase()
       .replace(/[^a-z0-9\s]/g, '') 
@@ -383,7 +407,6 @@ function GalleryContent() {
             </div>
           )}
 
-          {/* --- Special Collections (Premium Cards) --- */}
           {specialCollections.length > 0 && (
              <div className="w-full max-w-6xl">
                <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(5,217,232,0.5)]">
@@ -415,14 +438,12 @@ function GalleryContent() {
              </div>
           )}
 
-          {/* --- Character Library (Sleek Tags) --- */}
           <div className="w-full max-w-6xl">
             <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
               Anime CHARACTER Archive
             </h3>
             
             <div className="flex flex-wrap justify-center gap-3">
-              {/* 'All' Button */}
               <button
                 onClick={() => {
                   setFilter("All");
@@ -437,7 +458,6 @@ function GalleryContent() {
                 ALL <span className="ml-2 opacity-60 text-xs">{everything.length}</span>
               </button>
 
-              {/* Character Buttons */}
               {characters.map((char) => (
                 <button
                   key={char}
@@ -486,24 +506,13 @@ function GalleryContent() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-neon-pink/20 via-transparent to-neon-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                 <div className="aspect-[9/16] relative overflow-hidden">
-                   {wp.url.match(/\.(mp4|webm)/i) ? (
-                     <video
-                       src={wp.url}
-                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                       muted
-                       loop
-                       autoPlay
-                       playsInline
-                     />
-                   ) : (
-                   <Image 
+                   <PixelImage 
                       src={wp.url} 
                       alt={wp.title} 
                       fill 
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                       unoptimized
                    />
-                   )}
                    
                    <button 
                      onClick={(e) => {
@@ -595,21 +604,16 @@ function GalleryContent() {
             className="relative max-w-full max-h-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {finalDisplay[selectedImageIndex].url.match(/\.(mp4|webm)/i) ? (
-              <video
-                src={finalDisplay[selectedImageIndex].url}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                controls
-                autoPlay
-                loop
+            <div className="relative max-w-full max-h-[80vh] overflow-hidden rounded-lg shadow-2xl">
+              <PixelImage 
+                src={finalDisplay[selectedImageIndex].url} 
+                alt={finalDisplay[selectedImageIndex].title}
+                className="max-w-full max-h-[80vh] object-contain"
+                width={1200}
+                height={1600}
+                unoptimized
               />
-            ) : (
-            <img 
-              src={finalDisplay[selectedImageIndex].url} 
-              alt={finalDisplay[selectedImageIndex].title}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-            />
-            )}
+            </div>
             
             <div className="mt-4 bg-black/70 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-4">
               <h3 className="font-pixel text-xl text-white">{finalDisplay[selectedImageIndex].title}</h3>

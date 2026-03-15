@@ -1,6 +1,8 @@
 "use client";
 
-import { ArrowDown, Gamepad2 } from "lucide-react";
+import { useRef } from "react";
+import { Gamepad2 } from "lucide-react";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import DraggableIcon from "./DraggableIcon";
 
 // Define all floating icons with their properties
@@ -75,8 +77,70 @@ const floatingIcons = [
 ];
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Mouse position tracking
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth springs for parallax layers
+  const springConfig = { damping: 30, stiffness: 200 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
+
+  // Background layers transforms (different speeds)
+  const gridX = useTransform(smoothX, [-0.5, 0.5], ["-5%", "5%"]);
+  const gridY = useTransform(smoothY, [-0.5, 0.5], ["-5%", "5%"]);
+  
+  const glowX = useTransform(smoothX, [-0.5, 0.5], ["-10%", "10%"]);
+  const glowY = useTransform(smoothY, [-0.5, 0.5], ["-10%", "10%"]);
+
+  const textX = useTransform(smoothX, [-0.5, 0.5], ["-2%", "2%"]);
+  const textY = useTransform(smoothY, [-0.5, 0.5], ["-2%", "2%"]);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    const { width, height, left, top } = containerRef.current.getBoundingClientRect();
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+    <section 
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden"
+    >
+      {/* --- PARALLAX BACKGROUND LAYERS --- */}
+      
+      {/* 1. Deep Grid Layer */}
+      <motion.div 
+        style={{ x: gridX, y: gridY, scale: 1.1 }}
+        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+      >
+        <div className="absolute inset-0" style={{ 
+          backgroundImage: "linear-gradient(to right, #05d9e8 1px, transparent 1px), linear-gradient(to bottom, #05d9e8 1px, transparent 1px)",
+          backgroundSize: "60px 60px"
+        }} />
+      </motion.div>
+
+      {/* 2. Floating Radial Glows */}
+      <motion.div 
+        style={{ x: glowX, y: glowY, scale: 1.2 }}
+        className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
+      >
+        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-neon-pink/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-neon-cyan/10 blur-[120px] rounded-full" />
+      </motion.div>
+
       {/* Draggable Floating Icons */}
       {floatingIcons.map((icon, index) => (
         <DraggableIcon
@@ -103,7 +167,10 @@ export default function Hero() {
         <Gamepad2 size={80} />
       </div>
 
-      <div className="relative z-10 max-w-4xl space-y-6">
+      <motion.div 
+        style={{ x: textX, y: textY }}
+        className="relative z-10 max-w-4xl space-y-6"
+      >
         <div className="inline-block bg-neon-purple/30 px-6 py-2 rounded-full border-2 border-neon-purple mb-4 shadow-[0_0_20px_rgba(211,0,197,0.5)] animate-fade-in">
           <span className="font-pixel text-neon-pink text-sm md:text-base drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]">✨ WELCOME TO MY WORLD</span>
         </div>
@@ -120,16 +187,26 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
-          <a href="#gallery" className="group relative px-8 py-4 bg-neon-pink font-pixel text-xl text-white overflow-hidden transition-all hover:scale-110 shadow-[0_0_32px_rgba(255,42,109,0.6)] hover:shadow-[0_0_48px_rgba(255,42,109,0.9)] rounded-lg border-2 border-neon-pink/50">
+          <a 
+            href="#gallery" 
+            data-text="BROWSE GALLERY"
+            className="group hover-glitch relative px-8 py-4 bg-neon-pink font-pixel text-xl text-white overflow-hidden transition-all hover:scale-110 shadow-[0_0_32px_rgba(255,42,109,0.6)] hover:shadow-[0_0_48px_rgba(255,42,109,0.9)] rounded-lg border-2 border-neon-pink/50"
+          >
             <span className="relative z-10 group-hover:tracking-wider transition-all">BROWSE GALLERY</span>
             <div className="absolute inset-0 h-full w-full bg-neon-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
           </a>
           
-          <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-white font-pixel text-xl text-white hover:bg-white hover:text-dark-bg transition-all hover:scale-110 shadow-[0_0_24px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] rounded-lg">
+          <a 
+            href="https://www.tiktok.com/@noxzx_kb" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            data-text="TIKTOK CHANNEL"
+            className="hover-glitch px-8 py-4 border-2 border-white font-pixel text-xl text-white hover:bg-white hover:text-dark-bg transition-all hover:scale-110 shadow-[0_0_24px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] rounded-lg"
+          >
              TIKTOK CHANNEL
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
