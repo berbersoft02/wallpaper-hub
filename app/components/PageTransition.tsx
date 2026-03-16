@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const glitchVariants = {
+const glitchVariants: Variants = {
   initial: { 
     opacity: 0, 
     x: -20,
