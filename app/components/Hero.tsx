@@ -119,6 +119,9 @@ export default function Hero() {
       onMouseLeave={handleMouseLeave}
       className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden"
     >
+      {/* Interactive WebGL Particles Layer */}
+      <ParticlesBackground />
+
       {/* --- PARALLAX BACKGROUND LAYERS --- */}
       
       {/* 1. Deep Grid Layer */}
