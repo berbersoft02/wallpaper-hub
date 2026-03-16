@@ -34,7 +34,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-neon-cyan/30 shadow-[0_0_32px_rgba(5,217,232,0.2)]">
-              <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1769685652/1_ytpmf9.webp" alt="Aesthetic Scenery" className="object-cover w-full h-full" />
+              <Image src="/4.png" alt="Aesthetic Scenery" fill className="object-cover w-full h-full" unoptimized />
             </div>
           </section>
 
