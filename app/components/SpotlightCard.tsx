@@ -82,7 +82,7 @@ export default function SpotlightCard({
       />
       
       {/* Content */}
-      <div style={{ transform: "translateZ(20px)" }} className="relative z-10 pointer-events-none">
+      <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
         {children}
       </div>
     </motion.div>

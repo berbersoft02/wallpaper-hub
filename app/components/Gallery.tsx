@@ -336,145 +336,148 @@ function GalleryContent() {
   const lightboxTitles = useMemo(() => finalDisplay.map(w => w.title), [finalDisplay]);
 
   return (
-    <section id="gallery" className="py-20 px-4 md:px-12 bg-dark-bg/50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan/3 to-transparent"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="font-pixel text-4xl md:text-5xl text-center mb-12 text-neon-cyan drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">
-          <span className="text-white">LATEST</span> DROPS
-        </h2>
+    <>
+      <section id="gallery" className="py-20 px-4 md:px-12 bg-dark-bg/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan/3 to-transparent"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="font-pixel text-4xl md:text-5xl text-center mb-12 text-neon-cyan drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">
+            <span className="text-white">LATEST</span> DROPS
+          </h2>
 
-        <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
-          {/* Filter buttons and recommendation button logic remains the same */}
-          <div className="w-full max-w-6xl">
-            <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
-              Anime CHARACTER Archive
-            </h3>
-            
-            <div className="flex flex-wrap justify-center gap-3">
-              <button
-                onClick={() => {
-                  setFilter("All");
-                  setDisplayCount(10);
-                }}
-                className={`px-6 py-2 rounded-full font-pixel text-sm transition-all duration-300 border ${
-                  filter === "All" 
-                    ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_15px_rgba(255,42,109,0.5)] scale-105" 
-                    : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-pink/50 hover:text-white hover:bg-neon-pink/10"
-                }`}
-              >
-                ALL <span className="ml-2 opacity-60 text-xs">{everything.length}</span>
-              </button>
-
-              {characters.map((char) => (
+          <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
+            {/* Filter buttons and recommendation button logic remains the same */}
+            <div className="w-full max-w-6xl">
+              <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
+                Anime CHARACTER Archive
+              </h3>
+              
+              <div className="flex flex-wrap justify-center gap-3">
                 <button
-                  key={char}
-                  onClick={() => setFilter(char)}
-                  className={`px-5 py-2 rounded-full transition-all duration-300 border flex items-center gap-2 ${
-                    filter === char 
-                      ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" 
-                      : "bg-dark-bg/30 border-gray-800 text-gray-400 hover:border-neon-cyan/50 hover:text-neon-cyan hover:bg-neon-cyan/5"
+                  onClick={() => {
+                    setFilter("All");
+                    setDisplayCount(10);
+                  }}
+                  className={`px-6 py-2 rounded-full font-pixel text-sm transition-all duration-300 border ${
+                    filter === "All" 
+                      ? "bg-neon-pink border-neon-pink text-white shadow-[0_0_15px_rgba(255,42,109,0.5)] scale-105" 
+                      : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-pink/50 hover:text-white hover:bg-neon-pink/10"
                   }`}
                 >
-                  <span className="font-mono text-sm capitalize">{renderCharacterName(char)}</span>
-                  <span className="text-[10px] opacity-50 bg-black/30 px-1.5 py-0.5 rounded-md">{getCount(char)}</span>
+                  ALL <span className="ml-2 opacity-60 text-xs">{everything.length}</span>
                 </button>
-              ))}
+
+                {characters.map((char) => (
+                  <button
+                    key={char}
+                    onClick={() => setFilter(char)}
+                    className={`px-5 py-2 rounded-full transition-all duration-300 border flex items-center gap-2 ${
+                      filter === char 
+                        ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" 
+                        : "bg-dark-bg/30 border-gray-800 text-gray-400 hover:border-neon-cyan/50 hover:text-neon-cyan hover:bg-neon-cyan/5"
+                    }`}
+                  >
+                    <span className="font-mono text-sm capitalize">{renderCharacterName(char)}</span>
+                    <span className="text-[10px] opacity-50 bg-black/30 px-1.5 py-0.5 rounded-md">{getCount(char)}</span>
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <button
-            onClick={() => setShowRecommendationModal(true)}
-            className="mt-4 font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
-          >
-            Send Recommendation
-          </button>
-        </div>
-
-        {loading ? (
-          <div className="flex flex-col items-center justify-center py-20">
-            <div className="font-pixel text-2xl text-neon-cyan animate-pulse">
-              Loading wallpapers...
-            </div>
-          </div>
-        ) : error ? (
-          <div className="text-center text-red-500 font-pixel text-xl">{error}</div>
-        ) : finalDisplay.length === 0 ? (
-          <div className="text-center py-20 font-pixel text-xl text-gray-400">
-            No wallpapers found.
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {finalDisplay.map((wp, index) => (
-              <SpotlightCard 
-                key={wp.id} 
-                className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(255,42,109,0.5)] hover:-translate-y-2 hover:rotate-1 cursor-pointer"
-                onClick={() => setSelectedImageIndex(index)}
-                spotlightColor="rgba(255, 42, 109, 0.2)"
-              >
-                <div className="aspect-[9/16] relative overflow-hidden pointer-events-none">
-                   <PixelImage 
-                      src={wp.url} 
-                      alt={wp.title} 
-                      fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      unoptimized
-                   />
-                </div>
-                
-                <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <button 
-                     onClick={(e) => {
-                       e.stopPropagation();
-                       handleDownload(wp.url, wp.title);
-                     }}
-                     className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:scale-110 hover:bg-neon-cyan transition-all"
-                   >
-                     <Download size={24} />
-                   </button>
-                </div>
-
-                <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90 backdrop-blur-sm pointer-events-none">
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate">{wp.title}</h3>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">
-                        {renderCharacterName(wp.character)}
-                      </span>
-                    </div>
-                  </div>
-                  <Heart size={20} className="text-gray-500" />
-                </div>
-              </SpotlightCard>
-            ))}
-          </div>
-        )}
-
-        {!loading && filter === "All" && hasMore && (
-          <div className="flex justify-center mt-12">
             <button
-              onClick={() => setDisplayCount(prev => prev + 10)}
-              className="font-pixel px-8 py-4 bg-neon-cyan hover:bg-neon-cyan/80 text-dark-bg text-xl rounded-lg border-2 border-neon-cyan transition-all hover:scale-105 shadow-[0_0_24px_rgba(5,217,232,0.6)]"
+              onClick={() => setShowRecommendationModal(true)}
+              className="mt-4 font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
             >
-              More
+              Send Recommendation
             </button>
           </div>
-        )}
-      </div>
+
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-20">
+              <div className="font-pixel text-2xl text-neon-cyan animate-pulse">
+                Loading wallpapers...
+              </div>
+            </div>
+          ) : error ? (
+            <div className="text-center text-red-500 font-pixel text-xl">{error}</div>
+          ) : finalDisplay.length === 0 ? (
+            <div className="text-center py-20 font-pixel text-xl text-gray-400">
+              No wallpapers found.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {finalDisplay.map((wp, index) => (
+                <SpotlightCard 
+                  key={wp.id} 
+                  className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(255,42,109,0.5)] hover:-translate-y-2 hover:rotate-1 cursor-pointer"
+                  onClick={() => setSelectedImageIndex(index)}
+                  spotlightColor="rgba(255, 42, 109, 0.2)"
+                >
+                  <div className="aspect-[9/16] relative overflow-hidden">
+                     <PixelImage 
+                        src={wp.url} 
+                        alt={wp.title} 
+                        fill 
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        unoptimized
+                     />
+                  </div>
+                  
+                  <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                     <button 
+                       onClick={(e) => {
+                         e.stopPropagation();
+                         handleDownload(wp.url, wp.title);
+                       }}
+                       className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:scale-110 hover:bg-neon-cyan transition-all"
+                     >
+                       <Download size={24} />
+                     </button>
+                  </div>
+
+                  <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90 backdrop-blur-sm">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-pixel text-lg text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] truncate">{wp.title}</h3>
+                      <div className="flex flex-col gap-1">
+                        <span className="text-xs text-gray-400 font-mono uppercase tracking-wider">
+                          {renderCharacterName(wp.character)}
+                        </span>
+                      </div>
+                    </div>
+                    <Heart size={20} className="text-gray-500" />
+                  </div>
+                </SpotlightCard>
+              ))}
+            </div>
+          )}
+
+          {!loading && filter === "All" && hasMore && (
+            <div className="flex justify-center mt-12">
+              <button
+                onClick={() => setDisplayCount(prev => prev + 10)}
+                className="font-pixel px-8 py-4 bg-neon-cyan hover:bg-neon-cyan/80 text-dark-bg text-xl rounded-lg border-2 border-neon-cyan transition-all hover:scale-105 shadow-[0_0_24px_rgba(5,217,232,0.6)]"
+              >
+                More
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
 
       {selectedImageIndex !== null && (
         <Lightbox 
-          images={lightboxImages}
-          titles={lightboxTitles}
-          selectedIndex={selectedImageIndex}
-          onClose={() => setSelectedImageIndex(null)}
-          onPrev={() => setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : finalDisplay.length - 1)}
-          onNext={() => setSelectedImageIndex(prev => prev! < finalDisplay.length - 1 ? prev! + 1 : 0)}
-          onDownload={handleDownload}
+        images={lightboxImages}
+        titles={lightboxTitles}
+        selectedIndex={selectedImageIndex}
+        onClose={() => setSelectedImageIndex(null)}
+        onPrev={() => setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : finalDisplay.length - 1)}
+        onNext={() => setSelectedImageIndex(prev => prev! < finalDisplay.length - 1 ? prev! + 1 : 0)}
+        onDownload={handleDownload}
         />
-      )}
+        )}
 
-      {/* Success and Recommendation modals remain here */}
+        {/* Success and Recommendation modals remain here */}
+
       {showDownloadSuccessModal && (
         <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4" onClick={() => setShowDownloadSuccessModal(false)}>
           <div className="bg-card-bg border-4 border-neon-pink p-8 max-w-md w-full rounded-lg text-center" onClick={e => e.stopPropagation()}>
@@ -511,7 +514,7 @@ function GalleryContent() {
            </div>
         </div>
       )}
-    </section>
+    </>
   );
 }
 
