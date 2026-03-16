@@ -554,5 +554,5 @@ body {
 }
 
 a, button, [role="button"], .cursor-pointer, .group {
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiPjxwYXRoIGQ9Ik0zIDNsMTEgMTEtNC41IDBMMTMgMTlsLTMgMS41LTMuNS01LTMgM1Yz拦iLz48L3N2Zz4='), pointer !important;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiPjxwYXRoIGQ9Ik0zIDNsMTEgMTEtNC41IDBMMTMgMTlsLTMgMS41LTMuNS01LTMgM1YzWiIvPjwvc3ZnPg=='), pointer !important;
 }

@@ -12,6 +12,7 @@ export default function SpotlightCard({
   children, 
   className = "", 
   spotlightColor = "rgba(5, 217, 232, 0.15)", // Default Neon Cyan transparency
+  onClick,
   ...props 
 }: SpotlightCardProps) {
   const divRef = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ export default function SpotlightCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={props.onClick}
+      onClick={onClick}
       style={{
         rotateX,
         rotateY,
@@ -81,7 +82,7 @@ export default function SpotlightCard({
       />
       
       {/* Content */}
-      <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
+      <div style={{ transform: "translateZ(20px)" }} className="relative z-10 pointer-events-none">
         {children}
       </div>
     </motion.div>
