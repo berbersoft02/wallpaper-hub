@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useCallback, Suspense, useMemo } from "react";
 import SpotlightCard from "./SpotlightCard";
@@ -65,6 +65,7 @@ function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...
 function GalleryContent() {
   const searchParams = useSearchParams();
   const [filter, setFilter] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
   const [characters, setCharacters] = useState<string[]>([]);
@@ -222,7 +223,7 @@ function GalleryContent() {
 
   useEffect(() => {
     setDisplayCount(10);
-  }, [filter]);
+  }, [filter, searchQuery]);
 
   const renderCharacterName = (charName: string) => {
     const formattedName = charName.replace(/-/g, ' ');
@@ -248,12 +249,37 @@ function GalleryContent() {
   const everything = useMemo(() => [...wallpapers].reverse(), [wallpapers]);
 
   const finalDisplay = useMemo(() => {
-    return filter === "All" 
-      ? everything.slice(0, displayCount)
+    let filtered = filter === "All" 
+      ? everything
       : wallpapers.filter(w => w.character === filter).reverse();
-  }, [filter, everything, wallpapers, displayCount]);
+      
+    if (searchQuery.trim() !== "") {
+      const lowerQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter(w => 
+        w.character.toLowerCase().includes(lowerQuery) || 
+        w.category.toLowerCase().includes(lowerQuery) ||
+        (w.tags && w.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
+      );
+    }
+    
+    return filtered.slice(0, displayCount);
+  }, [filter, everything, wallpapers, displayCount, searchQuery]);
 
-  const hasMore = filter === "All" && displayCount < everything.length;
+  const hasMore = useMemo(() => {
+    let filtered = filter === "All" 
+      ? everything
+      : wallpapers.filter(w => w.character === filter).reverse();
+      
+    if (searchQuery.trim() !== "") {
+      const lowerQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter(w => 
+        w.character.toLowerCase().includes(lowerQuery) || 
+        w.category.toLowerCase().includes(lowerQuery) ||
+        (w.tags && w.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
+      );
+    }
+    return displayCount < filtered.length;
+  }, [filter, everything, wallpapers, displayCount, searchQuery]);
 
   const getCount = (charName: string) => wallpapers.filter(w => w.character === charName).length;
 
@@ -347,6 +373,28 @@ function GalleryContent() {
 
           <div className="flex flex-col items-center gap-10 mb-16 animate-fade-in">
             {/* Filter buttons and recommendation button logic remains the same */}
+
+            {/* --- TERMINAL SEARCH BAR --- */}
+            <div className="w-full max-w-3xl relative group mt-4">
+              <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative flex items-center bg-black/80 border border-gray-700 rounded-xl px-4 py-3 ring-1 ring-white/10 focus-within:ring-neon-cyan transition-all">
+                <Terminal className="text-neon-cyan mr-3 animate-pulse" size={24} />
+                <span className="text-neon-pink font-mono mr-2 text-lg">{">"}</span>
+                <input 
+                  type="text"
+                  placeholder="search: character, tag, or category..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-transparent text-white font-mono placeholder-gray-600 focus:outline-none text-lg"
+                />
+                {searchQuery && (
+                  <button onClick={() => setSearchQuery("")} className="text-gray-400 hover:text-neon-pink transition-colors ml-2">
+                    <X size={20} />
+                  </button>
+                )}
+              </div>
+            </div>
+
             <div className="w-full max-w-6xl">
               <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
                 Anime CHARACTER Archive
