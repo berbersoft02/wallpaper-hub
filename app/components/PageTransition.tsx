@@ -16,6 +16,9 @@ const glitchVariants: Variants = {
     transition: {
       duration: 0.4,
       ease: "easeOut",
+    },
+    transitionEnd: {
+      filter: "none"
     }
   },
   exit: { 

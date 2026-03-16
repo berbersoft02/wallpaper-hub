@@ -45,7 +45,7 @@ export default function Lightbox({
 
   return (
     <div 
-      className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4"
+      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl"
       onClick={onClose}
     >
       <button
@@ -70,28 +70,32 @@ export default function Lightbox({
       </button>
       
       <div 
-        className="relative max-w-full max-h-full flex flex-col items-center justify-center"
+        className="relative flex flex-col items-center justify-center w-full h-full p-4 md:p-12"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative flex items-center justify-center h-[80vh] w-full px-4 md:px-12">
+        {/* Image Container */}
+        <div className="flex-1 w-full min-h-0 flex items-center justify-center overflow-hidden">
           {isVideo ? (
             <video
+              key={currentUrl}
               src={currentUrl}
-              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+              className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg shadow-2xl"
               controls
               autoPlay
               loop
             />
           ) : (
             <img 
+              key={currentUrl}
               src={currentUrl} 
               alt={currentTitle}
-              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+              className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg shadow-2xl drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             />
           )}
         </div>
         
-        <div className="mt-6 bg-black/70 backdrop-blur-md px-8 py-4 rounded-full flex items-center gap-6 border border-white/10">
+        {/* Title & Download Button */}
+        <div className="mt-6 shrink-0 bg-black/70 backdrop-blur-md px-8 py-4 rounded-full flex items-center gap-6 border border-white/10 z-10">
           <h3 className="font-pixel text-xl text-white tracking-widest">{currentTitle}</h3>
           <button
             onClick={() => onDownload(currentUrl, currentTitle)}
