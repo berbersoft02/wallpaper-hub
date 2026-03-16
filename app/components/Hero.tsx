@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Gamepad2 } from "lucide-react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import DraggableIcon from "./DraggableIcon";
+import ParticlesBackground from "./ParticlesBackground";
 
 // Define all floating icons with their properties
 const floatingIcons = [
