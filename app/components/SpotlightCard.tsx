@@ -62,6 +62,7 @@ export default function SpotlightCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={props.onClick}
       style={{
         rotateX,
         rotateY,
