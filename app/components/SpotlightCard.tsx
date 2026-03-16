@@ -18,6 +18,9 @@ export default function SpotlightCard({
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
 
+  // Separate motion-conflicting props
+  const { onDrag, onDragStart, onDragEnd, ...safeProps } = props as any;
+
   // Motion values for 3D Tilt
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -65,7 +68,7 @@ export default function SpotlightCard({
         transformStyle: "preserve-3d",
       }}
       className={`relative overflow-hidden cursor-pointer ${className}`}
-      {...props}
+      {...safeProps}
     >
       {/* Spotlight Gradient Layer */}
       <div
