@@ -70,14 +70,14 @@ export default function Lightbox({
       </button>
       
       <div 
-        className="relative max-w-full max-h-full flex flex-col items-center"
+        className="relative max-w-full max-h-full flex flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative max-w-full max-h-[85vh] overflow-hidden rounded-lg shadow-2xl">
+        <div className="relative flex items-center justify-center h-[80vh] w-full px-4 md:px-12">
           {isVideo ? (
             <video
               src={currentUrl}
-              className="max-w-full max-h-[85vh] object-contain"
+              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
               controls
               autoPlay
               loop
@@ -86,7 +86,7 @@ export default function Lightbox({
             <img 
               src={currentUrl} 
               alt={currentTitle}
-              className="max-w-full max-h-[85vh] object-contain"
+              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
             />
           )}
         </div>
