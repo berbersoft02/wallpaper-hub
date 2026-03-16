@@ -1,14 +1,15 @@
 "use client";
 
-import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal } from "lucide-react";
+import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal, Loader2 } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect, useCallback, Suspense, useMemo } from "react";
+import { useState, useEffect, useCallback, Suspense, useMemo, useRef } from "react";
 import SpotlightCard from "./SpotlightCard";
 import { useSearchParams } from "next/navigation";
 import { slugify } from "@/lib/utils";
 import Link from "next/link";
 import Lightbox from "./Lightbox";
 
+// ... existing interfaces and PixelImage ...
 interface Wallpaper {
   id: string;
   url: string;
@@ -72,13 +73,15 @@ function GalleryContent() {
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [desktopCollections, setDesktopCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [displayCount, setDisplayCount] = useState(10);
+  const [displayCount, setDisplayCount] = useState(12);
   const [showRecommendationModal, setShowRecommendationModal] = useState(false);
   const [showDownloadSuccessModal, setShowDownloadSuccessModal] = useState(false);
   const [recommendationForm, setRecommendationForm] = useState({ name: '', email: '', message: '' });
   const [sending, setSending] = useState(false);
   const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const loaderRef = useRef<HTMLDivElement>(null);
 
   // Read filter from URL
   useEffect(() => {
@@ -222,7 +225,7 @@ function GalleryContent() {
   }, []);
 
   useEffect(() => {
-    setDisplayCount(10);
+    setDisplayCount(12);
   }, [filter, searchQuery]);
 
   const renderCharacterName = (charName: string) => {
@@ -280,6 +283,24 @@ function GalleryContent() {
     }
     return displayCount < filtered.length;
   }, [filter, everything, wallpapers, displayCount, searchQuery]);
+
+  // Intersection Observer for Infinite Scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          setDisplayCount((prev) => prev + 12);
+        }
+      },
+      { threshold: 0.1, rootMargin: '400px' }
+    );
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasMore]);
 
   const getCount = (charName: string) => wallpapers.filter(w => w.character === charName).length;
 
@@ -499,14 +520,10 @@ function GalleryContent() {
             </div>
           )}
 
-          {!loading && filter === "All" && hasMore && (
-            <div className="flex justify-center mt-12">
-              <button
-                onClick={() => setDisplayCount(prev => prev + 10)}
-                className="font-pixel px-8 py-4 bg-neon-cyan hover:bg-neon-cyan/80 text-dark-bg text-xl rounded-lg border-2 border-neon-cyan transition-all hover:scale-105 shadow-[0_0_24px_rgba(5,217,232,0.6)]"
-              >
-                More
-              </button>
+          {/* Infinite Scroll Trigger */}
+          {filter === "All" && hasMore && (
+            <div ref={loaderRef} className="flex justify-center mt-16 py-8">
+              <Loader2 className="w-10 h-10 text-neon-cyan animate-spin opacity-50" />
             </div>
           )}
         </div>
