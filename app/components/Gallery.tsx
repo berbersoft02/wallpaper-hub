@@ -416,6 +416,40 @@ function GalleryContent() {
               </div>
             </div>
 
+          {specialCollections.length > 0 && (
+             <div className="w-full max-w-6xl mt-12 mb-8">
+               <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(5,217,232,0.5)]">
+                 FEATURED COLLECTIONS
+               </h3>
+               <div className="flex flex-wrap justify-center gap-4">
+                  {specialCollections.map((char) => (
+                    <button
+                      key={char}
+                      onClick={() => {
+                        setFilter(char);
+                        setSearchQuery("");
+                      }}
+                      className={`relative group overflow-hidden px-8 py-4 rounded-xl transition-all duration-300 border backdrop-blur-md ${
+                        filter === char && !searchQuery
+                          ? "bg-neon-cyan/20 border-neon-cyan text-white shadow-[0_0_20px_rgba(5,217,232,0.4)] scale-105" 
+                          : "bg-white/5 border-white/10 text-gray-300 hover:border-neon-cyan/50 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(5,217,232,0.2)]"
+                      }`}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                      <div className="flex items-center gap-3 relative z-10">
+                        <span className="font-pixel uppercase tracking-wider text-sm md:text-base">
+                          {renderCharacterName(char)}
+                        </span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full ${filter === char && !searchQuery ? "bg-neon-cyan text-dark-bg" : "bg-white/10 text-gray-400"}`}>
+                          {getCount(char)}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+               </div>
+             </div>
+          )}
+
             <div className="w-full max-w-6xl">
               <h3 className="text-neon-pink font-pixel text-xl mb-6 text-center tracking-widest drop-shadow-[0_0_10px_rgba(255,42,109,0.5)]">
                 Anime CHARACTER Archive
