@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Only_dias Ocean | Our Journey & Vision",
@@ -27,7 +28,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="font-pixel text-3xl text-neon-pink">The Vision</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Only_dias Ocean was born out of a simple frustration: the lack of truly high-quality, curated anime wallpapers. While the internet is full of "wallpaper dump" sites, most are cluttered with low-resolution images, watermarks, and poor compositions.
+                Only_dias Ocean was born out of a simple frustration: the lack of truly high-quality, curated anime wallpapers. While the internet is full of &quot;wallpaper dump&quot; sites, most are cluttered with low-resolution images, watermarks, and poor compositions.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Our mission is to provide a premium, boutique experience for anime fans. Every single image on this site has been manually selected, upscaled to 4K resolution using professional AI tools, and color-graded to ensure it looks stunning on modern high-refresh-rate monitors and mobile screens.
@@ -46,12 +47,12 @@ export default function AboutPage() {
               
               <div className="max-w-3xl mx-auto text-gray-300 text-lg space-y-6 leading-relaxed">
                 <p>
-                  Hi, I'm <strong>DIAS</strong>, the creator behind <strong>Only_dias</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.
+                  Hi, I&apos;m <strong>DIAS</strong>, the creator behind <strong>Only_dias</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.
                 </p>
                 
                 <h3 className="font-pixel text-xl text-neon-pink">The TikTok Boom</h3>
                 <p>
-                  I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.
+                  I started posting my simple &quot;Before vs. After&quot; edits on TikTok just for fun. I didn&apos;t expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting &quot;Link?&quot;, &quot;Where can I get this?&quot;, &quot;Do you have a PC version?&quot;. I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.
                 </p>
                 <p>
                   I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.
@@ -59,7 +60,7 @@ export default function AboutPage() {
 
                 <h3 className="font-pixel text-xl text-neon-cyan">Building the Ocean</h3>
                 <p>
-                  TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.
+                  TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a &quot;Link in Bio&quot; to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the &quot;Ocean&quot; where all my work could live permanently.
                 </p>
                 <p>
                   I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.
@@ -82,7 +83,7 @@ export default function AboutPage() {
               </div>
               <div className="p-6 bg-dark-bg/50 border border-gray-800 rounded-xl hover:border-neon-purple transition-colors group">
                 <h3 className="font-pixel text-xl text-neon-purple mb-3 group-hover:drop-shadow-[0_0_8px_rgba(211,0,197,0.5)]">3. Finalizing</h3>
-                <p className="text-gray-400 text-sm">We apply a custom color grade to match our signature "Neon Ocean" aesthetic before uploading.</p>
+                <p className="text-gray-400 text-sm">We apply a custom color grade to match our signature &quot;Neon Ocean&quot; aesthetic before uploading.</p>
               </div>
             </div>
           </section>
@@ -91,7 +92,7 @@ export default function AboutPage() {
           <section className="bg-neon-cyan/5 border-2 border-dashed border-neon-cyan/20 p-8 rounded-2xl text-center">
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">Why inform the user?</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              We believe a wallpaper site should be more than just a gallery. That's why we produce in-depth articles on our <a href="/blog" className="text-neon-pink underline">blog</a> about character design, color theory, and technical guides on how to make your own edits. We are here to inspire the next generation of anime creators.
+              We believe a wallpaper site should be more than just a gallery. That&apos;s why we produce in-depth articles on our <Link href="/blog" className="text-neon-pink underline">blog</Link> about character design, color theory, and technical guides on how to make your own edits. We are here to inspire the next generation of anime creators.
             </p>
           </section>
         </div>

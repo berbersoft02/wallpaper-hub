@@ -11,6 +11,77 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'alya-kujou-roshidere-4k-aesthetic',
+    title: 'Alya Kujou: The Captivating Tsundere of "Roshidere" in 4K Aesthetic',
+    excerpt: 'A deep dive into the silver-haired elegance of Alisa Mikhailovna Kujou. Explore our technical process for upscaling Alya to 4K and why she is the definitive seasonal queen.',
+    date: '2026-03-19',
+    author: 'Only_dias',
+    tags: ['Alya Kujou', 'Roshidere', 'Aesthetic', '4K', 'Rom-Com'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/wallpapers/alya-kujou-â¡" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-400 via-white to-pink-400 text-gray-800 font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE ALYA 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>Alisa Mikhailovna Kujou: Silver-Haired Perfection</h2>
+      <p><em>Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</em>, or simply <strong>Roshidere</strong>, has taken the anime world by storm. At the center of this storm is Alya, a character who perfectly balances the "cool, unattainable beauty" archetype with an incredibly endearing hidden side. Her silver hair, striking blue eyes, and the way she mutters sweet nothings in Russian make her a visual delight for any editor.</p>
+      
+      <p>When upscaling Alya to 4K, our main focus is on <strong>Texture and Glow</strong>. Her hair requires meticulous sharpening to ensure each strand looks distinct without becoming grainy. We use a custom "Soft-Light" mask on her skin to give her that ethereal, porcelain look that Doga Kobo is famous for animating.</p>
+
+      <h2>The Russian Aesthetic: Color Grading Alya</h2>
+      <p>Unlike traditional rom-com leads, Alya's color palette is cool-toned—blues, whites, and soft greys. To make these pop on your 4K monitor, we apply a <strong>subtle teal-and-orange balance</strong>, but shifted specifically towards the highlights. This ensures that while the shadows remain deep and moody, Alya herself feels bright and "alive."</p>
+
+      <p>Our collection features her most iconic moments, from her intense classroom glares to her rare, blushing smiles. Download the full set today and bring the silver-haired princess to your desktop.</p>
+    `
+  },
+  {
+    slug: 'anna-yanami-makeine-blue-aesthetic',
+    title: 'Anna Yanami: The "Blue" Aesthetic of Makeine in High-Fidelity 4K',
+    excerpt: 'Analyzing the visual brilliance of Anna Yanami from "Makeine: Too Many Losing Heroines". Learn how we capture her vibrant energy in our latest 4K wallpaper collection.',
+    date: '2026-03-19',
+    author: 'Only_dias',
+    tags: ['Anna Yanami', 'Makeine', 'Blue', '4K', 'Losing Heroine'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/wallpapers/anna-yanami" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-600 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE ANNA 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>Anna Yanami: The Heroine Who Wins Our Hearts</h2>
+      <p><strong>Makeine</strong> has redefined the "losing heroine" trope, and Anna Yanami is the undisputed face of this movement. Her design is a burst of energy—vibrant blue hair, expressive facial animations, and a personality that ranges from comedic gluttony to genuine emotional vulnerability. A-1 Pictures outdid themselves with the lighting in this series, making every frame look like a painting.</p>
+      
+      <h2>Technical Editing: Capturing the "Summer Blue"</h2>
+      <p>Anna's aesthetic is defined by "Summer." To capture this in 4K, we use a <strong>selective saturation boost</strong> on the blue and cyan channels. We also utilize AI-based artifact removal to ensure that even the most high-motion action shots remain crisp. The result is a set of wallpapers that feel like a breath of fresh air on your screen.</p>
+
+      <p>Whether you love her for her constant snacking or her heartfelt moments, this 4K collection is a must-have for any fan of the series. The colors are specifically optimized for high-brightness IPS and OLED displays.</p>
+    `
+  },
+  {
+    slug: 'maomao-apothecary-diaries-4k-guide',
+    title: 'Maomao: The Emerald Gaze of The Apothecary Diaries in 4K Fidelity',
+    excerpt: 'A technical and aesthetic review of Maomao. Discover how we upscale the intricate details of ancient China and Maomao’s sharp expressions for modern 4K displays.',
+    date: '2026-03-19',
+    author: 'Only_dias',
+    tags: ['Maomao', 'Apothecary Diaries', 'Emerald', '4K', 'Mystery'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/wallpapers/maomao" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-green-600 via-green-400 to-emerald-500 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE MAOMAO 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>The Poison Taster: Maomao’s Sharp Aesthetic</h2>
+      <p><em>Kusuriya no Hitorigoto</em> (The Apothecary Diaries) is a visual masterpiece, and Maomao is its sharp, witty heart. Her design is intricate—the traditional clothing, the freckles she uses to hide her beauty, and most importantly, her calculating emerald eyes. This series offers a different kind of visual challenge: <strong>Intricate Patterns and Deep Colors</strong>.</p>
+      
+      <h2>Upscaling Ancient China: The Technical Process</h2>
+      <p>The backgrounds in Maomao's world are incredibly detailed. When upscaling to 4K, we use a <strong>De-Noise algorithm</strong> that preserves fine linework. We want the silk textures of her robes and the architectural details of the Inner Court to be perfectly visible. For Maomao herself, we focus on her eyes—adding a sharp, 1-pixel specular highlight to make her "Emerald Gaze" truly piercing.</p>
+
+      <p>Maomao represents a blend of intelligence and mystery. Our 4K set captures her in both her serious apothecary moments and her hilarious "cat-like" expressions. A perfect addition for any setup looking for a sophisticated, green-toned aesthetic.</p>
+    `
+  },
+  {
     slug: 'toji-fushiguro-sorcerer-killer-4k-guide',
     title: 'Toji Fushiguro: The Raw Intensity of the Sorcerer Killer in 4K - A 2026 Visual Analysis',
     excerpt: 'An 800+ word deep dive into the "Heavenly Restricted" aesthetic of Toji Fushiguro. Learn our technical process for editing the Sorcerer Killer for high-fidelity 4K displays.',

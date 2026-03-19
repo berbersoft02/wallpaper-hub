@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Download, Heart, Maximize2 } from 'lucide-react';
 import { useState, use, useMemo } from 'react';
 import Lightbox from '@/app/components/Lightbox';
+import { useFavorites } from '@/lib/hooks/useFavorites';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -18,6 +19,7 @@ export default function CharacterWallpapersPage({ params }: Props) {
   const { slug } = use(params);
   const character = getCharacterBySlug(slug);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const { toggleFavorite, isFavorite } = useFavorites<any>("wallpapers-favs");
 
   const name = character?.name.replace(' ♡', '') || '';
 
@@ -41,7 +43,6 @@ export default function CharacterWallpapersPage({ params }: Props) {
       .filter(c => slugify(c.name) !== slug)
       // Filter out characters that only have videos or no wallpapers
       .filter(c => c.wallpapers.length > 0 && !c.wallpapers[0].match(/\.(mp4|webm|mov)/i))
-      .sort(() => Math.random() - 0.5)
       .slice(0, 6);
   }, [slug]);
 
@@ -128,7 +129,24 @@ export default function CharacterWallpapersPage({ params }: Props) {
               </div>
               <div className="p-4 bg-dark-bg/90 border-t border-gray-800 flex justify-between items-center">
                 <h3 className="font-pixel text-sm text-gray-300 tracking-wider">{wpTitles[index]}</h3>
-                <Heart size={18} className="text-gray-600 hover:text-neon-pink transition-colors" />
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite({
+                      id: `${character.name}-${index}`,
+                      url,
+                      character: character.name,
+                      title: wpTitles[index],
+                      category: character.category || 'Anime'
+                    });
+                  }}
+                  className="p-2 hover:scale-125 transition-transform"
+                >
+                  <Heart 
+                    size={18} 
+                    className={isFavorite(`${character.name}-${index}`) ? "text-neon-pink fill-neon-pink drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]" : "text-gray-600 hover:text-neon-pink"} 
+                  />
+                </button>
               </div>
             </div>
           ))}

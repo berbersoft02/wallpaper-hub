@@ -40,8 +40,12 @@ export default function DraggableIcon({
   const dragRef = useRef<HTMLDivElement>(null);
   const startPosRef = useRef({ x: 0, y: 0 });
   const lastPosRef = useRef({ x: 0, y: 0 });
-  const lastTimeRef = useRef(Date.now());
+  const lastTimeRef = useRef(0);
   const animationFrameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    lastTimeRef.current = Date.now();
+  }, []);
 
   const sizeClasses = {
     sm: "w-12 h-12 md:w-16 md:h-16",

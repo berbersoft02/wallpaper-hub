@@ -76,8 +76,12 @@ function GalleryContent() {
   const [characters, setCharacters] = useState<string[]>([]);
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [displayCount, setDisplayCount] = useState(24); // Increased initial count
+  const [displayCount, setDisplayCount] = useState(24);
   const [showDownloadSuccessModal, setShowDownloadSuccessModal] = useState(false);
+  const [showRecommendationModal, setShowRecommendationModal] = useState(false);
+  const [recommendationForm, setRecommendationForm] = useState({ name: '', email: '', message: '' });
+  const [sending, setSending] = useState(false);
+  const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const { favorites, toggleFavorite, isFavorite } = useFavorites<Wallpaper>("wallpapers-favs");
@@ -103,7 +107,6 @@ function GalleryContent() {
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
-          // Process other characters
           otherChars.forEach((char: CharacterData) => {
             if (char.name !== 'Desktop Wallpapers') {
               if (char.category === 'Special') specialNames.push(char.name);
@@ -115,7 +118,6 @@ function GalleryContent() {
             }
           });
 
-          // Process priority characters with interleaving logic to mix them up
           const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
           const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
 
@@ -226,6 +228,14 @@ function GalleryContent() {
                 ))}
               </div>
             </div>
+
+            <button
+              onMouseEnter={() => playSound('hover')}
+              onClick={() => { setShowRecommendationModal(true); playSound('click'); }}
+              className="mt-4 font-pixel px-6 py-3 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
+            >
+              SEND RECOMMENDATION
+            </button>
           </div>
 
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
@@ -265,6 +275,49 @@ function GalleryContent() {
             <h3 className="font-pixel text-2xl text-neon-cyan mb-4">Download Started!</h3>
             <button onClick={() => setShowDownloadSuccessModal(false)} className="px-8 py-3 bg-neon-cyan text-dark-bg font-pixel rounded-lg">OK</button>
           </div>
+        </div>
+      )}
+
+      {showRecommendationModal && (
+        <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4" onClick={() => setShowRecommendationModal(false)}>
+           <div className="bg-card-bg p-8 max-w-lg w-full rounded-lg border-2 border-neon-cyan shadow-[0_0_30px_rgba(5,217,232,0.3)]" onClick={e => e.stopPropagation()}>
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-white font-pixel text-2xl">Send Recommendation</h3>
+                <button onClick={() => setShowRecommendationModal(false)} className="text-gray-400 hover:text-neon-pink transition-colors">
+                  <X size={24} />
+                </button>
+              </div>
+              
+              {sendStatus?.success ? (
+                <div className="text-center py-10 space-y-4">
+                  <div className="text-neon-cyan font-pixel text-xl">MESSAGE SENT SUCCESSFULLY!</div>
+                  <button onClick={() => { setShowRecommendationModal(false); setSendStatus(null); }} className="px-6 py-2 bg-neon-cyan text-black font-pixel rounded">CLOSE</button>
+                </div>
+              ) : (
+                <form onSubmit={async (e) => {
+                  e.preventDefault();
+                  setSending(true);
+                  try {
+                    const res = await fetch('/api/recommendations', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(recommendationForm)
+                    });
+                    if (res.ok) {
+                      setSendStatus({ success: true, message: 'Sent!' });
+                      setRecommendationForm({ name: '', email: '', message: '' });
+                    }
+                  } catch (err) {} finally { setSending(false); }
+                }} className="space-y-4">
+                  <input required type="text" placeholder="Your Name" className="w-full bg-black/50 border border-gray-700 p-3 rounded text-white focus:border-neon-cyan outline-none transition-colors" value={recommendationForm.name} onChange={e => setRecommendationForm({...recommendationForm, name: e.target.value})} />
+                  <input required type="email" placeholder="Your Email" className="w-full bg-black/50 border border-gray-700 p-3 rounded text-white focus:border-neon-cyan outline-none transition-colors" value={recommendationForm.email} onChange={e => setRecommendationForm({...recommendationForm, email: e.target.value})} />
+                  <textarea required placeholder="Which character or series would you like to see?" className="w-full bg-black/50 border border-gray-700 p-3 rounded h-32 text-white focus:border-neon-cyan outline-none transition-colors resize-none" value={recommendationForm.message} onChange={e => setRecommendationForm({...recommendationForm, message: e.target.value})} />
+                  <button type="submit" disabled={sending} className="w-full py-3 bg-neon-pink text-white font-pixel text-xl rounded hover:bg-white hover:text-black transition-all shadow-[0_0_15px_rgba(255,42,109,0.4)]">
+                    {sending ? 'TRANSMITTING...' : 'SEND MESSAGE'}
+                  </button>
+                </form>
+              )}
+           </div>
         </div>
       )}
     </>

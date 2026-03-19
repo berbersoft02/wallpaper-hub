@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
 import PageTransition from "./components/PageTransition";
+import CustomCursor from "./components/CustomCursor";
 
 const pixelFont = VT323({
   weight: "400",
@@ -18,11 +19,39 @@ const bodyFont = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saidahriken.site'),
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Only_dias Ocean",
+  },
   title: {
     default: "Only_dias Ocean | Premium 4K Anime Wallpapers",
     template: "%s | Only_dias Ocean"
   },
   description: "Download high-quality 4K upscaled anime wallpapers, matching icons, and PFPs. Hand-picked collections for mobile and desktop.",
+  openGraph: {
+    title: "Only_dias Ocean | Premium 4K Anime Wallpapers",
+    description: "Hand-picked and AI-upscaled 4K anime wallpapers and matching PFPs.",
+    url: 'https://saidahriken.site',
+    siteName: 'Only_dias Ocean',
+    images: [
+      {
+        url: '/icon.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Only_dias Ocean Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Only_dias Ocean | Premium 4K Anime Wallpapers",
+    description: "Hand-picked and AI-upscaled 4K anime wallpapers and matching PFPs.",
+    images: ['/icon.jpg'],
+  },
   alternates: {
     canonical: '/',
   },
@@ -57,12 +86,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-7463641924793744" />
+        <meta name="theme-color" content="#05d9e8" />
       </head>
       <body
-        className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
+        className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body cursor-none`}
       >
         {/* Global CRT Scanline Overlay */}
-        <div className="crt-overlay" />
+        <div className="crt-overlay pointer-events-none" />
 
         {/* Google Funding Choices (Consent Management) */}
         <Script
@@ -105,6 +135,7 @@ export default function RootLayout({
           {children}
         </PageTransition>
         
+        <CustomCursor />
         <CookieBanner />
 
         {/* SVG Filter for Pixelated Loading */}
