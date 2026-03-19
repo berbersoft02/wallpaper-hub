@@ -221,6 +221,15 @@ function GalleryContent() {
     setShowDownloadSuccessModal(true);
   };
 
+  const handleCloseLightbox = useCallback(() => {
+    setSelectedImageIndex(null);
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('image')) {
+      url.searchParams.delete('image');
+      window.history.replaceState(null, '', url.toString());
+    }
+  }, []);
+
   const renderCharacterName = (charName: string) => {
     const formattedName = charName.replace(/-/g, ' ');
     const stickerSlug = charName.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().replace(/\s+/g, '-');
@@ -310,7 +319,7 @@ function GalleryContent() {
       </section>
 
       {selectedImageIndex !== null && (
-        <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={() => setSelectedImageIndex(null)} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownload} />
+        <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={handleCloseLightbox} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownload} />
       )}
 
       {showDownloadSuccessModal && (

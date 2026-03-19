@@ -113,13 +113,13 @@ export default function Lightbox({
                 await navigator.share({
                   title: currentTitle,
                   text: 'Check out this awesome anime wallpaper from Only_dias Ocean!',
-                  url: window.location.href,
+                  url: currentUrl,
                 });
               } catch (err) {
                 console.error('Error sharing:', err);
               }
             } else {
-              navigator.clipboard.writeText(window.location.href);
+              navigator.clipboard.writeText(currentUrl);
               alert('Link copied to clipboard!');
             }
           }} className="p-3 bg-neon-pink/20 hover:bg-neon-pink text-neon-pink hover:text-white rounded-full transition-all shadow-[0_0_15px_rgba(255,42,109,0.3)]" title="Share Wallpaper">
