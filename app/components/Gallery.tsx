@@ -165,44 +165,25 @@ function GalleryContent() {
 
   const finalDisplay = useMemo(() => filteredItems.slice(0, displayCount), [filteredItems, displayCount]);
 
-  // Deep Linking URL Updates
-  useEffect(() => {
-    if (loading) return;
-    const params = new URLSearchParams(searchParams.toString());
-    if (selectedImageIndex !== null) {
-      const wp = finalDisplay[selectedImageIndex];
-      if (wp) {
-        params.set('image', wp.id);
-        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-      }
-    }
-  }, [selectedImageIndex, finalDisplay, loading, pathname, router, searchParams]);
 
-  // Initial load deep link
-  useEffect(() => {
-    if (!loading && wallpapers.length > 0 && selectedImageIndex === null) {
-      const imageParam = searchParams.get('image');
-      if (imageParam) {
-        const index = finalDisplay.findIndex(w => w.id === imageParam);
-        if (index !== -1) {
-          setSelectedImageIndex(index);
-        } else {
-          // It might be hidden by displayCount or filter
-          const wpInAll = wallpapers.find(w => w.id === imageParam);
-          if (wpInAll) {
-            if (filter !== wpInAll.character && filter !== "All") setFilter(wpInAll.character);
-            setDisplayCount(9999);
-          }
-        }
-      }
-    }
-  }, [loading, wallpapers, searchParams, finalDisplay, selectedImageIndex, filter]);
 
   useEffect(() => {
     setDisplayCount(12);
   }, [filter, searchQuery]);
 
   const getCount = (name: string) => wallpapers.filter(w => w.character === name).length;
+
+  useEffect(() => {
+    const imageParam = searchParams.get('image');
+    if (imageParam) {
+      const index = finalDisplay.findIndex(w => w.id === imageParam);
+      if (index !== -1) {
+        setSelectedImageIndex(index);
+      }
+    } else {
+      setSelectedImageIndex(null);
+    }
+  }, [searchParams, finalDisplay]);
 
   const handleDownload = (url: string, title: string) => {
     const isVideo = url.toLowerCase().match(/\.(mp4|webm)$/);
@@ -220,8 +201,7 @@ function GalleryContent() {
   const handleCloseLightbox = useCallback(() => {
     const params = new URLSearchParams(searchParams.toString());
     params.delete('image');
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-    setSelectedImageIndex(null);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }, [searchParams, router, pathname]);
 
   const renderCharacterName = (charName: string) => {
@@ -283,7 +263,11 @@ function GalleryContent() {
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalDisplay.map((wp, index) => (
-                <SpotlightCard key={wp.id} onMouseEnter={() => playSound('hover')} className="group relative bg-card-bg border-2 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink hover:-translate-y-1" onClick={() => setSelectedImageIndex(index)}>
+                <SpotlightCard key={wp.id} onMouseEnter={() => playSound('hover')} className="group relative bg-card-bg border-2 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink hover:-translate-y-1" onClick={() => {
+                  const params = new URLSearchParams(searchParams.toString());
+                  params.set('image', wp.id);
+                  router.push(`${pathname}?${params.toString()}`, { scroll: false });
+                }}>
                   <div className="aspect-[9/16] relative overflow-hidden">
                      <PixelImage 
                         src={wp.url} 
