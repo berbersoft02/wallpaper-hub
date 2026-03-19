@@ -4,7 +4,7 @@ import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal, Loa
 import Image from "next/image";
 import { useState, useEffect, useCallback, Suspense, useMemo, useRef } from "react";
 import SpotlightCard from "./SpotlightCard";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { slugify } from "@/lib/utils";
 import Link from "next/link";
 import Lightbox from "./Lightbox";
@@ -77,6 +77,8 @@ function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...
 function GalleryContent() {
   const { playSound } = useCyberSound();
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const [filter, setFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -166,21 +168,20 @@ function GalleryContent() {
   // Deep Linking URL Updates
   useEffect(() => {
     if (loading) return;
+    const params = new URLSearchParams(searchParams.toString());
     if (selectedImageIndex !== null) {
       const wp = finalDisplay[selectedImageIndex];
       if (wp) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('image', wp.id);
-        window.history.replaceState(null, '', url.toString());
+        params.set('image', wp.id);
+        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
       }
     } else {
-      const url = new URL(window.location.href);
-      if (url.searchParams.has('image')) {
-        url.searchParams.delete('image');
-        window.history.replaceState(null, '', url.toString());
+      if (params.has('image')) {
+        params.delete('image');
+        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
       }
     }
-  }, [selectedImageIndex, finalDisplay, loading]);
+  }, [selectedImageIndex, finalDisplay, loading, pathname, router, searchParams]);
 
   // Initial load deep link
   useEffect(() => {
@@ -223,11 +224,6 @@ function GalleryContent() {
 
   const handleCloseLightbox = useCallback(() => {
     setSelectedImageIndex(null);
-    const url = new URL(window.location.href);
-    if (url.searchParams.has('image')) {
-      url.searchParams.delete('image');
-      window.history.replaceState(null, '', url.toString());
-    }
   }, []);
 
   const renderCharacterName = (charName: string) => {
