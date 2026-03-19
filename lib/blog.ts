@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Alya Kujou', 'Roshidere', 'Aesthetic', '4K', 'Rom-Com'],
     content: `
       <div class="flex justify-center my-8">
-        <a href="/wallpapers/alya-kujou-â¡" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-400 via-white to-pink-400 text-gray-800 font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+        <a href="/wallpapers/alya-kujou" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-400 via-white to-pink-400 text-gray-800 font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
           ✨ GET THE ALYA 4K COLLECTION ✨
         </a>
       </div>
