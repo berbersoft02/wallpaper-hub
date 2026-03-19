@@ -11,8 +11,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Keep unoptimized for now to avoid issues
-    unoptimized: true,
+    // Removed unoptimized to allow Cloudinary custom loader
   },
   // Increase the maximum upload size for API routes
   experimental: {

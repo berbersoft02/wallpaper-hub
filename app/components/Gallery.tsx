@@ -27,6 +27,14 @@ interface CharacterData {
   tags?: string[];
 }
 
+const cloudinaryLoader = ({ src, width, quality }: any) => {
+  if (src.includes('res.cloudinary.com') && src.includes('/upload/')) {
+    const parts = src.split('/upload/');
+    return `${parts[0]}/upload/w_${width},q_${quality || 75},f_auto/${parts[1]}`;
+  }
+  return src;
+};
+
 function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...props }: any) {
   const [isLoaded, setIsLoaded] = useState(false);
   const isVideo = src.match(/\.(mp4|webm)/i);
@@ -51,12 +59,12 @@ function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...
     <div className="relative w-full h-full bg-gray-900 overflow-hidden">
       {!isLoaded && <div className="absolute inset-0 pixel-placeholder z-0" />}
       <Image
+        loader={cloudinaryLoader}
         src={src}
         alt={alt}
         fill={fill}
         width={width}
         height={height}
-        unoptimized={unoptimized}
         className={`${className} ${isLoaded ? 'pixel-loaded' : 'pixel-loading'}`}
         onLoad={() => setIsLoaded(true)}
         crossOrigin="anonymous"
@@ -155,7 +163,48 @@ function GalleryContent() {
 
   const finalDisplay = useMemo(() => filteredItems.slice(0, displayCount), [filteredItems, displayCount]);
 
-  useEffect(() => { setDisplayCount(24); }, [filter, searchQuery]);
+  // Deep Linking URL Updates
+  useEffect(() => {
+    if (loading) return;
+    if (selectedImageIndex !== null) {
+      const wp = finalDisplay[selectedImageIndex];
+      if (wp) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('image', wp.id);
+        window.history.replaceState(null, '', url.toString());
+      }
+    } else {
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('image')) {
+        url.searchParams.delete('image');
+        window.history.replaceState(null, '', url.toString());
+      }
+    }
+  }, [selectedImageIndex, finalDisplay, loading]);
+
+  // Initial load deep link
+  useEffect(() => {
+    if (!loading && wallpapers.length > 0 && selectedImageIndex === null) {
+      const imageParam = searchParams.get('image');
+      if (imageParam) {
+        const index = finalDisplay.findIndex(w => w.id === imageParam);
+        if (index !== -1) {
+          setSelectedImageIndex(index);
+        } else {
+          // It might be hidden by displayCount or filter
+          const wpInAll = wallpapers.find(w => w.id === imageParam);
+          if (wpInAll) {
+            if (filter !== wpInAll.character && filter !== "All") setFilter(wpInAll.character);
+            setDisplayCount(9999);
+          }
+        }
+      }
+    }
+  }, [loading, wallpapers, searchParams, finalDisplay, selectedImageIndex, filter]);
+
+  useEffect(() => {
+    setDisplayCount(12);
+  }, [filter, searchQuery]);
 
   const getCount = (name: string) => wallpapers.filter(w => w.character === name).length;
 
@@ -233,8 +282,13 @@ function GalleryContent() {
               {finalDisplay.map((wp, index) => (
                 <SpotlightCard key={wp.id} onMouseEnter={() => playSound('hover')} className="group relative bg-card-bg border-2 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink hover:-translate-y-1" onClick={() => setSelectedImageIndex(index)}>
                   <div className="aspect-[9/16] relative overflow-hidden">
-                     <PixelImage src={wp.url} alt={wp.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" unoptimized />
-                  </div>
+                     <PixelImage 
+                        src={wp.url} 
+                        alt={wp.title} 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                     /></div>
                   <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90">
                     <div className="truncate flex-1 mr-2">
                       <h3 className="font-pixel text-lg text-white truncate">{wp.title}</h3>
