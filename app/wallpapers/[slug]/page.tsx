@@ -1,81 +1,58 @@
+"use client";
+
 import { getCharacterBySlug, getAllCharacters, slugify } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Image from 'next/image';
-import { Metadata } from 'next';
 import Link from 'next/link';
-import { Download, Heart } from 'lucide-react';
+import { Download, Heart, Maximize2 } from 'lucide-react';
+import { useState, use, useMemo } from 'react';
+import Lightbox from '@/app/components/Lightbox';
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+export default function CharacterWallpapersPage({ params }: Props) {
+  const { slug } = use(params);
   const character = getCharacterBySlug(slug);
-  
-  if (!character) return { title: 'Character Not Found' };
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const name = character.name.replace(' ♡', '');
-  return {
-    title: `Best ${name} 4K Wallpapers - Download High Quality Anime Backgrounds`,
-    description: `Download premium 4K upscaled wallpapers of ${name} from ${character.category}. High resolution, color-graded, and optimized for mobile and desktop screens.`,
-    keywords: `${name}, ${character.tags?.join(', ')}, Anime Wallpaper, 4K, HD, Download`,
-    alternates: {
-      canonical: `/wallpapers/${slug}`,
-    },
-    openGraph: {
-      title: `${name} 4K Wallpapers | Only_dias Ocean`,
-      description: `Exclusive collection of ${name} wallpapers in 4K resolution.`,
-      images: [character.wallpapers[0]],
-    }
+  const name = character?.name.replace(' ♡', '') || '';
+
+  const handleDownload = (url: string, title: string) => {
+    const isVideo = url.match(/\.(mp4|webm|mov)/i);
+    const ext = isVideo ? 'mp4' : 'jpg';
+    const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
+    const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
+    
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
-}
 
-export async function generateStaticParams() {
-  const characters = getAllCharacters();
-  return characters.map((char) => ({
-    slug: slugify(char.name),
-  }));
-}
-
-export default async function CharacterWallpapersPage({ params }: Props) {
-  const { slug } = await params;
-  const character = getCharacterBySlug(slug);
+  const otherCharacters = useMemo(() => {
+    const allCharacters = getAllCharacters();
+    return allCharacters
+      .filter(c => slugify(c.name) !== slug)
+      // Filter out characters that only have videos or no wallpapers
+      .filter(c => c.wallpapers.length > 0 && !c.wallpapers[0].match(/\.(mp4|webm|mov)/i))
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 6);
+  }, [slug]);
 
   if (!character) {
     notFound();
   }
 
-  const name = character.name.replace(' ♡', '');
-
-  // JSON-LD for Google Image Gallery indexing
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ImageGallery',
-    'name': `${name} 4K Wallpapers Collection`,
-    'description': `A curated collection of high-resolution 4K wallpapers featuring ${name}.`,
-    'image': character.wallpapers.map(url => ({
-      '@type': 'ImageObject',
-      'contentUrl': url,
-      'name': `${name} Wallpaper`,
-      'author': 'Only_dias'
-    }))
-  };
-
-  const allCharacters = getAllCharacters();
-  const otherCharacters = allCharacters
-    .filter(c => slugify(c.name) !== slug)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 6);
+  const wpTitles = character.wallpapers.map((_, i) => `${name} - 4K Edit #${i + 1}`);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Navbar />
       
       <main className="max-w-7xl mx-auto px-4 py-20">
@@ -87,8 +64,8 @@ export default async function CharacterWallpapersPage({ params }: Props) {
             ← Back to Gallery
           </Link>
           
-          <h1 className="font-pixel text-4xl md:text-6xl text-white mb-6 drop-shadow-[0_0_20px_rgba(5,217,232,0.5)]">
-            {character.name} <span className="text-neon-pink">WALLPAPERS</span>
+          <h1 className="font-pixel text-4xl md:text-6xl text-white mb-6 drop-shadow-[0_0_20px_rgba(5,217,232,0.5)] uppercase tracking-tighter">
+            {character.name} <span className="text-neon-pink">Collection</span>
           </h1>
           
           <div className="flex justify-center flex-wrap gap-2 mb-8">
@@ -99,8 +76,8 @@ export default async function CharacterWallpapersPage({ params }: Props) {
             ))}
           </div>
 
-          <p className="text-gray-400 max-w-2xl mx-auto font-body text-lg">
-            Experience the best {name} wallpapers in stunning 4K resolution. Every image is meticulously upscaled and color-graded to provide the highest quality for your setup.
+          <p className="text-gray-400 max-w-2xl mx-auto font-body text-lg leading-relaxed">
+            Premium 4K upscaled wallpapers of <span className="text-white font-bold">{name}</span>. Optimized for all screen sizes with custom color grading.
           </p>
         </header>
 
@@ -108,40 +85,55 @@ export default async function CharacterWallpapersPage({ params }: Props) {
           {character.wallpapers.map((url, index) => (
             <div 
               key={index}
-              className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-pink transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(255,42,109,0.3)]"
+              onClick={() => setSelectedIndex(index)}
+              className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-cyan transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(5,217,232,0.3)] cursor-pointer"
             >
               <div className="aspect-[9/16] relative overflow-hidden">
-                <Image 
-                  src={url}
-                  alt={`${name} 4K Wallpaper - ${index + 1} | Only_dias Ocean`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  unoptimized
-                />
-                
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                  <a 
-                    href={url}
-                    download={`${slug}-${index + 1}.jpg`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-4 bg-neon-cyan text-dark-bg rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(5,217,232,0.5)]"
-                  >
-                    <Download size={24} />
-                  </a>
-                  <button className="p-4 bg-white/10 backdrop-blur-md text-white rounded-full hover:scale-110 transition-transform">
-                    <Heart size={24} />
-                  </button>
+                {url.match(/\.(mp4|webm|mov)/i) ? (
+                  <video
+                    src={url}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                  />
+                ) : (
+                  <Image 
+                    src={url}
+                    alt={`${name} 4K Wallpaper - ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
+                  />
+                )}
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4 pointer-events-none">
+                  <div className="p-4 bg-neon-cyan text-dark-bg rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                    <Maximize2 size={32} />
+                  </div>
+                  <span className="font-pixel text-neon-cyan text-xl tracking-widest">VIEW FULLSCREEN</span>
                 </div>
+
+
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDownload(url, wpTitles[index]);
+                  }}
+                  className="absolute top-4 right-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-neon-pink z-10"
+                >
+                  <Download size={20} />
+                </button>
               </div>
-              <div className="p-4 bg-dark-bg/90 backdrop-blur-sm border-t border-gray-800">
-                <h3 className="font-pixel text-sm text-gray-300">{name} - 4K Edit #{index + 1}</h3>
+              <div className="p-4 bg-dark-bg/90 border-t border-gray-800 flex justify-between items-center">
+                <h3 className="font-pixel text-sm text-gray-300 tracking-wider">{wpTitles[index]}</h3>
+                <Heart size={18} className="text-gray-600 hover:text-neon-pink transition-colors" />
               </div>
             </div>
           ))}
         </div>
 
-        {/* --- Related Characters Section --- */}
         <section className="mt-32">
           <h2 className="font-pixel text-3xl text-white mb-12 text-center">
             Explore More <span className="text-neon-cyan">Characters</span>
@@ -167,18 +159,19 @@ export default async function CharacterWallpapersPage({ params }: Props) {
             ))}
           </div>
         </section>
-
-        <section className="mt-20 p-8 bg-card-bg rounded-2xl border border-gray-800 text-center">
-          <h2 className="font-pixel text-2xl text-neon-pink mb-4">Want to learn how we edit these?</h2>
-          <p className="text-gray-400 mb-8 font-body">Check out our professional workflow guide and character stories on the blog.</p>
-          <Link 
-            href="/blog"
-            className="inline-block px-10 py-4 bg-neon-cyan text-dark-bg font-pixel rounded-lg hover:bg-white transition-all shadow-[0_0_20px_rgba(5,217,232,0.4)]"
-          >
-            GO TO BLOG
-          </Link>
-        </section>
       </main>
+
+      {selectedIndex !== null && (
+        <Lightbox 
+          images={character.wallpapers}
+          titles={wpTitles}
+          selectedIndex={selectedIndex}
+          onClose={() => setSelectedIndex(null)}
+          onPrev={() => setSelectedIndex(prev => prev! > 0 ? prev! - 1 : character.wallpapers.length - 1)}
+          onNext={() => setSelectedIndex(prev => prev! < character.wallpapers.length - 1 ? prev! + 1 : 0)}
+          onDownload={handleDownload}
+        />
+      )}
 
       <Footer />
     </div>

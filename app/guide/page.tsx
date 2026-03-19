@@ -1,5 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wallpaper Installation Guide | PC, Android & iOS",
+  description: "Follow our step-by-step guide to set up static and live 4K wallpapers on Windows, Android, and iPhone.",
+  alternates: {
+    canonical: '/guide',
+  },
+};
 
 export default function GuidePage() {
   return (

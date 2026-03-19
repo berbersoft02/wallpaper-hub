@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Magnetic from "./Magnetic";
 
 export default function Navbar() {
   const [showSoonModal, setShowSoonModal] = useState(false);
@@ -42,58 +43,79 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full py-6 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50 bg-dark-bg/60 backdrop-blur-lg border-b-2 border-neon-pink/20 shadow-lg shadow-neon-cyan/10">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="rotate-3 group-hover:rotate-12 transition-transform duration-300 rounded-full bg-black/10 p-1 flex items-center justify-center">
-            <Image src="/4.png" alt="TikTok Logo" width={48} height={48} className="rounded-full object-cover w-12 h-12 shadow-[0_0_16px_4px_rgba(5,217,232,0.6)] ring-4 ring-neon-cyan bg-black/30" />
-          </div>
-          <span className="font-pixel text-3xl text-white tracking-widest group-hover:text-neon-cyan animate-glow-nav transition-all">ONLY<span className="text-neon-pink">_DIAS</span></span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Magnetic>
+            <Link href="/" className="rotate-3 hover:rotate-12 transition-transform duration-300 rounded-full bg-black/10 p-1 flex items-center justify-center">
+              <Image src="/4.png" alt="Profile" width={48} height={48} className="rounded-full object-cover w-12 h-12 shadow-[0_0_16px_4px_rgba(5,217,232,0.6)] ring-4 ring-neon-cyan bg-black/30" />
+            </Link>
+          </Magnetic>
+          <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+            <div className="bg-white p-1 rounded-sm group-hover:bg-neon-pink transition-colors duration-300">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="black"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.33-.85.51-1.44 1.43-1.58 2.41-.14.96.13 1.98.74 2.73.61.77 1.55 1.24 2.52 1.33 1.05.08 2.14-.26 2.89-1.01.76-.73 1.21-1.77 1.25-2.83.03-4.13.01-8.26.02-12.39Z"/></svg>
+            </div>
+            <span className="font-pixel text-3xl text-white tracking-widest group-hover:text-neon-cyan animate-glow-nav transition-all">ONLY<span className="text-neon-pink">_DIAS</span></span>
+          </a>
+        </div>
 
         <div className="hidden md:flex gap-8 font-pixel text-xl tracking-wide">
-          <a 
-            href="/#gallery" 
-            onClick={handleWallpapersClick}
-            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
-          >
-            WALLPAPERS
-          </a>
-          <a
-            href="/#icons"
-            onClick={handleIconsClick}
-            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer"
-          >
-            ICONS PFPS
-          </a>
-          <button 
-            onClick={() => handleSoonClick("Desktop Wallpapers")}
-            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left"
-          >
-            Desktop Wallpapers
-          </button>
-          <Link
-            href="/blog"
-            className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all"
-          >
-            BLOG
-          </Link>
-          <Link
-            href="/about"
-            className="hover:text-white hover:underline decoration-wavy underline-offset-4 transition-all"
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="/guide"
-            className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all"
-          >
-            GUIDE
-          </Link>
-          <Link 
-            href="/contact" 
-            className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all"
-          >
-            CONTACT
-          </Link>
+          <Magnetic>
+            <a 
+              href="/#gallery" 
+              onClick={handleWallpapersClick}
+              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2"
+            >
+              WALLPAPERS
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href="/#icons"
+              onClick={handleIconsClick}
+              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2"
+            >
+              ICONS PFPS
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/wallpapers/desktop-wallpapers"
+              className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left p-2"
+            >
+              Desktop Wallpapers
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/blog"
+              className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+            >
+              BLOG
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/about"
+              className="hover:text-white hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+            >
+              ABOUT
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/guide"
+              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+            >
+              GUIDE
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link 
+              href="/contact" 
+              className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+            >
+              CONTACT
+            </Link>
+          </Magnetic>
         </div>
 
         <button 
@@ -103,14 +125,16 @@ export default function Navbar() {
           {showMobileMenu ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </button>
 
-        <a 
-          href="https://www.tiktok.com/@noxzx_kb" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="hidden md:block font-pixel text-lg bg-neon-cyan text-dark-bg px-6 py-2 hover:bg-white hover:scale-105 transition-all pixel-border-pink"
-        >
-          TIKTOK
-        </a>
+        <Magnetic>
+          <a 
+            href="https://www.tiktok.com/@noxzx_kb" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden md:block font-pixel text-lg bg-neon-cyan text-dark-bg px-6 py-2 hover:bg-white hover:scale-105 transition-all pixel-border-pink"
+          >
+            TIKTOK
+          </a>
+        </Magnetic>
       </nav>
 
       {/* Mobile Menu */}
@@ -131,12 +155,13 @@ export default function Navbar() {
             >
               ICONS PFPS
             </a>
-            <button 
-              onClick={() => handleSoonClick("Desktop Wallpapers")}
+            <Link
+              href="/wallpapers/desktop-wallpapers"
+              onClick={() => setShowMobileMenu(false)}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
               Desktop Wallpapers
-            </button>
+            </Link>
             <Link
               href="/blog"
               onClick={() => setShowMobileMenu(false)}

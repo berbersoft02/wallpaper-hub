@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { X, Download, ChevronLeft, ChevronRight, Smartphone, Image as ImageIcon, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface LightboxProps {
   images: string[];
@@ -46,10 +45,8 @@ export default function Lightbox({
 
   useEffect(() => {
     const now = new Date();
-    setTimeout(() => {
-      setCurrentTime(now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
-      setCurrentDate(now.toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' }));
-    }, 0);
+    setCurrentTime(now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    setCurrentDate(now.toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' }));
   }, []);
 
   const currentUrl = images[selectedIndex];

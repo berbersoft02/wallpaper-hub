@@ -3,6 +3,7 @@ import { VT323, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
+import PageTransition from "./components/PageTransition";
 
 const pixelFont = VT323({
   weight: "400",
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "google-adsense-account": ["ca-pub-7463641924793744"],
+      "p:domain_verify": ["44ba79e2f07c396861d8b93e40cbcd81"],
     },
   },
 };
@@ -59,6 +61,9 @@ export default function RootLayout({
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
       >
+        {/* Global CRT Scanline Overlay */}
+        <div className="crt-overlay" />
+
         {/* Google Funding Choices (Consent Management) */}
         <Script
           id="google-funding-choices"
@@ -95,8 +100,23 @@ export default function RootLayout({
             gtag('config', 'G-CRV860CNKL');
           `}
         </Script>
-        {children}
+        
+        <PageTransition>
+          {children}
+        </PageTransition>
+        
         <CookieBanner />
+
+        {/* SVG Filter for Pixelated Loading */}
+        <svg className="hidden">
+          <filter id="pixelate" x="0" y="0">
+            <feFlood x="4" y="4" height="2" width="2" />
+            <feComposite width="10" height="10" />
+            <feTile result="a" />
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+            <feMorphology operator="dilate" radius="5" />
+          </filter>
+        </svg>
       </body>
     </html>
   );
