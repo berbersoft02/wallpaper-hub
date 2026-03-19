@@ -175,11 +175,6 @@ function GalleryContent() {
         params.set('image', wp.id);
         router.replace(`${pathname}?${params.toString()}`, { scroll: false });
       }
-    } else {
-      if (params.has('image')) {
-        params.delete('image');
-        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-      }
     }
   }, [selectedImageIndex, finalDisplay, loading, pathname, router, searchParams]);
 
@@ -223,8 +218,11 @@ function GalleryContent() {
   };
 
   const handleCloseLightbox = useCallback(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete('image');
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     setSelectedImageIndex(null);
-  }, []);
+  }, [searchParams, router, pathname]);
 
   const renderCharacterName = (charName: string) => {
     const formattedName = charName.replace(/-/g, ' ');

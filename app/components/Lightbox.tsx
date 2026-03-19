@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Download, ChevronLeft, ChevronRight, Smartphone, Image as ImageIcon, ZoomIn, ZoomOut, RotateCcw, Share2 } from "lucide-react";
+import { X, Download, ChevronLeft, ChevronRight, Smartphone, Image as ImageIcon, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -107,25 +107,6 @@ export default function Lightbox({
             {isPreviewMode ? <ImageIcon size={18} /> : <Smartphone size={18} />} <span className="hidden sm:inline">{isPreviewMode ? "RAW IMAGE" : "DEVICE PREVIEW"}</span>
           </button>
           <button onClick={() => onDownload(currentUrl, currentTitle)} className="p-3 bg-neon-cyan/20 hover:bg-neon-cyan text-neon-cyan hover:text-dark-bg rounded-full transition-all shadow-[0_0_15px_rgba(5,217,232,0.3)]" title="Download Wallpaper"><Download size={24} /></button>
-          <button onClick={async () => {
-            const shareUrl = "https://saidahriken.site";
-            if (navigator.share) {
-              try {
-                await navigator.share({
-                  title: currentTitle,
-                  text: 'Check out this awesome anime wallpaper from Only_dias Ocean!',
-                  url: shareUrl,
-                });
-              } catch (err) {
-                console.error('Error sharing:', err);
-              }
-            } else {
-              navigator.clipboard.writeText(shareUrl);
-              alert('Link copied to clipboard!');
-            }
-          }} className="p-3 bg-neon-pink/20 hover:bg-neon-pink text-neon-pink hover:text-white rounded-full transition-all shadow-[0_0_15px_rgba(255,42,109,0.3)]" title="Share Wallpaper">
-            <Share2 size={24} />
-          </button>
         </div>
       </div>
     </div>
