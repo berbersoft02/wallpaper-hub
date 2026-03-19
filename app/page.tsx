@@ -147,7 +147,7 @@ export default function Home() {
             <div className="space-y-4">
               <h3 className="font-pixel text-2xl text-neon-pink">Our Mission</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Only_dias Ocean isn&apos;t just another wallpaper site. It&apos;s a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
+                Only_dias Ocean isn't just another wallpaper site. It's a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
                 We specialize in <strong>4K upscaled backgrounds</strong>, color-graded edits, and exclusive static artwork from the most popular series like <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Chainsaw Man</em>.
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
               <h3 className="font-pixel text-2xl text-neon-pink">Why Choose Us?</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Unlike automated scraper sites, every image here is verified for quality. No blurry JPEGs, no watermarks. 
-                Whether you&apos;re looking for a moody cyberpunk city or a vibrant character portrait, our <strong>&quot;Special Collections&quot;</strong> filter helps you find the perfect aesthetic instantly. 
+                Whether you're looking for a moody cyberpunk city or a vibrant character portrait, our <strong>"Special Collections"</strong> filter helps you find the perfect aesthetic instantly. 
                 Join our community on TikTok to request new drops!
               </p>
             </div>
@@ -182,12 +182,12 @@ export default function Home() {
 
               <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
                 <h3 className="font-pixel text-xl text-neon-purple mb-2">Can I request a specific character?</h3>
-                <p>Absolutely! Most of our &quot;Exclusive Drops&quot; come from community requests on TikTok. You can use the &quot;Contact&quot; page or drop a comment on our latest video to suggest the next collection.</p>
+                <p>Absolutely! Most of our "Exclusive Drops" come from community requests on TikTok. You can use the "Contact" page or drop a comment on our latest video to suggest the next collection.</p>
               </div>
 
               <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
                 <h3 className="font-pixel text-xl text-white mb-2">Why do some images look different from the anime?</h3>
-                <p>We often apply color grading and lighting effects to match our &quot;Neon Ocean&quot; aesthetic. This might include enhancing the glow of a magic spell, shifting the color palette to be cooler or warmer, or adding atmospheric depth.</p>
+                <p>We often apply color grading and lighting effects to match our "Neon Ocean" aesthetic. This might include enhancing the glow of a magic spell, shifting the color palette to be cooler or warmer, or adding atmospheric depth.</p>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function Home() {
           <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
           <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
             <p>
-              HI I&apos;m DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+              HI I'm DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
             </p>
             <p>
               This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.
@@ -212,11 +212,14 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center gap-6 my-8 relative z-10">
-            <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" title="X (Twitter)">
-               <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" title="Twitter">
+               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.818 1.61-2 2c0 0-.6-1-1.5-1.5s-2.167-.764-3.5 0-2.053 2.857-2 4 .698 4.292 5 5c2.441.5 5-2 5-2s-1.64 2.357-5 2.5C7 18.5 2 14 2 14S7.5 18 13.5 17c3.505-.652 4.854-4.059 5-7 .033-.705-.019-1.405-.146-2.083C21.076 9.336 22 4 22 4Z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/said_ahriken/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-cyan transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(5,217,232,0.8)]" title="Instagram">
+               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M16.24 7.76a6 6 0 1 1-8.48 8.48 6 6 0 0 1 8.48-8.48z" /><circle cx="17.5" cy="6.5" r=".5"/></svg>
             </a>
             <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" title="TikTok">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.33-.85.51-1.44 1.43-1.58 2.41-.14.96.13 1.98.74 2.73.61.77 1.55 1.24 2.52 1.33 1.05.08 2.14-.26 2.89-1.01.76-.73 1.21-1.77 1.25-2.83.03-4.13.01-8.26.02-12.39Z"/></svg>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.8 10.47a5.13 5.13 0 0 1-2.89-.89V15a5 5 0 1 1-5-5 .76.76 0 0 1 .76.76V13a2.25 2.25 0 1 0 2.25 2.25V3.36A8.61 8.61 0 0 0 19 4.62c0 2.79 1.93 5.15 4.59 5.37V10.3a.18.18 0 0 1-.18.17Z"></path></svg>
             </a>
           </div>
 

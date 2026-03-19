@@ -30,6 +30,7 @@ export default function AnimatedBackground() {
         const top = (index * 7.5) % 100; // Distribute vertically
         const left = (index * 11.3) % 100; // Distribute horizontally
         const size = 12 + (index % 4) * 2; // Vary sizes (12-18px) - smaller range
+        const mdSize = size + 4; // Desktop size
         const opacity = 0.4 + (index % 15) * 0.01; // Vary opacity (0.4-0.55)
         
         return (

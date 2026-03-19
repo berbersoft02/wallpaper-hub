@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function IconsPage() {
   // Using some images from the public folder as "Profile Pictures"

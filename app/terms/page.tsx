@@ -1,13 +1,4 @@
 import Link from "next/link";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Terms of Service | Only_dias Ocean",
-  description: "Terms and conditions for using Only_dias Ocean wallpapers and services.",
-  alternates: {
-    canonical: '/terms',
-  },
-};
 
 export default function TermsOfService() {
   return (

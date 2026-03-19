@@ -11,146 +11,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'zenitsu-agatsuma-thunder-breathing-4k',
-    title: 'Zenitsu Agatsuma: The Golden Flash of Thunder Breathing in 4K',
-    excerpt: 'Exploring the electric and high-speed aesthetic of Zenitsu. Learn how we enhance the lightning effects and his intense combat focus for 4K displays.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Zenitsu', 'Demon Slayer', 'Thunder Breathing', 'Action', '4K'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/zenitsu-agatsuma" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-gray-900 font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(250,204,21,0.6)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE ZENITSU 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>The Sleeping Legend: Zenitsu’s God-Speed Aesthetic</h2>
-      <p>Zenitsu Agatsuma is a character of incredible contrasts. One moment he's the comedic relief, and the next, he's a golden blur of pure, lethal efficiency. His <strong>Thunder Breathing: First Form - Thunderclap and Flash</strong> is arguably the most visually striking technique in <em>Demon Slayer</em>. The jagged lightning, the debris, and the sheer sense of speed are a masterclass in animation by Ufotable.</p>
-      
-      <h2>Technical Editing: Electrifying the 4K Frame</h2>
-      <p>When upscaling Zenitsu, we focus on the <strong>Luminance of the Lightning</strong>. We use a custom "Linear Dodge" pass to make the electric sparks truly glow, which looks incredible on OLED phone screens. We also sharpen the "ink" lines of his closed eyes and determined expression to ensure that even in the middle of a high-speed attack, his character model remains razor-sharp in 4K.</p>
-
-      <p>Our collection features his most iconic "Sixfold" and "God Speed" moments. Download the set and feel the thunder on your desktop.</p>
-    `
-  },
-  {
-    slug: 'isagi-yoichi-egoist-blue-lock-4k',
-    title: 'Isagi Yoichi: The "Egoist" Puzzle Visuals of Blue Lock in 4K',
-    excerpt: 'Analyzing the visual representation of Isagi’s spatial awareness. Discover how we upscale his puzzle pieces and green "Egoist" aura for high-fidelity screens.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Isagi Yoichi', 'Blue Lock', 'Egoist', 'Sports', '4K'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/isagi-yoichi" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-green-500 via-blue-600 to-indigo-900 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(34,197,94,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE ISAGI 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>Solving the Field: Isagi’s Spatial Awareness</h2>
-      <p><em>Blue Lock</em> redefined the sports genre by turning soccer into a psychological battleground. Isagi Yoichi, the protagonist, is the ultimate "adapter." His ability to see the field as a complex <strong>Puzzle</strong> is visualized with stunning precision in the anime. The floating puzzle pieces and his intense green/indigo aura represent his evolving "Ego."</p>
-      
-      <h2>Technical Breakdown: Crafting the "Metavision" Look</h2>
-      <p>To bring Isagi to 4K, we use a <strong>Selective Color Shift</strong>. We push the greens towards a more "radioactive" teal to match the high-stakes vibe of the Blue Lock project. We also apply a 3D-depth mask to the puzzle pieces in the background, ensuring they look like they are floating in space around him. This creates a stunning sense of multi-layered depth on high-res monitors.</p>
-
-      <p>Whether he's "devouring" his rivals or scoring the winning goal, our 4K Isagi set captures the true spirit of the Egoist. Upgrade your setup with the striker who will change the world.</p>
-    `
-  },
-  {
-    slug: 'itoshi-brothers-blue-lock-rivalry-4k',
-    title: 'Rin vs Sae: The Itoshi Brothers Rivalry in High-Fidelity 4K',
-    excerpt: 'A visual comparison of Rin and Sae Itoshi’s aesthetics. Explore our technical process for upscaling the most talented brothers in Blue Lock.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Rin Itoshi', 'Sae Itoshi', 'Blue Lock', 'Rivalry', '4K'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/rin-itoshi" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-teal-600 via-emerald-400 to-cyan-500 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(20,184,166,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE ITOSHI BROTHERS 4K SET ✨
-        </a>
-      </div>
-
-      <h2>The Peak of Talent: Rin and Sae Itoshi</h2>
-      <p>The relationship between Rin and Sae Itoshi is the emotional and technical peak of <em>Blue Lock</em>. Sae represents the unattainable genius of the world stage, while Rin is the relentless monster fueled by the desire to surpass him. Their visual designs are mirrored but distinct—Sae with his reddish-brown hair and calm, analytical gaze, and Rin with his teal-tinted hair and aggressive, "monster" aura.</p>
-      
-      <h2>Technical Editing: Contrast and Aura Control</h2>
-      <p>For the Itoshi brothers, our 4K workflow focuses on <strong>Eye Intensity and Background Contrast</strong>. We use a high-pass filter specifically on their irises to make their legendary vision "pop." For Rin, we amplify the "Monstrous Aura" using dark, heavy shadows that contrast with his bright teal highlights. For Sae, we use a cleaner, more "Royal" color grade to reflect his status as a world-class midfielder.</p>
-
-      <p>This collection is a must-have for any fan who appreciates the darker, more competitive side of the series. Download the Itoshi brothers set and bring the highest level of soccer to your screen.</p>
-    `
-  },
-  {
-    slug: 'alya-kujou-roshidere-4k-aesthetic',
-    title: 'Alya Kujou: The Captivating Tsundere of "Roshidere" in 4K Aesthetic',
-    excerpt: 'A deep dive into the silver-haired elegance of Alisa Mikhailovna Kujou. Explore our technical process for upscaling Alya to 4K and why she is the definitive seasonal queen.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Alya Kujou', 'Roshidere', 'Aesthetic', '4K', 'Rom-Com'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/alya-kujou" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-400 via-white to-pink-400 text-gray-800 font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE ALYA 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>Alisa Mikhailovna Kujou: Silver-Haired Perfection</h2>
-      <p><em>Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</em>, or simply <strong>Roshidere</strong>, has taken the anime world by storm. At the center of this storm is Alya, a character who perfectly balances the "cool, unattainable beauty" archetype with an incredibly endearing hidden side. Her silver hair, striking blue eyes, and the way she mutters sweet nothings in Russian make her a visual delight for any editor.</p>
-      
-      <p>When upscaling Alya to 4K, our main focus is on <strong>Texture and Glow</strong>. Her hair requires meticulous sharpening to ensure each strand looks distinct without becoming grainy. We use a custom "Soft-Light" mask on her skin to give her that ethereal, porcelain look that Doga Kobo is famous for animating.</p>
-
-      <h2>The Russian Aesthetic: Color Grading Alya</h2>
-      <p>Unlike traditional rom-com leads, Alya's color palette is cool-toned—blues, whites, and soft greys. To make these pop on your 4K monitor, we apply a <strong>subtle teal-and-orange balance</strong>, but shifted specifically towards the highlights. This ensures that while the shadows remain deep and moody, Alya herself feels bright and "alive."</p>
-
-      <p>Our collection features her most iconic moments, from her intense classroom glares to her rare, blushing smiles. Download the full set today and bring the silver-haired princess to your desktop.</p>
-    `
-  },
-  {
-    slug: 'anna-yanami-makeine-blue-aesthetic',
-    title: 'Anna Yanami: The "Blue" Aesthetic of Makeine in High-Fidelity 4K',
-    excerpt: 'Analyzing the visual brilliance of Anna Yanami from "Makeine: Too Many Losing Heroines". Learn how we capture her vibrant energy in our latest 4K wallpaper collection.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Anna Yanami', 'Makeine', 'Blue', '4K', 'Losing Heroine'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/anna-yanami" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-600 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE ANNA 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>Anna Yanami: The Heroine Who Wins Our Hearts</h2>
-      <p><strong>Makeine</strong> has redefined the "losing heroine" trope, and Anna Yanami is the undisputed face of this movement. Her design is a burst of energy—vibrant blue hair, expressive facial animations, and a personality that ranges from comedic gluttony to genuine emotional vulnerability. A-1 Pictures outdid themselves with the lighting in this series, making every frame look like a painting.</p>
-      
-      <h2>Technical Editing: Capturing the "Summer Blue"</h2>
-      <p>Anna's aesthetic is defined by "Summer." To capture this in 4K, we use a <strong>selective saturation boost</strong> on the blue and cyan channels. We also utilize AI-based artifact removal to ensure that even the most high-motion action shots remain crisp. The result is a set of wallpapers that feel like a breath of fresh air on your screen.</p>
-
-      <p>Whether you love her for her constant snacking or her heartfelt moments, this 4K collection is a must-have for any fan of the series. The colors are specifically optimized for high-brightness IPS and OLED displays.</p>
-    `
-  },
-  {
-    slug: 'maomao-apothecary-diaries-4k-guide',
-    title: 'Maomao: The Emerald Gaze of The Apothecary Diaries in 4K Fidelity',
-    excerpt: 'A technical and aesthetic review of Maomao. Discover how we upscale the intricate details of ancient China and Maomao’s sharp expressions for modern 4K displays.',
-    date: '2026-03-19',
-    author: 'Only_dias',
-    tags: ['Maomao', 'Apothecary Diaries', 'Emerald', '4K', 'Mystery'],
-    content: `
-      <div class="flex justify-center my-8">
-        <a href="/wallpapers/maomao" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-green-600 via-green-400 to-emerald-500 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
-          ✨ GET THE MAOMAO 4K COLLECTION ✨
-        </a>
-      </div>
-
-      <h2>The Poison Taster: Maomao’s Sharp Aesthetic</h2>
-      <p><em>Kusuriya no Hitorigoto</em> (The Apothecary Diaries) is a visual masterpiece, and Maomao is its sharp, witty heart. Her design is intricate—the traditional clothing, the freckles she uses to hide her beauty, and most importantly, her calculating emerald eyes. This series offers a different kind of visual challenge: <strong>Intricate Patterns and Deep Colors</strong>.</p>
-      
-      <h2>Upscaling Ancient China: The Technical Process</h2>
-      <p>The backgrounds in Maomao's world are incredibly detailed. When upscaling to 4K, we use a <strong>De-Noise algorithm</strong> that preserves fine linework. We want the silk textures of her robes and the architectural details of the Inner Court to be perfectly visible. For Maomao herself, we focus on her eyes—adding a sharp, 1-pixel specular highlight to make her "Emerald Gaze" truly piercing.</p>
-
-      <p>Maomao represents a blend of intelligence and mystery. Our 4K set captures her in both her serious apothecary moments and her hilarious "cat-like" expressions. A perfect addition for any setup looking for a sophisticated, green-toned aesthetic.</p>
-    `
-  },
-  {
     slug: 'toji-fushiguro-sorcerer-killer-4k-guide',
     title: 'Toji Fushiguro: The Raw Intensity of the Sorcerer Killer in 4K - A 2026 Visual Analysis',
     excerpt: 'An 800+ word deep dive into the "Heavenly Restricted" aesthetic of Toji Fushiguro. Learn our technical process for editing the Sorcerer Killer for high-fidelity 4K displays.',
@@ -1125,6 +985,58 @@ export const blogPosts: BlogPost[] = [
       <div class="flex justify-center my-8">
         <a href="/?filter=Phoebe#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
           ✨ EXPLORE THE PHOEBE 4K COLLECTION ✨
+        </a>
+      </div>
+    `
+  },
+  {
+    slug: 'siesta-detective-is-already-dead-4k-guide',
+    title: 'Siesta: The Legendary Detective\'s Eternal Elegance in 4K',
+    excerpt: 'Exploring the mystery and beauty of Siesta from "The Detective Is Already Dead". A guide to our exclusive 4K wallpaper collection.',
+    date: '2026-02-14',
+    author: 'Only_dias',
+    tags: ['Siesta', 'The Detective Is Already Dead', 'Mystery', '4K', 'Aesthetic'],
+    content: `
+      <div class="flex justify-center my-8">
+        <a href="/#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ GET THE SIESTA 4K COLLECTION ✨
+        </a>
+      </div>
+
+      <h2>The Detective Who Never Truly Leaves: Siesta</h2>
+      <p><em>The Detective Is Already Dead</em> (Tantei wa Mou, Shindeiru) introduced us to one of the most enigmatic and visually stunning characters in recent years: Siesta. With her short white hair, calm demeanor, and incredible intellect, she quickly became a fan favorite. Even though the title says she's dead, her presence looms large over the entire series, and her design is a masterclass in elegant simplicity.</p>
+      <p>In this 4K collection, I focused on her "Legendary" status. I wanted to capture the mix of mystery, action, and quiet beauty that defines her character. Every frame is edited to make her look like the superstar detective she is.</p>
+
+      <div class="my-8 relative w-full aspect-[9/16] max-w-sm mx-auto rounded-lg overflow-hidden border-2 border-blue-100/50 shadow-[0_0_20px_rgba(241,245,249,0.3)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/1.jpg" alt="Siesta 4K" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Editing for Mystery: White, Blue, and Sharp Detail</h2>
+      <p>Siesta's design relies on a very clean, high-contrast palette. Here is how I brought her to life in 4K:</p>
+      <ul>
+        <li><strong>White Hair Rendering:</strong> White hair can easily look flat. I used subtle blue and purple shadows to give her hair depth and volume, ensuring it looks silky and detailed in 4K.</li>
+        <li><strong>Eye Clarity:</strong> Her blue eyes are her most striking feature. I manually enhanced the pupils and added a slight "Outer Glow" to make them pierce through the screen.</li>
+        <li><strong>Atmospheric Grading:</strong> I used cool color filters to emphasize the "detective noir" vibe of the series, making the wallpapers feel professional and sophisticated.</li>
+      </ul>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/2.jpg" alt="Siesta Smile" class="object-cover w-full h-full" />
+        </div>
+        <div class="relative aspect-[9/16] rounded-lg overflow-hidden border border-gray-800 shadow-lg">
+          <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/The%20Detective%20Is%20Already%20Dead/3.jpg" alt="Siesta Action" class="object-cover w-full h-full" />
+        </div>
+      </div>
+
+      <h2>Setup Recommendation</h2>
+      <p>Siesta wallpapers are perfect for <strong>Minimalist or High-Tech setups</strong>. Pair her with cool white or soft blue RGB lighting to create a clean, modern look. For mobile, her close-up portraits make for a very elegant and intelligent-looking home screen.</p>
+
+      <h2>Conclusion</h2>
+      <p>Siesta reminds us that a true legend never dies. This 4K collection is our tribute to her eternal elegance. Download the set and let the legendary detective protect your screen! Check out my <a href="/blog/shouko-nishimiya-silent-voice-4k-guide" class="text-neon-cyan">Shouko Nishimiya</a> collection for more quiet beauty.</p>
+
+      <div class="flex justify-center my-8">
+        <a href="/#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+          ✨ EXPLORE THE SIESTA 4K COLLECTION ✨
         </a>
       </div>
     `

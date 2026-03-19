@@ -1,13 +1,4 @@
 import Link from "next/link";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Privacy Policy | Only_dias Ocean",
-  description: "Learn how Only_dias Ocean collects, uses, and protects your personal data.",
-  alternates: {
-    canonical: '/privacy',
-  },
-};
 
 export default function PrivacyPolicy() {
   return (

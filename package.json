@@ -9,18 +9,16 @@
     "lint": "eslint",
     "upload-images": "node scripts/upload-to-cloudinary.js",
     "upload-shiina": "node scripts/upload-shiina.js",
+    "upload-rin-shima": "node scripts/upload-rin-shima.js",
     "upload-rin-shima": "node scripts/upload-rin-shima.js"
   },
   "dependencies": {
     "cloudinary": "^2.8.0",
-    "framer-motion": "^12.36.0",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-tsparticles": "^2.12.2",
-    "resend": "^6.7.0",
-    "tsparticles-slim": "^2.12.0"
+    "resend": "^6.7.0"
   },
   "devDependencies": {
     "@types/node": "^20",
