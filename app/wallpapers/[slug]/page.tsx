@@ -19,7 +19,7 @@ export default function CharacterWallpapersPage({ params }: Props) {
   const { slug } = use(params);
   const character = getCharacterBySlug(slug);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const { toggleFavorite, isFavorite } = useFavorites<any>("wallpapers-favs");
+  const { toggleFavorite, isFavorite } = useFavorites<Record<string, unknown>>("wallpapers-favs");
 
   const name = character?.name.replace(' ♡', '') || '';
 

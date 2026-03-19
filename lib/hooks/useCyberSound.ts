@@ -4,7 +4,7 @@ import { useCallback } from "react";
 
 export function useCyberSound() {
   const playSound = useCallback((type: 'hover' | 'click' | 'glitch') => {
-    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+    const AudioContext = window.AudioContext || (window as unknown as { webkitAudioContext: typeof window.AudioContext }).webkitAudioContext;
     if (!AudioContext) return;
 
     const ctx = new AudioContext();

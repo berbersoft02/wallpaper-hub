@@ -20,7 +20,7 @@ export default function SpotlightCard({
   const [opacity, setOpacity] = useState(0);
 
   // Separate motion-conflicting props
-  const { onDrag, onDragStart, onDragEnd, ...safeProps } = props as any;
+  const { onDrag, onDragStart, onDragEnd, ...safeProps } = props as Record<string, unknown> & { onDrag?: unknown, onDragStart?: unknown, onDragEnd?: unknown };
 
   // Motion values for 3D Tilt
   const x = useMotionValue(0);

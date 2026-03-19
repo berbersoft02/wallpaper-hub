@@ -4,15 +4,12 @@ import { Menu, X, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Magnetic from "./Magnetic";
 import { getAllCharacters, slugify } from "@/lib/utils";
 
 export default function Navbar() {
-  const [showSoonModal, setShowSoonModal] = useState(false);
-  const [soonTitle, setSoonTitle] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const pathname = usePathname();
   const router = useRouter();
 
   const handleRandomCharacter = () => {
@@ -21,12 +18,6 @@ export default function Navbar() {
       const randomChar = chars[Math.floor(Math.random() * chars.length)];
       router.push(`/wallpapers/${slugify(randomChar.name)}`);
     }
-    setShowMobileMenu(false);
-  };
-
-  const handleSoonClick = (title: string) => {
-    setSoonTitle(title);
-    setShowSoonModal(true);
     setShowMobileMenu(false);
   };
 

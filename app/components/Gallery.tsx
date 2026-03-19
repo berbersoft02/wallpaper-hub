@@ -1,12 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal, Loader2, Palette, Star } from "lucide-react";
+import { Heart, X, Terminal, Star } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect, useCallback, Suspense, useMemo, useRef } from "react";
+import { useState, useEffect, Suspense, useMemo } from "react";
 import SpotlightCard from "./SpotlightCard";
 import { useSearchParams } from "next/navigation";
-import { slugify } from "@/lib/utils";
-import Link from "next/link";
 import Lightbox from "./Lightbox";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
@@ -27,7 +26,7 @@ interface CharacterData {
   tags?: string[];
 }
 
-function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...props }: any) {
+function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...props }: Record<string, unknown> & { src: string, alt: string, className?: string, fill?: boolean, width?: number, height?: number, unoptimized?: boolean }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const isVideo = src.match(/\.(mp4|webm)/i);
 
@@ -82,7 +81,6 @@ function GalleryContent() {
   const [recommendationForm, setRecommendationForm] = useState({ name: '', email: '', message: '' });
   const [sending, setSending] = useState(false);
   const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   const { favorites, toggleFavorite, isFavorite } = useFavorites<Wallpaper>("wallpapers-favs");
 
@@ -118,12 +116,12 @@ function GalleryContent() {
             }
           });
 
-          const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
-          const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
+          const priorityDataList = priorityNames.map(name => priorityChars.find((c: CharacterData) => c.name === name)).filter(Boolean);
+          const maxLength = Math.max(...priorityDataList.map((c: unknown) => (c as CharacterData).wallpapers.length), 0);
 
           for (let i = maxLength - 1; i >= 0; i--) {
              for (let j = priorityDataList.length - 1; j >= 0; j--) {
-                const char: any = priorityDataList[j];
+                const char = priorityDataList[j] as CharacterData;
                 if (char.wallpapers[i]) {
                   allWallpapers.push({ id: `${char.name}-${i}`, url: char.wallpapers[i], character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
                 }
@@ -135,8 +133,7 @@ function GalleryContent() {
           setCharacters(Array.from(new Set(animeNames)).sort());
         }
       } catch (err) {
-        console.error(err);
-        setError('Failed to load wallpapers.');
+        console.error("Failed to load wallpapers:", err);
       } finally {
         setLoading(false);
       }

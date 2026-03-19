@@ -147,7 +147,7 @@ export default function Home() {
             <div className="space-y-4">
               <h3 className="font-pixel text-2xl text-neon-pink">Our Mission</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Only_dias Ocean isn't just another wallpaper site. It's a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
+                Only_dias Ocean isn&apos;t just another wallpaper site. It&apos;s a curated gallery of high-resolution, hand-picked anime art designed to elevate your desktop and mobile screens. 
                 We specialize in <strong>4K upscaled backgrounds</strong>, color-graded edits, and exclusive static artwork from the most popular series like <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Chainsaw Man</em>.
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
               <h3 className="font-pixel text-2xl text-neon-pink">Why Choose Us?</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Unlike automated scraper sites, every image here is verified for quality. No blurry JPEGs, no watermarks. 
-                Whether you're looking for a moody cyberpunk city or a vibrant character portrait, our <strong>"Special Collections"</strong> filter helps you find the perfect aesthetic instantly. 
+                Whether you&apos;re looking for a moody cyberpunk city or a vibrant character portrait, our <strong>&quot;Special Collections&quot;</strong> filter helps you find the perfect aesthetic instantly. 
                 Join our community on TikTok to request new drops!
               </p>
             </div>
@@ -182,12 +182,12 @@ export default function Home() {
 
               <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
                 <h3 className="font-pixel text-xl text-neon-purple mb-2">Can I request a specific character?</h3>
-                <p>Absolutely! Most of our "Exclusive Drops" come from community requests on TikTok. You can use the "Contact" page or drop a comment on our latest video to suggest the next collection.</p>
+                <p>Absolutely! Most of our &quot;Exclusive Drops&quot; come from community requests on TikTok. You can use the &quot;Contact&quot; page or drop a comment on our latest video to suggest the next collection.</p>
               </div>
 
               <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
                 <h3 className="font-pixel text-xl text-white mb-2">Why do some images look different from the anime?</h3>
-                <p>We often apply color grading and lighting effects to match our "Neon Ocean" aesthetic. This might include enhancing the glow of a magic spell, shifting the color palette to be cooler or warmer, or adding atmospheric depth.</p>
+                <p>We often apply color grading and lighting effects to match our &quot;Neon Ocean&quot; aesthetic. This might include enhancing the glow of a magic spell, shifting the color palette to be cooler or warmer, or adding atmospheric depth.</p>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function Home() {
           <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
           <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
             <p>
-              HI I'm DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+              HI I&apos;m DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
             </p>
             <p>
               This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.

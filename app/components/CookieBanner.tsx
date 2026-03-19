@@ -10,7 +10,7 @@ export default function CookieBanner() {
     // Check if user has already accepted
     const accepted = localStorage.getItem("cookieConsent");
     if (!accepted) {
-      setShow(true);
+      setTimeout(() => setShow(true), 100);
     }
   }, []);
 

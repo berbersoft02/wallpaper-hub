@@ -9,7 +9,8 @@ export function useFavorites<T extends { id: string | number }>(key: string) {
     const saved = localStorage.getItem(key);
     if (saved) {
       try {
-        setFavorites(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        setTimeout(() => setFavorites(parsed), 0);
       } catch (e) {
         console.error("Failed to parse favorites", e);
       }

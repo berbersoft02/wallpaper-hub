@@ -12,7 +12,7 @@ const apiSecret = process.env.CLOUDINARY_API_SECRET;
 // Create a map of tags from the JSON file
 const tagMap: Record<string, string[]> = {};
 if (wallpapersData.characters) {
-  wallpapersData.characters.forEach((char: any) => {
+  wallpapersData.characters.forEach((char: { name: string; tags?: string[] }) => {
     if (char.tags) {
       tagMap[char.name] = char.tags;
     }
@@ -69,7 +69,7 @@ function normalizeName(name: string) {
     'ISAGI YOICHI': 'Isagi Yoichi',
   };
   
-  let clean = name.trim();
+  const clean = name.trim();
   if (clean.includes('Give some recommendations')) return 'Hina Chono';
   
   // Apply map
@@ -81,7 +81,7 @@ function normalizeName(name: string) {
 }
 
 async function fetchAll(resourceType: 'image' | 'video') {
-  let list: any[] = [];
+  const list: unknown[] = [];
   let nextCursor: string | undefined = undefined;
   let pages = 0;
   
