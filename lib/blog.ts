@@ -11,6 +11,57 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'eren-and-mikasa-attack-on-titan-tragedy-4k',
+    title: 'Eren and Mikasa: A Bond Beyond the Walls – The Ultimate 4K Visual Story',
+    excerpt: 'A deep, emotional exploration of the tragic relationship between Eren Jaeger and Mikasa Ackerman. Discover how we captured their most iconic 4K moments.',
+    date: '2026-03-19',
+    author: 'Only_dias',
+    tags: ['Eren Jaeger', 'Mikasa Ackerman', 'AOT', '4K', 'Character Story', 'Tragedy'],
+    content: `
+      <div class="flex justify-center my-8 gap-4">
+        <a href="/wallpapers/eren-jaeger" class="no-underline inline-block px-6 py-4 bg-gradient-to-r from-orange-900 via-red-800 to-black text-white font-pixel text-lg rounded-xl shadow-[0_0_20px_rgba(153,27,27,0.5)] hover:shadow-[0_0_35px_rgba(239,68,68,0.7)] transition-all hover:scale-105 active:scale-95 text-center">
+          🔥 EREN 4K COLLECTION
+        </a>
+        <a href="/wallpapers/mikassa-ackerman" class="no-underline inline-block px-6 py-4 bg-gradient-to-r from-red-700 via-gray-800 to-black text-white font-pixel text-lg rounded-xl shadow-[0_0_20px_rgba(185,28,28,0.5)] hover:shadow-[0_0_35px_rgba(220,38,38,0.7)] transition-all hover:scale-105 active:scale-95 text-center">
+          🧣 MIKASA 4K COLLECTION
+        </a>
+      </div>
+
+      <h2>The Scarf and the Titan: An Unbreakable Connection</h2>
+      <p>From the moment Eren wrapped that red scarf around Mikasa, their fates were sealed. <em>Attack on Titan</em> (Shingeki no Kyojin) is a story about many things—freedom, war, and the cycle of hatred—but at its core, it is the story of Eren Jaeger and Mikasa Ackerman. Their bond is one of the most complex and heartbreaking in all of anime, moving from childhood protectors to reluctant enemies on opposite sides of the world's end.</p>
+      
+      <p>When creating our <strong>Eren & Mikasa 4K Archive</strong>, we wanted to reflect this emotional weight. We didn't just want "cool action shots"; we wanted to capture the look in their eyes—the determination in Eren's and the unwavering devotion in Mikasa's.</p>
+
+      <div class="my-8 relative w-full aspect-[16/9] rounded-lg overflow-hidden border-2 border-red-900/50 shadow-[0_0_30px_rgba(153,27,27,0.4)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1771791907/wallpapers/Eren%20Jaeger/6.jpg" alt="Eren Jaeger 4K Final Season" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Eren Jaeger: The Pursuit of Freedom</h2>
+      <p>Eren’s visual evolution is one of the most drastic in the series. He begins as a bright-eyed boy filled with rage and ends as the "Final Boss" of the world. Editing Eren for 4K requires a specific focus on <strong>Atmospheric Grit</strong>. In his Final Season (MAPPA) design, Eren is defined by shadows and heavy line-work. We use a custom "HDR-Pop" filter to ensure that his long hair and the intense lighting from the Founding Titan’s transformation are perfectly clear without losing the intended darkness of the scene.</p>
+      
+      <h2>Mikasa Ackerman: The Strength of Love</h2>
+      <p>Mikasa is the peak of human physical perfection, a product of the Ackerman lineage. Her design is sharp, clean, and efficient. When upscaling Mikasa to 4K, our technical priority is <strong>Edge Clarity</strong>. Because she moves so fast in the animation, many raw frames have motion blur. We use AI-deblurring to recover the sharp details of her ODM gear and the texture of her signature red scarf. We want the user to see every stitch in that fabric—the symbol of her connection to Eren.</p>
+
+      <div class="my-8 relative w-full aspect-[16/9] rounded-lg overflow-hidden border-2 border-gray-700/50 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+        <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/v1773754508/6_v5xtdq.jpg" alt="Mikassa Ackerman 4K Aesthetic" class="object-cover w-full h-full" />
+      </div>
+
+      <h2>Technical Process: Color Grading the End of the World</h2>
+      <p>The color palette of AOT changes as the story progresses. To make these wallpapers feel cohesive, we apply a <strong>Cinematic Color Grade</strong> that emphasizes "Sunset Orange" and "Deep Charcoal." This reflects the "Final Chapters" vibe where the world is literally burning. For Mikasa, we slightly boost the red channel specifically for her scarf, making it the focal point of her images even in a desaturated battlefield.</p>
+
+      <h2>Setup Recommendation: The Jaegerist Theme</h2>
+      <p>Eren and Mikasa wallpapers are best suited for <strong>Low-Light setups</strong>. If you have a room with warm, amber RGB lighting or a minimalist black desk, these 4K images will look incredible. For mobile, we highly recommend using the "Founder Eren" look for your lock screen—it's an instant statement of power and mystery.</p>
+
+      <p>Explore both collections today. Whether you stand with the Rumbling or with the Scouts who fought to stop it, these 4K edits are our tribute to the masterpiece that is Shingeki no Kyojin.</p>
+
+      <div class="flex justify-center my-8">
+        <a href="/wallpapers/eren-jaeger" class="no-underline inline-block px-10 py-5 bg-black text-white border-2 border-red-600 font-pixel text-xl rounded-full shadow-[0_0_25px_rgba(220,38,38,0.5)] hover:shadow-[0_0_40px_rgba(220,38,38,0.8)] transition-all hover:scale-110 active:scale-95 text-center uppercase tracking-widest">
+          ⚔️ VIEW THE FULL AOT 4K ARCHIVE ⚔️
+        </a>
+      </div>
+    `
+  },
+  {
     slug: 'anna-yanami-makeine-blue-aesthetic-4k',
     title: 'Anna Yanami: The "Blue" Aesthetic of Makeine in High-Fidelity 4K',
     excerpt: 'Analyzing the visual brilliance of Anna Yanami from "Makeine: Too Many Losing Heroines". Learn how we capture her vibrant energy in our latest 4K wallpaper collection.',
