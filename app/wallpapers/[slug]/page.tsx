@@ -6,9 +6,10 @@ import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Download, Heart, Maximize2 } from 'lucide-react';
+import { Download, Heart, Maximize2, BookOpen } from 'lucide-react';
 import { useState, use, useMemo } from 'react';
 import Lightbox from '@/app/components/Lightbox';
+import { getPostByCharacterName } from '@/lib/blog';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,6 +21,7 @@ export default function CharacterWallpapersPage({ params }: Props) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const name = character?.name.replace(' ♡', '') || '';
+  const blogPost = character ? getPostByCharacterName(character.name) : undefined;
 
   const handleDownload = (url: string, title: string) => {
     const isVideo = url.match(/\.(mp4|webm|mov)/i);
@@ -75,6 +77,19 @@ export default function CharacterWallpapersPage({ params }: Props) {
               </span>
             ))}
           </div>
+
+          {blogPost && (
+            <Link 
+              href={`/blog/${blogPost.slug}`}
+              className="inline-flex items-center gap-3 px-6 py-3 bg-neon-cyan/10 hover:bg-neon-cyan/20 border border-neon-cyan/30 hover:border-neon-cyan rounded-xl transition-all duration-300 mb-8 group"
+            >
+              <BookOpen className="text-neon-cyan group-hover:scale-110 transition-transform" size={24} />
+              <div className="text-left">
+                <p className="text-[10px] font-pixel text-neon-cyan/60 uppercase tracking-widest leading-none mb-1">Deep Dive Article</p>
+                <p className="font-pixel text-sm text-white group-hover:text-neon-cyan transition-colors line-clamp-1">{blogPost.title}</p>
+              </div>
+            </Link>
+          )}
 
           <p className="text-gray-400 max-w-2xl mx-auto font-body text-lg leading-relaxed">
             Premium 4K upscaled wallpapers of <span className="text-white font-bold">{name}</span>. Optimized for all screen sizes with custom color grading.

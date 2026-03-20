@@ -4617,3 +4617,11 @@ export function getAllPosts(): BlogPost[] {
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+
+export function getPostByCharacterName(name: string): BlogPost | undefined {
+  const normalizedName = name.toLowerCase().replace('â™¡', '').trim();
+  return blogPosts.find((post) => 
+    post.tags.some(tag => tag.toLowerCase().includes(normalizedName)) ||
+    post.title.toLowerCase().includes(normalizedName)
+  );
+}
