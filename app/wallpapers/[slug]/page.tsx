@@ -134,6 +134,47 @@ export default function CharacterWallpapersPage({ params }: Props) {
           ))}
         </div>
 
+        <section className="mt-32 prose prose-invert max-w-none">
+          <div className="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl">
+            <h2 className="font-pixel text-3xl text-neon-cyan mb-8 uppercase tracking-widest">
+              About the <span className="text-neon-pink">{name}</span> Collection
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-body text-gray-300 leading-relaxed text-lg">
+              <div>
+                <h3 className="text-white font-pixel text-xl mb-4">The Character & Aesthetic</h3>
+                <p className="mb-6">
+                  {name} is more than just a character; they represent a specific visual energy in the anime world. Whether it&apos;s the sharp, aggressive lines of a Shonen battle or the soft, ethereal glow of a slice-of-life masterpiece, our collection captures every nuance. This gallery is specifically curated to highlight the emotional weight and iconic scenes that fans associate with {name}.
+                </p>
+                <p>
+                  From the intricate details of their outfit to the atmospheric lighting of their signature environment, these edits are designed to evoke the same feelings you got while watching the series. We focus on color harmony, ensuring that your desktop or mobile setup feels unified and professional.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-white font-pixel text-xl mb-4">Technical Excellence: 4K & Beyond</h3>
+                <p className="mb-6">
+                  Every image in this {name} archive has undergone a rigorous restoration process. We start with high-bitrate source material and use custom <strong>AI Upscaling models (Real-ESRGAN and Topaz Photo AI)</strong> to reach true 3840x2160 resolution without the typical "waxiness" of cheap filters.
+                </p>
+                <ul className="space-y-4 text-sm font-mono bg-black/30 p-4 rounded-lg border border-gray-800">
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Custom Color Grading:</strong> Adjusted for modern OLED and High-Refresh Rate displays.</li>
+                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>Denoising:</strong> Cleaned artifacts while preserving the original animation grain.</li>
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Display Optimization:</strong> Verified for both 16:9 desktop and 9:16 mobile viewing.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-gray-800">
+              <h3 className="text-white font-pixel text-xl mb-6">Pro Tip: Optimizing for Your Display</h3>
+              <div className="bg-neon-cyan/5 p-6 rounded-xl border border-neon-cyan/20">
+                <p className="text-gray-300 italic mb-0">
+                  To get the most out of these {name} wallpapers, we recommend setting your display brightness to 80% and ensuring HDR is enabled if supported. For mobile users, these 4K PNGs are perfect for "Depth Effect" on iOS 16+, where the character can slightly overlap the clock for a premium 3D look.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mt-32">
           <h2 className="font-pixel text-3xl text-white mb-12 text-center">
             Explore More <span className="text-neon-cyan">Characters</span>

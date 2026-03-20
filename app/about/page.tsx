@@ -1,100 +1,77 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Image from "next/image";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Only_dias Ocean | Our Journey & Vision",
-  description: "Learn about the vision behind Only_dias Ocean. From TikTok edits to a curated gallery of high-resolution 4K anime wallpapers.",
-  alternates: {
-    canonical: '/about',
-  },
-};
+import Navbar from '@/app/components/Navbar';
+import Footer from '@/app/components/Footer';
+import Image from 'next/image';
+import { Terminal, Cpu, Camera, Palette, Globe, Heart } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-dark-bg text-white font-body">
+    <div className="min-h-screen bg-dark-bg text-white">
       <Navbar />
       
-      <main className="max-w-5xl mx-auto px-4 py-20">
-        <h1 className="font-pixel text-4xl md:text-6xl text-neon-cyan mb-12 text-center drop-shadow-[0_0_24px_rgba(5,217,232,0.8)]">
-          ABOUT THE <span className="text-neon-pink">OCEAN</span>
-        </h1>
+      <main className="max-w-4xl mx-auto px-4 py-20">
+        <header className="text-center mb-16">
+          <h1 className="font-pixel text-4xl md:text-6xl text-neon-cyan mb-6 drop-shadow-[0_0_20px_rgba(5,217,232,0.5)]">
+            BEHIND THE <span className="text-neon-pink">LENS</span>
+          </h1>
+          <p className="font-body text-gray-400 text-xl tracking-wide">
+            From Blida to the World: My Journey in Anime Art Curation.
+          </p>
+        </header>
 
-        <div className="space-y-16">
-          {/* Section 1: The Vision */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="font-pixel text-3xl text-neon-pink">The Vision</h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Only_dias Ocean was born out of a simple frustration: the lack of truly high-quality, curated anime wallpapers. While the internet is full of "wallpaper dump" sites, most are cluttered with low-resolution images, watermarks, and poor compositions.
-              </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Our mission is to provide a premium, boutique experience for anime fans. Every single image on this site has been manually selected, upscaled to 4K resolution using professional AI tools, and color-graded to ensure it looks stunning on modern high-refresh-rate monitors and mobile screens.
-              </p>
-            </div>
-            <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-neon-cyan/30 shadow-[0_0_32px_rgba(5,217,232,0.2)]">
-              <Image src="/4.png" alt="Aesthetic Scenery" fill className="object-cover w-full h-full" unoptimized />
-            </div>
-          </section>
-
-          {/* Section 2: The Journey (From TikTok to Desktop) */}
-          <section className="bg-card-bg p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-neon-pink/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <div className="relative z-10 space-y-8">
-              <h2 className="font-pixel text-3xl text-neon-cyan text-center">From TikTok to Desktop</h2>
-              
-              <div className="max-w-3xl mx-auto text-gray-300 text-lg space-y-6 leading-relaxed">
-                <p>
-                  Hi, I'm <strong>DIAS</strong>, the creator behind <strong>Only_dias</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.
-                </p>
-                
-                <h3 className="font-pixel text-xl text-neon-pink">The TikTok Boom</h3>
-                <p>
-                  I started posting my simple "Before vs. After" edits on TikTok just for fun. I didn't expect anyone to care. But the algorithm is funny. One video of a <em>Jujutsu Kaisen</em> upscale blew up. People were commenting "Link?", "Where can I get this?", "Do you have a PC version?". I realized there was a huge gap in the market. People wanted high-quality, curated art, not just Google Images spam.
-                </p>
-                <p>
-                  I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.
-                </p>
-
-                <h3 className="font-pixel text-xl text-neon-cyan">Building the Ocean</h3>
-                <p>
-                  TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.
-                </p>
-                <p>
-                  I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 3: Information & Quality */}
-          <section className="space-y-8">
-            <h2 className="font-pixel text-3xl text-white text-center underline decoration-neon-pink underline-offset-8">Our Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 bg-dark-bg/50 border border-gray-800 rounded-xl hover:border-neon-cyan transition-colors group">
-                <h3 className="font-pixel text-xl text-neon-cyan mb-3 group-hover:drop-shadow-[0_0_8px_rgba(5,217,232,0.5)]">1. Curating</h3>
-                <p className="text-gray-400 text-sm">We hunt for the most iconic and visually striking frames from the latest anime episodes and classic films.</p>
-              </div>
-              <div className="p-6 bg-dark-bg/50 border border-gray-800 rounded-xl hover:border-neon-pink transition-colors group">
-                <h3 className="font-pixel text-xl text-neon-pink mb-3 group-hover:drop-shadow-[0_0_8px_rgba(255,42,109,0.5)]">2. Enhancing</h3>
-                <p className="text-gray-400 text-sm">Using Adobe Photoshop and Topaz AI, we upscale images to 4K, remove artifacts, and sharpen every detail.</p>
-              </div>
-              <div className="p-6 bg-dark-bg/50 border border-gray-800 rounded-xl hover:border-neon-purple transition-colors group">
-                <h3 className="font-pixel text-xl text-neon-purple mb-3 group-hover:drop-shadow-[0_0_8px_rgba(211,0,197,0.5)]">3. Finalizing</h3>
-                <p className="text-gray-400 text-sm">We apply a custom color grade to match our signature "Neon Ocean" aesthetic before uploading.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 4: Informative Content */}
-          <section className="bg-neon-cyan/5 border-2 border-dashed border-neon-cyan/20 p-8 rounded-2xl text-center">
-            <h2 className="font-pixel text-2xl text-neon-cyan mb-4">Why inform the user?</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              We believe a wallpaper site should be more than just a gallery. That's why we produce in-depth articles on our <a href="/blog" className="text-neon-pink underline">blog</a> about character design, color theory, and technical guides on how to make your own edits. We are here to inspire the next generation of anime creators.
+        <section className="prose prose-invert max-w-none font-body text-lg leading-relaxed text-gray-300">
+          <div className="bg-card-bg border-2 border-gray-800 p-8 rounded-2xl mb-12 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+            <h2 className="font-pixel text-2xl text-neon-pink mb-6 flex items-center gap-3">
+              <Globe className="text-neon-cyan" /> THE ORIGIN STORY
+            </h2>
+            <p>
+              My journey didn&apos;t start in a high-tech studio. It started in <strong>Blida, Algeria</strong>, with a passion for anime and a very slow internet connection. Back then, finding high-quality wallpapers for my favorite series like <em>Demon Slayer</em> or <em>Jujutsu Kaisen</em> was a struggle. Most images were compressed, blurry, or watermarked.
             </p>
-          </section>
-        </div>
+            <p>
+              I began experimenting with basic upscaling techniques, trying to fix the images I loved. This hobby turned into an obsession when I moved to <strong>France</strong>. Surrounded by a vibrant tech and art scene, I realized that many others shared my frustration. They wanted their desktops to look as crisp as the original animation frames.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-xl">
+              <h3 className="font-pixel text-neon-cyan mb-4 flex items-center gap-2">
+                <Cpu size={20} /> THE TECH STACK
+              </h3>
+              <ul className="space-y-3 text-sm font-mono">
+                <li className="flex justify-between"><span>Upscaling:</span> <span className="text-neon-pink">Real-ESRGAN / Topaz</span></li>
+                <li className="flex justify-between"><span>Editing:</span> <span className="text-neon-pink">Adobe Photoshop 2024</span></li>
+                <li className="flex justify-between"><span>Color Grading:</span> <span className="text-neon-pink">Lightroom Classic</span></li>
+                <li className="flex justify-between"><span>Frontend:</span> <span className="text-neon-pink">Next.js 15 / Tailwind</span></li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-800 p-6 rounded-xl">
+              <h3 className="font-pixel text-neon-pink mb-4 flex items-center gap-2">
+                <Heart size={20} /> THE MISSION
+              </h3>
+              <p className="text-sm">
+                To create the ultimate archive of 4K anime art. Every image on this site is manually curated, upscaled using custom AI models, and color-corrected to ensure it looks perfect on high-end OLED and IPS monitors.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="font-pixel text-2xl text-white mb-6">WHY I DO THIS</h2>
+          <p>
+            Anime is more than just entertainment; it&apos;s a visual language. The way Ufotable handles light in <em>Fate/stay night</em> or the way MAPPA handles grit in <em>Chainsaw Man</em> deserves to be seen in full 2160p glory. 
+          </p>
+          <p>
+            This website is my contribution to the community. No ads that cover the content, no hidden subscription fees—just pure, high-resolution art for fans, by a fan.
+          </p>
+
+          <div className="mt-16 p-8 bg-gradient-to-r from-neon-cyan/10 to-neon-pink/10 border border-white/10 rounded-2xl text-center">
+            <h3 className="font-pixel text-xl mb-4 text-white">WANT TO COLLABORATE?</h3>
+            <p className="mb-6">I&apos;m always looking for talented artists and editors to feature.</p>
+            <a 
+              href="https://www.tiktok.com/@only_dias" 
+              className="inline-block bg-white text-black font-pixel px-8 py-3 rounded-full hover:bg-neon-cyan hover:text-white transition-all transform hover:scale-105"
+            >
+              CONTACT VIA TIKTOK
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />
