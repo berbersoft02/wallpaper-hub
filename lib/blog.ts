@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
       <p>Whether you're a fan of the light novel, the manga, or the incredible anime adaptation, this 4K collection is the definitive way to experience Anna's world. Download the full set today and celebrate the most "winning" losing heroine in history.</p>
 
       <div class="flex justify-center my-8">
-        <a href="/wallpapers/anna-yanami" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-600 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
+        <a href="/?filter=Mixed#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-600 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
           ✨ EXPLORE THE FULL ANNA 4K ARCHIVE ✨
         </a>
       </div>
@@ -4619,7 +4619,36 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getPostByCharacterName(name: string): BlogPost | undefined {
-  const normalizedName = name.toLowerCase().replace('â™¡', '').trim();
+  const normalizedName = name.toLowerCase().replace(' ♡', '').replace(' ♡', '').trim();
+  
+  // Direct mappings for characters whose names might not match tags perfectly
+  const directMappings: Record<string, string> = {
+    'anna yanami': 'anna-yanami-makeine-blue-aesthetic-4k',
+    'zero two': 'zero-two-editing-process',
+    'frieren': 'frieren-4k-wallpapers-guide',
+    'eren jaeger': 'eren-and-mikasa-attack-on-titan-tragedy-4k',
+    'mikasa ackerman': 'eren-and-mikasa-attack-on-titan-tragedy-4k',
+    'akaza': 'akaza-demon-slayer-tragic-hero-4k',
+    'toji fushiguro': 'toji-fushiguro-sorcerer-killer-4k-guide',
+    'nishimiya shouko': 'shouko-nishimiya-silent-voice-4k-guide',
+    'elaina': 'elaina-wandering-witch-4k-guide',
+    'mai sakurajima': 'mai-sakurajima-bunny-girl-senpai-4k-guide',
+    'nakano nino': 'nino-nakano-tsundere-energy-4k-guide',
+    'rias gremory': 'rias-gremory-high-school-dxd-4k-guide',
+    'rin shima': 'rin-shima-laid-back-camp-cozy-4k-guide',
+    'shikimori micchon': 'shikimori-4k-wallpapers-guide',
+    'shiina mahiru': 'shiina-mahiru-4k-wallpapers-guide',
+    'kano chinatsu': 'blue-box-chinatsu-hina-4k-guide',
+    'hina chono': 'blue-box-chinatsu-hina-4k-guide',
+    'yuki suou': 'yuki-suou-4k-wallpapers-guide',
+    'alya kujou': 'alya-kujou-tsundere-editing-guide',
+    'kana arima': 'kana-arima-4k-wallpapers-guide'
+  };
+
+  if (directMappings[normalizedName]) {
+    return getPostBySlug(directMappings[normalizedName]);
+  }
+
   return blogPosts.find((post) => 
     post.tags.some(tag => tag.toLowerCase().includes(normalizedName)) ||
     post.title.toLowerCase().includes(normalizedName)
