@@ -3709,6 +3709,7 @@ export const blogPosts: BlogPost[] = [
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -3752,6 +3753,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -3792,6 +3794,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -3822,6 +3825,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -3852,6 +3856,7 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
@@ -3881,6 +3886,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -3912,6 +3918,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -3934,6 +3941,7 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
@@ -3956,6 +3964,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -3978,6 +3987,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
+    author: 'Only_dias',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
@@ -4000,6 +4010,7 @@ export const blogPosts: BlogPost[] = [
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -4043,6 +4054,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -4083,6 +4095,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -4113,6 +4126,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -4143,6 +4157,7 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
@@ -4172,6 +4187,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -4203,6 +4219,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -4225,6 +4242,7 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
@@ -4247,6 +4265,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -4269,6 +4288,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
+    author: 'Only_dias',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
@@ -4291,6 +4311,7 @@ export const blogPosts: BlogPost[] = [
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -4334,6 +4355,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -4374,6 +4396,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -4404,6 +4427,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -4434,6 +4458,7 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
@@ -4463,6 +4488,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -4494,6 +4520,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -4516,6 +4543,7 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
+    author: 'Only_dias',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
@@ -4538,6 +4566,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
+    author: 'Only_dias',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -4560,6 +4589,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
+    author: 'Only_dias',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
