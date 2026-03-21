@@ -3,7 +3,7 @@
 import { Download, Heart, Star } from "lucide-react";
 import Image from "next/image";
 import { useState, useMemo } from "react";
-import SpotlightCard from "./SpotlightCard";
+import { GlowCard } from "./ui/spotlight-card";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
 
@@ -70,13 +70,13 @@ export default function IconsPFPs() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredIcons.slice(0, displayCount).map((icon) => (
-            <SpotlightCard 
+            <GlowCard 
               key={icon.id}
-              onMouseEnter={() => playSound('hover')}
-              className="group relative bg-card-bg border border-gray-800 hover:border-neon-purple transition-all duration-500 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(211,0,197,0.3)]"
-              spotlightColor="rgba(211, 0, 197, 0.1)"
+              glowColor="purple"
+              customSize={true}
+              className="group relative bg-card-bg/40 border-gray-800 hover:border-neon-purple/50 transition-all duration-500 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(211,0,197,0.3)]"
             >
-              <div className="aspect-square relative overflow-hidden">
+              <div className="aspect-square relative overflow-hidden rounded-t-xl">
                 <Image 
                   src={icon.url}
                   alt={icon.title}
@@ -100,10 +100,10 @@ export default function IconsPFPs() {
                   </button>
                 </div>
               </div>
-              <div className="p-3 bg-dark-bg/50 backdrop-blur-sm border-t border-gray-800">
+              <div className="p-3 bg-dark-bg/60 backdrop-blur-md border-t border-white/5 rounded-b-xl">
                 <h3 className="font-pixel text-sm text-gray-200 truncate">{icon.title}</h3>
               </div>
-            </SpotlightCard>
+            </GlowCard>
           ))}
         </div>
 

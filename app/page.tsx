@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -7,6 +9,7 @@ import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import RecommendationButton from "./components/RecommendationButton";
 import { getAllPosts } from "@/lib/blog";
+import { GlowCard } from "./components/ui/spotlight-card";
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
@@ -36,7 +39,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {recentPosts.map((post) => (
-                <article key={post.slug} className="bg-card-bg p-6 rounded-lg border border-gray-700 hover:border-neon-cyan transition-all group">
+                <GlowCard key={post.slug} glowColor="blue" customSize={true} className="flex flex-col bg-card-bg/40 p-6 rounded-lg border-gray-700 hover:border-neon-cyan/50 transition-all group">
                   <span className="text-xs font-mono text-neon-pink mb-2 block">{post.date}</span>
                   <h3 className="font-pixel text-xl text-white mb-3 group-hover:text-neon-cyan transition-colors">
                     <Link href={`/blog/${post.slug}`}>
@@ -46,10 +49,10 @@ export default function Home() {
                   <p className="text-gray-400 text-sm line-clamp-3 mb-4">
                     {post.excerpt}
                   </p>
-                  <Link href={`/blog/${post.slug}`} className="text-sm text-gray-300 hover:text-white underline decoration-neon-cyan/50">
+                  <Link href={`/blog/${post.slug}`} className="text-sm text-gray-300 hover:text-white underline decoration-neon-cyan/50 mt-auto">
                     Read Article
                   </Link>
-                </article>
+                </GlowCard>
               ))}
             </div>
             
@@ -76,7 +79,7 @@ export default function Home() {
                   'pixel-art-anime-guide'
                 ].includes(p.slug))
                 .map((post) => (
-                  <article key={post.slug} className="flex flex-col bg-card-bg rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple transition-all group p-6">
+                  <GlowCard key={post.slug} glowColor="purple" customSize={true} className="flex flex-col bg-card-bg/40 rounded-xl overflow-hidden border-gray-700 hover:border-neon-purple/50 transition-all group p-6">
                     <span className="text-xs font-mono text-neon-purple mb-3 uppercase tracking-wider">Expert Guide</span>
                     <h3 className="font-pixel text-xl text-white mb-4 group-hover:text-neon-purple transition-colors line-clamp-2">
                       <Link href={`/blog/${post.slug}`}>
@@ -89,7 +92,7 @@ export default function Home() {
                     <Link href={`/blog/${post.slug}`} className="mt-auto inline-flex items-center text-white text-sm font-bold hover:text-neon-purple transition-colors">
                       Learn More <span className="ml-2">→</span>
                     </Link>
-                  </article>
+                  </GlowCard>
               ))}
             </div>
           </div>
@@ -112,7 +115,7 @@ export default function Home() {
                   'tenka-izumo-guide'
                 ].includes(p.slug))
                 .map((post) => (
-                  <article key={post.slug} className="bg-card-bg p-8 rounded-xl border border-gray-700 hover:border-neon-pink transition-all group">
+                  <GlowCard key={post.slug} glowColor="red" customSize={true} className="flex flex-col bg-card-bg/40 p-8 rounded-xl border-gray-700 hover:border-neon-pink/50 transition-all group">
                     <h3 className="font-pixel text-2xl text-white mb-4 group-hover:text-neon-pink transition-colors">
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
@@ -121,10 +124,10 @@ export default function Home() {
                     <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-white font-bold hover:text-neon-pink transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="mt-auto inline-flex items-center text-white font-bold hover:text-neon-pink transition-colors">
                       Read Story <span className="ml-2">→</span>
                     </Link>
-                  </article>
+                  </GlowCard>
               ))}
             </div>
             <div className="mt-12 text-center">

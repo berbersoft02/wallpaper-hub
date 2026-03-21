@@ -3,7 +3,7 @@
 import { Download, Heart, Maximize2, X, ChevronLeft, ChevronRight, Terminal, Loader2, Palette, Star } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useCallback, Suspense, useMemo, useRef } from "react";
-import SpotlightCard from "./SpotlightCard";
+import { GlowCard } from "./ui/spotlight-card";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { slugify } from "@/lib/utils";
 import Link from "next/link";
@@ -262,29 +262,46 @@ function GalleryContent() {
 
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {finalDisplay.map((wp, index) => (
-                <SpotlightCard key={wp.id} onMouseEnter={() => playSound('hover')} className="group relative bg-card-bg border-2 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink hover:-translate-y-1" onClick={() => {
-                  const params = new URLSearchParams(searchParams.toString());
-                  params.set('image', wp.id);
-                  router.push(`${pathname}?${params.toString()}`, { scroll: false });
-                }}>
-                  <div className="aspect-[9/16] relative overflow-hidden">
-                     <PixelImage 
-                        src={wp.url} 
-                        alt={wp.title} 
-                        fill 
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                     /></div>
-                  <div className="p-4 flex justify-between items-center border-t border-gray-800 bg-dark-bg/90">
-                    <div className="truncate flex-1 mr-2">
-                      <h3 className="font-pixel text-lg text-white truncate">{wp.title}</h3>
-                      <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">{wp.character}</p>
+              {finalDisplay.map((wp, index) => {
+                const getGlowColor = (category: string) => {
+                  if (category === 'Special') return 'purple';
+                  if (category === 'Anime') return 'blue';
+                  return 'blue';
+                };
+
+                return (
+                  <GlowCard 
+                    key={wp.id} 
+                    glowColor={getGlowColor(wp.category)}
+                    customSize={true}
+                    className="group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer" 
+                    onClick={() => {
+                      const params = new URLSearchParams(searchParams.toString());
+                      params.set('image', wp.id);
+                      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+                    }}
+                  >
+                    <div className="aspect-[9/16] relative overflow-hidden rounded-t-lg">
+                       <PixelImage 
+                          src={wp.url} 
+                          alt={wp.title} 
+                          fill 
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                       />
                     </div>
-                    <button onClick={(e) => { e.stopPropagation(); toggleFavorite(wp); playSound('click'); }} className="p-2 hover:scale-125 transition-transform"><Heart size={20} className={isFavorite(wp.id) ? "text-neon-pink fill-neon-pink drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]" : "text-gray-500"} /></button>
-                  </div>
-                </SpotlightCard>
-              ))}
+                    <div className="p-4 flex justify-between items-center bg-dark-bg/60 backdrop-blur-md rounded-b-lg border-t border-white/5">
+                      <div className="truncate flex-1 mr-2">
+                        <h3 className="font-pixel text-lg text-white truncate">{wp.title}</h3>
+                        <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">{wp.character}</p>
+                      </div>
+                      <button onClick={(e) => { e.stopPropagation(); toggleFavorite(wp); playSound('click'); }} className="p-2 hover:scale-125 transition-transform">
+                        <Heart size={20} className={isFavorite(wp.id) ? "text-neon-pink fill-neon-pink drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]" : "text-gray-500"} />
+                      </button>
+                    </div>
+                  </GlowCard>
+                );
+              })}
             </div>
           )}
 

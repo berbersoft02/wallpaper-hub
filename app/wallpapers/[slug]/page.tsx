@@ -10,6 +10,7 @@ import { Download, Heart, Maximize2, BookOpen } from 'lucide-react';
 import { useState, use, useMemo } from 'react';
 import Lightbox from '@/app/components/Lightbox';
 import { getPostByCharacterName } from '@/lib/blog';
+import { GlowCard } from '@/app/components/ui/spotlight-card';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -97,56 +98,62 @@ export default function CharacterWallpapersPage({ params }: Props) {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {character.wallpapers.map((url, index) => (
-            <div 
-              key={index}
-              onClick={() => setSelectedIndex(index)}
-              className="group relative bg-card-bg border-2 border-gray-800 hover:border-neon-cyan transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-[0_0_40px_rgba(5,217,232,0.3)] cursor-pointer"
-            >
-              <div className="aspect-[9/16] relative overflow-hidden">
-                {url.match(/\.(mp4|webm|mov)/i) ? (
-                  <video
-                    src={url}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    muted
-                    loop
-                    autoPlay
-                    playsInline
-                  />
-                ) : (
-                  <Image 
-                    src={url}
-                    alt={`${name} 4K Wallpaper - ${index + 1}`}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    unoptimized
-                  />
-                )}
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4 pointer-events-none">
-                  <div className="p-4 bg-neon-cyan text-dark-bg rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                    <Maximize2 size={32} />
+          {character.wallpapers.map((url, index) => {
+            const glowColor = character.category === 'Special' ? 'purple' : 'blue';
+            
+            return (
+              <GlowCard 
+                key={index}
+                glowColor={glowColor}
+                customSize={true}
+                onClick={() => setSelectedIndex(index)}
+                className="group relative bg-card-bg/40 border-gray-800 hover:border-neon-cyan/50 transition-all duration-500 rounded-lg overflow-hidden cursor-pointer"
+              >
+                <div className="aspect-[9/16] relative overflow-hidden rounded-t-lg">
+                  {url.match(/\.(mp4|webm|mov)/i) ? (
+                    <video
+                      src={url}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                    />
+                  ) : (
+                    <Image 
+                      src={url}
+                      alt={`${name} 4K Wallpaper - ${index + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      unoptimized
+                    />
+                  )}
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4 pointer-events-none">
+                    <div className="p-4 bg-neon-cyan text-dark-bg rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                      <Maximize2 size={32} />
+                    </div>
+                    <span className="font-pixel text-neon-cyan text-xl tracking-widest">VIEW FULLSCREEN</span>
                   </div>
-                  <span className="font-pixel text-neon-cyan text-xl tracking-widest">VIEW FULLSCREEN</span>
+
+
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDownload(url, wpTitles[index]);
+                    }}
+                    className="absolute top-4 right-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-neon-pink z-10"
+                  >
+                    <Download size={20} />
+                  </button>
                 </div>
-
-
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleDownload(url, wpTitles[index]);
-                  }}
-                  className="absolute top-4 right-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-neon-pink z-10"
-                >
-                  <Download size={20} />
-                </button>
-              </div>
-              <div className="p-4 bg-dark-bg/90 border-t border-gray-800 flex justify-between items-center">
-                <h3 className="font-pixel text-sm text-gray-300 tracking-wider">{wpTitles[index]}</h3>
-                <Heart size={18} className="text-gray-600 hover:text-neon-pink transition-colors" />
-              </div>
-            </div>
-          ))}
+                <div className="p-4 bg-dark-bg/60 backdrop-blur-md border-t border-white/5 flex justify-between items-center rounded-b-lg">
+                  <h3 className="font-pixel text-sm text-gray-300 tracking-wider">{wpTitles[index]}</h3>
+                  <Heart size={18} className="text-gray-600 hover:text-neon-pink transition-colors" />
+                </div>
+              </GlowCard>
+            );
+          })}
         </div>
 
         <section className="mt-32 prose prose-invert max-w-none">
