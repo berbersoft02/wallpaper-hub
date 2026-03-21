@@ -5,6 +5,7 @@ import { Gamepad2 } from "lucide-react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import DraggableIcon from "./DraggableIcon";
 import ParticlesBackground from "./ParticlesBackground";
+import { ParticleButton } from "./ui/particle-button";
 
 // Define all floating icons with their properties
 const floatingIcons = [
@@ -190,25 +191,19 @@ export default function Hero() {
           Welcome here! Dive into my ocean of exclusive wallpapers. Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_dias</span> on TikTok!
         </p>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
-          <a 
-            href="#gallery" 
-            data-text="BROWSE GALLERY"
-            className="group hover-glitch relative px-8 py-4 bg-neon-pink font-pixel text-xl text-white overflow-hidden transition-all hover:scale-110 shadow-[0_0_32px_rgba(255,42,109,0.6)] hover:shadow-[0_0_48px_rgba(255,42,109,0.9)] rounded-lg border-2 border-neon-pink/50"
-          >
-            <span className="relative z-10 group-hover:tracking-wider transition-all">BROWSE GALLERY</span>
-            <div className="absolute inset-0 h-full w-full bg-neon-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-          </a>
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
+          <ParticleButton 
+            asChild
+            successDuration={1500}
+            className="group relative px-10 py-7 bg-neon-pink font-pixel text-xl text-white overflow-hidden transition-all hover:scale-110 shadow-[0_0_32px_rgba(255,42,109,0.6)] hover:shadow-[0_0_48px_rgba(255,42,109,0.9)] rounded-xl border-2 border-neon-pink/50 h-auto"
+          ><a href="#gallery"><span className="relative z-10 group-hover:tracking-wider transition-all">BROWSE GALLERY</span></a></ParticleButton>
           
-          <a 
-            href="https://www.tiktok.com/@noxzx_kb" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            data-text="TIKTOK CHANNEL"
-            className="hover-glitch px-8 py-4 border-2 border-white font-pixel text-xl text-white hover:bg-white hover:text-dark-bg transition-all hover:scale-110 shadow-[0_0_24px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] rounded-lg"
-          >
-             TIKTOK CHANNEL
-          </a>
+          <ParticleButton 
+            asChild
+            variant="outline"
+            successDuration={1500}
+            className="px-10 py-7 border-2 border-white bg-transparent font-pixel text-xl text-white hover:bg-white hover:text-dark-bg transition-all hover:scale-110 shadow-[0_0_24px_rgba(255,255,255,0.4)] hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] rounded-xl h-auto"
+          ><a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer">TIKTOK CHANNEL</a></ParticleButton>
         </div>
       </motion.div>
     </section>
