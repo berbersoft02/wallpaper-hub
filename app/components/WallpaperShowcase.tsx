@@ -18,7 +18,7 @@ export default function WallpaperShowcase() {
       [chars[i], chars[j]] = [chars[j], chars[i]];
     }
     
-    // Pick first 7 characters with wallpapers
+    // Pick first 15 characters with wallpapers
     for (const char of chars) {
       if (char.wallpapers && char.wallpapers.length > 0) {
         // Pick a random wallpaper from this character
@@ -28,7 +28,7 @@ export default function WallpaperShowcase() {
           alt: `${char.name} 4K Archive`
         });
       }
-      if (selected.length >= 7) break;
+      if (selected.length >= 15) break;
     }
     
     setShowcaseImages(selected);

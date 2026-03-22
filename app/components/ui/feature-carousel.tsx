@@ -69,6 +69,7 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
 
                 const isCenter = pos === 0;
                 const isAdjacent = Math.abs(pos) === 1;
+                const isFar = Math.abs(pos) === 2;
 
                 return (
                   <div
@@ -79,14 +80,15 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
                     )}
                     style={{
                       transform: `
-                        translateX(${(pos) * 50}%) 
-                        scale(${isCenter ? 1 : isAdjacent ? 0.85 : 0.7})
-                        rotateY(${(pos) * -15}deg)
+                        translateX(${(pos) * 55}%) 
+                        scale(${isCenter ? 1 : isAdjacent ? 0.8 : isFar ? 0.6 : 0.4})
+                        rotateY(${(pos) * -20}deg)
+                        translateZ(${Math.abs(pos) * -100}px)
                       `,
-                      zIndex: isCenter ? 10 : isAdjacent ? 5 : 1,
-                      opacity: isCenter ? 1 : isAdjacent ? 0.6 : 0,
-                      filter: isCenter ? 'blur(0px)' : 'blur(4px)',
-                      visibility: Math.abs(pos) > 1 ? 'hidden' : 'visible',
+                      zIndex: 10 - Math.abs(pos),
+                      opacity: Math.abs(pos) > 2 ? 0 : isCenter ? 1 : isAdjacent ? 0.6 : 0.3,
+                      filter: isCenter ? 'blur(0px)' : `blur(${Math.abs(pos) * 2}px)`,
+                      visibility: Math.abs(pos) > 2 ? 'hidden' : 'visible',
                     }}
                   >
                     <img
