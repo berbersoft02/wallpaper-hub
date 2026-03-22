@@ -1,19 +1,46 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HeroSection } from "./ui/feature-carousel";
-
-const showcaseImages = [
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Zero%20Two/1.jpg", alt: "Zero Two 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Alya%20Kujou%20%E2%99%A1/1.jpg", alt: "Alya Kujou 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Frieren/1.jpg", alt: "Frieren 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Attack%20On%20Titan/1.webp", alt: "Attack On Titan 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Shiina%20Mahiru/1.jpg", alt: "Shiina Mahiru 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Rin%20Shima/1.jpg", alt: "Rin Shima 4K" },
-  { src: "https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Mixed/1.jpg", alt: "Mixed Collection 4K" },
-];
+import wallpapersData from '@/app/data/wallpapers.json';
 
 export default function WallpaperShowcase() {
+  const [showcaseImages, setShowcaseImages] = useState<{ src: string; alt: string; }[]>([]);
+
+  useEffect(() => {
+    // Clone characters to avoid mutating source
+    const chars = [...wallpapersData.characters];
+    const selected: { src: string; alt: string; }[] = [];
+    
+    // Fisher-Yates shuffle
+    for (let i = chars.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [chars[i], chars[j]] = [chars[j], chars[i]];
+    }
+    
+    // Pick first 7 characters with wallpapers
+    for (const char of chars) {
+      if (char.wallpapers && char.wallpapers.length > 0) {
+        // Pick a random wallpaper from this character
+        const randomWp = char.wallpapers[Math.floor(Math.random() * char.wallpapers.length)];
+        selected.push({
+          src: randomWp,
+          alt: `${char.name} 4K Archive`
+        });
+      }
+      if (selected.length >= 7) break;
+    }
+    
+    setShowcaseImages(selected);
+  }, []);
+
+  // Return null or placeholder while images are loading to prevent jumpy layout
+  if (showcaseImages.length === 0) return (
+    <section className="py-20 bg-dark-bg/20 min-h-[600px] flex items-center justify-center">
+      <div className="font-pixel text-neon-cyan animate-pulse">Initializing Archives...</div>
+    </section>
+  );
+
   return (
     <section className="py-20 relative overflow-hidden bg-dark-bg/20 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4">
