@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import WallpaperShowcase from "./components/WallpaperShowcase";
 import Gallery from "./components/Gallery";
 import IconsPFPs from "./components/IconsPFPs";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <WallpaperShowcase />
         
         {/* --- 1. WALLPAPERS SECTION --- */}
         <Gallery />
