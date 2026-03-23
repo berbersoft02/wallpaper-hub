@@ -1,14 +1,12 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
+
 export default function RecommendationButton() {
+  const router = useRouter();
+
   const handleClick = () => {
-    // Scroll to gallery
-    document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
-    // Small delay to ensure scroll completes, then trigger modal
-    setTimeout(() => {
-      const button = document.querySelector('[data-recommendation-trigger]') as HTMLButtonElement;
-      button?.click();
-    }, 500);
+    router.push('/contact');
   };
 
   return (
