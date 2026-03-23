@@ -9,12 +9,14 @@ interface RecommendationModalProps {
 }
 
 export default function RecommendationModal({ isOpen, onClose }: RecommendationModalProps) {
-  const [recommendation, setRecommendation] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!recommendation.trim()) return;
+    if (!name.trim() || !email.trim() || !message.trim()) return;
 
     setStatus('sending');
     try {
@@ -23,16 +25,18 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: recommendation }),
+        body: JSON.stringify({ name, email, message }),
       });
 
       if (response.ok) {
         setStatus('success');
-        setRecommendation('');
+        setName('');
+        setEmail('');
+        setMessage('');
         setTimeout(() => {
           onClose();
           setStatus('idle');
-        }, 2000); // Close modal after 2s
+        }, 3000);
       } else {
         setStatus('error');
       }
@@ -63,25 +67,49 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
             <p className="text-gray-300">Your recommendation has been received.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
-            <p className="text-gray-400 font-body mb-4">
-              Have a character or series you'd love to see in a future drop? Let me know!
-            </p>
-            <div className="relative">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="name" className="font-pixel text-sm text-gray-400 block mb-2">YOUR NAME</label>
               <input
+                id="name"
                 type="text"
-                value={recommendation}
-                onChange={(e) => setRecommendation(e.target.value)}
-                placeholder="e.g., Alucard from Hellsing"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="e.g., Alex"
                 className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all"
                 disabled={status === 'sending'}
               />
             </div>
+            <div>
+              <label htmlFor="email" className="font-pixel text-sm text-gray-400 block mb-2">YOUR EMAIL</label>
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="e.g., alex@domain.com"
+                className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all"
+                disabled={status === 'sending'}
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="font-pixel text-sm text-gray-400 block mb-2">RECOMMENDATION</label>
+              <textarea
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="e.g., Alucard from Hellsing"
+                className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all min-h-[100px]"
+                disabled={status === 'sending'}
+              />
+            </div>
+
             {status === 'error' && <p className="text-neon-pink mt-2 text-sm">Something went wrong. Please try again.</p>}
+            
             <div className="mt-6 text-right">
               <button 
                 type="submit" 
-                disabled={status === 'sending' || !recommendation.trim()}
+                disabled={status === 'sending' || !name.trim() || !email.trim() || !message.trim()}
                 className="inline-flex items-center gap-3 font-pixel text-xl px-8 py-4 bg-neon-purple text-white rounded-lg transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(211,0,197,0.4)]"
               >
                 {status === 'sending' ? 'SENDING...' : 'SEND'}
