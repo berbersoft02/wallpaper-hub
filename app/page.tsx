@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -11,9 +12,11 @@ import AnimatedBackground from "./components/AnimatedBackground";
 import RecommendationButton from "./components/RecommendationButton";
 import { getAllPosts } from "@/lib/blog";
 import { GlowCard } from "./components/ui/spotlight-card";
+import RecommendationModal from "./components/RecommendationModal";
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen relative">
@@ -22,9 +25,9 @@ export default function Home() {
         <Navbar />
         <Hero />
         <WallpaperShowcase />
-        
+
         {/* --- 1. WALLPAPERS SECTION --- */}
-        <Gallery />
+        <Gallery onRecommendClick={() => setIsModalOpen(true)} />
 
         {/* --- 2. BLOG SECTIONS --- */}
         {/* Blog Preview Section (Increases Content Value) */}
@@ -57,7 +60,7 @@ export default function Home() {
                 </GlowCard>
               ))}
             </div>
-            
+
             <div className="mt-8 text-center md:hidden">
               <Link href="/blog" className="inline-block px-6 py-3 border border-neon-pink text-neon-pink font-pixel hover:bg-neon-pink hover:text-white transition-colors">
                 View All Posts
@@ -173,7 +176,7 @@ export default function Home() {
             <h2 className="font-pixel text-3xl md:text-4xl text-neon-cyan mb-12 text-center">
               Frequently Asked <span className="text-white">Questions</span>
             </h2>
-            
+
             <div className="space-y-8 font-body text-gray-300">
               <div className="bg-card-bg p-6 rounded-xl border border-gray-800">
                 <h3 className="font-pixel text-xl text-neon-pink mb-2">Are these wallpapers free to use?</h3>
@@ -202,7 +205,7 @@ export default function Home() {
         <section id="about" className="bg-dark-bg/90 py-20 px-4 flex flex-col items-center text-center relative overflow-hidden">
           {/* Gradient background effect */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-cyan/5 to-transparent"></div>
-          
+
           <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
           <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
             <p>
@@ -234,6 +237,7 @@ export default function Home() {
             >
               My App: Algerian Sign Language
             </a>
+
             <a
               href="https://www.paypal.com/ncp/payment/ZLNFBVUXYBFK2"
               target="_blank"
@@ -242,11 +246,12 @@ export default function Home() {
             >
               Donate with PayPal
             </a>
-            
-            <RecommendationButton />
+
+            <RecommendationButton onClick={() => setIsModalOpen(true)} />
           </div>
         </section>
         <Footer />
+        <RecommendationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </div>
   );

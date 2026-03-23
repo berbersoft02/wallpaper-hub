@@ -75,7 +75,7 @@ function PixelImage({ src, alt, className, fill, width, height, unoptimized, ...
   );
 }
 
-function GalleryContent() {
+function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) {
   const { playSound } = useCyberSound();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -235,7 +235,7 @@ function GalleryContent() {
             </div>
           </div>
           <div className="flex justify-center mb-8">
-            <RecommendationButton />
+            <RecommendationButton onClick={onRecommendClick} />
           </div>
 
           {specialCollections.length > 0 && (
@@ -330,10 +330,10 @@ function GalleryContent() {
   );
 }
 
-export default function Gallery() {
+export default function Gallery({ onRecommendClick }: { onRecommendClick: () => void }) {
   return (
     <Suspense fallback={<div className="py-20 text-center font-pixel text-neon-cyan">Loading Archive...</div>}>
-      <GalleryContent />
+      <GalleryContent onRecommendClick={onRecommendClick} />
     </Suspense>
   );
 }
