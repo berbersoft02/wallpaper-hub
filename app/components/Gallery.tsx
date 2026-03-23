@@ -10,6 +10,7 @@ import Link from "next/link";
 import Lightbox from "./Lightbox";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
+import RecommendationButton from "./RecommendationButton";
 
 interface Wallpaper {
   id: string;
@@ -223,8 +224,8 @@ function GalleryContent() {
             <span className="text-white">LATEST</span> DROPS
           </h2>
 
-          <div className="flex flex-col items-center gap-10 mb-16">
-            <div className="w-full max-w-3xl relative group">
+          <div className="flex flex-col md:flex-row items-center gap-6 mb-16">
+            <div className="w-full max-w-2xl relative group flex-grow">
               <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative flex items-center bg-black/80 border border-gray-700 rounded-xl px-4 py-3 focus-within:ring-neon-cyan ring-1 ring-white/10 transition-all">
                 <Terminal className="text-neon-cyan mr-3 animate-pulse" size={24} />
@@ -232,35 +233,36 @@ function GalleryContent() {
                 {searchQuery && <button onClick={() => { setSearchQuery(""); playSound('click'); }}><X size={20} className="text-gray-400 hover:text-neon-pink" /></button>}
               </div>
             </div>
-
-            {specialCollections.length > 0 && (
-              <div className="w-full max-w-6xl mt-4 mb-4">
-                <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest">FEATURED COLLECTIONS</h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                    {specialCollections.map((char) => (
-                      <button key={char} onClick={() => { setFilter(char); playSound('click'); }} className={`px-6 py-3 rounded-xl transition-all border backdrop-blur-md ${filter === char ? "bg-neon-cyan/20 border-neon-cyan text-white scale-105" : "bg-white/5 border-white/10 text-gray-300 hover:border-neon-cyan/50 hover:bg-white/10"}`}>
-                        <div className="flex items-center gap-3">{renderCharacterName(char)} <span className="text-xs opacity-50">{getCount(char)}</span></div>
-                      </button>
-                    ))}
-                </div>
-              </div>
-            )}
-
-            <div className="w-full max-w-6xl">
-              <h3 className="text-neon-pink font-pixel text-lg mb-6 text-center tracking-widest opacity-70 uppercase">Anime ARCHIVE</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                <button onMouseEnter={() => playSound('hover')} onClick={() => { setFilter("All"); playSound('click'); }} className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border ${filter === "All" ? "bg-neon-pink border-neon-pink text-white" : "bg-dark-bg/50 border-gray-700 text-gray-400"}`}>ALL <span className="ml-2 opacity-50">{everything.length}</span></button>
-                {favorites.length > 0 && <button onMouseEnter={() => playSound('hover')} onClick={() => { setFilter("Favorites"); playSound('click'); }} className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border flex items-center gap-2 ${filter === "Favorites" ? "bg-white text-dark-bg" : "bg-dark-bg/50 border-gray-700 text-neon-pink"}`}><Star size={16} fill={filter === "Favorites" ? "black" : "none"} /> FAVS ({favorites.length})</button>}
-                {characters.map(char => (
-                  <button key={char} onMouseEnter={() => playSound('hover')} onClick={() => { setFilter(char); playSound('click'); }} className={`px-5 py-2 rounded-full transition-all border text-sm flex items-center gap-2 ${filter === char ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" : "bg-dark-bg/30 border-gray-800 text-gray-400 hover:border-neon-cyan/50"}`}>
-                    {renderCharacterName(char)} <span className="text-[10px] opacity-40">{getCount(char)}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className="flex justify-center mb-8">
+            <RecommendationButton />
           </div>
 
-          {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
+          {specialCollections.length > 0 && (
+            <div className="w-full max-w-6xl mt-4 mb-4">
+              <h3 className="text-neon-cyan font-pixel text-xl mb-6 text-center tracking-widest">FEATURED COLLECTIONS</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                  {specialCollections.map((char) => (
+                    <button key={char} onMouseEnter={() => playSound('hover')} onClick={() => { setFilter(char); playSound('click'); }} className={`px-6 py-3 rounded-xl transition-all border backdrop-blur-md ${filter === char ? "bg-neon-cyan/20 border-neon-cyan text-white scale-105" : "bg-white/5 border-white/10 text-gray-300 hover:border-neon-cyan/50 hover:bg-white/10"}`}>
+                      <div className="flex items-center gap-3">{renderCharacterName(char)} <span className="text-xs opacity-50">{getCount(char)}</span></div>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          <div className="w-full max-w-6xl">
+            <h3 className="text-neon-pink font-pixel text-lg mb-6 text-center tracking-widest opacity-70 uppercase">Anime ARCHIVE</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              <button onMouseEnter={() => playSound('hover')} onClick={() => { setFilter("All"); playSound('click'); }} className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border ${filter === "All" ? "bg-neon-pink border-neon-pink text-white" : "bg-dark-bg/50 border-gray-700 text-gray-400"}`}>ALL <span className="ml-2 opacity-50">{everything.length}</span></button>
+              {favorites.length > 0 && <button onMouseEnter={() => playSound('hover')} onClick={() => { setFilter("Favorites"); playSound('click'); }} className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border flex items-center gap-2 ${filter === "Favorites" ? "bg-white text-dark-bg" : "bg-dark-bg/50 border-gray-700 text-neon-pink"}`}><Star size={16} fill={filter === "Favorites" ? "black" : "none"} /> FAVS ({favorites.length})</button>}
+              {characters.map(char => (
+                <button key={char} onMouseEnter={() => playSound('hover')} onClick={() => { setFilter(char); playSound('click'); }} className={`px-5 py-2 rounded-full transition-all border text-sm flex items-center gap-2 ${filter === char ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" : "bg-dark-bg/30 border-gray-800 text-gray-400 hover:border-neon-cyan/50"}`}>
+                  {renderCharacterName(char)} <span className="text-[10px] opacity-40">{getCount(char)}</span>
+                </button>
+              ))}
+            </div>
+          </div>          {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalDisplay.map((wp, index) => {
                 const getGlowColor = (category: string) => {
@@ -304,14 +306,13 @@ function GalleryContent() {
               })}
             </div>
           )}
-
-          {!loading && displayCount < filteredItems.length && (
-            <div className="flex justify-center mt-12">
-              <button onMouseEnter={() => playSound('hover')} onClick={() => { setDisplayCount(prev => prev + 24); playSound('click'); }} className="font-pixel px-12 py-4 border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all rounded-lg shadow-[0_0_20px_rgba(5,217,232,0.3)]">SHOW MORE WALLPAPERS</button>
-            </div>
-          )}
-        </div>
-      </section>
+{!loading && displayCount < filteredItems.length && (
+  <div className="flex justify-center mt-12">
+    <button onMouseEnter={() => playSound('hover')} onClick={() => { setDisplayCount(prev => prev + 24); playSound('click'); }} className="font-pixel px-12 py-4 border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all rounded-lg shadow-[0_0_20px_rgba(5,217,232,0.3)]">SHOW MORE WALLPAPERS</button>
+  </div>
+)}
+</div>
+</section>
 
       {selectedImageIndex !== null && (
         <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={handleCloseLightbox} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownload} />
