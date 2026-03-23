@@ -234,7 +234,6 @@ export default function Home() {
             >
               My App: Algerian Sign Language
             </a>
-            
             <a
               href="https://www.paypal.com/ncp/payment/ZLNFBVUXYBFK2"
               target="_blank"
