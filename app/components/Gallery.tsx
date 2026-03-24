@@ -87,7 +87,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
   const [characters, setCharacters] = useState<string[]>([]);
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [displayCount, setDisplayCount] = useState(24); // Increased initial count
+  const [displayCount, setDisplayCount] = useState(24);
   const [showDownloadSuccessModal, setShowDownloadSuccessModal] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -114,7 +114,6 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
-          // Process other characters
           otherChars.forEach((char: CharacterData) => {
             if (char.name !== 'Desktop Wallpapers') {
               if (char.category === 'Special') specialNames.push(char.name);
@@ -126,7 +125,6 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
             }
           });
 
-          // Process priority characters with interleaving logic to mix them up
           const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
           const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
 
@@ -165,8 +163,6 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
   }, [filter, everything, wallpapers, searchQuery, favorites]);
 
   const finalDisplay = useMemo(() => filteredItems.slice(0, displayCount), [filteredItems, displayCount]);
-
-
 
   useEffect(() => {
     setDisplayCount(12);
@@ -223,9 +219,8 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           <h2 className="font-pixel text-4xl md:text-5xl text-center mb-12 text-neon-cyan animate-glow-cyan">
             <span className="text-white">LATEST</span> DROPS
           </h2>
-
-          <div className="flex flex-col md:flex-row items-center gap-6 mb-16">
-            <div className="w-full max-w-2xl relative group flex-grow">
+          <div className="flex flex-col items-center gap-8 mb-16">
+            <div className="w-full max-w-2xl relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative flex items-center bg-black/80 border border-gray-700 rounded-xl px-4 py-3 focus-within:ring-neon-cyan ring-1 ring-white/10 transition-all">
                 <Terminal className="text-neon-cyan mr-3 animate-pulse" size={24} />
@@ -233,8 +228,6 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                 {searchQuery && <button onClick={() => { setSearchQuery(""); playSound('click'); }}><X size={20} className="text-gray-400 hover:text-neon-pink" /></button>}
               </div>
             </div>
-          </div>
-          <div className="flex justify-center mb-8">
             <RecommendationButton onClick={onRecommendClick} />
           </div>
 
@@ -262,7 +255,9 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                 </button>
               ))}
             </div>
-          </div>          {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
+          </div>
+          
+          {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalDisplay.map((wp, index) => {
                 const getGlowColor = (category: string) => {
@@ -306,13 +301,13 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
               })}
             </div>
           )}
-{!loading && displayCount < filteredItems.length && (
-  <div className="flex justify-center mt-12">
-    <button onMouseEnter={() => playSound('hover')} onClick={() => { setDisplayCount(prev => prev + 24); playSound('click'); }} className="font-pixel px-12 py-4 border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all rounded-lg shadow-[0_0_20px_rgba(5,217,232,0.3)]">SHOW MORE WALLPAPERS</button>
-  </div>
-)}
-</div>
-</section>
+          {!loading && displayCount < filteredItems.length && (
+            <div className="flex justify-center mt-12">
+              <button onMouseEnter={() => playSound('hover')} onClick={() => { setDisplayCount(prev => prev + 24); playSound('click'); }} className="font-pixel px-12 py-4 border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all rounded-lg shadow-[0_0_20px_rgba(5,217,232,0.3)]">SHOW MORE WALLPAPERS</button>
+            </div>
+          )}
+        </div>
+      </section>
 
       {selectedImageIndex !== null && (
         <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={handleCloseLightbox} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownload} />
