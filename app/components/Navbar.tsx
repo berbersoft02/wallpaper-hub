@@ -120,8 +120,8 @@ export default function Navbar() {
                 </GlowCard>
                 <GlowCard glowColor="blue" customSize={true} className="p-1 rounded-lg mt-1">
                   <Link
-                    href="/wallpapers/mobile-wallpapers"
-                    onClick={() => handleSoonClick('Mobile Wallpapers')}
+                    href="/#gallery"
+                    onClick={(e) => handleWallpapersClick(e, 'gallery')}
                     className="block px-4 py-2 text-md text-white hover:text-neon-cyan hover:bg-black/20 rounded-lg transition-colors"
                   >
                     Mobile Wallpapers
@@ -257,8 +257,8 @@ export default function Navbar() {
               Desktop Wallpapers
             </Link>
             <Link
-              href="/wallpapers/mobile-wallpapers"
-              onClick={() => handleSoonClick('Mobile Wallpapers')}
+              href="/#gallery"
+              onClick={(e) => handleWallpapersClick(e, 'gallery')}
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
               Mobile Wallpapers
