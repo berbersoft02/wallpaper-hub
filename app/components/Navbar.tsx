@@ -17,8 +17,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const wallpapersRef = useRef<HTMLDivElement>(null);
-  const iconsRef = useRef<HTMLDivElement>(null);
+  const wallpapersRef = useRef<HTMLLIElement>(null);
+  const iconsRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -83,9 +83,9 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="hidden md:flex gap-8 font-pixel text-xl tracking-wide">
+        <ul className="hidden md:flex items-center gap-8 font-pixel text-xl tracking-wide">
           {/* WALLPAPERS Dropdown */}
-          <div 
+          <li 
             className="relative"
             ref={wallpapersRef}
             onMouseEnter={() => setShowWallpapersDropdown(true)}
@@ -129,10 +129,10 @@ export default function Navbar() {
                 </GlowCard>
               </div>
             )}
-          </div>
+          </li>
 
           {/* ICONS PFPS Dropdown */}
-          <div 
+          <li 
             className="relative"
             ref={iconsRef}
             onMouseEnter={() => setShowIconsDropdown(true)}
@@ -176,41 +176,49 @@ export default function Navbar() {
                 </GlowCard>
               </div>
             )}
-          </div>
+          </li>
 
-          <Magnetic>
-            <Link
-              href="/blog"
-              className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all p-2"
-            >
-              BLOG
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link
-              href="/about"
-              className="hover:text-white hover:underline decoration-wavy underline-offset-4 transition-all p-2"
-            >
-              ABOUT
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link
-              href="/guide"
-              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all p-2"
-            >
-              GUIDE
-            </Link>
-          </Magnetic>
-          <Magnetic>
-            <Link 
-              href="/contact" 
-              className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all p-2"
-            >
-              CONTACT
-            </Link>
-          </Magnetic>
-        </div>
+          <li>
+            <Magnetic>
+              <Link
+                href="/blog"
+                className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+              >
+                BLOG
+              </Link>
+            </Magnetic>
+          </li>
+          <li>
+            <Magnetic>
+              <Link
+                href="/about"
+                className="hover:text-white hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+              >
+                ABOUT
+              </Link>
+            </Magnetic>
+          </li>
+          <li>
+            <Magnetic>
+              <Link
+                href="/guide"
+                className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+              >
+                GUIDE
+              </Link>
+            </Magnetic>
+          </li>
+          <li>
+            <Magnetic>
+              <Link 
+                href="/contact" 
+                className="hover:text-orange-400 hover:underline decoration-wavy underline-offset-4 transition-all p-2"
+              >
+                CONTACT
+              </Link>
+            </Magnetic>
+          </li>
+        </ul>
 
         <button 
           onClick={() => setShowMobileMenu(!showMobileMenu)}
