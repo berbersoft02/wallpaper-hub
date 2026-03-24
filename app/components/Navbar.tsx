@@ -1,18 +1,41 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Magnetic from "./Magnetic";
+import { GlowCard } from "./ui/spotlight-card"; // Import GlowCard
 
 export default function Navbar() {
   const [showSoonModal, setShowSoonModal] = useState(false);
   const [soonTitle, setSoonTitle] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showWallpapersDropdown, setShowWallpapersDropdown] = useState(false);
+  const [showIconsDropdown, setShowIconsDropdown] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  const wallpapersRef = useRef<HTMLDivElement>(null);
+  const iconsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wallpapersRef.current && !wallpapersRef.current.contains(event.target as Node)) {
+        setShowWallpapersDropdown(false);
+      }
+      if (iconsRef.current && !iconsRef.current.contains(event.target as Node)) {
+        setShowIconsDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
 
   const handleSoonClick = (title: string) => {
     setSoonTitle(title);
@@ -20,25 +43,28 @@ export default function Navbar() {
     setShowMobileMenu(false); // Close mobile menu when opening modal
   };
 
-  const handleWallpapersClick = (e: React.MouseEvent) => {
+  const handleWallpapersClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     if (pathname === '/') {
-      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      router.push('/#gallery');
+      router.push(`/#${targetId}`);
     }
     setShowMobileMenu(false);
+    setShowWallpapersDropdown(false);
   };
 
-  const handleIconsClick = (e: React.MouseEvent) => {
+  const handleIconsClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     if (pathname === '/') {
-      document.getElementById('icons')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      router.push('/#icons');
+      router.push(`/#${targetId}`);
     }
     setShowMobileMenu(false);
+    setShowIconsDropdown(false);
   };
+
 
   return (
     <>
@@ -58,32 +84,100 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex gap-8 font-pixel text-xl tracking-wide">
-          <Magnetic>
-            <a 
-              href="/#gallery" 
-              onClick={handleWallpapersClick}
-              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2"
-            >
-              WALLPAPERS
-            </a>
-          </Magnetic>
-          <Magnetic>
-            <a
-              href="/#icons"
-              onClick={handleIconsClick}
-              className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2"
-            >
-              ICONS PFPS
-            </a>
-          </Magnetic>
-          <Magnetic>
-            <Link
-              href="/wallpapers/desktop-wallpapers"
-              className="hover:text-neon-pink hover:underline decoration-wavy underline-offset-4 transition-all text-left p-2"
-            >
-              Desktop Wallpapers
-            </Link>
-          </Magnetic>
+          {/* WALLPAPERS Dropdown */}
+          <div 
+            className="relative"
+            ref={wallpapersRef}
+            onMouseEnter={() => setShowWallpapersDropdown(true)}
+            onMouseLeave={() => setShowWallpapersDropdown(false)}
+          >
+            <Magnetic>
+              <button 
+                className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2 flex items-center gap-2"
+              >
+                WALLPAPERS <ChevronDown size={16} />
+              </button>
+            </Magnetic>
+            {showWallpapersDropdown && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl shadow-lg bg-card-bg/90 ring-1 ring-white ring-opacity-5 focus:outline-none p-2 z-50 border border-neon-cyan/50 backdrop-blur-md">
+                <GlowCard glowColor="blue" customSize={true} className="p-1 rounded-lg">
+                  <Link
+                    href="/#gallery"
+                    onClick={(e) => handleWallpapersClick(e, 'gallery')}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-cyan hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    All Wallpapers
+                  </Link>
+                </GlowCard>
+                <GlowCard glowColor="blue" customSize={true} className="p-1 rounded-lg mt-1">
+                  <Link
+                    href="/wallpapers/desktop-wallpapers"
+                    onClick={() => setShowWallpapersDropdown(false)}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-cyan hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    Desktop Wallpapers
+                  </Link>
+                </GlowCard>
+                <GlowCard glowColor="blue" customSize={true} className="p-1 rounded-lg mt-1">
+                  <Link
+                    href="/wallpapers/mobile-wallpapers"
+                    onClick={() => handleSoonClick('Mobile Wallpapers')}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-cyan hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    Mobile Wallpapers
+                  </Link>
+                </GlowCard>
+              </div>
+            )}
+          </div>
+
+          {/* ICONS PFPS Dropdown */}
+          <div 
+            className="relative"
+            ref={iconsRef}
+            onMouseEnter={() => setShowIconsDropdown(true)}
+            onMouseLeave={() => setShowIconsDropdown(false)}
+          >
+            <Magnetic>
+              <button 
+                className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2 flex items-center gap-2"
+              >
+                ICONS PFPS <ChevronDown size={16} />
+              </button>
+            </Magnetic>
+            {showIconsDropdown && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl shadow-lg bg-card-bg/90 ring-1 ring-white ring-opacity-5 focus:outline-none p-2 z-50 border border-neon-purple/50 backdrop-blur-md">
+                <GlowCard glowColor="purple" customSize={true} className="p-1 rounded-lg">
+                  <Link
+                    href="/#icons"
+                    onClick={(e) => handleIconsClick(e, 'icons')}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-purple hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    All Icons
+                  </Link>
+                </GlowCard>
+                <GlowCard glowColor="purple" customSize={true} className="p-1 rounded-lg mt-1">
+                  <Link
+                    href="/icons/profile-pictures"
+                    onClick={() => handleSoonClick('Profile Pictures')}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-purple hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    Profile Pictures
+                  </Link>
+                </GlowCard>
+                <GlowCard glowColor="purple" customSize={true} className="p-1 rounded-lg mt-1">
+                  <Link
+                    href="/icons/pack-icons"
+                    onClick={() => handleSoonClick('Pack Icons')}
+                    className="block px-4 py-2 text-md text-white hover:text-neon-purple hover:bg-black/20 rounded-lg transition-colors"
+                  >
+                    Pack Icons
+                  </Link>
+                </GlowCard>
+              </div>
+            )}
+          </div>
+
           <Magnetic>
             <Link
               href="/blog"
@@ -143,14 +237,14 @@ export default function Navbar() {
           <div className="flex flex-col items-center justify-center h-full gap-8 px-4">
             <a 
               href="/#gallery" 
-              onClick={handleWallpapersClick}
+              onClick={(e) => handleWallpapersClick(e, 'gallery')}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               WALLPAPERS
             </a>
             <a
               href="/#icons"
-              onClick={handleIconsClick}
+              onClick={(e) => handleIconsClick(e, 'icons')}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               ICONS PFPS
@@ -161,6 +255,13 @@ export default function Navbar() {
               className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
             >
               Desktop Wallpapers
+            </Link>
+            <Link
+              href="/wallpapers/mobile-wallpapers"
+              onClick={() => handleSoonClick('Mobile Wallpapers')}
+              className="font-pixel text-2xl text-white hover:text-neon-pink transition-all hover:underline decoration-wavy underline-offset-4"
+            >
+              Mobile Wallpapers
             </Link>
             <Link
               href="/blog"
