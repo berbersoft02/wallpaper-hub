@@ -69,8 +69,6 @@ export default function Home() {
           </div>
         </section>
 
-        <WallpaperShowcase />
-
         {/* --- 2. WALLPAPERS SECTION --- */}
         <Gallery onRecommendClick={() => setIsModalOpen(true)} />
 
