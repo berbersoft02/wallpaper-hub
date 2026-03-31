@@ -23,15 +23,12 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
       }, 1000);
     } else if (countdown === 0 && !ready) {
       setReady(true);
-      // Auto trigger download + Smartlink
+      // Auto trigger download (Smartlink removed for safety until new non-adult link is provided)
       const trigger = () => {
-        // 1. Open Smartlink in new tab for revenue
-        window.open("https://widthwidowzoology.com/bu8z5ayi?k", "_blank");
-        
-        // 2. Start the actual file download
+        // Start the actual file download
         onConfirm();
         
-        // 3. Keep modal open 2 more seconds to show status
+        // Keep modal open 2 more seconds to show status
         setTimeout(onClose, 2000);
       };
       trigger();
