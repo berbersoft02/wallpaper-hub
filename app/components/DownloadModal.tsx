@@ -23,37 +23,33 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
       }, 1000);
     } else if (countdown === 0 && !ready) {
       setReady(true);
-      // Ensure onConfirm is called
-      const trigger = () => {
-        onConfirm();
-        // Don't close immediately to let the user see the "Starting" state
-        setTimeout(onClose, 2000);
-      };
-      trigger();
+      // Auto trigger download
+      onConfirm();
+      // Keep modal open 2 more seconds to show "Starting Download"
+      setTimeout(onClose, 2000);
     }
     return () => clearInterval(timer);
   }, [isOpen, countdown, ready, onConfirm, onClose]);
 
-  // Reset when closed
-  useEffect(() => {
-    if (!isOpen) {
-      setCountdown(5);
-      setReady(false);
-    }
-  }, [isOpen]);
-
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[20000] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[200000] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/95 backdrop-blur-md" />
       
       {/* Modal */}
       <div className="relative w-full max-w-md bg-gray-900 border-2 border-neon-cyan rounded-2xl p-8 shadow-[0_0_60px_rgba(5,217,232,0.4)] overflow-hidden">
-        {/* Adsterra Banner inside Modal (High Visibility) */}
-        <div className="mb-8 min-h-[150px] flex flex-col items-center justify-center bg-black/40 rounded-xl border border-gray-800 p-2">
-           <div id="container-771ab3dea3f70f996da234efbf13d803" className="w-full"></div>
+        {/* Adsterra Banner */}
+        <div className="mb-8 min-h-[150px] flex flex-col items-center justify-center bg-black/40 rounded-xl border border-gray-800 p-2 relative">
+           <div id="container-771ab3dea3f70f996da234efbf13d803" className="w-full min-h-[100px]"></div>
+           {/* Adsterra Script */}
+           <Script 
+            key={`ad-script-${isOpen}`}
+            src="https://pl29025162.profitablecpmratenetwork.com/771ab3dea3f70f996da234efbf13d803/invoke.js" 
+            strategy="afterInteractive"
+            data-cfasync="false"
+          />
         </div>
 
         <div className="text-center">
