@@ -169,7 +169,61 @@ export default function CharacterWallpapersPage({ params }: Props) {
           })}
         </div>
 
-        {/* ... (rest of character info and FAQ) */}
+        <section className="mt-32 prose prose-invert max-w-none">
+          <div className="bg-gray-900/40 border border-gray-800 p-8 rounded-2xl">
+            <h2 className="font-pixel text-3xl text-neon-cyan mb-8 uppercase tracking-widest">
+              About the <span className="text-neon-pink">{name}</span> Collection
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-body text-gray-300 leading-relaxed text-lg">
+              <div>
+                <h3 className="text-white font-pixel text-xl mb-4">Character Overview</h3>
+                <p className="mb-6">{description.overview}</p>
+                
+                <h3 className="text-white font-pixel text-xl mb-4">Personality & Role</h3>
+                <p className="mb-6">{description.personality}</p>
+                <p>{description.role}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-white font-pixel text-xl mb-4">Collection Details</h3>
+                <p className="mb-6">{description.collectionDetails}</p>
+                
+                <h3 className="text-white font-pixel text-xl mb-4">Technical Specifications</h3>
+                <ul className="space-y-4 text-sm font-mono bg-black/30 p-4 rounded-lg border border-gray-800">
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Resolution:</strong> True 4K (3840x2160) for Desktop and Mobile.</li>
+                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>Enhancement:</strong> AI-Upscaled using Real-ESRGAN models.</li>
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Color Space:</strong> DCI-P3 optimized for modern smartphone displays.</li>
+                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>File Format:</strong> High-quality PNG/WebP for maximum detail retention.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-12 border-t border-gray-800">
+              <h2 className="font-pixel text-3xl text-white mb-8 uppercase tracking-widest text-center">
+                Frequently Asked <span className="text-neon-cyan">Questions</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300 font-body">
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">Are these {name} wallpapers free to download?</h4>
+                  <p className="text-sm">Yes, all wallpapers in our {name} collection are completely free for personal use as backgrounds for your devices.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">What is the best way to apply these as backgrounds?</h4>
+                  <p className="text-sm">For the best results, download the high-resolution file and use your device&apos;s system settings to apply it. Avoid using "set as wallpaper" directly from the browser to ensure full 4K quality.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">Do you have {name} live wallpapers?</h4>
+                  <p className="text-sm">We frequently update our archive. Check the collection for video formats (.mp4) which can be used as live backgrounds on most Android and some iOS devices.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">How are these images enhanced?</h4>
+                  <p className="text-sm">We use advanced AI upscaling and custom color grading to transform standard animation frames into high-fidelity 4K digital assets while preserving the original art style.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Adsterra Native Banner (High Visibility) */}
         <section className="mt-20 max-w-5xl mx-auto p-6 bg-card-bg/40 border border-gray-800 rounded-2xl overflow-hidden text-center shadow-[0_0_30px_rgba(0,0,0,0.5)]">
