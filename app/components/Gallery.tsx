@@ -112,23 +112,53 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           const animeNames: string[] = [];
           const specialNames: string[] = [];
 
-          const priorityNames = ["Desktop Wallpapers", "Frieren", "Violet Evergarden", "Shiina Mahiru", "Alya Kujou ♡", "Shikimori Micchon", "Mixed"];
+          const priorityNames = ["Frieren", "Violet Evergarden", "Shiina Mahiru", "Alya Kujou ♡", "Shikimori Micchon", "Mixed"];
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
-          otherChars.forEach((char: CharacterData) => {
-            if (char.category === 'Special') specialNames.push(char.name);
-            else animeNames.push(char.name);
-
-            char.wallpapers.forEach((url, i) => {
-              allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
-            });
+          // 1. Gather all wallpapers from any entry that has "Desktop" in its name
+          const desktopWallpapers: string[] = [];
+          data.characters.forEach((char: CharacterData) => {
+            if (char.name.toLowerCase().includes("desktop")) {
+              char.wallpapers.forEach(url => {
+                if (!desktopWallpapers.includes(url)) desktopWallpapers.push(url);
+              });
+            }
           });
 
-          // Ensure Desktop Wallpapers is always in specialNames for the top filter bar
-          if (priorityChars.find((c: any) => c.name === "Desktop Wallpapers")) {
-            specialNames.unshift("Desktop Wallpapers");
+          // 2. Add them to the global list under the unified name "Desktop Wallpapers"
+          if (desktopWallpapers.length > 0) {
+            specialNames.push("Desktop Wallpapers");
+            desktopWallpapers.forEach((url, i) => {
+              allWallpapers.push({ 
+                id: `desktop-unified-${i}`, 
+                url, 
+                character: "Desktop Wallpapers", 
+                title: `Desktop Setup - ${i + 1}`, 
+                category: "Special", 
+                tags: ["PC", "4K", "Desktop"] 
+              });
+            });
           }
+
+          // 3. Process other characters (excluding the ones we just unified)
+          otherChars.forEach((char: CharacterData) => {
+            if (!char.name.toLowerCase().includes("desktop")) {
+              if (char.category === 'Special') specialNames.push(char.name);
+              else animeNames.push(char.name);
+
+              char.wallpapers.forEach((url, i) => {
+                allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
+              });
+            }
+          });
+
+          // Sort specialNames to put Desktop Wallpapers first if it exists
+          const finalSpecialNames = Array.from(new Set(specialNames)).sort((a, b) => {
+            if (a === "Desktop Wallpapers") return -1;
+            if (b === "Desktop Wallpapers") return 1;
+            return a.localeCompare(b);
+          });
 
           const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
           const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
@@ -269,7 +299,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           </div>
           
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
-            <div className={`grid gap-8 ${filter === "Desktop Wallpapers" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalDisplay.map((wp, index) => {
                 const getGlowColor = (category: string) => {
                   if (category === 'Special') return 'purple';
@@ -286,7 +316,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                     key={wp.id} 
                     glowColor={getGlowColor(wp.category)}
                     customSize={true}
-                    className={`group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer ${isDesktop ? "md:col-span-2 lg:col-span-2" : ""}`} 
+                    className="group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer" 
                     onClick={() => {
                       const params = new URLSearchParams(searchParams.toString());
                       params.set('image', wp.id);
