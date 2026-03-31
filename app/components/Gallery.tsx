@@ -277,14 +277,16 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                   return 'blue';
                 };
 
-                const isDesktop = wp.character.toLowerCase().includes("desktop");
+                // Detect if it's a desktop wallpaper by character name or title
+                const isDesktop = wp.character.toLowerCase().includes("desktop") || 
+                                 wp.title.toLowerCase().includes("desktop");
 
                 return (
                   <GlowCard 
                     key={wp.id} 
                     glowColor={getGlowColor(wp.category)}
                     customSize={true}
-                    className={`group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer ${isDesktop ? "md:col-span-1" : ""}`} 
+                    className={`group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer ${isDesktop ? "md:col-span-2 lg:col-span-2" : ""}`} 
                     onClick={() => {
                       const params = new URLSearchParams(searchParams.toString());
                       params.set('image', wp.id);
