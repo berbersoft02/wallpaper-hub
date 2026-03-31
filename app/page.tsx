@@ -25,9 +25,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         
-        {/* --- 1. NEW PROMINENT BLOG SECTION (Strategic for AdSense Approval) --- */}
-        {/* This makes the site look like an Art Analysis Blog rather than a 'thin' image gallery */}
-        <section className="py-24 px-4 bg-dark-bg/60 border-b border-gray-800 relative">
+        {/* --- 1. BLOG SECTION --- */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
