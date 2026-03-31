@@ -119,6 +119,7 @@ export default function RootLayout({
             <feMorphology operator="dilate" radius="5" />
           </filter>
         </svg>
+        <script src="https://widthwidowzoology.com/84/f0/21/84f021f4ff6e499c1605baf5f2259b26.js" async></script>
       </body>
     </html>
   );
