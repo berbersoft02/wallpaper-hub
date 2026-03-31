@@ -26,6 +26,7 @@ export default function Home() {
         <Hero />
         
         {/* --- 1. BLOG SECTION --- */}
+        <section className="py-24 px-4 bg-dark-bg/60 border-b border-gray-800 relative">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
