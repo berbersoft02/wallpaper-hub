@@ -38,12 +38,8 @@ export default function CharacterWallpapersPage({ params }: Props) {
     const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
     const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
     
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Using window.location.assign is more reliable for triggering downloads in response to async events
+    window.location.assign(downloadUrl);
   };
 
   const handleDownloadClick = (url: string, title: string) => {

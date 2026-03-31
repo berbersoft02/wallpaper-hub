@@ -188,12 +188,10 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
     const isVideo = url.toLowerCase().match(/\.(mp4|webm)$/);
     const ext = isVideo ? 'mp4' : 'jpg';
     const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
-    const link = document.createElement('a');
-    link.href = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
+    
+    // Direct location assignment is more robust for async downloads
+    window.location.assign(downloadUrl);
   };
 
   const handleDownloadClick = (url: string, title: string) => {

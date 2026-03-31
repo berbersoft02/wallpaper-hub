@@ -23,12 +23,13 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
       }, 1000);
     } else if (countdown === 0 && !ready) {
       setReady(true);
-      // Auto trigger the confirm (download) after 1 second of "Ready" state
-      const autoTimer = setTimeout(() => {
+      // Ensure onConfirm is called
+      const trigger = () => {
         onConfirm();
-        onClose();
-      }, 1000);
-      return () => clearTimeout(autoTimer);
+        // Don't close immediately to let the user see the "Starting" state
+        setTimeout(onClose, 2000);
+      };
+      trigger();
     }
     return () => clearInterval(timer);
   }, [isOpen, countdown, ready, onConfirm, onClose]);
@@ -44,7 +45,7 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[20000] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/95 backdrop-blur-md" />
       
