@@ -103,6 +103,13 @@ export default async function BlogPost({ params }: Props) {
           />
         </article>
 
+        {/* Adsterra Native Banner */}
+        <div className="mt-16 p-4 bg-card-bg/30 border border-gray-800 rounded-xl overflow-hidden text-center">
+          <p className="text-[10px] font-pixel text-gray-600 uppercase tracking-widest mb-4">Recommended for you</p>
+          <div id="container-771ab3dea3f70f996da234efbf13d803"></div>
+          <script async="async" data-cfasync="false" src="https://pl29025162.profitablecpmratenetwork.com/771ab3dea3f70f996da234efbf13d803/invoke.js"></script>
+        </div>
+
         <div className="mt-20 pt-10 border-t border-gray-800">
           <h3 className="font-pixel text-2xl text-white mb-6">Read Next</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -214,6 +214,13 @@ export default function CharacterWallpapersPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Adsterra Native Banner (High Visibility) */}
+        <section className="mt-20 max-w-5xl mx-auto p-6 bg-card-bg/40 border border-gray-800 rounded-2xl overflow-hidden text-center shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+          <p className="font-pixel text-xs text-neon-cyan/60 uppercase tracking-[0.2em] mb-6">Discovery Network</p>
+          <div id="container-771ab3dea3f70f996da234efbf13d803"></div>
+          <script async="async" data-cfasync="false" src="https://pl29025162.profitablecpmratenetwork.com/771ab3dea3f70f996da234efbf13d803/invoke.js"></script>
+        </section>
+
         <section className="mt-32">
           <h2 className="font-pixel text-3xl text-white mb-12 text-center">
             Explore More <span className="text-neon-cyan">Characters</span>
