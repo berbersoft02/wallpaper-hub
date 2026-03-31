@@ -76,7 +76,7 @@ export default function DraggableIcon({
 
   // Handle touch start
   const handleTouchStart = (e: React.TouchEvent) => {
-    e.preventDefault(); // Prevent page scroll
+    // Don't preventDefault here to allow scrolling
     e.stopPropagation();
     setIsDragging(true);
     setIsThrowing(false);
@@ -93,9 +93,7 @@ export default function DraggableIcon({
       cancelAnimationFrame(animationFrameRef.current);
     }
     
-    // Prevent body scroll while dragging
-    document.body.style.overflow = 'hidden';
-    document.body.style.touchAction = 'none';
+    // We don't prevent body scroll here yet
   };
 
   // Throw animation with physics
@@ -223,7 +221,7 @@ export default function DraggableIcon({
     cursor: isDragging ? "grabbing" : "grab",
     zIndex: isDragging || isThrowing ? 100 : 5,
     animation: hasMoved ? "none" : animation,
-    touchAction: "none", // Prevent browser touch gestures
+    touchAction: "auto", // Allow browser touch gestures like scrolling
   };
 
   return (
