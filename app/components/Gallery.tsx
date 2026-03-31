@@ -112,7 +112,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           const animeNames: string[] = [];
           const specialNames: string[] = [];
 
-          const priorityNames = ["Frieren", "Violet Evergarden", "Shiina Mahiru", "Alya Kujou ♡", "Shikimori Micchon", "Mixed"];
+          const priorityNames = ["Desktop Wallpapers", "Frieren", "Violet Evergarden", "Shiina Mahiru", "Alya Kujou ♡", "Shikimori Micchon", "Mixed"];
           const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
@@ -124,6 +124,11 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
               allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
             });
           });
+
+          // Ensure Desktop Wallpapers is always in specialNames for the top filter bar
+          if (priorityChars.find((c: any) => c.name === "Desktop Wallpapers")) {
+            specialNames.unshift("Desktop Wallpapers");
+          }
 
           const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
           const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
@@ -272,14 +277,14 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                   return 'blue';
                 };
 
-                const isDesktop = wp.character === "Desktop Wallpapers";
+                const isDesktop = wp.character.toLowerCase().includes("desktop");
 
                 return (
                   <GlowCard 
                     key={wp.id} 
                     glowColor={getGlowColor(wp.category)}
                     customSize={true}
-                    className="group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer" 
+                    className={`group relative bg-card-bg/40 border-gray-800 rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink/50 cursor-pointer ${isDesktop ? "md:col-span-1" : ""}`} 
                     onClick={() => {
                       const params = new URLSearchParams(searchParams.toString());
                       params.set('image', wp.id);
