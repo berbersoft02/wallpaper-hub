@@ -11,6 +11,7 @@ import { useState, use, useMemo } from 'react';
 import Lightbox from '@/app/components/Lightbox';
 import { getPostByCharacterName } from '@/lib/blog';
 import { GlowCard } from '@/app/components/ui/spotlight-card';
+import { getCharacterDescription } from '@/lib/character-descriptions';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -23,6 +24,7 @@ export default function CharacterWallpapersPage({ params }: Props) {
 
   const name = character?.name.replace(' ♡', '') || '';
   const blogPost = character ? getPostByCharacterName(character.name) : undefined;
+  const description = getCharacterDescription(name);
 
   const handleDownload = (url: string, title: string) => {
     const isVideo = url.match(/\.(mp4|webm|mov)/i);
@@ -164,34 +166,49 @@ export default function CharacterWallpapersPage({ params }: Props) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-body text-gray-300 leading-relaxed text-lg">
               <div>
-                <h3 className="text-white font-pixel text-xl mb-4">The Character & Aesthetic</h3>
-                <p className="mb-6">
-                  {name} is more than just a character; they represent a specific visual energy in the anime world. Whether it&apos;s the sharp, aggressive lines of a Shonen battle or the soft, ethereal glow of a slice-of-life masterpiece, our collection captures every nuance. This gallery is specifically curated to highlight the emotional weight and iconic scenes that fans associate with {name}.
-                </p>
-                <p>
-                  From the intricate details of their outfit to the atmospheric lighting of their signature environment, these edits are designed to evoke the same feelings you got while watching the series. We focus on color harmony, ensuring that your desktop or mobile setup feels unified and professional.
-                </p>
+                <h3 className="text-white font-pixel text-xl mb-4">Character Overview</h3>
+                <p className="mb-6">{description.overview}</p>
+                
+                <h3 className="text-white font-pixel text-xl mb-4">Personality & Role</h3>
+                <p className="mb-6">{description.personality}</p>
+                <p>{description.role}</p>
               </div>
               
               <div>
-                <h3 className="text-white font-pixel text-xl mb-4">Technical Excellence: 4K & Beyond</h3>
-                <p className="mb-6">
-                  Every image in this {name} archive has undergone a rigorous restoration process. We start with high-bitrate source material and use custom <strong>AI Upscaling models (Real-ESRGAN and Topaz Photo AI)</strong> to reach true 3840x2160 resolution without the typical "waxiness" of cheap filters.
-                </p>
+                <h3 className="text-white font-pixel text-xl mb-4">Collection Details</h3>
+                <p className="mb-6">{description.collectionDetails}</p>
+                
+                <h3 className="text-white font-pixel text-xl mb-4">Technical Specifications</h3>
                 <ul className="space-y-4 text-sm font-mono bg-black/30 p-4 rounded-lg border border-gray-800">
-                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Custom Color Grading:</strong> Adjusted for modern OLED and High-Refresh Rate displays.</li>
-                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>Denoising:</strong> Cleaned artifacts while preserving the original animation grain.</li>
-                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Display Optimization:</strong> Verified for both 16:9 desktop and 9:16 mobile viewing.</li>
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Resolution:</strong> True 4K (3840x2160) for Desktop and Mobile.</li>
+                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>Enhancement:</strong> AI-Upscaled using Real-ESRGAN models.</li>
+                  <li className="flex gap-3"><span className="text-neon-cyan">▶</span> <strong>Color Space:</strong> DCI-P3 optimized for modern smartphone displays.</li>
+                  <li className="flex gap-3"><span className="text-neon-pink">▶</span> <strong>File Format:</strong> High-quality PNG/WebP for maximum detail retention.</li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-gray-800">
-              <h3 className="text-white font-pixel text-xl mb-6">Pro Tip: Optimizing for Your Display</h3>
-              <div className="bg-neon-cyan/5 p-6 rounded-xl border border-neon-cyan/20">
-                <p className="text-gray-300 italic mb-0">
-                  To get the most out of these {name} wallpapers, we recommend setting your display brightness to 80% and ensuring HDR is enabled if supported. For mobile users, these 4K PNGs are perfect for "Depth Effect" on iOS 16+, where the character can slightly overlap the clock for a premium 3D look.
-                </p>
+            <div className="mt-12 pt-12 border-t border-gray-800">
+              <h2 className="font-pixel text-3xl text-white mb-8 uppercase tracking-widest text-center">
+                Frequently Asked <span className="text-neon-cyan">Questions</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300 font-body">
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">Are these {name} wallpapers free to download?</h4>
+                  <p className="text-sm">Yes, all wallpapers in our {name} collection are completely free for personal use as backgrounds for your devices.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">What is the best way to apply these as backgrounds?</h4>
+                  <p className="text-sm">For the best results, download the high-resolution file and use your device&apos;s system settings to apply it. Avoid using "set as wallpaper" directly from the browser to ensure full 4K quality.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">Do you have {name} live wallpapers?</h4>
+                  <p className="text-sm">We frequently update our archive. Check the collection for video formats (.mp4) which can be used as live backgrounds on most Android and some iOS devices.</p>
+                </div>
+                <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
+                  <h4 className="text-neon-cyan font-pixel text-lg mb-2">How are these images enhanced?</h4>
+                  <p className="text-sm">We use advanced AI upscaling and custom color grading to transform standard animation frames into high-fidelity 4K digital assets while preserving the original art style.</p>
+                </div>
               </div>
             </div>
           </div>

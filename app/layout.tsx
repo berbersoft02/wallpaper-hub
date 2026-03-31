@@ -19,10 +19,11 @@ const bodyFont = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://saidahriken.site'),
   title: {
-    default: "Only_dias Ocean | Premium 4K Anime Wallpapers",
+    default: "Only_dias Ocean | Ultra HD 4K Anime Wallpapers & Digital Assets",
     template: "%s | Only_dias Ocean"
   },
-  description: "Download high-quality 4K upscaled anime wallpapers, matching icons, and PFPs. Hand-picked collections for mobile and desktop.",
+  description: "Explore a curated collection of premium 4K upscaled anime wallpapers, matching social media icons, and PFPs. Our hand-picked gallery features high-resolution digital art for mobile and desktop, enhanced with AI upscaling for maximum clarity.",
+  keywords: ["4K Anime Wallpapers", "High Resolution Anime Art", "AI Upscaled Wallpapers", "Anime PFPs", "Anime Discord Icons", "Desktop Backgrounds", "Mobile Anime Wallpapers", "Digital Art Gallery"],
   alternates: {
     canonical: '/',
   },
