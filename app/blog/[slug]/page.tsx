@@ -4,6 +4,7 @@ import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -107,7 +108,11 @@ export default async function BlogPost({ params }: Props) {
         <div className="mt-16 p-4 bg-card-bg/30 border border-gray-800 rounded-xl overflow-hidden text-center">
           <p className="text-[10px] font-pixel text-gray-600 uppercase tracking-widest mb-4">Recommended for you</p>
           <div id="container-771ab3dea3f70f996da234efbf13d803"></div>
-          <script async data-cfasync="false" src="https://pl29025162.profitablecpmratenetwork.com/771ab3dea3f70f996da234efbf13d803/invoke.js"></script>
+          <Script 
+            src="https://pl29025162.profitablecpmratenetwork.com/771ab3dea3f70f996da234efbf13d803/invoke.js" 
+            strategy="afterInteractive"
+            data-cfasync="false"
+          />
         </div>
 
         <div className="mt-20 pt-10 border-t border-gray-800">
