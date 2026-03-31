@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Download, Heart, Maximize2, BookOpen } from 'lucide-react';
 import { useState, use, useMemo } from 'react';
+import Script from 'next/script';
 import Lightbox from '@/app/components/Lightbox';
 import { getPostByCharacterName } from '@/lib/blog';
 import { GlowCard } from '@/app/components/ui/spotlight-card';
