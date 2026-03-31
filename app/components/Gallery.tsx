@@ -117,14 +117,12 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
 
           otherChars.forEach((char: CharacterData) => {
-            if (char.name !== 'Desktop Wallpapers') {
-              if (char.category === 'Special') specialNames.push(char.name);
-              else animeNames.push(char.name);
+            if (char.category === 'Special') specialNames.push(char.name);
+            else animeNames.push(char.name);
 
-              char.wallpapers.forEach((url, i) => {
-                allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
-              });
-            }
+            char.wallpapers.forEach((url, i) => {
+              allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
+            });
           });
 
           const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
@@ -266,13 +264,15 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           </div>
           
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className={`grid gap-8 ${filter === "Desktop Wallpapers" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`}>
               {finalDisplay.map((wp, index) => {
                 const getGlowColor = (category: string) => {
                   if (category === 'Special') return 'purple';
                   if (category === 'Anime') return 'blue';
                   return 'blue';
                 };
+
+                const isDesktop = wp.character === "Desktop Wallpapers";
 
                 return (
                   <GlowCard 
@@ -286,12 +286,12 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                       router.push(`${pathname}?${params.toString()}`, { scroll: false });
                     }}
                   >
-                    <div className="aspect-[9/16] relative overflow-hidden rounded-t-lg">
+                    <div className={`${isDesktop ? "aspect-video" : "aspect-[9/16]"} relative overflow-hidden rounded-t-lg`}>
                        <PixelImage 
                           src={wp.url} 
                           alt={wp.title} 
                           fill 
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes={isDesktop ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
                        />
                     </div>
