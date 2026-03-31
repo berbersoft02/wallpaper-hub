@@ -11,6 +11,7 @@ import Lightbox from "./Lightbox";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
 import RecommendationButton from "./RecommendationButton";
+import DownloadModal from "./DownloadModal";
 
 interface Wallpaper {
   id: string;
@@ -88,7 +89,8 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(24);
-  const [showDownloadSuccessModal, setShowDownloadSuccessModal] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const [pendingDownload, setPendingDownload] = useState<{url: string, title: string} | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const { favorites, toggleFavorite, isFavorite } = useFavorites<Wallpaper>("wallpapers-favs");
@@ -182,7 +184,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
     }
   }, [searchParams, finalDisplay]);
 
-  const handleDownload = (url: string, title: string) => {
+  const triggerDownload = (url: string, title: string) => {
     const isVideo = url.toLowerCase().match(/\.(mp4|webm)$/);
     const ext = isVideo ? 'mp4' : 'jpg';
     const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
@@ -192,7 +194,11 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    setShowDownloadSuccessModal(true);
+  };
+
+  const handleDownloadClick = (url: string, title: string) => {
+    setPendingDownload({ url, title });
+    setIsDownloadModalOpen(true);
   };
 
   const handleCloseLightbox = useCallback(() => {
@@ -310,17 +316,15 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
       </section>
 
       {selectedImageIndex !== null && (
-        <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={handleCloseLightbox} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownload} />
+        <Lightbox images={filteredItems.map(w => w.url)} titles={filteredItems.map(w => w.title)} selectedIndex={selectedImageIndex} onClose={handleCloseLightbox} onPrev={() => { setSelectedImageIndex(prev => prev! > 0 ? prev! - 1 : filteredItems.length - 1); playSound('click'); }} onNext={() => { setSelectedImageIndex(prev => prev! < filteredItems.length - 1 ? prev! + 1 : 0); playSound('click'); }} onDownload={handleDownloadClick} />
       )}
 
-      {showDownloadSuccessModal && (
-        <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4" onClick={() => setShowDownloadSuccessModal(false)}>
-          <div className="bg-card-bg border-4 border-neon-pink p-8 max-w-md w-full rounded-lg text-center" onClick={e => e.stopPropagation()}>
-            <h3 className="font-pixel text-2xl text-neon-cyan mb-4">Download Started!</h3>
-            <button onClick={() => setShowDownloadSuccessModal(false)} className="px-8 py-3 bg-neon-cyan text-dark-bg font-pixel rounded-lg">OK</button>
-          </div>
-        </div>
-      )}
+      <DownloadModal 
+        isOpen={isDownloadModalOpen}
+        onClose={() => setIsDownloadModalOpen(false)}
+        onConfirm={() => pendingDownload && triggerDownload(pendingDownload.url, pendingDownload.title)}
+        fileName={pendingDownload?.title || ""}
+      />
     </>
   );
 }
