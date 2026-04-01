@@ -25,7 +25,14 @@ export default function Home() {
         <Navbar />
         <Hero />
         
-        {/* --- 1. BLOG SECTION --- */}
+        {/* --- 1. WALLPAPERS SECTION --- */}
+        <Gallery onRecommendClick={() => setIsModalOpen(true)} />
+
+        {/* --- 2. ICONS & PFPS SECTION --- */}
+        <IconsPFPs />
+
+        {/* --- 3. BLOG SECTION (Strategic for AdSense Approval) --- */}
+        {/* This makes the site look like an Art Analysis Blog rather than a 'thin' image gallery */}
         <section className="py-24 px-4 bg-dark-bg/60 border-b border-gray-800 relative">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent" />
           <div className="max-w-7xl mx-auto">
@@ -67,12 +74,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* --- 2. WALLPAPERS SECTION --- */}
-        <Gallery onRecommendClick={() => setIsModalOpen(true)} />
-
-        {/* --- 3. ICONS & PFPS SECTION --- */}
-        <IconsPFPs />
 
         {/* --- 4. FEATURED GUIDES SECTION --- */}
         <section className="py-20 px-4 bg-dark-bg border-b border-gray-800">

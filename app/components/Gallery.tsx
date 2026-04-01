@@ -119,7 +119,7 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
           // 1. Gather all wallpapers from any entry that has "Desktop" in its name
           const desktopWallpapers: string[] = [];
           data.characters.forEach((char: CharacterData) => {
-            if (char.name.toLowerCase().includes("desktop")) {
+            if (char.name.toLowerCase().includes("desktop") || char.name === "Desktop") {
               char.wallpapers.forEach(url => {
                 if (!desktopWallpapers.includes(url)) desktopWallpapers.push(url);
               });
@@ -134,9 +134,9 @@ function GalleryContent({ onRecommendClick }: { onRecommendClick: () => void }) 
                 id: `desktop-unified-${i}`, 
                 url, 
                 character: "Desktop Wallpapers", 
-                title: `Desktop Setup - ${i + 1}`, 
+                title: `PC Wallpaper - ${i + 1}`, 
                 category: "Special", 
-                tags: ["PC", "4K", "Desktop"] 
+                tags: ["4K", "Desktop", "PC", "Horizontal"] 
               });
             });
           }
