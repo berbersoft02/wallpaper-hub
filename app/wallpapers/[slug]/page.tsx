@@ -14,9 +14,40 @@ import { getPostByCharacterName } from '@/lib/blog';
 import { GlowCard } from '@/app/components/ui/spotlight-card';
 import { getCharacterDescription } from '@/lib/character-descriptions';
 import DownloadModal from '@/app/components/DownloadModal';
+import { Metadata } from 'next';
 
-interface Props {
-  params: Promise<{ slug: string }>;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const character = getCharacterBySlug(slug);
+  
+  if (!character) return { title: 'Character Not Found' };
+
+  const name = character.name.replace(' ♡', '');
+  const description = getCharacterDescription(name);
+
+  return {
+    title: `${name} 4K Wallpapers & Matching PFPs`,
+    description: `Download premium 4K upscaled wallpapers and matching profile icons of ${name}. ${description.overview.substring(0, 100)}...`,
+    keywords: [`${name} wallpaper`, `${name} 4K`, `${name} pfp`, `${name} icons`, 'anime wallpaper'],
+    openGraph: {
+      title: `${name} | High Quality 4K Anime Edits`,
+      description: `Explore our exclusive collection of ${name} digital assets. Optimized for mobile and desktop.`,
+      images: [
+        {
+          url: character.wallpapers[0],
+          width: 1200,
+          height: 630,
+          alt: `${name} 4K Wallpaper Preview`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${name} 4K Collection`,
+      description: `Premium digital assets for ${name} fans.`,
+      images: [character.wallpapers[0]],
+    },
+  };
 }
 
 export default function CharacterWallpapersPage({ params }: Props) {
