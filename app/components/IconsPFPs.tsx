@@ -53,7 +53,7 @@ export default function IconsPFPs() {
           id: `${char.name}-${i}`,
           url,
           character: char.name,
-          title: `${char.name} Icon #${i + 1}`
+          title: `${char.name} PFP #${i + 1}`
         });
       });
     });
@@ -65,8 +65,6 @@ export default function IconsPFPs() {
     if (filter === "All") return allIcons;
     return allIcons.filter(icon => icon.character === filter);
   }, [filter, allIcons, favorites]);
-
-  const finalIcons = useMemo(() => filteredIcons.slice(0, displayCount), [filteredIcons, displayCount]);
 
   const handleDownload = (url: string, title: string) => {
     const link = document.createElement('a');
@@ -90,10 +88,10 @@ export default function IconsPFPs() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-pixel text-4xl md:text-6xl text-white mb-6 animate-glow-purple">
-            MATCHING <span className="text-neon-purple">ICONS</span> & PFPS
+            PROFILE <span className="text-neon-purple">PICTURES</span>
           </h2>
           <p className="font-body text-gray-400 text-lg max-w-2xl mx-auto">
-            Dynamic collection of profile pictures directly from our neural network. Grouped by character for easy matching.
+            High-quality anime avatars for Discord, TikTok, and social media. Grouped by character for easy discovery.
           </p>
         </div>
 
