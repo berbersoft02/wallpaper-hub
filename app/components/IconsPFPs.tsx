@@ -66,6 +66,8 @@ export default function IconsPFPs() {
     return allIcons.filter(icon => icon.character === filter);
   }, [filter, allIcons, favorites]);
 
+  const finalIcons = useMemo(() => filteredIcons.slice(0, displayCount), [filteredIcons, displayCount]);
+
   const handleDownload = (url: string, title: string) => {
     const link = document.createElement('a');
     link.href = `/api/download?url=${encodeURIComponent(url)}&filename=${title.replace(/\s+/g, '_').toLowerCase()}.png`;
