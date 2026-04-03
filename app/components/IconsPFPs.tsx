@@ -1,82 +1,146 @@
 "use client";
 
-import { Download, Heart, Star } from "lucide-react";
+import { Download, Heart, Star, UserCircle, LayoutGrid } from "lucide-react";
 import Image from "next/image";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { GlowCard } from "./ui/spotlight-card";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
 
+interface PFPCharacter {
+  name: string;
+  icons: string[];
+}
+
 interface IconItem {
-  id: number;
+  id: string;
   url: string;
+  character: string;
   title: string;
 }
 
 export default function IconsPFPs() {
-  const [filter, setFilter] = useState<"All" | "Favorites">("All");
+  const [filter, setFilter] = useState("All");
   const [displayCount, setDisplayCount] = useState(12);
+  const [pfpsByChar, setPfpsByChar] = useState<PFPCharacter[]>([]);
+  const [loading, setLoading] = useState(true);
   const { playSound } = useCyberSound();
   
-  // Array of images from 1 to 69
-  const icons = useMemo(() => Array.from({ length: 69 }, (_, i) => ({
-    id: i + 1,
-    url: `/${i + 1}.png`,
-    title: `Matching PFP #${i + 1}`,
-  })), []);
-
   const { favorites, toggleFavorite, isFavorite } = useFavorites<IconItem>("pfps-favs");
+
+  useEffect(() => {
+    const fetchPfps = async () => {
+      try {
+        const res = await fetch('/api/wallpapers');
+        const data = await res.json();
+        if (data.pfps) {
+          setPfpsByChar(data.pfps);
+        }
+      } catch (err) {
+        console.error("Failed to fetch PFPs:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPfps();
+  }, []);
+
+  const allIcons = useMemo(() => {
+    const list: IconItem[] = [];
+    pfpsByChar.forEach(char => {
+      char.icons.forEach((url, i) => {
+        list.push({
+          id: `${char.name}-${i}`,
+          url,
+          character: char.name,
+          title: `${char.name} Icon #${i + 1}`
+        });
+      });
+    });
+    return list.reverse();
+  }, [pfpsByChar]);
 
   const filteredIcons = useMemo(() => {
     if (filter === "Favorites") return favorites;
-    return icons;
-  }, [filter, icons, favorites]);
+    if (filter === "All") return allIcons;
+    return allIcons.filter(icon => icon.character === filter);
+  }, [filter, allIcons, favorites]);
+
+  const finalIcons = useMemo(() => filteredIcons.slice(0, displayCount), [filteredIcons, displayCount]);
 
   const handleDownload = (url: string, title: string) => {
     const link = document.createElement('a');
-    link.href = url;
-    link.download = `${title.replace(/\s+/g, '_').toLowerCase()}.png`;
+    link.href = `/api/download?url=${encodeURIComponent(url)}&filename=${title.replace(/\s+/g, '_').toLowerCase()}.png`;
+    link.setAttribute('download', `${title}.png`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  return (
-    <section id="icons" className="py-20 px-4 md:px-12 bg-dark-bg/30 relative overflow-hidden border-t border-gray-800">
-      <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="font-pixel text-4xl md:text-5xl text-center mb-12 text-neon-purple animate-glow-purple">
-          <span className="text-white">ICONS</span> & PFPS
-        </h2>
+  if (loading) {
+    return (
+      <div className="py-20 text-center font-pixel text-neon-purple animate-pulse">
+        Accessing Avatar Database...
+      </div>
+    );
+  }
 
-        <div className="flex justify-center gap-4 mb-12">
-           <button
-             onMouseEnter={() => playSound('hover')}
-             onClick={() => { setFilter("All"); playSound('click'); }}
-             className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border ${filter === "All" ? "bg-neon-purple border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.5)] scale-105" : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-purple"}`}
-           >
-             ALL ({icons.length})
-           </button>
-           {favorites.length > 0 && (
-             <button
-               onMouseEnter={() => playSound('hover')}
-               onClick={() => { setFilter("Favorites"); playSound('click'); }}
-               className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border flex items-center gap-2 ${filter === "Favorites" ? "bg-white text-dark-bg shadow-[0_0_15px_rgba(255,255,255,0.5)] scale-105" : "bg-dark-bg/50 border-gray-700 text-neon-pink hover:bg-neon-pink/10"}`}
-             >
-               <Star size={16} fill={filter === "Favorites" ? "black" : "none"} />
-               FAVS ({favorites.length})
-             </button>
-           )}
+  return (
+    <section id="icons" className="py-24 px-4 md:px-12 bg-dark-bg/30 relative overflow-hidden border-t border-gray-800">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="font-pixel text-4xl md:text-6xl text-white mb-6 animate-glow-purple">
+            MATCHING <span className="text-neon-purple">ICONS</span> & PFPS
+          </h2>
+          <p className="font-body text-gray-400 text-lg max-w-2xl mx-auto">
+            Dynamic collection of profile pictures directly from our neural network. Grouped by character for easy matching.
+          </p>
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-col gap-8 mb-16">
+          <div className="flex flex-wrap justify-center gap-3">
+            <button
+              onClick={() => { setFilter("All"); setDisplayCount(12); playSound('click'); }}
+              className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border ${filter === "All" ? "bg-neon-purple border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.5)]" : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-purple"}`}
+            >
+              ALL ({allIcons.length})
+            </button>
+            {favorites.length > 0 && (
+              <button
+                onClick={() => { setFilter("Favorites"); setDisplayCount(12); playSound('click'); }}
+                className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border flex items-center gap-2 ${filter === "Favorites" ? "bg-white text-dark-bg shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "bg-dark-bg/50 border-gray-700 text-neon-pink hover:bg-neon-pink/10"}`}
+              >
+                <Star size={16} fill={filter === "Favorites" ? "black" : "none"} />
+                FAVS ({favorites.length})
+              </button>
+            )}
+          </div>
+
+          {pfpsByChar.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2 border-t border-white/5 pt-8">
+              {pfpsByChar.map(char => (
+                <button
+                  key={char.name}
+                  onClick={() => { setFilter(char.name); setDisplayCount(12); playSound('click'); }}
+                  className={`px-4 py-1 rounded-lg font-pixel text-[10px] uppercase tracking-wider transition-all ${filter === char.name ? "text-neon-purple border border-neon-purple shadow-[0_0_10px_rgba(211,0,197,0.3)]" : "text-gray-500 hover:text-gray-300 border border-transparent"}`}
+                >
+                  {char.name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredIcons.slice(0, displayCount).map((icon) => (
+          {finalIcons.map((icon) => (
             <GlowCard 
               key={icon.id}
               glowColor="purple"
               customSize={true}
-              className="group relative bg-card-bg/40 border-gray-800 hover:border-neon-purple/50 transition-all duration-500 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(211,0,197,0.3)]"
+              className="group relative bg-card-bg/40 border-gray-800 hover:border-neon-purple/50 transition-all duration-500 rounded-xl overflow-hidden"
             >
-              <div className="aspect-square relative overflow-hidden rounded-t-xl">
+              <div className="aspect-square relative overflow-hidden">
                 <Image 
                   src={icon.url}
                   alt={icon.title}
@@ -85,36 +149,38 @@ export default function IconsPFPs() {
                   unoptimized
                 />
                 
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                  <button 
-                    onClick={() => { handleDownload(icon.url, icon.title); playSound('click'); }}
-                    className="p-3 bg-neon-purple text-white rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(211,0,197,0.5)]"
-                  >
-                    <Download size={20} />
-                  </button>
-                  <button 
-                    onClick={() => { toggleFavorite(icon); playSound('click'); }}
-                    className={`p-3 rounded-full hover:scale-110 transition-transform ${isFavorite(icon.id) ? "bg-neon-pink text-white" : "bg-white/10 backdrop-blur-md text-white"}`}
-                  >
-                    <Heart size={20} fill={isFavorite(icon.id) ? "white" : "none"} />
-                  </button>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4">
+                  <div className="flex gap-3">
+                    <button 
+                      onClick={() => { handleDownload(icon.url, icon.title); playSound('click'); }}
+                      className="p-3 bg-neon-purple text-white rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(211,0,197,0.5)]"
+                    >
+                      <Download size={20} />
+                    </button>
+                    <button 
+                      onClick={() => { toggleFavorite(icon); playSound('click'); }}
+                      className="p-3 bg-white text-dark-bg rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                    >
+                      <Heart size={20} className={isFavorite(icon.id) ? "fill-neon-pink text-neon-pink" : ""} />
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="p-3 bg-dark-bg/60 backdrop-blur-md border-t border-white/5 rounded-b-xl">
-                <h3 className="font-pixel text-sm text-gray-200 truncate">{icon.title}</h3>
+              <div className="p-3 bg-black/40 backdrop-blur-md border-t border-white/5">
+                <p className="font-pixel text-[10px] text-gray-400 uppercase tracking-widest text-center truncate">{icon.character}</p>
               </div>
             </GlowCard>
           ))}
         </div>
 
         {displayCount < filteredIcons.length && (
-          <div className="flex justify-center mt-12">
-            <button
-              onMouseEnter={() => playSound('hover')}
+          <div className="mt-16 text-center">
+            <button 
               onClick={() => { setDisplayCount(prev => prev + 12); playSound('click'); }}
-              className="font-pixel px-8 py-4 border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
+              className="px-10 py-4 font-pixel text-xl border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
             >
-              Load More Icons
+              LOAD MORE AVATARS
             </button>
           </div>
         )}

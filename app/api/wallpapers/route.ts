@@ -127,20 +127,29 @@ export async function GET() {
 
   const all = [...images, ...videos];
   const charMap = new Map();
+  const pfpMap = new Map();
 
   for (const item of all) {
     const folder = item.folder || item.asset_folder || '';
     const publicId = item.public_id || '';
     let rawName = '';
+    let isPFP = false;
     
     if (folder) {
       const parts = folder.split('/');
+      // Check for wallpapers folder
       const wpIndex = parts.indexOf('wallpapers');
+      // Check for pfps folder
+      const pfpIndex = parts.indexOf('pfps');
+
       if (wpIndex !== -1 && parts.length > wpIndex + 1) {
         rawName = parts[wpIndex + 1];
+      } else if (pfpIndex !== -1 && parts.length > pfpIndex + 1) {
+        rawName = parts[pfpIndex + 1];
+        isPFP = true;
       } else if (wpIndex !== -1 && parts.length === wpIndex + 1) {
         rawName = 'Mixed';
-      } else if (wpIndex === -1 && parts.length > 0) {
+      } else if (wpIndex === -1 && pfpIndex === -1 && parts.length > 0) {
         rawName = parts[0];
       }
     }
@@ -148,31 +157,49 @@ export async function GET() {
     if (!rawName && publicId) {
       const parts = publicId.split('/');
       const wpIndex = parts.indexOf('wallpapers');
+      const pfpIndex = parts.indexOf('pfps');
       if (wpIndex !== -1 && parts.length > wpIndex + 1) {
         rawName = parts[wpIndex + 1];
+      } else if (pfpIndex !== -1 && parts.length > pfpIndex + 1) {
+        rawName = parts[pfpIndex + 1];
+        isPFP = true;
       }
     }
 
-    if (!rawName || rawName === 'wallpapers' || publicId.startsWith('samples/')) continue;
+    if (!rawName || rawName === 'wallpapers' || rawName === 'pfps' || publicId.startsWith('samples/')) continue;
 
     const name = normalizeName(rawName);
     
-    if (!charMap.has(name)) {
-      charMap.set(name, {
-        name,
-        category: SPECIAL_CATEGORIES.includes(name) ? 'Special' : 'Anime',
-        tags: tagMap[name] || [],
-        wallpapers: []
-      });
-    }
-    
-    const currentList = charMap.get(name).wallpapers;
-    if (!currentList.includes(item.secure_url)) {
-      currentList.push(item.secure_url);
+    if (isPFP) {
+      if (!pfpMap.has(name)) {
+        pfpMap.set(name, {
+          name,
+          icons: []
+        });
+      }
+      const list = pfpMap.get(name).icons;
+      if (!list.includes(item.secure_url)) {
+        list.push(item.secure_url);
+      }
+    } else {
+      if (!charMap.has(name)) {
+        charMap.set(name, {
+          name,
+          category: SPECIAL_CATEGORIES.includes(name) ? 'Special' : 'Anime',
+          tags: tagMap[name] || [],
+          wallpapers: []
+        });
+      }
+      
+      const currentList = charMap.get(name).wallpapers;
+      if (!currentList.includes(item.secure_url)) {
+        currentList.push(item.secure_url);
+      }
     }
   }
 
   const characters = Array.from(charMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+  const pfps = Array.from(pfpMap.values()).sort((a, b) => a.name.localeCompare(b.name));
 
   // Move specific characters to the end of the array so they show up first when the gallery reverses the list
   const priorityChars = [
@@ -193,13 +220,15 @@ export async function GET() {
 
   return NextResponse.json({
     characters,
+    pfps,
     source: 'cloudinary-live-full',
     total: all.length,
     debug: {
       imagesFound: images.length,
       videosFound: videos.length,
       imagePages: imagesData.pages,
-      videoPages: videosData.pages
+      videoPages: videosData.pages,
+      pfpsFound: pfps.length
     }
   });
 }
