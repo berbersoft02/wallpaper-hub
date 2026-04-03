@@ -144,8 +144,14 @@ export async function GET() {
 
       if (wpIndex !== -1 && parts.length > wpIndex + 1) {
         rawName = parts[wpIndex + 1];
-      } else if (pfpIndex !== -1 && parts.length > pfpIndex + 1) {
-        rawName = parts[pfpIndex + 1];
+      } else if (pfpIndex !== -1) {
+        // If it's in a subfolder of pfps
+        if (parts.length > pfpIndex + 1) {
+          rawName = parts[pfpIndex + 1];
+        } else {
+          // Directly in pfps folder
+          rawName = 'Mixed Icons';
+        }
         isPFP = true;
       } else if (wpIndex !== -1 && parts.length === wpIndex + 1) {
         rawName = 'Mixed';
