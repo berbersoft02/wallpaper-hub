@@ -36,7 +36,6 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
   }, [isOpen]);
 
   const handleFinalDownload = () => {
-    window.open("https://widthwidowzoology.com/bu8z5ayi?k", "_blank");
     onConfirm();
     onClose();
   };

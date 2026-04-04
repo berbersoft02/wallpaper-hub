@@ -58,7 +58,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-7463641924793744" />
-        <script src="https://pl29025161.profitablecpmratenetwork.com/e5/01/87/e50187535e5220ba9c70d0dfb512b73b.js" async></script>
       </head>
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
@@ -119,7 +118,6 @@ export default function RootLayout({
             <feMorphology operator="dilate" radius="5" />
           </filter>
         </svg>
-        <script src="https://widthwidowzoology.com/84/f0/21/84f021f4ff6e499c1605baf5f2259b26.js" async></script>
       </body>
     </html>
   );
