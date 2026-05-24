@@ -1,8 +1,8 @@
 "use client";
 
-import { Download, Heart, Star, UserCircle, LayoutGrid } from "lucide-react";
+import { Download, Heart, Star } from "lucide-react";
 import Image from "next/image";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { GlowCard } from "./ui/spotlight-card";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
@@ -60,6 +60,17 @@ export default function IconsPFPs() {
     return list.reverse();
   }, [pfpsByChar]);
 
+  const handleFilterChange = useCallback((newFilter: string) => {
+    setFilter(newFilter);
+    setDisplayCount(12);
+    playSound('click');
+  }, [playSound]);
+
+  const handleLoadMore = useCallback(() => {
+    setDisplayCount(prev => prev + 12);
+    playSound('click');
+  }, [playSound]);
+
   const filteredIcons = useMemo(() => {
     if (filter === "Favorites") return favorites;
     if (filter === "All") return allIcons;
@@ -75,6 +86,7 @@ export default function IconsPFPs() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    playSound('click');
   };
 
   if (loading) {
@@ -101,14 +113,16 @@ export default function IconsPFPs() {
         <div className="flex flex-col gap-8 mb-16">
           <div className="flex flex-wrap justify-center gap-3">
             <button
-              onClick={() => { setFilter("All"); setDisplayCount(12); playSound('click'); }}
+              onClick={() => handleFilterChange("All")}
+              aria-pressed={filter === "All"}
               className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border ${filter === "All" ? "bg-neon-purple border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.5)]" : "bg-dark-bg/50 border-gray-700 text-gray-400 hover:border-neon-purple"}`}
             >
               ALL ({allIcons.length})
             </button>
             {favorites.length > 0 && (
               <button
-                onClick={() => { setFilter("Favorites"); setDisplayCount(12); playSound('click'); }}
+                onClick={() => handleFilterChange("Favorites")}
+                aria-pressed={filter === "Favorites"}
                 className={`px-6 py-2 rounded-full font-pixel text-sm transition-all border flex items-center gap-2 ${filter === "Favorites" ? "bg-white text-dark-bg shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "bg-dark-bg/50 border-gray-700 text-neon-pink hover:bg-neon-pink/10"}`}
               >
                 <Star size={16} fill={filter === "Favorites" ? "black" : "none"} />
@@ -122,7 +136,8 @@ export default function IconsPFPs() {
               {pfpsByChar.map(char => (
                 <button
                   key={char.name}
-                  onClick={() => { setFilter(char.name); setDisplayCount(12); playSound('click'); }}
+                  onClick={() => handleFilterChange(char.name)}
+                  aria-pressed={filter === char.name}
                   className={`px-4 py-1 rounded-lg font-pixel text-[10px] uppercase tracking-wider transition-all ${filter === char.name ? "text-neon-purple border border-neon-purple shadow-[0_0_10px_rgba(211,0,197,0.3)]" : "text-gray-500 hover:text-gray-300 border border-transparent"}`}
                 >
                   {char.name}
@@ -146,21 +161,23 @@ export default function IconsPFPs() {
                   alt={icon.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  unoptimized
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4">
                   <div className="flex gap-3">
                     <button 
-                      onClick={() => { handleDownload(icon.url, icon.title); playSound('click'); }}
+                      onClick={() => handleDownload(icon.url, icon.title)}
                       className="p-3 bg-neon-purple text-white rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(211,0,197,0.5)]"
+                      aria-label={`Download ${icon.title}`}
                     >
                       <Download size={20} />
                     </button>
                     <button 
                       onClick={() => { toggleFavorite(icon); playSound('click'); }}
                       className="p-3 bg-white text-dark-bg rounded-full hover:scale-110 transition-transform shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                      aria-label={isFavorite(icon.id) ? `Remove ${icon.title} from favorites` : `Add ${icon.title} to favorites`}
                     >
                       <Heart size={20} className={isFavorite(icon.id) ? "fill-neon-pink text-neon-pink" : ""} />
                     </button>
@@ -177,7 +194,7 @@ export default function IconsPFPs() {
         {displayCount < filteredIcons.length && (
           <div className="mt-16 text-center">
             <button 
-              onClick={() => { setDisplayCount(prev => prev + 12); playSound('click'); }}
+              onClick={handleLoadMore}
               className="px-10 py-4 font-pixel text-xl border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all rounded-lg hover:shadow-[0_0_24px_rgba(211,0,197,0.6)]"
             >
               LOAD MORE AVATARS

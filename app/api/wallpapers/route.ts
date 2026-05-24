@@ -2,239 +2,137 @@ import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 import wallpapersData from '@/app/data/wallpapers.json';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+export const revalidate = 3600;
 
 const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
 const apiKey = process.env.CLOUDINARY_API_KEY;
 const apiSecret = process.env.CLOUDINARY_API_SECRET;
 
-// Create a map of tags from the JSON file
-const tagMap: Record<string, string[]> = {};
-if (wallpapersData.characters) {
-  wallpapersData.characters.forEach((char: any) => {
-    if (char.tags) {
-      tagMap[char.name] = char.tags;
-    }
-  });
+cloudinary.config({
+  cloud_name: cloudName,
+  api_key: apiKey,
+  api_secret: apiSecret,
+});
+
+interface CloudinaryResource {
+  public_id: string;
+  secure_url: string;
+  resource_type: string;
 }
 
-if (cloudName && apiKey && apiSecret) {
-  cloudinary.config({
-    cloud_name: cloudName,
-    api_key: apiKey,
-    api_secret: apiSecret,
-  });
-}
-
-const SPECIAL_CATEGORIES = [
-  'Animals', 'Awesome', 'Cars', 'Live Wallpapers', 'Mixed', 'Pixel', 'Nature', 'Spider-Man'
-];
-
-function normalizeName(name: string) {
-  const map: Record<string, string> = {
-    'rin-nanakura': 'Rin Nanakura',
-    'rin-shima': 'Rin Shima',
-    'shikimori': 'Shikimori',
-    'akane-kurokawa': 'Akane Kurokawa',
-    'alya-kujou': 'Alya Kujou',
-    'chinatsu': 'Chinatsu',
-    'chisato-nishikigi': 'Chisato Nishikigi',
-    'elaina': 'Elaina',
-    'hina-chono': 'Hina Chono',
-    'hushino': 'Subaru Hoshina',
-    'Subaru Hoshino': 'Subaru Hoshina',
-    'kaoruko-waguri': 'Kaoruko Waguri',
-    'live-wallpapers': 'Live Wallpapers',
-    'mai': 'Mai',
-    'maria-kujou': 'Maria Kujou',
-    'marin-kitagawa': 'Marin Kitagawa',
-    'miku-nakano': 'Miku Nakano',
-    'nakano-nino': 'Nakano Nino',
-    'nishimiya-shouko': 'Nishimiya Shouko',
-    'phoebe': 'Phoebe',
-    'rias-gremory': 'Rias Gremory',
-    'shiina-mahiru': 'Shiina Mahiru',
-    'yuuko-hiragi': 'Yuuko Hiragi',
-    'yuzuki-nanase': 'Yuzuki Nanase',
-    'zero-two': 'Zero Two',
-    'bachira-meguru': 'Bachira Meguru',
-    'spider-man': 'Spider-Man',
-    'Rin  Nanakura': 'Rin Nanakura',
-    'Rias  Gremory': 'Rias Gremory',
-    'boku-no-hero-academia': 'Boku No Hero Academia',
-    'Boku no Hero Academia': 'Boku No Hero Academia',
-    'violet-evergarden': 'Violet Evergarden',
-    'isagi-yoichi': 'Isagi Yoichi',
-    'ISAGI YOICHI': 'Isagi Yoichi',
-  };
-  
-  let clean = name.trim();
-  if (clean.includes('Give some recommendations')) return 'Hina Chono';
-  
-  // Apply map
-  if (map[clean]) return map[clean];
-  if (map[clean.toLowerCase()]) return map[clean.toLowerCase()];
-  
-  // Title Case
-  return clean.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
-}
-
-async function fetchAll(resourceType: 'image' | 'video') {
-  let list: any[] = [];
-  let nextCursor: string | undefined = undefined;
-  let pages = 0;
-  
-  try {
-    do {
-      pages++;
-      const expression = `resource_type:${resourceType}`;
-      const search = cloudinary.search
-        .expression(expression)
-        .sort_by('public_id', 'desc')
-        .max_results(500);
-
-      if (nextCursor) {
-        search.next_cursor(nextCursor);
-      }
-
-      const result = await search.execute();
-      
-      if (result.resources) list.push(...result.resources);
-      
-      // Explicitly handle null/undefined from API response
-      nextCursor = (result.next_cursor as string | null) || undefined;
-      
-    } while (nextCursor);
-  } catch (e) {
-    console.error(`Error fetching ${resourceType}:`, e);
-  }
-  return { list, pages };
+interface CloudinarySearchResponse {
+  resources: CloudinaryResource[];
+  next_cursor?: string;
 }
 
 export async function GET() {
   if (!cloudName || !apiKey || !apiSecret) {
-    return NextResponse.json({ error: 'Cloudinary config missing' }, { status: 500 });
+    console.error('Missing Cloudinary credentials');
+    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
   }
 
-  const [imagesData, videosData] = await Promise.all([
-    fetchAll('image'),
-    fetchAll('video')
-  ]);
-
-  const images = imagesData.list;
-  const videos = videosData.list;
-
-  const all = [...images, ...videos];
-  const charMap = new Map();
-  const pfpMap = new Map();
-
-  for (const item of all) {
-    const folder = item.folder || item.asset_folder || '';
-    const publicId = item.public_id || '';
-    let rawName = '';
-    let isPFP = false;
+  try {
+    // 1. Get ALL wallpapers
+    let allResources: CloudinaryResource[] = [];
+    let nextCursor: string | undefined = undefined;
     
-    if (folder) {
-      const parts = folder.split('/');
-      // Check for wallpapers folder
-      const wpIndex = parts.indexOf('wallpapers');
-      // Check for pfps folder
-      const pfpIndex = parts.indexOf('pfps');
-
-      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
-        rawName = parts[wpIndex + 1];
-      } else if (pfpIndex !== -1) {
-        // If it's in a subfolder of pfps
-        if (parts.length > pfpIndex + 1) {
-          rawName = parts[pfpIndex + 1];
-        } else {
-          // Directly in pfps folder
-          rawName = 'Mixed Icons';
-        }
-        isPFP = true;
-      } else if (wpIndex !== -1 && parts.length === wpIndex + 1) {
-        rawName = 'Mixed';
-      } else if (wpIndex === -1 && pfpIndex === -1 && parts.length > 0) {
-        rawName = parts[0];
-      }
-    }
-
-    if (!rawName && publicId) {
-      const parts = publicId.split('/');
-      const wpIndex = parts.indexOf('wallpapers');
-      const pfpIndex = parts.indexOf('pfps');
-      if (wpIndex !== -1 && parts.length > wpIndex + 1) {
-        rawName = parts[wpIndex + 1];
-      } else if (pfpIndex !== -1 && parts.length > pfpIndex + 1) {
-        rawName = parts[pfpIndex + 1];
-        isPFP = true;
-      }
-    }
-
-    if (!rawName || rawName === 'wallpapers' || rawName === 'pfps' || publicId.startsWith('samples/')) continue;
-
-    const name = normalizeName(rawName);
-    
-    if (isPFP) {
-      if (!pfpMap.has(name)) {
-        pfpMap.set(name, {
-          name,
-          icons: []
-        });
-      }
-      const list = pfpMap.get(name).icons;
-      if (!list.includes(item.secure_url)) {
-        list.push(item.secure_url);
-      }
-    } else {
-      if (!charMap.has(name)) {
-        charMap.set(name, {
-          name,
-          category: SPECIAL_CATEGORIES.includes(name) ? 'Special' : 'Anime',
-          tags: tagMap[name] || [],
-          wallpapers: []
-        });
-      }
+    do {
+      const result: CloudinarySearchResponse = await cloudinary.search
+        .expression('folder:wallpapers/*')
+        .sort_by('public_id', 'desc')
+        .max_results(500)
+        .next_cursor(nextCursor)
+        .execute();
       
-      const currentList = charMap.get(name).wallpapers;
-      if (!currentList.includes(item.secure_url)) {
-        currentList.push(item.secure_url);
+      allResources = allResources.concat(result.resources);
+      nextCursor = result.next_cursor;
+    } while (nextCursor);
+
+    // 2. Process characters from wallpapers
+    const charactersMap = new Map<string, string[]>();
+    const characterCategories = new Map<string, string>();
+    const characterTags = new Map<string, string[]>();
+
+    allResources.forEach(resource => {
+      const pathParts = resource.public_id.split('/');
+      if (pathParts.length >= 2) {
+        const charName = pathParts[1];
+        if (!charactersMap.has(charName)) {
+          charactersMap.set(charName, []);
+        }
+        charactersMap.get(charName)?.push(resource.secure_url);
       }
-    }
+    });
+
+    // Extract categories/tags from JSON to avoid complex mapping
+    wallpapersData.characters.forEach(c => {
+      characterCategories.set(c.name, c.category);
+      characterTags.set(c.name, c.tags);
+    });
+
+    // Merge with JSON data
+    const characters = Array.from(charactersMap.entries()).map(([name, wallpapers]) => {
+      const jsonData = wallpapersData.characters.find(c => c.name === name);
+      return {
+        name,
+        category: characterCategories.get(name) || jsonData?.category || 'Anime',
+        tags: characterTags.get(name) || jsonData?.tags || [],
+        wallpapers
+      };
+    });
+
+    // 3. Get ALL PFPs
+    let pfpsResources: CloudinaryResource[] = [];
+    nextCursor = undefined;
+
+    do {
+      const result: CloudinarySearchResponse = await cloudinary.search
+        .expression('folder:pfps/*')
+        .max_results(500)
+        .next_cursor(nextCursor)
+        .execute();
+      
+      pfpsResources = pfpsResources.concat(result.resources);
+      nextCursor = result.next_cursor;
+    } while (nextCursor);
+
+    const pfpsMap = new Map<string, string[]>();
+    pfpsResources.forEach(resource => {
+      const pathParts = resource.public_id.split('/');
+      if (pathParts.length >= 2) {
+        const charName = pathParts[1];
+        if (!pfpsMap.has(charName)) {
+          pfpsMap.set(charName, []);
+        }
+        pfpsMap.get(charName)?.push(resource.secure_url);
+      }
+    });
+
+    const pfps = Array.from(pfpsMap.entries()).map(([name, icons]) => ({
+      name,
+      icons
+    }));
+
+    // Combine for counts
+    const all = [...allResources, ...pfpsResources];
+
+    return NextResponse.json({
+      characters,
+      pfps,
+      source: 'cloudinary-live-full',
+      total: all.length,
+      debug: {
+        imagesFound: allResources.length,
+        pfpsFound: pfpsResources.length
+      }
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=59'
+      }
+    });
+
+  } catch (error) {
+    console.error('Cloudinary API error:', error);
+    return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
-
-  const characters = Array.from(charMap.values()).sort((a, b) => a.name.localeCompare(b.name));
-  const pfps = Array.from(pfpMap.values()).sort((a, b) => a.name.localeCompare(b.name));
-
-  // Move specific characters to the end of the array so they show up first when the gallery reverses the list
-  const priorityChars = [
-    "Frieren", 
-    "Violet Evergarden", 
-    "Shiina Mahiru",
-    "Alya Kujou ♡",
-    "Shikimori Micchon"
-  ];
-  
-  priorityChars.forEach(name => {
-    const index = characters.findIndex(c => c.name === name);
-    if (index !== -1) {
-      const [char] = characters.splice(index, 1);
-      characters.push(char);
-    }
-  });
-
-  return NextResponse.json({
-    characters,
-    pfps,
-    source: 'cloudinary-live-full',
-    total: all.length,
-    debug: {
-      imagesFound: images.length,
-      videosFound: videos.length,
-      imagePages: imagesData.pages,
-      videoPages: videosData.pages,
-      pfpsFound: pfps.length
-    }
-  });
 }

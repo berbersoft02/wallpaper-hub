@@ -3,6 +3,7 @@
 import { X, Download, ChevronLeft, ChevronRight, Smartphone, Image as ImageIcon, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface LightboxProps {
   images: string[];
@@ -28,6 +29,7 @@ export default function Lightbox({
   const [currentTime, setCurrentTime] = useState("");
   const [currentDate, setCurrentDate] = useState("");
   const constraintsRef = useRef(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -37,6 +39,10 @@ export default function Lightbox({
     };
     document.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
+    
+    // Focus trap: focus close button on open
+    closeButtonRef.current?.focus();
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
@@ -60,21 +66,34 @@ export default function Lightbox({
   if (!currentUrl) return null;
 
   return (
-    <div className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl" onClick={onClose}>
+    <div 
+      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl" 
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Lightbox for ${currentTitle}`}
+    >
       <div className="absolute top-4 right-4 flex items-center gap-2 z-[10001]">
         {!isVideo && !isPreviewMode && (
           <div className="flex items-center gap-1 bg-black/50 backdrop-blur-md rounded-full p-1 border border-white/10 mr-4">
-            <button onClick={(e) => { e.stopPropagation(); handleZoomOut(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"><ZoomOut size={20} /></button>
-            <span className="text-[10px] font-pixel text-white/50 w-8 text-center">{Math.round(scale * 100)}%</span>
-            <button onClick={(e) => { e.stopPropagation(); handleZoomIn(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"><ZoomIn size={20} /></button>
-            <button onClick={(e) => { e.stopPropagation(); resetZoom(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"><RotateCcw size={20} /></button>
+            <button onClick={(e) => { e.stopPropagation(); handleZoomOut(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all" aria-label="Zoom out"><ZoomOut size={20} /></button>
+            <span className="text-[10px] font-pixel text-white/50 w-8 text-center" aria-live="polite">{Math.round(scale * 100)}%</span>
+            <button onClick={(e) => { e.stopPropagation(); handleZoomIn(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all" aria-label="Zoom in"><ZoomIn size={20} /></button>
+            <button onClick={(e) => { e.stopPropagation(); resetZoom(); }} className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all" aria-label="Reset zoom"><RotateCcw size={20} /></button>
           </div>
         )}
-        <button onClick={onClose} className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white/70 hover:text-white hover:bg-neon-pink transition-all group"><X size={28} className="group-hover:rotate-90 transition-transform" /></button>
+        <button 
+          ref={closeButtonRef}
+          onClick={onClose} 
+          className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white/70 hover:text-white hover:bg-neon-pink transition-all group"
+          aria-label="Close lightbox"
+        >
+          <X size={28} className="group-hover:rotate-90 transition-transform" />
+        </button>
       </div>
 
-      <button onClick={(e) => { e.stopPropagation(); onPrev(); setScale(1); }} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-30"><ChevronLeft size={32} /></button>
-      <button onClick={(e) => { e.stopPropagation(); onNext(); setScale(1); }} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-30"><ChevronRight size={32} /></button>
+      <button onClick={(e) => { e.stopPropagation(); onPrev(); setScale(1); }} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-30" aria-label="Previous image"><ChevronLeft size={32} /></button>
+      <button onClick={(e) => { e.stopPropagation(); onNext(); setScale(1); }} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-black/70 backdrop-blur-md rounded-full text-white hover:bg-neon-cyan hover:scale-110 transition-all z-30" aria-label="Next image"><ChevronRight size={32} /></button>
       
       <div className="relative flex flex-col items-center justify-center w-full h-full p-4 md:p-12" onClick={(e) => e.stopPropagation()} ref={constraintsRef}>
         <div className="flex-1 w-full min-h-0 flex items-center justify-center overflow-hidden">
@@ -85,15 +104,36 @@ export default function Lightbox({
                 <div className="text-5xl md:text-7xl font-light tracking-tight text-shadow-neon">{currentTime}</div>
                 <div className="text-sm md:text-base mt-2 font-medium opacity-90 drop-shadow-md">{currentDate}</div>
               </div>
-              {isVideo ? <video key={currentUrl} src={currentUrl} className="w-full h-full object-cover scale-105" autoPlay loop muted playsInline /> : <img key={currentUrl} src={currentUrl} className="w-full h-full object-cover scale-105" alt={currentTitle} />}
+              {isVideo ? (
+                <video key={currentUrl} src={currentUrl} className="w-full h-full object-cover scale-105" autoPlay loop muted playsInline />
+              ) : (
+                <Image 
+                  key={currentUrl} 
+                  src={currentUrl} 
+                  fill 
+                  className="object-cover scale-105" 
+                  alt={currentTitle} 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              )}
             </motion.div>
           ) : (
             <div className="relative w-full h-full flex items-center justify-center">
               {isVideo ? (
                 <video key={currentUrl} src={currentUrl} className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg shadow-2xl" controls autoPlay loop />
               ) : (
-                <motion.div drag={scale > 1} dragConstraints={constraintsRef} animate={{ scale }} transition={{ type: 'spring', damping: 25, stiffness: 200 }} className="w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing">
-                  <img key={currentUrl} src={currentUrl} alt={currentTitle} className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg shadow-2xl select-none pointer-events-none" draggable={false} />
+                <motion.div drag={scale > 1} dragConstraints={constraintsRef} animate={{ scale }} transition={{ type: 'spring', damping: 25, stiffness: 200 }} className="relative w-full h-full flex items-center justify-center cursor-grab active:cursor-grabbing">
+                  <Image 
+                    key={currentUrl} 
+                    src={currentUrl} 
+                    alt={currentTitle} 
+                    fill
+                    className="object-contain rounded-lg shadow-2xl select-none pointer-events-none" 
+                    draggable={false} 
+                    sizes="100vw"
+                    priority
+                  />
                 </motion.div>
               )}
             </div>
@@ -106,7 +146,7 @@ export default function Lightbox({
           <button onClick={() => { setIsPreviewMode(!isPreviewMode); setScale(1); }} className={`flex items-center gap-2 px-4 py-2 rounded-full font-pixel text-sm transition-all ${isPreviewMode ? "bg-neon-pink text-white shadow-[0_0_15px_rgba(255,42,109,0.5)]" : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"}`}>
             {isPreviewMode ? <ImageIcon size={18} /> : <Smartphone size={18} />} <span className="hidden sm:inline">{isPreviewMode ? "RAW IMAGE" : "DEVICE PREVIEW"}</span>
           </button>
-          <button onClick={() => onDownload(currentUrl, currentTitle)} className="p-3 bg-neon-cyan/20 hover:bg-neon-cyan text-neon-cyan hover:text-dark-bg rounded-full transition-all shadow-[0_0_15px_rgba(5,217,232,0.3)]" title="Download Wallpaper"><Download size={24} /></button>
+          <button onClick={() => onDownload(currentUrl, currentTitle)} className="p-3 bg-neon-cyan/20 hover:bg-neon-cyan text-neon-cyan hover:text-dark-bg rounded-full transition-all shadow-[0_0_15px_rgba(5,217,232,0.3)]" title="Download Wallpaper" aria-label="Download wallpaper"><Download size={24} /></button>
         </div>
       </div>
     </div>

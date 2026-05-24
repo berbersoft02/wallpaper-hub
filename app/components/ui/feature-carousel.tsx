@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/app/components/ui/button'; // Assuming you have a Button component from shadcn/ui
-import { cn } from '@/lib/utils'; // Assuming you have a utility for class names
+import { Button } from '@/app/components/ui/button'; 
+import { cn } from '@/lib/utils'; 
+import Image from "next/image";
 
 // --- TYPES ---
 interface HeroProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
@@ -21,9 +22,9 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, [images.length]);
 
-    const handlePrev = () => {
+    const handlePrev = React.useCallback(() => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
+    }, [images.length]);
     
     React.useEffect(() => {
         const timer = setInterval(() => {
@@ -91,10 +92,13 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
                       visibility: Math.abs(pos) > 2 ? 'hidden' : 'visible',
                     }}
                   >
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
+                      fill
                       className="object-cover w-full h-full border-2 border-neon-cyan/50"
+                      sizes="(max-width: 768px) 192px, 256px"
+                      priority={isCenter}
                     />
                   </div>
                 );
@@ -107,6 +111,7 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
               size="icon"
               className="absolute left-2 sm:left-12 top-1/2 -translate-y-1/2 rounded-full h-12 w-12 z-20 bg-dark-bg/80 border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-colors shadow-[0_0_15px_rgba(5,217,232,0.5)]"
               onClick={handlePrev}
+              aria-label="Previous slide"
             >
               <ChevronLeft className="h-6 w-6" />
             </Button>
@@ -115,6 +120,7 @@ export const HeroSection = React.forwardRef<HTMLDivElement, HeroProps>(
               size="icon"
               className="absolute right-2 sm:right-12 top-1/2 -translate-y-1/2 rounded-full h-12 w-12 z-20 bg-dark-bg/80 border-neon-pink/50 text-neon-pink hover:bg-neon-pink hover:text-dark-bg transition-colors shadow-[0_0_15px_rgba(255,42,109,0.5)]"
               onClick={handleNext}
+              aria-label="Next slide"
             >
               <ChevronRight className="h-6 w-6" />
             </Button>

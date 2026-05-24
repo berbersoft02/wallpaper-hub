@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
 import PageTransition from "./components/PageTransition";
+import GlowSync from "./components/GlowSync";
 
 const pixelFont = VT323({
   weight: "400",
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
       >
+        <GlowSync />
         {/* Global CRT Scanline Overlay */}
         <div className="crt-overlay" />
 

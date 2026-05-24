@@ -1,25 +1,26 @@
 import Image from "next/image";
 
-export default function AnimatedBackground() {
-  const images = Array.from({ length: 69 }, (_, i) => i + 1);
+interface AnimatedBackgroundProps {
+  images?: number[];
+}
+
+export default function AnimatedBackground({ images: propImages }: AnimatedBackgroundProps) {
+  // Use provided images or fallback to a subset of 20
+  const images = propImages || Array.from({ length: 20 }, (_, i) => i + 1);
   
-  // Animation types to cycle through
+  // Animation types to cycle through - reduced from 8 to 4 for better GPU performance
   const animations = [
     'float-random-1',
     'float-random-2',
     'float-random-3',
-    'float-random-4',
-    'float-random-5',
-    'float-random-6',
-    'float-random-7',
-    'float-random-8'
+    'float-random-4'
   ];
   
   // Durations for each animation
-  const durations = [15, 18, 20, 16, 19, 17, 21, 14];
+  const durations = [15, 18, 20, 16];
   
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 via-dark-bg/40 to-dark-bg/60 z-10"></div>
       
@@ -27,16 +28,15 @@ export default function AnimatedBackground() {
       {images.map((num, index) => {
         const animIndex = index % animations.length;
         const delay = (index * 0.3) % 3; // Stagger delays
-        const top = (index * 7.5) % 100; // Distribute vertically
-        const left = (index * 11.3) % 100; // Distribute horizontally
-        const size = 12 + (index % 4) * 2; // Vary sizes (12-18px) - smaller range
-        const mdSize = size + 4; // Desktop size
-        const opacity = 0.4 + (index % 15) * 0.01; // Vary opacity (0.4-0.55)
+        const top = (index * 15.5) % 100; // Distribute vertically - adjusted for 20 icons
+        const left = (index * 21.3) % 100; // Distribute horizontally - adjusted for 20 icons
+        const size = 12 + (index % 4) * 2; // Vary sizes (12-18px)
+        const opacity = 0.4 + (index % 10) * 0.01; // Vary opacity (0.4-0.5)
         
         return (
           <div
-            key={num}
-            className="absolute transition-opacity duration-500 z-5"
+            key={`${num}-${index}`}
+            className="absolute transition-opacity duration-500 z-5 will-change-transform"
             style={{
               top: `${top}%`,
               left: `${left}%`,
@@ -48,11 +48,12 @@ export default function AnimatedBackground() {
           >
             <Image
               src={`/${num}.png`}
-              alt={`Anime character ${num}`}
+              alt=""
               width={64}
               height={64}
               className="w-full h-full object-cover rounded-full"
-              unoptimized
+              loading="lazy"
+              sizes="(max-width: 768px) 36px, 64px"
             />
           </div>
         );

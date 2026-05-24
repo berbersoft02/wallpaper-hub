@@ -3,10 +3,10 @@
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Magnetic from "./Magnetic";
-import { GlowCard } from "./ui/spotlight-card"; // Import GlowCard
+import { GlowCard } from "./ui/spotlight-card"; 
 
 export default function Navbar() {
   const [showSoonModal, setShowSoonModal] = useState(false);
@@ -37,13 +37,13 @@ export default function Navbar() {
   }, []);
 
 
-  const handleSoonClick = (title: string) => {
+  const handleSoonClick = useCallback((title: string) => {
     setSoonTitle(title);
     setShowSoonModal(true);
-    setShowMobileMenu(false); // Close mobile menu when opening modal
-  };
+    setShowMobileMenu(false); 
+  }, []);
 
-  const handleWallpapersClick = (e: React.MouseEvent, targetId: string) => {
+  const handleWallpapersClick = useCallback((e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     if (pathname === '/') {
       document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
@@ -52,9 +52,9 @@ export default function Navbar() {
     }
     setShowMobileMenu(false);
     setShowWallpapersDropdown(false);
-  };
+  }, [pathname, router]);
 
-  const handleIconsClick = (e: React.MouseEvent, targetId: string) => {
+  const handleIconsClick = useCallback((e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     if (pathname === '/') {
       document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
@@ -63,7 +63,7 @@ export default function Navbar() {
     }
     setShowMobileMenu(false);
     setShowIconsDropdown(false);
-  };
+  }, [pathname, router]);
 
 
   return (
@@ -94,6 +94,8 @@ export default function Navbar() {
             <Magnetic>
               <button 
                 className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2 flex items-center gap-2"
+                aria-expanded={showWallpapersDropdown}
+                aria-haspopup="true"
               >
                 WALLPAPERS <ChevronDown size={16} />
               </button>
@@ -141,6 +143,8 @@ export default function Navbar() {
             <Magnetic>
               <button 
                 className="hover:text-neon-cyan hover:underline decoration-wavy underline-offset-4 transition-all cursor-pointer p-2 flex items-center gap-2"
+                aria-expanded={showIconsDropdown}
+                aria-haspopup="true"
               >
                 ICONS PFPS <ChevronDown size={16} />
               </button>
@@ -223,6 +227,8 @@ export default function Navbar() {
         <button 
           onClick={() => setShowMobileMenu(!showMobileMenu)}
           className="md:hidden text-white hover:text-neon-pink transition-colors"
+          aria-label={showMobileMenu ? "Close menu" : "Open menu"}
+          aria-expanded={showMobileMenu}
         >
           {showMobileMenu ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </button>
@@ -243,20 +249,20 @@ export default function Navbar() {
       {showMobileMenu && (
         <div className="md:hidden fixed inset-0 z-[90] bg-black/90 backdrop-blur-lg">
           <div className="flex flex-col items-center justify-center h-full gap-8 px-4">
-            <a 
+            <Link 
               href="/#gallery" 
               onClick={(e) => handleWallpapersClick(e, 'gallery')}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               WALLPAPERS
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#icons"
               onClick={(e) => handleIconsClick(e, 'icons')}
               className="font-pixel text-2xl text-white hover:text-neon-cyan transition-all hover:underline decoration-wavy underline-offset-4"
             >
               ICONS PFPS
-            </a>
+            </Link>
             <Link
               href="/wallpapers/desktop-wallpapers"
               onClick={() => setShowMobileMenu(false)}
@@ -317,6 +323,8 @@ export default function Navbar() {
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
           onClick={() => setShowSoonModal(false)}
+          role="dialog"
+          aria-modal="true"
         >
           <div 
             className="relative bg-card-bg border-4 border-neon-pink p-12 max-w-md mx-4 transform animate-pulse"
@@ -325,6 +333,7 @@ export default function Navbar() {
             <button
               onClick={() => setShowSoonModal(false)}
               className="absolute top-4 right-4 text-white hover:text-neon-pink transition-colors"
+              aria-label="Close modal"
             >
               <X size={24} />
             </button>

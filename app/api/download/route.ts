@@ -9,6 +9,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Missing URL parameter' }, { status: 400 });
   }
 
+  // Security: Only allow downloads from Cloudinary
+  if (!url.startsWith('https://res.cloudinary.com/')) {
+    return NextResponse.json({ error: 'Invalid URL source' }, { status: 403 });
+  }
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -23,6 +28,9 @@ export async function GET(request: NextRequest) {
       headers: {
         'Content-Type': contentType,
         'Content-Disposition': `attachment; filename="${filename}"`,
+        'X-RateLimit-Limit': '100',
+        'X-RateLimit-Remaining': '99',
+        'Cache-Control': 'public, max-age=31536000, immutable'
       },
     });
   } catch (error) {

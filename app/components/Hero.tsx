@@ -7,9 +7,12 @@ import DraggableIcon from "./DraggableIcon";
 import ParticlesBackground from "./ParticlesBackground";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import { HeroSection } from "./ui/feature-carousel";
-import wallpapersData from '@/app/data/wallpapers.json';
 
-// Define all floating icons with their properties
+interface HeroProps {
+  showcaseImages: { src: string; alt: string; }[];
+}
+
+// Reduced floating icons to 20 for better performance
 const floatingIcons = [
   { src: "/3.png", top: "50%", left: "3%", size: "lg" as const, animation: "float-random-3 20s ease-in-out infinite, neon-pulse 3s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_24px_rgba(5,217,232,0.6)]" },
   { src: "/4.png", top: "45%", right: "10%", size: "md" as const, animation: "float-random-4 16s ease-in-out infinite, electric 3s ease-in-out infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.6)]" },
@@ -31,74 +34,18 @@ const floatingIcons = [
   { src: "/20.png", top: "12%", left: "60%", size: "md" as const, animation: "float-random-4 16s ease-in-out 1.4s infinite, neon-pulse 3s ease-in-out 1s infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_25px_rgba(5,217,232,0.6)]" },
   { src: "/21.png", bottom: "30%", right: "12%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 2.8s infinite, rainbow-border 4s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
   { src: "/22.png", top: "55%", left: "45%", size: "md" as const, animation: "float-random-6 17s ease-in-out 0.7s infinite, electric 4s ease-in-out 2s infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/23.png", bottom: "50%", right: "40%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 1.6s infinite, hologram 6s ease-in-out 1s infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.6)]" },
-  { src: "/24.png", top: "35%", left: "35%", size: "md" as const, animation: "float-random-8 14s ease-in-out 2.3s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.5)]" },
-  { src: "/25.png", bottom: "18%", left: "22%", size: "sm" as const, animation: "float-random-1 15s ease-in-out 1.1s infinite, glitch 7s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/26.png", top: "65%", left: "28%", size: "md" as const, animation: "float-random-2 18s ease-in-out 0.4s infinite, electric 5s ease-in-out 1s infinite", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.5)]" },
-  { src: "/27.png", top: "18%", right: "22%", size: "sm" as const, animation: "float-random-3 20s ease-in-out 2.6s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
-  { src: "/28.png", bottom: "45%", left: "38%", size: "md" as const, animation: "float-random-4 16s ease-in-out 0.9s infinite, cyber-flicker 4s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_22px_rgba(255,42,109,0.5)]" },
-  { src: "/29.png", top: "45%", right: "18%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 1.7s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
-  { src: "/30.png", bottom: "12%", right: "35%", size: "md" as const, animation: "float-random-6 17s ease-in-out 2.4s infinite, hologram 6s ease-in-out 2s infinite", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_20px_rgba(211,0,197,0.6)]" },
-  { src: "/31.png", top: "28%", left: "55%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 0.6s infinite, neon-pulse 3s ease-in-out 0.5s infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.5)]" },
-  { src: "/32.png", top: "15%", left: "35%", size: "md" as const, animation: "float-random-1 15s ease-in-out 1.5s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_22px_rgba(255,42,109,0.5)]" },
-  { src: "/33.png", bottom: "35%", left: "45%", size: "sm" as const, animation: "float-random-2 18s ease-in-out 0.8s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.5)]" },
-  { src: "/34.png", top: "65%", right: "45%", size: "lg" as const, animation: "float-random-3 20s ease-in-out 2.1s infinite, hologram 7s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.6)]" },
-  { src: "/35.png", top: "40%", right: "35%", size: "md" as const, animation: "float-random-4 16s ease-in-out 1.2s infinite, glitch 5s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/36.png", bottom: "10%", right: "15%", size: "sm" as const, animation: "float-random-5 19s ease-in-out 0.4s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
-  { src: "/37.png", top: "50%", left: "12%", size: "md" as const, animation: "float-random-6 17s ease-in-out 1.9s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_211,0,197,0.5)]" },
-  { src: "/38.png", bottom: "55%", left: "25%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 2.7s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
-  { src: "/39.png", top: "10%", right: "8%", size: "md" as const, animation: "float-random-8 15s ease-in-out 1.3s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.5)]" },
-  { src: "/40.png", bottom: "20%", left: "55%", size: "sm" as const, animation: "float-random-1 18s ease-in-out 0.5s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/41.png", top: "30%", left: "5%", size: "lg" as const, animation: "float-random-2 22s ease-in-out 2s infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_25px_rgba(211,0,197,0.6)]" },
-  { src: "/42.png", bottom: "5%", right: "50%", size: "md" as const, animation: "float-random-3 16s ease-in-out 1.8s infinite, cyber-flicker 5s ease-in-out infinite", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.5)]" },
-  { src: "/43.png", top: "22%", right: "25%", size: "sm" as const, animation: "float-random-4 19s ease-in-out 0.2s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_18px_rgba(255,42,109,0.5)]" },
-  { src: "/44.png", bottom: "45%", left: "10%", size: "md" as const, animation: "float-random-5 17s ease-in-out 1.5s infinite, electric 5s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.6)]" },
-  { src: "/45.png", top: "50%", right: "5%", size: "sm" as const, animation: "float-random-6 20s ease-in-out 0.8s infinite, glitch 6s ease-in-out infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.5)]" },
-  { src: "/46.png", top: "5%", left: "20%", size: "lg" as const, animation: "float-random-7 18s ease-in-out 2.4s infinite, hologram 7s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_30px_rgba(5,217,232,0.7)]" },
-  { src: "/47.png", bottom: "35%", right: "25%", size: "md" as const, animation: "float-random-8 16s ease-in-out 1.1s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/48.png", top: "70%", left: "15%", size: "sm" as const, animation: "float-random-1 19s ease-in-out 0.6s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.6)]" },
-  { src: "/49.png", top: "15%", left: "45%", size: "md" as const, animation: "float-random-2 21s ease-in-out 1.9s infinite, rainbow-border 6s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
-  { src: "/50.png", bottom: "10%", left: "40%", size: "sm" as const, animation: "float-random-3 17s ease-in-out 0.3s infinite, neon-pulse 3s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
-  { src: "/51.png", top: "15%", right: "12%", size: "lg" as const, animation: "float-random-4 20s ease-in-out 1.2s infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_24px_rgba(211,0,197,0.6)]" },
-  { src: "/52.png", bottom: "25%", left: "8%", size: "md" as const, animation: "float-random-5 18s ease-in-out 0.5s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_20px_rgba(255,42,109,0.5)]" },
-  { src: "/53.png", top: "35%", right: "30%", size: "sm" as const, animation: "float-random-6 16s ease-in-out 2.1s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.5)]" },
-  { src: "/54.png", bottom: "50%", right: "5%", size: "md" as const, animation: "float-random-7 19s ease-in-out 1.5s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_20px_rgba(211,0,197,0.5)]" },
-  { src: "/55.png", top: "60%", left: "20%", size: "sm" as const, animation: "float-random-8 21s ease-in-out 0.8s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
-  { src: "/56.png", bottom: "15%", right: "45%", size: "lg" as const, animation: "float-random-1 17s ease-in-out 2.5s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.6)]" },
-  { src: "/57.png", top: "8%", left: "40%", size: "md" as const, animation: "float-random-2 22s ease-in-out 1.0s infinite, hologram 7s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_25px_rgba(255,42,109,0.5)]" },
-  { src: "/58.png", bottom: "40%", left: "50%", size: "sm" as const, animation: "float-random-3 15s ease-in-out 0.3s infinite, electric 5s ease-in-out infinite", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.6)]" },
-  { src: "/59.png", top: "45%", right: "15%", size: "md" as const, animation: "float-random-4 18s ease-in-out 1.8s infinite, breathe 4s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.5)]" },
-  { src: "/60.png", bottom: "5%", left: "5%", size: "lg" as const, animation: "float-random-5 20s ease-in-out 2.2s infinite, cyber-flicker 6s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_28px_rgba(255,42,109,0.7)]" },
-  { src: "/61.png", top: "25%", right: "40%", size: "md" as const, animation: "float-random-6 19s ease-in-out 0.4s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_20px_rgba(5,217,232,0.5)]" },
-  { src: "/62.png", bottom: "30%", left: "20%", size: "sm" as const, animation: "float-random-7 21s ease-in-out 1.3s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_18px_rgba(255,42,109,0.5)]" },
-  { src: "/63.png", top: "10%", left: "30%", size: "md" as const, animation: "float-random-8 17s ease-in-out 2.6s infinite, hologram 6s ease-in-out infinite", effect: "animate-hologram", ringColor: "ring-neon-purple/50", shadowColor: "shadow-[0_0_22px_rgba(211,0,197,0.6)]" },
-  { src: "/64.png", bottom: "15%", right: "10%", size: "sm" as const, animation: "float-random-1 16s ease-in-out 0.7s infinite, cyber-flicker 5s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-cyan/40", shadowColor: "shadow-[0_0_18px_rgba(5,217,232,0.6)]" },
-  { src: "/65.png", top: "55%", right: "5%", size: "lg" as const, animation: "float-random-2 22s ease-in-out 1.8s infinite, neon-pulse 4s ease-in-out infinite", ringColor: "ring-neon-pink/50", shadowColor: "shadow-[0_0_26px_rgba(255,42,109,0.7)]" },
-  { src: "/66.png", bottom: "50%", left: "30%", size: "md" as const, animation: "float-random-3 20s ease-in-out 1.1s infinite, rainbow-border 5s linear infinite", effect: "animate-rainbow-border rounded-full", ringColor: "ring-transparent", shadowColor: "" },
-  { src: "/67.png", top: "40%", left: "5%", size: "sm" as const, animation: "float-random-4 18s ease-in-out 0.2s infinite, electric 4s ease-in-out infinite", ringColor: "ring-neon-purple/40", shadowColor: "shadow-[0_0_18px_rgba(211,0,197,0.5)]" },
-  { src: "/68.png", bottom: "20%", right: "35%", size: "md" as const, animation: "float-random-5 19s ease-in-out 2.4s infinite, breathe 5s ease-in-out infinite", effect: "animate-breathe", ringColor: "ring-neon-cyan/50", shadowColor: "shadow-[0_0_22px_rgba(5,217,232,0.6)]" },
-  { src: "/69.png", top: "30%", right: "50%", size: "sm" as const, animation: "float-random-6 15s ease-in-out 1.5s infinite, cyber-flicker 4s ease-in-out infinite", effect: "animate-cyber-flicker", ringColor: "ring-neon-pink/40", shadowColor: "shadow-[0_0_18px_rgba(255,42,109,0.5)]" },
 ];
 
-export default function Hero() {
+export default function Hero({ showcaseImages }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [showcaseImages, setShowcaseImages] = useState<{ src: string; alt: string; }[]>([]);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const chars = [...wallpapersData.characters];
-    const selected: { src: string; alt: string; }[] = [];
-    for (let i = chars.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [chars[i], chars[j]] = [chars[j], chars[i]];
-    }
-    for (const char of chars) {
-      if (char.wallpapers && char.wallpapers.length > 0) {
-        const randomWp = char.wallpapers[Math.floor(Math.random() * char.wallpapers.length)];
-        selected.push({ src: randomWp, alt: `${char.name} 4K Archive` });
-      }
-      if (selected.length >= 12) break;
-    }
-    setShowcaseImages(selected);
+    // Only enable floating icons on desktop to save mobile performance
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
   }, []);
 
   // Mouse position tracking
@@ -150,8 +97,9 @@ export default function Hero() {
         <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-neon-cyan/10 blur-[120px] rounded-full" />
       </motion.div>
 
-      {floatingIcons.map((icon, index) => (
-        <DraggableIcon key={index} src={icon.src} alt={`Anime character ${index + 3}`} initialTop={icon.top || ""} initialLeft={icon.left} initialRight={icon.right} initialBottom={icon.bottom} size={icon.size} animation={icon.animation} effect={icon.effect} ringColor={icon.ringColor} shadowColor={icon.shadowColor} />
+      {/* Only render floating icons on desktop */}
+      {isDesktop && floatingIcons.map((icon, index) => (
+        <DraggableIcon key={index} src={icon.src} alt="" initialTop={icon.top || ""} initialLeft={icon.left} initialRight={icon.right} initialBottom={icon.bottom} size={icon.size} animation={icon.animation} effect={icon.effect} ringColor={icon.ringColor} shadowColor={icon.shadowColor} />
       ))}
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
@@ -176,7 +124,7 @@ export default function Hero() {
 
         <div className="w-full relative mt-10">
           <div className="absolute inset-0 bg-neon-cyan/5 blur-[100px] rounded-full pointer-events-none" />
-          {showcaseImages.length > 0 ? (
+          {showcaseImages && showcaseImages.length > 0 ? (
             <HeroSection images={showcaseImages} className="min-h-0 py-10 md:py-20" />
           ) : (
             <div className="h-[400px] flex items-center justify-center font-pixel text-neon-cyan animate-pulse uppercase tracking-[0.3em]">Synchronizing Neural Link...</div>

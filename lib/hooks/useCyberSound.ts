@@ -2,12 +2,32 @@
 
 import { useCallback } from "react";
 
+// Singleton AudioContext to avoid resource leaks
+let audioContext: AudioContext | null = null;
+
+function getAudioContext() {
+  if (typeof window === "undefined") return null;
+  
+  if (!audioContext) {
+    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+    if (AudioContextClass) {
+      audioContext = new AudioContextClass();
+    }
+  }
+  
+  return audioContext;
+}
+
 export function useCyberSound() {
   const playSound = useCallback((type: 'hover' | 'click' | 'glitch') => {
-    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-    if (!AudioContext) return;
+    const ctx = getAudioContext();
+    if (!ctx) return;
 
-    const ctx = new AudioContext();
+    // Browsers require resuming AudioContext after user interaction
+    if (ctx.state === 'suspended') {
+      ctx.resume();
+    }
+
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
 

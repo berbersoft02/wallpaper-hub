@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { X, Send } from 'lucide-react';
 
 interface RecommendationModalProps {
@@ -14,9 +14,18 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
     if (!name.trim() || !email.trim() || !message.trim()) return;
+    
+    // Email regex validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus('error');
+      return;
+    }
 
     setStatus('sending');
     try {
@@ -44,19 +53,25 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
       console.error('Failed to send recommendation:', error);
       setStatus('error');
     }
-  };
+  }, [name, email, message, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 transition-opacity duration-300" onClick={onClose}>
+    <div 
+      className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 transition-opacity duration-300" 
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="recommend-modal-title"
+    >
       <div 
         className="bg-card-bg border-4 border-neon-purple p-8 max-w-lg w-full rounded-2xl shadow-[0_0_40px_rgba(211,0,197,0.5)] transform transition-transform duration-300 scale-100" 
         onClick={e => e.stopPropagation()}
       >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="font-pixel text-2xl md:text-3xl text-neon-purple">SEND A RECOMMENDATION</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors">
+          <h2 id="recommend-modal-title" className="font-pixel text-2xl md:text-3xl text-neon-purple">SEND A RECOMMENDATION</h2>
+          <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors" aria-label="Close modal">
             <X size={30} />
           </button>
         </div>
@@ -78,6 +93,7 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
                 placeholder="e.g., Alex"
                 className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all"
                 disabled={status === 'sending'}
+                required
               />
             </div>
             <div>
@@ -90,6 +106,7 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
                 placeholder="e.g., alex@domain.com"
                 className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all"
                 disabled={status === 'sending'}
+                required
               />
             </div>
             <div>
@@ -101,15 +118,16 @@ export default function RecommendationModal({ isOpen, onClose }: RecommendationM
                 placeholder="e.g., Alucard from Hellsing"
                 className="w-full bg-dark-bg border-2 border-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-neon-purple transition-all min-h-[100px]"
                 disabled={status === 'sending'}
+                required
               />
             </div>
 
-            {status === 'error' && <p className="text-neon-pink mt-2 text-sm">Something went wrong. Please try again.</p>}
+            {status === 'error' && <p className="text-neon-pink mt-2 text-sm">Please check your email format and try again.</p>}
             
             <div className="mt-6 text-right">
               <button 
                 type="submit" 
-                disabled={status === 'sending' || !name.trim() || !email.trim() || !message.trim()}
+                disabled={status === 'sending'}
                 className="inline-flex items-center gap-3 font-pixel text-xl px-8 py-4 bg-neon-purple text-white rounded-lg transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(211,0,197,0.4)]"
               >
                 {status === 'sending' ? 'SENDING...' : 'SEND'}

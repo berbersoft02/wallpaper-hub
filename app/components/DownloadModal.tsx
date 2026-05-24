@@ -16,24 +16,19 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isOpen && countdown > 0) {
-      timer = setInterval(() => {
-        setCountdown((prev) => prev - 1);
-      }, 1000);
-    } else if (countdown === 0 && !ready) {
-      setReady(true);
-    }
-    return () => clearInterval(timer);
-  }, [isOpen, countdown, ready]);
-
-  // Reset when closed
-  useEffect(() => {
     if (!isOpen) {
       setCountdown(5);
       setReady(false);
+      return;
     }
-  }, [isOpen]);
+
+    if (countdown > 0) {
+      const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+      return () => clearTimeout(timer);
+    } else {
+      setReady(true);
+    }
+  }, [isOpen, countdown]);
 
   const handleFinalDownload = () => {
     onConfirm();
@@ -43,7 +38,12 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[200000] flex items-center justify-center p-4">
+    <div 
+      className="fixed inset-0 z-[200000] flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="download-modal-title"
+    >
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/95 backdrop-blur-md" 
@@ -68,7 +68,7 @@ export default function DownloadModal({ isOpen, onClose, onConfirm, fileName }: 
           </div>
 
           <div className="text-center">
-            <h3 className="font-pixel text-xl md:text-2xl text-white mb-2 uppercase tracking-widest">
+            <h3 id="download-modal-title" className="font-pixel text-xl md:text-2xl text-white mb-2 uppercase tracking-widest">
               {ready ? "Link Ready!" : "Generating Link..."}
             </h3>
             <p className="text-gray-500 font-body text-[10px] mb-6 truncate px-4 italic">{fileName}</p>

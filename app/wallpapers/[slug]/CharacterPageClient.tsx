@@ -1,16 +1,15 @@
 "use client";
 
-import { getCharacterBySlug, getAllCharacters, slugify } from '@/lib/utils';
-import { notFound } from 'next/navigation';
+import { getAllCharacters, slugify } from '@/lib/utils';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Download, Heart, Maximize2, BookOpen } from 'lucide-react';
-import { useState, use, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Script from 'next/script';
 import Lightbox from '@/app/components/Lightbox';
-import { getPostByCharacterName } from '@/lib/blog';
+import { getPostByCharacterName } from '@/lib/blog-metadata';
 import { GlowCard } from '@/app/components/ui/spotlight-card';
 import { getCharacterDescription } from '@/lib/character-descriptions';
 import DownloadModal from '@/app/components/DownloadModal';
@@ -29,16 +28,14 @@ interface Props {
 
 export default function CharacterPageClient({ character, slug }: Props) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  
-  // State for Download Modal
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [pendingDownload, setPendingDownload] = useState<{url: string, title: string} | null>(null);
 
-  const name = character.name.replace(' ♡', '') || '';
-  const blogPost = getPostByCharacterName(character.name);
-  const description = getCharacterDescription(name);
+  const name = useMemo(() => character.name.replace(' ♡', '') || '', [character.name]);
+  const blogPost = useMemo(() => getPostByCharacterName(character.name), [character.name]);
+  const description = useMemo(() => getCharacterDescription(name), [name]);
 
-  const triggerDownload = (url: string, title: string) => {
+  const triggerDownload = useCallback((url: string, title: string) => {
     const isVideo = url.match(/\.(mp4|webm|mov)/i);
     const ext = isVideo ? 'mp4' : 'jpg';
     const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
@@ -50,24 +47,31 @@ export default function CharacterPageClient({ character, slug }: Props) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, []);
 
-  const handleDownloadClick = (url: string, title: string) => {
+  const handleDownloadClick = useCallback((url: string, title: string) => {
     setPendingDownload({ url, title });
     setIsDownloadModalOpen(true);
-  };
+  }, []);
 
   const otherCharacters = useMemo(() => {
     const allCharacters = getAllCharacters();
     return allCharacters
       .filter(c => slugify(c.name) !== slug)
-      // Filter out characters that only have videos or no wallpapers
       .filter(c => c.wallpapers.length > 0 && !c.wallpapers[0].match(/\.(mp4|webm|mov)/i))
       .sort(() => Math.random() - 0.5)
       .slice(0, 6);
   }, [slug]);
 
-  const wpTitles = character.wallpapers.map((_, i) => `${name} - 4K Edit #${i + 1}`);
+  const wpTitles = useMemo(() => character.wallpapers.map((_, i) => `${name} - 4K Edit #${i + 1}`), [character.wallpapers, name]);
+
+  const handlePrev = useCallback(() => {
+    setSelectedIndex(prev => prev! > 0 ? prev! - 1 : character.wallpapers.length - 1);
+  }, [character.wallpapers.length]);
+
+  const handleNext = useCallback(() => {
+    setSelectedIndex(prev => prev! < character.wallpapers.length - 1 ? prev! + 1 : 0);
+  }, [character.wallpapers.length]);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white">
@@ -140,7 +144,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
                       alt={`${name} 4K Wallpaper - ${index + 1}`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   )}
                   {/* Hover Overlay */}
@@ -158,6 +162,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
                       handleDownloadClick(url, wpTitles[index]);
                     }}
                     className="absolute top-4 right-4 p-3 bg-black/50 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-neon-pink z-10"
+                    aria-label={`Download ${wpTitles[index]}`}
                   >
                     <Download size={20} />
                   </button>
@@ -212,7 +217,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
                 </div>
                 <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
                   <h4 className="text-neon-cyan font-pixel text-lg mb-2">What is the best way to apply these as backgrounds?</h4>
-                  <p className="text-sm">For the best results, download the high-resolution file and use your device&apos;s system settings to apply it. Avoid using "set as wallpaper" directly from the browser to ensure full 4K quality.</p>
+                  <p className="text-sm">For the best results, download the high-resolution file and use your device&apos;s system settings to apply it. Avoid using &quot;set as wallpaper&quot; directly from the browser to ensure full 4K quality.</p>
                 </div>
                 <div className="bg-black/20 p-6 rounded-xl border border-gray-800/50">
                   <h4 className="text-neon-cyan font-pixel text-lg mb-2">Do you have {name} live wallpapers?</h4>
@@ -228,7 +233,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
         </section>
 
         {/* Adsterra Native Banner (High Visibility) */}
-        <section className="mt-20 max-w-5xl mx-auto p-6 bg-card-bg/40 border border-gray-800 rounded-2xl overflow-hidden text-center shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+        <section className="mt-20 max-w-5xl mx-auto p-6 bg-card-bg/40 border border-gray-800 rounded-2xl overflow-hidden text-center shadow-[0_0_30_px_rgba(0,0,0,0.5)]">
           <p className="font-pixel text-xs text-neon-cyan/60 uppercase tracking-[0.2em] mb-6">Discovery Network</p>
           <div id="container-771ab3dea3f70f996da234efbf13d803"></div>
           <Script 
@@ -255,7 +260,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
                   alt={char.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100"
-                  unoptimized
+                  sizes="(max-width: 768px) 50vw, 16vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
                   <span className="font-pixel text-[10px] text-white truncate">{char.name}</span>
@@ -272,8 +277,8 @@ export default function CharacterPageClient({ character, slug }: Props) {
           titles={wpTitles}
           selectedIndex={selectedIndex}
           onClose={() => setSelectedIndex(null)}
-          onPrev={() => setSelectedIndex(prev => prev! > 0 ? prev! - 1 : character.wallpapers.length - 1)}
-          onNext={() => setSelectedIndex(prev => prev! < character.wallpapers.length - 1 ? prev! + 1 : 0)}
+          onPrev={handlePrev}
+          onNext={handleNext}
           onDownload={handleDownloadClick}
         />
       )}

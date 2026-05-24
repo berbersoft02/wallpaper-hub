@@ -1,45 +1,12 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { HeroSection } from "./ui/feature-carousel";
-import wallpapersData from '@/app/data/wallpapers.json';
 
-export default function WallpaperShowcase() {
-  const [showcaseImages, setShowcaseImages] = useState<{ src: string; alt: string; }[]>([]);
+interface WallpaperShowcaseProps {
+  images: { src: string; alt: string; }[];
+}
 
-  useEffect(() => {
-    // Clone characters to avoid mutating source
-    const chars = [...wallpapersData.characters];
-    const selected: { src: string; alt: string; }[] = [];
-    
-    // Fisher-Yates shuffle
-    for (let i = chars.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [chars[i], chars[j]] = [chars[j], chars[i]];
-    }
-    
-    // Pick first 15 characters with wallpapers
-    for (const char of chars) {
-      if (char.wallpapers && char.wallpapers.length > 0) {
-        // Pick a random wallpaper from this character
-        const randomWp = char.wallpapers[Math.floor(Math.random() * char.wallpapers.length)];
-        selected.push({
-          src: randomWp,
-          alt: `${char.name} 4K Archive`
-        });
-      }
-      if (selected.length >= 15) break;
-    }
-    
-    setShowcaseImages(selected);
-  }, []);
-
-  // Return null or placeholder while images are loading to prevent jumpy layout
-  if (showcaseImages.length === 0) return (
-    <section className="py-20 bg-dark-bg/20 min-h-[600px] flex items-center justify-center">
-      <div className="font-pixel text-neon-cyan animate-pulse">Initializing Archives...</div>
-    </section>
-  );
+export default function WallpaperShowcase({ images }: WallpaperShowcaseProps) {
+  if (!images || images.length === 0) return null;
 
   return (
     <section className="py-20 relative overflow-hidden bg-dark-bg/20 border-b border-gray-800">
@@ -54,7 +21,7 @@ export default function WallpaperShowcase() {
         </div>
 
         <HeroSection 
-          images={showcaseImages}
+          images={images}
           className="min-h-0 py-10"
         />
       </div>

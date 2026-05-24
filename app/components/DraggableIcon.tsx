@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, memo } from "react";
 
 interface DraggableIconProps {
   src: string;
@@ -17,7 +17,7 @@ interface DraggableIconProps {
   shadowColor?: string;
 }
 
-export default function DraggableIcon({
+const DraggableIcon = memo(function DraggableIcon({
   src,
   alt,
   initialTop,
@@ -30,18 +30,23 @@ export default function DraggableIcon({
   ringColor = "ring-neon-cyan/50",
   shadowColor = "shadow-[0_0_20px_rgba(5,217,232,0.5)]",
 }: DraggableIconProps) {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [velocity, setVelocity] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [hasMoved, setHasMoved] = useState(false);
   const [isThrowing, setIsThrowing] = useState(false);
   
   const dragRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef({ x: 0, y: 0 });
+  const velRef = useRef({ x: 0, y: 0 });
   const startPosRef = useRef({ x: 0, y: 0 });
   const lastPosRef = useRef({ x: 0, y: 0 });
-  const lastTimeRef = useRef(Date.now());
+  const lastTimeRef = useRef(0);
   const animationFrameRef = useRef<number | null>(null);
+
+  // Initialize refs that need current time
+  useEffect(() => {
+    lastTimeRef.current = Date.now();
+  }, []);
 
   const sizeClasses = {
     sm: "w-12 h-12 md:w-16 md:h-16",
@@ -55,16 +60,54 @@ export default function DraggableIcon({
     lg: 80,
   };
 
+  // Helper to update DOM transform without React re-render
+  const updateTransform = useCallback((x: number, y: number) => {
+    if (dragRef.current) {
+      dragRef.current.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  }, []);
+
+  // Use a ref for the callback to allow self-referencing without lint errors
+  const animateThrowRef = useRef<() => void>(() => {});
+
+  const animateThrow = useCallback(() => {
+    const friction = 0.95;
+    const minVelocity = 0.5;
+
+    const newVelX = velRef.current.x * friction;
+    const newVelY = velRef.current.y * friction;
+    
+    velRef.current = { x: newVelX, y: newVelY };
+
+    if (Math.abs(newVelX) < minVelocity && Math.abs(newVelY) < minVelocity) {
+      setIsThrowing(false);
+      velRef.current = { x: 0, y: 0 };
+      return;
+    }
+
+    posRef.current = {
+      x: posRef.current.x + newVelX,
+      y: posRef.current.y + newVelY,
+    };
+
+    updateTransform(posRef.current.x, posRef.current.y);
+    animationFrameRef.current = requestAnimationFrame(animateThrowRef.current);
+  }, [updateTransform]);
+
+  useEffect(() => {
+    animateThrowRef.current = animateThrow;
+  }, [animateThrow]);
+
   // Handle mouse down
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(true);
     setIsThrowing(false);
-    setVelocity({ x: 0, y: 0 });
+    velRef.current = { x: 0, y: 0 };
     startPosRef.current = {
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
+      x: e.clientX - posRef.current.x,
+      y: e.clientY - posRef.current.y,
     };
     lastPosRef.current = { x: e.clientX, y: e.clientY };
     lastTimeRef.current = Date.now();
@@ -76,15 +119,14 @@ export default function DraggableIcon({
 
   // Handle touch start
   const handleTouchStart = (e: React.TouchEvent) => {
-    // Don't preventDefault here to allow scrolling
     e.stopPropagation();
     setIsDragging(true);
     setIsThrowing(false);
-    setVelocity({ x: 0, y: 0 });
+    velRef.current = { x: 0, y: 0 };
     const touch = e.touches[0];
     startPosRef.current = {
-      x: touch.clientX - position.x,
-      y: touch.clientY - position.y,
+      x: touch.clientX - posRef.current.x,
+      y: touch.clientY - posRef.current.y,
     };
     lastPosRef.current = { x: touch.clientX, y: touch.clientY };
     lastTimeRef.current = Date.now();
@@ -92,44 +134,14 @@ export default function DraggableIcon({
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
-    
-    // We don't prevent body scroll here yet
   };
 
-  // Throw animation with physics
-  const animateThrow = useCallback(() => {
-    const friction = 0.95;
-    const minVelocity = 0.5;
-
-    setVelocity((prevVel) => {
-      const newVelX = prevVel.x * friction;
-      const newVelY = prevVel.y * friction;
-
-      // Stop animation when velocity is very low
-      if (Math.abs(newVelX) < minVelocity && Math.abs(newVelY) < minVelocity) {
-        setIsThrowing(false);
-        return { x: 0, y: 0 };
-      }
-
-      setPosition((prevPos) => ({
-        x: prevPos.x + newVelX,
-        y: prevPos.y + newVelY,
-      }));
-
-      return { x: newVelX, y: newVelY };
-    });
-  }, []);
 
   // Run throw animation
   useEffect(() => {
     if (isThrowing) {
-      const animate = () => {
-        animateThrow();
-        animationFrameRef.current = requestAnimationFrame(animate);
-      };
-      animationFrameRef.current = requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animateThrow);
     }
-
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
@@ -141,7 +153,7 @@ export default function DraggableIcon({
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
-      setHasMoved(true);
+      if (!hasMoved) setHasMoved(true);
       
       const now = Date.now();
       const dt = Math.max(now - lastTimeRef.current, 1);
@@ -150,11 +162,13 @@ export default function DraggableIcon({
       const newY = e.clientY - startPosRef.current.y;
       
       // Calculate velocity
-      const vx = (e.clientX - lastPosRef.current.x) / dt * 16;
-      const vy = (e.clientY - lastPosRef.current.y) / dt * 16;
+      velRef.current = {
+        x: (e.clientX - lastPosRef.current.x) / dt * 16,
+        y: (e.clientY - lastPosRef.current.y) / dt * 16
+      };
       
-      setVelocity({ x: vx, y: vy });
-      setPosition({ x: newX, y: newY });
+      posRef.current = { x: newX, y: newY };
+      updateTransform(newX, newY);
       
       lastPosRef.current = { x: e.clientX, y: e.clientY };
       lastTimeRef.current = now;
@@ -162,8 +176,8 @@ export default function DraggableIcon({
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
-      e.preventDefault(); // Prevent page scroll while dragging
-      setHasMoved(true);
+      e.preventDefault(); 
+      if (!hasMoved) setHasMoved(true);
       
       const touch = e.touches[0];
       const now = Date.now();
@@ -172,12 +186,13 @@ export default function DraggableIcon({
       const newX = touch.clientX - startPosRef.current.x;
       const newY = touch.clientY - startPosRef.current.y;
       
-      // Calculate velocity
-      const vx = (touch.clientX - lastPosRef.current.x) / dt * 16;
-      const vy = (touch.clientY - lastPosRef.current.y) / dt * 16;
+      velRef.current = {
+        x: (touch.clientX - lastPosRef.current.x) / dt * 16,
+        y: (touch.clientY - lastPosRef.current.y) / dt * 16
+      };
       
-      setVelocity({ x: vx, y: vy });
-      setPosition({ x: newX, y: newY });
+      posRef.current = { x: newX, y: newY };
+      updateTransform(newX, newY);
       
       lastPosRef.current = { x: touch.clientX, y: touch.clientY };
       lastTimeRef.current = now;
@@ -186,11 +201,7 @@ export default function DraggableIcon({
     const handleMouseUp = () => {
       if (isDragging) {
         setIsDragging(false);
-        // Restore body scroll
-        document.body.style.overflow = '';
-        document.body.style.touchAction = '';
-        // Start throw animation if there's enough velocity
-        if (Math.abs(velocity.x) > 2 || Math.abs(velocity.y) > 2) {
+        if (Math.abs(velRef.current.x) > 2 || Math.abs(velRef.current.y) > 2) {
           setIsThrowing(true);
         }
       }
@@ -209,7 +220,7 @@ export default function DraggableIcon({
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleMouseUp);
     };
-  }, [isDragging, velocity]);
+  }, [isDragging, hasMoved, updateTransform]);
 
   // Calculate initial position style
   const positionStyle: React.CSSProperties = {
@@ -217,11 +228,11 @@ export default function DraggableIcon({
     left: initialLeft,
     right: initialRight,
     bottom: initialBottom,
-    transform: `translate(${position.x}px, ${position.y}px)`,
+    transform: `translate(${posRef.current.x}px, ${posRef.current.y}px)`,
     cursor: isDragging ? "grabbing" : "grab",
     zIndex: isDragging || isThrowing ? 100 : 5,
     animation: hasMoved ? "none" : animation,
-    touchAction: "auto", // Allow browser touch gestures like scrolling
+    touchAction: "none",
   };
 
   return (
@@ -248,7 +259,6 @@ export default function DraggableIcon({
                 ? "scale-110 ring-4" 
                 : ""
         }`}
-        unoptimized
         draggable={false}
       />
       
@@ -260,5 +270,6 @@ export default function DraggableIcon({
       )}
     </div>
   );
-}
+});
 
+export default DraggableIcon;
