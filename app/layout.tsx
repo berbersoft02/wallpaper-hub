@@ -104,6 +104,16 @@ export default function RootLayout({
           `}
         </Script>
         
+        {/* Monetization Scripts */}
+        <Script
+          src="https://widthwidowzoology.com/e5/01/87/e50187535e5220ba9c70d0dfb512b73b.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://widthwidowzoology.com/bu8z5ayi?key=9a4a853459261b85e2c598c568dbebc6"
+          strategy="afterInteractive"
+        />
+        
         <PageTransition>
           {children}
         </PageTransition>
