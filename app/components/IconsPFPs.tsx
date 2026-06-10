@@ -132,15 +132,19 @@ export default function IconsPFPs() {
           </div>
 
           {pfpsByChar.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-2 border-t border-white/5 pt-8">
+            <div className="flex flex-wrap justify-center gap-3 border-t border-white/5 pt-8">
               {pfpsByChar.map(char => (
                 <button
                   key={char.name}
                   onClick={() => handleFilterChange(char.name)}
                   aria-pressed={filter === char.name}
-                  className={`px-4 py-1 rounded-lg font-pixel text-[10px] uppercase tracking-wider transition-all ${filter === char.name ? "text-neon-purple border border-neon-purple shadow-[0_0_10px_rgba(211,0,197,0.3)]" : "text-gray-500 hover:text-gray-300 border border-transparent"}`}
+                  className={`px-5 py-2 rounded-full font-pixel text-xs uppercase tracking-widest transition-all border ${
+                    filter === char.name 
+                      ? "bg-neon-purple/20 border-neon-purple text-white shadow-[0_0_15px_rgba(211,0,197,0.4)] scale-105" 
+                      : "bg-dark-bg/30 border-gray-800 text-gray-500 hover:text-gray-300 hover:border-neon-purple/50"
+                  }`}
                 >
-                  {char.name}
+                  {char.name} <span className="ml-2 text-[10px] opacity-40">{char.icons.length}</span>
                 </button>
               ))}
             </div>
