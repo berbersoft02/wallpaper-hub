@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { Twitter } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Only_dias Ocean",
-  description: "Get in touch with Only_dias Ocean for wallpaper requests, business inquiries, or feedback.",
+  title: "Contact Us | Only_Gohan Ocean",
+  description: "Get in touch with Only_Gohan Ocean for wallpaper requests, business inquiries, or feedback.",
   alternates: {
     canonical: '/contact',
   },

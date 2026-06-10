@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Only_dias Ocean",
-  description: "Terms and conditions for using Only_dias Ocean wallpapers and services.",
+  title: "Terms of Service | Only_Gohan Ocean",
+  description: "Terms and conditions for using Only_Gohan Ocean wallpapers and services.",
   alternates: {
     canonical: '/terms',
   },
@@ -31,7 +31,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">1. Acceptance of Terms</h2>
             <p>
-              By accessing and using Only_dias Ocean (&quot;the website&quot;), you accept and agree to be bound 
+              By accessing and using Only_Gohan Ocean (&quot;the website&quot;), you accept and agree to be bound 
               by these Terms of Service. If you do not agree to these terms, please do not use our website.
             </p>
           </section>
@@ -39,7 +39,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">2. Description of Service</h2>
             <p>
-              Only_dias Ocean is a website that provides anime and pixel art wallpapers for personal use. 
+              Only_Gohan Ocean is a website that provides anime and pixel art wallpapers for personal use. 
               We offer free wallpapers that users can download and use on their personal devices.
             </p>
           </section>
@@ -114,7 +114,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">9. Limitation of Liability</h2>
             <p>
-              To the fullest extent permitted by law, Only_dias Ocean shall not be liable for any 
+              To the fullest extent permitted by law, Only_Gohan Ocean shall not be liable for any 
               indirect, incidental, special, or consequential damages arising from your use of the website.
             </p>
           </section>
@@ -150,7 +150,7 @@ export default function TermsOfService() {
             href="/" 
             className="font-pixel text-neon-pink hover:text-neon-cyan transition-colors"
           >
-            ← Back to Only_dias Ocean
+            ← Back to Only_Gohan Ocean
           </Link>
         </div>
       </div>

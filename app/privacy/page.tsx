@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Only_dias Ocean",
-  description: "Learn how Only_dias Ocean collects, uses, and protects your personal data.",
+  title: "Privacy Policy | Only_Gohan Ocean",
+  description: "Learn how Only_Gohan Ocean collects, uses, and protects your personal data.",
   alternates: {
     canonical: '/privacy',
   },
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="font-pixel text-2xl text-neon-cyan mb-4">1. Introduction</h2>
             <p>
-              Welcome to Only_dias Ocean (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We respect your privacy and are committed 
+              Welcome to Only_Gohan Ocean (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We respect your privacy and are committed 
               to protecting your personal data. This privacy policy explains how we collect, use, and 
               safeguard your information when you visit our website.
             </p>
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
             href="/" 
             className="font-pixel text-neon-pink hover:text-neon-cyan transition-colors"
           >
-            ← Back to Only_dias Ocean
+            ← Back to Only_Gohan Ocean
           </Link>
         </div>
       </div>

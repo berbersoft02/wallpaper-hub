@@ -149,7 +149,7 @@ export default function Home() {
               <div className="space-y-4 p-8 bg-gray-900/30 rounded-2xl border border-gray-800/50">
                 <h3 className="font-pixel text-2xl text-neon-pink">01. Curated Archive</h3>
                 <p className="text-gray-400 leading-relaxed text-lg font-body">
-                  Unlike automated scrapper websites, Only_dias Ocean is a hand-picked repository. Every piece of art is selected based on its emotional impact and compositional quality, ensuring your device gets more than just a picture—it gets a masterpiece.
+                  Unlike automated scrapper websites, Only_Gohan Ocean is a hand-picked repository. Every piece of art is selected based on its emotional impact and compositional quality, ensuring your device gets more than just a picture—it gets a masterpiece.
                 </p>
               </div>
               <div className="space-y-4 p-8 bg-gray-900/30 rounded-2xl border border-gray-800/50">
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-6 font-body text-gray-300">
                 <div className="bg-card-bg/60 p-8 rounded-xl border border-gray-800 hover:border-neon-pink transition-colors group">
                   <h3 className="font-pixel text-xl text-neon-pink mb-3 group-hover:text-white transition-colors">Are these wallpapers legally compliant?</h3>
-                  <p className="text-md leading-relaxed">Yes, all wallpapers on Only_dias Ocean are provided for personal, non-commercial use as digital desktop/mobile backgrounds. We encourage users to support the original animation studios by purchasing official merchandise and streaming from licensed platforms.</p>
+                  <p className="text-md leading-relaxed">Yes, all wallpapers on Only_Gohan Ocean are provided for personal, non-commercial use as digital desktop/mobile backgrounds. We encourage users to support the original animation studios by purchasing official merchandise and streaming from licensed platforms.</p>
                 </div>
 
                 <div className="bg-card-bg/60 p-8 rounded-xl border border-gray-800 hover:border-neon-cyan transition-colors group">
@@ -201,7 +201,7 @@ export default function Home() {
             <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
             <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
               <p>
-                HI I'm DIAS with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+                Hi, I'm GOHAN with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
               </p>
               <p>
                 This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.

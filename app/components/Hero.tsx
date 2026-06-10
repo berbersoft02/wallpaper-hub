@@ -114,7 +114,7 @@ export default function Hero({ showcaseImages }: HeroProps) {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-orange-400 to-neon-cyan animate-sparkle">SCREENS</span>
           </h1>
           <p className="font-body text-gray-300 text-lg md:text-2xl max-w-2xl mx-auto">
-            Welcome here! Dive into my ocean of exclusive wallpapers. Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_dias</span> on TikTok!
+            Welcome here! Dive into my ocean of exclusive wallpapers. Follow me <span className="text-orange-400 font-bold animate-glow-orange drop-shadow-[0_0_12px_rgba(251,146,60,0.8)]">Only_Gohan</span> on TikTok!
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
             <InteractiveHoverButton href="#gallery" text="BROWSE GALLERY" className="shadow-[0_0_32px_rgba(255,42,109,0.6)] hover:shadow-[0_0_48px_rgba(255,42,109,0.9)]" />

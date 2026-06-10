@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Post Not Found' };
 
   return {
-    title: `${post.title} | Only_dias Ocean`,
+    title: `${post.title} | Only_Gohan Ocean`,
     description: post.excerpt,
     keywords: post.tags.join(', '),
     alternates: {

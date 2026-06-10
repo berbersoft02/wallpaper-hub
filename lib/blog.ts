@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Eren and Mikasa: A Bond Beyond the Walls – The Ultimate 4K Visual Story',
     excerpt: 'A deep, emotional exploration of the tragic relationship between Eren Jaeger and Mikasa Ackerman. Discover how we captured their most iconic 4K moments.',
     date: '2026-03-19',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Eren Jaeger', 'Mikasa Ackerman', 'AOT', '4K', 'Character Story', 'Tragedy'],
     content: `
       <div class="flex justify-center my-8 gap-4">
@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Anna Yanami: The "Blue" Aesthetic of Makeine in High-Fidelity 4K – A Visual Odyssey',
     excerpt: 'An in-depth analysis of the visual brilliance of Anna Yanami from "Makeine: Too Many Losing Heroines". From her comedic gluttony to her heartfelt vulnerability, explore how we brought the vibrancy of Toyohashi to life in 4K.',
     date: '2026-03-19',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Anna Yanami', 'Makeine', 'Blue', '4K', 'Losing Heroine', 'A-1 Pictures'],
     content: `
       <div class="flex justify-center my-8">
@@ -112,7 +112,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Akaza: The Tragic Path of Upper Moon Three – A 4K Character Story',
     excerpt: 'Exploring the complex psychology and striking visual design of Akaza. From his "Destructive Death" martial arts to the heartbreaking origin of Hakuji.',
     date: '2026-03-19',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Akaza', 'Demon Slayer', 'Upper Moon', '4K', 'Character Story'],
     content: `
       <div class="flex justify-center my-8">
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Toji Fushiguro: The Raw Intensity of the Sorcerer Killer in 4K - A 2026 Visual Analysis',
     excerpt: 'An 800+ word deep dive into the "Heavenly Restricted" aesthetic of Toji Fushiguro. Learn our technical process for editing the Sorcerer Killer for high-fidelity 4K displays.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Toji Fushiguro', 'JJK', 'Action', '4K', 'Intensity', 'MAPPA'],
     content: `
       <div class="flex justify-center my-8">
@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Conclusion: A Legend Who Broke the World</h2>
-      <p>Toji Fushiguro is a character who changed the trajectory of <em>Jujutsu Kaisen</em> forever. He is the man who proved that sheer will and physical perfection could bring gods to their knees. Our 4K collection is a tribute to that unyielding spirit and MAPPA's incredible character work. I've personally verified every pixel of these 8 images to ensure they meet the Only_dias Ocean standard.</p>
+      <p>Toji Fushiguro is a character who changed the trajectory of <em>Jujutsu Kaisen</em> forever. He is the man who proved that sheer will and physical perfection could bring gods to their knees. Our 4K collection is a tribute to that unyielding spirit and MAPPA's incredible character work. I've personally verified every pixel of these 8 images to ensure they meet the Only_Gohan Ocean standard.</p>
       
       <p>Download the Toji Fushiguro 4K set today and let the Sorcerer Killer dominate your digital space. Remember: in a world of sorcerers, be the one who doesn't need cursed energy to win.</p>
 
@@ -227,7 +227,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Shouko Nishimiya: The Silent Beauty of "A Silent Voice" in 4K - A Deep Emotional & Visual Analysis',
     excerpt: 'Exploring the emotional depth and visual serenity of Nishimiya Shouko. A comprehensive 800+ word guide to our high-fidelity 4K collection, including technical editing breakdowns and story themes.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Nishimiya Shouko', 'A Silent Voice', 'Emotional', '4K', 'Aesthetic', 'Kyoto Animation'],
     content: `
       <div class="flex justify-center my-8">
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Elaina: The Journey of the Wandering Witch in High-Fidelity 4K',
     excerpt: 'Exploring the magical world through the eyes of the Ashen Witch. A breakdown of our vibrant Elaina 4K collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Elaina', 'Wandering Witch', 'Magic', 'Aesthetic', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -354,7 +354,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Mai Sakurajima: The Irresistible Charm of the Bunny Girl Senpai in 4K',
     excerpt: 'Deep dive into the aesthetic of Mai Sakurajima. From bunny suits to school uniforms, here is how we edit the queen of Rascal Does Not Dream.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Mai Sakurajima', 'Bunny Girl Senpai', 'Aesthetic', '4K', 'Romance'],
     content: `
       <div class="flex justify-center my-8">
@@ -406,7 +406,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Nino Nakano: The Unstoppable Tsundere Energy in 4K',
     excerpt: 'Exploring the bold and passionate aesthetic of Nino Nakano. A guide to her exclusive 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Nino Nakano', 'Gotoubun', 'Tsundere', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -458,7 +458,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rias Gremory: The Crimson-Haired Ruin Princess in 4K',
     excerpt: 'Exploring the elegance and authority of Rias Gremory. A guide to our high-resolution Rias Gremory 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Rias Gremory', 'High School DxD', 'Devil', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -510,7 +510,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rin Shima: The Ultimate Cozy Camping Aesthetic in 4K',
     excerpt: 'Exploring the peaceful and serene world of Rin Shima. A guide to our Yuru Camp 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Rin Shima', 'Yuru Camp', 'Cozy', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -562,7 +562,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Siesta: The Legendary Detective\'s Eternal Elegance in 4K',
     excerpt: 'Exploring the mystery and beauty of Siesta from "The Detective Is Already Dead". A guide to our exclusive 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Siesta', 'The Detective Is Already Dead', 'Mystery', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -614,7 +614,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Blue Box: The Pure Romance of Chinatsu and Hina in 4K',
     excerpt: 'Exploring the vibrant and youthful aesthetic of "Blue Box" (Ao no Hako). A guide to our Chinatsu and Hina 4K collections.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Blue Box', 'Chinatsu', 'Hina', 'Romance', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -671,7 +671,7 @@ export const blogPosts: BlogPost[] = [
     title: 'My Hero Academia: The Epic 4K Collection for Ultimate Heroes',
     excerpt: 'Go Beyond! Plus Ultra! A guide to our massive My Hero Academia 4K wallpaper collection featuring Deku, Bakugo, and more.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['MHA', 'Deku', 'Bakugo', 'Action', '4K', 'Epic'],
     content: `
       <div class="flex justify-center my-8">
@@ -723,7 +723,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Baki Hanma: The Raw Muscle and Fighting Spirit in 4K',
     excerpt: 'Exploring the hyper-masculine and intense aesthetic of Baki Hanma. A guide to our high-resolution fighting 4K wallpapers.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Baki', 'Baki Hanma', 'Fighting', 'Muscle', '4K', 'Intensity'],
     content: `
       <div class="flex justify-center my-8">
@@ -775,7 +775,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Kaoruko Waguri: The Sweetest Fragrance of "Kaoru Hana" in 4K',
     excerpt: 'Exploring the pure and heartwarming aesthetic of Kaoruko Waguri. A guide to our wholesome Kaoru Hana 4K collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Kaoru Hana', 'Kaoruko Waguri', 'Wholesome', 'Romance', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -827,7 +827,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Maria Kujou: The Softness and Charm of the Kujou Sister in 4K',
     excerpt: 'Exploring the gentle and supportive aesthetic of Maria Kujou from "Roshidere". A guide to our exclusive 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Maria Kujou', 'Roshidere', 'Sister', 'Cute', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -879,7 +879,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Yuzuki Nanase: The Popularity and Style of "Chitose-kun" in 4K',
     excerpt: 'Exploring the fashionable and charismatic aesthetic of Yuzuki Nanase. A guide to our high-resolution Chitose-kun 4K wallpapers.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Yuzuki Nanase', 'Chitose-kun', 'Fashion', 'Popular', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -931,7 +931,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rin Nanakura: The Many Faces of Giji Harem in 4K',
     excerpt: 'Exploring the versatile and charming aesthetic of Rin Nanakura. A guide to our exclusive Giji Harem 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Rin Nanakura', 'Giji Harem', 'Acting', 'Romance', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -983,7 +983,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Yuuko Hiragi: The Classic Kawaii Aesthetic in 4K',
     excerpt: 'Exploring the sweet and charming world of Yuuko Hiragi. A guide to our exclusive Yuuko Hiragi 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Yuuko Hiragi', 'Anime Girl', 'Kawaii', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1035,7 +1035,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Subaru Hushino: The Quiet Intensity of a New Generation in 4K',
     excerpt: 'Exploring the sharp and modern aesthetic of Subaru Hushino. A guide to our high-resolution Subaru 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Subaru Hushino', 'Anime Girl', 'Modern', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1087,7 +1087,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Phoebe: The Intersection of Digital Art and Anime Aesthetic in 4K',
     excerpt: 'Exploring the unique and artistic world of Phoebe. A guide to our high-resolution Phoebe 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Phoebe', 'Aesthetic', 'Digital Art', '4K', 'Girl'],
     content: `
       <div class="flex justify-center my-8">
@@ -1139,7 +1139,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Siesta: The Legendary Detective\'s Eternal Elegance in 4K',
     excerpt: 'Exploring the mystery and beauty of Siesta from "The Detective Is Already Dead". A guide to our exclusive 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Siesta', 'The Detective Is Already Dead', 'Mystery', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1191,7 +1191,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Blue Box: The Pure Romance of Chinatsu and Hina in 4K',
     excerpt: 'Exploring the vibrant and youthful aesthetic of "Blue Box" (Ao no Hako). A guide to our Chinatsu and Hina 4K collections.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Blue Box', 'Chinatsu', 'Hina', 'Romance', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -1248,7 +1248,7 @@ export const blogPosts: BlogPost[] = [
     title: 'My Hero Academia: The Epic 4K Collection for Ultimate Heroes',
     excerpt: 'Go Beyond! Plus Ultra! A guide to our massive My Hero Academia 4K wallpaper collection featuring Deku, Bakugo, and more.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['MHA', 'Deku', 'Bakugo', 'Action', '4K', 'Epic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1300,7 +1300,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Baki Hanma: The Raw Muscle and Fighting Spirit in 4K',
     excerpt: 'Exploring the hyper-masculine and intense aesthetic of Baki Hanma. A guide to our high-resolution fighting 4K wallpapers.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Baki', 'Baki Hanma', 'Fighting', 'Muscle', '4K', 'Intensity'],
     content: `
       <div class="flex justify-center my-8">
@@ -1352,7 +1352,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Kaoruko Waguri: The Sweetest Fragrance of "Kaoru Hana" in 4K',
     excerpt: 'Exploring the pure and heartwarming aesthetic of Kaoruko Waguri. A guide to our wholesome Kaoru Hana 4K collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Kaoru Hana', 'Kaoruko Waguri', 'Wholesome', 'Romance', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -1405,7 +1405,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Yuzuki Nanase: The Popularity and Style of "Chitose-kun" in 4K',
     excerpt: 'Exploring the fashionable and charismatic aesthetic of Yuzuki Nanase. A guide to our high-resolution Chitose-kun 4K wallpapers.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Yuzuki Nanase', 'Chitose-kun', 'Fashion', 'Popular', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -1457,7 +1457,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Shouko Nishimiya: The Silent Beauty of "A Silent Voice" in 4K',
     excerpt: 'Exploring the emotional depth and visual serenity of Nishimiya Shouko. A guide to our high-fidelity 4K collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Nishimiya Shouko', 'A Silent Voice', 'Emotional', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1509,7 +1509,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Elaina: The Journey of the Wandering Witch in High-Fidelity 4K',
     excerpt: 'Exploring the magical world through the eyes of the Ashen Witch. A breakdown of our vibrant Elaina 4K collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Elaina', 'Wandering Witch', 'Magic', 'Aesthetic', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -1561,7 +1561,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Mai Sakurajima: The Irresistible Charm of the Bunny Girl Senpai in 4K',
     excerpt: 'Deep dive into the aesthetic of Mai Sakurajima. From bunny suits to school uniforms, here is how we edit the queen of Rascal Does Not Dream.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Mai Sakurajima', 'Bunny Girl Senpai', 'Aesthetic', '4K', 'Romance'],
     content: `
       <div class="flex justify-center my-8">
@@ -1613,7 +1613,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Nino Nakano: The Unstoppable Tsundere Energy in 4K',
     excerpt: 'Exploring the bold and passionate aesthetic of Nino Nakano. A guide to her exclusive 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Nino Nakano', 'Gotoubun', 'Tsundere', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1665,7 +1665,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rias Gremory: The Crimson-Haired Ruin Princess in 4K',
     excerpt: 'Exploring the elegance and authority of Rias Gremory. A guide to our high-resolution Rias Gremory 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Rias Gremory', 'High School DxD', 'Devil', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1717,7 +1717,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rin Shima: The Ultimate Cozy Camping Aesthetic in 4K',
     excerpt: 'Exploring the peaceful and serene world of Rin Shima. A guide to our Yuru Camp 4K wallpaper collection.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Rin Shima', 'Yuru Camp', 'Cozy', '4K', 'Aesthetic'],
     content: `
       <div class="flex justify-center my-8">
@@ -1769,7 +1769,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Shikimori Micchon: The "Cool" 4K Wallpaper Collection + Editing Guide',
     excerpt: 'Shikimori is not just a cutie—she is a cool, protective icon. Here is how I edit her signature pink hair and sharp gaze for 4K.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Shikimori', 'Not Just a Cutie', 'Cool', 'Pink', 'Editing'],
     content: `
       <h2>Beyond the "Cutie": Shikimori's Cool Aesthetic</h2>
@@ -1810,7 +1810,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Shiina Mahiru: The Angel Next Door 4K Wallpapers & Aesthetic Guide',
     excerpt: 'Exploring the "Angel" aesthetic of Shiina Mahiru. Soft lighting, domestic vibes, and why she is the queen of cozy anime wallpapers.',
     date: '2026-02-13',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Shiina Mahiru', 'Angel Next Door', 'Kawaii', 'Aesthetic', 'Cozy'],
     content: `
       <h2>The "Angel" of the Neighborhood: Shiina Mahiru's Appeal</h2>
@@ -1849,7 +1849,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Moving Masterpieces: The Ultimate Guide to Anime Live Wallpapers',
     excerpt: 'Static is good, but movement is better. Everything you need to know about setting up and creating high-quality anime live wallpapers.',
     date: '2026-02-12',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Live Wallpapers', 'Wallpaper Engine', 'Guide', '4K', 'Tutorial'],
     content: `
       <h2>The Rise of the Live Wallpaper</h2>
@@ -1887,7 +1887,7 @@ export const blogPosts: BlogPost[] = [
     title: '4K Anime Car Wallpapers: Merging Automotive Culture with Aesthetic Art',
     excerpt: 'JDM culture and Anime are a match made in heaven. A deep dive into the world of Initial D, Wangan Midnight, and aesthetic car edits.',
     date: '2026-02-11',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Cars', 'JDM', 'Aesthetic', '4K', 'Initial D'],
     content: `
       <h2>The Intersection of Speed and Style</h2>
@@ -1929,7 +1929,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Why Pixel Art is the Secret to a Clean, Minimalist Anime Setup',
     excerpt: 'Pixel art isn\'t just for retro games. It\'s a powerful aesthetic choice for modern 4K setups. Discover the beauty of the "Lo-Fi" pixel look.',
     date: '2026-02-10',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Pixel Art', 'Minimalist', 'Retro', 'Setup', 'Lo-Fi'],
     content: `
       <h2>The Nostalgia of the Pixel</h2>
@@ -1967,7 +1967,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Frieren: Beyond Journey\'s End – A 2026 Deep Dive into Why This Story Matters',
     excerpt: 'An 800+ word deep dive into the themes of Frieren. Exploring time, human connection, and the melancholic beauty of the decade\'s most important anime.',
     date: '2026-02-09',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Frieren', 'Story', 'Analysis', 'Anime', 'Themes', 'Humanity'],
     content: `
       <div class="flex justify-center my-8">
@@ -2033,7 +2033,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The "Mixed" Collection: Hand-Picked Highlights from the Entire Anime Universe',
     excerpt: 'Can\'t decide on one character? Our Mixed collection features the absolute best frames from dozens of different series.',
     date: '2026-02-08',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Mixed', 'Collection', 'Variety', '4K'],
     content: `
       <h2>The Beauty of Variety</h2>
@@ -2072,7 +2072,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The "Awesome" Collection: High-Intensity Visuals for Your Ultimate Setup',
     excerpt: 'Looking for something that truly stands out? The Awesome collection is a curated set of the most visually striking and "epic" anime art.',
     date: '2026-02-07',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Awesome', 'Epic', 'Visuals', '4K', 'High Intensity'],
     content: `
       <h2>Define "Awesome"</h2>
@@ -2111,7 +2111,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Tenka Izumo 4K Wallpapers – From Monochrome Soldier to Colorful Idol',
     excerpt: 'Monochrome pencil shading vs. bright pastel colors. A showcase of Tenka Izumo\'s dual personality in 4K.',
     date: '2026-02-06',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Tenka Izumo', 'Mato Seihei no Slave', 'Monochrome', 'Editing'],
     content: `
       <h2>Monochrome Tenka: Pencil Shading with Military Elegance</h2>
@@ -2186,7 +2186,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Violet Evergarden: The Story That Redefined Emotional Storytelling in Modern Anime',
     excerpt: 'An 800+ word exploration of the journey of a war orphan turned "Auto Memories Doll" – complete story overview, key themes, and why it remains a visual masterpiece.',
     date: '2026-02-05',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Violet Evergarden', 'Story', 'Anime', 'Kyoto Animation', 'Emotion', 'Masterpiece'],
     content: `
       <div class="flex justify-center my-8">
@@ -2244,7 +2244,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Complete 4K Anime Wallpaper Creation Workflow: From Raw Frame to High-Fidelity Screen Art',
     excerpt: 'An exhaustive 800+ word technical breakdown of my professional editing process. Learn how I transform standard anime frames into optimized 4K masterpieces for modern displays.',
     date: '2026-02-05',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Workflow', '4K', 'Editing', 'Tutorial', 'Photoshop', 'AI Upscaling'],
     content: `
       <div class="flex justify-center my-8">
@@ -2253,7 +2253,7 @@ export const blogPosts: BlogPost[] = [
         </a>
       </div>
 
-      <p class="text-xl text-gray-300 mb-8"><strong>Ever wondered how a simple screenshot becomes a stunning 4K wallpaper? This is the exact 5-step pipeline I use for every collection on Only_dias Ocean, from Violet Evergarden to Frieren.</strong></p>
+      <p class="text-xl text-gray-300 mb-8"><strong>Ever wondered how a simple screenshot becomes a stunning 4K wallpaper? This is the exact 5-step pipeline I use for every collection on Only_Gohan Ocean, from Violet Evergarden to Frieren.</strong></p>
 
       <hr class="border-gray-800 my-8" />
 
@@ -2299,7 +2299,7 @@ export const blogPosts: BlogPost[] = [
       <p>This is where we move from 1080p to true 4K (3840x2160). I don't use standard upscalers; I use an AI toolchain specifically optimized for 2D animation.</p>
       
       <div class="bg-dark-bg/50 border border-gray-800 p-6 rounded-xl my-6">
-        <p class="font-mono text-neon-pink mb-4 uppercase tracking-widest text-sm">The Only_dias Toolchain:</p>
+        <p class="font-mono text-neon-pink mb-4 uppercase tracking-widest text-sm">The Only_Gohan Toolchain:</p>
         <ol class="list-decimal pl-6 space-y-2 text-gray-300">
           <li><strong>Real-ESRGAN (Anime_6B model):</strong> This is the workhorse. It performs a 2x upscale while specifically preserving the thickness and "ink" quality of anime line art.</li>
           <li><strong>Waifu2x (Noise Reduction Pass):</strong> I run a second pass at a lower upscale factor to smooth out any remaining color gradients and eliminate "banding."</li>
@@ -2323,7 +2323,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">Step 5: Multi-Platform Export & Quality Control</h2>
       <p>The final step is ensuring the wallpaper works on every device you own. I export the final master as a <strong>PNG-24</strong> to prevent any further compression loss. I then create specific versions for Desktop (16:9), Ultrawide (21:9), and Mobile Portrait (9:16).</p>
       
-      <p>Before any wallpaper is uploaded to Only_dias Ocean, I perform a "Live Test." I set the image as the background on my own 4K monitor and my OLED phone. I check for eye strain, text readability, and color accuracy. If it doesn't look perfect, it goes back to Step 3.</p>
+      <p>Before any wallpaper is uploaded to Only_Gohan Ocean, I perform a "Live Test." I set the image as the background on my own 4K monitor and my OLED phone. I check for eye strain, text readability, and color accuracy. If it doesn't look perfect, it goes back to Step 3.</p>
 
       <div class="mt-8 p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-pink-500/30 rounded-xl text-center">
         <h3 class="text-xl font-pixel text-white mb-4">Want to See the Results?</h3>
@@ -2345,7 +2345,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Yuki Suou: My 4K Wallpapers Collection + Genki Girl Editing Guide',
     excerpt: 'Exclusive Yuki Suou 4K wallpapers collection. Detailed editing workflow, genki color grading, PC/mobile setup tips, and gallery with 2 styles (kawaii + cool).',
     date: '2026-02-04',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Yuki Suou', 'Roshidere', 'Genki', 'Editing'],
     content: 
       `
@@ -2448,7 +2448,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>6. More Yuki Coming?</h2>
       <ul>
-        <li>Request S2 Yuki or "Yuki + Alya duo" on TikTok <strong>@Only_dias</strong>.</li>
+        <li>Request S2 Yuki or "Yuki + Alya duo" on TikTok <strong>@Only_Gohan</strong>.</li>
         <li>Custom version? Tell me your ratio/mood.</li>
       </ul>
       <p>Thanks for reading! Check <a href="/?filter=Frieren#gallery" class="text-neon-pink">Frieren</a>, <a href="/?filter=Alya+Kujou+%E2%99%A1#gallery" class="text-neon-pink">Alya</a>, and more on <a href="/" class="text-neon-pink">home</a>.</p>
@@ -2459,7 +2459,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Alya Kujou: My 4K Wallpapers Collection + Tsundere Editing Guide',
     excerpt: 'Discover my exclusive collection of Alya Kujou wallpapers in 4K. Detailed editing process, tsundere color grading, setup tips, and full gallery.',
     date: '2026-02-04',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Alya Kujou', 'Roshidere', 'Tsundere', 'Editing'],
     content: 
       `
@@ -2534,7 +2534,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Important Reminder:</strong> <em>Roshidere</em> belongs to Kadokawa and studio Doga Kobo. My edits and fanarts are for personal use. Please support the official release via Crunchyroll, the manga, or official merchandise!</p>
 
       <h2>6. Request Your Alya Scene</h2>
-      <p>Want more Alya? Comment or DM <strong>@Only_dias</strong> on TikTok.</p>
+      <p>Want more Alya? Comment or DM <strong>@Only_Gohan</strong> on TikTok.</p>
       <p>Tell me "S2 Alya" or "Alya + Masachika duo".</p>
       <p>Thanks for reading! Head back to the home page for Frieren, Zero Two, and more.</p>
     `
@@ -2544,12 +2544,12 @@ export const blogPosts: BlogPost[] = [
     title: 'The Magic of Frieren: My 4K Wallpaper Collection + Editing Breakdown',
     excerpt: 'Explore my exclusive collection of Frieren 4K wallpapers. Detailed editing process, setup tips, and why this series is a game-changer for anime backgrounds.',
     date: '2026-01-31',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Frieren', 'Anime', '4K', 'Fantasy', 'Editing'],
     content: 
       `
       <h2>Introduction: Why Frieren is Perfect for Wallpapers</h2>
-      <p><em>Frieren: Beyond Journey’s End</em> isn’t just an anime series—it’s a masterclass in <strong>melancholic beauty</strong>. The cool color palettes, vast landscapes, and the calm expressions of the characters make Frieren a dream for wallpaper creators. When I started editing backgrounds for Only_dias Ocean, Frieren was naturally among the first collections I tackled. Her serene presence and the breathtaking visuals of her world are perfect for creating a calming digital environment.</p>
+      <p><em>Frieren: Beyond Journey’s End</em> isn’t just an anime series—it’s a masterclass in <strong>melancholic beauty</strong>. The cool color palettes, vast landscapes, and the calm expressions of the characters make Frieren a dream for wallpaper creators. When I started editing backgrounds for Only_Gohan Ocean, Frieren was naturally among the first collections I tackled. Her serene presence and the breathtaking visuals of her world are perfect for creating a calming digital environment.</p>
 
       <div class="my-8 relative w-full aspect-video rounded-lg overflow-hidden border-2 border-neon-cyan/50 shadow-[0_0_20px_rgba(5,217,232,0.3)]">
         <img src="https://res.cloudinary.com/dg8hzm1fp/image/upload/wallpapers/Frieren/1.jpg" alt="Frieren 4K Masterpiece" class="object-cover w-full h-full" />
@@ -2618,7 +2618,7 @@ export const blogPosts: BlogPost[] = [
       <p>Frieren is a work by Madhouse and studio Kansai Animation, featuring magnificent backgrounds. My edits are homages for personal use—no resale, no NSFW. If you use these wallpapers, please support the series via Crunchyroll, the manga, or official merchandise.</p>
 
       <h2>6. What’s Next for the Frieren Collection?</h2>
-      <p>If you want more: Let me know in the comments or on TikTok (@Only_dias) which Season 2 scenes you’d like to see. Request custom versions (specific mood, ratio).</p>
+      <p>If you want more: Let me know in the comments or on TikTok (@Only_Gohan) which Season 2 scenes you’d like to see. Request custom versions (specific mood, ratio).</p>
       <p class="mt-8 p-4 bg-neon-cyan/10 border border-neon-cyan/20 rounded-lg">
         <strong>Deep Dive:</strong> If you love the visuals, you'll love the story even more. Read our <a href="/blog/frieren-story-analysis" class="text-neon-cyan hover:underline font-bold">Frieren: Beyond Journey's End Story Analysis</a> to discover why this anime is a masterpiece.
       </p>
@@ -2630,7 +2630,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Attack on Titan: The Final Season\'s Cinematic Brutality and Editing Mastery in 4K',
     excerpt: 'MAPPA took over the reigns for the final season and brought a darker, more cinematic look to the series. Here is how I edit Eren and Mikasa to match.',
     date: '2026-01-31',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Attack on Titan', 'Eren Yeager', 'MAPPA', 'Cinematic'],
     content: 
       `<h2>A Gritty New Era for The Scouts: The WIT vs. MAPPA Shift in Visuals</h2>
@@ -2667,7 +2667,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Rintaro Tsumugi: The Gentle Giant Aesthetic and Manga Colorization Techniques in 4K',
     excerpt: 'Kaoru Hana wa Rin to Saku has some of the most wholesome and beautiful art in modern manga. Here is how I edit Rintaro.',
     date: '2026-01-30',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Kaoru Hana', 'Rintaro', 'Romance', 'Wholesome'],
     content: 
       `<h2>The Fragrance of a Flower: A New Type of Protagonist for a New Era</h2>
@@ -2702,7 +2702,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How I Make My Viral Anime Edits: The Complete 2026 Professional Masterclass for Aspiring Creators',
     excerpt: 'An exhaustive look at my editing workflow using Adobe Photoshop, After Effects, and Canva to create the content you see on @noxzx_kb.',
     date: '2026-01-22',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Tutorial', 'TikTok', 'Editing', 'Photoshop'],
     content: 
       `<h2>The Secret Sauce of a Viral Edit: Beyond the Simple Filters</h2>
@@ -2714,15 +2714,15 @@ export const blogPosts: BlogPost[] = [
       <p>I always start by hunting for <strong>Blu-ray RAWs</strong>. These are original, uncompressed files directly from the Japanese physical releases. They don't have subtitles, and the bitrate is high enough that we can push the colors to the extreme without losing any quality. I use a tool called <em>VLC Media Player</em> to take high-quality frame captures at the exact millisecond I want. Sometimes I'll spend an hour just looking for the perfect frame where the character's expression matches the mood of the music I'm using. Quality starts at the source, and I never compromise on this Foundation. It's what allows for that 4K crispness that defines our site.</p>
 
       <h2>Phase 2: The AI Upscaling Revolution (Real-ESRGAN & Topaz Photo AI)</h2>
-      <p>Screens are getting bigger and sharper every year. A standard 1080p frame from an anime will look slightly blurry on a 4K monitor or a modern smartphone with an incredibly high pixel density. That's why every single wallpaper on "Only_dias Ocean" goes through an <strong>Advanced AI Upscaling pipeline</strong>. We are moving into an era where 4K is the standard, not the exception, and your art needs to keep up. Standard upscaling is no longer enough for professional-grade work.</p>
+      <p>Screens are getting bigger and sharper every year. A standard 1080p frame from an anime will look slightly blurry on a 4K monitor or a modern smartphone with an incredibly high pixel density. That's why every single wallpaper on "Only_Gohan Ocean" goes through an <strong>Advanced AI Upscaling pipeline</strong>. We are moving into an era where 4K is the standard, not the exception, and your art needs to keep up. Standard upscaling is no longer enough for professional-grade work.</p>
 
       <p>I use a tool called <strong>Topaz Photo AI</strong> (or Topaz Gigapixel). I set it to the "Anime" model, which is specifically trained to recognize line art and flat colors. This tool removes the "noise" (those little static-looking dots) and fills in the gaps to create a crisp 3840x2160 image. It essentially "re-draws" the lines to be sharper and the colors to be smoother while preserving the original intent of the animator. This is the difference between a "good" wallpaper and a "professional" wallpaper that looks like it was made for the screen it's on. Don't settle for 1080p in a 4K world; your eyes and your audience will thank you for the clarity. It's about respecting the art.</p>
 
       <h2>Phase 3: Deep Color Grading in Photoshop (The Artistic Soul of the Edit)</h2>
-      <p>Once the image is upscaled to 4K, it's time for the artistic part. I bring the file into Adobe Photoshop. My goal isn't just to make the anime look "better," it's to give it the <strong>Only_dias signature look</strong>: Deep, inky blacks, vibrant "neon" cyans, and glows that look incredible on OLED screens. This is where the magic happens and where you define your style. Here are my three main secret steps that I use for every single drop on this site:</p>
+      <p>Once the image is upscaled to 4K, it's time for the artistic part. I bring the file into Adobe Photoshop. My goal isn't just to make the anime look "better," it's to give it the <strong>Only_Gohan signature look</strong>: Deep, inky blacks, vibrant "neon" cyans, and glows that look incredible on OLED screens. This is where the magic happens and where you define your style. Here are my three main secret steps that I use for every single drop on this site:</p>
 
       <h3>1. The "S-Curve" Strategy for Visual Depth</h3>
-      <p>I always start with a <strong>Curves Adjustment Layer</strong>. I create an "S-Curve" by slightly dropping the shadows and raising the highlights. This adds immediate "depth" and "pop" to the image. For darker characters like Gojo or Sukuna, I "crush" the blacks by moving the bottom-left point slightly to the right. This makes the image feel more intense, moody, and professional. It's the standard for high-end digital art and cinema. It gives the image that "Only_dias" weight and presence. It's about the shadows as much as the lights.</p>
+      <p>I always start with a <strong>Curves Adjustment Layer</strong>. I create an "S-Curve" by slightly dropping the shadows and raising the highlights. This adds immediate "depth" and "pop" to the image. For darker characters like Gojo or Sukuna, I "crush" the blacks by moving the bottom-left point slightly to the right. This makes the image feel more intense, moody, and professional. It's the standard for high-end digital art and cinema. It gives the image that "Only_Gohan" weight and presence. It's about the shadows as much as the lights.</p>
 
       <h3>2. Selective Color & Smart Vibrance for Neon Pops</h3>
       <p>I use "Selective Color" to isolate and manipulate specific hues without affecting the entire image. For example, I'll take the Blue channel and remove all the Yellow, which turns a standard blue into a "Neon Cyan." I also boost the <strong>Vibrance (not Saturation!)</strong> to +25. Vibrance is smarter—it increases the intensity of the duller colors without over-saturating the colors that are already bright (like skin tones). This keeps the characters looking natural while making the magical effects and background pop with energy and life. It's controlled intensity.</p>
@@ -2735,7 +2735,7 @@ export const blogPosts: BlogPost[] = [
         <li>Use a very soft brush (0% hardness) with a very low opacity (10-20%).</li>
         <li>Gently "tap" the areas you want to glow, like the irises of the eyes, the edge of a sword, or a neon sign in the background.</li>
       </ol>
-      <p>This adds a realistic "Bloom" that makes it look like the light is actually coming from inside your screen. It's subtle, but it's what makes the wallpaper feel "alive" and interactive. It's the professional touch that separates a hobbyist from a creator who understands light. It's the "Only_dias" glow.</p>
+      <p>This adds a realistic "Bloom" that makes it look like the light is actually coming from inside your screen. It's subtle, but it's what makes the wallpaper feel "alive" and interactive. It's the professional touch that separates a hobbyist from a creator who understands light. It's the "Only_Gohan" glow.</p>
 
       <h2>Phase 4: Finalizing in Canva & After Effects (The Packaging and Movement)</h2>
       <p>While Photoshop is for the heavy technical lifting, I use Canva for the finishing touches, especially when I'm making <strong>Matching PFPs</strong> or social media thumbnails for TikTok and Instagram. Canva's typography engine is much faster for quickly testing out different font styles and layouts. If I'm making a "Live Wallpaper," I move into Adobe After Effects to add "Puppet Warp" animations to the hair and clothing, making them flow in a seamless, looped motion. It's a comprehensive, professional workflow that covers every aspect of the final product, ensuring consistency and quality across the board. Every tool has its specific place in the pipeline.</p>
@@ -2751,7 +2751,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Zero Two: Why Zero Two is Still the Queen of Aesthetics: A 2026 Retro-Analysis and Editing Masterclass',
     excerpt: 'Years later, Zero Two remains the undefeated champion of anime wallpapers. Here is a deep dive into my editing process for the pink-haired icon.',
     date: '2026-01-30',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Zero Two', 'Darling in the Franxx', 'Waifu', 'Pink'],
     content: 
       `<h2>The Character Design That Defined a Generation: The Unstoppable Power of 002</h2>
@@ -2762,7 +2762,7 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>My "Vaporwave" Editing Workflow: Pink, Blue, and Digital Glitch Art in 4K</h2>
-      <p>When I open a Zero Two file in Photoshop, I immediately reach for the "Vaporwave" or "Retro-Future" aesthetic. Her pink hair naturally lends itself to cyan and purple accents—the "cotton candy" palette that has dominated aesthetic boards for years. My goal is to make her look like she's part of a high-end digital glitch art piece rather than just a simple screenshot from a show. I want her to feel like she belongs in a neon-lit, high-tech future. Here is how I do it step by step for the Only_dias 4K collection. It's about transforming the source.</p>
+      <p>When I open a Zero Two file in Photoshop, I immediately reach for the "Vaporwave" or "Retro-Future" aesthetic. Her pink hair naturally lends itself to cyan and purple accents—the "cotton candy" palette that has dominated aesthetic boards for years. My goal is to make her look like she's part of a high-end digital glitch art piece rather than just a simple screenshot from a show. I want her to feel like she belongs in a neon-lit, high-tech future. Here is how I do it step by step for the Only_Gohan 4K collection. It's about transforming the source.</p>
 
       <p>For the wallpaper featured above, I actually cut her out of the original scene completely using the Magnetic Lasso tool and then meticulously cleaned up the edges with a Layer Mask to ensure no "fringe" or "aliasing" remained. This is crucial for a professional, clean look. I then placed her against a custom-made glitch texture that I designed in After Effects using the "Bad TV" and "Shift Channels" effects. To marry the two images together so they don't look like a simple "copy-paste," I used a <strong>"Gradient Map"</strong> adjustment layer set to a Pink/Blue gradient at 20% opacity. This tints the shadows blue and the highlights pink, making her feel like she's illuminated by the digital environment itself. It's a professional trick that makes the entire composition feel whole, intentional, and balanced. It's about creating a unified world where the character and background coexist perfectly.</p>
 
@@ -2775,7 +2775,7 @@ export const blogPosts: BlogPost[] = [
         </div>
       </div>
 
-      <p>I also add a tiny but crucial bit of <strong>Chromatic Aberration</strong>. This is done by shifting the Red and Blue channels of the character silhouette by just 2 or 3 pixels in opposite directions. It gives the image a retro, CRT monitor feel that fits the "Darling" vibe perfectly. It's that subtle "buzz" that makes the image feel like it's vibrating with energy and digital life. Finally, I use a "Soft Light" brush to add a glow to her horns, making them the brightest point of the image to draw the eye upward and emphasize her "demon" side. It's all about the fine details that you only notice when you really look at it on a high-res screen. It's about making the screen feel expensive and curated. It's the Only_dias standard.</p>
+      <p>I also add a tiny but crucial bit of <strong>Chromatic Aberration</strong>. This is done by shifting the Red and Blue channels of the character silhouette by just 2 or 3 pixels in opposite directions. It gives the image a retro, CRT monitor feel that fits the "Darling" vibe perfectly. It's that subtle "buzz" that makes the image feel like it's vibrating with energy and digital life. Finally, I use a "Soft Light" brush to add a glow to her horns, making them the brightest point of the image to draw the eye upward and emphasize her "demon" side. It's all about the fine details that you only notice when you really look at it on a high-res screen. It's about making the screen feel expensive and curated. It's the Only_Gohan standard.</p>
 
       <h2>The Cultural Impact: Why Zero Two is Timeless in the Year 2026</h2>
       <p>Zero Two isn't just a character; she's an icon of the "Aesthetic" movement in the anime community. She represents a time when anime visuals started leaning heavily into the "Lo-Fi," "Synthwave," and "Cyberpunk" trends. Even in 2026, her design holds up against the newest seasonal characters because it's built on strong, simple color theory and a silhouette that is impossible to forget. As long as people like pink hair and neon lights, Zero Two will be the queen of wallpapers. She's more than a character; she's a complete vibe. She is the spirit of the "Neon Ocean" that this site is named after. She is why we love this art form and why we continue to push the boundaries of digital editing. She is timeless.</p>
@@ -2788,7 +2788,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Marin Kitagawa: Capturing the Ultimate Gyaru Energy and CloverWorks\' Visual Brilliance in 4K Quality',
     excerpt: 'An 800+ word exploration of the vibrant world of Marin Kitagawa. Learn our specialized "Golden Hour" color grading workflow and why she is the modern rom-com queen of 4K wallpapers.',
     date: '2026-01-29',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Marin Kitagawa', 'My Dress-Up Darling', 'Gyaru', 'Vibrant', '4K', 'Editing'],
     content: `
       <div class="flex justify-center my-8">
@@ -2807,7 +2807,7 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>The "Golden Hour" Color Grade: Capturing the Gyaru Spirit</h2>
-      <p>Most of my edits are dark, moody, and neon-soaked (the "Only_dias" special), but for Marin, that feels completely wrong. She radiates positivity, confidence, and warmth. My color grading strategy for her revolves around <strong>Warmth, High Saturation, and High-Key lighting</strong>. I want the wallpaper to feel like a hot, nostalgic summer afternoon. I want you to feel the sun on your face every time you look at your phone.</p>
+      <p>Most of my edits are dark, moody, and neon-soaked (the "Only_Gohan" special), but for Marin, that feels completely wrong. She radiates positivity, confidence, and warmth. My color grading strategy for her revolves around <strong>Warmth, High Saturation, and High-Key lighting</strong>. I want the wallpaper to feel like a hot, nostalgic summer afternoon. I want you to feel the sun on your face every time you look at your phone.</p>
       
       <h3>The Technical Workflow for Vibrancy</h3>
       <p>I start by boosting the <strong>Vibrance slider to +30</strong> in the Camera Raw Filter. I prefer Vibrance over Saturation because it’s "smarter"—it increases the intensity of the duller colors without over-saturating the colors that are already bright (like her skin tones). This keeps Marin looking natural while making her outfits and the environment pop.</p>
@@ -2837,7 +2837,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusion: A Celebration of Youth and Passion</h2>
       <p>Marin Kitagawa is a reminder to pursue your passions with everything you've got. This 4K collection is my tribute to her energy and CloverWorks' incredible animation. I've spent weeks refining the "Golden Hour" grade to make sure it looks perfect on every screen. Download the set, let Marin's energy power your device, and stay vibrant!</p>
       
-      <p>We'll be adding more "Dress-Up" variants soon, including moments from the manga that haven't been animated yet, so keep checking back for the next drop! Thank you for being part of the Only_dias Ocean community.</p>
+      <p>We'll be adding more "Dress-Up" variants soon, including moments from the manga that haven't been animated yet, so keep checking back for the next drop! Thank you for being part of the Only_Gohan Ocean community.</p>
 
       <div class="flex justify-center my-8">
         <a href="/?filter=Marin+kitagawa#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(250,204,21,0.6)] hover:shadow-[0_0_35px_rgba(236,72,153,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
@@ -2851,7 +2851,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Honored One: A Deep Dive into Gojo Satoru and the Art of High-Fidelity 4K JJK Wallpapers',
     excerpt: 'An 800+ word technical and character analysis of the strongest sorcerer. Learn how we edit Gojo\'s Six Eyes and MAPPA\'s unique visual style for true 4K resolution.',
     date: '2026-01-28',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['JJK', 'Gojo Satoru', 'Eyes', 'Blue', '4K', 'MAPPA', 'Action'],
     content: `
       <div class="flex justify-center my-8">
@@ -2905,7 +2905,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusion: Domain Expansion: Unlimited Quality</h2>
       <p>The Gojo Satoru 4K collection is now live in the gallery. Whether you want the cocky student from the past or the unstoppable teacher of the present, we've got the highest quality available on the internet. We'll be adding more JJK characters like Sukuna, Toji, and Yuta soon, so stay tuned for the full expansion of our JJK library.</p>
       
-      <p>Thank you for supporting Only_dias Ocean. I hope these wallpapers bring a sense of power and aesthetic perfection to your devices. Stand at the top with the honored one today.</p>
+      <p>Thank you for supporting Only_Gohan Ocean. I hope these wallpapers bring a sense of power and aesthetic perfection to your devices. Stand at the top with the honored one today.</p>
 
       <div class="flex justify-center my-8">
         <a href="/?filter=Jujutsu+Kaisen#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-black text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)] hover:shadow-[0_0_35px_rgba(168,85,247,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
@@ -2919,7 +2919,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Akane Kurokawa: The Method Actor\'s Gaze and Star Eye Effects in High-Fidelity 4K Resolution',
     excerpt: 'Akane is defined by her intensity. Here is how I edit her transformation.',
     date: '2026-01-27',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Oshi no Ko', 'Akane', 'Blue', 'Acting'],
     content: 
       `<h2>The Shift in Demeanor: The Psychological Brilliance of Oshi no Ko Visuals</h2>
@@ -2954,7 +2954,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Chisato Nishikigi: The Art of Lethal Elegance and Dynamic Motion Editing in 4K Resolution',
     excerpt: 'Chisato\'s red uniform against urban backgrounds creates a stunning visual contrast. Breaking down my Lycoris Recoil edits.',
     date: '2026-01-26',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Lycoris Recoil', 'Chisato', 'Action', 'Red'],
     content: 
       `<h2>The Strongest Lycoris: A Visual Paradox in Signal Red and Urban Grey</h2>
@@ -2987,7 +2987,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Chainsaw Man: Embracing the Gritty Film Look and MAPPA\'s Unique Cinema Style in 4K Resolution',
     excerpt: 'MAPPA gave Chainsaw Man a cinematic feel. Here is how I enhance that grit and gore for high-resolution displays.',
     date: '2026-01-25',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Chainsaw Man', 'Denji', 'Dark', 'Action'],
     content: 
       `<h2>Raw, Dirty, and Beautiful: The Chainsaw Man Visual Revolution in Modern Anime</h2>
@@ -3020,7 +3020,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Alya Kujou: The Silver-Haired Standard and Doga Kobo\'s Visual Brilliance in 4K Resolution',
     excerpt: 'Roshidere\'s Alya is arguably the most beautiful character design of the year. Here is how I edit her to look even more pristine.',
     date: '2026-01-24',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Roshidere', 'Alya', 'Romance', 'School'],
     content: 
       `<h2>Elegance Personified: The Aesthetic Beauty of Roshidere and Alya</h2>
@@ -3045,7 +3045,7 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>The "Shojo Sparkle" in 4K: Manual Detailing and Magic Particles for Your Device</h2>
-      <p>To give the wallpapers that extra bit of magic and "wow" factor, I manually add "sparkle" particles in Photoshop. I use a tiny 1px brush with 100% hardness and scatter white dots around her hair and her silhouette, then apply an "Outer Glow" layer style. This replicates the classic "Shojo" manga style in a modern, 4K digital format. It's a small detail that most people won't consciously notice, but it contributes to the overall feeling of beauty, perfection, and high-quality production. It's these tiny touches that separate Only_dias Ocean from other generic wallpaper sites. We care about every single pixel. We want her beauty to be legendary on your setup. It's art for the refined fan.</p>
+      <p>To give the wallpapers that extra bit of magic and "wow" factor, I manually add "sparkle" particles in Photoshop. I use a tiny 1px brush with 100% hardness and scatter white dots around her hair and her silhouette, then apply an "Outer Glow" layer style. This replicates the classic "Shojo" manga style in a modern, 4K digital format. It's a small detail that most people won't consciously notice, but it contributes to the overall feeling of beauty, perfection, and high-quality production. It's these tiny touches that separate Only_Gohan Ocean from other generic wallpaper sites. We care about every single pixel. We want her beauty to be legendary on your setup. It's art for the refined fan.</p>
 
       <p>The Alya Kujou 4K collection is perfect for those who want a clean, elegant, and "aesthetic" look for their phone or desktop. I've included both "Cool" (Blue/Silver) and "Warm" (Sunset) versions so you can match your wallpaper to your phone's case, your overall theme, or even your current mood. Download the silver beauty now and elevate your daily setup to a new level of elegance! More Roshidere characters like Yuki and Masha will be added soon, so keep checking the latest drops! Your screen deserves this level of perfection every time you unlock it. See you in the next drop!</p>
     `
@@ -3055,7 +3055,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Spider-Man: Across the Digital Art Style and Ben-Day Dot Restoration in High-Fidelity 4K',
     excerpt: 'The Spider-Verse movies changed animation forever. Here is how I upscale these images without destroying the comic book texture.',
     date: '2026-01-23',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Spider-Man', 'Marvel', 'Art Style', 'Comic'],
     content: 
       `<h2>A Living Comic Book: The Visual Language of the Spider-Verse Multiverse and Beyond</h2>
@@ -3090,7 +3090,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Demon Slayer: The Art of Breathing Styles and Ufotable\'s Visual Mastery in High-Fidelity 4K',
     excerpt: 'Ufotable\'s particle effects are legendary. A deep dive into how we enhance Water, Sun, and Thunder breathing for 4K displays with 7 exclusive examples.',
     date: '2026-02-22',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Demon Slayer', 'Tanjiro', 'Effects', 'Animation', '4K'],
     content: `
       <div class="flex justify-center my-8">
@@ -3166,7 +3166,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Blue Lock: Visualizing the Ego and Calibrating the "Egoist" Neon Green Aura in 4K',
     excerpt: 'Blue Lock turns aura into a visual weapon. Here is how I capture the intensity of Isagi\'s puzzle pieces.',
     date: '2026-01-21',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Blue Lock', 'Isagi', 'Sports', 'Intensity'],
     content: 
       `<h2>The Monster Inside: Not Your Average Sports Anime Storytelling and Visual Design</h2>
@@ -3201,7 +3201,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Dragon Ball: Timeless Legends in 4K and the Visual Evolution of Goku across the Decades',
     excerpt: 'From the Shintani style of Broly to the CGI of Super Hero. Celebrating the visual evolution of Goku.',
     date: '2026-01-20',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Dragon Ball', 'Goku', 'Classic', 'Shonen'],
     content: 
       `<h2>The OG Shonen Evolution: Why Dragon Ball Visuals Never Die and Always Innovate</h2>
@@ -3225,7 +3225,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Miku Nakano: The Cult of the Headphones and the Lo-Fi Aesthetic for the Year 2026',
     excerpt: 'Why Miku consistently tops the popularity polls and why her character design is a goldmine for editors.',
     date: '2026-01-19',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Gotoubun', 'Miku', 'Headphones', 'Romance'],
     content: 
       `<h2>Headphones On, World Off: The Deep and Lasting Relatability of Miku Nakano</h2>
@@ -3236,7 +3236,7 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>The Shy Aesthetic: My Signature Lo-Fi Editing Treatment in 4K Quality</h2>
-      <p>Miku's color palette is defined by soft blues, warm browns, and pastel pinks. Unlike the high-contrast neon edits I do for <em>Jujutsu Kaisen</em>, Miku wallpapers get what I call the "Lo-Fi" treatment. I want these wallpapers to feel cozy, comfortable, nostalgic, and a bit like a rainy afternoon. Here is how I achieve that premium, "Only_dias" look in 4K resolution. It's about the mood as much as the quality.</p>
+      <p>Miku's color palette is defined by soft blues, warm browns, and pastel pinks. Unlike the high-contrast neon edits I do for <em>Jujutsu Kaisen</em>, Miku wallpapers get what I call the "Lo-Fi" treatment. I want these wallpapers to feel cozy, comfortable, nostalgic, and a bit like a rainy afternoon. Here is how I achieve that premium, "Only_Gohan" look in 4K resolution. It's about the mood as much as the quality.</p>
 
       <p>I start by lowering the overall contrast slightly and adding a <strong>"Curves"</strong> layer to lift the blacks, giving the shadows a soft "matte" or "vintage" feel that is easy on the eyes. I then add a very fine, monochromatic noise texture (Filter > Noise > Add Noise at 1%) to mimic the look of an old film camera or a cozy Lo-Fi music video from the early 2000s. I also often vignette the edges heavily to draw the focus directly to her expression—usually a subtle pout, a shy side-glance, or a look of determination. It creates a feeling of intimacy and peace that works perfectly for a phone wallpaper you look at dozens of times a day. It's like having a little bit of tranquility in your pocket. It's the ultimate chill aesthetic for your daily life.</p>
 
@@ -3258,7 +3258,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Peace of Anime Nature Scenery: A Tribute to the Background Artists of Japan',
     excerpt: 'Sometimes you don\'t need a character. Exploring the breathtaking background art of Makoto Shinkai and others.',
     date: '2026-01-18',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Nature', 'Scenery', 'Background', 'Relaxing'],
     content: 
       `<h2>Background Artistry: The Unsung Heroes of the Global Anime Industry</h2>
@@ -3291,7 +3291,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Colored Pencil Anime Wallpapers: Sketchbook Scrapbook Aesthetic (Phone HD)',
     excerpt: 'Download sketchbook-style anime wallpapers with colored pencil texture, paper grain, soft lineart, and cute doodles—perfect for clean vertical phone backgrounds.',
     date: '2026-02-22',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Colored Pencil', 'Sketchbook', 'Scrapbook', 'Aesthetic', 'Anime'],
     content: `
       <div class="flex justify-center my-8">
@@ -3364,7 +3364,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Yor Forger: The Thorn Princess Aesthetic and Balancing Two Worlds in 4K',
     excerpt: 'Balancing the gentle mother and the ruthless assassin. A look at my Spy x Family edits.',
     date: '2026-01-16',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Spy x Family', 'Yor Forger', 'Assassin', 'Black'],
     content: 
       `<h2>Two Sides of the Same Coin: The Incredible Duality of Yor Forger</h2>
@@ -3384,7 +3384,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Power: The Blood Fiend Energy and Chaos Editing Masterclass in 4K',
     excerpt: 'Power is chaotic, loud, and messy. Her wallpapers should be too. Editing the best worst girl.',
     date: '2026-01-15',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Chainsaw Man', 'Power', 'Blood', 'Energy'],
     content: 
       `<h2>The Best Worst Girl: Why We Absolutely Love the Chaos of Power</h2>
@@ -3404,7 +3404,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Naruto: The Evolution of transformations and Chakra Glow Techniques in 4K',
     excerpt: 'From One-Tailed Cloak to Baryon Mode. Capturing the glow up of the world\'s most famous ninja.',
     date: '2026-01-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Naruto', 'Shippuden', 'Kurama', 'Orange'],
     content: 
       `<h2>Growing Up with the Knucklehead Ninja: A Visual Journey of a Legend</h2>
@@ -3438,7 +3438,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Luffy Gear 5: The Drums of Liberation and Editing the Pure White Joyboy Aesthetic',
     excerpt: 'Editing the most cartoony transformation in anime history. How to handle the pure white color palette.',
     date: '2026-01-13',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['One Piece', 'Luffy', 'Gear 5', 'White'],
     content: 
       `<h2>Animation Freedom: The internet-Breaking Gear 5 and the Return of Joyboy</h2>
@@ -3462,7 +3462,7 @@ export const blogPosts: BlogPost[] = [
     title: 'My Complete Anime Wallpaper Editing Workflow: From Raw Frame to 4K Masterpiece',
     excerpt: 'Article “pilier” qui montre ton expertise. A step-by-step guide on how I transform a simple anime screenshot into a high-fidelity wallpaper.',
     date: '2026-01-01',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Tutorial', 'Workflow', 'Editing', 'Quality'],
     content: 
       `<h2>Introduction: Why Raw Screenshots Aren't Enough</h2>
@@ -3503,7 +3503,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How to Build the Perfect Anime Setup: Screens, Wallpapers, and Aesthetic Harmony',
     excerpt: 'Connecting your digital wallpaper to your physical room. A guide to creating a cohesive anime-themed battle station.',
     date: '2026-01-01',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Setup', 'Guide', 'Aesthetic', 'Gaming'],
     content: 
       `<h2>The Art of the "Battle Station"</h2>
@@ -3527,7 +3527,7 @@ export const blogPosts: BlogPost[] = [
       <p>A busy wallpaper + messy desktop icons = chaos. If your wallpaper has a complex character on the right, keep your icons on the left. Better yet, hide your desktop icons completely (Right Click > View > Uncheck 'Show Desktop Icons') and use the taskbar or a launcher like "Rainmeter" for a cleaner look. Your wallpaper should be the star of the show, not the background noise for a hundred Excel files.</p>
 
       <h2>Step 5: Where to Find Quality (and Avoiding Red Flags)</h2>
-      <p>Good sites (like ours!) curate and upscale. Bad sites are automated scrapers full of pop-ups and low-res stolen art. Look for file sizes. A real 4K wallpaper should be 2MB-10MB. If it's 200KB, it's garbage. Avoid sites that force you to install software just to download an image. At <strong>Only_dias Ocean</strong>, we prioritize direct, clean downloads.</p>
+      <p>Good sites (like ours!) curate and upscale. Bad sites are automated scrapers full of pop-ups and low-res stolen art. Look for file sizes. A real 4K wallpaper should be 2MB-10MB. If it's 200KB, it's garbage. Avoid sites that force you to install software just to download an image. At <strong>Only_Gohan Ocean</strong>, we prioritize direct, clean downloads.</p>
 
       <h2>Conclusion</h2>
       <p>Your setup is an extension of your personality. Take the time to curate it. Check out our "Special" category to find wallpapers sorted by color mood (Neon, Dark, Pastel) to start building your perfect theme today.</p>
@@ -3538,7 +3538,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Respecting Artists and Copyright in Anime Wallpapers: A Simple Guide for Fans',
     excerpt: 'Very important for AdSense trust. A guide on navigating the ethics of digital anime art and supporting creators.',
     date: '2026-01-01',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Copyright', 'Community', 'Ethics', 'Guide'],
     content: 
       `<h2>Introduction: The Gray Area of Fan Content</h2>
@@ -3573,7 +3573,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Support Official Releases:</strong> The best way to get high-quality art is to buy the official Art Books, Blu-rays, and clear files. Support the industry that gives us these stories.</li>
       </ol>
 
-      <h2>How We Handle Content at Only_dias Ocean</h2>
+      <h2>How We Handle Content at Only_Gohan Ocean</h2>
       <p>My philosophy is simple: <strong>Quality and Respect.</strong> This site is a curated gallery of <em>edited official media</em>. I take official frames and key visuals and transform them through upscaling and color grading. I do not scrape fanart sites. If an artist ever contacts me to remove an edit of their work that was mistakenly identified as official art, I will remove it immediately. We are here to build a community, not a content farm.</p>
 
       <div class="my-8 relative w-full aspect-[9/16] max-sm mx-auto rounded-lg overflow-hidden border-2 border-gray-700 shadow-lg">
@@ -3589,7 +3589,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Anime Wallpaper Color Theory: Making Your Screen Feel "Right"',
     excerpt: 'Why some wallpapers feel good and others hurt your eyes. A simple guide to color psychology for your desktop.',
     date: '2026-01-01',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Color', 'Theory', 'Design', 'Psychology'],
     content: 
       `<h2>Intro: Why Does My Setup Feel "Off"?</h2>
@@ -3624,16 +3624,16 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'tiktok-to-desktop-community-journey',
     title: 'From TikTok to Desktop: How I Built My Anime Wallpaper Community',
-    excerpt: 'The personal story behind Only_dias Ocean. A journey from a simple phone app to a full-fledged website.',
+    excerpt: 'The personal story behind Only_Gohan Ocean. A journey from a simple phone app to a full-fledged website.',
     date: '2026-01-01',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Story', 'Community', 'TikTok', 'Growth'],
     content: 
       `<h2>The Beginning: A Passion for Design</h2>
-      <p>Hi, I'm <strong>DIAS</strong>, the creator behind <strong>Only_dias</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.</p>
+      <p>Hi, I'm <strong>GOHAN</strong>, the creator behind <strong>Only_Gohan</strong>. I have a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development. It started simply: I wanted a good wallpaper for my own phone.</p>
       <p>I learned quickly that consistency was key. I posted every day. I listened to requests. If 50 people asked for <em>One Piece</em>, I spent my weekend editing Luffy. The community grew because I listened.</p>
 
-      <h2>Why I Created "Only_dias Ocean"</h2>
+      <h2>Why I Created "Only_Gohan Ocean"</h2>
       <p>TikTok is great for discovery, but terrible for distribution. Trying to share 4K PNGs through a "Link in Bio" to a Google Drive folder was a nightmare. Links broke, files got compressed, and it was hard to organize. I needed a home. I built this website to be the "Ocean" where all my work could live permanently.</p>
       <p>I wanted to solve the problems of other wallpaper sites: no invasive pop-up ads, no waiting times, no fake download buttons. Just a clean gallery of the art we love.</p>
 
@@ -3649,7 +3649,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Kana Arima 4K Wallpapers: From Genius Child Actress to Idol Moodboard - A 2026 Visual Analysis',
     excerpt: 'A comprehensive 850-word deep dive into the "B-Komachi" aesthetic of Kana Arima. Learn our technical process for editing the Genius Child Actress for high-fidelity 4K displays.',
     date: '2026-02-14',
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ['Kana Arima', 'Oshi No Ko', 'Idol', '4K', 'Genius', 'B-Komachi'],
     content: `
       <div class="flex justify-center my-8">
@@ -3689,14 +3689,14 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <h2>Technical Deep Dive: Editing the "Kana" Red</h2>
-      <p>Editing Kana for 4K requires a delicate balance of color theory. Because her primary color is red, it can easily "clip" or lose detail if not handled correctly. Here is our Only_dias Ocean workflow for this collection:</p>
+      <p>Editing Kana for 4K requires a delicate balance of color theory. Because her primary color is red, it can easily "clip" or lose detail if not handled correctly. Here is our Only_Gohan Ocean workflow for this collection:</p>
       <h3>1. Selective Desaturation & Masking</h3>
       <p>To prevent the reds from becoming a "flat" blob, we use selective saturation. We boost the magentas in her eyes while keeping the hair's red tones grounded in a realistic spectrum. This creates a "multi-tonal" look where her hair looks like it has individual strands even at a distance.</p>
       <h3>2. Texture Preservation</h3>
       <p>Whether it's a hand-drawn pencil piece or a digital frame, we use a <strong>Grain-Reduction Pass</strong> followed by a <strong>Smart Sharpen</strong> at 0.8px. This removes artifacts from the original source without making the lines look "crunchy" or fake. We want the wallpaper to feel like a high-end illustration, not a compressed screenshot.</p>
 
       <h2>Kana as a Symbol of Resilience</h2>
-      <p>Beyond the aesthetics, these wallpapers represent a character who refuses to stay in the background. Kana Arima is the perfect symbol for what we do here at Only_dias Ocean. We take frames that might be overlooked, re-frame them with care, and present them in a way that makes you fall in love with them all over again. Her story of trying again after a fall is something we find deeply inspiring, and we hope these wallpapers bring that same energy to your daily setup.</p>
+      <p>Beyond the aesthetics, these wallpapers represent a character who refuses to stay in the background. Kana Arima is the perfect symbol for what we do here at Only_Gohan Ocean. We take frames that might be overlooked, re-frame them with care, and present them in a way that makes you fall in love with them all over again. Her story of trying again after a fall is something we find deeply inspiring, and we hope these wallpapers bring that same energy to your daily setup.</p>
 
       <div class="flex justify-center my-8">
         <a href="/?filter=Kana+Arima#gallery" class="no-underline inline-block px-10 py-5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan text-white font-pixel text-xl rounded-full shadow-[0_0_20px_rgba(255,42,109,0.6)] hover:shadow-[0_0_35px_rgba(5,217,232,0.8)] transition-all hover:scale-110 active:scale-95 text-center">
@@ -3709,7 +3709,7 @@ export const blogPosts: BlogPost[] = [
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -3731,7 +3731,7 @@ export const blogPosts: BlogPost[] = [
       <p>We tested these tools against a particularly difficult frame from <em>Jujutsu Kaisen Season 2</em>—a scene with heavy rain, motion blur, and intricate lineart. Here’s how they stacked up:</p>
       
       <h3>1. Real-ESRGAN: The Lineart King</h3>
-      <p>Real-ESRGAN continues to be our primary tool at Only_dias Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
+      <p>Real-ESRGAN continues to be our primary tool at Only_Gohan Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
 
       <h3>2. Topaz Photo AI: The Texture Specialist</h3>
       <p>For series like <em>Violet Evergarden</em>, where the background art is as important as the characters, Topaz shines. It recognizes the difference between a lens flare and an image artifact, preserving the intended bloom effects perfectly.</p>
@@ -3753,7 +3753,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -3794,7 +3794,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -3825,7 +3825,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -3856,11 +3856,11 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
-      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_dias Ocean, here is my professional breakdown.</p>
+      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_Gohan Ocean, here is my professional breakdown.</p>
 
       <h2>1. The Content-Aware Advantage</h2>
       <p>The biggest hurdle in wallpaper editing is removing unwanted text, watermarks, or UI elements from a source image. <strong>Photoshop's Generative Fill (AI)</strong> and Content-Aware Fill are lightyears ahead of GIMP's "Heal Selection." What takes 30 seconds in Photoshop might take 10 minutes of manual cloning in GIMP. If you are doing volume work, Photoshop wins on time alone.</p>
@@ -3886,7 +3886,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -3911,14 +3911,14 @@ export const blogPosts: BlogPost[] = [
       <p>AI images often have "checkerboard" artifacts in the gradients. The fix? <strong>Frequency Separation</strong>. We separate the color from the texture. We blur the color layer to smooth out the gradients, while keeping the texture layer sharp to preserve the details of the character's skin or clothes.</p>
 
       <h2>Conclusion</h2>
-      <p>At Only_dias Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
+      <p>At Only_Gohan Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
     `
   },
   {
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -3941,11 +3941,11 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
-      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_dias Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
+      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_Gohan Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
 
       <h2>1. The Anchor: Choosing Your Color Palette</h2>
       <p>Pick one wallpaper as your "Anchor." Use a tool like <em>Adobe Color</em> to sample the three main colors. For example, if you use our <strong>Anna Yanami (Makeine)</strong> wallpaper, your palette will be Blue, White, and Soft Yellow. Every other element on your desktop must follow these three colors.</p>
@@ -3964,7 +3964,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -3987,7 +3987,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
@@ -4003,14 +4003,14 @@ export const blogPosts: BlogPost[] = [
       <p>As 8K displays begin to emerge, 1080p assets will look like Lego blocks. 4K is the current "Sweet Spot" for quality and file size. Our 4K PNGs are designed to look great today and respectable tomorrow.</p>
 
       <h2>Conclusion</h2>
-      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_dias Ocean.</p>
+      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_Gohan Ocean.</p>
     `
   },
   {
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -4032,7 +4032,7 @@ export const blogPosts: BlogPost[] = [
       <p>We tested these tools against a particularly difficult frame from <em>Jujutsu Kaisen Season 2</em>—a scene with heavy rain, motion blur, and intricate lineart. Here’s how they stacked up:</p>
       
       <h3>1. Real-ESRGAN: The Lineart King</h3>
-      <p>Real-ESRGAN continues to be our primary tool at Only_dias Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
+      <p>Real-ESRGAN continues to be our primary tool at Only_Gohan Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
 
       <h3>2. Topaz Photo AI: The Texture Specialist</h3>
       <p>For series like <em>Violet Evergarden</em>, where the background art is as important as the characters, Topaz shines. It recognizes the difference between a lens flare and an image artifact, preserving the intended bloom effects perfectly.</p>
@@ -4054,7 +4054,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -4095,7 +4095,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -4126,7 +4126,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -4157,11 +4157,11 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
-      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_dias Ocean, here is my professional breakdown.</p>
+      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_Gohan Ocean, here is my professional breakdown.</p>
 
       <h2>1. The Content-Aware Advantage</h2>
       <p>The biggest hurdle in wallpaper editing is removing unwanted text, watermarks, or UI elements from a source image. <strong>Photoshop's Generative Fill (AI)</strong> and Content-Aware Fill are lightyears ahead of GIMP's "Heal Selection." What takes 30 seconds in Photoshop might take 10 minutes of manual cloning in GIMP. If you are doing volume work, Photoshop wins on time alone.</p>
@@ -4187,7 +4187,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -4212,14 +4212,14 @@ export const blogPosts: BlogPost[] = [
       <p>AI images often have "checkerboard" artifacts in the gradients. The fix? <strong>Frequency Separation</strong>. We separate the color from the texture. We blur the color layer to smooth out the gradients, while keeping the texture layer sharp to preserve the details of the character's skin or clothes.</p>
 
       <h2>Conclusion</h2>
-      <p>At Only_dias Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
+      <p>At Only_Gohan Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
     `
   },
   {
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -4242,11 +4242,11 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
-      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_dias Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
+      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_Gohan Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
 
       <h2>1. The Anchor: Choosing Your Color Palette</h2>
       <p>Pick one wallpaper as your "Anchor." Use a tool like <em>Adobe Color</em> to sample the three main colors. For example, if you use our <strong>Anna Yanami (Makeine)</strong> wallpaper, your palette will be Blue, White, and Soft Yellow. Every other element on your desktop must follow these three colors.</p>
@@ -4265,7 +4265,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -4288,7 +4288,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
@@ -4304,14 +4304,14 @@ export const blogPosts: BlogPost[] = [
       <p>As 8K displays begin to emerge, 1080p assets will look like Lego blocks. 4K is the current "Sweet Spot" for quality and file size. Our 4K PNGs are designed to look great today and respectable tomorrow.</p>
 
       <h2>Conclusion</h2>
-      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_dias Ocean.</p>
+      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_Gohan Ocean.</p>
     `
   },
   {
     slug: "anime-upscaling-benchmark-2026-top-ai-tools",
     title: "Mastering 4K Anime Upscaling: Top AI Tools Benchmarked (2026)",
     date: "March 15, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI", "4K", "Upscaling"],
     excerpt: "We test the top 5 AI upscaling tools of 2026 to find the absolute best workflow for creating crisp, artifact-free 4K anime wallpapers.",
     content: `
@@ -4333,7 +4333,7 @@ export const blogPosts: BlogPost[] = [
       <p>We tested these tools against a particularly difficult frame from <em>Jujutsu Kaisen Season 2</em>—a scene with heavy rain, motion blur, and intricate lineart. Here’s how they stacked up:</p>
       
       <h3>1. Real-ESRGAN: The Lineart King</h3>
-      <p>Real-ESRGAN continues to be our primary tool at Only_dias Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
+      <p>Real-ESRGAN continues to be our primary tool at Only_Gohan Ocean. In our tests, it maintained a perfect 0.2px line width consistency even when upscaling 4x. The "AnimeVideo" model specifically reduces the "oil painting" effect that plagues other AI models.</p>
 
       <h3>2. Topaz Photo AI: The Texture Specialist</h3>
       <p>For series like <em>Violet Evergarden</em>, where the background art is as important as the characters, Topaz shines. It recognizes the difference between a lens flare and an image artifact, preserving the intended bloom effects perfectly.</p>
@@ -4355,7 +4355,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-edit-makima-for-oled-displays-tutorial",
     title: "How to Edit Makima for OLED Displays: A Step-by-Step Photoshop Tutorial",
     date: "March 18, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Photoshop", "Makima", "OLED"],
     excerpt: "Learn how to optimize your wallpapers for infinite contrast. This guide uses Makima from Chainsaw Man to demonstrate professional color grading.",
     content: `
@@ -4396,7 +4396,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ufotable-visual-style-demon-slayer-analysis",
     title: "The Ufotable Effect: Deconstructing the Visual Style of Demon Slayer",
     date: "March 20, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Ufotable", "Demon Slayer", "Animation"],
     excerpt: "What makes Ufotable's animation look so 'expensive'? We break down the digital effects and compositing techniques that define Demon Slayer.",
     content: `
@@ -4427,7 +4427,7 @@ export const blogPosts: BlogPost[] = [
     slug: "tsundere-design-visual-cues-anime",
     title: "Tsundere Design: Why Certain Colors Define Certain Personalities",
     date: "March 22, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Character Design", "Tsundere", "Color Theory"],
     excerpt: "Explore the visual language of the Tsundere. From Rin Tohsaka's red ribbons to Nino Nakano's accessories, we analyze the art of the archetype.",
     content: `
@@ -4458,11 +4458,11 @@ export const blogPosts: BlogPost[] = [
     slug: "gimp-vs-photoshop-anime-wallpaper-editing",
     title: "GIMP vs Photoshop for Anime Wallpaper Editing: A Professional's Take",
     date: "March 25, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Tools", "Photoshop", "GIMP"],
     excerpt: "Can free software match the industry standard? We compare GIMP and Photoshop for the specific task of cleaning and color grading anime art.",
     content: `
-      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_dias Ocean, here is my professional breakdown.</p>
+      <p>It's the age-old debate in the creative community: <strong>Paid vs. Free</strong>. For anime wallpaper editing, does Adobe Photoshop's $20/month subscription offer enough value over the completely free GIMP? Having used both for thousands of edits at Only_Gohan Ocean, here is my professional breakdown.</p>
 
       <h2>1. The Content-Aware Advantage</h2>
       <p>The biggest hurdle in wallpaper editing is removing unwanted text, watermarks, or UI elements from a source image. <strong>Photoshop's Generative Fill (AI)</strong> and Content-Aware Fill are lightyears ahead of GIMP's "Heal Selection." What takes 30 seconds in Photoshop might take 10 minutes of manual cloning in GIMP. If you are doing volume work, Photoshop wins on time alone.</p>
@@ -4488,7 +4488,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fixing-ai-art-artifacts-4k-guide",
     title: "AI-Generated Anime Art: How to Fix Common Artifacts in 4K",
     date: "March 28, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "AI Art", "Editing", "4K"],
     excerpt: "AI art is everywhere, but it's often full of mistakes. Learn how to manually fix 'AI fingers,' melted backgrounds, and blurry textures.",
     content: `
@@ -4513,14 +4513,14 @@ export const blogPosts: BlogPost[] = [
       <p>AI images often have "checkerboard" artifacts in the gradients. The fix? <strong>Frequency Separation</strong>. We separate the color from the texture. We blur the color layer to smooth out the gradients, while keeping the texture layer sharp to preserve the details of the character's skin or clothes.</p>
 
       <h2>Conclusion</h2>
-      <p>At Only_dias Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
+      <p>At Only_Gohan Ocean, we believe AI is a starting point, not a finish line. By spending 2-3 hours manually fixing these artifacts, we turn a "computer hallucination" into a piece of digital art worthy of your 4K display.</p>
     `
   },
   {
     slug: "mappa-physics-toji-fushiguro-animation-analysis",
     title: "The Physics of Animation: How MAPPA brought Toji Fushiguro to life",
     date: "April 01, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "MAPPA", "Toji", "JJK"],
     excerpt: "We analyze the incredible weight and 'impact' of Toji Fushiguro's movement in Jujutsu Kaisen Season 2. How MAPPA uses frame-timing to convey power.",
     content: `
@@ -4543,11 +4543,11 @@ export const blogPosts: BlogPost[] = [
     slug: "aesthetic-4k-cohesive-desktop-theme-guide",
     title: "Aesthetic 4K: How to Create a Cohesive Desktop Theme",
     date: "April 04, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Tutorial", "Customization", "4K", "Aesthetic"],
     excerpt: "Moving beyond just a wallpaper. Learn how to match your icons, widgets, and taskbar to your favorite 4K anime edits.",
     content: `
-      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_dias Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
+      <p>A 4K wallpaper is just the beginning. To truly achieve that "Only_Gohan Ocean" look, you need a cohesive theme. Whether you want a "Cyberpunk" vibe with <strong>Chainsaw Man</strong> or a "Cozy" vibe with <strong>Rin Shima</strong>, here is how you build a complete desktop aesthetic.</p>
 
       <h2>1. The Anchor: Choosing Your Color Palette</h2>
       <p>Pick one wallpaper as your "Anchor." Use a tool like <em>Adobe Color</em> to sample the three main colors. For example, if you use our <strong>Anna Yanami (Makeine)</strong> wallpaper, your palette will be Blue, White, and Soft Yellow. Every other element on your desktop must follow these three colors.</p>
@@ -4566,7 +4566,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jdm-anime-history-initial-d-to-cyberpunk",
     title: "The History of JDM in Anime: From Initial D to Cyberpunk",
     date: "April 07, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Analysis", "Cars", "JDM", "History"],
     excerpt: "Why are cars so central to anime culture? We trace the evolution of the JDM aesthetic from the 90s street racing boom to modern sci-fi.",
     content: `
@@ -4589,7 +4589,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-4k-matters-for-anime-technical-deep-dive",
     title: "Why 4K Matters for Anime: A Technical Deep Dive",
     date: "April 10, 2026",
-    author: 'Only_dias',
+    author: 'Only_Gohan',
     tags: ["Technical", "4K", "Display", "Resolution"],
     excerpt: "Is 4K overkill for 2D animation? We explain why higher resolutions matter for color depth, line clarity, and future-proofing your setup.",
     content: `
@@ -4605,7 +4605,7 @@ export const blogPosts: BlogPost[] = [
       <p>As 8K displays begin to emerge, 1080p assets will look like Lego blocks. 4K is the current "Sweet Spot" for quality and file size. Our 4K PNGs are designed to look great today and respectable tomorrow.</p>
 
       <h2>Conclusion</h2>
-      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_dias Ocean.</p>
+      <p>4K isn't just about "more pixels"; it's about "better pixels." It's about respecting the art enough to show it in the highest possible fidelity. That is the core philosophy of Only_Gohan Ocean.</p>
     `
   }
 ];

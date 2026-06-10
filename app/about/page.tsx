@@ -65,7 +65,7 @@ export default function AboutPage() {
             <h3 className="font-pixel text-xl mb-4 text-white">WANT TO COLLABORATE?</h3>
             <p className="mb-6">I&apos;m always looking for talented artists and editors to feature.</p>
             <a 
-              href="https://www.tiktok.com/@only_dias" 
+              href="https://www.tiktok.com/@noxzx_kb" 
               className="inline-block bg-white text-black font-pixel px-8 py-3 rounded-full hover:bg-neon-cyan hover:text-white transition-all transform hover:scale-105"
             >
               CONTACT VIA TIKTOK
