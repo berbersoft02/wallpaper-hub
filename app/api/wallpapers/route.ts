@@ -18,6 +18,7 @@ interface CloudinaryResource {
   public_id: string;
   secure_url: string;
   resource_type: string;
+  asset_folder?: string;
 }
 
 interface CloudinarySearchResponse {
@@ -54,9 +55,22 @@ export async function GET() {
     const characterTags = new Map<string, string[]>();
 
     allResources.forEach(resource => {
+      let charName = '';
       const pathParts = resource.public_id.split('/');
+      
       if (pathParts.length >= 2) {
-        const charName = pathParts[1];
+        // Traditional public_id with folder: wallpapers/CharName/image
+        charName = pathParts[1];
+      } else if (resource.asset_folder) {
+        // Modern Cloudinary or moved assets: use asset_folder
+        // asset_folder looks like "wallpapers/CharName"
+        const folderParts = resource.asset_folder.split('/');
+        if (folderParts.length >= 2 && folderParts[0] === 'wallpapers') {
+          charName = folderParts[1];
+        }
+      }
+
+      if (charName) {
         if (!charactersMap.has(charName)) {
           charactersMap.set(charName, []);
         }
@@ -98,9 +112,21 @@ export async function GET() {
 
     const pfpsMap = new Map<string, string[]>();
     pfpsResources.forEach(resource => {
+      let charName = '';
       const pathParts = resource.public_id.split('/');
+      
       if (pathParts.length >= 2) {
-        const charName = pathParts[1];
+        charName = pathParts[1];
+      } else if (resource.asset_folder) {
+        const folderParts = resource.asset_folder.split('/');
+        if (folderParts.length >= 2 && folderParts[0] === 'pfps') {
+          charName = folderParts[1];
+        } else if (folderParts.length === 1 && folderParts[0] === 'pfps') {
+          charName = 'General';
+        }
+      }
+
+      if (charName) {
         if (!pfpsMap.has(charName)) {
           pfpsMap.set(charName, []);
         }
