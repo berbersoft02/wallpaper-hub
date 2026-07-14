@@ -15,25 +15,51 @@ import wallpapersData from '@/app/data/wallpapers.json';
 // Force static generation for better performance, but allow ISR if needed
 export const revalidate = 3600;
 
+// Seeded PRNG so image selection stays stable for one revalidate window
+// (changes every hour) instead of reshuffling on every request.
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffledSeeded<T>(arr: T[], seed: number): T[] {
+  const rand = mulberry32(seed);
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
-  
-  // Randomly select 20 images from the 69 available on the server
+
+  // Stable seed: with revalidate=3600, the page rebuilds hourly, so a
+  // constant seed is fine — same images per build, fresh per hour.
+  const hourSeed = 1;
+
+  // Select 20 images from the 69 available on the server
   // This avoids loading all 69 on the client
   const totalIcons = 69;
-  const selectedIcons = Array.from({ length: totalIcons }, (_, i) => i + 1)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 20);
+  const selectedIcons = shuffledSeeded(
+    Array.from({ length: totalIcons }, (_, i) => i + 1),
+    hourSeed
+  ).slice(0, 20);
 
   // Pre-select showcase images for Hero and WallpaperShowcase
   // This removes the 89KB wallpapers.json from the client bundle
-  const chars = [...wallpapersData.characters].sort(() => Math.random() - 0.5);
-  
+  const chars = shuffledSeeded(wallpapersData.characters, hourSeed + 1);
+
   const heroImages = chars
     .filter(c => c.wallpapers && c.wallpapers.length > 0)
     .slice(0, 12)
     .map(c => ({
-      src: c.wallpapers[Math.floor(Math.random() * c.wallpapers.length)],
+      src: c.wallpapers[Math.floor(mulberry32(hourSeed + 2)() * c.wallpapers.length)],
       alt: `${c.name} 4K Archive`
     }));
 
@@ -41,7 +67,7 @@ export default function Home() {
     .filter(c => c.wallpapers && c.wallpapers.length > 0)
     .slice(0, 15)
     .map(c => ({
-      src: c.wallpapers[Math.floor(Math.random() * c.wallpapers.length)],
+      src: c.wallpapers[Math.floor(mulberry32(hourSeed + 3)() * c.wallpapers.length)],
       alt: `${c.name} 4K Archive`
     }));
 
@@ -201,7 +227,7 @@ export default function Home() {
             <h2 className="font-pixel text-4xl md:text-5xl text-neon-cyan mb-6 relative z-10 drop-shadow-[0_0_24px_rgba(5,217,232,0.8)] animate-glow-cyan">Meet the Editor</h2>
             <div className="font-body text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-8 relative z-10 space-y-4">
               <p>
-                Hi, I'm GOHAN with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
+                Hi, I&apos;m GOHAN, with a deep passion for digital art and programming. By day, I solve complex engineering problems; by night, I dive into the world of anime editing and web development.
               </p>
               <p>
                 This project started as a simple way to share better wallpapers with my TikTok community, but it has grown into something much bigger.
@@ -212,10 +238,10 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center gap-6 my-8 relative z-10">
-              <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" title="X (Twitter)">
+              <a href="https://x.com/SaidAhrikenchi2" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,42,109,0.8)]" aria-label="Follow on X (Twitter)" title="X (Twitter)">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
               </a>
-              <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" title="TikTok">
+              <a href="https://www.tiktok.com/@noxzx_kb" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all hover:scale-125 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" aria-label="Follow on TikTok" title="TikTok">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.33-.85.51-1.44 1.43-1.58 2.41-.14.96.13 1.98.74 2.73.61.77 1.55 1.24 2.52 1.33 1.05.08 2.14-.26 2.89-1.01.76-.73 1.21-1.77 1.25-2.83.03-4.13.01-8.26.02-12.39Z"/></svg>
               </a>
             </div>
