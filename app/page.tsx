@@ -7,30 +7,12 @@ import { getAllPosts } from "@/lib/blog";
 import { GlowCard } from "./components/ui/spotlight-card";
 import HomeClient from "./components/HomeClient";
 import RecommendButtonClient from "./components/RecommendButtonClient";
+import BelowFoldSections from "./components/BelowFoldSections";
 import wallpapersData from '@/app/data/wallpapers.json';
 
 const AnimatedBackground = dynamic(() => import("./components/AnimatedBackground"), {
   ssr: true,
   loading: () => <div className="fixed inset-0 z-0 bg-dark-bg" />,
-});
-const WallpaperShowcase = dynamic(() => import("./components/WallpaperShowcase"), {
-  ssr: false,
-});
-const Gallery = dynamic(() => import("./components/Gallery"), {
-  ssr: false,
-  loading: () => (
-    <section className="py-24 px-4 max-w-7xl mx-auto">
-      <div className="h-96 bg-card-bg/20 rounded-xl animate-pulse" />
-    </section>
-  ),
-});
-const IconsPFPs = dynamic(() => import("./components/IconsPFPs"), {
-  ssr: false,
-  loading: () => (
-    <section className="py-24 px-4 max-w-7xl mx-auto">
-      <div className="h-96 bg-card-bg/20 rounded-xl animate-pulse" />
-    </section>
-  ),
 });
 
 // Force static generation for better performance, but allow ISR if needed
@@ -99,15 +81,9 @@ export default function Home() {
         <HomeClient>
           <Navbar />
           <Hero showcaseImages={heroImages} />
-          
-          {/* --- FEATURED SHOWCASE --- */}
-          <WallpaperShowcase images={showcaseImages} />
-          
-          {/* --- 1. WALLPAPERS SECTION --- */}
-          <Gallery />
 
-          {/* --- 2. ICONS & PFPS SECTION --- */}
-          <IconsPFPs />
+          {/* --- FEATURED SHOWCASE + WALLPAPERS + ICONS & PFPS (dynamic client imports) --- */}
+          <BelowFoldSections showcaseImages={showcaseImages} />
 
           {/* --- 3. BLOG SECTION (Strategic for AdSense Approval) --- */}
           <section className="py-24 px-4 bg-dark-bg/60 border-b border-gray-800 relative">
