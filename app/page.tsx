@@ -1,16 +1,37 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import WallpaperShowcase from "./components/WallpaperShowcase";
-import Gallery from "./components/Gallery";
-import IconsPFPs from "./components/IconsPFPs";
 import Footer from "./components/Footer";
-import AnimatedBackground from "./components/AnimatedBackground";
 import { getAllPosts } from "@/lib/blog";
 import { GlowCard } from "./components/ui/spotlight-card";
 import HomeClient from "./components/HomeClient";
 import RecommendButtonClient from "./components/RecommendButtonClient";
 import wallpapersData from '@/app/data/wallpapers.json';
+
+const AnimatedBackground = dynamic(() => import("./components/AnimatedBackground"), {
+  ssr: true,
+  loading: () => <div className="fixed inset-0 z-0 bg-dark-bg" />,
+});
+const WallpaperShowcase = dynamic(() => import("./components/WallpaperShowcase"), {
+  ssr: false,
+});
+const Gallery = dynamic(() => import("./components/Gallery"), {
+  ssr: false,
+  loading: () => (
+    <section className="py-24 px-4 max-w-7xl mx-auto">
+      <div className="h-96 bg-card-bg/20 rounded-xl animate-pulse" />
+    </section>
+  ),
+});
+const IconsPFPs = dynamic(() => import("./components/IconsPFPs"), {
+  ssr: false,
+  loading: () => (
+    <section className="py-24 px-4 max-w-7xl mx-auto">
+      <div className="h-96 bg-card-bg/20 rounded-xl animate-pulse" />
+    </section>
+  ),
+});
 
 // Force static generation for better performance, but allow ISR if needed
 export const revalidate = 3600;

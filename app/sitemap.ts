@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.9,
+    images: char.wallpapers.slice(0, 5).map((url) => ({
+      url,
+      title: `${char.name} 4K wallpaper`,
+    })),
   }));
 
   // Static pages

@@ -347,13 +347,14 @@ function GalleryContent() {
           
           {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {finalDisplay.map((wp) => {
+              {finalDisplay.map((wp, index) => {
+                const isFirst = index === 0;
                 const getGlowColor = (category: string) => {
                   if (category === 'Special') return 'purple';
                   return 'blue';
                 };
 
-                const isDesktop = wp.character.toLowerCase().includes("desktop") || 
+                const isDesktop = wp.character.toLowerCase().includes("desktop") ||
                                  wp.title.toLowerCase().includes("desktop");
 
                 return (
@@ -369,12 +370,13 @@ function GalleryContent() {
                     }}
                   >
                     <div className={`${isDesktop ? "aspect-video" : "aspect-[9/16]"} relative overflow-hidden rounded-t-lg`}>
-                       <PixelImage 
-                          src={wp.url} 
-                          alt={wp.title} 
-                          fill 
+                       <PixelImage
+                          src={wp.url}
+                          alt={wp.title}
+                          fill
                           sizes={isDesktop ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          priority={isFirst}
                        />
                     </div>
                     <div className="p-4 flex justify-between items-center bg-dark-bg/60 backdrop-blur-md rounded-b-lg border-t border-white/5">

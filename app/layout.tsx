@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { VT323, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -16,6 +16,12 @@ const bodyFont = Space_Grotesk({
   variable: "--font-body",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#05d9e8",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saidahriken.site'),
@@ -48,6 +54,15 @@ export const metadata: Metadata = {
       "p:domain_verify": ["44ba79e2f07c396861d8b93e40cbcd81"],
     },
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "Only_Gohan Ocean",
+    statusBarStyle: "black-translucent",
+  },
+  icons: {
+    apple: "/icon.webp",
+  },
 };
 
 export default function RootLayout({
@@ -59,6 +74,37 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-7463641924793744" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  name: 'Only_Gohan Ocean',
+                  url: 'https://saidahriken.site',
+                  description:
+                    'Curated 4K upscaled anime wallpapers, social media icons, and PFPs.',
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: 'https://saidahriken.site/?search={search_term_string}',
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+                {
+                  '@type': 'Person',
+                  name: 'GOHAN',
+                  url: 'https://saidahriken.site/about',
+                  sameAs: [
+                    'https://x.com/SaidAhrikenchi2',
+                    'https://www.tiktok.com/@noxzx_kb',
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
