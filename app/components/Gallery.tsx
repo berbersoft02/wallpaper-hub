@@ -107,6 +107,7 @@ function GalleryContent() {
   const [characters, setCharacters] = useState<string[]>([]);
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [displayCount, setDisplayCount] = useState(24);
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [pendingDownload, setPendingDownload] = useState<{url: string, title: string} | null>(null);
@@ -120,8 +121,9 @@ function GalleryContent() {
 
   useEffect(() => {
     const loadWallpapers = async () => {
+      setError(false);
       try {
-        const response = await fetch(`/api/wallpapers?t=${Date.now()}`);
+        const response = await fetch('/api/wallpapers');
         if (!response.ok) throw new Error(`API returned ${response.status}`);
         const data = await response.json();
         
@@ -186,6 +188,7 @@ function GalleryContent() {
         }
       } catch (err) {
         console.error(err);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -199,7 +202,12 @@ function GalleryContent() {
     let filtered = filter === "All" ? everything : filter === "Favorites" ? favorites : wallpapers.filter(w => w.character === filter).reverse();
     if (searchQuery.trim() !== "") {
       const q = searchQuery.toLowerCase();
-      filtered = filtered.filter(w => w.character.toLowerCase().includes(q) || w.category.toLowerCase().includes(q) || w.tags?.some(t => t.toLowerCase().includes(q)));
+      filtered = filtered.filter(w =>
+        w.character.toLowerCase().includes(q) ||
+        w.title.toLowerCase().includes(q) ||
+        w.category.toLowerCase().includes(q) ||
+        w.tags?.some(t => t.toLowerCase().includes(q))
+      );
     }
     return filtered;
   }, [filter, everything, wallpapers, searchQuery, favorites]);
@@ -345,7 +353,45 @@ function GalleryContent() {
             </div>
           </div>
           
-          {loading ? <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div> : (
+          {loading ? (
+            <div className="text-center py-20 font-pixel text-neon-cyan animate-pulse">Loading Archive...</div>
+          ) : error ? (
+            <div className="text-center py-20 space-y-6">
+              <p className="font-pixel text-neon-pink text-2xl">SIGNAL LOST</p>
+              <p className="font-body text-gray-400">Failed to load the wallpaper archive. Please try again.</p>
+              <button
+                onClick={() => {
+                  setLoading(true);
+                  setError(false);
+                  fetch('/api/wallpapers')
+                    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+                    .then(data => {
+                      if (data.characters?.length > 0) {
+                        const allWallpapers: Wallpaper[] = [];
+                        const animeNames: string[] = [];
+                        const specialNames: string[] = [];
+                        data.characters.forEach((char: CharacterData) => {
+                          if (char.category === 'Special') specialNames.push(char.name);
+                          else animeNames.push(char.name);
+                          char.wallpapers.forEach((url: string, i: number) => {
+                            allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
+                          });
+                        });
+                        setWallpapers(allWallpapers);
+                        setSpecialCollections(Array.from(new Set(specialNames)).sort());
+                        setCharacters(Array.from(new Set(animeNames)).sort());
+                      }
+                    })
+                    .catch(() => setError(true))
+                    .finally(() => setLoading(false));
+                }}
+                className="font-pixel px-10 py-3 border-2 border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-black transition-all rounded-lg"
+              >
+                RETRY CONNECTION
+              </button>
+            </div>
+          ) : (
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalDisplay.map((wp, index) => {
                 const isFirst = index === 0;

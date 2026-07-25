@@ -44,7 +44,7 @@ export default function Home() {
 
   // Stable seed: with revalidate=3600, the page rebuilds hourly, so a
   // constant seed is fine — same images per build, fresh per hour.
-  const hourSeed = 1;
+  const hourSeed = Math.floor(Date.now() / 3_600_000);
 
   // Select 20 images from the 69 available on the server
   // This avoids loading all 69 on the client

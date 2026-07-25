@@ -123,7 +123,15 @@ export default function Navbar() {
                 <GlowCard glowColor="blue" customSize={true} className="p-1 rounded-lg mt-1">
                   <Link
                     href="/#gallery"
-                    onClick={(e) => handleWallpapersClick(e, 'gallery')}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowWallpapersDropdown(false);
+                      if (pathname === '/') {
+                        document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        router.push('/?filter=Mobile+Wallpapers#gallery');
+                      }
+                    }}
                     className="block px-4 py-2 text-md text-white hover:text-neon-cyan hover:bg-black/20 rounded-lg transition-colors"
                   >
                     Mobile Wallpapers
@@ -343,7 +351,7 @@ export default function Navbar() {
                 SOON
               </div>
               <p className="font-body text-gray-400 text-sm mt-4">
-                Cette section arrive bientôt !
+                This section is coming soon!
               </p>
             </div>
           </div>
