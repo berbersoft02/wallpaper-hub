@@ -15,14 +15,14 @@ interface LightboxProps {
   onDownload: (url: string, title: string) => void;
 }
 
-export default function Lightbox({ 
-  images, 
-  titles, 
-  selectedIndex, 
-  onClose, 
-  onPrev, 
-  onNext, 
-  onDownload 
+export default function Lightbox({
+  images,
+  titles,
+  selectedIndex,
+  onClose,
+  onPrev,
+  onNext,
+  onDownload
 }: LightboxProps) {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
   const [scale, setScale] = useState(1);
@@ -30,6 +30,8 @@ export default function Lightbox({
   const [currentDate, setCurrentDate] = useState("");
   const constraintsRef = useRef(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const touchStartY = useRef<number | null>(null);
+  const isDragging = useRef(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -63,12 +65,42 @@ export default function Lightbox({
   const handleZoomOut = () => setScale(prev => Math.max(prev - 0.5, 1));
   const resetZoom = () => setScale(1);
 
+  const handleOverlayClick = (e: React.MouseEvent | React.TouchEvent) => {
+    if (e.target === e.currentTarget && !isDragging.current) {
+      onClose();
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+    isDragging.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartY.current !== null) {
+      const deltaY = Math.abs(e.touches[0].clientY - touchStartY.current);
+      if (deltaY > 10) {
+        isDragging.current = true;
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    touchStartY.current = null;
+    setTimeout(() => {
+      isDragging.current = false;
+    }, 100);
+  };
+
   if (!currentUrl) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl" 
-      onClick={onClose}
+    <div
+      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl touch-pan-y overflow-y-auto"
+      onClick={handleOverlayClick}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       role="dialog"
       aria-modal="true"
       aria-label={`Lightbox for ${currentTitle}`}

@@ -321,3 +321,8 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+/* Allow vertical scrolling on touch devices */
+.touch-pan-y {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
