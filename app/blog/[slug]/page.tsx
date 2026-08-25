@@ -29,6 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      url: `https://saidahriken.site/blog/${slug}`,
+      siteName: 'Only_Gohan Ocean',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@SaidAhrikenchi2',
+      creator: '@SaidAhrikenchi2',
+      title: post.title,
+      description: post.excerpt,
     }
   };
 }

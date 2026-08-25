@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    // Allow images from Cloudinary
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,15 +9,13 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Removed unoptimized to allow Cloudinary custom loader
   },
-  // Increase the maximum upload size for API routes
   experimental: {
     serverActions: {
       bodySizeLimit: '50mb',
     },
+    optimizePackageImports: ['lucide-react'],
   },
-  // Force HTTPS redirects
   async headers() {
     return [
       {
@@ -28,6 +24,18 @@ const nextConfig: NextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
         ],
       },

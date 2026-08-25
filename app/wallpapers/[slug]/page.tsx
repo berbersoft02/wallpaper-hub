@@ -50,6 +50,44 @@ export default async function CharacterWallpapersPage({ params }: Props) {
     notFound();
   }
 
-  // Pass character and slug to the client component
-  return <CharacterPageClient character={character} slug={slug} />;
+  const name = character.name.replace(' ♡', '');
+
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: `${name} 4K Wallpaper Collection`,
+    description: `Premium 4K upscaled wallpapers of ${name} for desktop and mobile devices`,
+    url: `https://saidahriken.site/wallpapers/${slug}`,
+    author: {
+      '@type': 'Person',
+      name: 'GOHAN',
+      url: 'https://saidahriken.site/about',
+    },
+    image: character.wallpapers.slice(0, 10).map((url, index) => ({
+      '@type': 'ImageObject',
+      contentUrl: url,
+      name: `${name} 4K Wallpaper ${index + 1}`,
+      encodingFormat: 'image/jpeg',
+      width: '3840',
+      height: '2160',
+      license: 'https://saidahriken.site/terms',
+      acquireLicensePage: 'https://saidahriken.site/terms',
+      creditText: 'Only_Gohan Ocean',
+      creator: {
+        '@type': 'Person',
+        name: 'GOHAN',
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <CharacterPageClient character={character} slug={slug} />
+    </>
+  );
 }

@@ -34,6 +34,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://saidahriken.site',
+    siteName: 'Only_Gohan Ocean',
+    title: 'Only_Gohan Ocean | Ultra HD 4K Anime Wallpapers & Digital Assets',
+    description: 'Explore a curated collection of premium 4K upscaled anime wallpapers, matching social media icons, and PFPs.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Only_Gohan Ocean - 4K Anime Wallpapers',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@SaidAhrikenchi2',
+    creator: '@SaidAhrikenchi2',
+    title: 'Only_Gohan Ocean | Ultra HD 4K Anime Wallpapers',
+    description: 'Explore a curated collection of premium 4K upscaled anime wallpapers, matching social media icons, and PFPs.',
+    images: ['/og-image.jpg'],
+  },
   robots: {
     index: true,
     follow: true,
@@ -109,9 +133,16 @@ export default function RootLayout({
       <body
         className={`${pixelFont.variable} ${bodyFont.variable} antialiased bg-gray-950 text-white font-body`}
       >
+        {/* Skip to main content link for keyboard navigation */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-neon-cyan focus:text-black focus:font-pixel focus:rounded-lg focus:shadow-[0_0_30px_rgba(5,217,232,0.8)]"
+        >
+          Skip to main content
+        </a>
         <GlowSync />
         {/* Global CRT Scanline Overlay */}
-        <div className="crt-overlay" />
+        <div className="crt-overlay" aria-hidden="true" />
 
         {/* Google Funding Choices (Consent Management) */}
         <Script
