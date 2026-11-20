@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, ReactNode } from 'react';
+import React, { useRef, ReactNode } from 'react';
 
 interface GlowCardProps {
   children: ReactNode;
@@ -54,7 +54,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
   };
 
   const getInlineStyles = () => {
-    const baseStyles: React.CSSProperties & Record<string, any> = {
+    const baseStyles: React.CSSProperties & Record<string, string | number> = {
       '--base': base,
       '--spread': spread,
       '--backup-border': 'var(--backdrop)',

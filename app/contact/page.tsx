@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Link from "next/link";
 import { Metadata } from "next";
 import { Twitter } from "lucide-react";
 
@@ -24,7 +23,7 @@ export default function ContactPage() {
 
         <div className="bg-card-bg border-2 border-gray-800 p-8 rounded-lg shadow-xl">
           <p className="font-body text-gray-300 text-lg mb-8 text-center">
-            Have a question, feedback, or a business inquiry? We'd love to hear from you.
+            Have a question, feedback, or a business inquiry? We&apos;d love to hear from you.
           </p>
 
           <div className="space-y-8">
