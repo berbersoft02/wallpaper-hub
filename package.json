@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test \"tests/**/*.test.ts\"",
+    "test": "tsx --test tests/utils.test.ts tests/blog.test.ts tests/character-descriptions.test.ts",
     "upload-images": "node scripts/upload-to-cloudinary.js",
     "upload-shiina": "node scripts/upload-shiina.js",
     "upload-rin-shima": "node scripts/upload-rin-shima.js"
