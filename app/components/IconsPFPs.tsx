@@ -6,6 +6,7 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { GlowCard } from "./ui/spotlight-card";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
+import { buildDownloadHref } from "@/lib/wallpapers";
 
 interface PFPCharacter {
   name: string;
@@ -80,9 +81,10 @@ export default function IconsPFPs() {
   const finalIcons = useMemo(() => filteredIcons.slice(0, displayCount), [filteredIcons, displayCount]);
 
   const handleDownload = (url: string, title: string) => {
+    const { href, filename } = buildDownloadHref(url, title, 'png');
     const link = document.createElement('a');
-    link.href = `/api/download?url=${encodeURIComponent(url)}&filename=${title.replace(/\s+/g, '_').toLowerCase()}.png`;
-    link.setAttribute('download', `${title}.png`);
+    link.href = href;
+    link.setAttribute('download', filename);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
