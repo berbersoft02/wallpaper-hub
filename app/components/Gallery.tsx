@@ -1,34 +1,23 @@
 "use client";
 
-import { Heart, Maximize2, X, Terminal, Star, Download } from "lucide-react";
+import { Heart, X, Terminal, Star } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useCallback, Suspense, useMemo } from "react";
 import { GlowCard } from "./ui/spotlight-card";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { slugify } from "@/lib/utils";
-import Link from "next/link";
 import Lightbox from "./Lightbox";
 import { useFavorites } from "@/lib/hooks/useFavorites";
 import { useCyberSound } from "@/lib/hooks/useCyberSound";
 import RecommendationButton from "./RecommendationButton";
 import DownloadModal from "./DownloadModal";
 import { useHome } from "./HomeClient";
-
-interface Wallpaper {
-  id: string;
-  url: string;
-  character: string;
-  title: string;
-  category: string;
-  tags?: string[];
-}
-
-interface CharacterData {
-  name: string;
-  category: string;
-  wallpapers: string[];
-  tags?: string[];
-}
+import {
+  buildDownloadHref,
+  filterAndSearchWallpapers,
+  isVideoAsset,
+  transformCharacterCatalog,
+  type WallpaperItem,
+} from "@/lib/wallpapers";
 
 interface CloudinaryLoaderProps {
   src: string;
@@ -57,7 +46,7 @@ interface PixelImageProps {
 function PixelImage({ src, alt, className, fill, width, height, ...props }: PixelImageProps) {
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const isVideo = src.match(/\.(mp4|webm)/i);
+  const isVideo = isVideoAsset(src);
 
   if (isVideo) {
     return (
@@ -103,134 +92,70 @@ function GalleryContent() {
   const [filter, setFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
-  const [wallpapers, setWallpapers] = useState<Wallpaper[]>([]);
+  const [wallpapers, setWallpapers] = useState<WallpaperItem[]>([]);
   const [characters, setCharacters] = useState<string[]>([]);
   const [specialCollections, setSpecialCollections] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [displayCount, setDisplayCount] = useState(24);
+  const [displayCount, setDisplayCount] = useState(12);
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [pendingDownload, setPendingDownload] = useState<{url: string, title: string} | null>(null);
 
-  const { favorites, toggleFavorite, isFavorite } = useFavorites<Wallpaper>("wallpapers-favs");
+  const { favorites, toggleFavorite, isFavorite } = useFavorites<WallpaperItem>("wallpapers-favs");
 
   useEffect(() => {
     const filterParam = searchParams.get('filter');
     if (filterParam) setFilter(filterParam);
   }, [searchParams]);
 
-  useEffect(() => {
-    const loadWallpapers = async () => {
-      setError(false);
-      try {
-        const response = await fetch('/api/wallpapers');
-        if (!response.ok) throw new Error(`API returned ${response.status}`);
-        const data = await response.json();
-        
-        if (data.characters && data.characters.length > 0) {
-          const allWallpapers: Wallpaper[] = [];
-          const animeNames: string[] = [];
-          const specialNames: string[] = [];
+  const loadWallpapers = useCallback(async () => {
+    setLoading(true);
+    setError(false);
+    try {
+      const response = await fetch('/api/wallpapers');
+      if (!response.ok) throw new Error(`API returned ${response.status}`);
+      const data = await response.json();
 
-          const priorityNames = ["Frieren", "Violet Evergarden", "Shiina Mahiru", "Alya Kujou ♡", "Shikimori Micchon", "Mixed"];
-          const priorityChars = data.characters.filter((c: CharacterData) => priorityNames.includes(c.name));
-          const otherChars = data.characters.filter((c: CharacterData) => !priorityNames.includes(c.name));
-
-          const desktopWallpapers: string[] = [];
-          data.characters.forEach((char: CharacterData) => {
-            if (char.name.toLowerCase().includes("desktop") || char.name === "Desktop") {
-              char.wallpapers.forEach(url => {
-                if (!desktopWallpapers.includes(url)) desktopWallpapers.push(url);
-              });
-            }
-          });
-
-          if (desktopWallpapers.length > 0) {
-            specialNames.push("Desktop Wallpapers");
-            desktopWallpapers.forEach((url, i) => {
-              allWallpapers.push({ 
-                id: `desktop-unified-${i}`, 
-                url, 
-                character: "Desktop Wallpapers", 
-                title: `PC Wallpaper - ${i + 1}`, 
-                category: "Special", 
-                tags: ["4K", "Desktop", "PC", "Horizontal"] 
-              });
-            });
-          }
-
-          otherChars.forEach((char: CharacterData) => {
-            if (!char.name.toLowerCase().includes("desktop")) {
-              if (char.category === 'Special') specialNames.push(char.name);
-              else animeNames.push(char.name);
-
-              char.wallpapers.forEach((url, i) => {
-                allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
-              });
-            }
-          });
-
-          const priorityDataList = priorityNames.map(name => priorityChars.find((c: any) => c.name === name)).filter(Boolean);
-          const maxLength = Math.max(...priorityDataList.map((c: any) => c.wallpapers.length), 0);
-
-          for (let i = maxLength - 1; i >= 0; i--) {
-             for (let j = priorityDataList.length - 1; j >= 0; j--) {
-                const char: any = priorityDataList[j];
-                if (char.wallpapers[i]) {
-                  allWallpapers.push({ id: `${char.name}-${i}`, url: char.wallpapers[i], character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
-                }
-             }
-          }
-
-          setWallpapers(allWallpapers);
-          setSpecialCollections(Array.from(new Set(specialNames)).sort());
-          setCharacters(Array.from(new Set(animeNames)).sort());
-        }
-      } catch (err) {
-        console.error(err);
-        setError(true);
-      } finally {
-        setLoading(false);
+      if (data.characters && data.characters.length > 0) {
+        const transformed = transformCharacterCatalog(data.characters);
+        setWallpapers(transformed.wallpapers);
+        setSpecialCollections(transformed.specialCollections);
+        setCharacters(transformed.characters);
       }
-    };
-    loadWallpapers();
+    } catch (err) {
+      console.error(err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    loadWallpapers();
+  }, [loadWallpapers]);
 
   const everything = useMemo(() => [...wallpapers].reverse(), [wallpapers]);
 
-  const filteredItems = useMemo(() => {
-    let filtered = filter === "All" ? everything : filter === "Favorites" ? favorites : wallpapers.filter(w => w.character === filter).reverse();
-    if (searchQuery.trim() !== "") {
-      const q = searchQuery.toLowerCase();
-      filtered = filtered.filter(w =>
-        w.character.toLowerCase().includes(q) ||
-        w.title.toLowerCase().includes(q) ||
-        w.category.toLowerCase().includes(q) ||
-        w.tags?.some(t => t.toLowerCase().includes(q))
-      );
-    }
-    return filtered;
-  }, [filter, everything, wallpapers, searchQuery, favorites]);
+  const filteredItems = useMemo(
+    () => filterAndSearchWallpapers(wallpapers, favorites, filter, searchQuery),
+    [wallpapers, favorites, filter, searchQuery]
+  );
 
   const finalDisplay = useMemo(() => filteredItems.slice(0, displayCount), [filteredItems, displayCount]);
-
-  useEffect(() => {
-    setDisplayCount(12);
-  }, [filter, searchQuery]);
 
   const getCount = useCallback((name: string) => wallpapers.filter(w => w.character === name).length, [wallpapers]);
 
   useEffect(() => {
     const imageParam = searchParams.get('image');
     if (imageParam) {
-      const index = finalDisplay.findIndex(w => w.id === imageParam);
+      const index = filteredItems.findIndex(w => w.id === imageParam);
       if (index !== -1) {
         setSelectedImageIndex(index);
       }
     } else {
       setSelectedImageIndex(null);
     }
-  }, [searchParams, finalDisplay]);
+  }, [searchParams, filteredItems]);
 
   const handleFilterChange = useCallback((newFilter: string) => {
     setFilter(newFilter);
@@ -256,13 +181,9 @@ function GalleryContent() {
   }, [searchParams, router, pathname]);
 
   const triggerDownload = (url: string, title: string) => {
-    const isVideo = url.toLowerCase().match(/\.(mp4|webm)$/);
-    const ext = isVideo ? 'mp4' : 'jpg';
-    const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
-    const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
-    
+    const { href, filename } = buildDownloadHref(url, title);
     const link = document.createElement('a');
-    link.href = downloadUrl;
+    link.href = href;
     link.setAttribute('download', filename);
     document.body.appendChild(link);
     link.click();
@@ -292,8 +213,8 @@ function GalleryContent() {
               <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-purple rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative flex items-center bg-black/80 border border-gray-700 rounded-xl px-4 py-3 focus-within:ring-neon-cyan ring-1 ring-white/10 transition-all">
                 <Terminal className="text-neon-cyan mr-3 animate-pulse" size={24} />
-                <input type="text" placeholder="search: character, tag..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full bg-transparent text-white font-mono focus:outline-none" />
-                {searchQuery && <button onClick={() => { setSearchQuery(""); playSound('click'); }}><X size={20} className="text-gray-400 hover:text-neon-pink" /></button>}
+                <input type="text" placeholder="search: character, tag..." value={searchQuery} onChange={(e) => { setSearchQuery(e.target.value); setDisplayCount(12); }} className="w-full bg-transparent text-white font-mono focus:outline-none" />
+                {searchQuery && <button onClick={() => { setSearchQuery(""); setDisplayCount(12); playSound('click'); }}><X size={20} className="text-gray-400 hover:text-neon-pink" /></button>}
               </div>
             </div>
             <RecommendationButton onClick={onRecommendClick} />
@@ -360,31 +281,7 @@ function GalleryContent() {
               <p className="font-pixel text-neon-pink text-2xl">SIGNAL LOST</p>
               <p className="font-body text-gray-400">Failed to load the wallpaper archive. Please try again.</p>
               <button
-                onClick={() => {
-                  setLoading(true);
-                  setError(false);
-                  fetch('/api/wallpapers')
-                    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-                    .then(data => {
-                      if (data.characters?.length > 0) {
-                        const allWallpapers: Wallpaper[] = [];
-                        const animeNames: string[] = [];
-                        const specialNames: string[] = [];
-                        data.characters.forEach((char: CharacterData) => {
-                          if (char.category === 'Special') specialNames.push(char.name);
-                          else animeNames.push(char.name);
-                          char.wallpapers.forEach((url: string, i: number) => {
-                            allWallpapers.push({ id: `${char.name}-${i}`, url, character: char.name, title: `${char.name} - ${i + 1}`, category: char.category || 'Anime', tags: char.tags || [] });
-                          });
-                        });
-                        setWallpapers(allWallpapers);
-                        setSpecialCollections(Array.from(new Set(specialNames)).sort());
-                        setCharacters(Array.from(new Set(animeNames)).sort());
-                      }
-                    })
-                    .catch(() => setError(true))
-                    .finally(() => setLoading(false));
-                }}
+                onClick={loadWallpapers}
                 className="font-pixel px-10 py-3 border-2 border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-black transition-all rounded-lg"
               >
                 RETRY CONNECTION

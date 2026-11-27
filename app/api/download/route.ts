@@ -1,21 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  sanitizeDownloadFilename,
+  validateCloudinaryDownloadUrl,
+} from '@/lib/security';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const url = searchParams.get('url');
-  const filename = searchParams.get('filename') || 'wallpaper.jpg';
+  const rawUrl = searchParams.get('url');
+  const filename = sanitizeDownloadFilename(searchParams.get('filename'));
 
-  if (!url) {
+  if (!rawUrl) {
     return NextResponse.json({ error: 'Missing URL parameter' }, { status: 400 });
   }
 
-  // Security: Only allow downloads from Cloudinary
-  if (!url.startsWith('https://res.cloudinary.com/')) {
+  // Security: Strictly validate HTTPS Cloudinary asset URLs
+  const validatedUrl = validateCloudinaryDownloadUrl(rawUrl);
+  if (!validatedUrl) {
     return NextResponse.json({ error: 'Invalid URL source' }, { status: 403 });
   }
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(validatedUrl.toString());
     if (!response.ok) {
       throw new Error(`Failed to fetch file: ${response.statusText}`);
     }

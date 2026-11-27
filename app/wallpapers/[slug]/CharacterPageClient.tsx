@@ -13,6 +13,13 @@ import { getPostByCharacterName } from '@/lib/blog-metadata';
 import { GlowCard } from '@/app/components/ui/spotlight-card';
 import { getCharacterDescription } from '@/lib/character-descriptions';
 import DownloadModal from '@/app/components/DownloadModal';
+import { useFavorites } from '@/lib/hooks/useFavorites';
+import {
+  buildDownloadHref,
+  getRelatedCharacters,
+  isVideoAsset,
+  type WallpaperItem,
+} from '@/lib/wallpapers';
 
 interface Character {
   name: string;
@@ -31,18 +38,16 @@ export default function CharacterPageClient({ character, slug }: Props) {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [pendingDownload, setPendingDownload] = useState<{url: string, title: string} | null>(null);
 
+  const { toggleFavorite, isFavorite } = useFavorites<WallpaperItem>('wallpapers-favs');
+
   const name = useMemo(() => character.name.replace(' ♡', '') || '', [character.name]);
   const blogPost = useMemo(() => getPostByCharacterName(character.name), [character.name]);
   const description = useMemo(() => getCharacterDescription(name), [name]);
 
   const triggerDownload = useCallback((url: string, title: string) => {
-    const isVideo = url.match(/\.(mp4|webm|mov)/i);
-    const ext = isVideo ? 'mp4' : 'jpg';
-    const filename = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.${ext}`;
-    const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&filename=${filename}`;
-    
+    const { href, filename } = buildDownloadHref(url, title);
     const link = document.createElement('a');
-    link.href = downloadUrl;
+    link.href = href;
     link.setAttribute('download', filename);
     document.body.appendChild(link);
     link.click();
@@ -54,14 +59,10 @@ export default function CharacterPageClient({ character, slug }: Props) {
     setIsDownloadModalOpen(true);
   }, []);
 
-  const otherCharacters = useMemo(() => {
-    const allCharacters = getAllCharacters();
-    return allCharacters
-      .filter(c => slugify(c.name) !== slug)
-      .filter(c => c.wallpapers.length > 0 && !c.wallpapers[0].match(/\.(mp4|webm|mov)/i))
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 6);
-  }, [slug]);
+  const otherCharacters = useMemo(
+    () => getRelatedCharacters(getAllCharacters(), slug, 6),
+    [slug]
+  );
 
   const wpTitles = useMemo(() => character.wallpapers.map((_, i) => `${name} - 4K Edit #${i + 1}`), [character.wallpapers, name]);
 
@@ -119,7 +120,9 @@ export default function CharacterPageClient({ character, slug }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {character.wallpapers.map((url, index) => {
             const glowColor = character.category === 'Special' ? 'purple' : 'blue';
-            
+            const wallpaperId = `${character.name}-${index}`;
+            const favorited = isFavorite(wallpaperId);
+
             return (
               <GlowCard 
                 key={index}
@@ -129,7 +132,7 @@ export default function CharacterPageClient({ character, slug }: Props) {
                 className="group relative bg-card-bg/40 border-gray-800 hover:border-neon-cyan/50 transition-all duration-500 rounded-lg overflow-hidden cursor-pointer"
               >
                 <div className="aspect-[9/16] relative overflow-hidden rounded-t-lg">
-                  {url.match(/\.(mp4|webm|mov)/i) ? (
+                  {isVideoAsset(url) ? (
                     <video
                       src={url}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -169,7 +172,31 @@ export default function CharacterPageClient({ character, slug }: Props) {
                 </div>
                 <div className="p-4 bg-dark-bg/60 backdrop-blur-md border-t border-white/5 flex justify-between items-center rounded-b-lg">
                   <h3 className="font-pixel text-sm text-gray-300 tracking-wider">{wpTitles[index]}</h3>
-                  <Heart size={18} className="text-gray-600 hover:text-neon-pink transition-colors" />
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleFavorite({
+                        id: wallpaperId,
+                        url,
+                        character: character.name,
+                        title: wpTitles[index],
+                        category: character.category || 'Anime',
+                        tags: character.tags || [],
+                      });
+                    }}
+                    className="p-1.5 hover:scale-125 transition-transform"
+                    aria-label={favorited ? `Remove ${wpTitles[index]} from favorites` : `Add ${wpTitles[index]} to favorites`}
+                  >
+                    <Heart
+                      size={18}
+                      className={
+                        favorited
+                          ? 'text-neon-pink fill-neon-pink drop-shadow-[0_0_8px_rgba(255,42,109,0.8)]'
+                          : 'text-gray-600 hover:text-neon-pink transition-colors'
+                      }
+                    />
+                  </button>
                 </div>
               </GlowCard>
             );
